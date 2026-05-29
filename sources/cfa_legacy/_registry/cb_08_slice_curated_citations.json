@@ -13,8 +13,8 @@
       "title": "Convertible Arbitrage Strategy",
       "summary_curated": "A convertible-arbitrage position pairs a long CB with a short of delta-equivalent underlying shares, harvesting positive gamma via dynamic rebalancing; the P&L decomposes into delta, gamma, vega, theta, coupon, dividend, and borrow components with secondary credit/vega hedges optionally overlaid for double-signed-gamma stress regimes.",
       "source_stance": "primary-calamos",
-      "audit_flag": "wrong_pages_corrected",
-      "audit_notes": "OFFSET CORRECTIONS: Calamos is +15 (NOT +30) verified via running marker 'Page N' (PDF p20=printed pg 5, PDF p43=printed pg 28). Thorp/Kassouf is +7 (NOT +20) verified via Chapter 5 'THE SYSTEM IN ACTION' beginning at PDF p56=printed pg 49 (per ToC at PDF p4). DeSpiegeleer is +19 (NOT +20) verified via running header '56 The Handbook of Hybrid Securities' at PDF 75=printed pg 56. Recomputed PDF ranges: Calamos pp.3-95 → PDF 18-110; Calamos pp.260-300 → PDF 275-315; DeSpiegeleer pp.95-110 → PDF 114-129 (CoCos chapter, topically adjacent not the CB-arb credit-hedge section); Thorp pp.50-130 → PDF 57-137.",
+      "audit_flag": "re_anchored",
+      "audit_notes": "OFFSET CORRECTIONS: Calamos is +15 (NOT +30) verified via running marker 'Page N' (PDF p20=printed pg 5, PDF p43=printed pg 28). Thorp/Kassouf is +7 (NOT +20) verified via Chapter 5 'THE SYSTEM IN ACTION' beginning at PDF p56=printed pg 49 (per ToC at PDF p4). DeSpiegeleer is +19 (NOT +20) verified via running header '56 The Handbook of Hybrid Securities' at PDF 75=printed pg 56. Recomputed PDF ranges: Calamos pp.3-95 → PDF 18-110; Calamos pp.260-300 → PDF 275-315; DeSpiegeleer pp.95-110 → PDF 114-129 (CoCos chapter, topically adjacent not the CB-arb credit-hedge section); Thorp pp.50-130 → PDF 57-137. | R4 re-anchored cites [2] to ['cb_calamos_2003_convertible_arbitrage'] (adversarial support-verification).",
       "citations": [
         {
           "role": "primary",
@@ -50,19 +50,19 @@
         },
         {
           "role": "supporting",
-          "source_id": "cb_despiegeleer_schoutens_vanhulle_2014_hybrid_securities",
+          "source_id": "cb_calamos_2003_convertible_arbitrage",
           "volume": null,
           "legacy_pages": [
-            95,
-            110
+            20,
+            21
           ],
           "pdf_pages": [
-            114,
-            129
+            20,
+            21
           ],
-          "chunk_id": "cb_despiegeleer_schoutens_vanhulle_2014_hybrid_securities:p128:0165",
-          "chunk_hash": "e2c05a0651e787c7e62277bd197a690414ecdb8b1e93413e9a02f04da32299f4",
-          "quote": "The probability of such a conversion will increase when the share price reaches depressed levels, even if the trigger is linked to, for example, a capital ratio."
+          "chunk_id": "cb_calamos_2003_convertible_arbitrage:p020:0018",
+          "chunk_hash": "62f0504543e54bd4fc4d9636eca7165d4247ec1f6f648562d953452a70e0c24a",
+          "quote": "Convertible arbitrage—purchases long convertible securities and shorts the underlying stock with very low equity exposure."
         },
         {
           "role": "supporting",
@@ -87,8 +87,8 @@
       "title": "Credit-Aware Binomial Tree for Convertibles",
       "summary_curated": "The credit-aware binomial tree (CRR with default branch) prices convertibles whose embedded American options on the issuer's own continuation value defeat the special-case bond-plus-call identity; Hull §27.4 sets up the three-branch up/down/default node where default pays the recovery PV and credit risk is taken into account via stock-price-conditioned credit spreads.",
       "source_stance": "primary-hull",
-      "audit_flag": "wrong_pages_corrected",
-      "audit_notes": "OFFSET CORRECTIONS: Hull pp.241-242 is WRONG topically — those PDF pages are wash-sale tax-rule content, not binomial trees. The actual Hull Binomial Trees chapter (Ch.13) is at PDF 287-314 (Hull offset 0 unchanged). Hull §27.4 Convertible Bonds at pp.650-651 is correctly mapped (offset 0). DeSpiegeleer pp.95-145 → PDF 114-164 with +19 offset (CoCos chapter, topically loose). Lando pp.60-90 → PDF 79-109 (offset +19 verified in 06_FI map). Primary cite redirected to Hull §13.1 binomial intro at PDF 287.",
+      "audit_flag": "re_anchored",
+      "audit_notes": "OFFSET CORRECTIONS: Hull pp.241-242 is WRONG topically — those PDF pages are wash-sale tax-rule content, not binomial trees. The actual Hull Binomial Trees chapter (Ch.13) is at PDF 287-314 (Hull offset 0 unchanged). Hull §27.4 Convertible Bonds at pp.650-651 is correctly mapped (offset 0). DeSpiegeleer pp.95-145 → PDF 114-164 with +19 offset (CoCos chapter, topically loose). Lando pp.60-90 → PDF 79-109 (offset +19 verified in 06_FI map). Primary cite redirected to Hull §13.1 binomial intro at PDF 287. | R4 re-anchored cites [2] to ['cb_hull_2022_options_futures_derivatives_11ed'] (adversarial support-verification).",
       "citations": [
         {
           "role": "primary",
@@ -124,19 +124,19 @@
         },
         {
           "role": "supporting",
-          "source_id": "cb_despiegeleer_schoutens_vanhulle_2014_hybrid_securities",
+          "source_id": "cb_hull_2022_options_futures_derivatives_11ed",
           "volume": null,
           "legacy_pages": [
-            95,
-            145
+            651,
+            652
           ],
           "pdf_pages": [
-            114,
-            164
+            651,
+            652
           ],
-          "chunk_id": "cb_despiegeleer_schoutens_vanhulle_2014_hybrid_securities:p128:0165",
-          "chunk_hash": "e2c05a0651e787c7e62277bd197a690414ecdb8b1e93413e9a02f04da32299f4",
-          "quote": "Encountering a trigger will indeed happen at depressed share prices."
+          "chunk_id": "cb_hull_2022_options_futures_derivatives_11ed:p651:0968",
+          "chunk_hash": "0c1ac86a333b1329e33bc49bdf424202104f13df481a1858657a6c47ba2dcea5",
+          "quote": "The value of the convertible at the final nodes of the tree is calculated based on any conversion options that the holder has at that time. We then roll back through the tree. At nodes where the terms of the instrument allow conversion we test whether conversion is optimal."
         },
         {
           "role": "supporting",
@@ -711,24 +711,24 @@
       "title": "Brooks Trend / Range Regime Map for Chinese-CB Tapes",
       "summary_curated": "Before applying any per-CB strategy, the practitioner classifies the tape's regime — 单边市 (one-sided trend) vs 震荡市 (oscillating range) — using 安道全's 安全—弹性 prospectus + credit + parity read; Brooks's trend-vs-trading-range vocabulary supplies the chart-grammar overlay without predicting the next bar's expected return.",
       "source_stance": "primary-anduquan-3ed",
-      "audit_flag": "wrong_pages_corrected",
-      "audit_notes": "OFFSET CORRECTIONS: AnDaoquan 2023 +9 (not +30). CFA L1 Vol.6 pp.420-441 WRONG; corrected to Vol.6 pp.134-225. Brooks offsets 0 (admit-only). AnDaoquan pp.78-92 → PDF 87-101. Brooks 2009 pp.60-100, pp.145-200 = PDF directly. Brooks 2012 Trends pp.230-330 = PDF 230-330.",
+      "audit_flag": "re_anchored",
+      "audit_notes": "OFFSET CORRECTIONS: AnDaoquan 2023 +9 (not +30). CFA L1 Vol.6 pp.420-441 WRONG; corrected to Vol.6 pp.134-225. Brooks offsets 0 (admit-only). AnDaoquan pp.78-92 → PDF 87-101. Brooks 2009 pp.60-100, pp.145-200 = PDF directly. Brooks 2012 Trends pp.230-330 = PDF 230-330. | R4 re-anchored cites [0] to ['tpa_brooks_2009_reading_price_charts_bar_by_bar'] (adversarial support-verification).",
       "citations": [
         {
           "role": "primary",
-          "source_id": "cb_an_daoquan_2023_three_line_duplex_3ed",
+          "source_id": "tpa_brooks_2009_reading_price_charts_bar_by_bar",
           "volume": null,
           "legacy_pages": [
-            78,
-            92
+            38,
+            38
           ],
           "pdf_pages": [
-            87,
-            101
+            38,
+            38
           ],
-          "chunk_id": "cb_an_daoquan_2023_three_line_duplex_3ed:p088:0051",
-          "chunk_hash": "efae2eaa7a7657197b05e07210ead6a8fb04db0bd4ca60e29722d10e0e6082e6",
-          "quote": "动量因子：正股的近 10 日收益率，股票的收益率有延续 原杢的运动斱向的趋势，即过去一段时间里收益率较高 的股票在未杢获得的收益率会高于过去收益率较低的股 票。"
+          "chunk_id": "tpa_brooks_2009_reading_price_charts_bar_by_bar:p038:0044",
+          "chunk_hash": "e36016c6842b312370a2425f37e6c160899306ccd5f9834bc651513fe4513881",
+          "quote": "For a trader, the single most important issue is determining whether the market is trending or in a trading range."
         },
         {
           "role": "supporting",

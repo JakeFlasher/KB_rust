@@ -6,19 +6,19 @@ reading_id: "01_quantitative_methods"
 summary: "LASSO augments the OLS sum-of-squared-residuals with an L1 penalty lambda * sum |b_j|; for large lambda some coefficients are shrunk exactly to zero, giving simultaneous regularisation and automatic feature selection. LASSO is not in CFA L1 2022 Quantitative Methods; R7 covers the unpenalised OLS criterion only."
 tags: ["quantitative-methods", "penalized-regression"]
 citations:
-  - source_id: "cfa_2022_l1_combined"
-    chunk_id: "cfa_2022_l1_combined:p450:0573"
-    chunk_hash: "12e3fa714563ce4f5073990ecbc51c753c7aab623ecf7f87953d6e198bc18d4c"
-    page_range: [450, 451]
-    quote: "The goal is to fit a line to the observations on Y and X to minimize the squared deviations from the line; this is the least squares criterion"
+  - source_id: "qm_eslii_2009_2ed"
+    chunk_id: "qm_eslii_2009_2ed:p087:0108"
+    chunk_hash: "35d833a81343e91541e9be749fc404601230b56ff3b4d0e22bc5281372d63d2f"
+    page_range: [87, 88]
+    quote: "Notice the similarity to the ridge regression problem (3.42) or (3.41): the L2 ridge penalty Pp 1 β 2 j is replaced by the L1 lasso penalty Pp 1 |βj |."
     edge_type: "defines"
-  - source_id: "cfa_2022_l1_combined"
-    chunk_id: "cfa_2022_l1_combined:p450:0573"
-    chunk_hash: "12e3fa714563ce4f5073990ecbc51c753c7aab623ecf7f87953d6e198bc18d4c"
-    page_range: [450, 451]
-    quote: "Because of its common use, linear regression is often referred to as ordinary least squares (OLS) regression."
+  - source_id: "qm_eslii_2009_2ed"
+    chunk_id: "qm_eslii_2009_2ed:p088:0109"
+    chunk_hash: "ea948a05da4c3a8cbb7675c22d5b45fa1ceb6085ed2611ffefc372d911760e5f"
+    page_range: [88, 88]
+    quote: "Because of the nature of the constraint, making t sufficiently small will cause some of the coefficients to be exactly zero. Thus the lasso does a kind of continuous subset selection."
     edge_type: "supports"
-card_hash: "c3ae4dd029c49228e8565ac1972697f7c32a40d59eee8a97999f1d17809b4def"
+card_hash: "f9f695fda7053fce81941a6c61f09c4c51bb2de69fb18e326ea4d9b34653d929"
 ---
 # LASSO Penalised Regression
 

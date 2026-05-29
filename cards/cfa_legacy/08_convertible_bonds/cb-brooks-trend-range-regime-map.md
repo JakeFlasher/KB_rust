@@ -6,11 +6,11 @@ reading_id: "08_convertible_bonds"
 summary: "Before applying any per-CB strategy, the practitioner classifies the tape's regime — 单边市 (one-sided trend) vs 震荡市 (oscillating range) — using 安道全's 安全—弹性 prospectus + credit + parity read; Brooks's trend-vs-trading-range vocabulary supplies the chart-grammar overlay without predicting the next bar's expected return."
 tags: ["convertible-bonds", "brooks-trend"]
 citations:
-  - source_id: "cb_an_daoquan_2023_three_line_duplex_3ed"
-    chunk_id: "cb_an_daoquan_2023_three_line_duplex_3ed:p088:0051"
-    chunk_hash: "efae2eaa7a7657197b05e07210ead6a8fb04db0bd4ca60e29722d10e0e6082e6"
-    page_range: [88, 89]
-    quote: "动量因子：正股的近 10 日收益率，股票的收益率有延续 原杢的运动斱向的趋势，即过去一段时间里收益率较高 的股票在未杢获得的收益率会高于过去收益率较低的股 票。"
+  - source_id: "tpa_brooks_2009_reading_price_charts_bar_by_bar"
+    chunk_id: "tpa_brooks_2009_reading_price_charts_bar_by_bar:p038:0044"
+    chunk_hash: "e36016c6842b312370a2425f37e6c160899306ccd5f9834bc651513fe4513881"
+    page_range: [38, 38]
+    quote: "For a trader, the single most important issue is determining whether the market is trending or in a trading range."
     edge_type: "defines"
   - source_id: "tpa_brooks_2009_reading_price_charts_bar_by_bar"
     chunk_id: "tpa_brooks_2009_reading_price_charts_bar_by_bar:p059:0073"
@@ -36,7 +36,7 @@ citations:
     page_range: [3403, 3404]
     quote: "Technical analysis is a form of security analysis that uses price and volume data, often graphically displayed, in decision making."
     edge_type: "supports"
-card_hash: "6e03826949e52dffba337f47e5beadca99cf8a338678d6b3995fc73b0978e503"
+card_hash: "2c1776a668cd01cdc76c0cbfec05b0c85262b3a7b74a013c7b5a5d61efc54aaf"
 ---
 # Brooks Trend / Range Regime Map for Chinese-CB Tapes
 

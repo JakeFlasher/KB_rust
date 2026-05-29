@@ -1,764 +1,6 @@
 {
-  "open_findings_cards": [
-    "cb-arbitrage-strategy",
-    "cb-binomial-tree-valuation",
-    "cb-brooks-trend-range-regime-map",
-    "deriv-implied-volatility",
-    "fra-cash-vs-accrual-accounting",
-    "fra-double-entry-mechanics",
-    "qm-aic-bic-model-selection",
-    "qm-arch-conditional-heteroskedasticity",
-    "qm-decision-trees-and-roots",
-    "qm-influence-analysis-leverage",
-    "qm-penalized-regression-lasso",
-    "qm-projection-and-dimensionality-reduction",
-    "qm-time-series-foundations"
-  ],
-  "open_findings_rows": [
-    {
-      "audit_flag": "content_mismatch_noted",
-      "card_id": "qm-aic-bic-model-selection",
-      "checks": [],
-      "chunk_id": "cfa_2022_l1_combined:p467:0591",
-      "citation_index": 0,
-      "decision": "OPEN: placeholder anchor -- cited chunk does not support the card; re-anchor or de-claim",
-      "expected_pdf_page_range": [
-        467,
-        468
-      ],
-      "expected_source": "cfa_2022_l1_combined",
-      "expected_volume": 1,
-      "finding_scope": "citation",
-      "observed_pdf_page_range": [
-        467,
-        468
-      ],
-      "observed_volume": 1,
-      "observed_volume_page": 451,
-      "reading_id": "01_quantitative_methods",
-      "resolution": null,
-      "reviewer": "deterministic-anchor-review/v1",
-      "severity": "M",
-      "source_id": "cfa_2022_l1_combined",
-      "swarm_finding": null,
-      "swarm_verdict": {
-        "proposed_resolution": "re-anchor",
-        "rationale": "Genuine placeholder. The card is entirely about AIC = n*ln(SSE/n)+2(k+1) and BIC = n*ln(SSE/n)+ln(n)(k+1) information criteria, which the card's own summary admits are 'not in CFA L1 2022'. The cited chunk (cfa p467) is a generic goodness-of-fit paragraph listing R-squared, the F-statistic, and the standard error of the regression -- it never mentions AIC, BIC, information criteria, or a log-likelihood penalty. The card body even falsely attributes the AIC/BIC formulas to the CFA PDF ('the source uses the explicit k+1 form', 'source ASSERTS'). The chunk does not support the stated concept.",
-        "reviewer": "swarm:01_quantitative_methods",
-        "target_hint": "ESL Ch.7 'Model Assessment and Selection', Sec 7.5 'Estimates of In-Sample Prediction Error' / 7.7 (AIC and BIC definitions, log-likelihood penalty, BIC's ln(n) parsimony bias). Note: ESL p242 (already cited by qm-signal-validation) explicitly names 'AIC, BIC, MDL, SRM'.",
-        "target_source_id": "qm_eslii_2009_2ed",
-        "verdict": "confirm"
-      }
-    },
-    {
-      "audit_flag": "content_mismatch_noted",
-      "card_id": "qm-aic-bic-model-selection",
-      "checks": [],
-      "chunk_id": "cfa_2022_l1_combined:p467:0591",
-      "citation_index": 1,
-      "decision": "OPEN: placeholder anchor -- cited chunk does not support the card; re-anchor or de-claim",
-      "expected_pdf_page_range": [
-        467,
-        468
-      ],
-      "expected_source": "cfa_2022_l1_combined",
-      "expected_volume": 1,
-      "finding_scope": "citation",
-      "observed_pdf_page_range": [
-        467,
-        468
-      ],
-      "observed_volume": 1,
-      "observed_volume_page": 451,
-      "reading_id": "01_quantitative_methods",
-      "resolution": null,
-      "reviewer": "deterministic-anchor-review/v1",
-      "severity": "M",
-      "source_id": "cfa_2022_l1_combined",
-      "swarm_finding": null,
-      "swarm_verdict": {
-        "proposed_resolution": "re-anchor",
-        "rationale": "Genuine placeholder. The card is entirely about AIC = n*ln(SSE/n)+2(k+1) and BIC = n*ln(SSE/n)+ln(n)(k+1) information criteria, which the card's own summary admits are 'not in CFA L1 2022'. The cited chunk (cfa p467) is a generic goodness-of-fit paragraph listing R-squared, the F-statistic, and the standard error of the regression -- it never mentions AIC, BIC, information criteria, or a log-likelihood penalty. The card body even falsely attributes the AIC/BIC formulas to the CFA PDF ('the source uses the explicit k+1 form', 'source ASSERTS'). The chunk does not support the stated concept.",
-        "reviewer": "swarm:01_quantitative_methods",
-        "target_hint": "ESL Ch.7 'Model Assessment and Selection', Sec 7.5 'Estimates of In-Sample Prediction Error' / 7.7 (AIC and BIC definitions, log-likelihood penalty, BIC's ln(n) parsimony bias). Note: ESL p242 (already cited by qm-signal-validation) explicitly names 'AIC, BIC, MDL, SRM'.",
-        "target_source_id": "qm_eslii_2009_2ed",
-        "verdict": "confirm"
-      }
-    },
-    {
-      "audit_flag": "content_mismatch_noted",
-      "card_id": "qm-arch-conditional-heteroskedasticity",
-      "checks": [],
-      "chunk_id": "cfa_2022_l1_combined:p459:0583",
-      "citation_index": 0,
-      "decision": "OPEN: placeholder anchor -- cited chunk does not support the card; re-anchor or de-claim",
-      "expected_pdf_page_range": [
-        459,
-        460
-      ],
-      "expected_source": "cfa_2022_l1_combined",
-      "expected_volume": 1,
-      "finding_scope": "citation",
-      "observed_pdf_page_range": [
-        459,
-        460
-      ],
-      "observed_volume": 1,
-      "observed_volume_page": 443,
-      "reading_id": "01_quantitative_methods",
-      "resolution": null,
-      "reviewer": "deterministic-anchor-review/v1",
-      "severity": "M",
-      "source_id": "cfa_2022_l1_combined",
-      "swarm_finding": null,
-      "swarm_verdict": {
-        "proposed_resolution": "re-anchor",
-        "rationale": "Genuine placeholder. The card defines an ARCH(1) regression e_t^2 = a0 + a1*e_{t-1}^2 + u_t volatility-clustering test and OLS->GLS response; the summary admits ARCH 'is not in CFA L1 2022'. Cited chunk 0 (cfa p459) merely states the homoskedasticity assumption of simple linear regression; chunk 1 (cfa p462) discusses cross-sectional regime clustering of residual variance, not a time-series autoregression of squared residuals. Neither chunk introduces a lagged-squared-residual model, the term ARCH, or conditional variance dynamics. Wrong concept.",
-        "reviewer": "swarm:01_quantitative_methods",
-        "target_hint": "Tsay AFTS 2e Ch.3 'Conditional Heteroscedastic Models', Sec 3.4 'The ARCH Model' (ARCH(m): sigma_t^2 = a0 + a1*a_{t-1}^2 + ... ; volatility clustering, Lagrange-multiplier test for ARCH effects). Tsay p127 (already cited by qm-volatility-model-garch-multivariate) is the exact ARCH definition.",
-        "target_source_id": "qm_tsay_2005_afts_2e",
-        "verdict": "confirm"
-      }
-    },
-    {
-      "audit_flag": "content_mismatch_noted",
-      "card_id": "qm-arch-conditional-heteroskedasticity",
-      "checks": [],
-      "chunk_id": "cfa_2022_l1_combined:p462:0586",
-      "citation_index": 1,
-      "decision": "OPEN: placeholder anchor -- cited chunk does not support the card; re-anchor or de-claim",
-      "expected_pdf_page_range": [
-        462,
-        463
-      ],
-      "expected_source": "cfa_2022_l1_combined",
-      "expected_volume": 1,
-      "finding_scope": "citation",
-      "observed_pdf_page_range": [
-        462,
-        463
-      ],
-      "observed_volume": 1,
-      "observed_volume_page": 446,
-      "reading_id": "01_quantitative_methods",
-      "resolution": null,
-      "reviewer": "deterministic-anchor-review/v1",
-      "severity": "M",
-      "source_id": "cfa_2022_l1_combined",
-      "swarm_finding": null,
-      "swarm_verdict": {
-        "proposed_resolution": "re-anchor",
-        "rationale": "Genuine placeholder. The card defines an ARCH(1) regression e_t^2 = a0 + a1*e_{t-1}^2 + u_t volatility-clustering test and OLS->GLS response; the summary admits ARCH 'is not in CFA L1 2022'. Cited chunk 0 (cfa p459) merely states the homoskedasticity assumption of simple linear regression; chunk 1 (cfa p462) discusses cross-sectional regime clustering of residual variance, not a time-series autoregression of squared residuals. Neither chunk introduces a lagged-squared-residual model, the term ARCH, or conditional variance dynamics. Wrong concept.",
-        "reviewer": "swarm:01_quantitative_methods",
-        "target_hint": "Tsay AFTS 2e Ch.3 'Conditional Heteroscedastic Models', Sec 3.4 'The ARCH Model' (ARCH(m): sigma_t^2 = a0 + a1*a_{t-1}^2 + ... ; volatility clustering, Lagrange-multiplier test for ARCH effects). Tsay p127 (already cited by qm-volatility-model-garch-multivariate) is the exact ARCH definition.",
-        "target_source_id": "qm_tsay_2005_afts_2e",
-        "verdict": "confirm"
-      }
-    },
-    {
-      "audit_flag": "content_mismatch_noted",
-      "card_id": "qm-decision-trees-and-roots",
-      "checks": [],
-      "chunk_id": "cfa_2022_l1_combined:p450:0573",
-      "citation_index": 0,
-      "decision": "OPEN: placeholder anchor -- cited chunk does not support the card; re-anchor or de-claim",
-      "expected_pdf_page_range": [
-        450,
-        451
-      ],
-      "expected_source": "cfa_2022_l1_combined",
-      "expected_volume": 1,
-      "finding_scope": "citation",
-      "observed_pdf_page_range": [
-        450,
-        451
-      ],
-      "observed_volume": 1,
-      "observed_volume_page": 434,
-      "reading_id": "01_quantitative_methods",
-      "resolution": null,
-      "reviewer": "deterministic-anchor-review/v1",
-      "severity": "M",
-      "source_id": "cfa_2022_l1_combined",
-      "swarm_finding": null,
-      "swarm_verdict": {
-        "proposed_resolution": "re-anchor",
-        "rationale": "Genuine placeholder. The card describes CART -- a non-parametric recursive-binary-split tree learner -- which the summary admits 'is not in CFA L1 2022'. Both cited chunks (cfa p450 'linear regression assumes a linear relationship'; cfa p447 R7 learning-outcome statement for simple linear regression) are about parametric simple linear regression. Nothing in either chunk mentions trees, recursive partitioning, decision nodes, or majority-class/terminal-node prediction. The chunk is the parametric opposite of the card's concept, not support for it.",
-        "reviewer": "swarm:01_quantitative_methods",
-        "target_hint": "ESL Ch.9 'Additive Models, Trees, and Related Methods', Sec 9.2 'Tree-Based Methods / CART' (recursive binary splitting, terminal-node majority class for classification and node mean for regression). ISLP Ch.8 is an equivalent undergraduate-depth alternative.",
-        "target_source_id": "qm_eslii_2009_2ed",
-        "verdict": "confirm"
-      }
-    },
-    {
-      "audit_flag": "content_mismatch_noted",
-      "card_id": "qm-decision-trees-and-roots",
-      "checks": [],
-      "chunk_id": "cfa_2022_l1_combined:p447:0569",
-      "citation_index": 1,
-      "decision": "OPEN: placeholder anchor -- cited chunk does not support the card; re-anchor or de-claim",
-      "expected_pdf_page_range": [
-        447,
-        448
-      ],
-      "expected_source": "cfa_2022_l1_combined",
-      "expected_volume": 1,
-      "finding_scope": "citation",
-      "observed_pdf_page_range": [
-        447,
-        448
-      ],
-      "observed_volume": 1,
-      "observed_volume_page": 431,
-      "reading_id": "01_quantitative_methods",
-      "resolution": null,
-      "reviewer": "deterministic-anchor-review/v1",
-      "severity": "M",
-      "source_id": "cfa_2022_l1_combined",
-      "swarm_finding": null,
-      "swarm_verdict": {
-        "proposed_resolution": "re-anchor",
-        "rationale": "Genuine placeholder. The card describes CART -- a non-parametric recursive-binary-split tree learner -- which the summary admits 'is not in CFA L1 2022'. Both cited chunks (cfa p450 'linear regression assumes a linear relationship'; cfa p447 R7 learning-outcome statement for simple linear regression) are about parametric simple linear regression. Nothing in either chunk mentions trees, recursive partitioning, decision nodes, or majority-class/terminal-node prediction. The chunk is the parametric opposite of the card's concept, not support for it.",
-        "reviewer": "swarm:01_quantitative_methods",
-        "target_hint": "ESL Ch.9 'Additive Models, Trees, and Related Methods', Sec 9.2 'Tree-Based Methods / CART' (recursive binary splitting, terminal-node majority class for classification and node mean for regression). ISLP Ch.8 is an equivalent undergraduate-depth alternative.",
-        "target_source_id": "qm_eslii_2009_2ed",
-        "verdict": "confirm"
-      }
-    },
-    {
-      "audit_flag": "content_mismatch_noted",
-      "card_id": "qm-influence-analysis-leverage",
-      "checks": [],
-      "chunk_id": "cfa_2022_l1_combined:p464:0588",
-      "citation_index": 0,
-      "decision": "OPEN: placeholder anchor -- cited chunk does not support the card; re-anchor or de-claim",
-      "expected_pdf_page_range": [
-        464,
-        465
-      ],
-      "expected_source": "cfa_2022_l1_combined",
-      "expected_volume": 1,
-      "finding_scope": "citation",
-      "observed_pdf_page_range": [
-        464,
-        465
-      ],
-      "observed_volume": 1,
-      "observed_volume_page": 448,
-      "reading_id": "01_quantitative_methods",
-      "resolution": null,
-      "reviewer": "deterministic-anchor-review/v1",
-      "severity": "M",
-      "source_id": "cfa_2022_l1_combined",
-      "swarm_finding": null,
-      "swarm_verdict": {
-        "proposed_resolution": "re-anchor",
-        "rationale": "Genuine placeholder. The card defines per-observation diagnostics leverage h_ii, studentized residuals, and Cook's distance; summary admits these 'are not in CFA L1 2022'. Cited chunk 0 (cfa p464) is a single descriptive sentence that an outlier can influence the fitted line; chunk 1 (cfa p463) is the residual-pattern-plot diagnostic for autocorrelation. Neither chunk defines a leverage statistic, a studentized residual, or Cook's distance, nor any per-observation deletion-influence quantity. Descriptive outlier mention does not support the quantitative influence-diagnostic battery the card teaches.",
-        "reviewer": "swarm:01_quantitative_methods",
-        "target_hint": "Greene 'Econometric Analysis' 8e -- influential-observation / data-problems treatment: hat-matrix leverage h_ii, studentized (externally studentized) residuals, and Cook's distance / DFBETA for coefficient sensitivity. (ESL/ISLP also touch leverage but Greene gives the full h_ii / Cook's-D battery.)",
-        "target_source_id": "qm_greene_2019_econometric_analysis_8ed",
-        "verdict": "confirm"
-      }
-    },
-    {
-      "audit_flag": "content_mismatch_noted",
-      "card_id": "qm-influence-analysis-leverage",
-      "checks": [],
-      "chunk_id": "cfa_2022_l1_combined:p463:0587",
-      "citation_index": 1,
-      "decision": "OPEN: placeholder anchor -- cited chunk does not support the card; re-anchor or de-claim",
-      "expected_pdf_page_range": [
-        463,
-        464
-      ],
-      "expected_source": "cfa_2022_l1_combined",
-      "expected_volume": 1,
-      "finding_scope": "citation",
-      "observed_pdf_page_range": [
-        463,
-        464
-      ],
-      "observed_volume": 1,
-      "observed_volume_page": 447,
-      "reading_id": "01_quantitative_methods",
-      "resolution": null,
-      "reviewer": "deterministic-anchor-review/v1",
-      "severity": "M",
-      "source_id": "cfa_2022_l1_combined",
-      "swarm_finding": null,
-      "swarm_verdict": {
-        "proposed_resolution": "re-anchor",
-        "rationale": "Genuine placeholder. The card defines per-observation diagnostics leverage h_ii, studentized residuals, and Cook's distance; summary admits these 'are not in CFA L1 2022'. Cited chunk 0 (cfa p464) is a single descriptive sentence that an outlier can influence the fitted line; chunk 1 (cfa p463) is the residual-pattern-plot diagnostic for autocorrelation. Neither chunk defines a leverage statistic, a studentized residual, or Cook's distance, nor any per-observation deletion-influence quantity. Descriptive outlier mention does not support the quantitative influence-diagnostic battery the card teaches.",
-        "reviewer": "swarm:01_quantitative_methods",
-        "target_hint": "Greene 'Econometric Analysis' 8e -- influential-observation / data-problems treatment: hat-matrix leverage h_ii, studentized (externally studentized) residuals, and Cook's distance / DFBETA for coefficient sensitivity. (ESL/ISLP also touch leverage but Greene gives the full h_ii / Cook's-D battery.)",
-        "target_source_id": "qm_greene_2019_econometric_analysis_8ed",
-        "verdict": "confirm"
-      }
-    },
-    {
-      "audit_flag": "content_mismatch_noted",
-      "card_id": "qm-penalized-regression-lasso",
-      "checks": [],
-      "chunk_id": "cfa_2022_l1_combined:p450:0573",
-      "citation_index": 0,
-      "decision": "OPEN: placeholder anchor -- cited chunk does not support the card; re-anchor or de-claim",
-      "expected_pdf_page_range": [
-        450,
-        451
-      ],
-      "expected_source": "cfa_2022_l1_combined",
-      "expected_volume": 1,
-      "finding_scope": "citation",
-      "observed_pdf_page_range": [
-        450,
-        451
-      ],
-      "observed_volume": 1,
-      "observed_volume_page": 434,
-      "reading_id": "01_quantitative_methods",
-      "resolution": null,
-      "reviewer": "deterministic-anchor-review/v1",
-      "severity": "M",
-      "source_id": "cfa_2022_l1_combined",
-      "swarm_finding": null,
-      "swarm_verdict": {
-        "proposed_resolution": "re-anchor",
-        "rationale": "Genuine placeholder. The card defines the LASSO L1-penalized objective SSE + lambda*sum|b_j| with exact-zero sparsity / feature selection, and the summary admits LASSO 'is not in CFA L1 2022'. Both cited chunks point to the same cfa p450 paragraph describing the unpenalized least-squares criterion and the OLS label. There is no penalty term, no L1/lambda, no shrinkage or feature-selection content in the chunk. The body falsely sources the LASSO objective to the CFA PDF. Chunk supports plain OLS, not the penalized variant.",
-        "reviewer": "swarm:01_quantitative_methods",
-        "target_hint": "ESL Ch.3 'Linear Methods for Regression', Sec 3.4.2 'The Lasso' / 3.4.3 (L1 penalty SSE + lambda*sum|b_j|, exact-zero coefficients, regularization-plus-feature-selection). ISLP Ch.6 'Linear Model Selection and Regularization' is the equivalent alternative.",
-        "target_source_id": "qm_eslii_2009_2ed",
-        "verdict": "confirm"
-      }
-    },
-    {
-      "audit_flag": "content_mismatch_noted",
-      "card_id": "qm-penalized-regression-lasso",
-      "checks": [],
-      "chunk_id": "cfa_2022_l1_combined:p450:0573",
-      "citation_index": 1,
-      "decision": "OPEN: placeholder anchor -- cited chunk does not support the card; re-anchor or de-claim",
-      "expected_pdf_page_range": [
-        450,
-        451
-      ],
-      "expected_source": "cfa_2022_l1_combined",
-      "expected_volume": 1,
-      "finding_scope": "citation",
-      "observed_pdf_page_range": [
-        450,
-        451
-      ],
-      "observed_volume": 1,
-      "observed_volume_page": 434,
-      "reading_id": "01_quantitative_methods",
-      "resolution": null,
-      "reviewer": "deterministic-anchor-review/v1",
-      "severity": "M",
-      "source_id": "cfa_2022_l1_combined",
-      "swarm_finding": null,
-      "swarm_verdict": {
-        "proposed_resolution": "re-anchor",
-        "rationale": "Genuine placeholder. The card defines the LASSO L1-penalized objective SSE + lambda*sum|b_j| with exact-zero sparsity / feature selection, and the summary admits LASSO 'is not in CFA L1 2022'. Both cited chunks point to the same cfa p450 paragraph describing the unpenalized least-squares criterion and the OLS label. There is no penalty term, no L1/lambda, no shrinkage or feature-selection content in the chunk. The body falsely sources the LASSO objective to the CFA PDF. Chunk supports plain OLS, not the penalized variant.",
-        "reviewer": "swarm:01_quantitative_methods",
-        "target_hint": "ESL Ch.3 'Linear Methods for Regression', Sec 3.4.2 'The Lasso' / 3.4.3 (L1 penalty SSE + lambda*sum|b_j|, exact-zero coefficients, regularization-plus-feature-selection). ISLP Ch.6 'Linear Model Selection and Regularization' is the equivalent alternative.",
-        "target_source_id": "qm_eslii_2009_2ed",
-        "verdict": "confirm"
-      }
-    },
-    {
-      "audit_flag": "content_mismatch_noted",
-      "card_id": "qm-projection-and-dimensionality-reduction",
-      "checks": [],
-      "chunk_id": "cfa_2022_l1_combined:p450:0573",
-      "citation_index": 0,
-      "decision": "OPEN: placeholder anchor -- cited chunk does not support the card; re-anchor or de-claim",
-      "expected_pdf_page_range": [
-        450,
-        451
-      ],
-      "expected_source": "cfa_2022_l1_combined",
-      "expected_volume": 1,
-      "finding_scope": "citation",
-      "observed_pdf_page_range": [
-        450,
-        451
-      ],
-      "observed_volume": 1,
-      "observed_volume_page": 434,
-      "reading_id": "01_quantitative_methods",
-      "resolution": null,
-      "reviewer": "deterministic-anchor-review/v1",
-      "severity": "M",
-      "source_id": "cfa_2022_l1_combined",
-      "swarm_finding": null,
-      "swarm_verdict": {
-        "proposed_resolution": "re-anchor",
-        "rationale": "Genuine placeholder. The card teaches PCA -- rotating a standardized feature matrix onto orthogonal variance-ranked axes and retaining a cumulative-variance threshold -- and the summary admits PCA 'is not in CFA L1 2022'. Cited chunk 0 (cfa p450 'linear regression assumes a linear relationship') and chunk 1 (cfa p447 'Regression analysis is a tool for examining this type of issue', the R7 reading intro) are about univariate simple linear regression with a scalar predictor. Neither chunk mentions principal components, eigen-decomposition, orthogonal axes, variance ranking, or dimensionality reduction. Wrong concept.",
-        "reviewer": "swarm:01_quantitative_methods",
-        "target_hint": "ESL Ch.14 'Unsupervised Learning', Sec 14.5 'Principal Components, Curves and Surfaces' (PCA: orthogonal directions of maximum variance, ranking by explained variance, cumulative-variance retention). ISLP Ch.12 'Unsupervised Learning' (PCA) is the equivalent alternative.",
-        "target_source_id": "qm_eslii_2009_2ed",
-        "verdict": "confirm"
-      }
-    },
-    {
-      "audit_flag": "content_mismatch_noted",
-      "card_id": "qm-projection-and-dimensionality-reduction",
-      "checks": [],
-      "chunk_id": "cfa_2022_l1_combined:p447:0569",
-      "citation_index": 1,
-      "decision": "OPEN: placeholder anchor -- cited chunk does not support the card; re-anchor or de-claim",
-      "expected_pdf_page_range": [
-        447,
-        448
-      ],
-      "expected_source": "cfa_2022_l1_combined",
-      "expected_volume": 1,
-      "finding_scope": "citation",
-      "observed_pdf_page_range": [
-        447,
-        448
-      ],
-      "observed_volume": 1,
-      "observed_volume_page": 431,
-      "reading_id": "01_quantitative_methods",
-      "resolution": null,
-      "reviewer": "deterministic-anchor-review/v1",
-      "severity": "M",
-      "source_id": "cfa_2022_l1_combined",
-      "swarm_finding": null,
-      "swarm_verdict": {
-        "proposed_resolution": "re-anchor",
-        "rationale": "Genuine placeholder. The card teaches PCA -- rotating a standardized feature matrix onto orthogonal variance-ranked axes and retaining a cumulative-variance threshold -- and the summary admits PCA 'is not in CFA L1 2022'. Cited chunk 0 (cfa p450 'linear regression assumes a linear relationship') and chunk 1 (cfa p447 'Regression analysis is a tool for examining this type of issue', the R7 reading intro) are about univariate simple linear regression with a scalar predictor. Neither chunk mentions principal components, eigen-decomposition, orthogonal axes, variance ranking, or dimensionality reduction. Wrong concept.",
-        "reviewer": "swarm:01_quantitative_methods",
-        "target_hint": "ESL Ch.14 'Unsupervised Learning', Sec 14.5 'Principal Components, Curves and Surfaces' (PCA: orthogonal directions of maximum variance, ranking by explained variance, cumulative-variance retention). ISLP Ch.12 'Unsupervised Learning' (PCA) is the equivalent alternative.",
-        "target_source_id": "qm_eslii_2009_2ed",
-        "verdict": "confirm"
-      }
-    },
-    {
-      "audit_flag": "content_mismatch_noted",
-      "card_id": "qm-time-series-foundations",
-      "checks": [],
-      "chunk_id": "cfa_2022_l1_combined:p456:0580",
-      "citation_index": 0,
-      "decision": "OPEN: placeholder anchor -- cited chunk does not support the card; re-anchor or de-claim",
-      "expected_pdf_page_range": [
-        456,
-        462
-      ],
-      "expected_source": "cfa_2022_l1_combined",
-      "expected_volume": 1,
-      "finding_scope": "citation",
-      "observed_pdf_page_range": [
-        456,
-        456
-      ],
-      "observed_volume": 1,
-      "observed_volume_page": 440,
-      "reading_id": "01_quantitative_methods",
-      "resolution": null,
-      "reviewer": "deterministic-anchor-review/v1",
-      "severity": "M",
-      "source_id": "cfa_2022_l1_combined",
-      "swarm_finding": null,
-      "swarm_verdict": {
-        "proposed_resolution": "re-anchor",
-        "rationale": "Genuine placeholder, as the prior audit's own note concedes. The card teaches AR(p) recursion, covariance stationarity, the Dickey-Fuller unit-root test, and log-linear trend models; the summary admits these are 'NOT covered in CFA L1 2022'. Both cited chunks point to cfa p456, which only distinguishes cross-sectional vs time-series regression data types. The body falsely claims 'the two basic time-series models the source covers' are deterministic trend and AR(p) -- the chunk covers neither. No lag structure, stationarity condition, unit root, or Dickey-Fuller content in the chunk.",
-        "reviewer": "swarm:01_quantitative_methods",
-        "target_hint": "Tsay AFTS 2e Ch.2 'Linear Time Series Analysis and Its Applications' -- Sec 2.4 AR(p) models, Sec 2.1 weak/covariance stationarity, and Sec 2.7 'Unit-Root Nonstationarity' / Dickey-Fuller test; plus the deterministic-trend model. (Greene/Wooldridge unit-root chapters are secondary alternatives.)",
-        "target_source_id": "qm_tsay_2005_afts_2e",
-        "verdict": "confirm"
-      }
-    },
-    {
-      "audit_flag": "content_mismatch_noted",
-      "card_id": "qm-time-series-foundations",
-      "checks": [],
-      "chunk_id": "cfa_2022_l1_combined:p456:0580",
-      "citation_index": 1,
-      "decision": "OPEN: placeholder anchor -- cited chunk does not support the card; re-anchor or de-claim",
-      "expected_pdf_page_range": [
-        456,
-        462
-      ],
-      "expected_source": "cfa_2022_l1_combined",
-      "expected_volume": 1,
-      "finding_scope": "citation",
-      "observed_pdf_page_range": [
-        456,
-        456
-      ],
-      "observed_volume": 1,
-      "observed_volume_page": 440,
-      "reading_id": "01_quantitative_methods",
-      "resolution": null,
-      "reviewer": "deterministic-anchor-review/v1",
-      "severity": "M",
-      "source_id": "cfa_2022_l1_combined",
-      "swarm_finding": null,
-      "swarm_verdict": {
-        "proposed_resolution": "re-anchor",
-        "rationale": "Genuine placeholder, as the prior audit's own note concedes. The card teaches AR(p) recursion, covariance stationarity, the Dickey-Fuller unit-root test, and log-linear trend models; the summary admits these are 'NOT covered in CFA L1 2022'. Both cited chunks point to cfa p456, which only distinguishes cross-sectional vs time-series regression data types. The body falsely claims 'the two basic time-series models the source covers' are deterministic trend and AR(p) -- the chunk covers neither. No lag structure, stationarity condition, unit root, or Dickey-Fuller content in the chunk.",
-        "reviewer": "swarm:01_quantitative_methods",
-        "target_hint": "Tsay AFTS 2e Ch.2 'Linear Time Series Analysis and Its Applications' -- Sec 2.4 AR(p) models, Sec 2.1 weak/covariance stationarity, and Sec 2.7 'Unit-Root Nonstationarity' / Dickey-Fuller test; plus the deterministic-trend model. (Greene/Wooldridge unit-root chapters are secondary alternatives.)",
-        "target_source_id": "qm_tsay_2005_afts_2e",
-        "verdict": "confirm"
-      }
-    },
-    {
-      "audit_flag": "wrong_pages_corrected",
-      "card_id": "fra-cash-vs-accrual-accounting",
-      "checks": [
-        "swarm-finding:M"
-      ],
-      "chunk_id": "fra_penman_fsa_security_valuation_5ed:p138:0230",
-      "citation_index": 1,
-      "decision": "OPEN(swarm M): Defining citation quote is about the dividend discount model / bond valuation, not cash-vs-accrual accounting. | repair: Citation_index 1 (fra_penman_fsa_security_valuation_5ed:p138:0230) is tagged edge_type 'defines' but its verbatim quote is 'The dividend discount model is a straight application of the bond valuation ",
-      "expected_pdf_page_range": [
-        138,
-        139
-      ],
-      "expected_source": "fra_penman_fsa_security_valuation_5ed",
-      "expected_volume": null,
-      "finding_scope": "citation",
-      "observed_pdf_page_range": [
-        138,
-        139
-      ],
-      "observed_volume": null,
-      "observed_volume_page": null,
-      "reading_id": "03_financial_reporting_analysis",
-      "resolution": null,
-      "reviewer": "deterministic-anchor-review/v1",
-      "severity": "M",
-      "source_id": "fra_penman_fsa_security_valuation_5ed",
-      "swarm_finding": {
-        "card_id": "fra-cash-vs-accrual-accounting",
-        "citation_index": 1,
-        "issue": "Defining citation quote is about the dividend discount model / bond valuation, not cash-vs-accrual accounting.",
-        "rationale": "Citation_index 1 (fra_penman_fsa_security_valuation_5ed:p138:0230) is tagged edge_type 'defines' but its verbatim quote is 'The dividend discount model is a straight application of the bond valuation model in the last chapter to valuing equity.' That sentence defines the DDM as a DCF method; it does not support the card's stated concept (why net income and operating cash flow disagree, accrual vs cash recognition timing). The chunk is from the correct chapter (Penman Ch.4 'Cash Accounting, Accrual Accounting, and DCF Valuation') and the card is independently well-anchored by citation_index 0 ('The cash flow statement tracks operating and investment activities with cash accounting'), so this is a mis-targeted quote-selection defect on a 'defines' edge rather than a wrong-source/wrong-volume error. Recommend re-quoting the same Ch.4 region to a sentence that actually states the cash-vs-accrual distinction, or downgrading the edge to 'supports' / dropping it. Not escalated to E/H because source and chapter are correct.",
-        "reviewer": "swarm:03_financial_reporting_analysis",
-        "severity": "M"
-      },
-      "swarm_verdict": null
-    },
-    {
-      "audit_flag": "content_mismatch_noted",
-      "card_id": "fra-double-entry-mechanics",
-      "checks": [],
-      "chunk_id": "cfa_2022_l1_combined:p1085:1551",
-      "citation_index": 0,
-      "decision": "OPEN: placeholder anchor -- cited chunk does not support the card; re-anchor or de-claim",
-      "expected_pdf_page_range": [
-        1085,
-        1086
-      ],
-      "expected_source": "cfa_2022_l1_combined",
-      "expected_volume": 2,
-      "finding_scope": "citation",
-      "observed_pdf_page_range": [
-        1085,
-        1086
-      ],
-      "observed_volume": 2,
-      "observed_volume_page": 508,
-      "reading_id": "03_financial_reporting_analysis",
-      "resolution": null,
-      "reviewer": "deterministic-anchor-review/v1",
-      "severity": "M",
-      "source_id": "cfa_2022_l1_combined",
-      "swarm_finding": null,
-      "swarm_verdict": {
-        "proposed_resolution": "re-anchor",
-        "rationale": "Confirmed. The card's load-bearing concept is double-entry bookkeeping mechanics: debits/credits, T-accounts, normal balances by account type, journal/closing entries, and the trial-balance condition. The CFA citation (cfa_2022_l1_combined:p1085, Vol.2 R15 'Introduction to Financial Statement Analysis') only supplies the accounting identity 'Assets = Liabilities + Owners' equity' from the R15 summary — it does NOT cover debits, credits, T-accounts, or journal entries. The card body itself repeatedly cites Vol.2/pp.475-514 (R15) and Vol.3/pp.5-62 (R17 Income Statements) for the debit/credit account-type rules and the closing-entry sequence, neither of which teaches double-entry mechanics; this is exactly the prior flag's point that the mechanics live in a prerequisite 'Financial Reporting Mechanics' resource outside the main curriculum volume. The Penman supporting cite (articulation) is also tangential to debit/credit mechanics. Kieso (Intermediate Accounting, IFRS 4ed) is authorized for this slice and covers the recording process / accounting cycle in full, so re-anchoring the mechanics claims there resolves the mismatch; the CFA accounting-equation quote may be retained only for the narrow identity-preservation statement.",
-        "reviewer": "swarm:03_financial_reporting_analysis",
-        "target_hint": "Accounting cycle / recording process chapter (debits and credits, the double-entry system, journalizing, posting to T-accounts, and the trial balance) — Kieso Ch.3 'The Accounting Information System'. This is the only authorized source that actually teaches debit/credit mechanics, journal entries, T-accounts, and the trial-balance condition.",
-        "target_source_id": "fra_kieso_weygandt_warfield_2020_ifrs_4ed",
-        "verdict": "confirm"
-      }
-    },
-    {
-      "audit_flag": "content_mismatch_noted",
-      "card_id": "fra-double-entry-mechanics",
-      "checks": [],
-      "chunk_id": "fra_penman_fsa_security_valuation_5ed:p069:0109",
-      "citation_index": 1,
-      "decision": "OPEN: placeholder anchor -- cited chunk does not support the card; re-anchor or de-claim",
-      "expected_pdf_page_range": [
-        69,
-        70
-      ],
-      "expected_source": "fra_penman_fsa_security_valuation_5ed",
-      "expected_volume": null,
-      "finding_scope": "citation",
-      "observed_pdf_page_range": [
-        69,
-        70
-      ],
-      "observed_volume": null,
-      "observed_volume_page": null,
-      "reading_id": "03_financial_reporting_analysis",
-      "resolution": null,
-      "reviewer": "deterministic-anchor-review/v1",
-      "severity": "M",
-      "source_id": "fra_penman_fsa_security_valuation_5ed",
-      "swarm_finding": null,
-      "swarm_verdict": {
-        "proposed_resolution": "re-anchor",
-        "rationale": "Confirmed. The card's load-bearing concept is double-entry bookkeeping mechanics: debits/credits, T-accounts, normal balances by account type, journal/closing entries, and the trial-balance condition. The CFA citation (cfa_2022_l1_combined:p1085, Vol.2 R15 'Introduction to Financial Statement Analysis') only supplies the accounting identity 'Assets = Liabilities + Owners' equity' from the R15 summary — it does NOT cover debits, credits, T-accounts, or journal entries. The card body itself repeatedly cites Vol.2/pp.475-514 (R15) and Vol.3/pp.5-62 (R17 Income Statements) for the debit/credit account-type rules and the closing-entry sequence, neither of which teaches double-entry mechanics; this is exactly the prior flag's point that the mechanics live in a prerequisite 'Financial Reporting Mechanics' resource outside the main curriculum volume. The Penman supporting cite (articulation) is also tangential to debit/credit mechanics. Kieso (Intermediate Accounting, IFRS 4ed) is authorized for this slice and covers the recording process / accounting cycle in full, so re-anchoring the mechanics claims there resolves the mismatch; the CFA accounting-equation quote may be retained only for the narrow identity-preservation statement.",
-        "reviewer": "swarm:03_financial_reporting_analysis",
-        "target_hint": "Accounting cycle / recording process chapter (debits and credits, the double-entry system, journalizing, posting to T-accounts, and the trial balance) — Kieso Ch.3 'The Accounting Information System'. This is the only authorized source that actually teaches debit/credit mechanics, journal entries, T-accounts, and the trial-balance condition.",
-        "target_source_id": "fra_kieso_weygandt_warfield_2020_ifrs_4ed",
-        "verdict": "confirm"
-      }
-    },
-    {
-      "audit_flag": "content_mismatch_noted",
-      "card_id": "deriv-implied-volatility",
-      "checks": [],
-      "chunk_id": "cb_hull_2022_options_futures_derivatives_11ed:p460:0680",
-      "citation_index": 0,
-      "decision": "OPEN: placeholder anchor -- cited chunk does not support the card; re-anchor or de-claim",
-      "expected_pdf_page_range": [
-        460,
-        461
-      ],
-      "expected_source": "cb_hull_2022_options_futures_derivatives_11ed",
-      "expected_volume": null,
-      "finding_scope": "citation",
-      "observed_pdf_page_range": [
-        460,
-        460
-      ],
-      "observed_volume": null,
-      "observed_volume_page": null,
-      "reading_id": "07_derivatives_and_volatility",
-      "resolution": null,
-      "reviewer": "deterministic-anchor-review/v1",
-      "severity": "M",
-      "source_id": "cb_hull_2022_options_futures_derivatives_11ed",
-      "swarm_finding": null,
-      "swarm_verdict": {
-        "proposed_resolution": "de-claim",
-        "rationale": "Prior flag is correct: CFA L1 R45/R46 do not develop implied volatility as the BSM-inverse (no Newton-Raphson-on-vega inversion, no variance-risk-premium framing), so dropping the CFA cite was right. The remaining Hull cite is in the correct chapter (Ch.20 Volatility Smiles and Surfaces). Caveat: the chosen p460 quote concerns Greeks assuming implied vol constant / minimum-variance delta rather than the inversion definition itself; the anchor is acceptable but a tighter quote on the implied-vol-as-BSM-inverse definition would be preferable.",
-        "reviewer": "swarm:07_derivatives_and_volatility",
-        "target_hint": "Hull Ch.20 passage defining implied volatility as the volatility that, when input into BSM, recovers the observed market price (the inversion definition), rather than the minimum-variance-delta paragraph at p460.",
-        "target_source_id": "cb_hull_2022_options_futures_derivatives_11ed",
-        "verdict": "confirm"
-      }
-    },
-    {
-      "audit_flag": "wrong_pages_corrected",
-      "card_id": "cb-arbitrage-strategy",
-      "checks": [
-        "swarm-finding:M"
-      ],
-      "chunk_id": "cb_despiegeleer_schoutens_vanhulle_2014_hybrid_securities:p128:0165",
-      "citation_index": 2,
-      "decision": "OPEN(swarm M): Cited DeSpiegeleer chunk p128:0165 is a Contingent-Convertible (CoCo) passage, not convertible-arbitrage hedging material. | repair: Verified the full chunk text: p128 sits in the CoCo chapter (bank regulatory capital ratios, Dodd-Frank FSOC, CoCo 'death spiral', capital-ratio triggers, CoCo parity convergence). The quote 'The prob",
-      "expected_pdf_page_range": [
-        114,
-        129
-      ],
-      "expected_source": "cb_despiegeleer_schoutens_vanhulle_2014_hybrid_securities",
-      "expected_volume": null,
-      "finding_scope": "citation",
-      "observed_pdf_page_range": [
-        128,
-        129
-      ],
-      "observed_volume": null,
-      "observed_volume_page": null,
-      "reading_id": "08_convertible_bonds",
-      "resolution": null,
-      "reviewer": "deterministic-anchor-review/v1",
-      "severity": "M",
-      "source_id": "cb_despiegeleer_schoutens_vanhulle_2014_hybrid_securities",
-      "swarm_finding": {
-        "card_id": "cb-arbitrage-strategy",
-        "citation_index": 2,
-        "issue": "Cited DeSpiegeleer chunk p128:0165 is a Contingent-Convertible (CoCo) passage, not convertible-arbitrage hedging material.",
-        "rationale": "Verified the full chunk text: p128 sits in the CoCo chapter (bank regulatory capital ratios, Dodd-Frank FSOC, CoCo 'death spiral', capital-ratio triggers, CoCo parity convergence). The quote 'The probability of such a conversion will increase when the share price reaches depressed levels, even if the trigger is linked to, for example, a capital ratio' is purely about CoCo mandatory-conversion triggers. The card is about plain-vanilla convertible-arbitrage P&L decomposition (delta/gamma/vega/theta/coupon/borrow) with a credit/vega hedge overlay. A CoCo capital-ratio-trigger sentence does not support a convertible-arb credit/vega-hedge claim. The card's own audit_notes concede this is 'CoCos chapter, topically adjacent not the CB-arb credit-hedge section.' Better in-corpus anchor: Calamos (the convertible-arbitrage book) chapters on vega/credit hedging, or DeSpiegeleer's CB-risk/Greeks section near p62.",
-        "reviewer": "swarm:08_convertible_bonds",
-        "severity": "M"
-      },
-      "swarm_verdict": null
-    },
-    {
-      "audit_flag": "wrong_pages_corrected",
-      "card_id": "cb-binomial-tree-valuation",
-      "checks": [
-        "swarm-finding:M"
-      ],
-      "chunk_id": "cb_despiegeleer_schoutens_vanhulle_2014_hybrid_securities:p128:0165",
-      "citation_index": 2,
-      "decision": "OPEN(swarm M): Cited DeSpiegeleer chunk p128:0165 is the same CoCo death-spiral passage, not credit-aware binomial-tree material for plain convertibles. | repair: The pinned chunk (verified full text) is CoCo-specific: 'Death Spiral... Encountering a trigger will indeed happen at depressed share prices... The CoCo converges to parity.' The card is about a credi",
-      "expected_pdf_page_range": [
-        114,
-        164
-      ],
-      "expected_source": "cb_despiegeleer_schoutens_vanhulle_2014_hybrid_securities",
-      "expected_volume": null,
-      "finding_scope": "citation",
-      "observed_pdf_page_range": [
-        128,
-        129
-      ],
-      "observed_volume": null,
-      "observed_volume_page": null,
-      "reading_id": "08_convertible_bonds",
-      "resolution": null,
-      "reviewer": "deterministic-anchor-review/v1",
-      "severity": "M",
-      "source_id": "cb_despiegeleer_schoutens_vanhulle_2014_hybrid_securities",
-      "swarm_finding": {
-        "card_id": "cb-binomial-tree-valuation",
-        "citation_index": 2,
-        "issue": "Cited DeSpiegeleer chunk p128:0165 is the same CoCo death-spiral passage, not credit-aware binomial-tree material for plain convertibles.",
-        "rationale": "The pinned chunk (verified full text) is CoCo-specific: 'Death Spiral... Encountering a trigger will indeed happen at depressed share prices... The CoCo converges to parity.' The card is about a credit-aware CRR binomial tree (up/down/default branches, recovery PV, stock-price-conditioned credit spreads) for ordinary convertibles. The CoCo capital-ratio-trigger / death-spiral paragraph does not support binomial-tree construction or the stock-price-conditioned credit-spread mechanic. Audit_notes already flags it 'CoCos chapter, topically loose.' Note: the Hull cites [0] p287 (binomial-tree intro) and [1] p650:0966 (which I verified spans 650-651 and genuinely contains Hull 27.4 'Credit risk plays an important role in the valuation of convertibles') DO support the card; only the DeSpiegeleer cite is mis-anchored. Better anchor would be Hull p651:0968 (default-branch tree math) or a genuine credit-tree section.",
-        "reviewer": "swarm:08_convertible_bonds",
-        "severity": "M"
-      },
-      "swarm_verdict": null
-    },
-    {
-      "audit_flag": "wrong_pages_corrected",
-      "card_id": "cb-brooks-trend-range-regime-map",
-      "checks": [
-        "swarm-finding:M"
-      ],
-      "chunk_id": "cb_an_daoquan_2023_three_line_duplex_3ed:p088:0051",
-      "citation_index": 0,
-      "decision": "OPEN(swarm M): Cited An Daoquan 2023 chunk p088:0051 is a quantitative multi-factor / option-pricing strategy passage, not the 安全—弹性 tape-regime-classification content the card claims to anchor. | repair: Verified full chunk: p088 is in Chapter 2 (登堂) describing quant CB strategies -- factor models (隐含波动率因子, 净利润同比增速因子, 估值因子, 市值因子, 动量因子) and tree/Monte-Carlo option-pricing arbitrage. The pinned quote is",
-      "expected_pdf_page_range": [
-        87,
-        101
-      ],
-      "expected_source": "cb_an_daoquan_2023_three_line_duplex_3ed",
-      "expected_volume": null,
-      "finding_scope": "citation",
-      "observed_pdf_page_range": [
-        88,
-        89
-      ],
-      "observed_volume": null,
-      "observed_volume_page": null,
-      "reading_id": "08_convertible_bonds",
-      "resolution": null,
-      "reviewer": "deterministic-anchor-review/v1",
-      "severity": "M",
-      "source_id": "cb_an_daoquan_2023_three_line_duplex_3ed",
-      "swarm_finding": {
-        "card_id": "cb-brooks-trend-range-regime-map",
-        "citation_index": 0,
-        "issue": "Cited An Daoquan 2023 chunk p088:0051 is a quantitative multi-factor / option-pricing strategy passage, not the 安全—弹性 tape-regime-classification content the card claims to anchor.",
-        "rationale": "Verified full chunk: p088 is in Chapter 2 (登堂) describing quant CB strategies -- factor models (隐含波动率因子, 净利润同比增速因子, 估值因子, 市值因子, 动量因子) and tree/Monte-Carlo option-pricing arbitrage. The pinned quote is the 动量因子 (momentum factor, 10-day return continuation) definition. The chunk contains NO mention of 安全/弹性, 单边市/震荡市, 建仓线, or trend-vs-range regime classification (confirmed by keyword scan). The card states 'An Daoquan's 安全—弹性 framework derives the regime label from the prospectus + credit + parity read' as the load-bearing source, but the anchored chunk is a quant-factor definition that does not support that claim. The genuine 安全—弹性双原则 section is elsewhere (the p114 '三线何来' / 安全—弹性 chunk used by other cards in this slice would be the correct re-anchor).",
-        "reviewer": "swarm:08_convertible_bonds",
-        "severity": "M"
-      },
-      "swarm_verdict": null
-    }
-  ],
+  "open_findings_cards": [],
+  "open_findings_rows": [],
   "oracle_coverage": [
     {
       "ac5_oracle": true,
@@ -801,7 +43,7 @@
     },
     {
       "ac5_oracle": false,
-      "cited_chunks": 5,
+      "cited_chunks": 13,
       "evidence_anchors_ok": 6,
       "evidence_anchors_total": 6,
       "map": "01_quantitative_methods.json",
@@ -810,7 +52,7 @@
     },
     {
       "ac5_oracle": false,
-      "cited_chunks": 3,
+      "cited_chunks": 5,
       "evidence_anchors_ok": 4,
       "evidence_anchors_total": 4,
       "map": "01_quantitative_methods.json",
@@ -828,7 +70,7 @@
     },
     {
       "ac5_oracle": false,
-      "cited_chunks": 2,
+      "cited_chunks": 6,
       "evidence_anchors_ok": 7,
       "evidence_anchors_total": 7,
       "map": "01_quantitative_methods.json",
@@ -918,7 +160,7 @@
     },
     {
       "ac5_oracle": false,
-      "cited_chunks": 6,
+      "cited_chunks": 9,
       "evidence_anchors_ok": 1,
       "evidence_anchors_total": 1,
       "map": "03_financial_reporting_analysis.json",
@@ -927,7 +169,7 @@
     },
     {
       "ac5_oracle": false,
-      "cited_chunks": 32,
+      "cited_chunks": 30,
       "evidence_anchors_ok": 3,
       "evidence_anchors_total": 3,
       "map": "03_financial_reporting_analysis.json",
@@ -945,7 +187,7 @@
     },
     {
       "ac5_oracle": false,
-      "cited_chunks": 49,
+      "cited_chunks": 50,
       "evidence_anchors_ok": 2,
       "evidence_anchors_total": 2,
       "map": "07_derivatives_and_volatility.json",
@@ -963,7 +205,7 @@
     },
     {
       "ac5_oracle": false,
-      "cited_chunks": 23,
+      "cited_chunks": 22,
       "evidence_anchors_ok": 0,
       "evidence_anchors_total": 0,
       "map": "08_convertible_bonds.json",
@@ -972,7 +214,7 @@
     },
     {
       "ac5_oracle": false,
-      "cited_chunks": 19,
+      "cited_chunks": 20,
       "evidence_anchors_ok": 0,
       "evidence_anchors_total": 0,
       "map": "08_convertible_bonds.json",
@@ -981,7 +223,7 @@
     },
     {
       "ac5_oracle": false,
-      "cited_chunks": 29,
+      "cited_chunks": 27,
       "evidence_anchors_ok": 0,
       "evidence_anchors_total": 1,
       "map": "08_convertible_bonds.json",
@@ -1096,46 +338,6 @@
       "volume": 1
     },
     {
-      "chunk_id": "cfa_2022_l1_combined:p447:0569",
-      "chunk_span": [
-        447,
-        448
-      ],
-      "cited_page_range": [
-        447,
-        448
-      ],
-      "confirmed": true,
-      "derived_volume_page": [
-        1,
-        431
-      ],
-      "kind": "cited-chunk",
-      "map": "cfa_2022_l1_combined.json",
-      "rederived_pdf_page": 447,
-      "volume": 1
-    },
-    {
-      "chunk_id": "cfa_2022_l1_combined:p447:0569",
-      "chunk_span": [
-        447,
-        448
-      ],
-      "cited_page_range": [
-        447,
-        448
-      ],
-      "confirmed": true,
-      "derived_volume_page": [
-        1,
-        431
-      ],
-      "kind": "cited-chunk",
-      "map": "cfa_2022_l1_combined.json",
-      "rederived_pdf_page": 447,
-      "volume": 1
-    },
-    {
       "chunk_id": "cfa_2022_l1_combined:p450:0573",
       "chunk_span": [
         450,
@@ -1153,6 +355,46 @@
       "kind": "cited-chunk",
       "map": "cfa_2022_l1_combined.json",
       "rederived_pdf_page": 450,
+      "volume": 1
+    },
+    {
+      "chunk_id": "cfa_2022_l1_combined:p459:0583",
+      "chunk_span": [
+        459,
+        460
+      ],
+      "cited_page_range": [
+        459,
+        460
+      ],
+      "confirmed": true,
+      "derived_volume_page": [
+        1,
+        443
+      ],
+      "kind": "cited-chunk",
+      "map": "cfa_2022_l1_combined.json",
+      "rederived_pdf_page": 459,
+      "volume": 1
+    },
+    {
+      "chunk_id": "cfa_2022_l1_combined:p460:0584",
+      "chunk_span": [
+        460,
+        461
+      ],
+      "cited_page_range": [
+        460,
+        461
+      ],
+      "confirmed": true,
+      "derived_volume_page": [
+        1,
+        444
+      ],
+      "kind": "cited-chunk",
+      "map": "cfa_2022_l1_combined.json",
+      "rederived_pdf_page": 460,
       "volume": 1
     },
     {
@@ -2569,6 +1811,30 @@
     },
     {
       "applied": true,
+      "blocked_by_mechanical": false,
+      "kind": "re-anchor",
+      "target": "fra-cash-vs-accrual-accounting"
+    },
+    {
+      "applied": true,
+      "blocked_by_mechanical": false,
+      "kind": "re-anchor",
+      "target": "cb-arbitrage-strategy"
+    },
+    {
+      "applied": true,
+      "blocked_by_mechanical": false,
+      "kind": "re-anchor",
+      "target": "cb-binomial-tree-valuation"
+    },
+    {
+      "applied": true,
+      "blocked_by_mechanical": false,
+      "kind": "re-anchor",
+      "target": "cb-brooks-trend-range-regime-map"
+    },
+    {
+      "applied": true,
       "kind": "accept-oracle",
       "target": "08_convertible_bonds.json/cb_an_daoquan_2014_magic_book_2ed"
     },
@@ -2580,34 +1846,34 @@
   ],
   "rows": [
     {
-      "audit_flag": "content_mismatch_noted",
+      "audit_flag": "re_anchored",
       "card_id": "qm-aic-bic-model-selection",
       "checks": [],
-      "chunk_id": "cfa_2022_l1_combined:p467:0591",
+      "chunk_id": "qm_eslii_2009_2ed:p250:0316",
       "chunk_source_match": true,
       "citation_index": 0,
-      "decision": "OPEN: placeholder anchor -- cited chunk does not support the card; re-anchor or de-claim",
+      "decision": "re-anchored to a supporting source (R4 discovery + adversarial support-verification; independent quote-substring + kb verify)",
       "expected_pdf_page_range": [
-        467,
-        468
+        250,
+        250
       ],
-      "expected_source": "cfa_2022_l1_combined",
-      "expected_volume": 1,
+      "expected_source": "qm_eslii_2009_2ed",
+      "expected_volume": null,
       "finding_scope": "citation",
       "observed_pdf_page_range": [
-        467,
-        468
+        250,
+        250
       ],
-      "observed_volume": 1,
-      "observed_volume_page": 451,
+      "observed_volume": null,
+      "observed_volume_page": null,
       "page_match": true,
       "quote_in_chunk": true,
       "reading_id": "01_quantitative_methods",
       "reviewer": "deterministic-anchor-review/v1",
       "role": "defines",
-      "severity": "M",
+      "severity": "N",
       "source_authorized": true,
-      "source_id": "cfa_2022_l1_combined",
+      "source_id": "qm_eslii_2009_2ed",
       "swarm_verdict": {
         "proposed_resolution": "re-anchor",
         "rationale": "Genuine placeholder. The card is entirely about AIC = n*ln(SSE/n)+2(k+1) and BIC = n*ln(SSE/n)+ln(n)(k+1) information criteria, which the card's own summary admits are 'not in CFA L1 2022'. The cited chunk (cfa p467) is a generic goodness-of-fit paragraph listing R-squared, the F-statistic, and the standard error of the regression -- it never mentions AIC, BIC, information criteria, or a log-likelihood penalty. The card body even falsely attributes the AIC/BIC formulas to the CFA PDF ('the source uses the explicit k+1 form', 'source ASSERTS'). The chunk does not support the stated concept.",
@@ -2618,34 +1884,34 @@
       }
     },
     {
-      "audit_flag": "content_mismatch_noted",
+      "audit_flag": "re_anchored",
       "card_id": "qm-aic-bic-model-selection",
       "checks": [],
-      "chunk_id": "cfa_2022_l1_combined:p467:0591",
+      "chunk_id": "qm_eslii_2009_2ed:p252:0319",
       "chunk_source_match": true,
       "citation_index": 1,
-      "decision": "OPEN: placeholder anchor -- cited chunk does not support the card; re-anchor or de-claim",
+      "decision": "re-anchored to a supporting source (R4 discovery + adversarial support-verification; independent quote-substring + kb verify)",
       "expected_pdf_page_range": [
-        467,
-        468
+        252,
+        253
       ],
-      "expected_source": "cfa_2022_l1_combined",
-      "expected_volume": 1,
+      "expected_source": "qm_eslii_2009_2ed",
+      "expected_volume": null,
       "finding_scope": "citation",
       "observed_pdf_page_range": [
-        467,
-        468
+        252,
+        253
       ],
-      "observed_volume": 1,
-      "observed_volume_page": 451,
+      "observed_volume": null,
+      "observed_volume_page": null,
       "page_match": true,
       "quote_in_chunk": true,
       "reading_id": "01_quantitative_methods",
       "reviewer": "deterministic-anchor-review/v1",
       "role": "supports",
-      "severity": "M",
+      "severity": "N",
       "source_authorized": true,
-      "source_id": "cfa_2022_l1_combined",
+      "source_id": "qm_eslii_2009_2ed",
       "swarm_verdict": {
         "proposed_resolution": "re-anchor",
         "rationale": "Genuine placeholder. The card is entirely about AIC = n*ln(SSE/n)+2(k+1) and BIC = n*ln(SSE/n)+ln(n)(k+1) information criteria, which the card's own summary admits are 'not in CFA L1 2022'. The cited chunk (cfa p467) is a generic goodness-of-fit paragraph listing R-squared, the F-statistic, and the standard error of the regression -- it never mentions AIC, BIC, information criteria, or a log-likelihood penalty. The card body even falsely attributes the AIC/BIC formulas to the CFA PDF ('the source uses the explicit k+1 form', 'source ASSERTS'). The chunk does not support the stated concept.",
@@ -2716,34 +1982,34 @@
       "source_id": "cfa_2022_l1_combined"
     },
     {
-      "audit_flag": "content_mismatch_noted",
+      "audit_flag": "re_anchored",
       "card_id": "qm-arch-conditional-heteroskedasticity",
       "checks": [],
-      "chunk_id": "cfa_2022_l1_combined:p459:0583",
+      "chunk_id": "qm_tsay_2005_afts_2e:p127:0142",
       "chunk_source_match": true,
       "citation_index": 0,
-      "decision": "OPEN: placeholder anchor -- cited chunk does not support the card; re-anchor or de-claim",
+      "decision": "re-anchored to a supporting source (R4 discovery + adversarial support-verification; independent quote-substring + kb verify)",
       "expected_pdf_page_range": [
-        459,
-        460
+        127,
+        128
       ],
-      "expected_source": "cfa_2022_l1_combined",
-      "expected_volume": 1,
+      "expected_source": "qm_tsay_2005_afts_2e",
+      "expected_volume": null,
       "finding_scope": "citation",
       "observed_pdf_page_range": [
-        459,
-        460
+        127,
+        128
       ],
-      "observed_volume": 1,
-      "observed_volume_page": 443,
+      "observed_volume": null,
+      "observed_volume_page": null,
       "page_match": true,
       "quote_in_chunk": true,
       "reading_id": "01_quantitative_methods",
       "reviewer": "deterministic-anchor-review/v1",
       "role": "defines",
-      "severity": "M",
+      "severity": "N",
       "source_authorized": true,
-      "source_id": "cfa_2022_l1_combined",
+      "source_id": "qm_tsay_2005_afts_2e",
       "swarm_verdict": {
         "proposed_resolution": "re-anchor",
         "rationale": "Genuine placeholder. The card defines an ARCH(1) regression e_t^2 = a0 + a1*e_{t-1}^2 + u_t volatility-clustering test and OLS->GLS response; the summary admits ARCH 'is not in CFA L1 2022'. Cited chunk 0 (cfa p459) merely states the homoskedasticity assumption of simple linear regression; chunk 1 (cfa p462) discusses cross-sectional regime clustering of residual variance, not a time-series autoregression of squared residuals. Neither chunk introduces a lagged-squared-residual model, the term ARCH, or conditional variance dynamics. Wrong concept.",
@@ -2754,34 +2020,34 @@
       }
     },
     {
-      "audit_flag": "content_mismatch_noted",
+      "audit_flag": "re_anchored",
       "card_id": "qm-arch-conditional-heteroskedasticity",
       "checks": [],
-      "chunk_id": "cfa_2022_l1_combined:p462:0586",
+      "chunk_id": "qm_tsay_2005_afts_2e:p127:0142",
       "chunk_source_match": true,
       "citation_index": 1,
-      "decision": "OPEN: placeholder anchor -- cited chunk does not support the card; re-anchor or de-claim",
+      "decision": "re-anchored to a supporting source (R4 discovery + adversarial support-verification; independent quote-substring + kb verify)",
       "expected_pdf_page_range": [
-        462,
-        463
+        127,
+        128
       ],
-      "expected_source": "cfa_2022_l1_combined",
-      "expected_volume": 1,
+      "expected_source": "qm_tsay_2005_afts_2e",
+      "expected_volume": null,
       "finding_scope": "citation",
       "observed_pdf_page_range": [
-        462,
-        463
+        127,
+        128
       ],
-      "observed_volume": 1,
-      "observed_volume_page": 446,
+      "observed_volume": null,
+      "observed_volume_page": null,
       "page_match": true,
       "quote_in_chunk": true,
       "reading_id": "01_quantitative_methods",
       "reviewer": "deterministic-anchor-review/v1",
       "role": "supports",
-      "severity": "M",
+      "severity": "N",
       "source_authorized": true,
-      "source_id": "cfa_2022_l1_combined",
+      "source_id": "qm_tsay_2005_afts_2e",
       "swarm_verdict": {
         "proposed_resolution": "re-anchor",
         "rationale": "Genuine placeholder. The card defines an ARCH(1) regression e_t^2 = a0 + a1*e_{t-1}^2 + u_t volatility-clustering test and OLS->GLS response; the summary admits ARCH 'is not in CFA L1 2022'. Cited chunk 0 (cfa p459) merely states the homoskedasticity assumption of simple linear regression; chunk 1 (cfa p462) discusses cross-sectional regime clustering of residual variance, not a time-series autoregression of squared residuals. Neither chunk introduces a lagged-squared-residual model, the term ARCH, or conditional variance dynamics. Wrong concept.",
@@ -2912,34 +2178,34 @@
       "source_id": "qm_greene_2019_econometric_analysis_8ed"
     },
     {
-      "audit_flag": "content_mismatch_noted",
+      "audit_flag": "re_anchored",
       "card_id": "qm-decision-trees-and-roots",
       "checks": [],
-      "chunk_id": "cfa_2022_l1_combined:p450:0573",
+      "chunk_id": "qm_eslii_2009_2ed:p324:0408",
       "chunk_source_match": true,
       "citation_index": 0,
-      "decision": "OPEN: placeholder anchor -- cited chunk does not support the card; re-anchor or de-claim",
+      "decision": "re-anchored to a supporting source (R4 discovery + adversarial support-verification; independent quote-substring + kb verify)",
       "expected_pdf_page_range": [
-        450,
-        451
+        324,
+        324
       ],
-      "expected_source": "cfa_2022_l1_combined",
-      "expected_volume": 1,
+      "expected_source": "qm_eslii_2009_2ed",
+      "expected_volume": null,
       "finding_scope": "citation",
       "observed_pdf_page_range": [
-        450,
-        451
+        324,
+        324
       ],
-      "observed_volume": 1,
-      "observed_volume_page": 434,
+      "observed_volume": null,
+      "observed_volume_page": null,
       "page_match": true,
       "quote_in_chunk": true,
       "reading_id": "01_quantitative_methods",
       "reviewer": "deterministic-anchor-review/v1",
       "role": "defines",
-      "severity": "M",
+      "severity": "N",
       "source_authorized": true,
-      "source_id": "cfa_2022_l1_combined",
+      "source_id": "qm_eslii_2009_2ed",
       "swarm_verdict": {
         "proposed_resolution": "re-anchor",
         "rationale": "Genuine placeholder. The card describes CART -- a non-parametric recursive-binary-split tree learner -- which the summary admits 'is not in CFA L1 2022'. Both cited chunks (cfa p450 'linear regression assumes a linear relationship'; cfa p447 R7 learning-outcome statement for simple linear regression) are about parametric simple linear regression. Nothing in either chunk mentions trees, recursive partitioning, decision nodes, or majority-class/terminal-node prediction. The chunk is the parametric opposite of the card's concept, not support for it.",
@@ -2950,34 +2216,34 @@
       }
     },
     {
-      "audit_flag": "content_mismatch_noted",
+      "audit_flag": "re_anchored",
       "card_id": "qm-decision-trees-and-roots",
       "checks": [],
-      "chunk_id": "cfa_2022_l1_combined:p447:0569",
+      "chunk_id": "qm_eslii_2009_2ed:p327:0413",
       "chunk_source_match": true,
       "citation_index": 1,
-      "decision": "OPEN: placeholder anchor -- cited chunk does not support the card; re-anchor or de-claim",
+      "decision": "re-anchored to a supporting source (R4 discovery + adversarial support-verification; independent quote-substring + kb verify)",
       "expected_pdf_page_range": [
-        447,
-        448
+        327,
+        328
       ],
-      "expected_source": "cfa_2022_l1_combined",
-      "expected_volume": 1,
+      "expected_source": "qm_eslii_2009_2ed",
+      "expected_volume": null,
       "finding_scope": "citation",
       "observed_pdf_page_range": [
-        447,
-        448
+        327,
+        328
       ],
-      "observed_volume": 1,
-      "observed_volume_page": 431,
+      "observed_volume": null,
+      "observed_volume_page": null,
       "page_match": true,
       "quote_in_chunk": true,
       "reading_id": "01_quantitative_methods",
       "reviewer": "deterministic-anchor-review/v1",
       "role": "supports",
-      "severity": "M",
+      "severity": "N",
       "source_authorized": true,
-      "source_id": "cfa_2022_l1_combined",
+      "source_id": "qm_eslii_2009_2ed",
       "swarm_verdict": {
         "proposed_resolution": "re-anchor",
         "rationale": "Genuine placeholder. The card describes CART -- a non-parametric recursive-binary-split tree learner -- which the summary admits 'is not in CFA L1 2022'. Both cited chunks (cfa p450 'linear regression assumes a linear relationship'; cfa p447 R7 learning-outcome statement for simple linear regression) are about parametric simple linear regression. Nothing in either chunk mentions trees, recursive partitioning, decision nodes, or majority-class/terminal-node prediction. The chunk is the parametric opposite of the card's concept, not support for it.",
@@ -3048,34 +2314,34 @@
       "source_id": "cfa_2022_l1_combined"
     },
     {
-      "audit_flag": "content_mismatch_noted",
+      "audit_flag": "re_anchored",
       "card_id": "qm-influence-analysis-leverage",
       "checks": [],
-      "chunk_id": "cfa_2022_l1_combined:p464:0588",
+      "chunk_id": "qm_greene_2019_econometric_analysis_8ed:p146:0209",
       "chunk_source_match": true,
       "citation_index": 0,
-      "decision": "OPEN: placeholder anchor -- cited chunk does not support the card; re-anchor or de-claim",
+      "decision": "re-anchored to a supporting source (R4 discovery + adversarial support-verification; independent quote-substring + kb verify)",
       "expected_pdf_page_range": [
-        464,
-        465
+        146,
+        147
       ],
-      "expected_source": "cfa_2022_l1_combined",
-      "expected_volume": 1,
+      "expected_source": "qm_greene_2019_econometric_analysis_8ed",
+      "expected_volume": null,
       "finding_scope": "citation",
       "observed_pdf_page_range": [
-        464,
-        465
+        146,
+        147
       ],
-      "observed_volume": 1,
-      "observed_volume_page": 448,
+      "observed_volume": null,
+      "observed_volume_page": null,
       "page_match": true,
       "quote_in_chunk": true,
       "reading_id": "01_quantitative_methods",
       "reviewer": "deterministic-anchor-review/v1",
       "role": "defines",
-      "severity": "M",
+      "severity": "N",
       "source_authorized": true,
-      "source_id": "cfa_2022_l1_combined",
+      "source_id": "qm_greene_2019_econometric_analysis_8ed",
       "swarm_verdict": {
         "proposed_resolution": "re-anchor",
         "rationale": "Genuine placeholder. The card defines per-observation diagnostics leverage h_ii, studentized residuals, and Cook's distance; summary admits these 'are not in CFA L1 2022'. Cited chunk 0 (cfa p464) is a single descriptive sentence that an outlier can influence the fitted line; chunk 1 (cfa p463) is the residual-pattern-plot diagnostic for autocorrelation. Neither chunk defines a leverage statistic, a studentized residual, or Cook's distance, nor any per-observation deletion-influence quantity. Descriptive outlier mention does not support the quantitative influence-diagnostic battery the card teaches.",
@@ -3086,34 +2352,34 @@
       }
     },
     {
-      "audit_flag": "content_mismatch_noted",
+      "audit_flag": "re_anchored",
       "card_id": "qm-influence-analysis-leverage",
       "checks": [],
-      "chunk_id": "cfa_2022_l1_combined:p463:0587",
+      "chunk_id": "qm_greene_2019_econometric_analysis_8ed:p147:0210",
       "chunk_source_match": true,
       "citation_index": 1,
-      "decision": "OPEN: placeholder anchor -- cited chunk does not support the card; re-anchor or de-claim",
+      "decision": "re-anchored to a supporting source (R4 discovery + adversarial support-verification; independent quote-substring + kb verify)",
       "expected_pdf_page_range": [
-        463,
-        464
+        147,
+        147
       ],
-      "expected_source": "cfa_2022_l1_combined",
-      "expected_volume": 1,
+      "expected_source": "qm_greene_2019_econometric_analysis_8ed",
+      "expected_volume": null,
       "finding_scope": "citation",
       "observed_pdf_page_range": [
-        463,
-        464
+        147,
+        147
       ],
-      "observed_volume": 1,
-      "observed_volume_page": 447,
+      "observed_volume": null,
+      "observed_volume_page": null,
       "page_match": true,
       "quote_in_chunk": true,
       "reading_id": "01_quantitative_methods",
       "reviewer": "deterministic-anchor-review/v1",
       "role": "supports",
-      "severity": "M",
+      "severity": "N",
       "source_authorized": true,
-      "source_id": "cfa_2022_l1_combined",
+      "source_id": "qm_greene_2019_econometric_analysis_8ed",
       "swarm_verdict": {
         "proposed_resolution": "re-anchor",
         "rationale": "Genuine placeholder. The card defines per-observation diagnostics leverage h_ii, studentized residuals, and Cook's distance; summary admits these 'are not in CFA L1 2022'. Cited chunk 0 (cfa p464) is a single descriptive sentence that an outlier can influence the fitted line; chunk 1 (cfa p463) is the residual-pattern-plot diagnostic for autocorrelation. Neither chunk defines a leverage statistic, a studentized residual, or Cook's distance, nor any per-observation deletion-influence quantity. Descriptive outlier mention does not support the quantitative influence-diagnostic battery the card teaches.",
@@ -3304,34 +2570,34 @@
       "source_id": "qm_wooldridge_intro_econometrics_8ed"
     },
     {
-      "audit_flag": "content_mismatch_noted",
+      "audit_flag": "re_anchored",
       "card_id": "qm-penalized-regression-lasso",
       "checks": [],
-      "chunk_id": "cfa_2022_l1_combined:p450:0573",
+      "chunk_id": "qm_eslii_2009_2ed:p087:0108",
       "chunk_source_match": true,
       "citation_index": 0,
-      "decision": "OPEN: placeholder anchor -- cited chunk does not support the card; re-anchor or de-claim",
+      "decision": "re-anchored to a supporting source (R4 discovery + adversarial support-verification; independent quote-substring + kb verify)",
       "expected_pdf_page_range": [
-        450,
-        451
+        87,
+        88
       ],
-      "expected_source": "cfa_2022_l1_combined",
-      "expected_volume": 1,
+      "expected_source": "qm_eslii_2009_2ed",
+      "expected_volume": null,
       "finding_scope": "citation",
       "observed_pdf_page_range": [
-        450,
-        451
+        87,
+        88
       ],
-      "observed_volume": 1,
-      "observed_volume_page": 434,
+      "observed_volume": null,
+      "observed_volume_page": null,
       "page_match": true,
       "quote_in_chunk": true,
       "reading_id": "01_quantitative_methods",
       "reviewer": "deterministic-anchor-review/v1",
       "role": "defines",
-      "severity": "M",
+      "severity": "N",
       "source_authorized": true,
-      "source_id": "cfa_2022_l1_combined",
+      "source_id": "qm_eslii_2009_2ed",
       "swarm_verdict": {
         "proposed_resolution": "re-anchor",
         "rationale": "Genuine placeholder. The card defines the LASSO L1-penalized objective SSE + lambda*sum|b_j| with exact-zero sparsity / feature selection, and the summary admits LASSO 'is not in CFA L1 2022'. Both cited chunks point to the same cfa p450 paragraph describing the unpenalized least-squares criterion and the OLS label. There is no penalty term, no L1/lambda, no shrinkage or feature-selection content in the chunk. The body falsely sources the LASSO objective to the CFA PDF. Chunk supports plain OLS, not the penalized variant.",
@@ -3342,34 +2608,34 @@
       }
     },
     {
-      "audit_flag": "content_mismatch_noted",
+      "audit_flag": "re_anchored",
       "card_id": "qm-penalized-regression-lasso",
       "checks": [],
-      "chunk_id": "cfa_2022_l1_combined:p450:0573",
+      "chunk_id": "qm_eslii_2009_2ed:p088:0109",
       "chunk_source_match": true,
       "citation_index": 1,
-      "decision": "OPEN: placeholder anchor -- cited chunk does not support the card; re-anchor or de-claim",
+      "decision": "re-anchored to a supporting source (R4 discovery + adversarial support-verification; independent quote-substring + kb verify)",
       "expected_pdf_page_range": [
-        450,
-        451
+        88,
+        88
       ],
-      "expected_source": "cfa_2022_l1_combined",
-      "expected_volume": 1,
+      "expected_source": "qm_eslii_2009_2ed",
+      "expected_volume": null,
       "finding_scope": "citation",
       "observed_pdf_page_range": [
-        450,
-        451
+        88,
+        88
       ],
-      "observed_volume": 1,
-      "observed_volume_page": 434,
+      "observed_volume": null,
+      "observed_volume_page": null,
       "page_match": true,
       "quote_in_chunk": true,
       "reading_id": "01_quantitative_methods",
       "reviewer": "deterministic-anchor-review/v1",
       "role": "supports",
-      "severity": "M",
+      "severity": "N",
       "source_authorized": true,
-      "source_id": "cfa_2022_l1_combined",
+      "source_id": "qm_eslii_2009_2ed",
       "swarm_verdict": {
         "proposed_resolution": "re-anchor",
         "rationale": "Genuine placeholder. The card defines the LASSO L1-penalized objective SSE + lambda*sum|b_j| with exact-zero sparsity / feature selection, and the summary admits LASSO 'is not in CFA L1 2022'. Both cited chunks point to the same cfa p450 paragraph describing the unpenalized least-squares criterion and the OLS label. There is no penalty term, no L1/lambda, no shrinkage or feature-selection content in the chunk. The body falsely sources the LASSO objective to the CFA PDF. Chunk supports plain OLS, not the penalized variant.",
@@ -3380,34 +2646,34 @@
       }
     },
     {
-      "audit_flag": "content_mismatch_noted",
+      "audit_flag": "re_anchored",
       "card_id": "qm-projection-and-dimensionality-reduction",
       "checks": [],
-      "chunk_id": "cfa_2022_l1_combined:p450:0573",
+      "chunk_id": "qm_eslii_2009_2ed:p552:0693",
       "chunk_source_match": true,
       "citation_index": 0,
-      "decision": "OPEN: placeholder anchor -- cited chunk does not support the card; re-anchor or de-claim",
+      "decision": "re-anchored to a supporting source (R4 discovery + adversarial support-verification; independent quote-substring + kb verify)",
       "expected_pdf_page_range": [
-        450,
-        451
+        552,
+        553
       ],
-      "expected_source": "cfa_2022_l1_combined",
-      "expected_volume": 1,
+      "expected_source": "qm_eslii_2009_2ed",
+      "expected_volume": null,
       "finding_scope": "citation",
       "observed_pdf_page_range": [
-        450,
-        451
+        552,
+        553
       ],
-      "observed_volume": 1,
-      "observed_volume_page": 434,
+      "observed_volume": null,
+      "observed_volume_page": null,
       "page_match": true,
       "quote_in_chunk": true,
       "reading_id": "01_quantitative_methods",
       "reviewer": "deterministic-anchor-review/v1",
       "role": "defines",
-      "severity": "M",
+      "severity": "N",
       "source_authorized": true,
-      "source_id": "cfa_2022_l1_combined",
+      "source_id": "qm_eslii_2009_2ed",
       "swarm_verdict": {
         "proposed_resolution": "re-anchor",
         "rationale": "Genuine placeholder. The card teaches PCA -- rotating a standardized feature matrix onto orthogonal variance-ranked axes and retaining a cumulative-variance threshold -- and the summary admits PCA 'is not in CFA L1 2022'. Cited chunk 0 (cfa p450 'linear regression assumes a linear relationship') and chunk 1 (cfa p447 'Regression analysis is a tool for examining this type of issue', the R7 reading intro) are about univariate simple linear regression with a scalar predictor. Neither chunk mentions principal components, eigen-decomposition, orthogonal axes, variance ranking, or dimensionality reduction. Wrong concept.",
@@ -3418,34 +2684,34 @@
       }
     },
     {
-      "audit_flag": "content_mismatch_noted",
+      "audit_flag": "re_anchored",
       "card_id": "qm-projection-and-dimensionality-reduction",
       "checks": [],
-      "chunk_id": "cfa_2022_l1_combined:p447:0569",
+      "chunk_id": "qm_eslii_2009_2ed:p555:0696",
       "chunk_source_match": true,
       "citation_index": 1,
-      "decision": "OPEN: placeholder anchor -- cited chunk does not support the card; re-anchor or de-claim",
+      "decision": "re-anchored to a supporting source (R4 discovery + adversarial support-verification; independent quote-substring + kb verify)",
       "expected_pdf_page_range": [
-        447,
-        448
+        555,
+        556
       ],
-      "expected_source": "cfa_2022_l1_combined",
-      "expected_volume": 1,
+      "expected_source": "qm_eslii_2009_2ed",
+      "expected_volume": null,
       "finding_scope": "citation",
       "observed_pdf_page_range": [
-        447,
-        448
+        555,
+        556
       ],
-      "observed_volume": 1,
-      "observed_volume_page": 431,
+      "observed_volume": null,
+      "observed_volume_page": null,
       "page_match": true,
       "quote_in_chunk": true,
       "reading_id": "01_quantitative_methods",
       "reviewer": "deterministic-anchor-review/v1",
       "role": "supports",
-      "severity": "M",
+      "severity": "N",
       "source_authorized": true,
-      "source_id": "cfa_2022_l1_combined",
+      "source_id": "qm_eslii_2009_2ed",
       "swarm_verdict": {
         "proposed_resolution": "re-anchor",
         "rationale": "Genuine placeholder. The card teaches PCA -- rotating a standardized feature matrix onto orthogonal variance-ranked axes and retaining a cumulative-variance threshold -- and the summary admits PCA 'is not in CFA L1 2022'. Cited chunk 0 (cfa p450 'linear regression assumes a linear relationship') and chunk 1 (cfa p447 'Regression analysis is a tool for examining this type of issue', the R7 reading intro) are about univariate simple linear regression with a scalar predictor. Neither chunk mentions principal components, eigen-decomposition, orthogonal axes, variance ranking, or dimensionality reduction. Wrong concept.",
@@ -3846,34 +3112,34 @@
       "source_id": "cfa_2022_l1_combined"
     },
     {
-      "audit_flag": "content_mismatch_noted",
+      "audit_flag": "re_anchored",
       "card_id": "qm-time-series-foundations",
       "checks": [],
-      "chunk_id": "cfa_2022_l1_combined:p456:0580",
+      "chunk_id": "qm_tsay_2005_afts_2e:p049:0044",
       "chunk_source_match": true,
       "citation_index": 0,
-      "decision": "OPEN: placeholder anchor -- cited chunk does not support the card; re-anchor or de-claim",
+      "decision": "re-anchored to a supporting source (R4 discovery + adversarial support-verification; independent quote-substring + kb verify)",
       "expected_pdf_page_range": [
-        456,
-        462
+        49,
+        50
       ],
-      "expected_source": "cfa_2022_l1_combined",
-      "expected_volume": 1,
+      "expected_source": "qm_tsay_2005_afts_2e",
+      "expected_volume": null,
       "finding_scope": "citation",
       "observed_pdf_page_range": [
-        456,
-        456
+        49,
+        50
       ],
-      "observed_volume": 1,
-      "observed_volume_page": 440,
+      "observed_volume": null,
+      "observed_volume_page": null,
       "page_match": true,
       "quote_in_chunk": true,
       "reading_id": "01_quantitative_methods",
       "reviewer": "deterministic-anchor-review/v1",
       "role": "supports",
-      "severity": "M",
+      "severity": "N",
       "source_authorized": true,
-      "source_id": "cfa_2022_l1_combined",
+      "source_id": "qm_tsay_2005_afts_2e",
       "swarm_verdict": {
         "proposed_resolution": "re-anchor",
         "rationale": "Genuine placeholder, as the prior audit's own note concedes. The card teaches AR(p) recursion, covariance stationarity, the Dickey-Fuller unit-root test, and log-linear trend models; the summary admits these are 'NOT covered in CFA L1 2022'. Both cited chunks point to cfa p456, which only distinguishes cross-sectional vs time-series regression data types. The body falsely claims 'the two basic time-series models the source covers' are deterministic trend and AR(p) -- the chunk covers neither. No lag structure, stationarity condition, unit root, or Dickey-Fuller content in the chunk.",
@@ -3884,34 +3150,34 @@
       }
     },
     {
-      "audit_flag": "content_mismatch_noted",
+      "audit_flag": "re_anchored",
       "card_id": "qm-time-series-foundations",
       "checks": [],
-      "chunk_id": "cfa_2022_l1_combined:p456:0580",
+      "chunk_id": "qm_tsay_2005_afts_2e:p093:0100",
       "chunk_source_match": true,
       "citation_index": 1,
-      "decision": "OPEN: placeholder anchor -- cited chunk does not support the card; re-anchor or de-claim",
+      "decision": "re-anchored to a supporting source (R4 discovery + adversarial support-verification; independent quote-substring + kb verify)",
       "expected_pdf_page_range": [
-        456,
-        462
+        93,
+        93
       ],
-      "expected_source": "cfa_2022_l1_combined",
-      "expected_volume": 1,
+      "expected_source": "qm_tsay_2005_afts_2e",
+      "expected_volume": null,
       "finding_scope": "citation",
       "observed_pdf_page_range": [
-        456,
-        456
+        93,
+        93
       ],
-      "observed_volume": 1,
-      "observed_volume_page": 440,
+      "observed_volume": null,
+      "observed_volume_page": null,
       "page_match": true,
       "quote_in_chunk": true,
       "reading_id": "01_quantitative_methods",
       "reviewer": "deterministic-anchor-review/v1",
       "role": "supports",
-      "severity": "M",
+      "severity": "N",
       "source_authorized": true,
-      "source_id": "cfa_2022_l1_combined",
+      "source_id": "qm_tsay_2005_afts_2e",
       "swarm_verdict": {
         "proposed_resolution": "re-anchor",
         "rationale": "Genuine placeholder, as the prior audit's own note concedes. The card teaches AR(p) recursion, covariance stationarity, the Dickey-Fuller unit-root test, and log-linear trend models; the summary admits these are 'NOT covered in CFA L1 2022'. Both cited chunks point to cfa p456, which only distinguishes cross-sectional vs time-series regression data types. The body falsely claims 'the two basic time-series models the source covers' are deterministic trend and AR(p) -- the chunk covers neither. No lag structure, stationarity condition, unit root, or Dickey-Fuller content in the chunk.",
@@ -6834,13 +6100,13 @@
       "source_id": "fra_penman_fsa_security_valuation_5ed"
     },
     {
-      "audit_flag": "wrong_pages_corrected",
+      "audit_flag": "re_anchored",
       "card_id": "fra-cash-vs-accrual-accounting",
       "checks": [],
       "chunk_id": "fra_penman_fsa_security_valuation_5ed:p137:0228",
       "chunk_source_match": true,
       "citation_index": 0,
-      "decision": "resolved at emit: pages re-anchored (card cites corrected chunk; Layer-2 passes)",
+      "decision": "re-anchored to a supporting source (R4 discovery + adversarial support-verification; independent quote-substring + kb verify)",
       "expected_pdf_page_range": [
         137,
         138
@@ -6859,41 +6125,45 @@
       "reading_id": "03_financial_reporting_analysis",
       "reviewer": "deterministic-anchor-review/v1",
       "role": "defines",
-      "severity": "W",
+      "severity": "N",
       "source_authorized": true,
       "source_id": "fra_penman_fsa_security_valuation_5ed"
     },
     {
-      "audit_flag": "wrong_pages_corrected",
+      "audit_flag": "re_anchored",
       "card_id": "fra-cash-vs-accrual-accounting",
       "checks": [
         "swarm-finding:M"
       ],
-      "chunk_id": "fra_penman_fsa_security_valuation_5ed:p138:0230",
+      "chunk_id": "fra_kieso_weygandt_warfield_2020_ifrs_4ed:p259:0237",
       "chunk_source_match": true,
       "citation_index": 1,
-      "decision": "OPEN(swarm M): Defining citation quote is about the dividend discount model / bond valuation, not cash-vs-accrual accounting. | repair: Citation_index 1 (fra_penman_fsa_security_valuation_5ed:p138:0230) is tagged edge_type 'defines' but its verbatim quote is 'The dividend discount model is a straight application of the bond valuation ",
+      "decision": "RESOLVED(re-anchor): swarm-flagged citation re-anchored to fra_kieso_weygandt_warfield_2020_ifrs_4ed (fra_kieso_weygandt_warfield_2020_ifrs_4ed:p259:0237): This is Kieso's 'Cash-Basis Accounting versus Accrual-Basis Accounting' appendix, and",
       "expected_pdf_page_range": [
-        138,
-        139
+        259,
+        260
       ],
-      "expected_source": "fra_penman_fsa_security_valuation_5ed",
+      "expected_source": "fra_kieso_weygandt_warfield_2020_ifrs_4ed",
       "expected_volume": null,
       "finding_scope": "citation",
       "observed_pdf_page_range": [
-        138,
-        139
+        259,
+        260
       ],
       "observed_volume": null,
       "observed_volume_page": null,
       "page_match": true,
       "quote_in_chunk": true,
       "reading_id": "03_financial_reporting_analysis",
+      "resolution": {
+        "decided_by": "reanchor-discovery-swarm:R4 + claude(validated)",
+        "kind": "re-anchor"
+      },
       "reviewer": "deterministic-anchor-review/v1",
       "role": "defines",
-      "severity": "M",
+      "severity": "W",
       "source_authorized": true,
-      "source_id": "fra_penman_fsa_security_valuation_5ed",
+      "source_id": "fra_kieso_weygandt_warfield_2020_ifrs_4ed",
       "swarm_finding": {
         "card_id": "fra-cash-vs-accrual-accounting",
         "citation_index": 1,
@@ -6904,13 +6174,13 @@
       }
     },
     {
-      "audit_flag": "wrong_pages_corrected",
+      "audit_flag": "re_anchored",
       "card_id": "fra-cash-vs-accrual-accounting",
       "checks": [],
       "chunk_id": "cfa_2022_l1_combined:p1085:1551",
       "chunk_source_match": true,
       "citation_index": 2,
-      "decision": "resolved at emit: pages re-anchored (card cites corrected chunk; Layer-2 passes)",
+      "decision": "re-anchored to a supporting source (R4 discovery + adversarial support-verification; independent quote-substring + kb verify)",
       "expected_pdf_page_range": [
         1085,
         1086
@@ -6929,7 +6199,7 @@
       "reading_id": "03_financial_reporting_analysis",
       "reviewer": "deterministic-anchor-review/v1",
       "role": "supports",
-      "severity": "W",
+      "severity": "N",
       "source_authorized": true,
       "source_id": "cfa_2022_l1_combined"
     },
@@ -7174,34 +6444,34 @@
       "source_id": "cfa_2022_l1_combined"
     },
     {
-      "audit_flag": "content_mismatch_noted",
+      "audit_flag": "re_anchored",
       "card_id": "fra-double-entry-mechanics",
       "checks": [],
-      "chunk_id": "cfa_2022_l1_combined:p1085:1551",
+      "chunk_id": "fra_kieso_weygandt_warfield_2020_ifrs_4ed:p211:0190",
       "chunk_source_match": true,
       "citation_index": 0,
-      "decision": "OPEN: placeholder anchor -- cited chunk does not support the card; re-anchor or de-claim",
+      "decision": "re-anchored to a supporting source (R4 discovery + adversarial support-verification; independent quote-substring + kb verify)",
       "expected_pdf_page_range": [
-        1085,
-        1086
+        211,
+        211
       ],
-      "expected_source": "cfa_2022_l1_combined",
-      "expected_volume": 2,
+      "expected_source": "fra_kieso_weygandt_warfield_2020_ifrs_4ed",
+      "expected_volume": null,
       "finding_scope": "citation",
       "observed_pdf_page_range": [
-        1085,
-        1086
+        211,
+        211
       ],
-      "observed_volume": 2,
-      "observed_volume_page": 508,
+      "observed_volume": null,
+      "observed_volume_page": null,
       "page_match": true,
       "quote_in_chunk": true,
       "reading_id": "03_financial_reporting_analysis",
       "reviewer": "deterministic-anchor-review/v1",
       "role": "defines",
-      "severity": "M",
+      "severity": "N",
       "source_authorized": true,
-      "source_id": "cfa_2022_l1_combined",
+      "source_id": "fra_kieso_weygandt_warfield_2020_ifrs_4ed",
       "swarm_verdict": {
         "proposed_resolution": "re-anchor",
         "rationale": "Confirmed. The card's load-bearing concept is double-entry bookkeeping mechanics: debits/credits, T-accounts, normal balances by account type, journal/closing entries, and the trial-balance condition. The CFA citation (cfa_2022_l1_combined:p1085, Vol.2 R15 'Introduction to Financial Statement Analysis') only supplies the accounting identity 'Assets = Liabilities + Owners' equity' from the R15 summary — it does NOT cover debits, credits, T-accounts, or journal entries. The card body itself repeatedly cites Vol.2/pp.475-514 (R15) and Vol.3/pp.5-62 (R17 Income Statements) for the debit/credit account-type rules and the closing-entry sequence, neither of which teaches double-entry mechanics; this is exactly the prior flag's point that the mechanics live in a prerequisite 'Financial Reporting Mechanics' resource outside the main curriculum volume. The Penman supporting cite (articulation) is also tangential to debit/credit mechanics. Kieso (Intermediate Accounting, IFRS 4ed) is authorized for this slice and covers the recording process / accounting cycle in full, so re-anchoring the mechanics claims there resolves the mismatch; the CFA accounting-equation quote may be retained only for the narrow identity-preservation statement.",
@@ -7212,23 +6482,23 @@
       }
     },
     {
-      "audit_flag": "content_mismatch_noted",
+      "audit_flag": "re_anchored",
       "card_id": "fra-double-entry-mechanics",
       "checks": [],
-      "chunk_id": "fra_penman_fsa_security_valuation_5ed:p069:0109",
+      "chunk_id": "fra_kieso_weygandt_warfield_2020_ifrs_4ed:p211:0191",
       "chunk_source_match": true,
       "citation_index": 1,
-      "decision": "OPEN: placeholder anchor -- cited chunk does not support the card; re-anchor or de-claim",
+      "decision": "re-anchored to a supporting source (R4 discovery + adversarial support-verification; independent quote-substring + kb verify)",
       "expected_pdf_page_range": [
-        69,
-        70
+        211,
+        212
       ],
-      "expected_source": "fra_penman_fsa_security_valuation_5ed",
+      "expected_source": "fra_kieso_weygandt_warfield_2020_ifrs_4ed",
       "expected_volume": null,
       "finding_scope": "citation",
       "observed_pdf_page_range": [
-        69,
-        70
+        211,
+        212
       ],
       "observed_volume": null,
       "observed_volume_page": null,
@@ -7237,9 +6507,9 @@
       "reading_id": "03_financial_reporting_analysis",
       "reviewer": "deterministic-anchor-review/v1",
       "role": "supports",
-      "severity": "M",
+      "severity": "N",
       "source_authorized": true,
-      "source_id": "fra_penman_fsa_security_valuation_5ed",
+      "source_id": "fra_kieso_weygandt_warfield_2020_ifrs_4ed",
       "swarm_verdict": {
         "proposed_resolution": "re-anchor",
         "rationale": "Confirmed. The card's load-bearing concept is double-entry bookkeeping mechanics: debits/credits, T-accounts, normal balances by account type, journal/closing entries, and the trial-balance condition. The CFA citation (cfa_2022_l1_combined:p1085, Vol.2 R15 'Introduction to Financial Statement Analysis') only supplies the accounting identity 'Assets = Liabilities + Owners' equity' from the R15 summary — it does NOT cover debits, credits, T-accounts, or journal entries. The card body itself repeatedly cites Vol.2/pp.475-514 (R15) and Vol.3/pp.5-62 (R17 Income Statements) for the debit/credit account-type rules and the closing-entry sequence, neither of which teaches double-entry mechanics; this is exactly the prior flag's point that the mechanics live in a prerequisite 'Financial Reporting Mechanics' resource outside the main curriculum volume. The Penman supporting cite (articulation) is also tangential to debit/credit mechanics. Kieso (Intermediate Accounting, IFRS 4ed) is authorized for this slice and covers the recording process / accounting cycle in full, so re-anchoring the mechanics claims there resolves the mismatch; the CFA accounting-equation quote may be retained only for the narrow identity-preservation statement.",
@@ -9434,23 +8704,23 @@
       }
     },
     {
-      "audit_flag": "content_mismatch_noted",
+      "audit_flag": "re_anchored",
       "card_id": "deriv-implied-volatility",
       "checks": [],
-      "chunk_id": "cb_hull_2022_options_futures_derivatives_11ed:p460:0680",
+      "chunk_id": "cb_hull_2022_options_futures_derivatives_11ed:p358:0528",
       "chunk_source_match": true,
       "citation_index": 0,
-      "decision": "OPEN: placeholder anchor -- cited chunk does not support the card; re-anchor or de-claim",
+      "decision": "re-anchored to a supporting source (R4 discovery + adversarial support-verification; independent quote-substring + kb verify)",
       "expected_pdf_page_range": [
-        460,
-        461
+        358,
+        358
       ],
       "expected_source": "cb_hull_2022_options_futures_derivatives_11ed",
       "expected_volume": null,
       "finding_scope": "citation",
       "observed_pdf_page_range": [
-        460,
-        460
+        358,
+        358
       ],
       "observed_volume": null,
       "observed_volume_page": null,
@@ -9459,7 +8729,7 @@
       "reading_id": "07_derivatives_and_volatility",
       "reviewer": "deterministic-anchor-review/v1",
       "role": "defines",
-      "severity": "M",
+      "severity": "N",
       "source_authorized": true,
       "source_id": "cb_hull_2022_options_futures_derivatives_11ed",
       "swarm_verdict": {
@@ -10774,13 +10044,13 @@
       }
     },
     {
-      "audit_flag": "wrong_pages_corrected",
+      "audit_flag": "re_anchored",
       "card_id": "cb-arbitrage-strategy",
       "checks": [],
       "chunk_id": "cb_calamos_2003_convertible_arbitrage:p021:0019",
       "chunk_source_match": true,
       "citation_index": 0,
-      "decision": "resolved at emit: pages re-anchored (card cites corrected chunk; Layer-2 passes)",
+      "decision": "re-anchored to a supporting source (R4 discovery + adversarial support-verification; independent quote-substring + kb verify)",
       "expected_pdf_page_range": [
         18,
         110
@@ -10799,18 +10069,18 @@
       "reading_id": "08_convertible_bonds",
       "reviewer": "deterministic-anchor-review/v1",
       "role": "defines",
-      "severity": "W",
+      "severity": "N",
       "source_authorized": true,
       "source_id": "cb_calamos_2003_convertible_arbitrage"
     },
     {
-      "audit_flag": "wrong_pages_corrected",
+      "audit_flag": "re_anchored",
       "card_id": "cb-arbitrage-strategy",
       "checks": [],
       "chunk_id": "cb_calamos_2003_convertible_arbitrage:p274:0302",
       "chunk_source_match": true,
       "citation_index": 1,
-      "decision": "resolved at emit: pages re-anchored (card cites corrected chunk; Layer-2 passes)",
+      "decision": "re-anchored to a supporting source (R4 discovery + adversarial support-verification; independent quote-substring + kb verify)",
       "expected_pdf_page_range": [
         275,
         315
@@ -10829,41 +10099,45 @@
       "reading_id": "08_convertible_bonds",
       "reviewer": "deterministic-anchor-review/v1",
       "role": "supports",
-      "severity": "W",
+      "severity": "N",
       "source_authorized": true,
       "source_id": "cb_calamos_2003_convertible_arbitrage"
     },
     {
-      "audit_flag": "wrong_pages_corrected",
+      "audit_flag": "re_anchored",
       "card_id": "cb-arbitrage-strategy",
       "checks": [
         "swarm-finding:M"
       ],
-      "chunk_id": "cb_despiegeleer_schoutens_vanhulle_2014_hybrid_securities:p128:0165",
+      "chunk_id": "cb_calamos_2003_convertible_arbitrage:p020:0018",
       "chunk_source_match": true,
       "citation_index": 2,
-      "decision": "OPEN(swarm M): Cited DeSpiegeleer chunk p128:0165 is a Contingent-Convertible (CoCo) passage, not convertible-arbitrage hedging material. | repair: Verified the full chunk text: p128 sits in the CoCo chapter (bank regulatory capital ratios, Dodd-Frank FSOC, CoCo 'death spiral', capital-ratio triggers, CoCo parity convergence). The quote 'The prob",
+      "decision": "RESOLVED(re-anchor): swarm-flagged citation re-anchored to cb_calamos_2003_convertible_arbitrage (cb_calamos_2003_convertible_arbitrage:p038:0038): This is the book's literal 'Basics of Convertible Arbitrage' definition stating the long-conv",
       "expected_pdf_page_range": [
-        114,
-        129
+        20,
+        21
       ],
-      "expected_source": "cb_despiegeleer_schoutens_vanhulle_2014_hybrid_securities",
+      "expected_source": "cb_calamos_2003_convertible_arbitrage",
       "expected_volume": null,
       "finding_scope": "citation",
       "observed_pdf_page_range": [
-        128,
-        129
+        20,
+        21
       ],
       "observed_volume": null,
       "observed_volume_page": null,
       "page_match": true,
       "quote_in_chunk": true,
       "reading_id": "08_convertible_bonds",
+      "resolution": {
+        "decided_by": "reanchor-discovery-swarm:R4 + claude(validated)",
+        "kind": "re-anchor"
+      },
       "reviewer": "deterministic-anchor-review/v1",
       "role": "supports",
-      "severity": "M",
+      "severity": "W",
       "source_authorized": true,
-      "source_id": "cb_despiegeleer_schoutens_vanhulle_2014_hybrid_securities",
+      "source_id": "cb_calamos_2003_convertible_arbitrage",
       "swarm_finding": {
         "card_id": "cb-arbitrage-strategy",
         "citation_index": 2,
@@ -10874,13 +10148,13 @@
       }
     },
     {
-      "audit_flag": "wrong_pages_corrected",
+      "audit_flag": "re_anchored",
       "card_id": "cb-arbitrage-strategy",
       "checks": [],
       "chunk_id": "cb_thorp_kassouf_1967_beat_the_market:p058:0054",
       "chunk_source_match": true,
       "citation_index": 3,
-      "decision": "resolved at emit: pages re-anchored (card cites corrected chunk; Layer-2 passes)",
+      "decision": "re-anchored to a supporting source (R4 discovery + adversarial support-verification; independent quote-substring + kb verify)",
       "expected_pdf_page_range": [
         57,
         137
@@ -10899,18 +10173,18 @@
       "reading_id": "08_convertible_bonds",
       "reviewer": "deterministic-anchor-review/v1",
       "role": "supports",
-      "severity": "W",
+      "severity": "N",
       "source_authorized": true,
       "source_id": "cb_thorp_kassouf_1967_beat_the_market"
     },
     {
-      "audit_flag": "wrong_pages_corrected",
+      "audit_flag": "re_anchored",
       "card_id": "cb-binomial-tree-valuation",
       "checks": [],
       "chunk_id": "cb_hull_2022_options_futures_derivatives_11ed:p287:0434",
       "chunk_source_match": true,
       "citation_index": 0,
-      "decision": "resolved at emit: pages re-anchored (card cites corrected chunk; Layer-2 passes)",
+      "decision": "re-anchored to a supporting source (R4 discovery + adversarial support-verification; independent quote-substring + kb verify)",
       "expected_pdf_page_range": [
         287,
         288
@@ -10929,18 +10203,18 @@
       "reading_id": "08_convertible_bonds",
       "reviewer": "deterministic-anchor-review/v1",
       "role": "defines",
-      "severity": "W",
+      "severity": "N",
       "source_authorized": true,
       "source_id": "cb_hull_2022_options_futures_derivatives_11ed"
     },
     {
-      "audit_flag": "wrong_pages_corrected",
+      "audit_flag": "re_anchored",
       "card_id": "cb-binomial-tree-valuation",
       "checks": [],
       "chunk_id": "cb_hull_2022_options_futures_derivatives_11ed:p650:0966",
       "chunk_source_match": true,
       "citation_index": 1,
-      "decision": "resolved at emit: pages re-anchored (card cites corrected chunk; Layer-2 passes)",
+      "decision": "re-anchored to a supporting source (R4 discovery + adversarial support-verification; independent quote-substring + kb verify)",
       "expected_pdf_page_range": [
         650,
         653
@@ -10959,41 +10233,45 @@
       "reading_id": "08_convertible_bonds",
       "reviewer": "deterministic-anchor-review/v1",
       "role": "supports",
-      "severity": "W",
+      "severity": "N",
       "source_authorized": true,
       "source_id": "cb_hull_2022_options_futures_derivatives_11ed"
     },
     {
-      "audit_flag": "wrong_pages_corrected",
+      "audit_flag": "re_anchored",
       "card_id": "cb-binomial-tree-valuation",
       "checks": [
         "swarm-finding:M"
       ],
-      "chunk_id": "cb_despiegeleer_schoutens_vanhulle_2014_hybrid_securities:p128:0165",
+      "chunk_id": "cb_hull_2022_options_futures_derivatives_11ed:p651:0968",
       "chunk_source_match": true,
       "citation_index": 2,
-      "decision": "OPEN(swarm M): Cited DeSpiegeleer chunk p128:0165 is the same CoCo death-spiral passage, not credit-aware binomial-tree material for plain convertibles. | repair: The pinned chunk (verified full text) is CoCo-specific: 'Death Spiral... Encountering a trigger will indeed happen at depressed share prices... The CoCo converges to parity.' The card is about a credi",
+      "decision": "RESOLVED(re-anchor): swarm-flagged citation re-anchored to cb_hull_2022_options_futures_derivatives_11ed (cb_hull_2022_options_futures_derivatives_11ed:p651:0968): This is Hull's explicit credit-aware convertible-bond lattice algorithm: the ",
       "expected_pdf_page_range": [
-        114,
-        164
+        651,
+        652
       ],
-      "expected_source": "cb_despiegeleer_schoutens_vanhulle_2014_hybrid_securities",
+      "expected_source": "cb_hull_2022_options_futures_derivatives_11ed",
       "expected_volume": null,
       "finding_scope": "citation",
       "observed_pdf_page_range": [
-        128,
-        129
+        651,
+        652
       ],
       "observed_volume": null,
       "observed_volume_page": null,
       "page_match": true,
       "quote_in_chunk": true,
       "reading_id": "08_convertible_bonds",
+      "resolution": {
+        "decided_by": "reanchor-discovery-swarm:R4 + claude(validated)",
+        "kind": "re-anchor"
+      },
       "reviewer": "deterministic-anchor-review/v1",
       "role": "supports",
-      "severity": "M",
+      "severity": "W",
       "source_authorized": true,
-      "source_id": "cb_despiegeleer_schoutens_vanhulle_2014_hybrid_securities",
+      "source_id": "cb_hull_2022_options_futures_derivatives_11ed",
       "swarm_finding": {
         "card_id": "cb-binomial-tree-valuation",
         "citation_index": 2,
@@ -11004,13 +10282,13 @@
       }
     },
     {
-      "audit_flag": "wrong_pages_corrected",
+      "audit_flag": "re_anchored",
       "card_id": "cb-binomial-tree-valuation",
       "checks": [],
       "chunk_id": "cb_lando_2004_credit_risk_modeling:p081:0094",
       "chunk_source_match": true,
       "citation_index": 3,
-      "decision": "resolved at emit: pages re-anchored (card cites corrected chunk; Layer-2 passes)",
+      "decision": "re-anchored to a supporting source (R4 discovery + adversarial support-verification; independent quote-substring + kb verify)",
       "expected_pdf_page_range": [
         79,
         109
@@ -11029,7 +10307,7 @@
       "reading_id": "08_convertible_bonds",
       "reviewer": "deterministic-anchor-review/v1",
       "role": "supports",
-      "severity": "W",
+      "severity": "N",
       "source_authorized": true,
       "source_id": "cb_lando_2004_credit_risk_modeling"
     },
@@ -11934,36 +11212,40 @@
       "source_id": "cfa_2022_l1_combined"
     },
     {
-      "audit_flag": "wrong_pages_corrected",
+      "audit_flag": "re_anchored",
       "card_id": "cb-brooks-trend-range-regime-map",
       "checks": [
         "swarm-finding:M"
       ],
-      "chunk_id": "cb_an_daoquan_2023_three_line_duplex_3ed:p088:0051",
+      "chunk_id": "tpa_brooks_2009_reading_price_charts_bar_by_bar:p038:0044",
       "chunk_source_match": true,
       "citation_index": 0,
-      "decision": "OPEN(swarm M): Cited An Daoquan 2023 chunk p088:0051 is a quantitative multi-factor / option-pricing strategy passage, not the 安全—弹性 tape-regime-classification content the card claims to anchor. | repair: Verified full chunk: p088 is in Chapter 2 (登堂) describing quant CB strategies -- factor models (隐含波动率因子, 净利润同比增速因子, 估值因子, 市值因子, 动量因子) and tree/Monte-Carlo option-pricing arbitrage. The pinned quote is",
+      "decision": "RESOLVED(re-anchor): swarm-flagged citation re-anchored to tpa_brooks_2009_reading_price_charts_bar_by_bar (tpa_brooks_2009_reading_price_charts_bar_by_bar:p038:0044): This Al Brooks sentence explicitly frames trend-vs-trading-range regime d",
       "expected_pdf_page_range": [
-        87,
-        101
+        38,
+        38
       ],
-      "expected_source": "cb_an_daoquan_2023_three_line_duplex_3ed",
+      "expected_source": "tpa_brooks_2009_reading_price_charts_bar_by_bar",
       "expected_volume": null,
       "finding_scope": "citation",
       "observed_pdf_page_range": [
-        88,
-        89
+        38,
+        38
       ],
       "observed_volume": null,
       "observed_volume_page": null,
       "page_match": true,
       "quote_in_chunk": true,
       "reading_id": "08_convertible_bonds",
+      "resolution": {
+        "decided_by": "reanchor-discovery-swarm:R4 + claude(validated)",
+        "kind": "re-anchor"
+      },
       "reviewer": "deterministic-anchor-review/v1",
       "role": "defines",
-      "severity": "M",
+      "severity": "W",
       "source_authorized": true,
-      "source_id": "cb_an_daoquan_2023_three_line_duplex_3ed",
+      "source_id": "tpa_brooks_2009_reading_price_charts_bar_by_bar",
       "swarm_finding": {
         "card_id": "cb-brooks-trend-range-regime-map",
         "citation_index": 0,
@@ -11974,13 +11256,13 @@
       }
     },
     {
-      "audit_flag": "wrong_pages_corrected",
+      "audit_flag": "re_anchored",
       "card_id": "cb-brooks-trend-range-regime-map",
       "checks": [],
       "chunk_id": "tpa_brooks_2009_reading_price_charts_bar_by_bar:p059:0073",
       "chunk_source_match": true,
       "citation_index": 1,
-      "decision": "resolved at emit: pages re-anchored (card cites corrected chunk; Layer-2 passes)",
+      "decision": "re-anchored to a supporting source (R4 discovery + adversarial support-verification; independent quote-substring + kb verify)",
       "expected_pdf_page_range": [
         59,
         60
@@ -11999,18 +11281,18 @@
       "reading_id": "08_convertible_bonds",
       "reviewer": "deterministic-anchor-review/v1",
       "role": "supports",
-      "severity": "W",
+      "severity": "N",
       "source_authorized": true,
       "source_id": "tpa_brooks_2009_reading_price_charts_bar_by_bar"
     },
     {
-      "audit_flag": "wrong_pages_corrected",
+      "audit_flag": "re_anchored",
       "card_id": "cb-brooks-trend-range-regime-map",
       "checks": [],
       "chunk_id": "tpa_brooks_2009_reading_price_charts_bar_by_bar:p147:0184",
       "chunk_source_match": true,
       "citation_index": 2,
-      "decision": "resolved at emit: pages re-anchored (card cites corrected chunk; Layer-2 passes)",
+      "decision": "re-anchored to a supporting source (R4 discovery + adversarial support-verification; independent quote-substring + kb verify)",
       "expected_pdf_page_range": [
         147,
         148
@@ -12029,18 +11311,18 @@
       "reading_id": "08_convertible_bonds",
       "reviewer": "deterministic-anchor-review/v1",
       "role": "supports",
-      "severity": "W",
+      "severity": "N",
       "source_authorized": true,
       "source_id": "tpa_brooks_2009_reading_price_charts_bar_by_bar"
     },
     {
-      "audit_flag": "wrong_pages_corrected",
+      "audit_flag": "re_anchored",
       "card_id": "cb-brooks-trend-range-regime-map",
       "checks": [],
       "chunk_id": "tpa_brooks_2012_trends:p229:0321",
       "chunk_source_match": true,
       "citation_index": 3,
-      "decision": "resolved at emit: pages re-anchored (card cites corrected chunk; Layer-2 passes)",
+      "decision": "re-anchored to a supporting source (R4 discovery + adversarial support-verification; independent quote-substring + kb verify)",
       "expected_pdf_page_range": [
         229,
         230
@@ -12059,18 +11341,18 @@
       "reading_id": "08_convertible_bonds",
       "reviewer": "deterministic-anchor-review/v1",
       "role": "supports",
-      "severity": "W",
+      "severity": "N",
       "source_authorized": true,
       "source_id": "tpa_brooks_2012_trends"
     },
     {
-      "audit_flag": "wrong_pages_corrected",
+      "audit_flag": "re_anchored",
       "card_id": "cb-brooks-trend-range-regime-map",
       "checks": [],
       "chunk_id": "cfa_2022_l1_combined:p3403:5134",
       "chunk_source_match": true,
       "citation_index": 4,
-      "decision": "resolved at emit: pages re-anchored (card cites corrected chunk; Layer-2 passes)",
+      "decision": "re-anchored to a supporting source (R4 discovery + adversarial support-verification; independent quote-substring + kb verify)",
       "expected_pdf_page_range": [
         3403,
         3404
@@ -12089,7 +11371,7 @@
       "reading_id": "08_convertible_bonds",
       "reviewer": "deterministic-anchor-review/v1",
       "role": "supports",
-      "severity": "W",
+      "severity": "N",
       "source_authorized": true,
       "source_id": "cfa_2022_l1_combined"
     },
@@ -16855,21 +16137,20 @@
   "summary": {
     "ac5_oracle_below_unaccepted": 0,
     "by_severity": {
-      "M": 21,
-      "N": 258,
-      "W": 184
+      "N": 287,
+      "W": 176
     },
     "cards_expected": 161,
     "cards_reviewed": 161,
     "citations_reviewed": 462,
-    "gate_clean": false,
+    "gate_clean": true,
     "min_oracle_anchors": 3,
-    "open_meh_card_count": 13,
-    "open_meh_row_count": 21,
+    "open_meh_card_count": 0,
+    "open_meh_row_count": 0,
     "oracle_anchors_checked": 115,
     "oracle_findings_open": 0,
     "oracle_findings_total": 2,
-    "resolutions_applied": 8,
+    "resolutions_applied": 12,
     "swarm": {
       "confirmed": 15,
       "content_mismatch_verdicts": 15,

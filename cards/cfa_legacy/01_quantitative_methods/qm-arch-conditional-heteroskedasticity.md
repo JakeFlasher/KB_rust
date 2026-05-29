@@ -6,19 +6,19 @@ reading_id: "01_quantitative_methods"
 summary: "ARCH(1) models the squared regression residual at time t as a linear function of its own lag, e_t^2 = a_0 + a_1 e_{t-1}^2 + u_t; significance of a_1 is the conditional-heteroskedasticity verdict and the prescribed estimator response is to switch from OLS to GLS. ARCH is not in CFA L1 2022 Quantitative Methods."
 tags: ["quantitative-methods", "arch-conditional"]
 citations:
-  - source_id: "cfa_2022_l1_combined"
-    chunk_id: "cfa_2022_l1_combined:p459:0583"
-    chunk_hash: "d1861ed647fb04131013ea49936e275d653994f4bd336d765db641da4d156b63"
-    page_range: [459, 460]
-    quote: "2 Homoskedasticity: The variance of the regression residuals is the same for all observations."
+  - source_id: "qm_tsay_2005_afts_2e"
+    chunk_id: "qm_tsay_2005_afts_2e:p127:0142"
+    chunk_hash: "f7fc09f89e666cdc0981e3c823e732be2de414e9ade08c54a7b30c3da4b665d6"
+    page_range: [127, 128]
+    quote: "Specifically, an ARCH(m) model assumes that at = σt t,σ 2 t = α0 + α1a2 t−1 +···+ αma2 t−m, (3.5)"
     edge_type: "defines"
-  - source_id: "cfa_2022_l1_combined"
-    chunk_id: "cfa_2022_l1_combined:p462:0586"
-    chunk_hash: "85f25d69b36ad1a3a7bcc6128f7c9abd19c04544ed8d45cc6c05d05dfa3f4f4b"
-    page_range: [462, 463]
-    quote: "the clustering of residuals in two groups with much different variances clearly indicates the existence of distinct regimes"
+  - source_id: "qm_tsay_2005_afts_2e"
+    chunk_id: "qm_tsay_2005_afts_2e:p127:0142"
+    chunk_hash: "f7fc09f89e666cdc0981e3c823e732be2de414e9ade08c54a7b30c3da4b665d6"
+    page_range: [127, 128]
+    quote: "This feature is similar to the volatility clusterings observed in asset returns."
     edge_type: "supports"
-card_hash: "9a03bcbb82b12365909d852c74daf7fb15962782ee9a9236e9e8a324da40aa52"
+card_hash: "d26ce7e462b54b1ea98be07309763e06eb3a17ecbd3c18556f82712c3e90b228"
 ---
 # ARCH(1) Conditional Heteroskedasticity
 

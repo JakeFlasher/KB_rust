@@ -7,12 +7,12 @@ summary: "Implied volatility σ_imp(K, T) is the unique σ that recovers an obse
 tags: ["derivatives", "implied-volatility"]
 citations:
   - source_id: "cb_hull_2022_options_futures_derivatives_11ed"
-    chunk_id: "cb_hull_2022_options_futures_derivatives_11ed:p460:0680"
-    chunk_hash: "dbb1a951b4681c9a970c0f4aa926883892d32533cea1166dd5552bc0a4c7a566"
-    page_range: [460, 460]
-    quote: "The formulas for delta and other Greek letters in Chapter 19 assume that the implied volatility remains the same when the asset price changes."
+    chunk_id: "cb_hull_2022_options_futures_derivatives_11ed:p358:0528"
+    chunk_hash: "46c41dc94f3f43e1eb595698f68a18ff7cee524c5447974cf72874860b3cf871"
+    page_range: [358, 358]
+    quote: "The implied volatility is the value of s that, when substituted into equation (15.20), gives c = 1.875."
     edge_type: "defines"
-card_hash: "82631e5556ddd510241f9eee909c127b02cf352735be5268dc079339aa2d6c12"
+card_hash: "1214f8cc78349539195a52087d65df21ade4f4851fc2db3c92f706c052462838"
 ---
 # Implied Volatility
 

@@ -6,19 +6,19 @@ reading_id: "01_quantitative_methods"
 summary: "Per-observation regression diagnostics: leverage h_ii flags unusual predictor profiles, studentised residuals flag aggregate outliers, and Cook's distance combines both to identify observations whose deletion would materially move the fitted coefficients. These quantitative diagnostics are not in CFA L1 2022; R7 only mentions outliers descriptively."
 tags: ["quantitative-methods", "influence-analysis"]
 citations:
-  - source_id: "cfa_2022_l1_combined"
-    chunk_id: "cfa_2022_l1_combined:p464:0588"
-    chunk_hash: "d5ef28a297854345d667c7f27d6aeb68cb017b25713daab8d51bcd06297571f0"
-    page_range: [464, 465]
-    quote: "An outlier in either or both variables can substantially influence the fitted line such that the estimated model will not fit well for most of the other observations."
+  - source_id: "qm_greene_2019_econometric_analysis_8ed"
+    chunk_id: "qm_greene_2019_econometric_analysis_8ed:p146:0209"
+    chunk_hash: "1660dc3d50cf276387b2252ed6de4fddb834ccf4ebb7eaf0dfc2e0f40281449a"
+    page_range: [146, 147]
+    quote: "The influence measure, hii = xi = (X(i) = X(i))-1 xi = 1 n + a K - 1 j = 1 a K - 1 k = 1 (xi,j - xn, j )(xi,k - xk)(Z(i) = M0 Z(i)) jk, (4-68) has been used to flag influential observations."
     edge_type: "defines"
-  - source_id: "cfa_2022_l1_combined"
-    chunk_id: "cfa_2022_l1_combined:p463:0587"
-    chunk_hash: "7b36deb408e175be34ba07db2b637717de6b06fdea3452d304fc619606c8ca73"
-    page_range: [463, 464]
-    quote: "It is important to examine whether the residuals exhibit a pattern, suggesting a violation of this assumption."
+  - source_id: "qm_greene_2019_econometric_analysis_8ed"
+    chunk_id: "qm_greene_2019_econometric_analysis_8ed:p147:0210"
+    chunk_hash: "2392bb75515b481f7fe4359af299d0e167f3d3bf4a83c2cde56ad4a86d283a42"
+    page_range: [147, 147]
+    quote: "Studentized residuals are constructed with this in mind by computing the regression coefficients and the residual variance without observation i for each observation in the sample and then standardizing the modified residuals."
     edge_type: "supports"
-card_hash: "fa9be26bde32f4e203bce02de2448e5319bb6f10c31516947ea3aa4f4eb3bad4"
+card_hash: "090adaa4be1ecd8c297b6e304f3225f8710cb0f77bb9b53394c27c6b8eb1dd0b"
 ---
 # Influence Analysis: Leverage, Studentised Residuals, Cook's Distance
 

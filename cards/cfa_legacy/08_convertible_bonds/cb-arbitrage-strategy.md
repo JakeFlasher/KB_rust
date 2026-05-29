@@ -18,11 +18,11 @@ citations:
     page_range: [274, 275]
     quote: "Each position vega in points is multiplied by the position size to come up with the dollar exposure to vega."
     edge_type: "supports"
-  - source_id: "cb_despiegeleer_schoutens_vanhulle_2014_hybrid_securities"
-    chunk_id: "cb_despiegeleer_schoutens_vanhulle_2014_hybrid_securities:p128:0165"
-    chunk_hash: "e2c05a0651e787c7e62277bd197a690414ecdb8b1e93413e9a02f04da32299f4"
-    page_range: [128, 129]
-    quote: "The probability of such a conversion will increase when the share price reaches depressed levels, even if the trigger is linked to, for example, a capital ratio."
+  - source_id: "cb_calamos_2003_convertible_arbitrage"
+    chunk_id: "cb_calamos_2003_convertible_arbitrage:p020:0018"
+    chunk_hash: "62f0504543e54bd4fc4d9636eca7165d4247ec1f6f648562d953452a70e0c24a"
+    page_range: [20, 21]
+    quote: "Convertible arbitrage—purchases long convertible securities and shorts the underlying stock with very low equity exposure."
     edge_type: "supports"
   - source_id: "cb_thorp_kassouf_1967_beat_the_market"
     chunk_id: "cb_thorp_kassouf_1967_beat_the_market:p058:0054"
@@ -30,7 +30,7 @@ citations:
     page_range: [58, 59]
     quote: "The Molybdenum Story I first purchased Molybdenum common shares and sold short the warrants in October 1961."
     edge_type: "supports"
-card_hash: "62f19619b5b94729e9bc7672f76b20055b58147353f2942739e5adf015335079"
+card_hash: "7044bf5eb446cb8ac6c9157c079edadb39710ddb6c1d3e093d97b3a849fee5da"
 ---
 # Convertible Arbitrage Strategy
 

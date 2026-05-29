@@ -75,6 +75,7 @@ FLAG_POLICY = {
     "wrong_pages_corrected": ("W", "resolved at emit: pages re-anchored (card cites corrected chunk; Layer-2 passes)"),
     "wrong_volume_corrected": ("W", "resolved at emit: volume re-anchored (card cites corrected chunk; Layer-2 passes)"),
     "content_mismatch_noted": ("M", "OPEN: placeholder anchor -- cited chunk does not support the card; re-anchor or de-claim"),
+    "re_anchored": ("N", "re-anchored to a supporting source (R4 discovery + adversarial support-verification; independent quote-substring + kb verify)"),
 }
 
 SEV_RANK = {"N": 0, "W": 1, "M": 2, "E": 3, "H": 4}

@@ -278,24 +278,24 @@
       "title": "Implied Volatility",
       "summary_curated": "Implied volatility σ_imp(K, T) is the unique σ that recovers an observed market option price under the BSM closed form. The map is well-defined because BSM is monotone-increasing in σ; practitioners invert by Newton-Raphson on vega. Implied vol is the market's risk-adjusted expectation under the risk-neutral measure, NOT a forecast of realized vol — the wedge is the variance risk premium.",
       "source_stance": "primary-hull",
-      "audit_flag": "content_mismatch_noted",
-      "audit_notes": "Legacy CFA cite \"Vol.5 pp.440-450\" maps to PDF 3077-3087 = R49 Portfolio Risk and Return — NOT derivatives. CFA L1 R45/R46 do not develop implied volatility as the BSM-inverse; no substantive supporting page. CFA supporting citation dropped. Hull primary range pp.460-475 valid (Ch.20 Volatility Smiles and Volatility Surfaces; Ch.20 opens at 450 and runs through 485).",
+      "audit_flag": "re_anchored",
+      "audit_notes": "Legacy CFA cite \"Vol.5 pp.440-450\" maps to PDF 3077-3087 = R49 Portfolio Risk and Return — NOT derivatives. CFA L1 R45/R46 do not develop implied volatility as the BSM-inverse; no substantive supporting page. CFA supporting citation dropped. Hull primary range pp.460-475 valid (Ch.20 Volatility Smiles and Volatility Surfaces; Ch.20 opens at 450 and runs through 485). | R4 re-anchored cites [0] to ['cb_hull_2022_options_futures_derivatives_11ed'] (adversarial support-verification).",
       "citations": [
         {
           "role": "primary",
           "source_id": "cb_hull_2022_options_futures_derivatives_11ed",
           "volume": null,
           "legacy_pages": [
-            460,
-            461
+            358,
+            358
           ],
           "pdf_pages": [
-            460,
-            461
+            358,
+            358
           ],
-          "chunk_id": "cb_hull_2022_options_futures_derivatives_11ed:p460:0680",
-          "chunk_hash": "dbb1a951b4681c9a970c0f4aa926883892d32533cea1166dd5552bc0a4c7a566",
-          "quote": "The formulas for delta and other Greek letters in Chapter 19 assume that the implied volatility remains the same when the asset price changes."
+          "chunk_id": "cb_hull_2022_options_futures_derivatives_11ed:p358:0528",
+          "chunk_hash": "46c41dc94f3f43e1eb595698f68a18ff7cee524c5447974cf72874860b3cf871",
+          "quote": "The implied volatility is the value of s that, when substituted into equation (15.20), gives c = 1.875."
         }
       ]
     },

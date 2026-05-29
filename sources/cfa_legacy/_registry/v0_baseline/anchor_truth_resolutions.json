@@ -65,6 +65,42 @@
       "decided_by": "claude(R3)",
       "rationale": "The single verified_evidence anchor (legacy 56 -> pdf 76) implies offset +20, but the map uses the +19 running-header consensus (batches A/C found +19; batch B found +20) -- a +/-1 registry-side legacy-locator ambiguity (DEC-2). Cards bind by pdf chunk_id and pass Layer-2 verify (AC-4); the human legacy-page locator is registry-side for v0. FUT: add anchors to pin the offset precisely.",
       "evidence": "AC-4 corpus verify 263/263 pass; DEC-2 registry-side locator; chunk_id is the load-bearing coordinate."
+    },
+    {
+      "target_type": "card",
+      "target": "fra-cash-vs-accrual-accounting",
+      "citation_index": 1,
+      "kind": "re-anchor",
+      "decided_by": "reanchor-discovery-swarm:R4 + claude(validated)",
+      "rationale": "swarm-flagged citation re-anchored to fra_kieso_weygandt_warfield_2020_ifrs_4ed (fra_kieso_weygandt_warfield_2020_ifrs_4ed:p259:0237): This is Kieso's 'Cash-Basis Accounting versus Accrual-Basis Accounting' appendix, and the sentence directly defines accrual-basis recognition timing (revenue/expense reco",
+      "evidence": "verbatim quote independently confirmed as a substring of the new chunk; kb verify passes"
+    },
+    {
+      "target_type": "card",
+      "target": "cb-arbitrage-strategy",
+      "citation_index": 2,
+      "kind": "re-anchor",
+      "decided_by": "reanchor-discovery-swarm:R4 + claude(validated)",
+      "rationale": "swarm-flagged citation re-anchored to cb_calamos_2003_convertible_arbitrage (cb_calamos_2003_convertible_arbitrage:p038:0038): This is the book's literal 'Basics of Convertible Arbitrage' definition stating the long-convertible/short-underlying-equity delta-hedge position, and the surrounding chu",
+      "evidence": "verbatim quote independently confirmed as a substring of the new chunk; kb verify passes"
+    },
+    {
+      "target_type": "card",
+      "target": "cb-binomial-tree-valuation",
+      "citation_index": 2,
+      "kind": "re-anchor",
+      "decided_by": "reanchor-discovery-swarm:R4 + claude(validated)",
+      "rationale": "swarm-flagged citation re-anchored to cb_hull_2022_options_futures_derivatives_11ed (cb_hull_2022_options_futures_derivatives_11ed:p651:0968): This is Hull's explicit credit-aware convertible-bond lattice algorithm: the same chunk gives the CRR up/down probabilities plus a default branch (pdef = 1 - e^(-l∆t)), s",
+      "evidence": "verbatim quote independently confirmed as a substring of the new chunk; kb verify passes"
+    },
+    {
+      "target_type": "card",
+      "target": "cb-brooks-trend-range-regime-map",
+      "citation_index": 0,
+      "kind": "re-anchor",
+      "decided_by": "reanchor-discovery-swarm:R4 + claude(validated)",
+      "rationale": "swarm-flagged citation re-anchored to tpa_brooks_2009_reading_price_charts_bar_by_bar (tpa_brooks_2009_reading_price_charts_bar_by_bar:p038:0044): This Al Brooks sentence explicitly frames trend-vs-trading-range regime determination as the single most important issue for a trader, which is exactly the regime-identif",
+      "evidence": "verbatim quote independently confirmed as a substring of the new chunk; kb verify passes"
     }
   ]
 }

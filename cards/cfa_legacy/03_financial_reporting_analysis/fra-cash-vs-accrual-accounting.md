@@ -12,11 +12,11 @@ citations:
     page_range: [137, 138]
     quote: "The cash flow statement tracks operating and investment activities with cash accounting"
     edge_type: "defines"
-  - source_id: "fra_penman_fsa_security_valuation_5ed"
-    chunk_id: "fra_penman_fsa_security_valuation_5ed:p138:0230"
-    chunk_hash: "d70aa4ad458e1fdccca2d1b04f52f5e2cb266b463571e807120626663e5b8045"
-    page_range: [138, 139]
-    quote: "The dividend discount model is a straight application of the bond valuation model in the last chapter to valuing equity"
+  - source_id: "fra_kieso_weygandt_warfield_2020_ifrs_4ed"
+    chunk_id: "fra_kieso_weygandt_warfield_2020_ifrs_4ed:p259:0237"
+    chunk_hash: "5b11f722bc287465067583efae3a5972983c81c96721f243e3ee041f20666d35"
+    page_range: [259, 260]
+    quote: "Most companies use accrual-basis accounting: They recognize revenue when the performance obligation is satisfied and expenses in the period are incurred, without regard to the time of receipt or payment of cash."
     edge_type: "defines"
   - source_id: "cfa_2022_l1_combined"
     chunk_id: "cfa_2022_l1_combined:p1085:1551"
@@ -24,7 +24,7 @@ citations:
     page_range: [1085, 1086]
     quote: "The relationship among the three parts of the balance sheet (assets, liabilities, and owners’ equity) may be shown in equation form as follows: Assets = Liabilities + Owners’ equity"
     edge_type: "supports"
-card_hash: "c205e675c8e18bd167a0255bec9921d4113d21c3d24cfcce646a2c73c7d9fd71"
+card_hash: "643b21d1092dc93c07a3adcc6fd736ed481cf3abd0aef4ce948a81bc8421b0a1"
 ---
 # Cash vs Accrual Accounting
 

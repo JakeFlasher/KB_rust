@@ -6,19 +6,19 @@ reading_id: "03_financial_reporting_analysis"
 summary: "Lays out the double-entry bookkeeping rule that every transaction posts equal debit and credit entries so the accounting identity is preserved by construction; the T-account view, account-type reactions, and the trial-balance condition."
 tags: ["financial-reporting", "double-entry"]
 citations:
-  - source_id: "cfa_2022_l1_combined"
-    chunk_id: "cfa_2022_l1_combined:p1085:1551"
-    chunk_hash: "4e8e1e7cfcf7e760f55c4d68aa51498fa5d09a9f2bc01caae4fd33c26dbaafe8"
-    page_range: [1085, 1086]
-    quote: "The relationship among the three parts of the balance sheet (assets, liabilities, and owners’ equity) may be shown in equation form as follows: Assets = Liabilities + Owners’ equity"
+  - source_id: "fra_kieso_weygandt_warfield_2020_ifrs_4ed"
+    chunk_id: "fra_kieso_weygandt_warfield_2020_ifrs_4ed:p211:0190"
+    chunk_hash: "d2fc1ebbba8853588225e36641c0bc0bed2d5c2f4a35caf982b276d915e62059"
+    page_range: [211, 211]
+    quote: "The equality of debits and credits provides the basis for the double-entry system of recording transactions (sometimes referred to as double-entry bookkeeping)."
     edge_type: "defines"
-  - source_id: "fra_penman_fsa_security_valuation_5ed"
-    chunk_id: "fra_penman_fsa_security_valuation_5ed:p069:0109"
-    chunk_hash: "cc08875592a254e5c1d76ec6fcea8792607c9446d13f636d752c6221d92bd827"
-    page_range: [69, 70]
-    quote: "But by recognizing the articulation of the financial statements, the reader of the statements understands the overall story that they tell"
+  - source_id: "fra_kieso_weygandt_warfield_2020_ifrs_4ed"
+    chunk_id: "fra_kieso_weygandt_warfield_2020_ifrs_4ed:p211:0191"
+    chunk_hash: "333dc495b1999b061a1e1b30c43c87644b8116f86af233b4d26a1d4dc36fb1eb"
+    page_range: [211, 212]
+    quote: "In a double-entry system, for every debit there must be a credit, and vice versa."
     edge_type: "supports"
-card_hash: "009cf3e31c6e95e9a1ca109192e1ff147d1a931cb0908863ab6b923cdc39d8a7"
+card_hash: "c4af4aa3a2a8cec99ebe23665023ace20e832a04d59db722786cc897125412c4"
 ---
 # Double-Entry Mechanics
 

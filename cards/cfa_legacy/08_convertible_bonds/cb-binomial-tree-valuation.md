@@ -18,11 +18,11 @@ citations:
     page_range: [650, 651]
     quote: "Credit risk plays an important role in the valuation of convertibles."
     edge_type: "supports"
-  - source_id: "cb_despiegeleer_schoutens_vanhulle_2014_hybrid_securities"
-    chunk_id: "cb_despiegeleer_schoutens_vanhulle_2014_hybrid_securities:p128:0165"
-    chunk_hash: "e2c05a0651e787c7e62277bd197a690414ecdb8b1e93413e9a02f04da32299f4"
-    page_range: [128, 129]
-    quote: "Encountering a trigger will indeed happen at depressed share prices."
+  - source_id: "cb_hull_2022_options_futures_derivatives_11ed"
+    chunk_id: "cb_hull_2022_options_futures_derivatives_11ed:p651:0968"
+    chunk_hash: "0c1ac86a333b1329e33bc49bdf424202104f13df481a1858657a6c47ba2dcea5"
+    page_range: [651, 652]
+    quote: "The value of the convertible at the final nodes of the tree is calculated based on any conversion options that the holder has at that time. We then roll back through the tree. At nodes where the terms of the instrument allow conversion we test whether conversion is optimal."
     edge_type: "supports"
   - source_id: "cb_lando_2004_credit_risk_modeling"
     chunk_id: "cb_lando_2004_credit_risk_modeling:p081:0094"
@@ -30,7 +30,7 @@ citations:
     page_range: [81, 82]
     quote: "After debt and equity have been issued, it is the equity owners who decide when to default."
     edge_type: "supports"
-card_hash: "148879efa2134b3f8be980debc0b7449decc4ba78547ed0650256eae117a2def"
+card_hash: "83e305e8118511f8dd9ac87b73d1e76a6a3ddd042b96ad5b3472b8fd5b97b152"
 ---
 # Credit-Aware Binomial Tree for Convertibles
 

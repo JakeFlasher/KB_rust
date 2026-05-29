@@ -6,19 +6,19 @@ reading_id: "01_quantitative_methods"
 summary: "Principal components analysis (PCA) rotates a standardised feature matrix onto orthogonal axes ranked by explained variance; the analyst keeps enough leading components to cover a chosen cumulative-variance threshold and discards the rest. PCA is not in CFA L1 2022 Quantitative Methods; R7 only covers simple linear regression with its scalar predictor."
 tags: ["quantitative-methods", "projection-dimensionality"]
 citations:
-  - source_id: "cfa_2022_l1_combined"
-    chunk_id: "cfa_2022_l1_combined:p450:0573"
-    chunk_hash: "12e3fa714563ce4f5073990ecbc51c753c7aab623ecf7f87953d6e198bc18d4c"
-    page_range: [450, 451]
-    quote: "As the name implies, linear regression assumes a linear relationship between the dependent and the independent variables."
+  - source_id: "qm_eslii_2009_2ed"
+    chunk_id: "qm_eslii_2009_2ed:p552:0693"
+    chunk_hash: "adbcaf2487d3629533f56a2906d3564683a9295cdfecf94f0252e2924086aa39"
+    page_range: [552, 553]
+    quote: "Principal components are a sequence of projections of the data, mutually uncorrelated and ordered in variance."
     edge_type: "defines"
-  - source_id: "cfa_2022_l1_combined"
-    chunk_id: "cfa_2022_l1_combined:p447:0569"
-    chunk_hash: "03b5e96601b3ae589869ca4e96ac5839e8e2c793cc3e0afaee3dfe883e2e456a"
-    page_range: [447, 448]
-    quote: "Regression analysis is a tool for examining this type of issue."
+  - source_id: "qm_eslii_2009_2ed"
+    chunk_id: "qm_eslii_2009_2ed:p555:0696"
+    chunk_hash: "1ff00b8b03dbb07611c8d88f8dba2561874283a1c62f67ab953bfe7c508e108f"
+    page_range: [555, 556]
+    quote: "Xv2 has the highest variance among all linear combinations satisfying v2 orthogonal to v1, and so on."
     edge_type: "supports"
-card_hash: "be678d3f5b61cecb814c9a2ec879b49c2b58f89121b34c481aa66ffdff2eb4af"
+card_hash: "de5f3c9c8b2970eda674df13a2cdd6d5cf38bae513f0a720b132ca6b5c968925"
 ---
 # Principal Components / Dimensionality Reduction
 

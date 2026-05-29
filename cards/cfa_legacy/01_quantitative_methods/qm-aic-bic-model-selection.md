@@ -6,19 +6,19 @@ reading_id: "01_quantitative_methods"
 summary: "Information criteria AIC and BIC compare regression models by trading off in-sample residual fit against a parameter-count penalty; AIC's 2(k+1) penalty is constant in n while BIC's ln(n)(k+1) penalty grows with n, so BIC favours more parsimonious models. AIC/BIC are not in CFA L1 2022 Quantitative Methods."
 tags: ["quantitative-methods", "aic-bic"]
 citations:
-  - source_id: "cfa_2022_l1_combined"
-    chunk_id: "cfa_2022_l1_combined:p467:0591"
-    chunk_hash: "249999c640c37b2adc76943c754b24467d1468b271b6167a45cf8961437590ce"
-    page_range: [467, 468]
-    quote: "the coefficient of determination, the F-statistic for the test of fit, and the standard error of the regression"
+  - source_id: "qm_eslii_2009_2ed"
+    chunk_id: "qm_eslii_2009_2ed:p250:0316"
+    chunk_hash: "7f5bab74d3658fdff0b4f8a5fa46551274426f659d75aa5b9300f79d8256eb73"
+    page_range: [250, 250]
+    quote: "Then for this set of models we define AIC(α) = err(α) + 2 · d(α) N σˆε 2 ."
     edge_type: "defines"
-  - source_id: "cfa_2022_l1_combined"
-    chunk_id: "cfa_2022_l1_combined:p467:0591"
-    chunk_hash: "249999c640c37b2adc76943c754b24467d1468b271b6167a45cf8961437590ce"
-    page_range: [467, 468]
-    quote: "Whereas the coefficient of determination—the portion of the variation of the dependent variable explained by the independent variable—is descriptive, it is not a statistical test."
+  - source_id: "qm_eslii_2009_2ed"
+    chunk_id: "qm_eslii_2009_2ed:p252:0319"
+    chunk_hash: "3fed3ac7de6210187e8bab5fd3f95cd43fc0200af74d83136de272fe73eecf62"
+    page_range: [252, 253]
+    quote: "The generic form of BIC is BIC = −2 · loglik + (log N) · d."
     edge_type: "supports"
-card_hash: "1aea6002c5a957326d2711d017bdbd1e5ed955dc1ac1c08dec449e3420164600"
+card_hash: "5e9bbad8eac0ac4ac978999547e234982a8cc71069e1f7ddfc802d5ed2f6bc51"
 ---
 # AIC and BIC for Regression Model Selection
 

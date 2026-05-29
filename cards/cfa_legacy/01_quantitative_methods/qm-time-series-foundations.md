@@ -6,19 +6,19 @@ reading_id: "01_quantitative_methods"
 summary: "AR(p) recursion, covariance stationarity, the Dickey–Fuller unit-root test, and log-linear trend models are NOT covered in CFA L1 2022. Reading 7 only distinguishes cross-sectional vs time-series regression data; AR(p) / unit-root / Dickey–Fuller machinery is CFA L2 / raw time-series-textbook content."
 tags: ["quantitative-methods", "time-series"]
 citations:
-  - source_id: "cfa_2022_l1_combined"
-    chunk_id: "cfa_2022_l1_combined:p456:0580"
-    chunk_hash: "e66e468c96d4536287e6d35fd4cf2bd695697977abda3a7297a9abead1c8c595"
-    page_range: [456, 456]
-    quote: "Regression analysis uses two principal types of data: cross sectional and time series."
+  - source_id: "qm_tsay_2005_afts_2e"
+    chunk_id: "qm_tsay_2005_afts_2e:p049:0044"
+    chunk_hash: "eec1cca92206e6fee29cc29ba8562f8616110331120205e41aaa1967b2654374"
+    page_range: [49, 50]
+    quote: "From the definitions, if rt is strictly stationary and its first two moments are finite, then rt is also weakly stationary."
     edge_type: "supports"
-  - source_id: "cfa_2022_l1_combined"
-    chunk_id: "cfa_2022_l1_combined:p456:0580"
-    chunk_hash: "e66e468c96d4536287e6d35fd4cf2bd695697977abda3a7297a9abead1c8c595"
-    page_range: [456, 456]
-    quote: "Time-series data use many observations from different time periods for the same company, asset class, investment fund, country"
+  - source_id: "qm_tsay_2005_afts_2e"
+    chunk_id: "qm_tsay_2005_afts_2e:p093:0100"
+    chunk_hash: "2d8577e77959793a7dd6bc18844d65ff92b1eb6c21a645e6811d8f22d9a8f2d7"
+    page_range: [93, 93]
+    quote: "This is the well-known unit-root testing problem; see Dickey and Fuller (1979)."
     edge_type: "supports"
-card_hash: "2b148713c58174fa2b5e4b8ce0a7db1042e6f3810472966f2d56c2eca5ea704d"
+card_hash: "b1d16bdc37d4d25f59a688cb29ae74b9b1aaf0c90841937eebf6805c8e42e6c0"
 ---
 # Time-Series Foundations: Trend, AR(p), Stationarity, Unit Root
 

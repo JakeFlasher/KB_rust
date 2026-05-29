@@ -196,8 +196,8 @@
       "title": "Cash vs Accrual Accounting",
       "summary_curated": "Explains why net income (accrual measure) and operating cash flow (cash measure) disagree by construction; frames accrual accounting as the system that records revenues when earned and expenses when incurred regardless of cash timing; gives the analyst guidance on which measure to weight under which question.",
       "source_stance": "primary-penman",
-      "audit_flag": "wrong_pages_corrected",
-      "audit_notes": "Penman offset corrected to +27 (book p110-139 ⇒ PDF p137-166, Ch.4 'Cash Accounting, Accrual Accounting, and Discounted Cash Flow Valuation'; book p258-291 ⇒ PDF p285-318, Ch.8 reformulation area). CFA Vol.2 R15 (PDF p1051-1090) at the introductory level is a thin supporting fit for the cash-vs-accrual distinction; topical alignment is loose.",
+      "audit_flag": "re_anchored",
+      "audit_notes": "Penman offset corrected to +27 (book p110-139 ⇒ PDF p137-166, Ch.4 'Cash Accounting, Accrual Accounting, and Discounted Cash Flow Valuation'; book p258-291 ⇒ PDF p285-318, Ch.8 reformulation area). CFA Vol.2 R15 (PDF p1051-1090) at the introductory level is a thin supporting fit for the cash-vs-accrual distinction; topical alignment is loose. | R4 re-anchored cites [1] to ['fra_kieso_weygandt_warfield_2020_ifrs_4ed'] (adversarial support-verification).",
       "citations": [
         {
           "role": "primary",
@@ -217,19 +217,19 @@
         },
         {
           "role": "primary",
-          "source_id": "fra_penman_fsa_security_valuation_5ed",
+          "source_id": "fra_kieso_weygandt_warfield_2020_ifrs_4ed",
           "volume": null,
           "legacy_pages": [
-            111,
-            111
+            259,
+            260
           ],
           "pdf_pages": [
-            138,
-            139
+            259,
+            260
           ],
-          "chunk_id": "fra_penman_fsa_security_valuation_5ed:p138:0230",
-          "chunk_hash": "d70aa4ad458e1fdccca2d1b04f52f5e2cb266b463571e807120626663e5b8045",
-          "quote": "The dividend discount model is a straight application of the bond valuation model in the last chapter to valuing equity"
+          "chunk_id": "fra_kieso_weygandt_warfield_2020_ifrs_4ed:p259:0237",
+          "chunk_hash": "5b11f722bc287465067583efae3a5972983c81c96721f243e3ee041f20666d35",
+          "quote": "Most companies use accrual-basis accounting: They recognize revenue when the performance obligation is satisfied and expenses in the period are incurred, without regard to the time of receipt or payment of cash."
         },
         {
           "role": "supporting",
@@ -422,40 +422,40 @@
       "title": "Double-Entry Mechanics",
       "summary_curated": "Lays out the double-entry bookkeeping rule that every transaction posts equal debit and credit entries so the accounting identity is preserved by construction; the T-account view, account-type reactions, and the trial-balance condition.",
       "source_stance": "primary-cfa",
-      "audit_flag": "content_mismatch_noted",
-      "audit_notes": "CFA L1 2022 Vol.2 pp.475-514 (PDF p1051-1090) is Reading 15 'Introduction to Financial Statement Analysis' — it covers the accounting equation (A = L + E) and the four primary statements but does NOT cover double-entry mechanics (debits / credits / journal entries / T-accounts). Double-entry mechanics is taught in the prerequisite 'Financial Reporting Mechanics' reading referenced at PDF p1188 (which is available in Candidate Resources rather than in the main curriculum volume). Closest in-curriculum anchor is the accounting equation paragraph in R15 summary.",
+      "audit_flag": "re_anchored",
+      "audit_notes": "CFA L1 2022 Vol.2 pp.475-514 (PDF p1051-1090) is Reading 15 'Introduction to Financial Statement Analysis' — it covers the accounting equation (A = L + E) and the four primary statements but does NOT cover double-entry mechanics (debits / credits / journal entries / T-accounts). Double-entry mechanics is taught in the prerequisite 'Financial Reporting Mechanics' reading referenced at PDF p1188 (which is available in Candidate Resources rather than in the main curriculum volume). Closest in-curriculum anchor is the accounting equation paragraph in R15 summary. | R4 re-anchored cites [0, 1] to ['fra_kieso_weygandt_warfield_2020_ifrs_4ed'] (adversarial support-verification).",
       "citations": [
         {
           "role": "primary",
-          "source_id": "cfa_2022_l1_combined",
-          "volume": 2,
+          "source_id": "fra_kieso_weygandt_warfield_2020_ifrs_4ed",
+          "volume": null,
           "legacy_pages": [
-            509,
-            509
+            211,
+            211
           ],
           "pdf_pages": [
-            1085,
-            1086
+            211,
+            211
           ],
-          "chunk_id": "cfa_2022_l1_combined:p1085:1551",
-          "chunk_hash": "4e8e1e7cfcf7e760f55c4d68aa51498fa5d09a9f2bc01caae4fd33c26dbaafe8",
-          "quote": "The relationship among the three parts of the balance sheet (assets, liabilities, and owners’ equity) may be shown in equation form as follows: Assets = Liabilities + Owners’ equity"
+          "chunk_id": "fra_kieso_weygandt_warfield_2020_ifrs_4ed:p211:0190",
+          "chunk_hash": "d2fc1ebbba8853588225e36641c0bc0bed2d5c2f4a35caf982b276d915e62059",
+          "quote": "The equality of debits and credits provides the basis for the double-entry system of recording transactions (sometimes referred to as double-entry bookkeeping)."
         },
         {
           "role": "supporting",
-          "source_id": "fra_penman_fsa_security_valuation_5ed",
+          "source_id": "fra_kieso_weygandt_warfield_2020_ifrs_4ed",
           "volume": null,
           "legacy_pages": [
-            42,
-            42
+            211,
+            212
           ],
           "pdf_pages": [
-            69,
-            70
+            211,
+            212
           ],
-          "chunk_id": "fra_penman_fsa_security_valuation_5ed:p069:0109",
-          "chunk_hash": "cc08875592a254e5c1d76ec6fcea8792607c9446d13f636d752c6221d92bd827",
-          "quote": "But by recognizing the articulation of the financial statements, the reader of the statements understands the overall story that they tell"
+          "chunk_id": "fra_kieso_weygandt_warfield_2020_ifrs_4ed:p211:0191",
+          "chunk_hash": "333dc495b1999b061a1e1b30c43c87644b8116f86af233b4d26a1d4dc36fb1eb",
+          "quote": "In a double-entry system, for every debit there must be a credit, and vice versa."
         }
       ]
     },
