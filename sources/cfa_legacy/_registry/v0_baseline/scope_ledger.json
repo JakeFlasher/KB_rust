@@ -1,37 +1,6 @@
 {
   "categories": {
-    "active_deferred_this_loop": [
-      {
-        "blocker": "single-source page-offset map required before emission",
-        "card_id": "pm-active-management-and-alpha",
-        "emitted": false,
-        "reading_id": "09_portfolio_management_and_asset_pricing"
-      },
-      {
-        "blocker": "single-source page-offset map required before emission",
-        "card_id": "pm-anomalies-and-cross-sectional-pricing",
-        "emitted": false,
-        "reading_id": "09_portfolio_management_and_asset_pricing"
-      },
-      {
-        "blocker": "single-source page-offset map required before emission",
-        "card_id": "pm-efficient-markets-and-anomalies",
-        "emitted": false,
-        "reading_id": "09_portfolio_management_and_asset_pricing"
-      },
-      {
-        "blocker": "single-source page-offset map required before emission",
-        "card_id": "pm-multifactor-asset-pricing-intuition",
-        "emitted": false,
-        "reading_id": "09_portfolio_management_and_asset_pricing"
-      },
-      {
-        "blocker": "single-source page-offset map required before emission",
-        "card_id": "pm-stochastic-discount-factor-intuition",
-        "emitted": false,
-        "reading_id": "09_portfolio_management_and_asset_pricing"
-      }
-    ],
+    "active_deferred_this_loop": [],
     "active_emitted": [
       "be-limits-of-arbitrage",
       "be-noise-trader-equilibrium",
@@ -242,23 +211,28 @@
       "fra-ratio-decomposition-dupont",
       "fra-reporting-quality-framework",
       "fra-residual-earnings-valuation",
+      "pm-active-management-and-alpha",
       "pm-active-vs-passive-decision",
       "pm-allocation-process",
+      "pm-anomalies-and-cross-sectional-pricing",
       "pm-beta-and-factor-exposure",
       "pm-capital-market-line",
       "pm-capm-and-sml",
       "pm-diversification-and-correlation",
       "pm-efficient-frontier",
+      "pm-efficient-markets-and-anomalies",
       "pm-factor-models-intuition",
       "pm-investment-policy-statement",
       "pm-investor-types",
       "pm-market-efficiency-core",
+      "pm-multifactor-asset-pricing-intuition",
       "pm-performance-ratios-definitions",
       "pm-portfolio-constraints",
       "pm-portfolio-perspective",
       "pm-rebalancing-mechanics",
       "pm-return-and-risk-fundamentals",
       "pm-risk-tolerance-and-objectives",
+      "pm-stochastic-discount-factor-intuition",
       "pm-systematic-vs-idiosyncratic-risk",
       "qm-aic-bic-model-selection",
       "qm-anova-table",
@@ -338,8 +312,8 @@
     ]
   },
   "counts": {
-    "active_deferred_this_loop": 5,
-    "active_emitted": 263,
+    "active_deferred_this_loop": 0,
+    "active_emitted": 268,
     "excluded": 0,
     "quarantined": 6
   },
@@ -350,10 +324,10 @@
   ],
   "reconciliation": {
     "consistent": true,
-    "disk_md": 263,
-    "history_sidecars": 263,
-    "ledger_active_emitted": 263,
-    "manifest": 263
+    "disk_md": 268,
+    "history_sidecars": 268,
+    "ledger_active_emitted": 268,
+    "manifest": 268
   },
   "schema_version": "cfa_legacy_scope_ledger/v1"
 }

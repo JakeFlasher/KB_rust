@@ -1,0 +1,52 @@
+{
+  "generated_by": "build_offset_maps.py (R5: triangulated from ingested-chunk running headers)",
+  "reading_id": "09_portfolio_management_and_asset_pricing",
+  "schema_version": "cfa_legacy.page_coordinate_map.v1",
+  "sources": [
+    {
+      "legacy_coordinate": "printed_book_page",
+      "note": "Single affine offset triangulated from 165 running-header anchors in the ingested chunk text; consensus offset +21.",
+      "page_count_pdf": 369,
+      "pdf_coordinate_rule": "pdf_page = legacy_page + 21",
+      "source_id": "pm_pedersen_2015_efficiently_inefficient",
+      "verified_evidence": [
+        {
+          "chunk_id": "pm_pedersen_2015_efficiently_inefficient:p023:0019",
+          "evidence": "recto running header '• 3' at PDF 24",
+          "legacy_page": 3,
+          "pdf_page": 24
+        },
+        {
+          "chunk_id": "pm_pedersen_2015_efficiently_inefficient:p025:0022",
+          "evidence": "recto running header '• 5' at PDF 26",
+          "legacy_page": 5,
+          "pdf_page": 26
+        },
+        {
+          "chunk_id": "pm_pedersen_2015_efficiently_inefficient:p027:0026",
+          "evidence": "recto running header '• 7' at PDF 28",
+          "legacy_page": 7,
+          "pdf_page": 28
+        },
+        {
+          "chunk_id": "pm_pedersen_2015_efficiently_inefficient:p029:0027",
+          "evidence": "verso running header '8 •' at PDF 29",
+          "legacy_page": 8,
+          "pdf_page": 29
+        },
+        {
+          "chunk_id": "pm_pedersen_2015_efficiently_inefficient:p029:0027",
+          "evidence": "recto running header '• 9' at PDF 30",
+          "legacy_page": 9,
+          "pdf_page": 30
+        },
+        {
+          "chunk_id": "pm_pedersen_2015_efficiently_inefficient:p031:0031",
+          "evidence": "recto running header '• 11' at PDF 32",
+          "legacy_page": 11,
+          "pdf_page": 32
+        }
+      ]
+    }
+  ]
+}

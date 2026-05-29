@@ -1,0 +1,52 @@
+{
+  "generated_by": "build_offset_maps.py (R5: triangulated from ingested-chunk running headers)",
+  "reading_id": "09_portfolio_management_and_asset_pricing",
+  "schema_version": "cfa_legacy.page_coordinate_map.v1",
+  "sources": [
+    {
+      "legacy_coordinate": "printed_book_page",
+      "note": "Single affine offset triangulated from 534 running-header anchors in the ingested chunk text; consensus offset +19.",
+      "page_count_pdf": 553,
+      "pdf_coordinate_rule": "pdf_page = legacy_page + 19",
+      "source_id": "pm_cochrane_2005_asset_pricing_revised",
+      "verified_evidence": [
+        {
+          "chunk_id": "pm_cochrane_2005_asset_pricing_revised:p019:0022",
+          "evidence": "LaTeX page marker 'page 1' at PDF 20",
+          "legacy_page": 1,
+          "pdf_page": 20
+        },
+        {
+          "chunk_id": "pm_cochrane_2005_asset_pricing_revised:p020:0023",
+          "evidence": "LaTeX page marker 'page 2' at PDF 21",
+          "legacy_page": 2,
+          "pdf_page": 21
+        },
+        {
+          "chunk_id": "pm_cochrane_2005_asset_pricing_revised:p021:0024",
+          "evidence": "LaTeX page marker 'page 3' at PDF 22",
+          "legacy_page": 3,
+          "pdf_page": 22
+        },
+        {
+          "chunk_id": "pm_cochrane_2005_asset_pricing_revised:p022:0025",
+          "evidence": "LaTeX page marker 'page 4' at PDF 23",
+          "legacy_page": 4,
+          "pdf_page": 23
+        },
+        {
+          "chunk_id": "pm_cochrane_2005_asset_pricing_revised:p023:0026",
+          "evidence": "LaTeX page marker 'page 5' at PDF 24",
+          "legacy_page": 5,
+          "pdf_page": 24
+        },
+        {
+          "chunk_id": "pm_cochrane_2005_asset_pricing_revised:p024:0027",
+          "evidence": "LaTeX page marker 'page 6' at PDF 25",
+          "legacy_page": 6,
+          "pdf_page": 25
+        }
+      ]
+    }
+  ]
+}
