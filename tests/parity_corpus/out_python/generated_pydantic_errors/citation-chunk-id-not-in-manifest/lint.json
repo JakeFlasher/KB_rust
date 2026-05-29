@@ -1,0 +1,1 @@
+{"diagnostics":[{"code":"CACG-CITE-004","file":"tests/parity_corpus/generated_pydantic_errors/_lint_probe_citation-chunk-id-not-in-manifest.md","message":"citations[0]: chunk_id 'sample:p999:9999' not present in chunks manifest","severity":"error"}],"oracle_layer":"lint","schema_version":"cacg.v0"}

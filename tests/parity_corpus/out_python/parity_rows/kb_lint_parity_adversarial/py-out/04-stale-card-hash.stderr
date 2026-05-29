@@ -1,0 +1,1 @@
+tests/parity_corpus/adversarial/04-stale-card-hash.md: CACG-HASH-002 card_hash is stale: stored=ffffffffffff..., recomputed=d6a3ca2b04da...; run `kb index` after editing the card

@@ -1,0 +1,44 @@
+{
+  "schema_version": "proptest-corpus-v1",
+  "oracle": "history_parity",
+  "path": "Path B (committed cross-language corpus freeze)",
+  "capture_source": "legacy_python_oracle/scripts/history_oracle.py under KB_FROZEN_CLOCK=1",
+  "cases": {
+    "50_event": {
+      "case_count": 50,
+      "files": {
+        "entries.jsonl": {
+          "sha256": "fff2b0fd6862721a42eb1092baee4eb1f81ae86415538046e388e3f59a961935",
+          "lines": 50
+        },
+        "expected_card.history.jsonl": {
+          "sha256": "06f3fe60f8ef0625929806b83d5023cec761a009fd0f9de9bb4b6581774fa66d",
+          "lines": 50
+        }
+      }
+    },
+    "retraction_tombstone": {
+      "case_count": 1,
+      "files": {
+        "expected_retraction_tombstone.history.jsonl": {
+          "sha256": "9d455c58fe598096048db12fb9c26b2b7e6be2d617cbbc8c18e36173281a1515",
+          "lines": 1
+        }
+      }
+    }
+  },
+  "branch_fingerprints": {
+    "first_event_seq_0": true,
+    "first_event_prev_checksum_null": true,
+    "chained_prev_checksum": true,
+    "prev_card_hash_null_and_non_null": true,
+    "is_retracted_true_and_false": true,
+    "tombstone_frontmatter_field_changes": ["__cacg_retracted__"],
+    "tombstone_empty_added_removed": true,
+    "tombstone_new_eq_prev_card_hash": true,
+    "cited_chunk_ids_snapshot_preserves_array_order": true,
+    "frontmatter_snapshot_empty_and_non_empty": true,
+    "cited_chunk_set_delta_empty_and_non_empty": true,
+    "frozen_timestamp": "1970-01-01T00:00:00Z"
+  }
+}

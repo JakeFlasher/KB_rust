@@ -1,0 +1,133 @@
+{
+  "mutex_groups": [
+    {
+      "index": 0,
+      "member_dests": [
+        "card",
+        "round_summary"
+      ],
+      "required": true
+    },
+    {
+      "index": 1,
+      "member_dests": [
+        "semantic",
+        "semantic_judge"
+      ],
+      "required": false
+    }
+  ],
+  "name": "verify",
+  "options": [
+    {
+      "action": "_StoreTrueAction",
+      "default": false,
+      "dest": "allow_retracted",
+      "is_positional": false,
+      "option_strings": [
+        "--allow-retracted"
+      ],
+      "required": false
+    },
+    {
+      "action": "_StoreAction",
+      "default": "out/chunks_manifest.json",
+      "dest": "chunks_manifest",
+      "is_positional": false,
+      "option_strings": [
+        "--chunks-manifest"
+      ],
+      "required": false
+    },
+    {
+      "action": "_StoreTrueAction",
+      "default": false,
+      "dest": "fuzzy",
+      "is_positional": false,
+      "option_strings": [
+        "--fuzzy"
+      ],
+      "required": false
+    },
+    {
+      "action": "_StoreAction",
+      "default": null,
+      "dest": "journal",
+      "is_positional": false,
+      "option_strings": [
+        "--journal"
+      ],
+      "required": false
+    },
+    {
+      "action": "_StoreAction",
+      "default": null,
+      "dest": "round_summary",
+      "is_positional": false,
+      "option_strings": [
+        "--round-summary"
+      ],
+      "required": false
+    },
+    {
+      "action": "_StoreAction",
+      "default": null,
+      "dest": "semantic",
+      "is_positional": false,
+      "option_strings": [
+        "--semantic"
+      ],
+      "required": false
+    },
+    {
+      "action": "_StoreTrueAction",
+      "default": false,
+      "dest": "semantic_judge",
+      "is_positional": false,
+      "option_strings": [
+        "--semantic-judge"
+      ],
+      "required": false
+    },
+    {
+      "action": "_StoreTrueAction",
+      "default": false,
+      "dest": "skip_lint",
+      "is_positional": false,
+      "option_strings": [
+        "--unsafe-skip-lint"
+      ],
+      "required": false
+    },
+    {
+      "action": "_StoreTrueAction",
+      "default": false,
+      "dest": "skip_lint",
+      "is_positional": false,
+      "option_strings": [
+        "--skip-lint"
+      ],
+      "required": false
+    },
+    {
+      "action": "_StoreAction",
+      "default": null,
+      "dest": "source_matrix",
+      "is_positional": false,
+      "option_strings": [
+        "--source-matrix"
+      ],
+      "required": true
+    }
+  ],
+  "positionals": [
+    {
+      "action": "_StoreAction",
+      "default": null,
+      "dest": "card",
+      "is_positional": true,
+      "nargs": "?",
+      "required": false
+    }
+  ]
+}

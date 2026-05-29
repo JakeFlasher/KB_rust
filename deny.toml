@@ -1,0 +1,71 @@
+# cargo-deny policy for the CACG Rust workspace.
+# Enforces the supply-chain bans documented in
+# `.humanize/plans/cacg-rust-port-trust-kernel-first-plan.md` §Path Boundaries.
+
+[graph]
+all-features = true
+no-default-features = false
+targets = [
+    { triple = "x86_64-unknown-linux-gnu" },
+    { triple = "aarch64-unknown-linux-gnu" },
+]
+
+[output]
+feature-depth = 1
+
+[bans]
+multiple-versions = "warn"
+wildcards = "deny"
+allow-wildcard-paths = true
+highlight = "all"
+deny = [
+    # blake3: SHA-256 is the corpus-compat oracle; blake3 is incompat.
+    { name = "blake3" },
+    # serde-jcs: RFC 8785 escape rules diverge from Python json.dumps.
+    { name = "serde-jcs" },
+    # serde_yml: stale (Aug 2024) + unsoundness rumors.
+    { name = "serde_yml" },
+    # rapidfuzz: stale (Dec 2023); roll-our-own bounded Levenshtein.
+    { name = "rapidfuzz" },
+    # triple_accel: stale (June 2021).
+    { name = "triple_accel" },
+    # chrono: prefer `time` crate; lighter, same correctness.
+    # Allowed only as transitive dep of pdfium-render; direct usage is banned.
+    { name = "chrono", wrappers = ["pdfium-render"] },
+    # PyO3: pure CLI shell-out is the integration boundary; no Python ABI.
+    { name = "pyo3" },
+]
+skip = []
+skip-tree = []
+
+# Pdfium isolation: cacg-core must NOT depend on pdfium-render
+# transitively. cargo-deny's `crate-not-found-in` check is too coarse; the
+# `cargo tree -e features -p cacg-core` snapshot test enforces this directly.
+# This file's deny[] above guards against accidentally adding banned crates
+# to ANY workspace member.
+
+[licenses]
+allow = [
+    "MIT",
+    "Apache-2.0",
+    "Apache-2.0 WITH LLVM-exception",
+    "BSD-2-Clause",
+    "BSD-3-Clause",
+    "ISC",
+    "Unicode-DFS-2016",
+    "Unicode-3.0",
+    "Zlib",
+    "MPL-2.0",
+    "CC0-1.0",
+    "CDLA-Permissive-2.0",
+    "OpenSSL",
+]
+private = { ignore = true }
+confidence-threshold = 0.93
+exceptions = []
+
+[advisories]
+db-path = "~/.cargo/advisory-db"
+db-urls = ["https://github.com/rustsec/advisory-db"]
+yanked = "deny"
+ignore = []

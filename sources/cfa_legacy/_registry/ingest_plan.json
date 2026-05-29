@@ -1,0 +1,1402 @@
+[
+  {
+    "canonical_path": "sources/cfa_legacy/pdfs/convertible_bonds/cb_calamos_2003_convertible_arbitrage.pdf",
+    "command": [
+      "cargo",
+      "run",
+      "-p",
+      "cacg-cli",
+      "--bin",
+      "kb",
+      "--",
+      "ingest",
+      "sources/cfa_legacy/pdfs/convertible_bonds/cb_calamos_2003_convertible_arbitrage.pdf",
+      "--source-id",
+      "cb_calamos_2003_convertible_arbitrage",
+      "--out",
+      "out/cfa_legacy/ingest_per_source/cb_calamos_2003_convertible_arbitrage"
+    ],
+    "out_dir": "out/cfa_legacy/ingest_per_source/cb_calamos_2003_convertible_arbitrage",
+    "source_id": "cb_calamos_2003_convertible_arbitrage"
+  },
+  {
+    "canonical_path": "sources/cfa_legacy/pdfs/convertible_bonds/cb_despiegeleer_schoutens_vanhulle_2014_hybrid_securities.pdf",
+    "command": [
+      "cargo",
+      "run",
+      "-p",
+      "cacg-cli",
+      "--bin",
+      "kb",
+      "--",
+      "ingest",
+      "sources/cfa_legacy/pdfs/convertible_bonds/cb_despiegeleer_schoutens_vanhulle_2014_hybrid_securities.pdf",
+      "--source-id",
+      "cb_despiegeleer_schoutens_vanhulle_2014_hybrid_securities",
+      "--out",
+      "out/cfa_legacy/ingest_per_source/cb_despiegeleer_schoutens_vanhulle_2014_hybrid_securities"
+    ],
+    "out_dir": "out/cfa_legacy/ingest_per_source/cb_despiegeleer_schoutens_vanhulle_2014_hybrid_securities",
+    "source_id": "cb_despiegeleer_schoutens_vanhulle_2014_hybrid_securities"
+  },
+  {
+    "canonical_path": "sources/cfa_legacy/pdfs/convertible_bonds/cb_philips_1997_convertible_bond_markets.pdf",
+    "command": [
+      "cargo",
+      "run",
+      "-p",
+      "cacg-cli",
+      "--bin",
+      "kb",
+      "--",
+      "ingest",
+      "sources/cfa_legacy/pdfs/convertible_bonds/cb_philips_1997_convertible_bond_markets.pdf",
+      "--source-id",
+      "cb_philips_1997_convertible_bond_markets",
+      "--out",
+      "out/cfa_legacy/ingest_per_source/cb_philips_1997_convertible_bond_markets"
+    ],
+    "out_dir": "out/cfa_legacy/ingest_per_source/cb_philips_1997_convertible_bond_markets",
+    "source_id": "cb_philips_1997_convertible_bond_markets"
+  },
+  {
+    "canonical_path": "sources/cfa_legacy/pdfs/convertible_bonds/cb_thorp_kassouf_1967_beat_the_market.pdf",
+    "command": [
+      "cargo",
+      "run",
+      "-p",
+      "cacg-cli",
+      "--bin",
+      "kb",
+      "--",
+      "ingest",
+      "sources/cfa_legacy/pdfs/convertible_bonds/cb_thorp_kassouf_1967_beat_the_market.pdf",
+      "--source-id",
+      "cb_thorp_kassouf_1967_beat_the_market",
+      "--out",
+      "out/cfa_legacy/ingest_per_source/cb_thorp_kassouf_1967_beat_the_market"
+    ],
+    "out_dir": "out/cfa_legacy/ingest_per_source/cb_thorp_kassouf_1967_beat_the_market",
+    "source_id": "cb_thorp_kassouf_1967_beat_the_market"
+  },
+  {
+    "canonical_path": "sources/cfa_legacy/pdfs/convertible_bonds/cb_zubulake_convertible_securities_worldwide.pdf",
+    "command": [
+      "cargo",
+      "run",
+      "-p",
+      "cacg-cli",
+      "--bin",
+      "kb",
+      "--",
+      "ingest",
+      "sources/cfa_legacy/pdfs/convertible_bonds/cb_zubulake_convertible_securities_worldwide.pdf",
+      "--source-id",
+      "cb_zubulake_convertible_securities_worldwide",
+      "--out",
+      "out/cfa_legacy/ingest_per_source/cb_zubulake_convertible_securities_worldwide"
+    ],
+    "out_dir": "out/cfa_legacy/ingest_per_source/cb_zubulake_convertible_securities_worldwide",
+    "source_id": "cb_zubulake_convertible_securities_worldwide"
+  },
+  {
+    "canonical_path": "sources/cfa_legacy/pdfs/convertible_bonds/cb_glasserman_2003_monte_carlo_methods.pdf",
+    "command": [
+      "cargo",
+      "run",
+      "-p",
+      "cacg-cli",
+      "--bin",
+      "kb",
+      "--",
+      "ingest",
+      "sources/cfa_legacy/pdfs/convertible_bonds/cb_glasserman_2003_monte_carlo_methods.pdf",
+      "--source-id",
+      "cb_glasserman_2003_monte_carlo_methods",
+      "--out",
+      "out/cfa_legacy/ingest_per_source/cb_glasserman_2003_monte_carlo_methods"
+    ],
+    "out_dir": "out/cfa_legacy/ingest_per_source/cb_glasserman_2003_monte_carlo_methods",
+    "source_id": "cb_glasserman_2003_monte_carlo_methods"
+  },
+  {
+    "canonical_path": "sources/cfa_legacy/pdfs/convertible_bonds/cb_hull_2022_options_futures_derivatives_11ed.pdf",
+    "command": [
+      "cargo",
+      "run",
+      "-p",
+      "cacg-cli",
+      "--bin",
+      "kb",
+      "--",
+      "ingest",
+      "sources/cfa_legacy/pdfs/convertible_bonds/cb_hull_2022_options_futures_derivatives_11ed.pdf",
+      "--source-id",
+      "cb_hull_2022_options_futures_derivatives_11ed",
+      "--out",
+      "out/cfa_legacy/ingest_per_source/cb_hull_2022_options_futures_derivatives_11ed"
+    ],
+    "out_dir": "out/cfa_legacy/ingest_per_source/cb_hull_2022_options_futures_derivatives_11ed",
+    "source_id": "cb_hull_2022_options_futures_derivatives_11ed"
+  },
+  {
+    "canonical_path": "sources/cfa_legacy/pdfs/convertible_bonds/cb_koziol_2004_convertible_bonds_strategic_investors.pdf",
+    "command": [
+      "cargo",
+      "run",
+      "-p",
+      "cacg-cli",
+      "--bin",
+      "kb",
+      "--",
+      "ingest",
+      "sources/cfa_legacy/pdfs/convertible_bonds/cb_koziol_2004_convertible_bonds_strategic_investors.pdf",
+      "--source-id",
+      "cb_koziol_2004_convertible_bonds_strategic_investors",
+      "--out",
+      "out/cfa_legacy/ingest_per_source/cb_koziol_2004_convertible_bonds_strategic_investors"
+    ],
+    "out_dir": "out/cfa_legacy/ingest_per_source/cb_koziol_2004_convertible_bonds_strategic_investors",
+    "source_id": "cb_koziol_2004_convertible_bonds_strategic_investors"
+  },
+  {
+    "canonical_path": "sources/cfa_legacy/pdfs/convertible_bonds/cb_lando_2004_credit_risk_modeling.pdf",
+    "command": [
+      "cargo",
+      "run",
+      "-p",
+      "cacg-cli",
+      "--bin",
+      "kb",
+      "--",
+      "ingest",
+      "sources/cfa_legacy/pdfs/convertible_bonds/cb_lando_2004_credit_risk_modeling.pdf",
+      "--source-id",
+      "cb_lando_2004_credit_risk_modeling",
+      "--out",
+      "out/cfa_legacy/ingest_per_source/cb_lando_2004_credit_risk_modeling"
+    ],
+    "out_dir": "out/cfa_legacy/ingest_per_source/cb_lando_2004_credit_risk_modeling",
+    "source_id": "cb_lando_2004_credit_risk_modeling"
+  },
+  {
+    "canonical_path": "sources/cfa_legacy/pdfs/convertible_bonds/cb_an_daoquan_2014_magic_book_2ed.pdf",
+    "command": [
+      "cargo",
+      "run",
+      "-p",
+      "cacg-cli",
+      "--bin",
+      "kb",
+      "--",
+      "ingest",
+      "sources/cfa_legacy/pdfs/convertible_bonds/cb_an_daoquan_2014_magic_book_2ed.pdf",
+      "--source-id",
+      "cb_an_daoquan_2014_magic_book_2ed",
+      "--out",
+      "out/cfa_legacy/ingest_per_source/cb_an_daoquan_2014_magic_book_2ed"
+    ],
+    "out_dir": "out/cfa_legacy/ingest_per_source/cb_an_daoquan_2014_magic_book_2ed",
+    "source_id": "cb_an_daoquan_2014_magic_book_2ed"
+  },
+  {
+    "canonical_path": "sources/cfa_legacy/pdfs/convertible_bonds/cb_an_daoquan_2023_three_line_duplex_3ed.pdf",
+    "command": [
+      "cargo",
+      "run",
+      "-p",
+      "cacg-cli",
+      "--bin",
+      "kb",
+      "--",
+      "ingest",
+      "sources/cfa_legacy/pdfs/convertible_bonds/cb_an_daoquan_2023_three_line_duplex_3ed.pdf",
+      "--source-id",
+      "cb_an_daoquan_2023_three_line_duplex_3ed",
+      "--out",
+      "out/cfa_legacy/ingest_per_source/cb_an_daoquan_2023_three_line_duplex_3ed"
+    ],
+    "out_dir": "out/cfa_legacy/ingest_per_source/cb_an_daoquan_2023_three_line_duplex_3ed",
+    "source_id": "cb_an_daoquan_2023_three_line_duplex_3ed"
+  },
+  {
+    "canonical_path": "sources/cfa_legacy/pdfs/convertible_bonds/cb_gongshou_practical_handbook_1ed.pdf",
+    "command": [
+      "cargo",
+      "run",
+      "-p",
+      "cacg-cli",
+      "--bin",
+      "kb",
+      "--",
+      "ingest",
+      "sources/cfa_legacy/pdfs/convertible_bonds/cb_gongshou_practical_handbook_1ed.pdf",
+      "--source-id",
+      "cb_gongshou_practical_handbook_1ed",
+      "--out",
+      "out/cfa_legacy/ingest_per_source/cb_gongshou_practical_handbook_1ed"
+    ],
+    "out_dir": "out/cfa_legacy/ingest_per_source/cb_gongshou_practical_handbook_1ed",
+    "source_id": "cb_gongshou_practical_handbook_1ed"
+  },
+  {
+    "canonical_path": "sources/cfa_legacy/pdfs/china_convertible_bonds/china_cb_csrc_disclosure_standard_no_60.pdf",
+    "command": [
+      "cargo",
+      "run",
+      "-p",
+      "cacg-cli",
+      "--bin",
+      "kb",
+      "--",
+      "ingest",
+      "sources/cfa_legacy/pdfs/china_convertible_bonds/china_cb_csrc_disclosure_standard_no_60.pdf",
+      "--source-id",
+      "china_cb_csrc_disclosure_standard_no_60",
+      "--out",
+      "out/cfa_legacy/ingest_per_source/china_cb_csrc_disclosure_standard_no_60"
+    ],
+    "out_dir": "out/cfa_legacy/ingest_per_source/china_cb_csrc_disclosure_standard_no_60",
+    "source_id": "china_cb_csrc_disclosure_standard_no_60"
+  },
+  {
+    "canonical_path": "sources/cfa_legacy/pdfs/china_convertible_bonds/china_cb_spc_bond_disputes_2020.pdf",
+    "command": [
+      "cargo",
+      "run",
+      "-p",
+      "cacg-cli",
+      "--bin",
+      "kb",
+      "--",
+      "ingest",
+      "sources/cfa_legacy/pdfs/china_convertible_bonds/china_cb_spc_bond_disputes_2020.pdf",
+      "--source-id",
+      "china_cb_spc_bond_disputes_2020",
+      "--out",
+      "out/cfa_legacy/ingest_per_source/china_cb_spc_bond_disputes_2020"
+    ],
+    "out_dir": "out/cfa_legacy/ingest_per_source/china_cb_spc_bond_disputes_2020",
+    "source_id": "china_cb_spc_bond_disputes_2020"
+  },
+  {
+    "canonical_path": "sources/cfa_legacy/pdfs/china_convertible_bonds/china_cb_dajia_credit_risk_immune_2024.pdf",
+    "command": [
+      "cargo",
+      "run",
+      "-p",
+      "cacg-cli",
+      "--bin",
+      "kb",
+      "--",
+      "ingest",
+      "sources/cfa_legacy/pdfs/china_convertible_bonds/china_cb_dajia_credit_risk_immune_2024.pdf",
+      "--source-id",
+      "china_cb_dajia_credit_risk_immune_2024",
+      "--out",
+      "out/cfa_legacy/ingest_per_source/china_cb_dajia_credit_risk_immune_2024"
+    ],
+    "out_dir": "out/cfa_legacy/ingest_per_source/china_cb_dajia_credit_risk_immune_2024",
+    "source_id": "china_cb_dajia_credit_risk_immune_2024"
+  },
+  {
+    "canonical_path": "sources/cfa_legacy/pdfs/china_convertible_bonds/china_cb_lianhe_risk_reconstruction_2025.pdf",
+    "command": [
+      "cargo",
+      "run",
+      "-p",
+      "cacg-cli",
+      "--bin",
+      "kb",
+      "--",
+      "ingest",
+      "sources/cfa_legacy/pdfs/china_convertible_bonds/china_cb_lianhe_risk_reconstruction_2025.pdf",
+      "--source-id",
+      "china_cb_lianhe_risk_reconstruction_2025",
+      "--out",
+      "out/cfa_legacy/ingest_per_source/china_cb_lianhe_risk_reconstruction_2025"
+    ],
+    "out_dir": "out/cfa_legacy/ingest_per_source/china_cb_lianhe_risk_reconstruction_2025",
+    "source_id": "china_cb_lianhe_risk_reconstruction_2025"
+  },
+  {
+    "canonical_path": "sources/cfa_legacy/pdfs/china_convertible_bonds/china_cb_sse_rules_compilation.pdf",
+    "command": [
+      "cargo",
+      "run",
+      "-p",
+      "cacg-cli",
+      "--bin",
+      "kb",
+      "--",
+      "ingest",
+      "sources/cfa_legacy/pdfs/china_convertible_bonds/china_cb_sse_rules_compilation.pdf",
+      "--source-id",
+      "china_cb_sse_rules_compilation",
+      "--out",
+      "out/cfa_legacy/ingest_per_source/china_cb_sse_rules_compilation"
+    ],
+    "out_dir": "out/cfa_legacy/ingest_per_source/china_cb_sse_rules_compilation",
+    "source_id": "china_cb_sse_rules_compilation"
+  },
+  {
+    "canonical_path": "sources/cfa_legacy/pdfs/china_convertible_bonds/china_cb_szse_trading_rules_2022.pdf",
+    "command": [
+      "cargo",
+      "run",
+      "-p",
+      "cacg-cli",
+      "--bin",
+      "kb",
+      "--",
+      "ingest",
+      "sources/cfa_legacy/pdfs/china_convertible_bonds/china_cb_szse_trading_rules_2022.pdf",
+      "--source-id",
+      "china_cb_szse_trading_rules_2022",
+      "--out",
+      "out/cfa_legacy/ingest_per_source/china_cb_szse_trading_rules_2022"
+    ],
+    "out_dir": "out/cfa_legacy/ingest_per_source/china_cb_szse_trading_rules_2022",
+    "source_id": "china_cb_szse_trading_rules_2022"
+  },
+  {
+    "canonical_path": "sources/cfa_legacy/pdfs/china_convertible_bonds/china_cb_zhang_feng_strategy_2014.pdf",
+    "command": [
+      "cargo",
+      "run",
+      "-p",
+      "cacg-cli",
+      "--bin",
+      "kb",
+      "--",
+      "ingest",
+      "sources/cfa_legacy/pdfs/china_convertible_bonds/china_cb_zhang_feng_strategy_2014.pdf",
+      "--source-id",
+      "china_cb_zhang_feng_strategy_2014",
+      "--out",
+      "out/cfa_legacy/ingest_per_source/china_cb_zhang_feng_strategy_2014"
+    ],
+    "out_dir": "out/cfa_legacy/ingest_per_source/china_cb_zhang_feng_strategy_2014",
+    "source_id": "china_cb_zhang_feng_strategy_2014"
+  },
+  {
+    "canonical_path": "sources/cfa_legacy/pdfs/china_convertible_bonds/china_cb_hkex_ch28_convertible_debt.pdf",
+    "command": [
+      "cargo",
+      "run",
+      "-p",
+      "cacg-cli",
+      "--bin",
+      "kb",
+      "--",
+      "ingest",
+      "sources/cfa_legacy/pdfs/china_convertible_bonds/china_cb_hkex_ch28_convertible_debt.pdf",
+      "--source-id",
+      "china_cb_hkex_ch28_convertible_debt",
+      "--out",
+      "out/cfa_legacy/ingest_per_source/china_cb_hkex_ch28_convertible_debt"
+    ],
+    "out_dir": "out/cfa_legacy/ingest_per_source/china_cb_hkex_ch28_convertible_debt",
+    "source_id": "china_cb_hkex_ch28_convertible_debt"
+  },
+  {
+    "canonical_path": "sources/cfa_legacy/pdfs/china_convertible_bonds/china_cb_hkex_ch16_convertible_equity.pdf",
+    "command": [
+      "cargo",
+      "run",
+      "-p",
+      "cacg-cli",
+      "--bin",
+      "kb",
+      "--",
+      "ingest",
+      "sources/cfa_legacy/pdfs/china_convertible_bonds/china_cb_hkex_ch16_convertible_equity.pdf",
+      "--source-id",
+      "china_cb_hkex_ch16_convertible_equity",
+      "--out",
+      "out/cfa_legacy/ingest_per_source/china_cb_hkex_ch16_convertible_equity"
+    ],
+    "out_dir": "out/cfa_legacy/ingest_per_source/china_cb_hkex_ch16_convertible_equity",
+    "source_id": "china_cb_hkex_ch16_convertible_equity"
+  },
+  {
+    "canonical_path": "sources/cfa_legacy/pdfs/cfa_program_curriculum/cfa_2022_l1_combined.pdf",
+    "command": [
+      "cargo",
+      "run",
+      "-p",
+      "cacg-cli",
+      "--bin",
+      "kb",
+      "--",
+      "ingest",
+      "sources/cfa_legacy/pdfs/cfa_program_curriculum/cfa_2022_l1_combined.pdf",
+      "--source-id",
+      "cfa_2022_l1_combined",
+      "--out",
+      "out/cfa_legacy/ingest_per_source/cfa_2022_l1_combined"
+    ],
+    "out_dir": "out/cfa_legacy/ingest_per_source/cfa_2022_l1_combined",
+    "source_id": "cfa_2022_l1_combined"
+  },
+  {
+    "canonical_path": "sources/cfa_legacy/pdfs/03_financial_reporting_analysis/fra_penman_fsa_security_valuation_5ed.pdf",
+    "command": [
+      "cargo",
+      "run",
+      "-p",
+      "cacg-cli",
+      "--bin",
+      "kb",
+      "--",
+      "ingest",
+      "sources/cfa_legacy/pdfs/03_financial_reporting_analysis/fra_penman_fsa_security_valuation_5ed.pdf",
+      "--source-id",
+      "fra_penman_fsa_security_valuation_5ed",
+      "--out",
+      "out/cfa_legacy/ingest_per_source/fra_penman_fsa_security_valuation_5ed"
+    ],
+    "out_dir": "out/cfa_legacy/ingest_per_source/fra_penman_fsa_security_valuation_5ed",
+    "source_id": "fra_penman_fsa_security_valuation_5ed"
+  },
+  {
+    "canonical_path": "sources/cfa_legacy/pdfs/03_financial_reporting_analysis/fra_kieso_weygandt_warfield_2020_ifrs_4ed.pdf",
+    "command": [
+      "cargo",
+      "run",
+      "-p",
+      "cacg-cli",
+      "--bin",
+      "kb",
+      "--",
+      "ingest",
+      "sources/cfa_legacy/pdfs/03_financial_reporting_analysis/fra_kieso_weygandt_warfield_2020_ifrs_4ed.pdf",
+      "--source-id",
+      "fra_kieso_weygandt_warfield_2020_ifrs_4ed",
+      "--out",
+      "out/cfa_legacy/ingest_per_source/fra_kieso_weygandt_warfield_2020_ifrs_4ed"
+    ],
+    "out_dir": "out/cfa_legacy/ingest_per_source/fra_kieso_weygandt_warfield_2020_ifrs_4ed",
+    "source_id": "fra_kieso_weygandt_warfield_2020_ifrs_4ed"
+  },
+  {
+    "canonical_path": "sources/cfa_legacy/pdfs/03_financial_reporting_analysis/fra_hkicpa_hkas_32_2022.pdf",
+    "command": [
+      "cargo",
+      "run",
+      "-p",
+      "cacg-cli",
+      "--bin",
+      "kb",
+      "--",
+      "ingest",
+      "sources/cfa_legacy/pdfs/03_financial_reporting_analysis/fra_hkicpa_hkas_32_2022.pdf",
+      "--source-id",
+      "fra_hkicpa_hkas_32_2022",
+      "--out",
+      "out/cfa_legacy/ingest_per_source/fra_hkicpa_hkas_32_2022"
+    ],
+    "out_dir": "out/cfa_legacy/ingest_per_source/fra_hkicpa_hkas_32_2022",
+    "source_id": "fra_hkicpa_hkas_32_2022"
+  },
+  {
+    "canonical_path": "sources/cfa_legacy/pdfs/03_financial_reporting_analysis/fra_hkicpa_hkfrs_9_2024.pdf",
+    "command": [
+      "cargo",
+      "run",
+      "-p",
+      "cacg-cli",
+      "--bin",
+      "kb",
+      "--",
+      "ingest",
+      "sources/cfa_legacy/pdfs/03_financial_reporting_analysis/fra_hkicpa_hkfrs_9_2024.pdf",
+      "--source-id",
+      "fra_hkicpa_hkfrs_9_2024",
+      "--out",
+      "out/cfa_legacy/ingest_per_source/fra_hkicpa_hkfrs_9_2024"
+    ],
+    "out_dir": "out/cfa_legacy/ingest_per_source/fra_hkicpa_hkfrs_9_2024",
+    "source_id": "fra_hkicpa_hkfrs_9_2024"
+  },
+  {
+    "canonical_path": "sources/cfa_legacy/pdfs/03_financial_reporting_analysis/fra_hkicpa_hkfrs_7_2018.pdf",
+    "command": [
+      "cargo",
+      "run",
+      "-p",
+      "cacg-cli",
+      "--bin",
+      "kb",
+      "--",
+      "ingest",
+      "sources/cfa_legacy/pdfs/03_financial_reporting_analysis/fra_hkicpa_hkfrs_7_2018.pdf",
+      "--source-id",
+      "fra_hkicpa_hkfrs_7_2018",
+      "--out",
+      "out/cfa_legacy/ingest_per_source/fra_hkicpa_hkfrs_7_2018"
+    ],
+    "out_dir": "out/cfa_legacy/ingest_per_source/fra_hkicpa_hkfrs_7_2018",
+    "source_id": "fra_hkicpa_hkfrs_7_2018"
+  },
+  {
+    "canonical_path": "sources/cfa_legacy/pdfs/03_financial_reporting_analysis/fra_robinson_henry_pirie_broihahn_2020_ifsa_4ed.pdf",
+    "command": [
+      "cargo",
+      "run",
+      "-p",
+      "cacg-cli",
+      "--bin",
+      "kb",
+      "--",
+      "ingest",
+      "sources/cfa_legacy/pdfs/03_financial_reporting_analysis/fra_robinson_henry_pirie_broihahn_2020_ifsa_4ed.pdf",
+      "--source-id",
+      "fra_robinson_henry_pirie_broihahn_2020_ifsa_4ed",
+      "--out",
+      "out/cfa_legacy/ingest_per_source/fra_robinson_henry_pirie_broihahn_2020_ifsa_4ed"
+    ],
+    "out_dir": "out/cfa_legacy/ingest_per_source/fra_robinson_henry_pirie_broihahn_2020_ifsa_4ed",
+    "source_id": "fra_robinson_henry_pirie_broihahn_2020_ifsa_4ed"
+  },
+  {
+    "canonical_path": "sources/cfa_legacy/pdfs/03_financial_reporting_analysis/fra_white_sondhi_fried_2003_analysis_financial_statements_3ed.pdf",
+    "command": [
+      "cargo",
+      "run",
+      "-p",
+      "cacg-cli",
+      "--bin",
+      "kb",
+      "--",
+      "ingest",
+      "sources/cfa_legacy/pdfs/03_financial_reporting_analysis/fra_white_sondhi_fried_2003_analysis_financial_statements_3ed.pdf",
+      "--source-id",
+      "fra_white_sondhi_fried_2003_analysis_financial_statements_3ed",
+      "--out",
+      "out/cfa_legacy/ingest_per_source/fra_white_sondhi_fried_2003_analysis_financial_statements_3ed"
+    ],
+    "out_dir": "out/cfa_legacy/ingest_per_source/fra_white_sondhi_fried_2003_analysis_financial_statements_3ed",
+    "source_id": "fra_white_sondhi_fried_2003_analysis_financial_statements_3ed"
+  },
+  {
+    "canonical_path": "sources/cfa_legacy/pdfs/03_financial_reporting_analysis/fra_schilit_perler_2018_shenanigans_4ed.pdf",
+    "command": [
+      "cargo",
+      "run",
+      "-p",
+      "cacg-cli",
+      "--bin",
+      "kb",
+      "--",
+      "ingest",
+      "sources/cfa_legacy/pdfs/03_financial_reporting_analysis/fra_schilit_perler_2018_shenanigans_4ed.pdf",
+      "--source-id",
+      "fra_schilit_perler_2018_shenanigans_4ed",
+      "--out",
+      "out/cfa_legacy/ingest_per_source/fra_schilit_perler_2018_shenanigans_4ed"
+    ],
+    "out_dir": "out/cfa_legacy/ingest_per_source/fra_schilit_perler_2018_shenanigans_4ed",
+    "source_id": "fra_schilit_perler_2018_shenanigans_4ed"
+  },
+  {
+    "canonical_path": "sources/cfa_legacy/pdfs/03_financial_reporting_analysis/fra_wahlen_baginski_bradshaw_2023_fsa_valuation_10ed.pdf",
+    "command": [
+      "cargo",
+      "run",
+      "-p",
+      "cacg-cli",
+      "--bin",
+      "kb",
+      "--",
+      "ingest",
+      "sources/cfa_legacy/pdfs/03_financial_reporting_analysis/fra_wahlen_baginski_bradshaw_2023_fsa_valuation_10ed.pdf",
+      "--source-id",
+      "fra_wahlen_baginski_bradshaw_2023_fsa_valuation_10ed",
+      "--out",
+      "out/cfa_legacy/ingest_per_source/fra_wahlen_baginski_bradshaw_2023_fsa_valuation_10ed"
+    ],
+    "out_dir": "out/cfa_legacy/ingest_per_source/fra_wahlen_baginski_bradshaw_2023_fsa_valuation_10ed",
+    "source_id": "fra_wahlen_baginski_bradshaw_2023_fsa_valuation_10ed"
+  },
+  {
+    "canonical_path": "sources/cfa_legacy/pdfs/05_equity/eq_damodaran_2025_investment_valuation_4ed.pdf",
+    "command": [
+      "cargo",
+      "run",
+      "-p",
+      "cacg-cli",
+      "--bin",
+      "kb",
+      "--",
+      "ingest",
+      "sources/cfa_legacy/pdfs/05_equity/eq_damodaran_2025_investment_valuation_4ed.pdf",
+      "--source-id",
+      "eq_damodaran_2025_investment_valuation_4ed",
+      "--out",
+      "out/cfa_legacy/ingest_per_source/eq_damodaran_2025_investment_valuation_4ed"
+    ],
+    "out_dir": "out/cfa_legacy/ingest_per_source/eq_damodaran_2025_investment_valuation_4ed",
+    "source_id": "eq_damodaran_2025_investment_valuation_4ed"
+  },
+  {
+    "canonical_path": "sources/cfa_legacy/pdfs/06_fixed_income_and_credit/fi_brigo_mercurio_2006_interest_rate_models_2ed.pdf",
+    "command": [
+      "cargo",
+      "run",
+      "-p",
+      "cacg-cli",
+      "--bin",
+      "kb",
+      "--",
+      "ingest",
+      "sources/cfa_legacy/pdfs/06_fixed_income_and_credit/fi_brigo_mercurio_2006_interest_rate_models_2ed.pdf",
+      "--source-id",
+      "fi_brigo_mercurio_2006_interest_rate_models_2ed",
+      "--out",
+      "out/cfa_legacy/ingest_per_source/fi_brigo_mercurio_2006_interest_rate_models_2ed"
+    ],
+    "out_dir": "out/cfa_legacy/ingest_per_source/fi_brigo_mercurio_2006_interest_rate_models_2ed",
+    "source_id": "fi_brigo_mercurio_2006_interest_rate_models_2ed"
+  },
+  {
+    "canonical_path": "sources/cfa_legacy/pdfs/06_fixed_income_and_credit/fi_crepey_bielecki_brigo_2014_counterparty_risk_funding.pdf",
+    "command": [
+      "cargo",
+      "run",
+      "-p",
+      "cacg-cli",
+      "--bin",
+      "kb",
+      "--",
+      "ingest",
+      "sources/cfa_legacy/pdfs/06_fixed_income_and_credit/fi_crepey_bielecki_brigo_2014_counterparty_risk_funding.pdf",
+      "--source-id",
+      "fi_crepey_bielecki_brigo_2014_counterparty_risk_funding",
+      "--out",
+      "out/cfa_legacy/ingest_per_source/fi_crepey_bielecki_brigo_2014_counterparty_risk_funding"
+    ],
+    "out_dir": "out/cfa_legacy/ingest_per_source/fi_crepey_bielecki_brigo_2014_counterparty_risk_funding",
+    "source_id": "fi_crepey_bielecki_brigo_2014_counterparty_risk_funding"
+  },
+  {
+    "canonical_path": "sources/cfa_legacy/pdfs/09_portfolio_management_and_asset_pricing/pm_cochrane_2005_asset_pricing_revised.pdf",
+    "command": [
+      "cargo",
+      "run",
+      "-p",
+      "cacg-cli",
+      "--bin",
+      "kb",
+      "--",
+      "ingest",
+      "sources/cfa_legacy/pdfs/09_portfolio_management_and_asset_pricing/pm_cochrane_2005_asset_pricing_revised.pdf",
+      "--source-id",
+      "pm_cochrane_2005_asset_pricing_revised",
+      "--out",
+      "out/cfa_legacy/ingest_per_source/pm_cochrane_2005_asset_pricing_revised"
+    ],
+    "out_dir": "out/cfa_legacy/ingest_per_source/pm_cochrane_2005_asset_pricing_revised",
+    "source_id": "pm_cochrane_2005_asset_pricing_revised"
+  },
+  {
+    "canonical_path": "sources/cfa_legacy/pdfs/09_portfolio_management_and_asset_pricing/pm_pedersen_2015_efficiently_inefficient.pdf",
+    "command": [
+      "cargo",
+      "run",
+      "-p",
+      "cacg-cli",
+      "--bin",
+      "kb",
+      "--",
+      "ingest",
+      "sources/cfa_legacy/pdfs/09_portfolio_management_and_asset_pricing/pm_pedersen_2015_efficiently_inefficient.pdf",
+      "--source-id",
+      "pm_pedersen_2015_efficiently_inefficient",
+      "--out",
+      "out/cfa_legacy/ingest_per_source/pm_pedersen_2015_efficiently_inefficient"
+    ],
+    "out_dir": "out/cfa_legacy/ingest_per_source/pm_pedersen_2015_efficiently_inefficient",
+    "source_id": "pm_pedersen_2015_efficiently_inefficient"
+  },
+  {
+    "canonical_path": "sources/cfa_legacy/pdfs/02_economics/econ_mwg_1995_microeconomic_theory.pdf",
+    "command": [
+      "cargo",
+      "run",
+      "-p",
+      "cacg-cli",
+      "--bin",
+      "kb",
+      "--",
+      "ingest",
+      "sources/cfa_legacy/pdfs/02_economics/econ_mwg_1995_microeconomic_theory.pdf",
+      "--source-id",
+      "econ_mwg_1995_microeconomic_theory",
+      "--out",
+      "out/cfa_legacy/ingest_per_source/econ_mwg_1995_microeconomic_theory"
+    ],
+    "out_dir": "out/cfa_legacy/ingest_per_source/econ_mwg_1995_microeconomic_theory",
+    "source_id": "econ_mwg_1995_microeconomic_theory"
+  },
+  {
+    "canonical_path": "sources/cfa_legacy/pdfs/02_economics/econ_romer_2019_advanced_macro_5ed.pdf",
+    "command": [
+      "cargo",
+      "run",
+      "-p",
+      "cacg-cli",
+      "--bin",
+      "kb",
+      "--",
+      "ingest",
+      "sources/cfa_legacy/pdfs/02_economics/econ_romer_2019_advanced_macro_5ed.pdf",
+      "--source-id",
+      "econ_romer_2019_advanced_macro_5ed",
+      "--out",
+      "out/cfa_legacy/ingest_per_source/econ_romer_2019_advanced_macro_5ed"
+    ],
+    "out_dir": "out/cfa_legacy/ingest_per_source/econ_romer_2019_advanced_macro_5ed",
+    "source_id": "econ_romer_2019_advanced_macro_5ed"
+  },
+  {
+    "canonical_path": "sources/cfa_legacy/pdfs/02_economics/econ_cochrane_2023_fiscal_theory_price_level.pdf",
+    "command": [
+      "cargo",
+      "run",
+      "-p",
+      "cacg-cli",
+      "--bin",
+      "kb",
+      "--",
+      "ingest",
+      "sources/cfa_legacy/pdfs/02_economics/econ_cochrane_2023_fiscal_theory_price_level.pdf",
+      "--source-id",
+      "econ_cochrane_2023_fiscal_theory_price_level",
+      "--out",
+      "out/cfa_legacy/ingest_per_source/econ_cochrane_2023_fiscal_theory_price_level"
+    ],
+    "out_dir": "out/cfa_legacy/ingest_per_source/econ_cochrane_2023_fiscal_theory_price_level",
+    "source_id": "econ_cochrane_2023_fiscal_theory_price_level"
+  },
+  {
+    "canonical_path": "sources/cfa_legacy/pdfs/02_economics/econ_mascolell_general_equilibrium_game_theory.pdf",
+    "command": [
+      "cargo",
+      "run",
+      "-p",
+      "cacg-cli",
+      "--bin",
+      "kb",
+      "--",
+      "ingest",
+      "sources/cfa_legacy/pdfs/02_economics/econ_mascolell_general_equilibrium_game_theory.pdf",
+      "--source-id",
+      "econ_mascolell_general_equilibrium_game_theory",
+      "--out",
+      "out/cfa_legacy/ingest_per_source/econ_mascolell_general_equilibrium_game_theory"
+    ],
+    "out_dir": "out/cfa_legacy/ingest_per_source/econ_mascolell_general_equilibrium_game_theory",
+    "source_id": "econ_mascolell_general_equilibrium_game_theory"
+  },
+  {
+    "canonical_path": "sources/cfa_legacy/pdfs/02_economics/econ_hart_mascolell_regret_matching.pdf",
+    "command": [
+      "cargo",
+      "run",
+      "-p",
+      "cacg-cli",
+      "--bin",
+      "kb",
+      "--",
+      "ingest",
+      "sources/cfa_legacy/pdfs/02_economics/econ_hart_mascolell_regret_matching.pdf",
+      "--source-id",
+      "econ_hart_mascolell_2013_simple_adaptive_strategies",
+      "--out",
+      "out/cfa_legacy/ingest_per_source/econ_hart_mascolell_2013_simple_adaptive_strategies"
+    ],
+    "out_dir": "out/cfa_legacy/ingest_per_source/econ_hart_mascolell_2013_simple_adaptive_strategies",
+    "source_id": "econ_hart_mascolell_2013_simple_adaptive_strategies"
+  },
+  {
+    "canonical_path": "sources/cfa_legacy/pdfs/10_behavioral_finance/bf_shleifer_2000_inefficient_markets.pdf",
+    "command": [
+      "cargo",
+      "run",
+      "-p",
+      "cacg-cli",
+      "--bin",
+      "kb",
+      "--",
+      "ingest",
+      "sources/cfa_legacy/pdfs/10_behavioral_finance/bf_shleifer_2000_inefficient_markets.pdf",
+      "--source-id",
+      "bf_shleifer_2000_inefficient_markets",
+      "--out",
+      "out/cfa_legacy/ingest_per_source/bf_shleifer_2000_inefficient_markets"
+    ],
+    "out_dir": "out/cfa_legacy/ingest_per_source/bf_shleifer_2000_inefficient_markets",
+    "source_id": "bf_shleifer_2000_inefficient_markets"
+  },
+  {
+    "canonical_path": "sources/cfa_legacy/pdfs/10_behavioral_finance/bf_gennaioli_shleifer_2018_crisis_beliefs.pdf",
+    "command": [
+      "cargo",
+      "run",
+      "-p",
+      "cacg-cli",
+      "--bin",
+      "kb",
+      "--",
+      "ingest",
+      "sources/cfa_legacy/pdfs/10_behavioral_finance/bf_gennaioli_shleifer_2018_crisis_beliefs.pdf",
+      "--source-id",
+      "bf_gennaioli_shleifer_2018_crisis_beliefs",
+      "--out",
+      "out/cfa_legacy/ingest_per_source/bf_gennaioli_shleifer_2018_crisis_beliefs"
+    ],
+    "out_dir": "out/cfa_legacy/ingest_per_source/bf_gennaioli_shleifer_2018_crisis_beliefs",
+    "source_id": "bf_gennaioli_shleifer_2018_crisis_beliefs"
+  },
+  {
+    "canonical_path": "sources/cfa_legacy/pdfs/11_risk_management/rm_mcneil_frey_embrechts_2015_qrm.pdf",
+    "command": [
+      "cargo",
+      "run",
+      "-p",
+      "cacg-cli",
+      "--bin",
+      "kb",
+      "--",
+      "ingest",
+      "sources/cfa_legacy/pdfs/11_risk_management/rm_mcneil_frey_embrechts_2015_qrm.pdf",
+      "--source-id",
+      "rm_mcneil_frey_embrechts_2015_qrm",
+      "--out",
+      "out/cfa_legacy/ingest_per_source/rm_mcneil_frey_embrechts_2015_qrm"
+    ],
+    "out_dir": "out/cfa_legacy/ingest_per_source/rm_mcneil_frey_embrechts_2015_qrm",
+    "source_id": "rm_mcneil_frey_embrechts_2015_qrm"
+  },
+  {
+    "canonical_path": "sources/cfa_legacy/pdfs/cfa_program_curriculum/cfa_2023_l2_combined.pdf",
+    "command": [
+      "cargo",
+      "run",
+      "-p",
+      "cacg-cli",
+      "--bin",
+      "kb",
+      "--",
+      "ingest",
+      "sources/cfa_legacy/pdfs/cfa_program_curriculum/cfa_2023_l2_combined.pdf",
+      "--source-id",
+      "cfa_2023_l2_combined",
+      "--out",
+      "out/cfa_legacy/ingest_per_source/cfa_2023_l2_combined"
+    ],
+    "out_dir": "out/cfa_legacy/ingest_per_source/cfa_2023_l2_combined",
+    "source_id": "cfa_2023_l2_combined"
+  },
+  {
+    "canonical_path": "sources/cfa_legacy/pdfs/cfa_program_curriculum/cfa_2022_l3_combined.pdf",
+    "command": [
+      "cargo",
+      "run",
+      "-p",
+      "cacg-cli",
+      "--bin",
+      "kb",
+      "--",
+      "ingest",
+      "sources/cfa_legacy/pdfs/cfa_program_curriculum/cfa_2022_l3_combined.pdf",
+      "--source-id",
+      "cfa_2022_l3_combined",
+      "--out",
+      "out/cfa_legacy/ingest_per_source/cfa_2022_l3_combined"
+    ],
+    "out_dir": "out/cfa_legacy/ingest_per_source/cfa_2022_l3_combined",
+    "source_id": "cfa_2022_l3_combined"
+  },
+  {
+    "canonical_path": "sources/cfa_legacy/pdfs/01_quantitative_methods/qm_eslii_2009_2ed.pdf",
+    "command": [
+      "cargo",
+      "run",
+      "-p",
+      "cacg-cli",
+      "--bin",
+      "kb",
+      "--",
+      "ingest",
+      "sources/cfa_legacy/pdfs/01_quantitative_methods/qm_eslii_2009_2ed.pdf",
+      "--source-id",
+      "qm_eslii_2009_2ed",
+      "--out",
+      "out/cfa_legacy/ingest_per_source/qm_eslii_2009_2ed"
+    ],
+    "out_dir": "out/cfa_legacy/ingest_per_source/qm_eslii_2009_2ed",
+    "source_id": "qm_eslii_2009_2ed"
+  },
+  {
+    "canonical_path": "sources/cfa_legacy/pdfs/01_quantitative_methods/qm_tsay_2010_afts.pdf",
+    "command": [
+      "cargo",
+      "run",
+      "-p",
+      "cacg-cli",
+      "--bin",
+      "kb",
+      "--",
+      "ingest",
+      "sources/cfa_legacy/pdfs/01_quantitative_methods/qm_tsay_2010_afts.pdf",
+      "--source-id",
+      "qm_tsay_2005_afts_2e",
+      "--out",
+      "out/cfa_legacy/ingest_per_source/qm_tsay_2005_afts_2e"
+    ],
+    "out_dir": "out/cfa_legacy/ingest_per_source/qm_tsay_2005_afts_2e",
+    "source_id": "qm_tsay_2005_afts_2e"
+  },
+  {
+    "canonical_path": "sources/cfa_legacy/pdfs/01_quantitative_methods/qm_tsay_2014_multivariate_time_series.pdf",
+    "command": [
+      "cargo",
+      "run",
+      "-p",
+      "cacg-cli",
+      "--bin",
+      "kb",
+      "--",
+      "ingest",
+      "sources/cfa_legacy/pdfs/01_quantitative_methods/qm_tsay_2014_multivariate_time_series.pdf",
+      "--source-id",
+      "qm_tsay_2014_multivariate_time_series",
+      "--out",
+      "out/cfa_legacy/ingest_per_source/qm_tsay_2014_multivariate_time_series"
+    ],
+    "out_dir": "out/cfa_legacy/ingest_per_source/qm_tsay_2014_multivariate_time_series",
+    "source_id": "qm_tsay_2014_multivariate_time_series"
+  },
+  {
+    "canonical_path": "sources/cfa_legacy/pdfs/01_quantitative_methods/qm_wooldridge_intro_econometrics_8ed.pdf",
+    "command": [
+      "cargo",
+      "run",
+      "-p",
+      "cacg-cli",
+      "--bin",
+      "kb",
+      "--",
+      "ingest",
+      "sources/cfa_legacy/pdfs/01_quantitative_methods/qm_wooldridge_intro_econometrics_8ed.pdf",
+      "--source-id",
+      "qm_wooldridge_intro_econometrics_8ed",
+      "--out",
+      "out/cfa_legacy/ingest_per_source/qm_wooldridge_intro_econometrics_8ed"
+    ],
+    "out_dir": "out/cfa_legacy/ingest_per_source/qm_wooldridge_intro_econometrics_8ed",
+    "source_id": "qm_wooldridge_intro_econometrics_8ed"
+  },
+  {
+    "canonical_path": "sources/cfa_legacy/pdfs/01_quantitative_methods/qm_greene_2019_econometric_analysis_8ed.pdf",
+    "command": [
+      "cargo",
+      "run",
+      "-p",
+      "cacg-cli",
+      "--bin",
+      "kb",
+      "--",
+      "ingest",
+      "sources/cfa_legacy/pdfs/01_quantitative_methods/qm_greene_2019_econometric_analysis_8ed.pdf",
+      "--source-id",
+      "qm_greene_2019_econometric_analysis_8ed",
+      "--out",
+      "out/cfa_legacy/ingest_per_source/qm_greene_2019_econometric_analysis_8ed"
+    ],
+    "out_dir": "out/cfa_legacy/ingest_per_source/qm_greene_2019_econometric_analysis_8ed",
+    "source_id": "qm_greene_2019_econometric_analysis_8ed"
+  },
+  {
+    "canonical_path": "sources/cfa_legacy/pdfs/01_quantitative_methods/qm_islp_2023_python.pdf",
+    "command": [
+      "cargo",
+      "run",
+      "-p",
+      "cacg-cli",
+      "--bin",
+      "kb",
+      "--",
+      "ingest",
+      "sources/cfa_legacy/pdfs/01_quantitative_methods/qm_islp_2023_python.pdf",
+      "--source-id",
+      "qm_islp_2023_python",
+      "--out",
+      "out/cfa_legacy/ingest_per_source/qm_islp_2023_python"
+    ],
+    "out_dir": "out/cfa_legacy/ingest_per_source/qm_islp_2023_python",
+    "source_id": "qm_islp_2023_python"
+  },
+  {
+    "canonical_path": "sources/cfa_legacy/pdfs/06_fixed_income_and_credit/fi_tuckman_serrat_2011_fixed_income_securities_3ed.pdf",
+    "command": [
+      "cargo",
+      "run",
+      "-p",
+      "cacg-cli",
+      "--bin",
+      "kb",
+      "--",
+      "ingest",
+      "sources/cfa_legacy/pdfs/06_fixed_income_and_credit/fi_tuckman_serrat_2011_fixed_income_securities_3ed.pdf",
+      "--source-id",
+      "fi_tuckman_serrat_2011_fixed_income_securities_3ed",
+      "--out",
+      "out/cfa_legacy/ingest_per_source/fi_tuckman_serrat_2011_fixed_income_securities_3ed"
+    ],
+    "out_dir": "out/cfa_legacy/ingest_per_source/fi_tuckman_serrat_2011_fixed_income_securities_3ed",
+    "source_id": "fi_tuckman_serrat_2011_fixed_income_securities_3ed"
+  },
+  {
+    "canonical_path": "sources/cfa_legacy/pdfs/06_fixed_income_and_credit/fi_veronesi_2010_fixed_income_securities.pdf",
+    "command": [
+      "cargo",
+      "run",
+      "-p",
+      "cacg-cli",
+      "--bin",
+      "kb",
+      "--",
+      "ingest",
+      "sources/cfa_legacy/pdfs/06_fixed_income_and_credit/fi_veronesi_2010_fixed_income_securities.pdf",
+      "--source-id",
+      "fi_veronesi_2010_fixed_income_securities",
+      "--out",
+      "out/cfa_legacy/ingest_per_source/fi_veronesi_2010_fixed_income_securities"
+    ],
+    "out_dir": "out/cfa_legacy/ingest_per_source/fi_veronesi_2010_fixed_income_securities",
+    "source_id": "fi_veronesi_2010_fixed_income_securities"
+  },
+  {
+    "canonical_path": "sources/cfa_legacy/pdfs/06_fixed_income_and_credit/fi_fabozzi_handbook_fixed_income_securities.pdf",
+    "command": [
+      "cargo",
+      "run",
+      "-p",
+      "cacg-cli",
+      "--bin",
+      "kb",
+      "--",
+      "ingest",
+      "sources/cfa_legacy/pdfs/06_fixed_income_and_credit/fi_fabozzi_handbook_fixed_income_securities.pdf",
+      "--source-id",
+      "fi_fabozzi_2021_handbook_fixed_income_9e",
+      "--out",
+      "out/cfa_legacy/ingest_per_source/fi_fabozzi_2021_handbook_fixed_income_9e"
+    ],
+    "out_dir": "out/cfa_legacy/ingest_per_source/fi_fabozzi_2021_handbook_fixed_income_9e",
+    "source_id": "fi_fabozzi_2021_handbook_fixed_income_9e"
+  },
+  {
+    "canonical_path": "sources/cfa_legacy/pdfs/06_fixed_income_and_credit/fi_davidson_levin_2014_mortgage_valuation_models.pdf",
+    "command": [
+      "cargo",
+      "run",
+      "-p",
+      "cacg-cli",
+      "--bin",
+      "kb",
+      "--",
+      "ingest",
+      "sources/cfa_legacy/pdfs/06_fixed_income_and_credit/fi_davidson_levin_2014_mortgage_valuation_models.pdf",
+      "--source-id",
+      "fi_davidson_levin_2014_mortgage_valuation_models",
+      "--out",
+      "out/cfa_legacy/ingest_per_source/fi_davidson_levin_2014_mortgage_valuation_models"
+    ],
+    "out_dir": "out/cfa_legacy/ingest_per_source/fi_davidson_levin_2014_mortgage_valuation_models",
+    "source_id": "fi_davidson_levin_2014_mortgage_valuation_models"
+  },
+  {
+    "canonical_path": "sources/cfa_legacy/pdfs/06_fixed_income_and_credit/fi_duffie_singleton_2003_credit_risk.pdf",
+    "command": [
+      "cargo",
+      "run",
+      "-p",
+      "cacg-cli",
+      "--bin",
+      "kb",
+      "--",
+      "ingest",
+      "sources/cfa_legacy/pdfs/06_fixed_income_and_credit/fi_duffie_singleton_2003_credit_risk.pdf",
+      "--source-id",
+      "fi_duffie_singleton_2003_credit_risk",
+      "--out",
+      "out/cfa_legacy/ingest_per_source/fi_duffie_singleton_2003_credit_risk"
+    ],
+    "out_dir": "out/cfa_legacy/ingest_per_source/fi_duffie_singleton_2003_credit_risk",
+    "source_id": "fi_duffie_singleton_2003_credit_risk"
+  },
+  {
+    "canonical_path": "sources/cfa_legacy/pdfs/china_convertible_bonds/china_cb_pboc_asset_management_guiding_opinions_2018.pdf",
+    "command": [
+      "cargo",
+      "run",
+      "-p",
+      "cacg-cli",
+      "--bin",
+      "kb",
+      "--",
+      "ingest",
+      "sources/cfa_legacy/pdfs/china_convertible_bonds/china_cb_pboc_asset_management_guiding_opinions_2018.pdf",
+      "--source-id",
+      "china_cb_pboc_asset_management_guiding_opinions_2018",
+      "--out",
+      "out/cfa_legacy/ingest_per_source/china_cb_pboc_asset_management_guiding_opinions_2018"
+    ],
+    "out_dir": "out/cfa_legacy/ingest_per_source/china_cb_pboc_asset_management_guiding_opinions_2018",
+    "source_id": "china_cb_pboc_asset_management_guiding_opinions_2018"
+  },
+  {
+    "canonical_path": "sources/cfa_legacy/pdfs/china_convertible_bonds/china_cb_csdc_shanghai_settlement_2023.pdf",
+    "command": [
+      "cargo",
+      "run",
+      "-p",
+      "cacg-cli",
+      "--bin",
+      "kb",
+      "--",
+      "ingest",
+      "sources/cfa_legacy/pdfs/china_convertible_bonds/china_cb_csdc_shanghai_settlement_2023.pdf",
+      "--source-id",
+      "china_cb_csdc_shanghai_settlement_2023",
+      "--out",
+      "out/cfa_legacy/ingest_per_source/china_cb_csdc_shanghai_settlement_2023"
+    ],
+    "out_dir": "out/cfa_legacy/ingest_per_source/china_cb_csdc_shanghai_settlement_2023",
+    "source_id": "china_cb_csdc_shanghai_settlement_2023"
+  },
+  {
+    "canonical_path": "sources/cfa_legacy/pdfs/china_convertible_bonds/china_cb_csdc_shenzhen_issuer_guide_2025_03.pdf",
+    "command": [
+      "cargo",
+      "run",
+      "-p",
+      "cacg-cli",
+      "--bin",
+      "kb",
+      "--",
+      "ingest",
+      "sources/cfa_legacy/pdfs/china_convertible_bonds/china_cb_csdc_shenzhen_issuer_guide_2025_03.pdf",
+      "--source-id",
+      "china_cb_csdc_shenzhen_issuer_guide_2025_03",
+      "--out",
+      "out/cfa_legacy/ingest_per_source/china_cb_csdc_shenzhen_issuer_guide_2025_03"
+    ],
+    "out_dir": "out/cfa_legacy/ingest_per_source/china_cb_csdc_shenzhen_issuer_guide_2025_03",
+    "source_id": "china_cb_csdc_shenzhen_issuer_guide_2025_03"
+  },
+  {
+    "canonical_path": "sources/cfa_legacy/pdfs/china_convertible_bonds/china_cb_szse_self_reg_guideline_15_2025.pdf",
+    "command": [
+      "cargo",
+      "run",
+      "-p",
+      "cacg-cli",
+      "--bin",
+      "kb",
+      "--",
+      "ingest",
+      "sources/cfa_legacy/pdfs/china_convertible_bonds/china_cb_szse_self_reg_guideline_15_2025.pdf",
+      "--source-id",
+      "china_cb_szse_self_reg_guideline_15_2025",
+      "--out",
+      "out/cfa_legacy/ingest_per_source/china_cb_szse_self_reg_guideline_15_2025"
+    ],
+    "out_dir": "out/cfa_legacy/ingest_per_source/china_cb_szse_self_reg_guideline_15_2025",
+    "source_id": "china_cb_szse_self_reg_guideline_15_2025"
+  },
+  {
+    "canonical_path": "sources/cfa_legacy/pdfs/china_convertible_bonds/china_cb_lianhe_annual_bond_market_2025.pdf",
+    "command": [
+      "cargo",
+      "run",
+      "-p",
+      "cacg-cli",
+      "--bin",
+      "kb",
+      "--",
+      "ingest",
+      "sources/cfa_legacy/pdfs/china_convertible_bonds/china_cb_lianhe_annual_bond_market_2025.pdf",
+      "--source-id",
+      "china_cb_lianhe_annual_bond_market_2025",
+      "--out",
+      "out/cfa_legacy/ingest_per_source/china_cb_lianhe_annual_bond_market_2025"
+    ],
+    "out_dir": "out/cfa_legacy/ingest_per_source/china_cb_lianhe_annual_bond_market_2025",
+    "source_id": "china_cb_lianhe_annual_bond_market_2025"
+  },
+  {
+    "canonical_path": "sources/cfa_legacy/pdfs/china_convertible_bonds/china_cb_lianhe_h1_default_review_2025.pdf",
+    "command": [
+      "cargo",
+      "run",
+      "-p",
+      "cacg-cli",
+      "--bin",
+      "kb",
+      "--",
+      "ingest",
+      "sources/cfa_legacy/pdfs/china_convertible_bonds/china_cb_lianhe_h1_default_review_2025.pdf",
+      "--source-id",
+      "china_cb_lianhe_h1_default_review_2025",
+      "--out",
+      "out/cfa_legacy/ingest_per_source/china_cb_lianhe_h1_default_review_2025"
+    ],
+    "out_dir": "out/cfa_legacy/ingest_per_source/china_cb_lianhe_h1_default_review_2025",
+    "source_id": "china_cb_lianhe_h1_default_review_2025"
+  },
+  {
+    "canonical_path": "sources/cfa_legacy/pdfs/china_convertible_bonds/china_cb_lianhe_credit_risk_resolution.pdf",
+    "command": [
+      "cargo",
+      "run",
+      "-p",
+      "cacg-cli",
+      "--bin",
+      "kb",
+      "--",
+      "ingest",
+      "sources/cfa_legacy/pdfs/china_convertible_bonds/china_cb_lianhe_credit_risk_resolution.pdf",
+      "--source-id",
+      "china_cb_lianhe_credit_risk_resolution",
+      "--out",
+      "out/cfa_legacy/ingest_per_source/china_cb_lianhe_credit_risk_resolution"
+    ],
+    "out_dir": "out/cfa_legacy/ingest_per_source/china_cb_lianhe_credit_risk_resolution",
+    "source_id": "china_cb_lianhe_credit_risk_resolution"
+  },
+  {
+    "canonical_path": "sources/cfa_legacy/pdfs/china_convertible_bonds/china_cb_nafmii_china_bond_market_2025.pdf",
+    "command": [
+      "cargo",
+      "run",
+      "-p",
+      "cacg-cli",
+      "--bin",
+      "kb",
+      "--",
+      "ingest",
+      "sources/cfa_legacy/pdfs/china_convertible_bonds/china_cb_nafmii_china_bond_market_2025.pdf",
+      "--source-id",
+      "china_cb_nafmii_china_bond_market_2025",
+      "--out",
+      "out/cfa_legacy/ingest_per_source/china_cb_nafmii_china_bond_market_2025"
+    ],
+    "out_dir": "out/cfa_legacy/ingest_per_source/china_cb_nafmii_china_bond_market_2025",
+    "source_id": "china_cb_nafmii_china_bond_market_2025"
+  },
+  {
+    "canonical_path": "sources/cfa_legacy/pdfs/china_convertible_bonds/china_cb_china_galaxy_fund_suitability_2025_10_29.pdf",
+    "command": [
+      "cargo",
+      "run",
+      "-p",
+      "cacg-cli",
+      "--bin",
+      "kb",
+      "--",
+      "ingest",
+      "sources/cfa_legacy/pdfs/china_convertible_bonds/china_cb_china_galaxy_fund_suitability_2025_10_29.pdf",
+      "--source-id",
+      "china_cb_china_galaxy_fund_suitability_2025_10_29",
+      "--out",
+      "out/cfa_legacy/ingest_per_source/china_cb_china_galaxy_fund_suitability_2025_10_29"
+    ],
+    "out_dir": "out/cfa_legacy/ingest_per_source/china_cb_china_galaxy_fund_suitability_2025_10_29",
+    "source_id": "china_cb_china_galaxy_fund_suitability_2025_10_29"
+  },
+  {
+    "canonical_path": "sources/cfa_legacy/pdfs/china_convertible_bonds/china_cb_clifford_chance_apac_equity_linked_2025.pdf",
+    "command": [
+      "cargo",
+      "run",
+      "-p",
+      "cacg-cli",
+      "--bin",
+      "kb",
+      "--",
+      "ingest",
+      "sources/cfa_legacy/pdfs/china_convertible_bonds/china_cb_clifford_chance_apac_equity_linked_2025.pdf",
+      "--source-id",
+      "china_cb_clifford_chance_apac_equity_linked_2025",
+      "--out",
+      "out/cfa_legacy/ingest_per_source/china_cb_clifford_chance_apac_equity_linked_2025"
+    ],
+    "out_dir": "out/cfa_legacy/ingest_per_source/china_cb_clifford_chance_apac_equity_linked_2025",
+    "source_id": "china_cb_clifford_chance_apac_equity_linked_2025"
+  },
+  {
+    "canonical_path": "sources/cfa_legacy/pdfs/trading_price_action/tpa_brooks_2009_reading_price_charts_bar_by_bar.pdf",
+    "command": [
+      "cargo",
+      "run",
+      "-p",
+      "cacg-cli",
+      "--bin",
+      "kb",
+      "--",
+      "ingest",
+      "sources/cfa_legacy/pdfs/trading_price_action/tpa_brooks_2009_reading_price_charts_bar_by_bar.pdf",
+      "--source-id",
+      "tpa_brooks_2009_reading_price_charts_bar_by_bar",
+      "--out",
+      "out/cfa_legacy/ingest_per_source/tpa_brooks_2009_reading_price_charts_bar_by_bar"
+    ],
+    "out_dir": "out/cfa_legacy/ingest_per_source/tpa_brooks_2009_reading_price_charts_bar_by_bar",
+    "source_id": "tpa_brooks_2009_reading_price_charts_bar_by_bar"
+  },
+  {
+    "canonical_path": "sources/cfa_legacy/pdfs/trading_price_action/tpa_brooks_2012_trends.pdf",
+    "command": [
+      "cargo",
+      "run",
+      "-p",
+      "cacg-cli",
+      "--bin",
+      "kb",
+      "--",
+      "ingest",
+      "sources/cfa_legacy/pdfs/trading_price_action/tpa_brooks_2012_trends.pdf",
+      "--source-id",
+      "tpa_brooks_2012_trends",
+      "--out",
+      "out/cfa_legacy/ingest_per_source/tpa_brooks_2012_trends"
+    ],
+    "out_dir": "out/cfa_legacy/ingest_per_source/tpa_brooks_2012_trends",
+    "source_id": "tpa_brooks_2012_trends"
+  },
+  {
+    "canonical_path": "sources/cfa_legacy/pdfs/trading_price_action/tpa_brooks_2012_trading_ranges.pdf",
+    "command": [
+      "cargo",
+      "run",
+      "-p",
+      "cacg-cli",
+      "--bin",
+      "kb",
+      "--",
+      "ingest",
+      "sources/cfa_legacy/pdfs/trading_price_action/tpa_brooks_2012_trading_ranges.pdf",
+      "--source-id",
+      "tpa_brooks_2012_trading_ranges",
+      "--out",
+      "out/cfa_legacy/ingest_per_source/tpa_brooks_2012_trading_ranges"
+    ],
+    "out_dir": "out/cfa_legacy/ingest_per_source/tpa_brooks_2012_trading_ranges",
+    "source_id": "tpa_brooks_2012_trading_ranges"
+  }
+]

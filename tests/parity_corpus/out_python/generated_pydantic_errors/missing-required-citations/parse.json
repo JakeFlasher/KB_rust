@@ -1,0 +1,1 @@
+{"diagnostics":[{"code":"CACG-FM-001","file":"<missing-required-citations>","message":"missing required field: citations","severity":"error"}],"oracle_layer":"parse","schema_version":"cacg.v0"}

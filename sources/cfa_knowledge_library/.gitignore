@@ -1,0 +1,19 @@
+# CFA Knowledge Library — PDF + EPUB binaries are NOT tracked
+# (large; ~1.5 GB total; content reproducible from legacy KB via the
+# per-entry sha256 + library_path in _catalog.json).
+#
+# What IS tracked: this .gitignore, README.md, _catalog.json,
+# per-subdir READMEs from the deferred-books inventory, and .gitkeep
+# files in otherwise-empty subdirs (so the directory structure itself
+# is committed even when no PDFs land in a given dir).
+
+*.pdf
+*.epub
+*.mobi
+*.azw*
+*.djvu
+
+# Allow the HTML deferred item (Damodaran Country Risk Premium) to be
+# tracked if you decide to keep it as a structured reference; for now
+# leave it gitignored consistent with PDFs.
+*.html

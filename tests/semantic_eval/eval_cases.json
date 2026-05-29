@@ -1,0 +1,25 @@
+{
+  "schema_version": "cacg.v0.semantic-eval1",
+  "description": "Layer-3 semantic-eval cases for `cargo xtask semantic-eval`. Each case pins a (chunk_hash, claim_window_hash) pair against the committed QM B1 cache at the path below; the runner asserts the lookup's actual verdict matches expected_verdict. Pass and fail cases are drawn from the committed cache; abstain cases use synthetic 64-hex pairs that the cache does not contain, so the lookup returns the abstain-embedding-cache sentinel. The schema is intentionally distinct from tests/retrieval_eval/eval_cases.json (different schema_version literal + different case shape) so neither suite's fixture can quietly drift into the other's shape.",
+  "cache": "out/semantic_cache.json",
+  "cases": [
+    {
+      "name": "qm_pass_first_committed_entry",
+      "chunk_hash": "1a085a0ed614503ab4705f52128bf79000c5e957519c0fd68d822234b3ac758e",
+      "claim_window_hash": "00690783ee77c795cd9ebac1ba46c82a07fda151c4a56c4c3a3d05c774052b4c",
+      "expected_verdict": "pass"
+    },
+    {
+      "name": "qm_fail_first_committed_entry",
+      "chunk_hash": "3b9eef70d0ea521b06ea524550cf336c4520f46b5c118e5afaa7f5825071f2c5",
+      "claim_window_hash": "30ae7459b0a99c449a8b9214e7583c34c9c9da09c8ec4e5d10cbb3a9c53e88f3",
+      "expected_verdict": "fail"
+    },
+    {
+      "name": "abstain_synthetic_unknown_key",
+      "chunk_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+      "claim_window_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+      "expected_verdict": "abstain"
+    }
+  ]
+}

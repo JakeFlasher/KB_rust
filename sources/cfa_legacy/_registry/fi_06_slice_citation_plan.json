@@ -1,0 +1,1855 @@
+{
+  "cards": {
+    "fi-arbitrage-free-valuation-l2": {
+      "audit_flag": "ok",
+      "citations": [
+        {
+          "chunk_id": "fi_tuckman_serrat_2011_fixed_income_securities_3ed:p231:0289",
+          "legacy_pages": [
+            207,
+            227
+          ],
+          "page_range_emitted": [
+            231,
+            232
+          ],
+          "pdf_pages": [
+            231,
+            251
+          ],
+          "role": "primary",
+          "source_id": "fi_tuckman_serrat_2011_fixed_income_securities_3ed"
+        },
+        {
+          "chunk_id": "fi_tuckman_serrat_2011_fixed_income_securities_3ed:p480:0617",
+          "legacy_pages": [
+            457,
+            481
+          ],
+          "page_range_emitted": [
+            480,
+            481
+          ],
+          "pdf_pages": [
+            481,
+            505
+          ],
+          "role": "supporting",
+          "source_id": "fi_tuckman_serrat_2011_fixed_income_securities_3ed"
+        },
+        {
+          "chunk_id": "fi_brigo_mercurio_2006_interest_rate_models_2ed:p064:0100",
+          "legacy_pages": [
+            10,
+            35
+          ],
+          "page_range_emitted": [
+            64,
+            65
+          ],
+          "pdf_pages": [
+            61,
+            86
+          ],
+          "role": "supporting",
+          "source_id": "fi_brigo_mercurio_2006_interest_rate_models_2ed"
+        }
+      ],
+      "source_stance": "primary-tuckman",
+      "title": "Arbitrage-Free Valuation Framework (L2)"
+    },
+    "fi-binomial-tree-callable-pricing-l2": {
+      "audit_flag": "ok",
+      "citations": [
+        {
+          "chunk_id": "fi_tuckman_serrat_2011_fixed_income_securities_3ed:p230:0288",
+          "legacy_pages": [
+            207,
+            285
+          ],
+          "page_range_emitted": [
+            230,
+            231
+          ],
+          "pdf_pages": [
+            231,
+            309
+          ],
+          "role": "primary",
+          "source_id": "fi_tuckman_serrat_2011_fixed_income_securities_3ed"
+        },
+        {
+          "chunk_id": "fi_tuckman_serrat_2011_fixed_income_securities_3ed:p506:0651",
+          "legacy_pages": [
+            483,
+            525
+          ],
+          "page_range_emitted": [
+            506,
+            507
+          ],
+          "pdf_pages": [
+            507,
+            549
+          ],
+          "role": "supporting",
+          "source_id": "fi_tuckman_serrat_2011_fixed_income_securities_3ed"
+        },
+        {
+          "chunk_id": "cb_hull_2022_options_futures_derivatives_11ed:p689:1027",
+          "legacy_pages": [
+            690,
+            720
+          ],
+          "page_range_emitted": [
+            689,
+            690
+          ],
+          "pdf_pages": [
+            690,
+            720
+          ],
+          "role": "supporting",
+          "source_id": "cb_hull_2022_options_futures_derivatives_11ed"
+        }
+      ],
+      "source_stance": "primary-tuckman",
+      "title": "Binomial-Tree Callable Bond Pricing (L2)"
+    },
+    "fi-bond-anatomy-and-cashflows": {
+      "audit_flag": "wrong_volume_corrected",
+      "citations": [
+        {
+          "chunk_id": "cfa_2022_l1_combined:p2355:3444",
+          "legacy_pages": [
+            417,
+            464
+          ],
+          "page_range_emitted": [
+            2355,
+            2356
+          ],
+          "pdf_pages": [
+            2354,
+            2401
+          ],
+          "role": "primary",
+          "source_id": "cfa_2022_l1_combined"
+        },
+        {
+          "chunk_id": "cb_hull_2022_options_futures_derivatives_11ed:p097:0143",
+          "legacy_pages": [
+            98,
+            123
+          ],
+          "page_range_emitted": [
+            97,
+            98
+          ],
+          "pdf_pages": [
+            98,
+            123
+          ],
+          "role": "supporting",
+          "source_id": "cb_hull_2022_options_futures_derivatives_11ed"
+        },
+        {
+          "chunk_id": "fi_fabozzi_2021_handbook_fixed_income_9e:p033:0026",
+          "legacy_pages": [
+            3,
+            32
+          ],
+          "page_range_emitted": [
+            33,
+            34
+          ],
+          "pdf_pages": [
+            33,
+            62
+          ],
+          "role": "supporting",
+          "source_id": "fi_fabozzi_2021_handbook_fixed_income_9e"
+        }
+      ],
+      "source_stance": "primary-cfa",
+      "title": "Fixed-Income Bond Anatomy and Cashflows"
+    },
+    "fi-butterfly-and-curve-trades": {
+      "audit_flag": "wrong_pages_corrected",
+      "citations": [
+        {
+          "chunk_id": "fi_tuckman_serrat_2011_fixed_income_securities_3ed:p176:0217",
+          "legacy_pages": [
+            153,
+            169
+          ],
+          "page_range_emitted": [
+            176,
+            177
+          ],
+          "pdf_pages": [
+            177,
+            193
+          ],
+          "role": "primary",
+          "source_id": "fi_tuckman_serrat_2011_fixed_income_securities_3ed"
+        },
+        {
+          "chunk_id": "fi_tuckman_serrat_2011_fixed_income_securities_3ed:p201:0250",
+          "legacy_pages": [
+            171,
+            199
+          ],
+          "page_range_emitted": [
+            201,
+            201
+          ],
+          "pdf_pages": [
+            195,
+            223
+          ],
+          "role": "supporting",
+          "source_id": "fi_tuckman_serrat_2011_fixed_income_securities_3ed"
+        },
+        {
+          "chunk_id": "cfa_2022_l1_combined:p2666:3987",
+          "legacy_pages": [
+            30,
+            50
+          ],
+          "page_range_emitted": [
+            2666,
+            2667
+          ],
+          "pdf_pages": [
+            2667,
+            2687
+          ],
+          "role": "supporting",
+          "source_id": "cfa_2022_l1_combined"
+        }
+      ],
+      "source_stance": "primary-tuckman",
+      "title": "Butterfly and Curve Trades"
+    },
+    "fi-callable-and-putable-bonds": {
+      "audit_flag": "wrong_volume_corrected",
+      "citations": [
+        {
+          "chunk_id": "cfa_2022_l1_combined:p2385:3495",
+          "legacy_pages": [
+            448,
+            456
+          ],
+          "page_range_emitted": [
+            2385,
+            2385
+          ],
+          "pdf_pages": [
+            2385,
+            2393
+          ],
+          "role": "primary",
+          "source_id": "cfa_2022_l1_combined"
+        },
+        {
+          "chunk_id": "cb_hull_2022_options_futures_derivatives_11ed:p688:1025",
+          "legacy_pages": [
+            689,
+            720
+          ],
+          "page_range_emitted": [
+            688,
+            689
+          ],
+          "pdf_pages": [
+            689,
+            720
+          ],
+          "role": "supporting",
+          "source_id": "cb_hull_2022_options_futures_derivatives_11ed"
+        }
+      ],
+      "source_stance": "primary-cfa",
+      "title": "Callable and Putable Bonds"
+    },
+    "fi-cash-bond-liquidity": {
+      "audit_flag": "wrong_pages_corrected",
+      "citations": [
+        {
+          "chunk_id": "cfa_2022_l1_combined:p2406:3528",
+          "legacy_pages": [
+            465,
+            516
+          ],
+          "page_range_emitted": [
+            2406,
+            2407
+          ],
+          "pdf_pages": [
+            2402,
+            2453
+          ],
+          "role": "primary",
+          "source_id": "cfa_2022_l1_combined"
+        },
+        {
+          "chunk_id": "fi_crepey_bielecki_brigo_2014_counterparty_risk_funding:p068:0084",
+          "legacy_pages": [
+            47,
+            107
+          ],
+          "page_range_emitted": [
+            68,
+            70
+          ],
+          "pdf_pages": [
+            70,
+            130
+          ],
+          "role": "supporting",
+          "source_id": "fi_crepey_bielecki_brigo_2014_counterparty_risk_funding"
+        }
+      ],
+      "source_stance": "primary-cfa",
+      "title": "Cash-Bond Liquidity"
+    },
+    "fi-cds-basics": {
+      "audit_flag": "ok",
+      "citations": [
+        {
+          "chunk_id": "cb_lando_2004_credit_risk_modeling:p227:0283",
+          "legacy_pages": [
+            208,
+            209
+          ],
+          "page_range_emitted": [
+            227,
+            228
+          ],
+          "pdf_pages": [
+            227,
+            228
+          ],
+          "role": "supporting",
+          "source_id": "cb_lando_2004_credit_risk_modeling"
+        },
+        {
+          "chunk_id": "cb_lando_2004_credit_risk_modeling:p149:0179",
+          "legacy_pages": [
+            130,
+            170
+          ],
+          "page_range_emitted": [
+            149,
+            150
+          ],
+          "pdf_pages": [
+            149,
+            189
+          ],
+          "role": "supporting",
+          "source_id": "cb_lando_2004_credit_risk_modeling"
+        }
+      ],
+      "source_stance": "primary-crepey",
+      "title": "CDS Basics"
+    },
+    "fi-chinese-cb-recovery": {
+      "audit_flag": "ok",
+      "citations": [
+        {
+          "chunk_id": "cb_lando_2004_credit_risk_modeling:p130:0155",
+          "legacy_pages": [
+            111,
+            112
+          ],
+          "page_range_emitted": [
+            130,
+            130
+          ],
+          "pdf_pages": [
+            130,
+            131
+          ],
+          "role": "supporting",
+          "source_id": "cb_lando_2004_credit_risk_modeling"
+        },
+        {
+          "chunk_id": "china_cb_lianhe_risk_reconstruction_2025:p001:0000",
+          "legacy_pages": [
+            1,
+            15
+          ],
+          "page_range_emitted": [
+            1,
+            2
+          ],
+          "pdf_pages": [
+            1,
+            15
+          ],
+          "role": "supporting",
+          "source_id": "china_cb_lianhe_risk_reconstruction_2025"
+        },
+        {
+          "chunk_id": "china_cb_dajia_credit_risk_immune_2024:p003:0001",
+          "legacy_pages": [
+            1,
+            9
+          ],
+          "page_range_emitted": [
+            3,
+            4
+          ],
+          "pdf_pages": [
+            1,
+            9
+          ],
+          "role": "supporting",
+          "source_id": "china_cb_dajia_credit_risk_immune_2024"
+        },
+        {
+          "chunk_id": "china_cb_spc_bond_disputes_2020:p001:0000",
+          "legacy_pages": [
+            1,
+            10
+          ],
+          "page_range_emitted": [
+            1,
+            2
+          ],
+          "pdf_pages": [
+            1,
+            10
+          ],
+          "role": "supporting",
+          "source_id": "china_cb_spc_bond_disputes_2020"
+        },
+        {
+          "chunk_id": "cb_lando_2004_credit_risk_modeling:p078:0090",
+          "legacy_pages": [
+            60,
+            130
+          ],
+          "page_range_emitted": [
+            78,
+            79
+          ],
+          "pdf_pages": [
+            79,
+            149
+          ],
+          "role": "supporting",
+          "source_id": "cb_lando_2004_credit_risk_modeling"
+        },
+        {
+          "chunk_id": "cb_calamos_2003_convertible_arbitrage:p129:0144",
+          "legacy_pages": [
+            130,
+            170
+          ],
+          "page_range_emitted": [
+            129,
+            130
+          ],
+          "pdf_pages": [
+            130,
+            170
+          ],
+          "role": "supporting",
+          "source_id": "cb_calamos_2003_convertible_arbitrage"
+        }
+      ],
+      "source_stance": "primary-lando",
+      "title": "Senior-Unsecured Convertible-Bond Recovery in the Chinese Post-2014 Default Cohort"
+    },
+    "fi-cmo-tranching-mechanics": {
+      "audit_flag": "wrong_volume_corrected",
+      "citations": [
+        {
+          "chunk_id": "fi_davidson_levin_2014_mortgage_valuation_models:p042:0041",
+          "legacy_pages": [
+            22,
+            75
+          ],
+          "page_range_emitted": [
+            42,
+            42
+          ],
+          "pdf_pages": [
+            33,
+            86
+          ],
+          "role": "primary",
+          "source_id": "fi_davidson_levin_2014_mortgage_valuation_models"
+        },
+        {
+          "chunk_id": "fi_davidson_levin_2014_mortgage_valuation_models:p157:0173",
+          "legacy_pages": [
+            145,
+            173
+          ],
+          "page_range_emitted": [
+            157,
+            157
+          ],
+          "pdf_pages": [
+            156,
+            184
+          ],
+          "role": "supporting",
+          "source_id": "fi_davidson_levin_2014_mortgage_valuation_models"
+        },
+        {
+          "chunk_id": "cfa_2022_l1_combined:p2526:3715",
+          "legacy_pages": [
+            589,
+            633
+          ],
+          "page_range_emitted": [
+            2526,
+            2527
+          ],
+          "pdf_pages": [
+            2526,
+            2570
+          ],
+          "role": "supporting",
+          "source_id": "cfa_2022_l1_combined"
+        }
+      ],
+      "source_stance": "primary-davidson-levin",
+      "title": "CMO Tranching Mechanics"
+    },
+    "fi-collateralization-and-csa": {
+      "audit_flag": "wrong_pages_corrected",
+      "citations": [
+        {
+          "chunk_id": "fi_crepey_bielecki_brigo_2014_counterparty_risk_funding:p088:0105",
+          "legacy_pages": [
+            66,
+            107
+          ],
+          "page_range_emitted": [
+            88,
+            89
+          ],
+          "pdf_pages": [
+            89,
+            130
+          ],
+          "role": "primary",
+          "source_id": "fi_crepey_bielecki_brigo_2014_counterparty_risk_funding"
+        },
+        {
+          "chunk_id": "cb_hull_2022_options_futures_derivatives_11ed:p055:0076",
+          "legacy_pages": [
+            55,
+            75
+          ],
+          "page_range_emitted": [
+            55,
+            56
+          ],
+          "pdf_pages": [
+            55,
+            75
+          ],
+          "role": "supporting",
+          "source_id": "cb_hull_2022_options_futures_derivatives_11ed"
+        }
+      ],
+      "source_stance": "primary-crepey",
+      "title": "Collateralization and CSA Mechanics"
+    },
+    "fi-counterparty-risk-cva": {
+      "audit_flag": "wrong_pages_corrected",
+      "citations": [
+        {
+          "chunk_id": "fi_crepey_bielecki_brigo_2014_counterparty_risk_funding:p086:0104",
+          "legacy_pages": [
+            60,
+            150
+          ],
+          "page_range_emitted": [
+            86,
+            88
+          ],
+          "pdf_pages": [
+            83,
+            173
+          ],
+          "role": "primary",
+          "source_id": "fi_crepey_bielecki_brigo_2014_counterparty_risk_funding"
+        },
+        {
+          "chunk_id": "cb_hull_2022_options_futures_derivatives_11ed:p561:0822",
+          "legacy_pages": [
+            562,
+            586
+          ],
+          "page_range_emitted": [
+            561,
+            562
+          ],
+          "pdf_pages": [
+            562,
+            586
+          ],
+          "role": "supporting",
+          "source_id": "cb_hull_2022_options_futures_derivatives_11ed"
+        }
+      ],
+      "source_stance": "primary-crepey",
+      "title": "Counterparty Risk and CVA / DVA / FVA"
+    },
+    "fi-credit-risk-fundamentals": {
+      "audit_flag": "wrong_pages_corrected",
+      "citations": [
+        {
+          "chunk_id": "cfa_2022_l1_combined:p2705:4043",
+          "legacy_pages": [
+            69,
+            148
+          ],
+          "page_range_emitted": [
+            2705,
+            2706
+          ],
+          "pdf_pages": [
+            2706,
+            2785
+          ],
+          "role": "primary",
+          "source_id": "cfa_2022_l1_combined"
+        },
+        {
+          "chunk_id": "cb_lando_2004_credit_risk_modeling:p023:0021",
+          "legacy_pages": [
+            5,
+            30
+          ],
+          "page_range_emitted": [
+            23,
+            24
+          ],
+          "pdf_pages": [
+            24,
+            49
+          ],
+          "role": "supporting",
+          "source_id": "cb_lando_2004_credit_risk_modeling"
+        },
+        {
+          "chunk_id": "fi_duffie_singleton_2003_credit_risk:p019:0017",
+          "legacy_pages": [
+            5,
+            50
+          ],
+          "page_range_emitted": [
+            19,
+            20
+          ],
+          "pdf_pages": [
+            19,
+            20
+          ],
+          "role": "supporting",
+          "source_id": "fi_duffie_singleton_2003_credit_risk"
+        }
+      ],
+      "source_stance": "primary-cfa",
+      "title": "Credit Risk Fundamentals"
+    },
+    "fi-credit-spread-machinery": {
+      "audit_flag": "wrong_volume_corrected",
+      "citations": [
+        {
+          "chunk_id": "cb_lando_2004_credit_risk_modeling:p075:0087",
+          "legacy_pages": [
+            20,
+            60
+          ],
+          "page_range_emitted": [
+            75,
+            75
+          ],
+          "pdf_pages": [
+            39,
+            79
+          ],
+          "role": "primary",
+          "source_id": "cb_lando_2004_credit_risk_modeling"
+        }
+      ],
+      "source_stance": "primary-lando",
+      "title": "Credit-Spread Machinery"
+    },
+    "fi-default-models-and-recovery": {
+      "audit_flag": "wrong_volume_corrected",
+      "citations": [
+        {
+          "chunk_id": "cb_lando_2004_credit_risk_modeling:p129:0154",
+          "legacy_pages": [
+            60,
+            130
+          ],
+          "page_range_emitted": [
+            129,
+            130
+          ],
+          "pdf_pages": [
+            79,
+            149
+          ],
+          "role": "primary",
+          "source_id": "cb_lando_2004_credit_risk_modeling"
+        }
+      ],
+      "source_stance": "primary-lando",
+      "title": "Default Models and Recovery"
+    },
+    "fi-duration-and-convexity": {
+      "audit_flag": "wrong_volume_corrected",
+      "citations": [
+        {
+          "chunk_id": "cfa_2022_l1_combined:p2670:3993",
+          "legacy_pages": [
+            33,
+            34
+          ],
+          "page_range_emitted": [
+            2670,
+            2671
+          ],
+          "pdf_pages": [
+            2670,
+            2671
+          ],
+          "role": "primary",
+          "source_id": "cfa_2022_l1_combined"
+        },
+        {
+          "chunk_id": "cb_hull_2022_options_futures_derivatives_11ed:p097:0143",
+          "legacy_pages": [
+            92,
+            105
+          ],
+          "page_range_emitted": [
+            97,
+            98
+          ],
+          "pdf_pages": [
+            92,
+            105
+          ],
+          "role": "supporting",
+          "source_id": "cb_hull_2022_options_futures_derivatives_11ed"
+        }
+      ],
+      "source_stance": "primary-cfa",
+      "title": "Duration and Convexity"
+    },
+    "fi-floaters-and-reset-mechanics": {
+      "audit_flag": "ok_after_fixpass2",
+      "citations": [
+        {
+          "chunk_id": "cfa_2022_l1_combined:p2435:3579",
+          "legacy_pages": [
+            498,
+            499
+          ],
+          "page_range_emitted": [
+            2435,
+            2436
+          ],
+          "pdf_pages": [
+            2435,
+            2436
+          ],
+          "role": "primary",
+          "source_id": "cfa_2022_l1_combined"
+        }
+      ],
+      "source_stance": "primary-cfa",
+      "title": "Floaters and Reset Mechanics"
+    },
+    "fi-hjm-forward-rate-framework": {
+      "audit_flag": "ok",
+      "citations": [
+        {
+          "chunk_id": "fi_brigo_mercurio_2006_interest_rate_models_2ed:p232:0301",
+          "legacy_pages": [
+            155,
+            190
+          ],
+          "page_range_emitted": [
+            232,
+            233
+          ],
+          "pdf_pages": [
+            202,
+            237
+          ],
+          "role": "primary",
+          "source_id": "fi_brigo_mercurio_2006_interest_rate_models_2ed"
+        },
+        {
+          "chunk_id": "cb_hull_2022_options_futures_derivatives_11ed:p737:1097",
+          "legacy_pages": [
+            720,
+            740
+          ],
+          "page_range_emitted": [
+            737,
+            738
+          ],
+          "pdf_pages": [
+            720,
+            740
+          ],
+          "role": "supporting",
+          "source_id": "cb_hull_2022_options_futures_derivatives_11ed"
+        }
+      ],
+      "source_stance": "primary-brigo",
+      "title": "HJM Forward-Rate Framework"
+    },
+    "fi-key-rate-and-partial-duration": {
+      "audit_flag": "wrong_volume_corrected",
+      "citations": [
+        {
+          "chunk_id": "fi_tuckman_serrat_2011_fixed_income_securities_3ed:p169:0208",
+          "legacy_pages": [
+            153,
+            154
+          ],
+          "page_range_emitted": [
+            169,
+            170
+          ],
+          "pdf_pages": [
+            169,
+            170
+          ],
+          "role": "primary",
+          "source_id": "fi_tuckman_serrat_2011_fixed_income_securities_3ed"
+        },
+        {
+          "chunk_id": "cb_hull_2022_options_futures_derivatives_11ed:p097:0143",
+          "legacy_pages": [
+            92,
+            110
+          ],
+          "page_range_emitted": [
+            97,
+            98
+          ],
+          "pdf_pages": [
+            92,
+            110
+          ],
+          "role": "supporting",
+          "source_id": "cb_hull_2022_options_futures_derivatives_11ed"
+        }
+      ],
+      "source_stance": "primary-cfa",
+      "title": "Key-Rate and Partial Duration"
+    },
+    "fi-mbs-burnout-and-seasoning": {
+      "audit_flag": "ok",
+      "citations": [
+        {
+          "chunk_id": "fi_davidson_levin_2014_mortgage_valuation_models:p144:0160",
+          "legacy_pages": [
+            121,
+            144
+          ],
+          "page_range_emitted": [
+            144,
+            145
+          ],
+          "pdf_pages": [
+            132,
+            155
+          ],
+          "role": "primary",
+          "source_id": "fi_davidson_levin_2014_mortgage_valuation_models"
+        },
+        {
+          "chunk_id": "fi_davidson_levin_2014_mortgage_valuation_models:p187:0213",
+          "legacy_pages": [
+            174,
+            220
+          ],
+          "page_range_emitted": [
+            187,
+            188
+          ],
+          "pdf_pages": [
+            185,
+            231
+          ],
+          "role": "supporting",
+          "source_id": "fi_davidson_levin_2014_mortgage_valuation_models"
+        },
+        {
+          "chunk_id": "cfa_2022_l1_combined:p2544:3746",
+          "legacy_pages": [
+            607,
+            608
+          ],
+          "page_range_emitted": [
+            2544,
+            2545
+          ],
+          "pdf_pages": [
+            2544,
+            2545
+          ],
+          "role": "supporting",
+          "source_id": "cfa_2022_l1_combined"
+        }
+      ],
+      "source_stance": "primary-davidson",
+      "title": "MBS Burnout and Seasoning"
+    },
+    "fi-mbs-key-rate-and-effective-duration": {
+      "audit_flag": "wrong_volume_corrected",
+      "citations": [
+        {
+          "chunk_id": "fi_davidson_levin_2014_mortgage_valuation_models:p226:0261",
+          "legacy_pages": [
+            174,
+            220
+          ],
+          "page_range_emitted": [
+            226,
+            227
+          ],
+          "pdf_pages": [
+            185,
+            231
+          ],
+          "role": "primary",
+          "source_id": "fi_davidson_levin_2014_mortgage_valuation_models"
+        },
+        {
+          "chunk_id": "fi_davidson_levin_2014_mortgage_valuation_models:p138:0154",
+          "legacy_pages": [
+            121,
+            144
+          ],
+          "page_range_emitted": [
+            138,
+            139
+          ],
+          "pdf_pages": [
+            132,
+            155
+          ],
+          "role": "supporting",
+          "source_id": "fi_davidson_levin_2014_mortgage_valuation_models"
+        }
+      ],
+      "source_stance": "primary-davidson",
+      "title": "MBS Effective and Key-Rate Duration"
+    },
+    "fi-mbs-oas-calculation-depth": {
+      "audit_flag": "ok",
+      "citations": [
+        {
+          "chunk_id": "fi_davidson_levin_2014_mortgage_valuation_models:p187:0213",
+          "legacy_pages": [
+            174,
+            220
+          ],
+          "page_range_emitted": [
+            187,
+            188
+          ],
+          "pdf_pages": [
+            185,
+            231
+          ],
+          "role": "primary",
+          "source_id": "fi_davidson_levin_2014_mortgage_valuation_models"
+        },
+        {
+          "chunk_id": "fi_davidson_levin_2014_mortgage_valuation_models:p106:0120",
+          "legacy_pages": [
+            76,
+            105
+          ],
+          "page_range_emitted": [
+            106,
+            107
+          ],
+          "pdf_pages": [
+            87,
+            116
+          ],
+          "role": "supporting",
+          "source_id": "fi_davidson_levin_2014_mortgage_valuation_models"
+        },
+        {
+          "chunk_id": "fi_davidson_levin_2014_mortgage_valuation_models:p138:0154",
+          "legacy_pages": [
+            121,
+            144
+          ],
+          "page_range_emitted": [
+            138,
+            139
+          ],
+          "pdf_pages": [
+            132,
+            155
+          ],
+          "role": "supporting",
+          "source_id": "fi_davidson_levin_2014_mortgage_valuation_models"
+        }
+      ],
+      "source_stance": "primary-davidson",
+      "title": "MBS OAS Calculation Depth (Monte Carlo)"
+    },
+    "fi-mbs-prepayment-models": {
+      "audit_flag": "ok",
+      "citations": [
+        {
+          "chunk_id": "fi_davidson_levin_2014_mortgage_valuation_models:p144:0160",
+          "legacy_pages": [
+            121,
+            144
+          ],
+          "page_range_emitted": [
+            144,
+            145
+          ],
+          "pdf_pages": [
+            132,
+            155
+          ],
+          "role": "primary",
+          "source_id": "fi_davidson_levin_2014_mortgage_valuation_models"
+        },
+        {
+          "chunk_id": "fi_davidson_levin_2014_mortgage_valuation_models:p277:0317",
+          "legacy_pages": [
+            247,
+            266
+          ],
+          "page_range_emitted": [
+            277,
+            278
+          ],
+          "pdf_pages": [
+            258,
+            277
+          ],
+          "role": "supporting",
+          "source_id": "fi_davidson_levin_2014_mortgage_valuation_models"
+        },
+        {
+          "chunk_id": "cfa_2022_l1_combined:p2544:3746",
+          "legacy_pages": [
+            607,
+            608
+          ],
+          "page_range_emitted": [
+            2544,
+            2545
+          ],
+          "pdf_pages": [
+            2544,
+            2545
+          ],
+          "role": "supporting",
+          "source_id": "cfa_2022_l1_combined"
+        }
+      ],
+      "source_stance": "primary-davidson",
+      "title": "Agency MBS Prepayment Models"
+    },
+    "fi-oas-and-effective-duration": {
+      "audit_flag": "ok_after_fixpass2",
+      "citations": [
+        {
+          "chunk_id": "cfa_2022_l1_combined:p2511:3694",
+          "legacy_pages": [
+            574,
+            575
+          ],
+          "page_range_emitted": [
+            2511,
+            2512
+          ],
+          "pdf_pages": [
+            2511,
+            2512
+          ],
+          "role": "primary",
+          "source_id": "cfa_2022_l1_combined"
+        },
+        {
+          "chunk_id": "fi_tuckman_serrat_2011_fixed_income_securities_3ed:p508:0654",
+          "legacy_pages": [
+            492,
+            493
+          ],
+          "page_range_emitted": [
+            508,
+            508
+          ],
+          "pdf_pages": [
+            508,
+            509
+          ],
+          "role": "supporting",
+          "source_id": "fi_tuckman_serrat_2011_fixed_income_securities_3ed"
+        }
+      ],
+      "source_stance": "primary-cfa",
+      "title": "OAS and Effective Duration"
+    },
+    "fi-on-the-run-off-the-run-mechanics": {
+      "audit_flag": "ok",
+      "citations": [
+        {
+          "chunk_id": "fi_tuckman_serrat_2011_fixed_income_securities_3ed:p362:0451",
+          "legacy_pages": [
+            327,
+            349
+          ],
+          "page_range_emitted": [
+            362,
+            363
+          ],
+          "pdf_pages": [
+            351,
+            373
+          ],
+          "role": "primary",
+          "source_id": "fi_tuckman_serrat_2011_fixed_income_securities_3ed"
+        },
+        {
+          "chunk_id": "fi_tuckman_serrat_2011_fixed_income_securities_3ed:p065:0079",
+          "legacy_pages": [
+            1,
+            46
+          ],
+          "page_range_emitted": [
+            65,
+            66
+          ],
+          "pdf_pages": [
+            25,
+            70
+          ],
+          "role": "supporting",
+          "source_id": "fi_tuckman_serrat_2011_fixed_income_securities_3ed"
+        },
+        {
+          "chunk_id": "cfa_2022_l1_combined:p2689:4021",
+          "legacy_pages": [
+            50,
+            100
+          ],
+          "page_range_emitted": [
+            2689,
+            2690
+          ],
+          "pdf_pages": [
+            2687,
+            2737
+          ],
+          "role": "supporting",
+          "source_id": "cfa_2022_l1_combined"
+        }
+      ],
+      "source_stance": "primary-tuckman",
+      "title": "On-the-Run vs Off-the-Run Treasury Mechanics"
+    },
+    "fi-prepayment-risk-intuition": {
+      "audit_flag": "wrong_volume_corrected",
+      "citations": [
+        {
+          "chunk_id": "cfa_2022_l1_combined:p2543:3744",
+          "legacy_pages": [
+            606,
+            607
+          ],
+          "page_range_emitted": [
+            2543,
+            2544
+          ],
+          "pdf_pages": [
+            2543,
+            2544
+          ],
+          "role": "primary",
+          "source_id": "cfa_2022_l1_combined"
+        },
+        {
+          "chunk_id": "cfa_2022_l1_combined:p2544:3746",
+          "legacy_pages": [
+            607,
+            608
+          ],
+          "page_range_emitted": [
+            2544,
+            2545
+          ],
+          "pdf_pages": [
+            2544,
+            2545
+          ],
+          "role": "supporting",
+          "source_id": "cfa_2022_l1_combined"
+        },
+        {
+          "chunk_id": "cb_hull_2022_options_futures_derivatives_11ed:p202:0305",
+          "legacy_pages": [
+            202,
+            203
+          ],
+          "page_range_emitted": [
+            202,
+            203
+          ],
+          "pdf_pages": [
+            202,
+            203
+          ],
+          "role": "supporting",
+          "source_id": "cb_hull_2022_options_futures_derivatives_11ed"
+        }
+      ],
+      "source_stance": "primary-cfa",
+      "title": "Prepayment Risk Intuition (Mortgage Securitization)"
+    },
+    "fi-relative-value-screens": {
+      "audit_flag": "wrong_pages_corrected",
+      "citations": [
+        {
+          "chunk_id": "cfa_2022_l1_combined:p2744:4100",
+          "legacy_pages": [
+            108,
+            108
+          ],
+          "page_range_emitted": [
+            2744,
+            2745
+          ],
+          "pdf_pages": [
+            2744,
+            2744
+          ],
+          "role": "primary",
+          "source_id": "cfa_2022_l1_combined"
+        },
+        {
+          "chunk_id": "cfa_2022_l1_combined:p2744:4099",
+          "legacy_pages": [
+            107,
+            107
+          ],
+          "page_range_emitted": [
+            2744,
+            2744
+          ],
+          "pdf_pages": [
+            2744,
+            2744
+          ],
+          "role": "supporting",
+          "source_id": "cfa_2022_l1_combined"
+        },
+        {
+          "chunk_id": "cb_lando_2004_credit_risk_modeling:p191:0233",
+          "legacy_pages": [
+            172,
+            172
+          ],
+          "page_range_emitted": [
+            191,
+            192
+          ],
+          "pdf_pages": [
+            191,
+            191
+          ],
+          "role": "supporting",
+          "source_id": "cb_lando_2004_credit_risk_modeling"
+        }
+      ],
+      "source_stance": "primary-cfa",
+      "title": "Relative-Value Screens for Bond Portfolios"
+    },
+    "fi-repo-and-specials-mechanics": {
+      "audit_flag": "ok",
+      "citations": [
+        {
+          "chunk_id": "fi_tuckman_serrat_2011_fixed_income_securities_3ed:p342:0423",
+          "legacy_pages": [
+            327,
+            327
+          ],
+          "page_range_emitted": [
+            342,
+            343
+          ],
+          "pdf_pages": [
+            342,
+            342
+          ],
+          "role": "primary",
+          "source_id": "fi_tuckman_serrat_2011_fixed_income_securities_3ed"
+        },
+        {
+          "chunk_id": "fi_tuckman_serrat_2011_fixed_income_securities_3ed:p348:0431",
+          "legacy_pages": [
+            333,
+            333
+          ],
+          "page_range_emitted": [
+            348,
+            349
+          ],
+          "pdf_pages": [
+            348,
+            348
+          ],
+          "role": "supporting",
+          "source_id": "fi_tuckman_serrat_2011_fixed_income_securities_3ed"
+        },
+        {
+          "chunk_id": "fi_crepey_bielecki_brigo_2014_counterparty_risk_funding:p209:0273",
+          "legacy_pages": [
+            186,
+            186
+          ],
+          "page_range_emitted": [
+            209,
+            210
+          ],
+          "pdf_pages": [
+            209,
+            209
+          ],
+          "role": "supporting",
+          "source_id": "fi_crepey_bielecki_brigo_2014_counterparty_risk_funding"
+        }
+      ],
+      "source_stance": "primary-tuckman",
+      "title": "Repo Market and Specials Mechanics"
+    },
+    "fi-securitization-fundamentals": {
+      "audit_flag": "wrong_volume_corrected",
+      "citations": [
+        {
+          "chunk_id": "cfa_2022_l1_combined:p2527:3717",
+          "legacy_pages": [
+            590,
+            591
+          ],
+          "page_range_emitted": [
+            2527,
+            2528
+          ],
+          "pdf_pages": [
+            2527,
+            2528
+          ],
+          "role": "primary",
+          "source_id": "cfa_2022_l1_combined"
+        },
+        {
+          "chunk_id": "cfa_2022_l1_combined:p2529:3720",
+          "legacy_pages": [
+            592,
+            592
+          ],
+          "page_range_emitted": [
+            2529,
+            2529
+          ],
+          "pdf_pages": [
+            2529,
+            2529
+          ],
+          "role": "supporting",
+          "source_id": "cfa_2022_l1_combined"
+        },
+        {
+          "chunk_id": "cb_hull_2022_options_futures_derivatives_11ed:p202:0305",
+          "legacy_pages": [
+            202,
+            202
+          ],
+          "page_range_emitted": [
+            202,
+            203
+          ],
+          "pdf_pages": [
+            202,
+            202
+          ],
+          "role": "supporting",
+          "source_id": "cb_hull_2022_options_futures_derivatives_11ed"
+        }
+      ],
+      "source_stance": "primary-cfa",
+      "title": "Securitisation Fundamentals (RMBS / CMBS / ABS)"
+    },
+    "fi-short-rate-models": {
+      "audit_flag": "wrong_pages_corrected",
+      "citations": [
+        {
+          "chunk_id": "fi_brigo_mercurio_2006_interest_rate_models_2ed:p106:0151",
+          "legacy_pages": [
+            56,
+            56
+          ],
+          "page_range_emitted": [
+            106,
+            107
+          ],
+          "pdf_pages": [
+            106,
+            106
+          ],
+          "role": "primary",
+          "source_id": "fi_brigo_mercurio_2006_interest_rate_models_2ed"
+        },
+        {
+          "chunk_id": "fi_brigo_mercurio_2006_interest_rate_models_2ed:p108:0152",
+          "legacy_pages": [
+            58,
+            58
+          ],
+          "page_range_emitted": [
+            108,
+            108
+          ],
+          "pdf_pages": [
+            108,
+            108
+          ],
+          "role": "supporting",
+          "source_id": "fi_brigo_mercurio_2006_interest_rate_models_2ed"
+        },
+        {
+          "chunk_id": "cb_hull_2022_options_futures_derivatives_11ed:p721:1075",
+          "legacy_pages": [
+            721,
+            721
+          ],
+          "page_range_emitted": [
+            721,
+            721
+          ],
+          "pdf_pages": [
+            721,
+            721
+          ],
+          "role": "supporting",
+          "source_id": "cb_hull_2022_options_futures_derivatives_11ed"
+        }
+      ],
+      "source_stance": "primary-brigo",
+      "title": "Short-Rate Models (Vasicek, CIR, Hull-White)"
+    },
+    "fi-spot-par-forward-curves": {
+      "audit_flag": "wrong_volume_corrected",
+      "citations": [
+        {
+          "chunk_id": "cfa_2022_l1_combined:p2491:3668",
+          "legacy_pages": [
+            554,
+            554
+          ],
+          "page_range_emitted": [
+            2491,
+            2492
+          ],
+          "pdf_pages": [
+            2491,
+            2491
+          ],
+          "role": "primary",
+          "source_id": "cfa_2022_l1_combined"
+        },
+        {
+          "chunk_id": "cb_hull_2022_options_futures_derivatives_11ed:p104:0153",
+          "legacy_pages": [
+            104,
+            104
+          ],
+          "page_range_emitted": [
+            104,
+            105
+          ],
+          "pdf_pages": [
+            104,
+            104
+          ],
+          "role": "supporting",
+          "source_id": "cb_hull_2022_options_futures_derivatives_11ed"
+        },
+        {
+          "chunk_id": "fi_brigo_mercurio_2006_interest_rate_models_2ed:p062:0097",
+          "legacy_pages": [
+            12,
+            12
+          ],
+          "page_range_emitted": [
+            62,
+            63
+          ],
+          "pdf_pages": [
+            62,
+            62
+          ],
+          "role": "supporting",
+          "source_id": "fi_brigo_mercurio_2006_interest_rate_models_2ed"
+        }
+      ],
+      "source_stance": "primary-cfa",
+      "title": "Spot, Par and Forward Curves"
+    },
+    "fi-swap-spreads-and-libor-curve": {
+      "audit_flag": "ok",
+      "citations": [
+        {
+          "chunk_id": "fi_tuckman_serrat_2011_fixed_income_securities_3ed:p458:0584",
+          "legacy_pages": [
+            443,
+            443
+          ],
+          "page_range_emitted": [
+            458,
+            458
+          ],
+          "pdf_pages": [
+            458,
+            458
+          ],
+          "role": "primary",
+          "source_id": "fi_tuckman_serrat_2011_fixed_income_securities_3ed"
+        },
+        {
+          "chunk_id": "fi_tuckman_serrat_2011_fixed_income_securities_3ed:p474:0607",
+          "legacy_pages": [
+            459,
+            459
+          ],
+          "page_range_emitted": [
+            474,
+            474
+          ],
+          "pdf_pages": [
+            474,
+            474
+          ],
+          "role": "supporting",
+          "source_id": "fi_tuckman_serrat_2011_fixed_income_securities_3ed"
+        },
+        {
+          "chunk_id": "cb_hull_2022_options_futures_derivatives_11ed:p174:0263",
+          "legacy_pages": [
+            174,
+            174
+          ],
+          "page_range_emitted": [
+            174,
+            175
+          ],
+          "pdf_pages": [
+            174,
+            174
+          ],
+          "role": "supporting",
+          "source_id": "cb_hull_2022_options_futures_derivatives_11ed"
+        }
+      ],
+      "source_stance": "primary-tuckman",
+      "title": "Swap Spreads and the LIBOR / OIS Swap Curve"
+    },
+    "fi-term-structure-factor-models": {
+      "audit_flag": "ok",
+      "citations": [
+        {
+          "chunk_id": "fi_tuckman_serrat_2011_fixed_income_securities_3ed:p187:0232",
+          "legacy_pages": [
+            172,
+            172
+          ],
+          "page_range_emitted": [
+            187,
+            187
+          ],
+          "pdf_pages": [
+            187,
+            187
+          ],
+          "role": "primary",
+          "source_id": "fi_tuckman_serrat_2011_fixed_income_securities_3ed"
+        },
+        {
+          "chunk_id": "fi_tuckman_serrat_2011_fixed_income_securities_3ed:p169:0207",
+          "legacy_pages": [
+            154,
+            154
+          ],
+          "page_range_emitted": [
+            169,
+            169
+          ],
+          "pdf_pages": [
+            169,
+            169
+          ],
+          "role": "supporting",
+          "source_id": "fi_tuckman_serrat_2011_fixed_income_securities_3ed"
+        },
+        {
+          "chunk_id": "fi_brigo_mercurio_2006_interest_rate_models_2ed:p232:0301",
+          "legacy_pages": [
+            184,
+            184
+          ],
+          "page_range_emitted": [
+            232,
+            233
+          ],
+          "pdf_pages": [
+            232,
+            232
+          ],
+          "role": "supporting",
+          "source_id": "fi_brigo_mercurio_2006_interest_rate_models_2ed"
+        }
+      ],
+      "source_stance": "primary-tuckman",
+      "title": "Term-Structure Factor Models (PCA Level / Slope / Curvature)"
+    },
+    "fi-term-structure-theories": {
+      "audit_flag": "wrong_volume_corrected",
+      "citations": [
+        {
+          "chunk_id": "cb_hull_2022_options_futures_derivatives_11ed:p116:0170",
+          "legacy_pages": [
+            116,
+            116
+          ],
+          "page_range_emitted": [
+            116,
+            117
+          ],
+          "pdf_pages": [
+            116,
+            116
+          ],
+          "role": "primary",
+          "source_id": "cb_hull_2022_options_futures_derivatives_11ed"
+        },
+        {
+          "chunk_id": "fi_brigo_mercurio_2006_interest_rate_models_2ed:p064:0100",
+          "legacy_pages": [
+            14,
+            14
+          ],
+          "page_range_emitted": [
+            64,
+            65
+          ],
+          "pdf_pages": [
+            64,
+            64
+          ],
+          "role": "supporting",
+          "source_id": "fi_brigo_mercurio_2006_interest_rate_models_2ed"
+        },
+        {
+          "chunk_id": "cfa_2022_l1_combined:p2488:3664",
+          "legacy_pages": [
+            551,
+            551
+          ],
+          "page_range_emitted": [
+            2488,
+            2489
+          ],
+          "pdf_pages": [
+            2488,
+            2488
+          ],
+          "role": "supporting",
+          "source_id": "cfa_2022_l1_combined"
+        }
+      ],
+      "source_stance": "primary-hull",
+      "title": "Term-Structure Theories"
+    },
+    "fi-treasury-futures-basis": {
+      "audit_flag": "ok",
+      "citations": [
+        {
+          "chunk_id": "fi_tuckman_serrat_2011_fixed_income_securities_3ed:p392:0489",
+          "legacy_pages": [
+            377,
+            377
+          ],
+          "page_range_emitted": [
+            392,
+            393
+          ],
+          "pdf_pages": [
+            392,
+            392
+          ],
+          "role": "primary",
+          "source_id": "fi_tuckman_serrat_2011_fixed_income_securities_3ed"
+        },
+        {
+          "chunk_id": "fi_tuckman_serrat_2011_fixed_income_securities_3ed:p362:0451",
+          "legacy_pages": [
+            347,
+            347
+          ],
+          "page_range_emitted": [
+            362,
+            363
+          ],
+          "pdf_pages": [
+            362,
+            362
+          ],
+          "role": "supporting",
+          "source_id": "fi_tuckman_serrat_2011_fixed_income_securities_3ed"
+        },
+        {
+          "chunk_id": "cb_hull_2022_options_futures_derivatives_11ed:p123:0180",
+          "legacy_pages": [
+            123,
+            123
+          ],
+          "page_range_emitted": [
+            123,
+            124
+          ],
+          "pdf_pages": [
+            123,
+            123
+          ],
+          "role": "supporting",
+          "source_id": "cb_hull_2022_options_futures_derivatives_11ed"
+        }
+      ],
+      "source_stance": "primary-tuckman",
+      "title": "Treasury Futures Basis and Cheapest-to-Deliver"
+    },
+    "fi-yield-and-price-mechanics": {
+      "audit_flag": "wrong_volume_corrected",
+      "citations": [
+        {
+          "chunk_id": "cfa_2022_l1_combined:p2458:3615",
+          "legacy_pages": [
+            521,
+            521
+          ],
+          "page_range_emitted": [
+            2458,
+            2459
+          ],
+          "pdf_pages": [
+            2458,
+            2458
+          ],
+          "role": "primary",
+          "source_id": "cfa_2022_l1_combined"
+        },
+        {
+          "chunk_id": "cb_hull_2022_options_futures_derivatives_11ed:p105:0154",
+          "legacy_pages": [
+            105,
+            105
+          ],
+          "page_range_emitted": [
+            105,
+            105
+          ],
+          "pdf_pages": [
+            105,
+            105
+          ],
+          "role": "supporting",
+          "source_id": "cb_hull_2022_options_futures_derivatives_11ed"
+        }
+      ],
+      "source_stance": "primary-cfa",
+      "title": "Bond Yield and Price Mechanics"
+    },
+    "fi-yield-curve-construction": {
+      "audit_flag": "ok",
+      "citations": [
+        {
+          "chunk_id": "fi_brigo_mercurio_2006_interest_rate_models_2ed:p062:0097",
+          "legacy_pages": [
+            12,
+            12
+          ],
+          "page_range_emitted": [
+            62,
+            63
+          ],
+          "pdf_pages": [
+            62,
+            62
+          ],
+          "role": "primary",
+          "source_id": "fi_brigo_mercurio_2006_interest_rate_models_2ed"
+        },
+        {
+          "chunk_id": "cb_hull_2022_options_futures_derivatives_11ed:p106:0156",
+          "legacy_pages": [
+            106,
+            106
+          ],
+          "page_range_emitted": [
+            106,
+            107
+          ],
+          "pdf_pages": [
+            106,
+            106
+          ],
+          "role": "supporting",
+          "source_id": "cb_hull_2022_options_futures_derivatives_11ed"
+        },
+        {
+          "chunk_id": "fi_veronesi_2010_fixed_income_securities:p096:0130",
+          "legacy_pages": [
+            58,
+            58
+          ],
+          "page_range_emitted": [
+            96,
+            97
+          ],
+          "pdf_pages": [
+            96,
+            96
+          ],
+          "role": "supporting",
+          "source_id": "fi_veronesi_2010_fixed_income_securities"
+        }
+      ],
+      "source_stance": "primary-brigo",
+      "title": "Yield Curve Construction"
+    }
+  },
+  "schema_version": "cfa_legacy.fi_06_slice.v1"
+}

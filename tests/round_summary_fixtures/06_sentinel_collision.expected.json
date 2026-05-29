@@ -1,0 +1,6 @@
+{
+  "exit_code": 1,
+  "fixture_sha256": "d7df2d5374a8357a4cc2eb0e1c2554e76657e2ed9f5876ea4178294de5ce1824",
+  "stderr": "(section): STALE (CACG-RS-002: N/A sentinel mixed with cited paths)\n",
+  "stdout": ""
+}

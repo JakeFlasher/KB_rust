@@ -1,0 +1,57 @@
+{
+  "card_count": 5,
+  "cards": [
+    {
+      "card_hash": "037b5535c52f6b940647a54135d0e3f2dbabb4f93c9b3964609b8e5e6d0b851f",
+      "citation_count": 1,
+      "id": "be-limits-of-arbitrage",
+      "path": "cards/cfa_legacy/10_behavioral_finance/be-limits-of-arbitrage.md"
+    },
+    {
+      "card_hash": "9ae82d8a33fc239aae759942443050b4d16973cae14c9c470a447541449e8aed",
+      "citation_count": 2,
+      "id": "be-noise-trader-equilibrium",
+      "path": "cards/cfa_legacy/10_behavioral_finance/be-noise-trader-equilibrium.md"
+    },
+    {
+      "card_hash": "d39c6e028e6f7e2967a3cb33fb8176483ff05305994f8018291d66f4ac805d36",
+      "citation_count": 2,
+      "id": "be-regret-matching-foundations",
+      "path": "cards/cfa_legacy/10_behavioral_finance/be-regret-matching-foundations.md"
+    },
+    {
+      "card_hash": "37f3872c7079af2845bd1839fda792e17c2cd51414e0a74204c0c992ef596a33",
+      "citation_count": 2,
+      "id": "be-sentiment-vs-fundamentals",
+      "path": "cards/cfa_legacy/10_behavioral_finance/be-sentiment-vs-fundamentals.md"
+    },
+    {
+      "card_hash": "56daf0c55f4909f4a950b840b3bd75f77fbf873fd717c4498c85b3eb2a06d255",
+      "citation_count": 1,
+      "id": "be-two-model-mispricing",
+      "path": "cards/cfa_legacy/10_behavioral_finance/be-two-model-mispricing.md"
+    }
+  ],
+  "citation_count": 8,
+  "generated_artifacts": [
+    "sources/cfa_legacy/_registry/page_coordinate_maps/10_behavioral_finance.json",
+    "sources/cfa_legacy/_registry/behavioral_finance_first_slice_citation_plan.json",
+    "out/cfa_legacy/cards_manifest.json",
+    "out/cfa_legacy/summaries.json",
+    "out/cfa_legacy/INDEX.md"
+  ],
+  "page_coordinate_map": "sources/cfa_legacy/_registry/page_coordinate_maps/10_behavioral_finance.json",
+  "reading_id": "10_behavioral_finance",
+  "schema_version": "cfa_legacy.first_slice_migration_report.v1",
+  "source_ids": [
+    "bf_shleifer_2000_inefficient_markets",
+    "econ_hart_mascolell_2013_simple_adaptive_strategies"
+  ],
+  "validation": {
+    "index_byte_stable_second_run": true,
+    "kb_index": "pass",
+    "kb_lint_all_readings": "pass",
+    "kb_verify_cards": "pass",
+    "verified_card_count": 5
+  }
+}

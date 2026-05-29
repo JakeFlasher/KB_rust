@@ -1,0 +1,56 @@
+{
+  "mutex_groups": [],
+  "name": "show",
+  "options": [
+    {
+      "action": "_StoreTrueAction",
+      "default": false,
+      "dest": "allow_retracted",
+      "is_positional": false,
+      "option_strings": [
+        "--allow-retracted"
+      ],
+      "required": false
+    },
+    {
+      "action": "_StoreAction",
+      "default": "out/cards_manifest.json",
+      "dest": "cards_manifest",
+      "is_positional": false,
+      "option_strings": [
+        "--cards-manifest"
+      ],
+      "required": false
+    },
+    {
+      "action": "_StoreAction",
+      "default": null,
+      "dest": "path",
+      "is_positional": false,
+      "option_strings": [
+        "--path"
+      ],
+      "required": false
+    },
+    {
+      "action": "_StoreAction",
+      "default": null,
+      "dest": "source_matrix",
+      "is_positional": false,
+      "option_strings": [
+        "--source-matrix"
+      ],
+      "required": true
+    }
+  ],
+  "positionals": [
+    {
+      "action": "_StoreAction",
+      "default": null,
+      "dest": "card_id",
+      "is_positional": true,
+      "nargs": null,
+      "required": true
+    }
+  ]
+}

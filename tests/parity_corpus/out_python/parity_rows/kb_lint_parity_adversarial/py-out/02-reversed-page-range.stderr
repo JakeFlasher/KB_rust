@@ -1,0 +1,1 @@
+tests/parity_corpus/adversarial/02-reversed-page-range.md: CACG-CITE-003 citations.0.page_range: page_range must be ascending start<=end (Value error, page_range must be ascending (start <= end))

@@ -1,0 +1,48 @@
+[
+  {
+    "audit_rating": "FORMAT_NOT_AUDITABLE",
+    "category": "convertible_bonds",
+    "cfa_relevance_hint": "n/a",
+    "citation_method": "n/a",
+    "edition": "Maitland 2022 1ed",
+    "exclude_reason": "epub_blacklist",
+    "exists": true,
+    "format": "EPUB",
+    "legacy_abs_path": "/home/jakeshea/CFA_reading/CFA_reading/Convertible_Bonds/classic_books_CB_english/Maitland_Nelson_Partlow_2022_Convertible_Securities.epub",
+    "legacy_path": "Convertible_Bonds/classic_books_CB_english/Maitland_Nelson_Partlow_2022_Convertible_Securities.epub",
+    "primary_or_supporting": "n/a",
+    "quotable": "no",
+    "review_flags": [],
+    "sha256_matches_matrix": true,
+    "source_id": "convertible_bonds_classic_books_cb_english_maitland_nelson_partlow_2022_convertible_securities",
+    "source_sha256_actual": "65bd8c5d2f128aba34772dbc81c279de9d89156c113136665a492dd41bec1622",
+    "source_sha256_matrix": "65bd8c5d2f128aba34772dbc81c279de9d89156c113136665a492dd41bec1622",
+    "status": "excluded",
+    "subcorpora": [
+      "08"
+    ]
+  },
+  {
+    "audit_rating": "FORMAT_NOT_AUDITABLE",
+    "category": "convertible_bonds",
+    "cfa_relevance_hint": "n/a",
+    "citation_method": "n/a",
+    "edition": "攻守 1ed",
+    "exclude_reason": "epub_blacklist",
+    "exists": true,
+    "format": "EPUB",
+    "legacy_abs_path": "/home/jakeshea/CFA_reading/CFA_reading/Convertible_Bonds/targeted_books_Chinese/饕饕海 & 优美 & 定风波 - 攻守：可转债投资实用手册（饕餮海、定风波、优美著，雪球大V带你全流程玩转可转债，攻守兼备的投资工具，涵盖基础知识、交易规则、操作流程、交易策略、实.epub",
+    "legacy_path": "Convertible_Bonds/targeted_books_Chinese/饕饕海 & 优美 & 定风波 - 攻守：可转债投资实用手册（饕餮海、定风波、优美著，雪球大V带你全流程玩转可转债，攻守兼备的投资工具，涵盖基础知识、交易规则、操作流程、交易策略、实.epub",
+    "primary_or_supporting": "n/a",
+    "quotable": "no",
+    "review_flags": [],
+    "sha256_matches_matrix": true,
+    "source_id": "convertible_bonds_targeted_books_chinese_v",
+    "source_sha256_actual": "962e7e67574832cf9a3f54c63374e8930d478b1034e7d38e8de47bdd88be5886",
+    "source_sha256_matrix": "962e7e67574832cf9a3f54c63374e8930d478b1034e7d38e8de47bdd88be5886",
+    "status": "excluded",
+    "subcorpora": [
+      "08"
+    ]
+  }
+]

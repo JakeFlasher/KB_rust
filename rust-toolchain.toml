@@ -1,0 +1,7 @@
+[toolchain]
+# MSRV pin matching workspace.package.rust-version in Cargo.toml.
+# Bumping this requires updating workspace.package.rust-version in lockstep
+# and re-running the parity harness against committed Python golden artifacts.
+channel = "1.85.0"
+components = ["rustfmt", "clippy"]
+profile = "minimal"

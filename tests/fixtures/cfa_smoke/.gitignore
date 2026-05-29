@@ -1,0 +1,7 @@
+# Local-only fixture: built from /home/jakeshea/CFA_reading/notes/CFA_note_2.ocr.pdf
+# via scripts/build_cfa_smoke_fixture.py. Never commit the 110 MB PDF or
+# its derived chunk/sources manifests.
+CFA_note_2.ocr.pdf
+out/
+*.history.jsonl
+*.json

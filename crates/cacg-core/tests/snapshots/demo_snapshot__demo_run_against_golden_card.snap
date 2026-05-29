@@ -1,0 +1,17 @@
+---
+source: crates/cacg-core/tests/demo_snapshot.rs
+assertion_line: 27
+expression: report
+---
+=== cacg-core demo ===
+card_id: content-addressable-identity
+title: Content-Addressable Identity
+reading_id: reading_01
+computed_card_hash: 714988273af6b3805ddf8a7c01226a17528a2b8090bed27d23e2fadbc1fd367a
+stored_card_hash_matches: true
+normalized_body_chars: 188
+journal_event_id: 00000000-0000-0000-0000-000000000000
+journal_event_timestamp: 1970-01-01T00:00:00Z
+published: cards_manifest.json, summaries.json
+reload_roundtrip_ok: true
+diagnostic: {"code":"CACG-CLI-001","severity":"info","message":"card content-addressable-identity verified end-to-end through cacg_core trust kernel"}

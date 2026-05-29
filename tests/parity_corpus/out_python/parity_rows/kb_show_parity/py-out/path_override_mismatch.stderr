@@ -1,0 +1,1 @@
+CACG-SHOW-002: --path tests/parity_corpus/cards/reading_01/synthetic-card-01.md disagrees with cards_manifest: on-disk id='synthetic-card-01' card_hash=043026da059740cd51b04f1ed86d0add68e24d101502b8fb9eb866ea03c97de0; manifest id='content-addressable-identity' card_hash=714988273af6b3805ddf8a7c01226a17528a2b8090bed27d23e2fadbc1fd367a

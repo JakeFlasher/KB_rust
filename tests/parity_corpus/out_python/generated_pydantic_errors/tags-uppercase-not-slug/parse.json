@@ -1,0 +1,1 @@
+{"diagnostics":[{"code":"CACG-SUM-003","file":"<tags-uppercase-not-slug>","message":"tag non-conforming: Value error, tag 'UPPERCASE' does not match slug regex '^[a-z0-9][a-z0-9_-]*$'","severity":"error"}],"oracle_layer":"parse","schema_version":"cacg.v0"}

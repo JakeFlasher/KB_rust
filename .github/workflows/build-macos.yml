@@ -1,0 +1,51 @@
+name: build-macos
+
+# macOS best-effort build-only check.
+# The Rust port platform matrix is Linux x86_64 + aarch64 first-class;
+# macOS gets a non-blocking build check so contributors on Apple Silicon
+# detect compile breaks early. The parity gate is NOT run on macOS;
+# Windows is non-goal.
+
+on:
+  pull_request:
+    branches: ["**"]
+  push:
+    branches: [main]
+
+jobs:
+  build-macos:
+    name: cargo build (macos, non-blocking)
+    runs-on: macos-14
+    timeout-minutes: 15
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Skip when no Cargo workspace present
+        id: detect
+        run: |
+          if [ ! -f Cargo.toml ]; then
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+            echo "No Cargo.toml; build-macos has nothing to do."
+          else
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Install Rust toolchain
+        if: steps.detect.outputs.skip == 'false'
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          toolchain: "1.85.0"
+          components: rustfmt, clippy
+
+      - name: cargo build
+        if: steps.detect.outputs.skip == 'false'
+        run: cargo build --workspace --all-features
+
+      - name: cargo fmt --check
+        if: steps.detect.outputs.skip == 'false'
+        run: cargo fmt --all -- --check
+
+      - name: cargo clippy
+        if: steps.detect.outputs.skip == 'false'
+        run: cargo clippy --workspace --all-features -- -D warnings

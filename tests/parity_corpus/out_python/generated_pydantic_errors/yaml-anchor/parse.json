@@ -1,0 +1,1 @@
+{"diagnostics":[{"code":"CACG-FM-005","file":"<yaml-anchor>","message":"forbidden YAML construct: YAML anchor not allowed: &anchor_name at line 4","severity":"error"}],"oracle_layer":"parse","schema_version":"cacg.v0"}

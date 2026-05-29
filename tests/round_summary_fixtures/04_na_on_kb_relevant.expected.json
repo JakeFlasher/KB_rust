@@ -1,0 +1,6 @@
+{
+  "exit_code": 1,
+  "fixture_sha256": "6f2ddf607aae9b4a4319ee5075e653a5fe888fd9eb607ee7745bedee7c251f4e",
+  "stderr": "(section): STALE (CACG-RS-003: N/A sentinel claimed on KB-relevant work)\n",
+  "stdout": ""
+}

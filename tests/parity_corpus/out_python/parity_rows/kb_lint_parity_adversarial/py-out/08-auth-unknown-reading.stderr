@@ -1,0 +1,1 @@
+tests/parity_corpus/adversarial/08-auth-unknown-reading.md: CACG-AUTH-001 citations[0]: reading_id 'reading_99' not present in source_matrix; refusing to verify

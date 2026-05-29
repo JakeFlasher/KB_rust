@@ -1,0 +1,272 @@
+{
+  "active_card_candidates": 8,
+  "entries": [
+    {
+      "is_active_card": false,
+      "legacy_path": ".claude/knowledge/01_quantitative_methods/_chapter_overviews.md",
+      "matched_markers": [
+        "[notes-citation removed per Critical Rule 9]"
+      ],
+      "source_sha256_actual": "5361969e5a46bf28df2a2e7c0f3a75db8dac54e52b6e473ad2d94ee9538518a9",
+      "status": "migration_metadata_review"
+    },
+    {
+      "is_active_card": false,
+      "legacy_path": ".claude/knowledge/01_quantitative_methods/_source_role_map.md",
+      "matched_markers": [
+        "[notes-citation removed per Critical Rule 9]"
+      ],
+      "source_sha256_actual": "19ea9e32bf6a50d3a219bba1be6fbd238b2bceac713f8ff46b6b7b1bb59191a3",
+      "status": "migration_metadata_review"
+    },
+    {
+      "is_active_card": false,
+      "legacy_path": ".claude/knowledge/01_quantitative_methods/_style_guide.md",
+      "matched_markers": [
+        "CFA_note",
+        "[notes-citation removed per Critical Rule 9]",
+        "notes pp.",
+        "notes-anchored"
+      ],
+      "source_sha256_actual": "c5ecf4172ed0fedeaf758099ae3cf0706a5fc1e17321e6df32f5ab9e836eaf84",
+      "status": "migration_metadata_review"
+    },
+    {
+      "is_active_card": false,
+      "legacy_path": ".claude/knowledge/02_economics/_chapter_overviews.md",
+      "matched_markers": [
+        "CFA Notes Ch",
+        "personal notes Chapter"
+      ],
+      "source_sha256_actual": "8b6d4c8a90bf3e49f65e8386557bc809bd8599e9658c4f14dbaf4eb713e11064",
+      "status": "migration_metadata_review"
+    },
+    {
+      "is_active_card": false,
+      "legacy_path": ".claude/knowledge/02_economics/_dependency_order.md",
+      "matched_markers": [
+        "notes Ch."
+      ],
+      "source_sha256_actual": "6200259bed10250937e110d844fe64cc1e81473c6913be8c7f6e336eaffc7d56",
+      "status": "migration_metadata_review"
+    },
+    {
+      "is_active_card": false,
+      "legacy_path": ".claude/knowledge/02_economics/_source_role_map.md",
+      "matched_markers": [
+        "[notes-citation removed per Critical Rule 9]",
+        "notes Ch.",
+        "notes pp.",
+        "notes-ledger"
+      ],
+      "source_sha256_actual": "ddfdb6b09e4a74f09ee4ae1339706d36fc91b4474b28a54ca4036eccf55afde7",
+      "status": "migration_metadata_review"
+    },
+    {
+      "is_active_card": false,
+      "legacy_path": ".claude/knowledge/02_economics/_style_guide.md",
+      "matched_markers": [
+        "[notes-citation removed per Critical Rule 9]",
+        "notes-anchored"
+      ],
+      "source_sha256_actual": "4299d8aa49a0aab27d8b534e81523fe2fcdd1f27044ae99660d4d9f5cd877963",
+      "status": "migration_metadata_review"
+    },
+    {
+      "is_active_card": true,
+      "legacy_path": ".claude/knowledge/02_economics/ec-currency-exchange-rates-and-parity.md",
+      "matched_markers": [
+        "CFA Notes Ch",
+        "CFA personal notes",
+        "notes Ch.",
+        "notes pp.",
+        "personal notes Chapter"
+      ],
+      "source_sha256_actual": "471735a33065d00415139e02da62ca7c66baaab46650dbff0854a72ce96fe1c4",
+      "status": "quarantine_before_card_migration"
+    },
+    {
+      "is_active_card": false,
+      "legacy_path": ".claude/knowledge/03_financial_reporting_analysis/_source_role_map.md",
+      "matched_markers": [
+        "[notes-citation removed per Critical Rule 9]"
+      ],
+      "source_sha256_actual": "7e10089051de3bf32c5186e94b887a5f6f0c5e7d64a8046270514d002b71ec8b",
+      "status": "migration_metadata_review"
+    },
+    {
+      "is_active_card": false,
+      "legacy_path": ".claude/knowledge/03_financial_reporting_analysis/_style_guide.md",
+      "matched_markers": [
+        "[notes-citation removed per Critical Rule 9]",
+        "notes-anchored"
+      ],
+      "source_sha256_actual": "b7ffb4d563b7cfafd48df2ffbef03b22a5a6f11235a5f10d31546a98aa514818",
+      "status": "migration_metadata_review"
+    },
+    {
+      "is_active_card": false,
+      "legacy_path": ".claude/knowledge/05_equity/_source_role_map.md",
+      "matched_markers": [
+        "CFA_note",
+        "[notes-citation removed per Critical Rule 9]"
+      ],
+      "source_sha256_actual": "dabe5e88710c9fcf14a8e73749790638c76110ee8edee758f7f343844422286d",
+      "status": "migration_metadata_review"
+    },
+    {
+      "is_active_card": true,
+      "legacy_path": ".claude/knowledge/09_portfolio_management_and_asset_pricing/pm-tracking-error-and-active-risk.md",
+      "matched_markers": [
+        "L1-notes"
+      ],
+      "source_sha256_actual": "8efdfe988c953913f338b0319e917e830ac6f80ca38ff4d6300bff01d608c1ae",
+      "status": "quarantine_before_card_migration"
+    },
+    {
+      "is_active_card": false,
+      "legacy_path": ".claude/knowledge/10_behavioral_finance/_source_role_map.md",
+      "matched_markers": [
+        "[notes-citation removed per Critical Rule 9]"
+      ],
+      "source_sha256_actual": "a64cc887d71f4b5da227f8d82bfb8a068a7f385455992a74203e8b05c92af57d",
+      "status": "migration_metadata_review"
+    },
+    {
+      "is_active_card": false,
+      "legacy_path": ".claude/knowledge/10_behavioral_finance/_style_guide.md",
+      "matched_markers": [
+        "[notes-citation removed per Critical Rule 9]"
+      ],
+      "source_sha256_actual": "304f31c9f7663185a562fab3daf237d2d167361857985bee57e0e6baf500952e",
+      "status": "migration_metadata_review"
+    },
+    {
+      "is_active_card": false,
+      "legacy_path": ".claude/knowledge/11_risk_management/_chapter_overviews.md",
+      "matched_markers": [
+        "L1-notes",
+        "[notes-citation removed per Critical Rule 9]"
+      ],
+      "source_sha256_actual": "285f3861c29ddee1d25ecee8e410edc0dc925fe24ae8dc2dac13398c11241cf2",
+      "status": "migration_metadata_review"
+    },
+    {
+      "is_active_card": false,
+      "legacy_path": ".claude/knowledge/11_risk_management/_dependency_order.md",
+      "matched_markers": [
+        "[notes-citation removed per Critical Rule 9]"
+      ],
+      "source_sha256_actual": "8b07cd6d4b11292e4523ed1c8e7d1e2d6e191f6af7b3e993a0b294206ed69908",
+      "status": "migration_metadata_review"
+    },
+    {
+      "is_active_card": false,
+      "legacy_path": ".claude/knowledge/11_risk_management/_source_role_map.md",
+      "matched_markers": [
+        "L1-notes",
+        "[notes-citation removed per Critical Rule 9]",
+        "notes pp.",
+        "notes-anchored"
+      ],
+      "source_sha256_actual": "4cacd52aa4df67864a2fbb1946a6c6c03ec34aec73b81e88a967845e17947e2f",
+      "status": "migration_metadata_review"
+    },
+    {
+      "is_active_card": false,
+      "legacy_path": ".claude/knowledge/11_risk_management/_style_guide.md",
+      "matched_markers": [
+        "[notes-citation removed per Critical Rule 9]",
+        "notes Ch."
+      ],
+      "source_sha256_actual": "20a01fab856d96e100358e8f020bec45cc6d2878415ae4b03cd8ab4f4337814c",
+      "status": "migration_metadata_review"
+    },
+    {
+      "is_active_card": true,
+      "legacy_path": ".claude/knowledge/11_risk_management/rm-historical-simulation-var.md",
+      "matched_markers": [
+        "L1-notes"
+      ],
+      "source_sha256_actual": "769dba0d158b2bf3392181415b580043c3fe4b2a1368f4553981b48c83ab4ac2",
+      "status": "quarantine_before_card_migration"
+    },
+    {
+      "is_active_card": true,
+      "legacy_path": ".claude/knowledge/11_risk_management/rm-monte-carlo-var.md",
+      "matched_markers": [
+        "L1-notes"
+      ],
+      "source_sha256_actual": "e8272b1fc1a6cda6e2adcebff77258b0801712a9691bcd940229e5fef2292924",
+      "status": "quarantine_before_card_migration"
+    },
+    {
+      "is_active_card": true,
+      "legacy_path": ".claude/knowledge/11_risk_management/rm-parametric-var.md",
+      "matched_markers": [
+        "L1-notes"
+      ],
+      "source_sha256_actual": "dd410c5a66b9806f08db02c5e6138a7fc5f9a35c55f34a413e9b9edcd394f60a",
+      "status": "quarantine_before_card_migration"
+    },
+    {
+      "is_active_card": true,
+      "legacy_path": ".claude/knowledge/11_risk_management/rm-risk-objectives-and-tolerance.md",
+      "matched_markers": [
+        "notes-anchored"
+      ],
+      "source_sha256_actual": "5179ae00bc16d25f01258f671855e66eb3111e96b1ecef78e26c44fba3879a05",
+      "status": "quarantine_before_card_migration"
+    },
+    {
+      "is_active_card": true,
+      "legacy_path": ".claude/knowledge/11_risk_management/rm-sensitivity-versus-simulation.md",
+      "matched_markers": [
+        "notes-anchored"
+      ],
+      "source_sha256_actual": "57ccaaef2f7c43c4ad7be1d5bec19e41b4776d4f544aa18aebf4b0e3e96d7704",
+      "status": "quarantine_before_card_migration"
+    },
+    {
+      "is_active_card": false,
+      "legacy_path": ".claude/knowledge/17_cross_cutting/_chapter_overviews.md",
+      "matched_markers": [
+        "CFA_note"
+      ],
+      "source_sha256_actual": "46590adccd784ea80b72777a268a1f13e724555b223251b04f088a1d49588a13",
+      "status": "migration_metadata_review"
+    },
+    {
+      "is_active_card": false,
+      "legacy_path": ".claude/knowledge/17_cross_cutting/_source_role_map.md",
+      "matched_markers": [
+        "[notes-citation removed per Critical Rule 9]"
+      ],
+      "source_sha256_actual": "11fec90937d2d57da6f1612091c9b55b00b531bcfe7f3e7a984f29bd1be3d00c",
+      "status": "migration_metadata_review"
+    },
+    {
+      "is_active_card": false,
+      "legacy_path": ".claude/knowledge/17_cross_cutting/_style_guide.md",
+      "matched_markers": [
+        "CFA_note",
+        "[notes-citation removed per Critical Rule 9]"
+      ],
+      "source_sha256_actual": "6ea78816d1cb1d6550a83429976cd4520cb10d0aa034b18321ce4e1dc070a0b0",
+      "status": "migration_metadata_review"
+    },
+    {
+      "is_active_card": true,
+      "legacy_path": ".claude/knowledge/17_cross_cutting/cc-material-info-and-dissemination-delay.md",
+      "matched_markers": [
+        "CFA_note"
+      ],
+      "source_sha256_actual": "407546acd9fd2c671b6e09f8647f0e03608aabd08b87d0c946d0d18338fa51d6",
+      "status": "quarantine_before_card_migration"
+    }
+  ],
+  "generated_at_utc": "2026-05-27T18:50:38Z",
+  "legacy_root": "/home/jakeshea/CFA_reading/CFA_reading",
+  "schema_version": "cfa_legacy.notes_taint.v1",
+  "total_candidate_files": 27
+}

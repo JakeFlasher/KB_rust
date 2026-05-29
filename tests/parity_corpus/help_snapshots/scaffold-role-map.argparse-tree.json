@@ -1,0 +1,57 @@
+{
+  "mutex_groups": [],
+  "name": "scaffold-role-map",
+  "options": [
+    {
+      "action": "_StoreAction",
+      "default": "cards",
+      "dest": "cards_dir",
+      "is_positional": false,
+      "option_strings": [
+        "--cards-dir"
+      ],
+      "required": false
+    },
+    {
+      "action": "_StoreAction",
+      "default": "out/cards_manifest.json",
+      "dest": "cards_manifest",
+      "is_positional": false,
+      "option_strings": [
+        "--cards-manifest"
+      ],
+      "required": false
+    },
+    {
+      "action": "_StoreTrueAction",
+      "default": false,
+      "dest": "force",
+      "is_positional": false,
+      "option_strings": [
+        "--force"
+      ],
+      "required": false
+    },
+    {
+      "action": "_StoreAction",
+      "default": null,
+      "dest": "out",
+      "is_positional": false,
+      "option_strings": [
+        "--out"
+      ],
+      "required": false
+    },
+    {
+      "action": "_StoreAction",
+      "default": null,
+      "dest": "reading",
+      "is_positional": false,
+      "option_strings": [
+        "--reading"
+      ],
+      "required": true
+    }
+  ],
+  "positionals": []
+}

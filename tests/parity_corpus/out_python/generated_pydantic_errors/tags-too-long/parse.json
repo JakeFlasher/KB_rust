@@ -1,0 +1,1 @@
+{"diagnostics":[{"code":"CACG-SUM-003","file":"<tags-too-long>","message":"tag non-conforming: Value error, tag 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' length 50 outside [2, 40]","severity":"error"}],"oracle_layer":"parse","schema_version":"cacg.v0"}

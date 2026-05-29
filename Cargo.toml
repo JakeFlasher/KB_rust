@@ -1,0 +1,104 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/cacg-core",
+    "crates/cacg-ingest",
+    "crates/cacg-search",
+    "crates/cacg-semantic",
+    "crates/cacg-cli",
+    "xtask",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+publish = false
+# MSRV pinned per Plan-Evolution PE-01 in
+# `_research/09_dec_proposed_defaults.md` (Plan Evolution: MSRV 1.80 -> 1.85).
+# Rationale recorded there with evidence (the clap_lex 1.x + clap_derive 4.6+
+# requirement of edition2024 / Rust 1.85+; the entire Allowed-Choices crate set
+# from the plan's research baseline has been confirmed compatible with 1.85+).
+rust-version = "1.85"
+license = "MIT"
+description = "Content-Addressable Card Graph: hash-pinned knowledge cards over PDF sources (Rust port; trust-kernel-first migration)."
+
+[workspace.dependencies]
+# Core serde + json + validation
+serde = { version = "1.0.228", features = ["derive"] }
+serde_json = "1.0.149"
+garde = { version = "0.22.1", features = ["derive"] }
+thiserror = "2.0.18"
+anyhow = "1.0.102"
+
+# Time + uuid (constrained via DeterminismContext)
+time = { version = "=0.3.41", features = ["formatting", "parsing"] }
+uuid = { version = "1.23.1", features = ["v4"] }
+
+# Hashing (SHA-256 only; backwards-compat with existing CACG corpus)
+sha2 = "0.10.9"
+
+# YAML frontmatter parsing (strict-mode event prescan + typed deserialize)
+yaml-rust2 = "0.11.0"
+serde_yaml_bw = "2.5.6"
+
+# Regex (frontmatter delimiter splitting; pin compatible with MSRV 1.85)
+regex = "1.11"
+
+# Atomic IO + locking (POSIX-only first class)
+tempfile = "3.27.0"
+rustix = { version = "1.1.4", features = ["fs"] }
+
+# Embarrassingly-parallel per-card work
+rayon = "1.12.0"
+
+# CLI
+clap = { version = "4.6.1", features = ["derive", "env", "wrap_help"] }
+miette = { version = "7.6.0", features = ["fancy"] }
+
+# SQLite + FTS5 (bundled for cross-platform determinism)
+rusqlite = { version = "0.39.0", features = ["bundled", "modern_sqlite"] }
+
+# Logging
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter", "fmt"] }
+
+# Unicode normalization
+unicode-normalization = "0.1.25"
+
+# PDF (ONLY in cacg-ingest; banned in cacg-core)
+pdfium-render = "0.9.1"
+
+# Layer-3 B2 (ONLY in cacg-semantic behind feature flag)
+reqwest = { version = "0.12", default-features = false, features = ["rustls-tls", "json"] }
+tokio = { version = "1", features = ["macros", "rt"] }
+async-trait = "0.1"
+
+# Float formatter (fixture-proven equivalence to Python repr per canonical JSON spec)
+ryu = "1.0"
+
+# Dev / test
+insta = "1.47.2"
+proptest = "1.11.0"
+criterion = "=0.5.1"
+iai-callgrind = "0.16.1"
+edit-distance = "=2.2.2"
+# Wiremock for isolated HTTP-transport integration tests (B2 LLM-judge
+# wiremock target). Dev-only; never enters production closures.
+# Pinned at 0.5.x because 0.6.x's matchers use let-chains requiring
+# rustc 1.86; the workspace MSRV is 1.85.
+wiremock = "0.5"
+
+[workspace.lints.clippy]
+unwrap_used = "deny"
+wildcard_enum_match_arm = "deny"
+cognitive_complexity = "warn"
+excessive_nesting = "warn"
+
+[profile.release]
+lto = "thin"
+codegen-units = 1
+opt-level = 3
+
+[profile.bench]
+inherits = "release"
+debug = true

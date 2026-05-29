@@ -1,0 +1,1 @@
+CACG-FTS-001: sidecar seal mismatch — meta.summaries_hash='fb799d46d69d1bf123a88025d808cd92753e2d93d27526c58c1e2a11720cf1ef' vs. current summaries.json hash='db46b0a5c746d593880c363d557ebf88f00a46c5878f53e736138acf85466dd9'; falling back to in-memory BM25

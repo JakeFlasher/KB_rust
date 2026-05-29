@@ -1,0 +1,14 @@
+[project]
+name = "cacg-pdf-fixtures"
+version = "0.1.0"
+description = "Legacy PDF fixture generators for the CACG parity corpus"
+requires-python = ">=3.11"
+dependencies = [
+    "pikepdf>=9.0.0",
+    "fpdf2>=2.8.0",
+    "pypdfium2>=4.30.0",
+]
+
+[build-system]
+requires = ["setuptools>=75.0"]
+build-backend = "setuptools.build_meta"

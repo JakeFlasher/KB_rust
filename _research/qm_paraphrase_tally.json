@@ -1,0 +1,77 @@
+{
+  "fail": 222,
+  "fuzzy": 0,
+  "per_card": {
+    "qm-aic-bic-model-selection": {
+      "fail": 13
+    },
+    "qm-anova-table": {
+      "fail": 12
+    },
+    "qm-arch-conditional-heteroskedasticity": {
+      "fail": 15
+    },
+    "qm-cb-arb-factor-construction": {
+      "fail": 7
+    },
+    "qm-decision-trees-and-roots": {
+      "fail": 15
+    },
+    "qm-goodness-of-fit-r2-adj-r2": {
+      "fail": 14
+    },
+    "qm-influence-analysis-leverage": {
+      "fail": 14
+    },
+    "qm-multiple-linear-regression-foundations": {
+      "fail": 9
+    },
+    "qm-panel-cb-factor-inference": {
+      "fail": 11
+    },
+    "qm-penalized-regression-lasso": {
+      "fail": 13
+    },
+    "qm-projection-and-dimensionality-reduction": {
+      "fail": 15
+    },
+    "qm-regression-assumption-violations": {
+      "fail": 15
+    },
+    "qm-regression-hypothesis-tests": {
+      "fail": 14
+    },
+    "qm-signal-validation-oos-discipline": {
+      "fail": 11
+    },
+    "qm-structured-data-ml": {
+      "fail": 14
+    },
+    "qm-time-series-foundations": {
+      "fail": 17
+    },
+    "qm-volatility-model-garch-multivariate": {
+      "fail": 13
+    }
+  },
+  "per_source": {
+    "qm_afts_trim": {
+      "fail": 13
+    },
+    "qm_eslii_ch3_trim": {
+      "fail": 7
+    },
+    "qm_eslii_ch7_trim": {
+      "fail": 11
+    },
+    "qm_greene_trim": {
+      "fail": 11
+    },
+    "qm_notes_trim": {
+      "fail": 180
+    }
+  },
+  "skipped_out_of_scope": 17,
+  "strict": 0,
+  "total": 222
+}

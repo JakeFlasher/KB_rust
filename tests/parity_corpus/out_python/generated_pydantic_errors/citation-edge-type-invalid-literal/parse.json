@@ -1,0 +1,1 @@
+{"diagnostics":[{"code":"CACG-FM-008","file":"<citation-edge-type-invalid-literal>","message":"validation error at citations.0.edge_type: Input should be 'supports', 'defines', 'extends', 'contrasts_with', 'depends_on' or 'applies_to'","severity":"error"}],"oracle_layer":"parse","schema_version":"cacg.v0"}

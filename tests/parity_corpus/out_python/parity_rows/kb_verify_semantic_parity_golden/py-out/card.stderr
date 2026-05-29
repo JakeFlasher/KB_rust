@@ -1,0 +1,5 @@
+/home/jakeshea/knowledge_base_framework_discovery/tests/parity_corpus/semantic/card.md: CACG-VERIFY-001 citations[0]: quote not found in pinned chunk sample:p001:0000 (fuzzy=False)
+  hint chunk_id=sample:p002:0001 score=-0.728392
+  hint chunk_id=sample:p001:0000 score=-0.788734
+/home/jakeshea/knowledge_base_framework_discovery/tests/parity_corpus/semantic/card.md: CACG-VERIFY-002 semantic verdict=fail score=0.123456 mode=embedding-cache
+  hint semantic_verdict=fail score=0.123456 mode=embedding-cache

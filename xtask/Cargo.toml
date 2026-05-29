@@ -1,0 +1,34 @@
+[package]
+name = "xtask"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+description = "CACG workspace automation: parity harness, benchmark runner, static-grep lints (lint-determinism, lint-trust-leak, lint-platform-cfg)."
+publish = false
+
+[[bin]]
+name = "xtask"
+path = "src/main.rs"
+
+[features]
+# Forward `b2-llm-judge` to cacg-cli + cacg-semantic so the
+# xtask parity test that compares Rust's clap surface to
+# Python's argparse surface can opt into the LLM-judge clap
+# arg. Default xtask builds keep the firewall: the
+# default-feature dep closure does not pull tokio/reqwest.
+b2-llm-judge = ["cacg-cli/b2-llm-judge", "cacg-semantic/b2-llm-judge"]
+
+[dependencies]
+anyhow = { workspace = true }
+cacg-cli = { path = "../crates/cacg-cli", default-features = false }
+cacg-core = { path = "../crates/cacg-core" }
+cacg-search = { path = "../crates/cacg-search" }
+cacg-semantic = { path = "../crates/cacg-semantic" }
+clap = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+sha2 = { workspace = true }
+
+[dev-dependencies]
+tempfile = { workspace = true }

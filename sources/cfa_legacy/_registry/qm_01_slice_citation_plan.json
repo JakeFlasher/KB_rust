@@ -1,0 +1,889 @@
+{
+  "cards": {
+    "qm-aic-bic-model-selection": {
+      "audit_flag": "content_mismatch_noted",
+      "citations": [
+        {
+          "chunk_id": "cfa_2022_l1_combined:p467:0591",
+          "legacy_pages": [
+            451,
+            452
+          ],
+          "page_range_emitted": [
+            467,
+            468
+          ],
+          "pdf_pages": [
+            467,
+            468
+          ],
+          "role": "primary",
+          "source_id": "cfa_2022_l1_combined"
+        },
+        {
+          "chunk_id": "cfa_2022_l1_combined:p467:0591",
+          "legacy_pages": [
+            451,
+            452
+          ],
+          "page_range_emitted": [
+            467,
+            468
+          ],
+          "pdf_pages": [
+            467,
+            468
+          ],
+          "role": "supporting",
+          "source_id": "cfa_2022_l1_combined"
+        }
+      ],
+      "source_stance": "primary-cfa",
+      "title": "AIC and BIC for Regression Model Selection"
+    },
+    "qm-anova-table": {
+      "audit_flag": "wrong_pages_corrected",
+      "citations": [
+        {
+          "chunk_id": "cfa_2022_l1_combined:p466:0590",
+          "legacy_pages": [
+            450,
+            451
+          ],
+          "page_range_emitted": [
+            466,
+            467
+          ],
+          "pdf_pages": [
+            466,
+            467
+          ],
+          "role": "primary",
+          "source_id": "cfa_2022_l1_combined"
+        },
+        {
+          "chunk_id": "cfa_2022_l1_combined:p468:0593",
+          "legacy_pages": [
+            452,
+            453
+          ],
+          "page_range_emitted": [
+            468,
+            469
+          ],
+          "pdf_pages": [
+            468,
+            469
+          ],
+          "role": "supporting",
+          "source_id": "cfa_2022_l1_combined"
+        }
+      ],
+      "source_stance": "primary-cfa",
+      "title": "ANOVA Table for a Fitted Regression"
+    },
+    "qm-arch-conditional-heteroskedasticity": {
+      "audit_flag": "content_mismatch_noted",
+      "citations": [
+        {
+          "chunk_id": "cfa_2022_l1_combined:p459:0583",
+          "legacy_pages": [
+            443,
+            444
+          ],
+          "page_range_emitted": [
+            459,
+            460
+          ],
+          "pdf_pages": [
+            459,
+            460
+          ],
+          "role": "primary",
+          "source_id": "cfa_2022_l1_combined"
+        },
+        {
+          "chunk_id": "cfa_2022_l1_combined:p462:0586",
+          "legacy_pages": [
+            446,
+            447
+          ],
+          "page_range_emitted": [
+            462,
+            463
+          ],
+          "pdf_pages": [
+            462,
+            463
+          ],
+          "role": "supporting",
+          "source_id": "cfa_2022_l1_combined"
+        }
+      ],
+      "source_stance": "primary-cfa",
+      "title": "ARCH(1) Conditional Heteroskedasticity"
+    },
+    "qm-cb-arb-factor-construction": {
+      "audit_flag": "ok",
+      "citations": [
+        {
+          "chunk_id": "qm_eslii_2009_2ed:p062:0076",
+          "legacy_pages": [
+            43,
+            99
+          ],
+          "page_range_emitted": [
+            62,
+            63
+          ],
+          "pdf_pages": [
+            62,
+            118
+          ],
+          "role": "primary",
+          "source_id": "qm_eslii_2009_2ed"
+        },
+        {
+          "chunk_id": "qm_eslii_2009_2ed:p063:0077",
+          "legacy_pages": [
+            43,
+            99
+          ],
+          "page_range_emitted": [
+            63,
+            64
+          ],
+          "pdf_pages": [
+            62,
+            118
+          ],
+          "role": "primary",
+          "source_id": "qm_eslii_2009_2ed"
+        },
+        {
+          "chunk_id": "qm_eslii_2009_2ed:p356:0450",
+          "legacy_pages": [
+            337,
+            384
+          ],
+          "page_range_emitted": [
+            356,
+            357
+          ],
+          "pdf_pages": [
+            356,
+            403
+          ],
+          "role": "supporting",
+          "source_id": "qm_eslii_2009_2ed"
+        },
+        {
+          "chunk_id": "qm_greene_2019_econometric_analysis_8ed:p144:0205",
+          "legacy_pages": [
+            143,
+            180
+          ],
+          "page_range_emitted": [
+            144,
+            144
+          ],
+          "pdf_pages": [
+            144,
+            181
+          ],
+          "role": "supporting",
+          "source_id": "qm_greene_2019_econometric_analysis_8ed"
+        }
+      ],
+      "source_stance": "primary-eslii",
+      "title": "CB-Arb Factor Construction"
+    },
+    "qm-decision-trees-and-roots": {
+      "audit_flag": "content_mismatch_noted",
+      "citations": [
+        {
+          "chunk_id": "cfa_2022_l1_combined:p450:0573",
+          "legacy_pages": [
+            434,
+            435
+          ],
+          "page_range_emitted": [
+            450,
+            451
+          ],
+          "pdf_pages": [
+            450,
+            451
+          ],
+          "role": "primary",
+          "source_id": "cfa_2022_l1_combined"
+        },
+        {
+          "chunk_id": "cfa_2022_l1_combined:p447:0569",
+          "legacy_pages": [
+            431,
+            432
+          ],
+          "page_range_emitted": [
+            447,
+            448
+          ],
+          "pdf_pages": [
+            447,
+            448
+          ],
+          "role": "supporting",
+          "source_id": "cfa_2022_l1_combined"
+        }
+      ],
+      "source_stance": "primary-cfa",
+      "title": "Classification and Regression Trees (CART)"
+    },
+    "qm-goodness-of-fit-r2-adj-r2": {
+      "audit_flag": "wrong_pages_corrected",
+      "citations": [
+        {
+          "chunk_id": "cfa_2022_l1_combined:p467:0591",
+          "legacy_pages": [
+            451,
+            452
+          ],
+          "page_range_emitted": [
+            467,
+            468
+          ],
+          "pdf_pages": [
+            467,
+            468
+          ],
+          "role": "primary",
+          "source_id": "cfa_2022_l1_combined"
+        },
+        {
+          "chunk_id": "cfa_2022_l1_combined:p467:0591",
+          "legacy_pages": [
+            451,
+            452
+          ],
+          "page_range_emitted": [
+            467,
+            468
+          ],
+          "pdf_pages": [
+            467,
+            468
+          ],
+          "role": "supporting",
+          "source_id": "cfa_2022_l1_combined"
+        }
+      ],
+      "source_stance": "primary-cfa",
+      "title": "Goodness of Fit: R-squared and Adjusted R-squared"
+    },
+    "qm-influence-analysis-leverage": {
+      "audit_flag": "content_mismatch_noted",
+      "citations": [
+        {
+          "chunk_id": "cfa_2022_l1_combined:p464:0588",
+          "legacy_pages": [
+            448,
+            449
+          ],
+          "page_range_emitted": [
+            464,
+            465
+          ],
+          "pdf_pages": [
+            464,
+            465
+          ],
+          "role": "primary",
+          "source_id": "cfa_2022_l1_combined"
+        },
+        {
+          "chunk_id": "cfa_2022_l1_combined:p463:0587",
+          "legacy_pages": [
+            447,
+            448
+          ],
+          "page_range_emitted": [
+            463,
+            464
+          ],
+          "pdf_pages": [
+            463,
+            464
+          ],
+          "role": "supporting",
+          "source_id": "cfa_2022_l1_combined"
+        }
+      ],
+      "source_stance": "primary-cfa",
+      "title": "Influence Analysis: Leverage, Studentised Residuals, Cook's Distance"
+    },
+    "qm-multiple-linear-regression-foundations": {
+      "audit_flag": "wrong_pages_corrected",
+      "citations": [
+        {
+          "chunk_id": "cfa_2022_l1_combined:p450:0573",
+          "legacy_pages": [
+            434,
+            435
+          ],
+          "page_range_emitted": [
+            450,
+            451
+          ],
+          "pdf_pages": [
+            450,
+            451
+          ],
+          "role": "primary",
+          "source_id": "cfa_2022_l1_combined"
+        },
+        {
+          "chunk_id": "cfa_2022_l1_combined:p459:0583",
+          "legacy_pages": [
+            443,
+            444
+          ],
+          "page_range_emitted": [
+            459,
+            460
+          ],
+          "pdf_pages": [
+            459,
+            460
+          ],
+          "role": "supporting",
+          "source_id": "cfa_2022_l1_combined"
+        }
+      ],
+      "source_stance": "primary-cfa",
+      "title": "Multiple Linear Regression Foundations"
+    },
+    "qm-panel-cb-factor-inference": {
+      "audit_flag": "ok",
+      "citations": [
+        {
+          "chunk_id": "qm_greene_2019_econometric_analysis_8ed:p413:0633",
+          "legacy_pages": [
+            413,
+            470
+          ],
+          "page_range_emitted": [
+            414,
+            414
+          ],
+          "pdf_pages": [
+            414,
+            471
+          ],
+          "role": "primary",
+          "source_id": "qm_greene_2019_econometric_analysis_8ed"
+        },
+        {
+          "chunk_id": "qm_greene_2019_econometric_analysis_8ed:p455:0703",
+          "legacy_pages": [
+            413,
+            470
+          ],
+          "page_range_emitted": [
+            455,
+            456
+          ],
+          "pdf_pages": [
+            414,
+            471
+          ],
+          "role": "primary",
+          "source_id": "qm_greene_2019_econometric_analysis_8ed"
+        },
+        {
+          "chunk_id": "qm_wooldridge_intro_econometrics_8ed:p482:1050",
+          "legacy_pages": [
+            421,
+            485
+          ],
+          "page_range_emitted": [
+            482,
+            482
+          ],
+          "pdf_pages": [
+            445,
+            509
+          ],
+          "role": "supporting",
+          "source_id": "qm_wooldridge_intro_econometrics_8ed"
+        },
+        {
+          "chunk_id": "qm_wooldridge_intro_econometrics_8ed:p506:1107",
+          "legacy_pages": [
+            421,
+            485
+          ],
+          "page_range_emitted": [
+            506,
+            506
+          ],
+          "pdf_pages": [
+            445,
+            509
+          ],
+          "role": "supporting",
+          "source_id": "qm_wooldridge_intro_econometrics_8ed"
+        }
+      ],
+      "source_stance": "primary-greene",
+      "title": "Panel-Data CB-Arb Factor Inference"
+    },
+    "qm-penalized-regression-lasso": {
+      "audit_flag": "content_mismatch_noted",
+      "citations": [
+        {
+          "chunk_id": "cfa_2022_l1_combined:p450:0573",
+          "legacy_pages": [
+            434,
+            435
+          ],
+          "page_range_emitted": [
+            450,
+            451
+          ],
+          "pdf_pages": [
+            450,
+            451
+          ],
+          "role": "primary",
+          "source_id": "cfa_2022_l1_combined"
+        },
+        {
+          "chunk_id": "cfa_2022_l1_combined:p450:0573",
+          "legacy_pages": [
+            434,
+            435
+          ],
+          "page_range_emitted": [
+            450,
+            451
+          ],
+          "pdf_pages": [
+            450,
+            451
+          ],
+          "role": "supporting",
+          "source_id": "cfa_2022_l1_combined"
+        }
+      ],
+      "source_stance": "primary-cfa",
+      "title": "LASSO Penalised Regression"
+    },
+    "qm-projection-and-dimensionality-reduction": {
+      "audit_flag": "content_mismatch_noted",
+      "citations": [
+        {
+          "chunk_id": "cfa_2022_l1_combined:p450:0573",
+          "legacy_pages": [
+            434,
+            435
+          ],
+          "page_range_emitted": [
+            450,
+            451
+          ],
+          "pdf_pages": [
+            450,
+            451
+          ],
+          "role": "primary",
+          "source_id": "cfa_2022_l1_combined"
+        },
+        {
+          "chunk_id": "cfa_2022_l1_combined:p447:0569",
+          "legacy_pages": [
+            431,
+            432
+          ],
+          "page_range_emitted": [
+            447,
+            448
+          ],
+          "pdf_pages": [
+            447,
+            448
+          ],
+          "role": "supporting",
+          "source_id": "cfa_2022_l1_combined"
+        }
+      ],
+      "source_stance": "primary-cfa",
+      "title": "Principal Components / Dimensionality Reduction"
+    },
+    "qm-regression-assumption-violations": {
+      "audit_flag": "wrong_pages_corrected",
+      "citations": [
+        {
+          "chunk_id": "cfa_2022_l1_combined:p460:0584",
+          "legacy_pages": [
+            442,
+            450
+          ],
+          "page_range_emitted": [
+            460,
+            461
+          ],
+          "pdf_pages": [
+            458,
+            466
+          ],
+          "role": "primary",
+          "source_id": "cfa_2022_l1_combined"
+        },
+        {
+          "chunk_id": "cfa_2022_l1_combined:p460:0584",
+          "legacy_pages": [
+            442,
+            450
+          ],
+          "page_range_emitted": [
+            460,
+            461
+          ],
+          "pdf_pages": [
+            458,
+            466
+          ],
+          "role": "primary",
+          "source_id": "cfa_2022_l1_combined"
+        },
+        {
+          "chunk_id": "cfa_2022_l1_combined:p465:0589",
+          "legacy_pages": [
+            442,
+            450
+          ],
+          "page_range_emitted": [
+            465,
+            466
+          ],
+          "pdf_pages": [
+            458,
+            466
+          ],
+          "role": "supporting",
+          "source_id": "cfa_2022_l1_combined"
+        }
+      ],
+      "source_stance": "primary-cfa",
+      "title": "Regression Assumption Violations"
+    },
+    "qm-regression-hypothesis-tests": {
+      "audit_flag": "wrong_pages_corrected",
+      "citations": [
+        {
+          "chunk_id": "cfa_2022_l1_combined:p467:0591",
+          "legacy_pages": [
+            451,
+            454
+          ],
+          "page_range_emitted": [
+            467,
+            468
+          ],
+          "pdf_pages": [
+            467,
+            470
+          ],
+          "role": "primary",
+          "source_id": "cfa_2022_l1_combined"
+        },
+        {
+          "chunk_id": "cfa_2022_l1_combined:p471:0597",
+          "legacy_pages": [
+            455,
+            458
+          ],
+          "page_range_emitted": [
+            471,
+            472
+          ],
+          "pdf_pages": [
+            471,
+            474
+          ],
+          "role": "primary",
+          "source_id": "cfa_2022_l1_combined"
+        },
+        {
+          "chunk_id": "cfa_2022_l1_combined:p471:0597",
+          "legacy_pages": [
+            455,
+            458
+          ],
+          "page_range_emitted": [
+            471,
+            472
+          ],
+          "pdf_pages": [
+            471,
+            474
+          ],
+          "role": "supporting",
+          "source_id": "cfa_2022_l1_combined"
+        }
+      ],
+      "source_stance": "primary-cfa",
+      "title": "Hypothesis Tests on a Fitted Regression"
+    },
+    "qm-signal-validation-oos-discipline": {
+      "audit_flag": "ok",
+      "citations": [
+        {
+          "chunk_id": "qm_eslii_2009_2ed:p242:0307",
+          "legacy_pages": [
+            219,
+            260
+          ],
+          "page_range_emitted": [
+            242,
+            242
+          ],
+          "pdf_pages": [
+            238,
+            279
+          ],
+          "role": "primary",
+          "source_id": "qm_eslii_2009_2ed"
+        },
+        {
+          "chunk_id": "qm_eslii_2009_2ed:p261:0330",
+          "legacy_pages": [
+            219,
+            260
+          ],
+          "page_range_emitted": [
+            261,
+            262
+          ],
+          "pdf_pages": [
+            238,
+            279
+          ],
+          "role": "primary",
+          "source_id": "qm_eslii_2009_2ed"
+        },
+        {
+          "chunk_id": "qm_islp_2023_python:p214:0287",
+          "legacy_pages": [
+            197,
+            228
+          ],
+          "page_range_emitted": [
+            214,
+            215
+          ],
+          "pdf_pages": [
+            206,
+            237
+          ],
+          "role": "supporting",
+          "source_id": "qm_islp_2023_python"
+        },
+        {
+          "chunk_id": "qm_islp_2023_python:p213:0285",
+          "legacy_pages": [
+            197,
+            228
+          ],
+          "page_range_emitted": [
+            213,
+            213
+          ],
+          "pdf_pages": [
+            206,
+            237
+          ],
+          "role": "supporting",
+          "source_id": "qm_islp_2023_python"
+        }
+      ],
+      "source_stance": "primary-eslii",
+      "title": "Out-of-Sample Signal Validation Discipline"
+    },
+    "qm-structured-data-ml": {
+      "audit_flag": "wrong_volume_corrected",
+      "citations": [
+        {
+          "chunk_id": "cfa_2022_l1_combined:p3500:5260",
+          "legacy_pages": [
+            231,
+            232
+          ],
+          "page_range_emitted": [
+            3500,
+            3501
+          ],
+          "pdf_pages": [
+            3500,
+            3501
+          ],
+          "role": "primary",
+          "source_id": "cfa_2022_l1_combined"
+        },
+        {
+          "chunk_id": "cfa_2022_l1_combined:p3500:5260",
+          "legacy_pages": [
+            231,
+            232
+          ],
+          "page_range_emitted": [
+            3500,
+            3501
+          ],
+          "pdf_pages": [
+            3500,
+            3501
+          ],
+          "role": "primary",
+          "source_id": "cfa_2022_l1_combined"
+        },
+        {
+          "chunk_id": "cfa_2022_l1_combined:p3501:5261",
+          "legacy_pages": [
+            232,
+            233
+          ],
+          "page_range_emitted": [
+            3501,
+            3501
+          ],
+          "pdf_pages": [
+            3501,
+            3502
+          ],
+          "role": "supporting",
+          "source_id": "cfa_2022_l1_combined"
+        }
+      ],
+      "source_stance": "primary-cfa",
+      "title": "Supervised ML Pipeline and Bias-Variance"
+    },
+    "qm-time-series-foundations": {
+      "audit_flag": "content_mismatch_noted",
+      "citations": [
+        {
+          "chunk_id": "cfa_2022_l1_combined:p456:0580",
+          "legacy_pages": [
+            440,
+            446
+          ],
+          "page_range_emitted": [
+            456,
+            456
+          ],
+          "pdf_pages": [
+            456,
+            462
+          ],
+          "role": "supporting",
+          "source_id": "cfa_2022_l1_combined"
+        },
+        {
+          "chunk_id": "cfa_2022_l1_combined:p456:0580",
+          "legacy_pages": [
+            440,
+            446
+          ],
+          "page_range_emitted": [
+            456,
+            456
+          ],
+          "pdf_pages": [
+            456,
+            462
+          ],
+          "role": "supporting",
+          "source_id": "cfa_2022_l1_combined"
+        }
+      ],
+      "source_stance": "primary-cfa",
+      "title": "Time-Series Foundations: Trend, AR(p), Stationarity, Unit Root"
+    },
+    "qm-volatility-model-garch-multivariate": {
+      "audit_flag": "ok",
+      "citations": [
+        {
+          "chunk_id": "qm_tsay_2005_afts_2e:p127:0142",
+          "legacy_pages": [
+            97,
+            200
+          ],
+          "page_range_emitted": [
+            127,
+            128
+          ],
+          "pdf_pages": [
+            122,
+            225
+          ],
+          "role": "primary",
+          "source_id": "qm_tsay_2005_afts_2e"
+        },
+        {
+          "chunk_id": "qm_tsay_2005_afts_2e:p138:0154",
+          "legacy_pages": [
+            97,
+            200
+          ],
+          "page_range_emitted": [
+            138,
+            139
+          ],
+          "pdf_pages": [
+            122,
+            225
+          ],
+          "role": "primary",
+          "source_id": "qm_tsay_2005_afts_2e"
+        },
+        {
+          "chunk_id": "qm_tsay_2014_multivariate_time_series:p419:0479",
+          "legacy_pages": [
+            359,
+            410
+          ],
+          "page_range_emitted": [
+            419,
+            420
+          ],
+          "pdf_pages": [
+            379,
+            430
+          ],
+          "role": "supporting",
+          "source_id": "qm_tsay_2014_multivariate_time_series"
+        },
+        {
+          "chunk_id": "qm_tsay_2014_multivariate_time_series:p421:0481",
+          "legacy_pages": [
+            359,
+            410
+          ],
+          "page_range_emitted": [
+            421,
+            421
+          ],
+          "pdf_pages": [
+            379,
+            430
+          ],
+          "role": "supporting",
+          "source_id": "qm_tsay_2014_multivariate_time_series"
+        }
+      ],
+      "source_stance": "primary-tsay",
+      "title": "Volatility-Model Estimation (ARCH / GARCH + Multivariate)"
+    }
+  },
+  "schema_version": "cfa_legacy.qm_01_slice.v1"
+}

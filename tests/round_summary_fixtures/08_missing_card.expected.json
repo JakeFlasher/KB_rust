@@ -1,0 +1,6 @@
+{
+  "exit_code": 1,
+  "fixture_sha256": "40fbd5bead6d5e164aef1bfa028b0c74cdc4d7e3146c21c71e23144fde8f0f26",
+  "stderr": "cards/reading_99/does_not_exist.md: MISSING (file not found)\n",
+  "stdout": ""
+}

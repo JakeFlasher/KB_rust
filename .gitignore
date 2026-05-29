@@ -1,0 +1,65 @@
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.venv/
+build/
+dist/
+*.egg-info/
+.coverage
+htmlcov/
+# Local-only ingest outputs by default. The `/out/*` pattern
+# (anchored to the repo root) excludes every file in the root
+# `out/` directory but lets us force-re-include specific files
+# below; git's gitignore semantics require this shape because a
+# fully excluded directory cannot have children un-ignored.
+/out/*
+# Crate-local `out/` test-artifact paths (e.g. the `kb verify`
+# test journal at `crates/cacg-cli/out/lint_journal.jsonl`); the
+# exact-path entries here don't shadow the root-level
+# force-includes below.
+crates/cacg-cli/out/
+.cacg/
+.demo/
+# Force-include the committed B1 semantic cache + its provenance
+# sidecar at the repository root. These are the AC-6 committed
+# artifacts (~45 KB cache + provenance); the rebuild ceremony at
+# `_research/20_b1_cache_provisioning.md` documents how to
+# regenerate them deterministically.
+!/out/semantic_cache.json
+!/out/semantic_cache.provenance.json
+
+# Avoid committing huge intermediate scratch files
+*.tmp
+# Local working-tree backup archive (multi-GB self-snapshot); never track.
+/framework.tar.gz
+*.tar.gz
+
+# Local-only loop state (loop trackers, round summaries, contracts, skill artifacts)
+.humanize*
+.stress/
+.stress.build.lock
+
+# Per-card history-file POSIX flock sidecars (transient, zero-byte; do not track).
+# Parity-test fixtures under tests/parity_corpus/ are NOT covered by this rule
+# (they need to capture the Python oracle's exact lock-file behavior).
+/cards/**/*.history.jsonl.lock
+/out/**/*.lint_journal.jsonl.lock
+
+# Cargo build artifacts (Rust port workspace)
+target/
+**/*.rs.bk
+
+# Parity-harness perf reports (runtime artifacts emitted by
+# `cargo xtask parity`; each run writes a new JSON under the
+# frozen timestamp, so they're not source-controlled).
+perf-reports/
+
+# Test side-effect: `kb_cli_surface::unimplemented_dispatcher_…`
+# invokes `kb new reading_01 some-slug` against a CWD-relative
+# `cards/` root, which now succeeds (kb new is native) and writes a
+# real card on disk. Treat as a runtime artifact until QS-2 swaps
+# the test to a still-unimplemented verb.
+crates/cacg-cli/cards/
+

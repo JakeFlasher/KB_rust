@@ -1,0 +1,31 @@
+[package]
+name = "cacg-semantic"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+publish.workspace = true
+description = "CACG Layer-3 semantic verifier: B1 cache-as-oracle (deterministic) and optional B2 LLM-judge (async, feature-gated)."
+
+[features]
+default = ["b1-cache-as-oracle"]
+b1-cache-as-oracle = []
+b2-llm-judge = ["dep:reqwest", "dep:tokio", "dep:async-trait"]
+
+[dependencies]
+cacg-core = { path = "../cacg-core" }
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
+tracing = { workspace = true }
+reqwest = { workspace = true, optional = true }
+tokio = { workspace = true, optional = true }
+async-trait = { workspace = true, optional = true }
+
+[dev-dependencies]
+insta = { workspace = true }
+tempfile = { workspace = true }
+tokio = { workspace = true }
+
+[lints]
+workspace = true

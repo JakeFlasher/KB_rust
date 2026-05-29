@@ -1,0 +1,26 @@
+{
+  "mutex_groups": [],
+  "name": "retract",
+  "options": [
+    {
+      "action": "_StoreAction",
+      "default": "out",
+      "dest": "out",
+      "is_positional": false,
+      "option_strings": [
+        "--out"
+      ],
+      "required": false
+    }
+  ],
+  "positionals": [
+    {
+      "action": "_StoreAction",
+      "default": null,
+      "dest": "card",
+      "is_positional": true,
+      "nargs": null,
+      "required": true
+    }
+  ]
+}

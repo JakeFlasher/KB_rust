@@ -1,0 +1,34 @@
+name: _validate-workflows
+
+# Workflow integrity meta-test. Verifies the parity gate cannot be
+# silently bypassed via if:false, continue-on-error:true, exit-code
+# masking, or missing triggers. Uses Rust xtask lints — no Python
+# or PyYAML required.
+
+on:
+  pull_request:
+    branches: ["**"]
+  push:
+    branches: [main]
+
+jobs:
+  validate-workflows:
+    name: Workflow integrity (parity gate cannot be silently disabled)
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Rust
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          toolchain: "1.85"
+
+      - name: Validate workflow integrity
+        run: cargo run -p xtask -- lint-workflow-integrity
+
+      - name: Lint workflow labels
+        run: cargo run -p xtask -- lint-workflow-labels
+
+      - name: Lint platform cfg in trust-kernel sources
+        run: cargo run -p xtask --quiet -- lint-platform-cfg

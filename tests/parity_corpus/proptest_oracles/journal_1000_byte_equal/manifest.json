@@ -1,0 +1,32 @@
+{
+  "schema_version": "proptest-corpus-v1",
+  "oracle": "journal_1000_byte_equal",
+  "path": "Path B (committed cross-language corpus freeze)",
+  "capture_source": "legacy_python_oracle/scripts/journal_oracle.py under KB_FROZEN_CLOCK=1",
+  "case_count": 1000,
+  "files": {
+    "entries.jsonl": {
+      "sha256": "02a7e575ee495044988ba46c4dc937e858929562be96c430d1421951ef0e5b30",
+      "lines": 1000
+    },
+    "expected_lint_journal.jsonl": {
+      "sha256": "d435abf2c87813ea3cbfe8afe9401f2764e4be4da8e80189d421b48f439869bf",
+      "lines": 1000
+    }
+  },
+  "branch_fingerprints": {
+    "first_event_seq_0": true,
+    "first_event_prev_checksum_null": true,
+    "chained_prev_checksum": true,
+    "seq_range": "0..999",
+    "frozen_event_id": "00000000-0000-0000-0000-000000000000",
+    "frozen_timestamp": "1970-01-01T00:00:00Z",
+    "verification_fuzzy_true_false": true,
+    "verification_layer2_true_false": true,
+    "verification_layer1_always_true": true,
+    "latency_ms_range": "0.0..9.0",
+    "card_hash_before_null": true,
+    "card_hash_after_null": true,
+    "diagnostics_empty": true
+  }
+}

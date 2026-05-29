@@ -1,0 +1,1 @@
+{"diagnostics":[{"code":"CACG-CITE-006","file":"tests/parity_corpus/generated_pydantic_errors/_lint_probe_citation-source-id-spaces.md","message":"citations[0]: source_id '!!invalid id with spaces!!' disagrees with chunk source_id 'sample'","severity":"error"}],"oracle_layer":"lint","schema_version":"cacg.v0"}

@@ -1,0 +1,59 @@
+[package]
+name = "cacg-core"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+publish.workspace = true
+description = "CACG trust kernel: schema, hashing, canonical JSON, normalize, journal, history, atomic publish, BM25, fuzzy, diagnostic, determinism. No Pdfium, no SQLite, no HTTP."
+
+[dependencies]
+serde = { workspace = true }
+serde_json = { workspace = true }
+garde = { workspace = true }
+thiserror = { workspace = true }
+time = { workspace = true }
+uuid = { workspace = true }
+sha2 = { workspace = true }
+yaml-rust2 = { workspace = true }
+serde_yaml_bw = { workspace = true }
+regex = { workspace = true }
+tempfile = { workspace = true }
+rustix = { workspace = true }
+rayon = { workspace = true }
+unicode-normalization = { workspace = true }
+ryu = { workspace = true }
+tracing = { workspace = true }
+
+[dev-dependencies]
+insta = { workspace = true }
+proptest = { workspace = true }
+criterion = { workspace = true }
+iai-callgrind = { workspace = true }
+edit-distance = { workspace = true }
+
+# Instruction-count budget for the in-house BM25 Okapi scorer. Run via
+# `cargo bench -p cacg-core --bench bm25_iai` (needs `valgrind`).
+# `test = false` keeps `cargo test` from running it as a test target.
+[[bench]]
+name = "bm25_iai"
+harness = false
+test = false
+
+[[bench]]
+name = "verify_iai"
+harness = false
+test = false
+
+[[bench]]
+name = "lint_iai"
+harness = false
+test = false
+
+[[bench]]
+name = "index_iai"
+harness = false
+test = false
+
+[lints]
+workspace = true

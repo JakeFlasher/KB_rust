@@ -1,0 +1,60 @@
+[package]
+name = "cacg-cli"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+publish.workspace = true
+description = "CACG `kb` binary: thin clap dispatcher over cacg-core + cacg-search + optional cacg-ingest + cacg-semantic."
+
+[[bin]]
+name = "kb"
+path = "src/main.rs"
+
+[features]
+# Default includes `ingest` so the shipped `kb` binary supports
+# `kb ingest <pdf>` out of the box, matching Python's "pypdfium2 is
+# always available" semantics. Operators who deliberately want a
+# Pdfium-free build can opt out via `--no-default-features`.
+default = ["ingest"]
+ingest = ["cacg-ingest/ingest"]
+b2-llm-judge = ["cacg-semantic/b2-llm-judge"]
+
+[dependencies]
+cacg-core = { path = "../cacg-core" }
+cacg-search = { path = "../cacg-search" }
+cacg-ingest = { path = "../cacg-ingest" }
+cacg-semantic = { path = "../cacg-semantic" }
+clap = { workspace = true }
+miette = { workspace = true }
+regex = { workspace = true }
+serde_json = { workspace = true }
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true }
+
+[dev-dependencies]
+tempfile = { workspace = true }
+# Used by the kb_ingest integration test to probe whether libpdfium
+# is discoverable at runtime before spawning `kb ingest`; lets the
+# suite skip cleanly on runners without the native dependency.
+pdfium-render = { workspace = true }
+# Required by feature-gated integration tests that define their own
+# LlmJudgeClient impls inline (`kb_verify_semantic_b2_mocked.rs`).
+# Pulled in only when `--features b2-llm-judge` propagates here via
+# the b2-llm-judge feature pass-through, but Cargo dev-dep activation
+# is unconditional so this stays present in all dev builds. The crate
+# is dev-only and never enters the production cacg-cli closure.
+async-trait = { workspace = true }
+# Used by the feature-gated wiremock integration test for the B2
+# HaikuClient transport layer (`kb_verify_semantic_b2_wiremock.rs`).
+# Dev-only; never enters production cacg-cli runtime closure.
+wiremock = { workspace = true }
+# Tokio is already an optional production dep behind b2-llm-judge,
+# but the wiremock + B2Evaluator-driven verify_one_card test needs
+# the rt-multi-thread runtime flavor + spawn_blocking. Pull a richer
+# dev-dep copy with the broader feature set; production stays on the
+# narrower workspace feature set (macros + rt).
+tokio = { workspace = true, features = ["macros", "rt", "rt-multi-thread"] }
+
+[lints]
+workspace = true

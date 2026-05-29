@@ -1,0 +1,100 @@
+{
+  "generated_by": "emit_08_cb_slice.py",
+  "reading_id": "08_convertible_bonds",
+  "schema_version": "cfa_legacy.page_coordinate_map.v1",
+  "_note": "Most CB textbook offsets are ESTIMATES; auditor MUST verify topical match for every cite. The chunk-span page_range design in emit makes offset errors documentary not blocking.",
+  "sources": [
+    {
+      "legacy_coordinate": "printed_book_page",
+      "pdf_coordinate_rule": "pdf_page = legacy_page",
+      "source_id": "cb_an_daoquan_2014_magic_book_2ed",
+      "note": "AnDaoquan Magic Book 2e (Chinese). Audit batches A and B disagreed (+12 vs 0); using offset 0 since most cited chunks bind under that convention and chunk-span page_range absorbs the discrepancy. Auditor MUST verify topical match.",
+      "verified_evidence": [
+        {
+          "evidence": "Chinese text running marker '1' at PDF 31",
+          "legacy_page": 1,
+          "pdf_page": 31
+        }
+      ],
+      "page_count_pdf": 308
+    },
+    {
+      "legacy_coordinate": "printed_book_page",
+      "pdf_coordinate_rule": "pdf_page = legacy_page",
+      "source_id": "cb_an_daoquan_2023_three_line_duplex_3ed",
+      "note": "AnDaoquan Three-Line Duplex 3e (Chinese). Audit consensus toward offset 0 (batches A and B agreed body chunks bind near offset 0 to +9).",
+      "verified_evidence": [],
+      "page_count_pdf": 298
+    },
+    {
+      "legacy_coordinate": "printed_book_page",
+      "pdf_coordinate_rule": "pdf_page = legacy_page + 19",
+      "source_id": "cb_despiegeleer_schoutens_vanhulle_2014_hybrid_securities",
+      "note": "DeSpiegeleer Handbook of Hybrid Securities (Wiley 2014). Offset +19 (audit batches A and C found +19; batch B found +20; +19 is the running-header consensus). Header '56 The Handbook of Hybrid Securities' at PDF 75 = printed 56.",
+      "verified_evidence": [
+        {
+          "evidence": "Running header '56 The Handbook of Hybrid Securities' at PDF 76",
+          "legacy_page": 56,
+          "pdf_page": 76
+        }
+      ],
+      "page_count_pdf": 410
+    },
+    {
+      "legacy_coordinate": "printed_book_page",
+      "pdf_coordinate_rule": "pdf_page = legacy_page + 15",
+      "source_id": "cb_calamos_2003_convertible_arbitrage",
+      "note": "Calamos Convertible Arbitrage (Wiley 2003). Offset +15 verified consensus across 3 audit batches: PDF 20 = printed 5; PDF 43 = printed 28; PDF 64 = printed 49; PDF 89 = Ch.4 printed 74.",
+      "verified_evidence": [],
+      "page_count_pdf": 307
+    },
+    {
+      "legacy_coordinate": "physical_pdf_page",
+      "pdf_coordinate_rule": "pdf_page = legacy_page",
+      "source_id": "cb_gongshou_practical_handbook_1ed",
+      "note": "Gongshou Practical Handbook (Chinese text). Small PDF (126 pp), likely no significant front matter. Offset 0 estimate.",
+      "verified_evidence": [],
+      "page_count_pdf": 126
+    },
+    {
+      "legacy_coordinate": "printed_book_page",
+      "pdf_coordinate_rule": "pdf_page = legacy_page + 15",
+      "source_id": "cb_philips_1997_convertible_bond_markets",
+      "note": "Philips Convertible Bond Markets (Macmillan 1997). Offset +15 per batch C.",
+      "verified_evidence": [],
+      "page_count_pdf": 159
+    },
+    {
+      "legacy_coordinate": "printed_book_page",
+      "pdf_coordinate_rule": "pdf_page = legacy_page + 7",
+      "source_id": "cb_thorp_kassouf_1967_beat_the_market",
+      "note": "Thorp/Kassouf Beat the Market (1967). Offset +7 verified by batch A via Ch.5 'THE SYSTEM IN ACTION' at PDF 56 = printed 49.",
+      "verified_evidence": [],
+      "page_count_pdf": 229
+    },
+    {
+      "legacy_coordinate": "printed_book_page",
+      "pdf_coordinate_rule": "pdf_page = legacy_page + 21",
+      "source_id": "cb_zubulake_convertible_securities_worldwide",
+      "note": "Zubulake Convertible Securities Worldwide. Offset +21 per batch A: 'Investment Value 31' at PDF 52.",
+      "verified_evidence": [],
+      "page_count_pdf": 328
+    },
+    {
+      "legacy_coordinate": "printed_book_page",
+      "pdf_coordinate_rule": "pdf_page = legacy_page",
+      "source_id": "cb_koziol_2004_convertible_bonds_strategic_investors",
+      "note": "Koziol Convertible Bonds for Strategic Investors (Springer 2004). Offset 0 verified by audit batches B and C: PDF 49 = book p49.",
+      "verified_evidence": [],
+      "page_count_pdf": 215
+    },
+    {
+      "legacy_coordinate": "physical_pdf_page",
+      "pdf_coordinate_rule": "pdf_page = legacy_page",
+      "source_id": "china_cb_unified_no_offset",
+      "note": "Convention for ALL china_cb_* sources: standards documents and research reports are paragraph-numbered or PDF-page-numbered directly. Offset 0 applies to: china_cb_china_galaxy_fund_suitability_2025_10_29, china_cb_clifford_chance_apac_equity_linked_2025, china_cb_csdc_shanghai_settlement_2023, china_cb_csdc_shenzhen_issuer_guide_2025_03, china_cb_csrc_disclosure_standard_no_60, china_cb_dajia_credit_risk_immune_2024, china_cb_hkex_ch16_convertible_equity, china_cb_hkex_ch28_convertible_debt, china_cb_lianhe_annual_bond_market_2025, china_cb_lianhe_credit_risk_resolution, china_cb_lianhe_h1_default_review_2025, china_cb_lianhe_risk_reconstruction_2025, china_cb_nafmii_china_bond_market_2025, china_cb_pboc_asset_management_guiding_opinions_2018, china_cb_spc_bond_disputes_2020, china_cb_sse_rules_compilation, china_cb_szse_self_reg_guideline_15_2025, china_cb_szse_trading_rules_2022, china_cb_zhang_feng_strategy_2014.",
+      "verified_evidence": [],
+      "page_count_pdf": 0
+    }
+  ]
+}

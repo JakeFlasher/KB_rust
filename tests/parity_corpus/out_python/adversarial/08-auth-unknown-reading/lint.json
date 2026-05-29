@@ -1,0 +1,1 @@
+{"diagnostics":[{"code":"CACG-AUTH-001","file":"tests/parity_corpus/adversarial/08-auth-unknown-reading.md","message":"citations[0]: reading_id 'reading_99' not present in source_matrix; refusing to verify","severity":"error"}],"schema_version":"cacg.v0"}

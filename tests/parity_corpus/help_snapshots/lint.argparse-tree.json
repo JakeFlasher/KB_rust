@@ -1,0 +1,85 @@
+{
+  "mutex_groups": [
+    {
+      "index": 0,
+      "member_dests": [
+        "all_readings",
+        "card"
+      ],
+      "required": true
+    }
+  ],
+  "name": "lint",
+  "options": [
+    {
+      "action": "_StoreTrueAction",
+      "default": false,
+      "dest": "all_readings",
+      "is_positional": false,
+      "option_strings": [
+        "--all-readings"
+      ],
+      "required": false
+    },
+    {
+      "action": "_StoreAction",
+      "default": "cards",
+      "dest": "cards_dir",
+      "is_positional": false,
+      "option_strings": [
+        "--cards-dir"
+      ],
+      "required": false
+    },
+    {
+      "action": "_StoreTrueAction",
+      "default": false,
+      "dest": "check_orphans",
+      "is_positional": false,
+      "option_strings": [
+        "--check-orphans"
+      ],
+      "required": false
+    },
+    {
+      "action": "_StoreAction",
+      "default": "out/chunks_manifest.json",
+      "dest": "chunks_manifest",
+      "is_positional": false,
+      "option_strings": [
+        "--chunks-manifest"
+      ],
+      "required": false
+    },
+    {
+      "action": "_StoreAction",
+      "default": null,
+      "dest": "journal",
+      "is_positional": false,
+      "option_strings": [
+        "--journal"
+      ],
+      "required": false
+    },
+    {
+      "action": "_StoreAction",
+      "default": null,
+      "dest": "source_matrix",
+      "is_positional": false,
+      "option_strings": [
+        "--source-matrix"
+      ],
+      "required": true
+    }
+  ],
+  "positionals": [
+    {
+      "action": "_StoreAction",
+      "default": null,
+      "dest": "card",
+      "is_positional": true,
+      "nargs": "?",
+      "required": false
+    }
+  ]
+}

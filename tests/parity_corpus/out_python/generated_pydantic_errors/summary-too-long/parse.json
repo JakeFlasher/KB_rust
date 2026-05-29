@@ -1,0 +1,1 @@
+{"diagnostics":[{"code":"CACG-SUM-002","file":"<summary-too-long>","message":"summary oversized: String should have at most 400 characters","severity":"error"}],"oracle_layer":"parse","schema_version":"cacg.v0"}

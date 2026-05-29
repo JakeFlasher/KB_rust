@@ -1,0 +1,1 @@
+{"diagnostics":[{"code":"CACG-FM-008","file":"<card-hash-63-chars>","message":"validation error at card_hash: Value error, card_hash must be 64-hex SHA256 (or absent for not-yet-indexed cards)","severity":"error"}],"oracle_layer":"parse","schema_version":"cacg.v0"}

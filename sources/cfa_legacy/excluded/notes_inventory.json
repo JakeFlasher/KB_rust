@@ -1,0 +1,20 @@
+[
+  {
+    "exclude_reason": "notes_user_volatile",
+    "format": "PDF",
+    "legacy_abs_path": "/home/jakeshea/CFA_reading/CFA_reading/notes/CFA_note_2.ocr.pdf",
+    "legacy_path": "notes/CFA_note_2.ocr.pdf",
+    "source_id": null,
+    "source_sha256_actual": "e1dd88c9c0311dda138f9c6dd492adc04a45881e962426139d6b1e0fdd2610ec",
+    "status": "excluded"
+  },
+  {
+    "exclude_reason": "notes_user_volatile",
+    "format": "PDF",
+    "legacy_abs_path": "/home/jakeshea/CFA_reading/CFA_reading/notes/CFA_note_2.pdf",
+    "legacy_path": "notes/CFA_note_2.pdf",
+    "source_id": null,
+    "source_sha256_actual": "71fdb651d89ec9798a73bc45fe1c2c371e0e6aef90570f2a0e03033a22d92bef",
+    "status": "excluded"
+  }
+]

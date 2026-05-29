@@ -1,0 +1,42 @@
+# Default text handling: normalize to LF on commit; preserve LF on checkout.
+* text=auto eol=lf
+
+# Parity corpus: LF-only, no whitespace mangling.
+# Line-ending policy comes from the canonical JSON spec; corpus
+# integrity depends on byte-stable artifacts across checkouts.
+tests/parity_corpus/** text eol=lf
+tests/parity_corpus/**/out_python/** text eol=lf
+tests/parity_corpus/**/*.json text eol=lf
+tests/parity_corpus/**/*.jsonl text eol=lf
+tests/parity_corpus/**/*.md text eol=lf
+
+# Existing golden cards + adversarial fixtures.
+tests/golden/*.md text eol=lf
+tests/adversarial/*.md text eol=lf
+tests/fixtures/*.md text eol=lf
+
+# Research artifacts (the canonical JSON spec, future Rust-port reports).
+_research/*.md text eol=lf
+
+# Manifests + journals (production artifacts in the user's `out/` dir are
+# gitignored, but the documented byte-shape is the same).
+out/*.json text eol=lf
+out/*.jsonl text eol=lf
+
+# Plan docs.
+plans/*.md text eol=lf
+docs/*.md text eol=lf
+docs/**/*.md text eol=lf
+
+# PDF fixtures: binary, do not touch.
+tests/fixtures/*.pdf binary
+tests/parity_corpus/**/*.pdf binary
+*.pdf binary
+
+# SQLite sidecar: binary.
+*.sqlite binary
+*.sqlite3 binary
+
+# Lock files for deterministic Python/Cargo builds.
+uv.lock text eol=lf
+Cargo.lock text eol=lf

@@ -1,0 +1,1 @@
+{"diagnostics":[{"code":"CACG-FM-008","file":"<citation-quote-empty>","message":"validation error at citations.0.quote: String should have at least 1 character","severity":"error"}],"oracle_layer":"parse","schema_version":"cacg.v0"}

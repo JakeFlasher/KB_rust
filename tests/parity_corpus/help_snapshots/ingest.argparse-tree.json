@@ -1,0 +1,46 @@
+{
+  "mutex_groups": [],
+  "name": "ingest",
+  "options": [
+    {
+      "action": "_StoreAction",
+      "default": null,
+      "dest": "config",
+      "is_positional": false,
+      "option_strings": [
+        "--config"
+      ],
+      "required": false
+    },
+    {
+      "action": "_StoreAction",
+      "default": "out",
+      "dest": "out",
+      "is_positional": false,
+      "option_strings": [
+        "--out"
+      ],
+      "required": false
+    },
+    {
+      "action": "_StoreAction",
+      "default": null,
+      "dest": "source_id",
+      "is_positional": false,
+      "option_strings": [
+        "--source-id"
+      ],
+      "required": false
+    }
+  ],
+  "positionals": [
+    {
+      "action": "_StoreAction",
+      "default": null,
+      "dest": "pdf",
+      "is_positional": true,
+      "nargs": null,
+      "required": true
+    }
+  ]
+}

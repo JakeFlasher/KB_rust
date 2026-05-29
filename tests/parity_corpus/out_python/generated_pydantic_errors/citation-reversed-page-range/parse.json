@@ -1,0 +1,1 @@
+{"diagnostics":[{"code":"CACG-CITE-003","file":"<citation-reversed-page-range>","message":"citations.0.page_range: page_range must be ascending start<=end (Value error, page_range must be ascending (start <= end))","severity":"error"}],"oracle_layer":"parse","schema_version":"cacg.v0"}

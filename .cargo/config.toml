@@ -1,0 +1,10 @@
+# Repo-local Cargo aliases.
+#
+# The `xtask` alias exposes the workspace's xtask crate as a top-level
+# Cargo subcommand. Documented commands the plan promises:
+#   cargo xtask lint-platform-cfg      # AC-D4 platform-cfg scanner
+#   cargo xtask parity                 # M2 parity harness (lands later)
+#   cargo xtask bench                  # M6 benchmark runner (lands later)
+
+[alias]
+xtask = "run -p xtask --"

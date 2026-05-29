@@ -1,0 +1,127 @@
+{
+  "schema_version": "cacg.v0.eval1",
+  "description": "Retrieval-quality eval cases for `cargo xtask retrieval-eval`. Each case runs its query through the in-memory cacg-search BM25 backend and asserts every expected_card_id lands within the top-k. The gate checks card-id membership, not scores, so a float score-presentation change cannot mask a rank regression. The corpus is the real Damodaran-sourced CFA first-bite corpus (synthetic=false).",
+  "cases": [
+    {
+      "name": "title_match_intrinsic",
+      "match_field": "title",
+      "synthetic": false,
+      "summaries": "tests/parity_corpus/cfa_first_bite/summaries.json",
+      "source_matrix": "tests/parity_corpus/cfa_first_bite/source_matrix.json",
+      "query": "intrinsic",
+      "k": 3,
+      "expected_card_ids": ["intrinsic-valuation-discounted-cash-flows"]
+    },
+    {
+      "name": "summary_match_premium",
+      "match_field": "summary",
+      "synthetic": false,
+      "summaries": "tests/parity_corpus/cfa_first_bite/summaries.json",
+      "source_matrix": "tests/parity_corpus/cfa_first_bite/source_matrix.json",
+      "query": "premium",
+      "k": 3,
+      "expected_card_ids": ["equity-risk-and-expected-return"]
+    },
+    {
+      "name": "tag_match_cost_of_equity",
+      "match_field": "tag",
+      "synthetic": false,
+      "summaries": "tests/parity_corpus/cfa_first_bite/summaries.json",
+      "source_matrix": "tests/parity_corpus/cfa_first_bite/source_matrix.json",
+      "query": "cost-of-equity",
+      "k": 3,
+      "expected_card_ids": ["equity-risk-and-expected-return"]
+    },
+    {
+      "name": "zero_result_no_match",
+      "match_field": "none",
+      "synthetic": false,
+      "summaries": "tests/parity_corpus/cfa_first_bite/summaries.json",
+      "source_matrix": "tests/parity_corpus/cfa_first_bite/source_matrix.json",
+      "query": "zzznomatchxyzzy",
+      "k": 3,
+      "expected_card_ids": []
+    },
+    {
+      "name": "cfa_multi_valuation",
+      "match_field": "title",
+      "synthetic": false,
+      "summaries": "tests/parity_corpus/cfa_first_bite/summaries.json",
+      "source_matrix": "tests/parity_corpus/cfa_first_bite/source_matrix.json",
+      "query": "valuation",
+      "k": 3,
+      "expected_card_ids": [
+        "intrinsic-valuation-discounted-cash-flows",
+        "relative-valuation-pricing-multiples"
+      ]
+    },
+    {
+      "name": "qm_title_match_foundations",
+      "match_field": "title",
+      "synthetic": false,
+      "summaries": "tests/parity_corpus/out_python/qm_vertical/summaries.json",
+      "source_matrix": "tests/parity_corpus/out_python/qm_vertical/source_matrix.json",
+      "query": "foundations",
+      "k": 3,
+      "expected_card_ids": [
+        "qm-multiple-linear-regression-foundations",
+        "qm-time-series-foundations"
+      ]
+    },
+    {
+      "name": "qm_summary_match_gauss_markov",
+      "match_field": "summary",
+      "synthetic": false,
+      "summaries": "tests/parity_corpus/out_python/qm_vertical/summaries.json",
+      "source_matrix": "tests/parity_corpus/out_python/qm_vertical/source_matrix.json",
+      "query": "Gauss-Markov",
+      "k": 3,
+      "expected_card_ids": [
+        "qm-multiple-linear-regression-foundations"
+      ]
+    },
+    {
+      "name": "qm_tag_match_garch",
+      "match_field": "tag",
+      "synthetic": false,
+      "summaries": "tests/parity_corpus/out_python/qm_vertical/summaries.json",
+      "source_matrix": "tests/parity_corpus/out_python/qm_vertical/source_matrix.json",
+      "query": "garch",
+      "k": 3,
+      "expected_card_ids": [
+        "qm-volatility-model-garch-multivariate",
+        "qm-arch-conditional-heteroskedasticity"
+      ]
+    },
+    {
+      "name": "qm_zero_result_no_match",
+      "match_field": "none",
+      "synthetic": false,
+      "summaries": "tests/parity_corpus/out_python/qm_vertical/summaries.json",
+      "source_matrix": "tests/parity_corpus/out_python/qm_vertical/source_matrix.json",
+      "query": "zzznomatchxyzzy",
+      "k": 3,
+      "expected_card_ids": []
+    },
+    {
+      "name": "qm_unauthorized_excludes_garch_card",
+      "match_field": "none",
+      "synthetic": false,
+      "summaries": "tests/parity_corpus/out_python/qm_vertical/summaries.json",
+      "source_matrix": "tests/parity_corpus/out_python/qm_vertical/source_matrix_unauthorized_qm.json",
+      "query": "garch",
+      "k": 3,
+      "expected_card_ids": []
+    },
+    {
+      "name": "qm_no_reading_excludes_garch_card",
+      "match_field": "none",
+      "synthetic": false,
+      "summaries": "tests/parity_corpus/out_python/qm_vertical/summaries.json",
+      "source_matrix": "tests/parity_corpus/out_python/qm_vertical/source_matrix_no_qm_reading.json",
+      "query": "garch",
+      "k": 3,
+      "expected_card_ids": []
+    }
+  ]
+}

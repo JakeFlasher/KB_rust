@@ -1,0 +1,937 @@
+{
+  "cards": {
+    "rm-backtesting-investment-strategies": {
+      "audit_flag": "ok",
+      "citations": [
+        {
+          "chunk_id": "rm_mcneil_frey_embrechts_2015_qrm:p372:0532",
+          "legacy_pages": [
+            351,
+            365
+          ],
+          "page_range_emitted": [
+            372,
+            373
+          ],
+          "pdf_pages": [
+            372,
+            386
+          ],
+          "role": "primary",
+          "source_id": "rm_mcneil_frey_embrechts_2015_qrm"
+        },
+        {
+          "chunk_id": "rm_mcneil_frey_embrechts_2015_qrm:p373:0533",
+          "legacy_pages": [
+            351,
+            365
+          ],
+          "page_range_emitted": [
+            373,
+            374
+          ],
+          "pdf_pages": [
+            372,
+            386
+          ],
+          "role": "supporting",
+          "source_id": "rm_mcneil_frey_embrechts_2015_qrm"
+        }
+      ],
+      "source_stance": "primary-mcneil",
+      "title": "Backtesting Investment Strategies — L1 Notes Exceedance-Counting Framework"
+    },
+    "rm-chinese-cb-default-cohort-attribution": {
+      "audit_flag": "ok",
+      "citations": [
+        {
+          "chunk_id": "rm_mcneil_frey_embrechts_2015_qrm:p446:0645",
+          "legacy_pages": [
+            425,
+            470
+          ],
+          "page_range_emitted": [
+            446,
+            447
+          ],
+          "pdf_pages": [
+            446,
+            491
+          ],
+          "role": "primary",
+          "source_id": "rm_mcneil_frey_embrechts_2015_qrm"
+        },
+        {
+          "chunk_id": "china_cb_dajia_credit_risk_immune_2024:p003:0001",
+          "legacy_pages": [
+            1,
+            9
+          ],
+          "page_range_emitted": [
+            3,
+            4
+          ],
+          "pdf_pages": [
+            1,
+            9
+          ],
+          "role": "supporting",
+          "source_id": "china_cb_dajia_credit_risk_immune_2024"
+        },
+        {
+          "chunk_id": "china_cb_lianhe_risk_reconstruction_2025:p001:0000",
+          "legacy_pages": [
+            1,
+            15
+          ],
+          "page_range_emitted": [
+            1,
+            2
+          ],
+          "pdf_pages": [
+            1,
+            15
+          ],
+          "role": "supporting",
+          "source_id": "china_cb_lianhe_risk_reconstruction_2025"
+        },
+        {
+          "chunk_id": "china_cb_lianhe_h1_default_review_2025:p001:0000",
+          "legacy_pages": [
+            1,
+            15
+          ],
+          "page_range_emitted": [
+            1,
+            2
+          ],
+          "pdf_pages": [
+            1,
+            15
+          ],
+          "role": "supporting",
+          "source_id": "china_cb_lianhe_h1_default_review_2025"
+        },
+        {
+          "chunk_id": "china_cb_lianhe_annual_bond_market_2025:p001:0000",
+          "legacy_pages": [
+            1,
+            14
+          ],
+          "page_range_emitted": [
+            1,
+            2
+          ],
+          "pdf_pages": [
+            1,
+            14
+          ],
+          "role": "supporting",
+          "source_id": "china_cb_lianhe_annual_bond_market_2025"
+        },
+        {
+          "chunk_id": "china_cb_spc_bond_disputes_2020:p001:0000",
+          "legacy_pages": [
+            1,
+            10
+          ],
+          "page_range_emitted": [
+            1,
+            2
+          ],
+          "pdf_pages": [
+            1,
+            10
+          ],
+          "role": "supporting",
+          "source_id": "china_cb_spc_bond_disputes_2020"
+        },
+        {
+          "chunk_id": "rm_mcneil_frey_embrechts_2015_qrm:p393:0563",
+          "legacy_pages": [
+            367,
+            374
+          ],
+          "page_range_emitted": [
+            393,
+            394
+          ],
+          "pdf_pages": [
+            388,
+            395
+          ],
+          "role": "supporting",
+          "source_id": "rm_mcneil_frey_embrechts_2015_qrm"
+        }
+      ],
+      "source_stance": "primary-mcneil",
+      "title": "Chinese CB Default-Cohort Attribution Under McNeil Portfolio Credit-Risk Framework"
+    },
+    "rm-credit-risk-metrics-restatement": {
+      "audit_flag": "ok",
+      "citations": [
+        {
+          "chunk_id": "rm_mcneil_frey_embrechts_2015_qrm:p393:0562",
+          "legacy_pages": [
+            372,
+            374
+          ],
+          "page_range_emitted": [
+            393,
+            393
+          ],
+          "pdf_pages": [
+            393,
+            395
+          ],
+          "role": "primary",
+          "source_id": "rm_mcneil_frey_embrechts_2015_qrm"
+        },
+        {
+          "chunk_id": "rm_mcneil_frey_embrechts_2015_qrm:p388:0554",
+          "legacy_pages": [
+            367,
+            372
+          ],
+          "page_range_emitted": [
+            388,
+            388
+          ],
+          "pdf_pages": [
+            388,
+            393
+          ],
+          "role": "supporting",
+          "source_id": "rm_mcneil_frey_embrechts_2015_qrm"
+        }
+      ],
+      "source_stance": "primary-mcneil",
+      "title": "Credit Risk Metrics Restatement — McNeil Ch.10 §10.1 + §10.1.5"
+    },
+    "rm-credit-var-portfolio": {
+      "audit_flag": "ok",
+      "citations": [
+        {
+          "chunk_id": "rm_mcneil_frey_embrechts_2015_qrm:p447:0646",
+          "legacy_pages": [
+            425,
+            456
+          ],
+          "page_range_emitted": [
+            447,
+            448
+          ],
+          "pdf_pages": [
+            446,
+            477
+          ],
+          "role": "primary",
+          "source_id": "rm_mcneil_frey_embrechts_2015_qrm"
+        },
+        {
+          "chunk_id": "rm_mcneil_frey_embrechts_2015_qrm:p465:0674",
+          "legacy_pages": [
+            444,
+            456
+          ],
+          "page_range_emitted": [
+            465,
+            465
+          ],
+          "pdf_pages": [
+            465,
+            477
+          ],
+          "role": "supporting",
+          "source_id": "rm_mcneil_frey_embrechts_2015_qrm"
+        }
+      ],
+      "source_stance": "primary-mcneil",
+      "title": "Portfolio Credit-VaR — McNeil Ch.11 §11.1-§11.3"
+    },
+    "rm-delta-gamma-vega-pl-decomposition": {
+      "audit_flag": "ok",
+      "citations": [
+        {
+          "chunk_id": "rm_mcneil_frey_embrechts_2015_qrm:p348:0496",
+          "legacy_pages": [
+            327,
+            329
+          ],
+          "page_range_emitted": [
+            348,
+            349
+          ],
+          "pdf_pages": [
+            348,
+            350
+          ],
+          "role": "primary",
+          "source_id": "rm_mcneil_frey_embrechts_2015_qrm"
+        },
+        {
+          "chunk_id": "rm_mcneil_frey_embrechts_2015_qrm:p349:0497",
+          "legacy_pages": [
+            327,
+            329
+          ],
+          "page_range_emitted": [
+            349,
+            350
+          ],
+          "pdf_pages": [
+            348,
+            350
+          ],
+          "role": "supporting",
+          "source_id": "rm_mcneil_frey_embrechts_2015_qrm"
+        }
+      ],
+      "source_stance": "primary-mcneil",
+      "title": "Delta-Gamma-Vega P&L Decomposition — L1 Notes Portfolio-Risk-Reporting Framing"
+    },
+    "rm-expected-shortfall-mechanics": {
+      "audit_flag": "ok",
+      "citations": [
+        {
+          "chunk_id": "rm_mcneil_frey_embrechts_2015_qrm:p090:0129",
+          "legacy_pages": [
+            69,
+            72
+          ],
+          "page_range_emitted": [
+            90,
+            91
+          ],
+          "pdf_pages": [
+            90,
+            93
+          ],
+          "role": "primary",
+          "source_id": "rm_mcneil_frey_embrechts_2015_qrm"
+        },
+        {
+          "chunk_id": "rm_mcneil_frey_embrechts_2015_qrm:p308:0439",
+          "legacy_pages": [
+            286,
+            292
+          ],
+          "page_range_emitted": [
+            308,
+            308
+          ],
+          "pdf_pages": [
+            307,
+            313
+          ],
+          "role": "supporting",
+          "source_id": "rm_mcneil_frey_embrechts_2015_qrm"
+        }
+      ],
+      "source_stance": "primary-mcneil",
+      "title": "Expected Shortfall Mechanics — McNeil Ch.2 §2.3.4 + Ch.8 §8.2"
+    },
+    "rm-integrated-firm-wide-risk-aggregation": {
+      "audit_flag": "ok",
+      "citations": [
+        {
+          "chunk_id": "rm_mcneil_frey_embrechts_2015_qrm:p320:0457",
+          "legacy_pages": [
+            299,
+            322
+          ],
+          "page_range_emitted": [
+            320,
+            321
+          ],
+          "pdf_pages": [
+            320,
+            343
+          ],
+          "role": "primary",
+          "source_id": "rm_mcneil_frey_embrechts_2015_qrm"
+        },
+        {
+          "chunk_id": "rm_mcneil_frey_embrechts_2015_qrm:p525:0766",
+          "legacy_pages": [
+            503,
+            512
+          ],
+          "page_range_emitted": [
+            525,
+            526
+          ],
+          "pdf_pages": [
+            524,
+            533
+          ],
+          "role": "supporting",
+          "source_id": "rm_mcneil_frey_embrechts_2015_qrm"
+        }
+      ],
+      "source_stance": "primary-mcneil",
+      "title": "Integrated Firm-Wide Risk Aggregation — McNeil Ch.8 §8.4-§8.5"
+    },
+    "rm-loss-distribution-anatomy": {
+      "audit_flag": "ok",
+      "citations": [
+        {
+          "chunk_id": "rm_mcneil_frey_embrechts_2015_qrm:p079:0110",
+          "legacy_pages": [
+            58,
+            61
+          ],
+          "page_range_emitted": [
+            79,
+            79
+          ],
+          "pdf_pages": [
+            79,
+            82
+          ],
+          "role": "primary",
+          "source_id": "rm_mcneil_frey_embrechts_2015_qrm"
+        },
+        {
+          "chunk_id": "rm_mcneil_frey_embrechts_2015_qrm:p296:0424",
+          "legacy_pages": [
+            275,
+            280
+          ],
+          "page_range_emitted": [
+            296,
+            297
+          ],
+          "pdf_pages": [
+            296,
+            301
+          ],
+          "role": "supporting",
+          "source_id": "rm_mcneil_frey_embrechts_2015_qrm"
+        }
+      ],
+      "source_stance": "primary-mcneil",
+      "title": "Loss-Distribution Anatomy — P&L Convention, Horizons, and Mapping"
+    },
+    "rm-operational-risk-basics": {
+      "audit_flag": "ok",
+      "citations": [
+        {
+          "chunk_id": "rm_mcneil_frey_embrechts_2015_qrm:p525:0766",
+          "legacy_pages": [
+            503,
+            509
+          ],
+          "page_range_emitted": [
+            525,
+            526
+          ],
+          "pdf_pages": [
+            524,
+            530
+          ],
+          "role": "primary",
+          "source_id": "rm_mcneil_frey_embrechts_2015_qrm"
+        }
+      ],
+      "source_stance": "primary-mcneil",
+      "title": "Operational Risk Basics — McNeil Ch.13 §13.1"
+    },
+    "rm-operational-risk-quantification": {
+      "audit_flag": "ok",
+      "citations": [
+        {
+          "chunk_id": "rm_mcneil_frey_embrechts_2015_qrm:p535:0780",
+          "legacy_pages": [
+            512,
+            525
+          ],
+          "page_range_emitted": [
+            535,
+            535
+          ],
+          "pdf_pages": [
+            533,
+            546
+          ],
+          "role": "primary",
+          "source_id": "rm_mcneil_frey_embrechts_2015_qrm"
+        }
+      ],
+      "source_stance": "primary-mcneil",
+      "title": "Operational Risk Quantification — McNeil Ch.13 §13.2"
+    },
+    "rm-portfolio-xva-aggregation": {
+      "audit_flag": "ok",
+      "citations": [
+        {
+          "chunk_id": "rm_mcneil_frey_embrechts_2015_qrm:p624:0908",
+          "legacy_pages": [
+            603,
+            624
+          ],
+          "page_range_emitted": [
+            624,
+            625
+          ],
+          "pdf_pages": [
+            624,
+            645
+          ],
+          "role": "primary",
+          "source_id": "rm_mcneil_frey_embrechts_2015_qrm"
+        },
+        {
+          "chunk_id": "rm_mcneil_frey_embrechts_2015_qrm:p627:0912",
+          "legacy_pages": [
+            603,
+            624
+          ],
+          "page_range_emitted": [
+            627,
+            627
+          ],
+          "pdf_pages": [
+            624,
+            645
+          ],
+          "role": "primary",
+          "source_id": "rm_mcneil_frey_embrechts_2015_qrm"
+        },
+        {
+          "chunk_id": "fi_crepey_bielecki_brigo_2014_counterparty_risk_funding:p018:0015",
+          "legacy_pages": [
+            1,
+            50
+          ],
+          "page_range_emitted": [
+            18,
+            18
+          ],
+          "pdf_pages": [
+            1,
+            50
+          ],
+          "role": "supporting",
+          "source_id": "fi_crepey_bielecki_brigo_2014_counterparty_risk_funding"
+        },
+        {
+          "chunk_id": "rm_mcneil_frey_embrechts_2015_qrm:p498:0723",
+          "legacy_pages": [
+            476,
+            487
+          ],
+          "page_range_emitted": [
+            498,
+            499
+          ],
+          "pdf_pages": [
+            497,
+            508
+          ],
+          "role": "supporting",
+          "source_id": "rm_mcneil_frey_embrechts_2015_qrm"
+        }
+      ],
+      "source_stance": "primary-mcneil",
+      "title": "Portfolio XVA Aggregation — McNeil Ch.17 §17.2-§17.3 + Crepey-Bielecki-Brigo Ch.1-2"
+    },
+    "rm-real-rate-policy-rate-notes": {
+      "audit_flag": "wrong_volume_corrected",
+      "citations": [
+        {
+          "chunk_id": "cfa_2022_l1_combined:p859:1198",
+          "legacy_pages": [
+            278,
+            283
+          ],
+          "page_range_emitted": [
+            859,
+            859
+          ],
+          "pdf_pages": [
+            855,
+            860
+          ],
+          "role": "primary",
+          "source_id": "cfa_2022_l1_combined"
+        },
+        {
+          "chunk_id": "cfa_2022_l1_combined:p882:1237",
+          "legacy_pages": [
+            305,
+            310
+          ],
+          "page_range_emitted": [
+            882,
+            883
+          ],
+          "pdf_pages": [
+            882,
+            887
+          ],
+          "role": "supporting",
+          "source_id": "cfa_2022_l1_combined"
+        }
+      ],
+      "source_stance": "primary-cfa",
+      "title": "Real Rate vs Policy Rate — L1 Notes Risk-Input Decomposition"
+    },
+    "rm-risk-measure-axioms": {
+      "audit_flag": "ok",
+      "citations": [
+        {
+          "chunk_id": "rm_mcneil_frey_embrechts_2015_qrm:p094:0135",
+          "legacy_pages": [
+            72,
+            78
+          ],
+          "page_range_emitted": [
+            94,
+            95
+          ],
+          "pdf_pages": [
+            93,
+            99
+          ],
+          "role": "primary",
+          "source_id": "rm_mcneil_frey_embrechts_2015_qrm"
+        },
+        {
+          "chunk_id": "rm_mcneil_frey_embrechts_2015_qrm:p095:0137",
+          "legacy_pages": [
+            72,
+            78
+          ],
+          "page_range_emitted": [
+            95,
+            96
+          ],
+          "pdf_pages": [
+            93,
+            99
+          ],
+          "role": "primary",
+          "source_id": "rm_mcneil_frey_embrechts_2015_qrm"
+        },
+        {
+          "chunk_id": "rm_mcneil_frey_embrechts_2015_qrm:p296:0424",
+          "legacy_pages": [
+            275,
+            285
+          ],
+          "page_range_emitted": [
+            296,
+            297
+          ],
+          "pdf_pages": [
+            296,
+            306
+          ],
+          "role": "supporting",
+          "source_id": "rm_mcneil_frey_embrechts_2015_qrm"
+        }
+      ],
+      "source_stance": "primary-mcneil",
+      "title": "Coherent and Convex Risk-Measure Axioms"
+    },
+    "rm-risk-type-taxonomy": {
+      "audit_flag": "ok",
+      "citations": [
+        {
+          "chunk_id": "rm_mcneil_frey_embrechts_2015_qrm:p065:0087",
+          "legacy_pages": [
+            44,
+            46
+          ],
+          "page_range_emitted": [
+            65,
+            66
+          ],
+          "pdf_pages": [
+            65,
+            67
+          ],
+          "role": "supporting",
+          "source_id": "rm_mcneil_frey_embrechts_2015_qrm"
+        },
+        {
+          "chunk_id": "rm_mcneil_frey_embrechts_2015_qrm:p025:0021",
+          "legacy_pages": [
+            5,
+            7
+          ],
+          "page_range_emitted": [
+            26,
+            26
+          ],
+          "pdf_pages": [
+            26,
+            28
+          ],
+          "role": "primary",
+          "source_id": "rm_mcneil_frey_embrechts_2015_qrm"
+        }
+      ],
+      "source_stance": "primary-mcneil",
+      "title": "Risk-Type Taxonomy — Market / Credit / Liquidity / Operational / Business / Regulatory"
+    },
+    "rm-scenario-analysis": {
+      "audit_flag": "ok",
+      "citations": [
+        {
+          "chunk_id": "rm_mcneil_frey_embrechts_2015_qrm:p084:0119",
+          "legacy_pages": [
+            61,
+            64
+          ],
+          "page_range_emitted": [
+            84,
+            85
+          ],
+          "pdf_pages": [
+            82,
+            85
+          ],
+          "role": "primary",
+          "source_id": "rm_mcneil_frey_embrechts_2015_qrm"
+        },
+        {
+          "chunk_id": "rm_mcneil_frey_embrechts_2015_qrm:p323:0461",
+          "legacy_pages": [
+            302,
+            305
+          ],
+          "page_range_emitted": [
+            323,
+            323
+          ],
+          "pdf_pages": [
+            323,
+            326
+          ],
+          "role": "supporting",
+          "source_id": "rm_mcneil_frey_embrechts_2015_qrm"
+        }
+      ],
+      "source_stance": "primary-mcneil",
+      "title": "Scenario Analysis — Forward-Looking Loss Aggregation under Designed Scenarios"
+    },
+    "rm-stress-testing": {
+      "audit_flag": "ok",
+      "citations": [
+        {
+          "chunk_id": "rm_mcneil_frey_embrechts_2015_qrm:p314:0448",
+          "legacy_pages": [
+            293,
+            298
+          ],
+          "page_range_emitted": [
+            314,
+            315
+          ],
+          "pdf_pages": [
+            314,
+            319
+          ],
+          "role": "primary",
+          "source_id": "rm_mcneil_frey_embrechts_2015_qrm"
+        },
+        {
+          "chunk_id": "rm_mcneil_frey_embrechts_2015_qrm:p156:0219",
+          "legacy_pages": [
+            135,
+            150
+          ],
+          "page_range_emitted": [
+            156,
+            157
+          ],
+          "pdf_pages": [
+            156,
+            171
+          ],
+          "role": "supporting",
+          "source_id": "rm_mcneil_frey_embrechts_2015_qrm"
+        }
+      ],
+      "source_stance": "primary-mcneil",
+      "title": "Stress Testing — Coherent-Risk-Measure Duals and Reverse Stress"
+    },
+    "rm-value-added-active-return": {
+      "audit_flag": "wrong_volume_corrected",
+      "citations": [
+        {
+          "chunk_id": "cfa_2022_l1_combined:p3188:4756",
+          "legacy_pages": [
+            551,
+            551
+          ],
+          "page_range_emitted": [
+            3188,
+            3188
+          ],
+          "pdf_pages": [
+            3188,
+            3188
+          ],
+          "role": "primary",
+          "source_id": "cfa_2022_l1_combined"
+        },
+        {
+          "chunk_id": "cfa_2022_l1_combined:p3199:4770",
+          "legacy_pages": [
+            562,
+            563
+          ],
+          "page_range_emitted": [
+            3199,
+            3200
+          ],
+          "pdf_pages": [
+            3199,
+            3200
+          ],
+          "role": "primary",
+          "source_id": "cfa_2022_l1_combined"
+        },
+        {
+          "chunk_id": "cfa_2022_l1_combined:p3190:4759",
+          "legacy_pages": [
+            553,
+            554
+          ],
+          "page_range_emitted": [
+            3190,
+            3191
+          ],
+          "pdf_pages": [
+            3190,
+            3191
+          ],
+          "role": "supporting",
+          "source_id": "cfa_2022_l1_combined"
+        }
+      ],
+      "source_stance": "primary-cfa",
+      "title": "Value-Added and Active Return — L1 Notes Risk-Budget-Consumption Framing"
+    },
+    "rm-value-at-risk-notes": {
+      "audit_flag": "ok",
+      "citations": [
+        {
+          "chunk_id": "rm_mcneil_frey_embrechts_2015_qrm:p085:0120",
+          "legacy_pages": [
+            64,
+            67
+          ],
+          "page_range_emitted": [
+            85,
+            85
+          ],
+          "pdf_pages": [
+            85,
+            88
+          ],
+          "role": "primary",
+          "source_id": "rm_mcneil_frey_embrechts_2015_qrm"
+        },
+        {
+          "chunk_id": "rm_mcneil_frey_embrechts_2015_qrm:p085:0121",
+          "legacy_pages": [
+            64,
+            67
+          ],
+          "page_range_emitted": [
+            85,
+            86
+          ],
+          "pdf_pages": [
+            85,
+            88
+          ],
+          "role": "primary",
+          "source_id": "rm_mcneil_frey_embrechts_2015_qrm"
+        },
+        {
+          "chunk_id": "rm_mcneil_frey_embrechts_2015_qrm:p086:0122",
+          "legacy_pages": [
+            64,
+            67
+          ],
+          "page_range_emitted": [
+            86,
+            87
+          ],
+          "pdf_pages": [
+            85,
+            88
+          ],
+          "role": "supporting",
+          "source_id": "rm_mcneil_frey_embrechts_2015_qrm"
+        }
+      ],
+      "source_stance": "primary-mcneil",
+      "title": "Value-at-Risk — L1 Notes Definition and Estimation Framework"
+    },
+    "rm-var-and-es-taxonomy": {
+      "audit_flag": "ok",
+      "citations": [
+        {
+          "chunk_id": "rm_mcneil_frey_embrechts_2015_qrm:p090:0129",
+          "legacy_pages": [
+            64,
+            72
+          ],
+          "page_range_emitted": [
+            90,
+            91
+          ],
+          "pdf_pages": [
+            85,
+            93
+          ],
+          "role": "primary",
+          "source_id": "rm_mcneil_frey_embrechts_2015_qrm"
+        },
+        {
+          "chunk_id": "rm_mcneil_frey_embrechts_2015_qrm:p092:0132",
+          "legacy_pages": [
+            64,
+            72
+          ],
+          "page_range_emitted": [
+            92,
+            93
+          ],
+          "pdf_pages": [
+            85,
+            93
+          ],
+          "role": "primary",
+          "source_id": "rm_mcneil_frey_embrechts_2015_qrm"
+        },
+        {
+          "chunk_id": "rm_mcneil_frey_embrechts_2015_qrm:p307:0438",
+          "legacy_pages": [
+            286,
+            292
+          ],
+          "page_range_emitted": [
+            307,
+            308
+          ],
+          "pdf_pages": [
+            307,
+            313
+          ],
+          "role": "supporting",
+          "source_id": "rm_mcneil_frey_embrechts_2015_qrm"
+        }
+      ],
+      "source_stance": "primary-mcneil",
+      "title": "VaR and Expected Shortfall — Side-by-Side Taxonomy"
+    }
+  },
+  "schema_version": "cfa_legacy.rm_11_slice.v1"
+}

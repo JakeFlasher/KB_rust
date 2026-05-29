@@ -1,0 +1,3263 @@
+{
+  "schema_version": "cfa_legacy.cb_08_curated.v1",
+  "generated_by": "08_CB card audit subagent swarm (3 batches: 17 + 17 + 16)",
+  "generated_at_utc": "1970-01-01T00:00:00Z",
+  "audit_summary": {
+    "total_cards": 50,
+    "dropped_quotes_with_control_chars": 10,
+    "notes": "185 raw citations from 3 audit batches. 10 citations dropped because their verbatim quotes contained U+FFFE soft-hyphen control characters that the framework rejects (CACG-FM-008). Offset map updates: Calamos +15, Thorp +7, DeSpiegeleer +19, Koziol 0, AnDaoquan 2014/2023 0, Philips +15, Zubulake +21. Topical corrections: 6 Brooks cards CFA Vol.6 pp.420-441 (Ethics) -> pp.134-225 (Tech Analysis); cb-binomial-tree Hull pp.241-242 (tax) -> PDF 287-314; cb-bond-anatomy Vol.5/pp.42-58 (Convexity) -> Vol.5/p.184 (R45)."
+  },
+  "cards": [
+    {
+      "card_id": "cb-arbitrage-strategy",
+      "title": "Convertible Arbitrage Strategy",
+      "summary_curated": "A convertible-arbitrage position pairs a long CB with a short of delta-equivalent underlying shares, harvesting positive gamma via dynamic rebalancing; the P&L decomposes into delta, gamma, vega, theta, coupon, dividend, and borrow components with secondary credit/vega hedges optionally overlaid for double-signed-gamma stress regimes.",
+      "source_stance": "primary-calamos",
+      "audit_flag": "wrong_pages_corrected",
+      "audit_notes": "OFFSET CORRECTIONS: Calamos is +15 (NOT +30) verified via running marker 'Page N' (PDF p20=printed pg 5, PDF p43=printed pg 28). Thorp/Kassouf is +7 (NOT +20) verified via Chapter 5 'THE SYSTEM IN ACTION' beginning at PDF p56=printed pg 49 (per ToC at PDF p4). DeSpiegeleer is +19 (NOT +20) verified via running header '56 The Handbook of Hybrid Securities' at PDF 75=printed pg 56. Recomputed PDF ranges: Calamos pp.3-95 → PDF 18-110; Calamos pp.260-300 → PDF 275-315; DeSpiegeleer pp.95-110 → PDF 114-129 (CoCos chapter, topically adjacent not the CB-arb credit-hedge section); Thorp pp.50-130 → PDF 57-137.",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "cb_calamos_2003_convertible_arbitrage",
+          "volume": null,
+          "legacy_pages": [
+            3,
+            95
+          ],
+          "pdf_pages": [
+            18,
+            110
+          ],
+          "chunk_id": "cb_calamos_2003_convertible_arbitrage:p021:0019",
+          "chunk_hash": "b929674cbb30422015f513c673dbb0e571e39c6b721962595dcff309e5b0ae49",
+          "quote": "Convertible securities are hybrid issues that have fixed-income and equity characteristics."
+        },
+        {
+          "role": "supporting",
+          "source_id": "cb_calamos_2003_convertible_arbitrage",
+          "volume": null,
+          "legacy_pages": [
+            260,
+            300
+          ],
+          "pdf_pages": [
+            275,
+            315
+          ],
+          "chunk_id": "cb_calamos_2003_convertible_arbitrage:p274:0302",
+          "chunk_hash": "4c2aa81b7e409af37cee030d47636432e579616db2dcc6ffe5450b0a56c4a996",
+          "quote": "Each position vega in points is multiplied by the position size to come up with the dollar exposure to vega."
+        },
+        {
+          "role": "supporting",
+          "source_id": "cb_despiegeleer_schoutens_vanhulle_2014_hybrid_securities",
+          "volume": null,
+          "legacy_pages": [
+            95,
+            110
+          ],
+          "pdf_pages": [
+            114,
+            129
+          ],
+          "chunk_id": "cb_despiegeleer_schoutens_vanhulle_2014_hybrid_securities:p128:0165",
+          "chunk_hash": "e2c05a0651e787c7e62277bd197a690414ecdb8b1e93413e9a02f04da32299f4",
+          "quote": "The probability of such a conversion will increase when the share price reaches depressed levels, even if the trigger is linked to, for example, a capital ratio."
+        },
+        {
+          "role": "supporting",
+          "source_id": "cb_thorp_kassouf_1967_beat_the_market",
+          "volume": null,
+          "legacy_pages": [
+            50,
+            130
+          ],
+          "pdf_pages": [
+            57,
+            137
+          ],
+          "chunk_id": "cb_thorp_kassouf_1967_beat_the_market:p058:0054",
+          "chunk_hash": "b9d57e332466c90e4068a509540b591c4a7926c5c83fa31a21d67c31801e4d98",
+          "quote": "The Molybdenum Story I first purchased Molybdenum common shares and sold short the warrants in October 1961."
+        }
+      ]
+    },
+    {
+      "card_id": "cb-binomial-tree-valuation",
+      "title": "Credit-Aware Binomial Tree for Convertibles",
+      "summary_curated": "The credit-aware binomial tree (CRR with default branch) prices convertibles whose embedded American options on the issuer's own continuation value defeat the special-case bond-plus-call identity; Hull §27.4 sets up the three-branch up/down/default node where default pays the recovery PV and credit risk is taken into account via stock-price-conditioned credit spreads.",
+      "source_stance": "primary-hull",
+      "audit_flag": "wrong_pages_corrected",
+      "audit_notes": "OFFSET CORRECTIONS: Hull pp.241-242 is WRONG topically — those PDF pages are wash-sale tax-rule content, not binomial trees. The actual Hull Binomial Trees chapter (Ch.13) is at PDF 287-314 (Hull offset 0 unchanged). Hull §27.4 Convertible Bonds at pp.650-651 is correctly mapped (offset 0). DeSpiegeleer pp.95-145 → PDF 114-164 with +19 offset (CoCos chapter, topically loose). Lando pp.60-90 → PDF 79-109 (offset +19 verified in 06_FI map). Primary cite redirected to Hull §13.1 binomial intro at PDF 287.",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "cb_hull_2022_options_futures_derivatives_11ed",
+          "volume": null,
+          "legacy_pages": [
+            241,
+            242
+          ],
+          "pdf_pages": [
+            287,
+            288
+          ],
+          "chunk_id": "cb_hull_2022_options_futures_derivatives_11ed:p287:0434",
+          "chunk_hash": "5c7b7e6b9882c668fe66533792f645b19456fa2701a9915ec311bb5712492fe0",
+          "quote": "A useful and very popular technique for pricing an option involves constructing a binomial tree."
+        },
+        {
+          "role": "supporting",
+          "source_id": "cb_hull_2022_options_futures_derivatives_11ed",
+          "volume": null,
+          "legacy_pages": [
+            650,
+            653
+          ],
+          "pdf_pages": [
+            650,
+            653
+          ],
+          "chunk_id": "cb_hull_2022_options_futures_derivatives_11ed:p650:0966",
+          "chunk_hash": "e972bd11f1061f9542bb0de121768a78e178cb4a8482c4dec60fa7c3a2225f3b",
+          "quote": "Credit risk plays an important role in the valuation of convertibles."
+        },
+        {
+          "role": "supporting",
+          "source_id": "cb_despiegeleer_schoutens_vanhulle_2014_hybrid_securities",
+          "volume": null,
+          "legacy_pages": [
+            95,
+            145
+          ],
+          "pdf_pages": [
+            114,
+            164
+          ],
+          "chunk_id": "cb_despiegeleer_schoutens_vanhulle_2014_hybrid_securities:p128:0165",
+          "chunk_hash": "e2c05a0651e787c7e62277bd197a690414ecdb8b1e93413e9a02f04da32299f4",
+          "quote": "Encountering a trigger will indeed happen at depressed share prices."
+        },
+        {
+          "role": "supporting",
+          "source_id": "cb_lando_2004_credit_risk_modeling",
+          "volume": null,
+          "legacy_pages": [
+            60,
+            90
+          ],
+          "pdf_pages": [
+            79,
+            109
+          ],
+          "chunk_id": "cb_lando_2004_credit_risk_modeling:p081:0094",
+          "chunk_hash": "1d65fc593814bbb3ebd8362b8696d3ad70649bb6f5953ba4f8f67480a35e0700",
+          "quote": "After debt and equity have been issued, it is the equity owners who decide when to default."
+        }
+      ]
+    },
+    {
+      "card_id": "cb-bond-anatomy-and-cashflows",
+      "title": "Convertible Bond Anatomy and Cashflows",
+      "summary_curated": "A convertible bond is a corporate-debt instrument whose holder owns an embedded right to surrender the bond for a fixed number of issuer shares; until conversion or maturity it pays coupons like an ordinary corporate bond, with conversion price K_c = F / q derived from face F and conversion ratio q, and call/put provisions modifying the bond-plus-call decomposition.",
+      "source_stance": "primary-despiegeleer",
+      "audit_flag": "wrong_pages_corrected",
+      "audit_notes": "OFFSET CORRECTIONS: DeSpiegeleer is +19 (not +20). Calamos is +15 (not +30). Zubulake is +21 (not +20) verified via 'Investment Value 31' header at PDF 52. DeSpiegeleer pp.21-30 → PDF 40-49; Calamos pp.3-12 → PDF 18-27; Zubulake pp.5-18 → PDF 26-39. CFA L1 cite WRONG topically: Vol.5 pp.42-58 is Bond Convexity (PDF 2679-2695, R44 Understanding Fixed-Income Risk and Return), NOT convertible-bond anatomy. The CFA L1 convertible bond mention is at Vol.5 p.184 (PDF 2820, R45 Derivative Markets and Instruments). Corrected supporting CFA cite to the actual derivatives reading.",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "cb_despiegeleer_schoutens_vanhulle_2014_hybrid_securities",
+          "volume": null,
+          "legacy_pages": [
+            21,
+            30
+          ],
+          "pdf_pages": [
+            40,
+            49
+          ],
+          "chunk_id": "cb_despiegeleer_schoutens_vanhulle_2014_hybrid_securities:p045:0050",
+          "chunk_hash": "36d0e915b9efae7a3e8aa407ef024af6169687bca4eb32a53e0778e7e98c95bf",
+          "quote": "The bond floor or the investment value is the value of the convertible if it were to be stripped of the possibility to convert into the underlying shares."
+        },
+        {
+          "role": "supporting",
+          "source_id": "cb_calamos_2003_convertible_arbitrage",
+          "volume": null,
+          "legacy_pages": [
+            3,
+            12
+          ],
+          "pdf_pages": [
+            18,
+            27
+          ],
+          "chunk_id": "cb_calamos_2003_convertible_arbitrage:p021:0019",
+          "chunk_hash": "b929674cbb30422015f513c673dbb0e571e39c6b721962595dcff309e5b0ae49",
+          "quote": "Convertible securities are hybrid issues that have fixed-income and equity characteristics."
+        },
+        {
+          "role": "supporting",
+          "source_id": "cb_zubulake_convertible_securities_worldwide",
+          "volume": null,
+          "legacy_pages": [
+            5,
+            18
+          ],
+          "pdf_pages": [
+            26,
+            39
+          ],
+          "chunk_id": "cb_zubulake_convertible_securities_worldwide:p027:0019",
+          "chunk_hash": "93f3fc0e57e36b56d0410720e08fb6617dff2f9f473ecab0bf4635bd4594d416",
+          "quote": "Convertible bonds are issued in either domestic, foreign, or Eurobond form."
+        },
+        {
+          "role": "supporting",
+          "source_id": "cfa_2022_l1_combined",
+          "volume": 5,
+          "legacy_pages": [
+            184,
+            184
+          ],
+          "pdf_pages": [
+            2820,
+            2821
+          ],
+          "chunk_id": "cfa_2022_l1_combined:p2820:4213",
+          "chunk_hash": "7790a3dd4fc3cf226f70a56f5e4df653bab79a296b6a978db913c2103e297d08",
+          "quote": "For example, options can be combined with bonds to form either callable bonds or convertible bonds."
+        }
+      ]
+    },
+    {
+      "card_id": "cb-bond-floor-investment-value",
+      "title": "Bond Floor (Investment Value)",
+      "summary_curated": "The credit-risky straight-bond floor B(t) is the lower bound of a CB price: discounting the coupon-and-face stream at the risk-free rate plus credit spread gives the value of the convertible stripped of its conversion right; the floor is itself risky and collapses to recovery on default, so 'downside protection' is conditional on issuer solvency.",
+      "source_stance": "primary-despiegeleer",
+      "audit_flag": "wrong_pages_corrected",
+      "audit_notes": "OFFSET CORRECTIONS: DeSpiegeleer is +19 (not +20). Calamos is +15 (not +30). DeSpiegeleer pp.40-58 → PDF 59-77. Calamos pp.30-50 → PDF 45-65. Lando pp.60-90 → PDF 79-109 (offset +19 verified in 06_FI map).",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "cb_despiegeleer_schoutens_vanhulle_2014_hybrid_securities",
+          "volume": null,
+          "legacy_pages": [
+            40,
+            58
+          ],
+          "pdf_pages": [
+            59,
+            77
+          ],
+          "chunk_id": "cb_despiegeleer_schoutens_vanhulle_2014_hybrid_securities:p045:0050",
+          "chunk_hash": "36d0e915b9efae7a3e8aa407ef024af6169687bca4eb32a53e0778e7e98c95bf",
+          "quote": "The bond floor or the investment value is the value of the convertible if it were to be stripped of the possibility to convert into the underlying shares."
+        },
+        {
+          "role": "supporting",
+          "source_id": "cb_calamos_2003_convertible_arbitrage",
+          "volume": null,
+          "legacy_pages": [
+            30,
+            50
+          ],
+          "pdf_pages": [
+            45,
+            65
+          ],
+          "chunk_id": "cb_calamos_2003_convertible_arbitrage:p055:0057",
+          "chunk_hash": "0ca1a724558b37d6e66b90e371edb2cce9be116fa2e81654e650a7a5535643af",
+          "quote": "Credit-risk assessment is extremely critical in the valuation process for convertibles."
+        },
+        {
+          "role": "supporting",
+          "source_id": "cb_lando_2004_credit_risk_modeling",
+          "volume": null,
+          "legacy_pages": [
+            60,
+            90
+          ],
+          "pdf_pages": [
+            79,
+            109
+          ],
+          "chunk_id": "cb_lando_2004_credit_risk_modeling:p081:0094",
+          "chunk_hash": "1d65fc593814bbb3ebd8362b8696d3ad70649bb6f5953ba4f8f67480a35e0700",
+          "quote": "After debt and equity have been issued, it is the equity owners who decide when to default."
+        }
+      ]
+    },
+    {
+      "card_id": "cb-brooks-price-action-guardrails",
+      "title": "Brooks Price-Action Guardrails for Chinese-CB Arbitrage Timing",
+      "summary_curated": "Brooks's price-action vocabulary supplies execution grammar (trend bar, trading range, pullback, signal bar) layered on top of a CB thesis already formed from clause structure, valuation, liquidity, and risk controls; it is explicitly NOT an alpha model, not a TA signal authority, and not a predictor of excess return — Brooks names the chart, the CB thesis carries the load.",
+      "source_stance": "primary-calamos",
+      "audit_flag": "wrong_pages_corrected",
+      "audit_notes": "OFFSET CORRECTIONS: Calamos +15 (not +30). CFA L1 Vol.6 pp.420-441 (legacy) is WRONG: PDF 3689-3710 is Standard IV(C) Code & Standards content, NOT Technical Analysis. The actual CFA Reading 54 Technical Analysis runs Vol.6 pp.134-225 (PDF 3402-3493). Brooks 2009 cites use offset 0 (treating physical PDF pages directly since trading_price_action is admit-only-defensive). Calamos pp.240-260 → PDF 255-275. Calamos pp.40-65 → PDF 55-80. CFA L1 cite corrected to Reading 54 Technical Analysis.",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "cb_calamos_2003_convertible_arbitrage",
+          "volume": null,
+          "legacy_pages": [
+            240,
+            260
+          ],
+          "pdf_pages": [
+            255,
+            275
+          ],
+          "chunk_id": "cb_calamos_2003_convertible_arbitrage:p274:0302",
+          "chunk_hash": "4c2aa81b7e409af37cee030d47636432e579616db2dcc6ffe5450b0a56c4a996",
+          "quote": "The volatility swap allows arbitrageurs a direct means to gain long or short exposure to market volatility."
+        },
+        {
+          "role": "supporting",
+          "source_id": "cb_calamos_2003_convertible_arbitrage",
+          "volume": null,
+          "legacy_pages": [
+            40,
+            65
+          ],
+          "pdf_pages": [
+            55,
+            80
+          ],
+          "chunk_id": "cb_calamos_2003_convertible_arbitrage:p055:0057",
+          "chunk_hash": "0ca1a724558b37d6e66b90e371edb2cce9be116fa2e81654e650a7a5535643af",
+          "quote": "The flexibility of the binomial model allows for the range of credit assumptions linked to the company’s stock price."
+        },
+        {
+          "role": "supporting",
+          "source_id": "tpa_brooks_2009_reading_price_charts_bar_by_bar",
+          "volume": null,
+          "legacy_pages": [
+            1,
+            30
+          ],
+          "pdf_pages": [
+            14,
+            14
+          ],
+          "chunk_id": "tpa_brooks_2009_reading_price_charts_bar_by_bar:p014:0007",
+          "chunk_hash": "4c65aeee93b0a08711e3d3da4d62af63b8be0439a4dbdca076ad5c4ac8ee948e",
+          "quote": "I read charts bar by bar and look for any information that each bar is telling me."
+        },
+        {
+          "role": "supporting",
+          "source_id": "tpa_brooks_2009_reading_price_charts_bar_by_bar",
+          "volume": null,
+          "legacy_pages": [
+            380,
+            428
+          ],
+          "pdf_pages": [
+            381,
+            381
+          ],
+          "chunk_id": "tpa_brooks_2009_reading_price_charts_bar_by_bar:p381:0470",
+          "chunk_hash": "89245aba784eb87d93ecb54bdb673f54f513c75808ebabd9c6262319eb3faa24",
+          "quote": "The most difficult part of trading is deciding whether a setup is good enough to warrant placing a trade."
+        },
+        {
+          "role": "supporting",
+          "source_id": "cfa_2022_l1_combined",
+          "volume": 6,
+          "legacy_pages": [
+            134,
+            225
+          ],
+          "pdf_pages": [
+            3403,
+            3404
+          ],
+          "chunk_id": "cfa_2022_l1_combined:p3403:5134",
+          "chunk_hash": "65f13607d2f88c321b7d8e5a51d079a1f658be146cc012512d1a5aec7aa89072",
+          "quote": "Technical analysis is a form of security analysis that uses price and volume data, often graphically displayed, in decision making."
+        }
+      ]
+    },
+    {
+      "card_id": "cb-brooks-pullback-depth-position-sizing",
+      "title": "Brooks Pullback-Depth Vocabulary for CB-Arbitrage Gamma-Rebalance Position Sizing",
+      "summary_curated": "Brooks's High/Low 1-2-3-4 pullback-counting vocabulary supplies execution-timing grammar around an already-approved CB-arbitrage position; the load-bearing position-sizing logic remains Calamos's gamma-rebalance / hedge-ratio cadence, with Brooks naming which successive pullback leg the rebalance traverses without changing the answer.",
+      "source_stance": "primary-calamos",
+      "audit_flag": "wrong_pages_corrected",
+      "audit_notes": "OFFSET CORRECTIONS: Calamos +15 (not +30). CFA L1 Vol.6 pp.420-441 WRONG (Standards content); corrected to Vol.6 pp.134-225 (Technical Analysis). Calamos pp.40-65 → PDF 55-80. Calamos pp.240-260 → PDF 255-275. Brooks 2009 pp.100-145 = PDF 100-145 (offset 0 since admit-only). Brooks 2012 Trends pp.330-430 = PDF 330-430.",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "cb_calamos_2003_convertible_arbitrage",
+          "volume": null,
+          "legacy_pages": [
+            40,
+            65
+          ],
+          "pdf_pages": [
+            55,
+            80
+          ],
+          "chunk_id": "cb_calamos_2003_convertible_arbitrage:p055:0057",
+          "chunk_hash": "0ca1a724558b37d6e66b90e371edb2cce9be116fa2e81654e650a7a5535643af",
+          "quote": "The binomial model allows for stock-price correlated credit spreads as well as stochastic credit spreads in the convertible valuation process."
+        },
+        {
+          "role": "supporting",
+          "source_id": "cb_calamos_2003_convertible_arbitrage",
+          "volume": null,
+          "legacy_pages": [
+            240,
+            260
+          ],
+          "pdf_pages": [
+            255,
+            275
+          ],
+          "chunk_id": "cb_calamos_2003_convertible_arbitrage:p274:0302",
+          "chunk_hash": "4c2aa81b7e409af37cee030d47636432e579616db2dcc6ffe5450b0a56c4a996",
+          "quote": "Buying put options can also reduce this vega risk to the extent that volatility and equity prices move inversely to each other."
+        },
+        {
+          "role": "supporting",
+          "source_id": "tpa_brooks_2009_reading_price_charts_bar_by_bar",
+          "volume": null,
+          "legacy_pages": [
+            100,
+            145
+          ],
+          "pdf_pages": [
+            101,
+            102
+          ],
+          "chunk_id": "tpa_brooks_2009_reading_price_charts_bar_by_bar:p101:0128",
+          "chunk_hash": "90b7aca378ab49a5dc56533bb7a6479985260eb8eaa672cc97c736fbd25cfc3a",
+          "quote": "If there is a trend, even a small one, any pullback that breaks any trendline defines that trend as a leg, and the pullback as another leg."
+        },
+        {
+          "role": "supporting",
+          "source_id": "tpa_brooks_2012_trends",
+          "volume": null,
+          "legacy_pages": [
+            330,
+            430
+          ],
+          "pdf_pages": [
+            329,
+            330
+          ],
+          "chunk_id": "tpa_brooks_2012_trends:p329:0467",
+          "chunk_hash": "a48a8a5b70d4d94bd6f8b5162ca82c2100f7ed6b1c99a4d21ec6e4d8ff2e397e",
+          "quote": "They don’t buy the pullback when it finally comes, because the market might be reversing into a bear trend, and the buy setup does not look strong enough."
+        },
+        {
+          "role": "supporting",
+          "source_id": "cfa_2022_l1_combined",
+          "volume": 6,
+          "legacy_pages": [
+            134,
+            225
+          ],
+          "pdf_pages": [
+            3403,
+            3404
+          ],
+          "chunk_id": "cfa_2022_l1_combined:p3403:5134",
+          "chunk_hash": "65f13607d2f88c321b7d8e5a51d079a1f658be146cc012512d1a5aec7aa89072",
+          "quote": "Technical analysis is a form of security analysis that uses price and volume data, often graphically displayed, in decision making."
+        }
+      ]
+    },
+    {
+      "card_id": "cb-brooks-range-mean-reversion-double-low",
+      "title": "Brooks Range / Mean-Reversion Vocabulary for the 双低 Rotation Workflow",
+      "summary_curated": "The Chinese-CB 双低 strategy (low price ∩ low conversion premium) is a defensive screening rule that picks the smallest-N names by composite score and rebalances on swap discipline; it operates as a range / mean-reversion workflow that Brooks's range-mean-reversion and first-pullback vocabulary describes without changing the load-bearing 安道全 composite screen.",
+      "source_stance": "primary-anduquan-3ed",
+      "audit_flag": "wrong_pages_corrected",
+      "audit_notes": "OFFSET CORRECTIONS: AnDaoquan 2023 is +9 (NOT +30) verified via chapter markers (PDF 12=printed pg 3, PDF 54=printed pg 45). CFA L1 Vol.6 pp.420-441 WRONG (Standards content); corrected to Vol.6 pp.134-225 (Technical Analysis). Brooks 2009/2012 use offset 0 (admit-only). AnDaoquan pp.59-78 → PDF 68-87. Brooks 2009 pp.100-145 = PDF 100-145. Brooks 2012 Trading Ranges pp.190-290 = PDF 190-290.",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "cb_an_daoquan_2023_three_line_duplex_3ed",
+          "volume": null,
+          "legacy_pages": [
+            59,
+            78
+          ],
+          "pdf_pages": [
+            68,
+            87
+          ],
+          "chunk_id": "cb_an_daoquan_2023_three_line_duplex_3ed:p072:0040",
+          "chunk_hash": "8b4e745d7454d36988e621507f411b490101ff84f166f4f15d42391e960d2391",
+          "quote": "2.5 “双低”策略：泥潭行军 ‚双低‛答略是网丆最常见的可转债答略，基本原则就是买入可 转债价和转股溢价率都低的可转债。"
+        },
+        {
+          "role": "supporting",
+          "source_id": "tpa_brooks_2009_reading_price_charts_bar_by_bar",
+          "volume": null,
+          "legacy_pages": [
+            100,
+            145
+          ],
+          "pdf_pages": [
+            101,
+            102
+          ],
+          "chunk_id": "tpa_brooks_2009_reading_price_charts_bar_by_bar:p101:0128",
+          "chunk_hash": "90b7aca378ab49a5dc56533bb7a6479985260eb8eaa672cc97c736fbd25cfc3a",
+          "quote": "If there is a trend, even a small one, any pullback that breaks any trendline defines that trend as a leg, and the pullback as another leg."
+        },
+        {
+          "role": "supporting",
+          "source_id": "tpa_brooks_2012_trading_ranges",
+          "volume": null,
+          "legacy_pages": [
+            190,
+            290
+          ],
+          "pdf_pages": [
+            192,
+            193
+          ],
+          "chunk_id": "tpa_brooks_2012_trading_ranges:p192:0174",
+          "chunk_hash": "fd393472d5763d227f5479859730e1577a67b100e1dfef6c91b9084a2ac60334",
+          "quote": "Uncertainty is the hallmark of a trading range, so a breakout is a search for a trading range, for uncertainty, and a 50 percent directional probability of an equidistant move."
+        },
+        {
+          "role": "supporting",
+          "source_id": "cfa_2022_l1_combined",
+          "volume": 6,
+          "legacy_pages": [
+            134,
+            225
+          ],
+          "pdf_pages": [
+            3403,
+            3404
+          ],
+          "chunk_id": "cfa_2022_l1_combined:p3403:5134",
+          "chunk_hash": "65f13607d2f88c321b7d8e5a51d079a1f658be146cc012512d1a5aec7aa89072",
+          "quote": "Technical analysis is a form of security analysis that uses price and volume data, often graphically displayed, in decision making."
+        }
+      ]
+    },
+    {
+      "card_id": "cb-brooks-support-resistance-clause-lines",
+      "title": "Brooks Support / Resistance Vocabulary Mapped onto Chinese-CB Clause Levels",
+      "summary_curated": "Brooks's support/resistance vocabulary describes Chinese-CB clause-anchored levels — 三线 (建仓线/加仓线/重仓线), the strong-call corridor near 130%, the holder-put boundary near face, and to-maturity / 回售 reference values; Brooks supplies the chart-grammar overlay while the load-bearing level identification remains 安道全's clause + prospectus read.",
+      "source_stance": "primary-anduquan-3ed",
+      "audit_flag": "wrong_pages_corrected",
+      "audit_notes": "OFFSET CORRECTIONS: AnDaoquan 2023 +9 (not +30). CFA L1 Vol.6 pp.420-441 WRONG (Standards content); corrected to Vol.6 pp.134-225 (Technical Analysis). Brooks offsets 0 (admit-only). AnDaoquan pp.97-149 → PDF 106-158. AnDaoquan pp.171-220 → PDF 180-229. Brooks 2009 pp.145-200 = PDF 145-200. Brooks 2012 Trading Ranges pp.500-600 = PDF 500-600.",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "cb_an_daoquan_2023_three_line_duplex_3ed",
+          "volume": null,
+          "legacy_pages": [
+            97,
+            149
+          ],
+          "pdf_pages": [
+            106,
+            158
+          ],
+          "chunk_id": "cb_an_daoquan_2023_three_line_duplex_3ed:p114:0067",
+          "chunk_hash": "e9bdf54c5fc125ef36a47492bf3a208906d991b636130bb7672efb13c84a4b5d",
+          "quote": "3.6 三线何来？如何设置三线 确定了分析可转债的标准 ‚安全—弹性双原则‛，如何设置 丅线，也就显而易见了。"
+        },
+        {
+          "role": "supporting",
+          "source_id": "cb_an_daoquan_2023_three_line_duplex_3ed",
+          "volume": null,
+          "legacy_pages": [
+            171,
+            220
+          ],
+          "pdf_pages": [
+            180,
+            229
+          ],
+          "chunk_id": "cb_an_daoquan_2023_three_line_duplex_3ed:p114:0067",
+          "chunk_hash": "e9bdf54c5fc125ef36a47492bf3a208906d991b636130bb7672efb13c84a4b5d",
+          "quote": "理解了‚安全—弹性双原则‛，好转债和坏转债的区分，以及后 面的丅线划定、丅线配比等问题的解决，就一气呵成、行亐洿水了。"
+        },
+        {
+          "role": "supporting",
+          "source_id": "tpa_brooks_2009_reading_price_charts_bar_by_bar",
+          "volume": null,
+          "legacy_pages": [
+            145,
+            200
+          ],
+          "pdf_pages": [
+            147,
+            148
+          ],
+          "chunk_id": "tpa_brooks_2009_reading_price_charts_bar_by_bar:p147:0184",
+          "chunk_hash": "e6cf83e3ef9ee4fceac27d4fad24450bf633da1c237014953b7f88c17240dfee",
+          "quote": "You always want a show of strength before your buy setup."
+        },
+        {
+          "role": "supporting",
+          "source_id": "tpa_brooks_2012_trading_ranges",
+          "volume": null,
+          "legacy_pages": [
+            500,
+            600
+          ],
+          "pdf_pages": [
+            519,
+            520
+          ],
+          "chunk_id": "tpa_brooks_2012_trading_ranges:p519:0489",
+          "chunk_hash": "497c27bc10572a5d47a054a56189f04373d8cc594d26dd8f69aef680ee680d1c",
+          "quote": "There needs to be at least a tiny trend line break between the high 1 and the high 2 to indicate that the trend traders are still active."
+        },
+        {
+          "role": "supporting",
+          "source_id": "cfa_2022_l1_combined",
+          "volume": 6,
+          "legacy_pages": [
+            134,
+            225
+          ],
+          "pdf_pages": [
+            3403,
+            3404
+          ],
+          "chunk_id": "cfa_2022_l1_combined:p3403:5134",
+          "chunk_hash": "65f13607d2f88c321b7d8e5a51d079a1f658be146cc012512d1a5aec7aa89072",
+          "quote": "Technical analysis is a form of security analysis that uses price and volume data, often graphically displayed, in decision making."
+        }
+      ]
+    },
+    {
+      "card_id": "cb-brooks-trailing-exit-duplex-cashout",
+      "title": "Brooks Trailing-Exit Vocabulary for the 复式兑现 + 回撤价 Cashout Discipline",
+      "summary_curated": "安道全's 复式 cashout discipline is a three-state sell-side playbook around the strong-call corridor: sell at corridor to lock the gain, re-enter if the CB later trades below corridor by more than the holder's 回撤价 tolerance; Brooks's trailing-exit vocabulary names the chart moves while clause-anchored discipline carries the exit decision.",
+      "source_stance": "primary-anduquan-3ed",
+      "audit_flag": "wrong_pages_corrected",
+      "audit_notes": "OFFSET CORRECTIONS: AnDaoquan 2023 +9 (not +30). CFA L1 Vol.6 pp.420-441 WRONG; corrected to Vol.6 pp.134-225. Brooks offsets 0 (admit-only). AnDaoquan pp.260-298 → PDF 269-307. Brooks 2009 pp.270-330 = PDF 270-330. Brooks 2012 Trading Ranges pp.620-900 = PDF 620-900.",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "cb_an_daoquan_2023_three_line_duplex_3ed",
+          "volume": null,
+          "legacy_pages": [
+            260,
+            298
+          ],
+          "pdf_pages": [
+            269,
+            307
+          ],
+          "chunk_id": "cb_an_daoquan_2023_three_line_duplex_3ed:p271:0160",
+          "chunk_hash": "568720e0171bc5e04dcf85e2cfd0e0a5c35e86b7bee8f54f5f8a7850bc9bc02b",
+          "quote": "复式的触収标准，本杢就不是‚是否公告强赎‛，而是‚丆了 130 元以后回撤一定程度‛。"
+        },
+        {
+          "role": "supporting",
+          "source_id": "tpa_brooks_2009_reading_price_charts_bar_by_bar",
+          "volume": null,
+          "legacy_pages": [
+            270,
+            330
+          ],
+          "pdf_pages": [
+            381,
+            381
+          ],
+          "chunk_id": "tpa_brooks_2009_reading_price_charts_bar_by_bar:p381:0470",
+          "chunk_hash": "89245aba784eb87d93ecb54bdb673f54f513c75808ebabd9c6262319eb3faa24",
+          "quote": "The most difficult part of trading is deciding whether a setup is good enough to warrant placing a trade."
+        },
+        {
+          "role": "supporting",
+          "source_id": "tpa_brooks_2012_trading_ranges",
+          "volume": null,
+          "legacy_pages": [
+            620,
+            900
+          ],
+          "pdf_pages": [
+            623,
+            624
+          ],
+          "chunk_id": "tpa_brooks_2012_trading_ranges:p623:0593",
+          "chunk_hash": "0a6c19dc0cadcac699928376d42f3ee48d2f42b9c8cccfea83b1086e7cba5db8",
+          "quote": "It is far more accurate to think of them as continuation patterns that rarely fail but, when they do, the failure can lead to a reversal."
+        },
+        {
+          "role": "supporting",
+          "source_id": "cfa_2022_l1_combined",
+          "volume": 6,
+          "legacy_pages": [
+            134,
+            225
+          ],
+          "pdf_pages": [
+            3403,
+            3404
+          ],
+          "chunk_id": "cfa_2022_l1_combined:p3403:5134",
+          "chunk_hash": "65f13607d2f88c321b7d8e5a51d079a1f658be146cc012512d1a5aec7aa89072",
+          "quote": "Technical analysis is a form of security analysis that uses price and volume data, often graphically displayed, in decision making."
+        }
+      ]
+    },
+    {
+      "card_id": "cb-brooks-trend-range-regime-map",
+      "title": "Brooks Trend / Range Regime Map for Chinese-CB Tapes",
+      "summary_curated": "Before applying any per-CB strategy, the practitioner classifies the tape's regime — 单边市 (one-sided trend) vs 震荡市 (oscillating range) — using 安道全's 安全—弹性 prospectus + credit + parity read; Brooks's trend-vs-trading-range vocabulary supplies the chart-grammar overlay without predicting the next bar's expected return.",
+      "source_stance": "primary-anduquan-3ed",
+      "audit_flag": "wrong_pages_corrected",
+      "audit_notes": "OFFSET CORRECTIONS: AnDaoquan 2023 +9 (not +30). CFA L1 Vol.6 pp.420-441 WRONG; corrected to Vol.6 pp.134-225. Brooks offsets 0 (admit-only). AnDaoquan pp.78-92 → PDF 87-101. Brooks 2009 pp.60-100, pp.145-200 = PDF directly. Brooks 2012 Trends pp.230-330 = PDF 230-330.",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "cb_an_daoquan_2023_three_line_duplex_3ed",
+          "volume": null,
+          "legacy_pages": [
+            78,
+            92
+          ],
+          "pdf_pages": [
+            87,
+            101
+          ],
+          "chunk_id": "cb_an_daoquan_2023_three_line_duplex_3ed:p088:0051",
+          "chunk_hash": "efae2eaa7a7657197b05e07210ead6a8fb04db0bd4ca60e29722d10e0e6082e6",
+          "quote": "动量因子：正股的近 10 日收益率，股票的收益率有延续 原杢的运动斱向的趋势，即过去一段时间里收益率较高 的股票在未杢获得的收益率会高于过去收益率较低的股 票。"
+        },
+        {
+          "role": "supporting",
+          "source_id": "tpa_brooks_2009_reading_price_charts_bar_by_bar",
+          "volume": null,
+          "legacy_pages": [
+            60,
+            100
+          ],
+          "pdf_pages": [
+            59,
+            60
+          ],
+          "chunk_id": "tpa_brooks_2009_reading_price_charts_bar_by_bar:p059:0073",
+          "chunk_hash": "fa4fa61f90d645839d32462b8fe87606dce391989f11f3fd11c2085ebd018ec9",
+          "quote": "Bar 4 was a doji bar after two other dojis, and a bar with a tiny body is not a good setup bar when the lows, highs, and closes are trending up."
+        },
+        {
+          "role": "supporting",
+          "source_id": "tpa_brooks_2009_reading_price_charts_bar_by_bar",
+          "volume": null,
+          "legacy_pages": [
+            145,
+            200
+          ],
+          "pdf_pages": [
+            147,
+            148
+          ],
+          "chunk_id": "tpa_brooks_2009_reading_price_charts_bar_by_bar:p147:0184",
+          "chunk_hash": "e6cf83e3ef9ee4fceac27d4fad24450bf633da1c237014953b7f88c17240dfee",
+          "quote": "You always want a show of strength before your buy setup."
+        },
+        {
+          "role": "supporting",
+          "source_id": "tpa_brooks_2012_trends",
+          "volume": null,
+          "legacy_pages": [
+            230,
+            330
+          ],
+          "pdf_pages": [
+            229,
+            230
+          ],
+          "chunk_id": "tpa_brooks_2012_trends:p229:0321",
+          "chunk_hash": "45a0a3aec6cbade8573ef6dd2628ce17d4cd396400628066d317c2bfd887bbc7",
+          "quote": "As a trend progresses, countertrend moves break the trend lines and usually the breakouts fail, setting up with trend entries."
+        },
+        {
+          "role": "supporting",
+          "source_id": "cfa_2022_l1_combined",
+          "volume": 6,
+          "legacy_pages": [
+            134,
+            225
+          ],
+          "pdf_pages": [
+            3403,
+            3404
+          ],
+          "chunk_id": "cfa_2022_l1_combined:p3403:5134",
+          "chunk_hash": "65f13607d2f88c321b7d8e5a51d079a1f658be146cc012512d1a5aec7aa89072",
+          "quote": "Technical analysis is a form of security analysis that uses price and volume data, often graphically displayed, in decision making."
+        }
+      ]
+    },
+    {
+      "card_id": "cb-call-and-put-protection",
+      "title": "Call and Put Protection",
+      "summary_curated": "Most issued convertibles include early-redemption rights: an issuer call lets the issuer redeem at price K after a non-call period (hard or soft call with parity-based trigger), and a holder put lets the holder put the bond back at a stated put price; both are embedded options whose payoffs modify the holder's bond-plus-call decomposition.",
+      "source_stance": "primary-despiegeleer",
+      "audit_flag": "wrong_pages_corrected",
+      "audit_notes": "OFFSET CORRECTIONS: DeSpiegeleer +19 (not +20). Calamos +15 (not +30). DeSpiegeleer pp.50-78 → PDF 69-97. Calamos pp.95-130 → PDF 110-145. Hull pp.650-653 → PDF 650-653 (offset 0 unchanged).",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "cb_despiegeleer_schoutens_vanhulle_2014_hybrid_securities",
+          "volume": null,
+          "legacy_pages": [
+            50,
+            78
+          ],
+          "pdf_pages": [
+            69,
+            97
+          ],
+          "chunk_id": "cb_despiegeleer_schoutens_vanhulle_2014_hybrid_securities:p068:0078",
+          "chunk_hash": "267a3eae776fe08cacefcf8b36127e54f1618d7df650bcd482a4144396d57c75",
+          "quote": "The real expiry date of the convertible was 4 years later but the issuer decided to redeem its convertible prematurely."
+        },
+        {
+          "role": "supporting",
+          "source_id": "cb_calamos_2003_convertible_arbitrage",
+          "volume": null,
+          "legacy_pages": [
+            95,
+            130
+          ],
+          "pdf_pages": [
+            110,
+            145
+          ],
+          "chunk_id": "cb_calamos_2003_convertible_arbitrage:p142:0158",
+          "chunk_hash": "62e379869151c4c59e2c9068e3affb289a56beb4d28faeb6d622ad033e3f1619",
+          "quote": "One way to think about a callable convertible is to consider when and why it would be called."
+        },
+        {
+          "role": "supporting",
+          "source_id": "cb_hull_2022_options_futures_derivatives_11ed",
+          "volume": null,
+          "legacy_pages": [
+            650,
+            653
+          ],
+          "pdf_pages": [
+            650,
+            653
+          ],
+          "chunk_id": "cb_hull_2022_options_futures_derivatives_11ed:p650:0966",
+          "chunk_hash": "e972bd11f1061f9542bb0de121768a78e178cb4a8482c4dec60fa7c3a2225f3b",
+          "quote": "The bonds are almost always callable (i.e., the issuer has the right to buy them back at certain times at a predetermined prices)."
+        }
+      ]
+    },
+    {
+      "card_id": "cb-china-asset-management-regulation-and-fund-suitability",
+      "title": "Chinese CB Demand-Side: Asset-Management Regulation + Fund Suitability",
+      "summary_curated": "The 2018 PBOC 资管新规 (Asset-Management Guiding Opinions) created the net-value bank-wealth-management product class that became the principal incremental buyer of CBs (the 固收+ flow), and the 2025-10-29 中国银河证券 fund-suitability re-rating crystallized the first explicit allocator-side risk-tier reclassification of CB-heavy bond funds (R1-R5 system).",
+      "source_stance": "primary-china-galaxy",
+      "audit_flag": "ok",
+      "audit_notes": "All china_cb_* sources use offset 0 per registry. China Galaxy pp.1-17 verified at PDF p1. PBOC pp.1-15 verified at PDF p1. Lianhe pp.1-14 verified at PDF p1.",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "china_cb_china_galaxy_fund_suitability_2025_10_29",
+          "volume": null,
+          "legacy_pages": [
+            1,
+            17
+          ],
+          "pdf_pages": [
+            1,
+            2
+          ],
+          "chunk_id": "china_cb_china_galaxy_fund_suitability_2025_10_29:p001:0000",
+          "chunk_hash": "c3b0ef83636553658aab9916f09b63c6fae5baf85aebda396bb293311a9d011a",
+          "quote": "中国银河证券基金研究中心将公募基金产品按照风险由低 到高顺序，依次划分为：R1、R2、R3、R4、R5 五个等级，相应 的风险等级名称是：低风险、中低风险、中风险、中高风险、高 风险。"
+        },
+        {
+          "role": "supporting",
+          "source_id": "china_cb_pboc_asset_management_guiding_opinions_2018",
+          "volume": null,
+          "legacy_pages": [
+            1,
+            15
+          ],
+          "pdf_pages": [
+            1,
+            2
+          ],
+          "chunk_id": "china_cb_pboc_asset_management_guiding_opinions_2018:p001:0000",
+          "chunk_hash": "0ce78d35a6b13a8e0c9a352e65601b4c850d11cb88cdaaebc25a08049a109088",
+          "quote": "《意见》按照产品类型统一监管标准，从募集方式和投资性质两个维度对资 产管理产品进行分类，分别统一投资范围、杠杆约束、信息披露等要求。"
+        },
+        {
+          "role": "supporting",
+          "source_id": "china_cb_lianhe_annual_bond_market_2025",
+          "volume": null,
+          "legacy_pages": [
+            1,
+            14
+          ],
+          "pdf_pages": [
+            1,
+            2
+          ],
+          "chunk_id": "china_cb_lianhe_annual_bond_market_2025:p001:0000",
+          "chunk_hash": "9508b0fe8ea0123e3e4c9620113ee313ebac27c619bdda0d0a7c0780e43d66d5",
+          "quote": "我国债券市场共 发行各类债券 88.52 万亿元，同比上升 12.35%，除同业存单外，各类债券合计发行 54.70 万亿元，同比上升 15.40%。"
+        }
+      ]
+    },
+    {
+      "card_id": "cb-china-basket-diversification-strategy",
+      "title": "China Convertible Bond — 摊大饼 (Basket-Diversification) Strategy",
+      "summary_curated": "摊大饼 (basket-diversification) is 攻守's multi-strategy composite for Chinese retail-CB investors anchored on '三个尽可能' — max strategy types, max name count, single-name ≤ 5% — operated under 筛选分散、不做预测、低频轮动、小步调仓 principles; the defensive intuition rests on long-term strong-call concentration plus short-term unforecastability.",
+      "source_stance": "primary-tao-tao-hai",
+      "audit_flag": "wrong_pages_corrected",
+      "audit_notes": "Gongshou offset is 0 per registry but legacy pp.63-86 cite is partially mis-located: the 摊大饼 section header is at PDF 83 (printed pg ~73 if offset +10, or pg 83 if offset 0). Content at PDF 63 is 可转债 vs 可交债 (different topic). The actual 摊大饼 strategy section is at PDF 83+. AnDaoquan 2023 +9 (not +30). AnDaoquan pp.97-149 → PDF 106-158.",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "cb_gongshou_practical_handbook_1ed",
+          "volume": null,
+          "legacy_pages": [
+            63,
+            86
+          ],
+          "pdf_pages": [
+            83,
+            84
+          ],
+          "chunk_id": "cb_gongshou_practical_handbook_1ed:p083:0077",
+          "chunk_hash": "e7b589d7f6ee7a9f3bd082f4a70b0a62cddc566b09de4620813dc7307a6f9f04",
+          "quote": "该策略的精要是“三个尽可能”——包含策略类型尽可能多，可转债数量尽可 能多，单只可转债占比尽可能小。"
+        },
+        {
+          "role": "supporting",
+          "source_id": "cb_an_daoquan_2023_three_line_duplex_3ed",
+          "volume": null,
+          "legacy_pages": [
+            97,
+            149
+          ],
+          "pdf_pages": [
+            106,
+            158
+          ],
+          "chunk_id": "cb_an_daoquan_2023_three_line_duplex_3ed:p114:0067",
+          "chunk_hash": "e9bdf54c5fc125ef36a47492bf3a208906d991b636130bb7672efb13c84a4b5d",
+          "quote": "3.6 三线何来？如何设置三线 确定了分析可转债的标准 ‚安全—弹性双原则‛，如何设置 丅线，也就显而易见了。"
+        }
+      ]
+    },
+    {
+      "card_id": "cb-china-call-redemption-rules",
+      "title": "China Convertible-Bond Call-Redemption Rules",
+      "summary_curated": "China onshore convertibles almost universally include a 强赎 (strong-call) provision: issuer may force redemption at face once the share price spends 15 of 30 consecutive days at ≥ 130% of K_c; once triggered, the announcement gives holders ~1 month to convert before remaining bonds redeem at face — the structural mechanism that mid-life converts the average China-onshore CB into equity.",
+      "source_stance": "primary-anduquan",
+      "audit_flag": "wrong_pages_corrected",
+      "audit_notes": "OFFSET CORRECTIONS: AnDaoquan 2014 is +12 (NOT +30 per registry) verified via Chapter 1 'Section 1' content at PDF 14 corresponding to printed pg ~2. DeSpiegeleer +19, Calamos +15, AnDaoquan 2023 +9. AnDaoquan 2014 pp.80-150 → PDF 92-162. Calamos pp.95-130 → PDF 110-145. DeSpiegeleer pp.50-78 → PDF 69-97. AnDaoquan 2023 pp.27-71 → PDF 36-80. Gongshou pp.17-48 (offset 0) → PDF 17-48.",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "cb_an_daoquan_2014_magic_book_2ed",
+          "volume": null,
+          "legacy_pages": [
+            80,
+            150
+          ],
+          "pdf_pages": [
+            92,
+            162
+          ],
+          "chunk_id": "cb_an_daoquan_2014_magic_book_2ed:p111:0107",
+          "chunk_hash": "d52dc30103c21a11c546426ea592940c24958bbd454ce19e1ec7a5ea8061d891",
+          "quote": "投资者只要坚守纪律，甚 至无须太多关心股市和股票本身，耐心等待强制赎回的到来就行了， 这特别适合信息和技术都处于劣势的小散户们。"
+        },
+        {
+          "role": "supporting",
+          "source_id": "cb_calamos_2003_convertible_arbitrage",
+          "volume": null,
+          "legacy_pages": [
+            95,
+            130
+          ],
+          "pdf_pages": [
+            110,
+            145
+          ],
+          "chunk_id": "cb_calamos_2003_convertible_arbitrage:p143:0159",
+          "chunk_hash": "d1759bf1d5a2e227d8042e883e2f7c5b23578ceafb56bde706808339f8696de5",
+          "quote": "If parity does fall below the call price, the company will be forced to pay cash instead of stock to the holders."
+        },
+        {
+          "role": "supporting",
+          "source_id": "cb_despiegeleer_schoutens_vanhulle_2014_hybrid_securities",
+          "volume": null,
+          "legacy_pages": [
+            50,
+            78
+          ],
+          "pdf_pages": [
+            69,
+            97
+          ],
+          "chunk_id": "cb_despiegeleer_schoutens_vanhulle_2014_hybrid_securities:p068:0078",
+          "chunk_hash": "267a3eae776fe08cacefcf8b36127e54f1618d7df650bcd482a4144396d57c75",
+          "quote": "The real expiry date of the convertible was 4 years later but the issuer decided to redeem its convertible prematurely."
+        },
+        {
+          "role": "supporting",
+          "source_id": "cb_an_daoquan_2023_three_line_duplex_3ed",
+          "volume": null,
+          "legacy_pages": [
+            27,
+            71
+          ],
+          "pdf_pages": [
+            36,
+            80
+          ],
+          "chunk_id": "cb_an_daoquan_2023_three_line_duplex_3ed:p042:0023",
+          "chunk_hash": "12ba11a3b16c4217a488a92d5add3adf4a97e0cc2f4b287f67412109a1e818a9",
+          "quote": "我们的看法是，强赎与否，利益使然。 ‚缺钱的时候拿现釐，不缺钱的时候拿股权‛，或者捡一种表述， 即‚股权值钱的时候留股权，股权不值钱的时候选现釐‛。"
+        },
+        {
+          "role": "supporting",
+          "source_id": "cb_gongshou_practical_handbook_1ed",
+          "volume": null,
+          "legacy_pages": [
+            17,
+            48
+          ],
+          "pdf_pages": [
+            16,
+            17
+          ],
+          "chunk_id": "cb_gongshou_practical_handbook_1ed:p016:0013",
+          "chunk_hash": "0c90836e80f05cbf3fb35bd9baaf8875ff0e4989b6e6a20ba7e0a2b17c9e98ca",
+          "quote": "当公司普通股股票在任意连续三十个交易日中有十五个交易日的收盘价低于当 期转股价格的80%时，公司董事会有权提出转股价格向下修正方案并提交公司股东 大会审议表决。"
+        }
+      ]
+    },
+    {
+      "card_id": "cb-china-cb-vs-eb-comparison",
+      "title": "China Convertible Bond — 可转债 vs 可交债 (CB vs EB) Comparison",
+      "summary_curated": "A 可转债 (CB) converts into the issuer's own newly-issued shares (an equity issuance in disguise); a 可交债 (EB) exchanges for the issuer's HOLDING of another company's already-existing shares (a stake the issuer pledges). 攻守 captures the intuition as '牛市都一样, 熊市大不同' — bull-market behaviour similar (both ride underlying toward strong-call), bear-market diverges sharply via 下修-willingness asymmetry.",
+      "source_stance": "primary-tao-tao-hai",
+      "audit_flag": "ok",
+      "audit_notes": "Gongshou offset 0 per registry — pp.38-62 → PDF 38-62. The CB vs EB explicit section header is at PDF 60. AnDaoquan 2023 +9 (not +30). AnDaoquan 2023 pp.10-59 → PDF 19-68.",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "cb_gongshou_practical_handbook_1ed",
+          "volume": null,
+          "legacy_pages": [
+            38,
+            62
+          ],
+          "pdf_pages": [
+            60,
+            61
+          ],
+          "chunk_id": "cb_gongshou_practical_handbook_1ed:p060:0054",
+          "chunk_hash": "21f365f79c1f1761f263141c4dd046a167c77faf2e77266c9665f0f25060d6c5",
+          "quote": "通过可转债名称基本可以知道对应的正股，可交债多数情况也可以判断可以交 换的股票，毕竟多数情况可交债是由大股东发行，发行方和对应标的股票关联很 大。"
+        },
+        {
+          "role": "supporting",
+          "source_id": "cb_an_daoquan_2023_three_line_duplex_3ed",
+          "volume": null,
+          "legacy_pages": [
+            10,
+            59
+          ],
+          "pdf_pages": [
+            19,
+            68
+          ],
+          "chunk_id": "cb_an_daoquan_2023_three_line_duplex_3ed:p042:0023",
+          "chunk_hash": "12ba11a3b16c4217a488a92d5add3adf4a97e0cc2f4b287f67412109a1e818a9",
+          "quote": "‚缺钱的时候拿现釐，不缺钱的时候拿股权‛，或者捡一种表述， 即‚股权值钱的时候留股权，股权不值钱的时候选现釐‛。"
+        }
+      ]
+    },
+    {
+      "card_id": "cb-china-csdc-settlement-depth-2023-2025",
+      "title": "China CSDC Settlement-Depth: Shanghai 2023 + Shenzhen 2025 Operational Layering",
+      "summary_curated": "Chinese CBs settle through the China Securities Depository and Clearing Corporation (中国结算 / CSDC), a multi-branch depository whose operational guides codify depository-side mechanics — directional CB (定向 CB) transfer mechanic, restricted/unrestricted CB share-nature classification, holder-application fixed-sequence processing, and SH/SZ regional-branch layering — that sit BELOW the SSE/SZSE exc...",
+      "source_stance": "primary-csdc",
+      "audit_flag": "ok",
+      "audit_notes": "All china_cb_* sources use offset 0 per registry. CSDC Shanghai 2023 pp.1-30 verified at PDF p1. CSDC Shenzhen 2025 pp.1-30 verified at PDF p1. SZSE pp.1-14 verified at PDF p1. SSE pp.450-466 verified at PDF p450 (SSE rules compilation table of contents shows pp.449-450 = strong-call rule appendix).",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "china_cb_csdc_shanghai_settlement_2023",
+          "volume": null,
+          "legacy_pages": [
+            1,
+            30
+          ],
+          "pdf_pages": [
+            1,
+            2
+          ],
+          "chunk_id": "china_cb_csdc_shanghai_settlement_2023:p001:0000",
+          "chunk_hash": "f54cb7f2b6c442de7bfb43d5255cb840575e703cd88bbaf9308be16237281276",
+          "quote": "3.配合部分 ETF 申购采用 RTGS 结算，调整 RTGS 勾单的相关表 述； 4.明确定向可转债转让业务结算方式为 T+0 日日终逐笔全额非 担保； 5.其他文字性修订。"
+        },
+        {
+          "role": "supporting",
+          "source_id": "china_cb_csdc_shenzhen_issuer_guide_2025_03",
+          "volume": null,
+          "legacy_pages": [
+            1,
+            30
+          ],
+          "pdf_pages": [
+            1,
+            2
+          ],
+          "chunk_id": "china_cb_csdc_shenzhen_issuer_guide_2025_03:p001:0000",
+          "chunk_hash": "1178dec0a1622cad569d256cc4403ea9da0693fe93749ec3c217381313e8c549",
+          "quote": "中国证券登记结算有限责任公司深圳分公司 证券发行人业务指南 （中国结算深业〔2025〕8号）"
+        },
+        {
+          "role": "supporting",
+          "source_id": "china_cb_szse_trading_rules_2022",
+          "volume": null,
+          "legacy_pages": [
+            1,
+            14
+          ],
+          "pdf_pages": [
+            1,
+            2
+          ],
+          "chunk_id": "china_cb_szse_trading_rules_2022:p001:0000",
+          "chunk_hash": "9fc0e7cb15bbf5ebd23dd27382de459fd6cac03be24065646365d772b2607e38",
+          "quote": "第二章 向不特定对象发行的可转债的交易 第一节 一般规定 第七条 向不特定对象发行的可转债采用匹配成交、协商成 交、盘后定价成交等交易方式。"
+        },
+        {
+          "role": "supporting",
+          "source_id": "china_cb_sse_rules_compilation",
+          "volume": null,
+          "legacy_pages": [
+            450,
+            466
+          ],
+          "pdf_pages": [
+            450,
+            451
+          ],
+          "chunk_id": "china_cb_sse_rules_compilation:p450:0417",
+          "chunk_hash": "2093b5a0c916323d04ace7263bc441acd88bd47eaf5943d1e76255284b07cd3f",
+          "quote": "本细则所称可转债，是指上市公司依法发行、在一 定期间内依据约定的条件可以转换成本公司股票的公司债券，属 于《证券法》规定的具有股权性质的证券，包括向不特定对象发 行的可转债和向特定对象发行的可转债。"
+        }
+      ]
+    },
+    {
+      "card_id": "cb-china-csdc-settlement-mechanics",
+      "title": "China Convertible-Bond Exchange-Rule-Side Trading and Settlement Conventions",
+      "summary_curated": "China onshore CB trading on SSE/SZSE is codified with structurally-distinct conventions: full-price quotation with 0.001-yuan minimum increment, same-day round-trip (T+0) trading and transfer, public-CB multilateral net settlement vs private-CB transaction-by-transaction gross settlement, and ex-interest treatment — all rule-level specifications from the SZSE 2022 trading rules and SSE rules co...",
+      "source_stance": "primary-sse-szse",
+      "audit_flag": "wrong_pages_corrected",
+      "audit_notes": "OFFSET CORRECTIONS: AnDaoquan 2014 +12 (not +30). AnDaoquan 2023 +9 (not +30). SZSE pp.1-14 → PDF 1-14 (offset 0). SSE pp.450-498 → PDF 450-498. AnDaoquan 2023 pp.4-92 → PDF 13-101. AnDaoquan 2014 pp.20-100 → PDF 32-112.",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "china_cb_szse_trading_rules_2022",
+          "volume": null,
+          "legacy_pages": [
+            1,
+            14
+          ],
+          "pdf_pages": [
+            1,
+            2
+          ],
+          "chunk_id": "china_cb_szse_trading_rules_2022:p001:0000",
+          "chunk_hash": "9fc0e7cb15bbf5ebd23dd27382de459fd6cac03be24065646365d772b2607e38",
+          "quote": "第二章 向不特定对象发行的可转债的交易 第一节 一般规定 第七条 向不特定对象发行的可转债采用匹配成交、协商成 交、盘后定价成交等交易方式。"
+        },
+        {
+          "role": "supporting",
+          "source_id": "china_cb_sse_rules_compilation",
+          "volume": null,
+          "legacy_pages": [
+            450,
+            498
+          ],
+          "pdf_pages": [
+            450,
+            451
+          ],
+          "chunk_id": "china_cb_sse_rules_compilation:p450:0417",
+          "chunk_hash": "2093b5a0c916323d04ace7263bc441acd88bd47eaf5943d1e76255284b07cd3f",
+          "quote": "为落实中国证监会《可转换公司债券管理办法》的要求，进 一步规范上市公司可转换公司债券交易行为，维护市场交易秩序， 上海证券交易所制定了《上海证券交易所可转换公司债券交易实 施细则》，已经中国证监会批准，现予以发布，并自 2022 年 8 月 1 日起施行。"
+        },
+        {
+          "role": "supporting",
+          "source_id": "cb_an_daoquan_2023_three_line_duplex_3ed",
+          "volume": null,
+          "legacy_pages": [
+            4,
+            92
+          ],
+          "pdf_pages": [
+            13,
+            101
+          ],
+          "chunk_id": "cb_an_daoquan_2023_three_line_duplex_3ed:p012:0006",
+          "chunk_hash": "7b58bd1ed8ca47b54d3552c1ac9cf0db649e6c2671d542ab17cae0e6f572ebae",
+          "quote": "1.2 从哪里入手了解可转债——収行公告 或募集说明书 了解一只可转债，最权威、最快捷的办法是阅读这只可转债的 収行公告或者募集说明书。"
+        },
+        {
+          "role": "supporting",
+          "source_id": "cb_an_daoquan_2014_magic_book_2ed",
+          "volume": null,
+          "legacy_pages": [
+            20,
+            100
+          ],
+          "pdf_pages": [
+            32,
+            112
+          ],
+          "chunk_id": "cb_an_daoquan_2014_magic_book_2ed:p111:0107",
+          "chunk_hash": "d52dc30103c21a11c546426ea592940c24958bbd454ce19e1ec7a5ea8061d891",
+          "quote": "投资者只要坚守纪律，甚 至无须太多关心股市和股票本身，耐心等待强制赎回的到来就行了， 这特别适合信息和技术都处于劣势的小散户们。"
+        }
+      ]
+    },
+    {
+      "card_id": "cb-china-csrc-disclosure-timing",
+      "title": "China Convertible-Bond CSRC Disclosure Timing (Standard No. 60)",
+      "summary_curated": "CSRC Standard No. 60 governs the prospectus a Chinese listed company must publish to issue a convertible bond to unspecified investors. Article 7 mandates SSE/SZSE-website + CSRC-approved-newspaper-website disclosure; Article 8 forbids any other-channel disclosure earlier than the exchange disclosure; Article 17 enumerates the CB-specific contract terms — conversion-price adjustment with shareh...",
+      "source_stance": "primary-csrc",
+      "audit_flag": "ok",
+      "audit_notes": "CSRC Standard No. 60 chunk at PDF p7-8 verbatim contains Article 17 (七)(八)(九). china_cb_* sources at offset 0. An Daoquan 2014 offset 0 (PDF page 13 = Chapter 1 start, matches book page 13). DeSpiegeleer 2014: offset +20 confirmed via in-text page markers (PDF p41 carries '21' marker, PDF p42 carries '22'); legacy book pp.21-22 maps to PDF pp.41-42 where section 2.2 'Anatomy of a Convertible Bond' opens.",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "china_cb_csrc_disclosure_standard_no_60",
+          "volume": null,
+          "legacy_pages": [
+            7,
+            8
+          ],
+          "pdf_pages": [
+            7,
+            8
+          ],
+          "chunk_id": "china_cb_csrc_disclosure_standard_no_60:p007:0006",
+          "chunk_hash": "02229611f9a43cbcb595dd7d2ea77377e7a2b3c5e569078af750c1e4a43fdf83",
+          "quote": "（八）赎回条款，规定上市公司可按事先约定的条件和价格 赎回尚未转股的可转债；"
+        },
+        {
+          "role": "supporting",
+          "source_id": "cb_an_daoquan_2014_magic_book_2ed",
+          "volume": null,
+          "legacy_pages": [
+            14,
+            15
+          ],
+          "pdf_pages": [
+            14,
+            15
+          ],
+          "chunk_id": "cb_an_daoquan_2014_magic_book_2ed:p014:0013",
+          "chunk_hash": "b8d22a0115f690fe31f95410fdee5e3a03f52a1374e926b5fbba64366d3790e3",
+          "quote": "可转债，全名叫做“可转换公司债券”（Convertible bond；CB），"
+        },
+        {
+          "role": "supporting",
+          "source_id": "cb_despiegeleer_schoutens_vanhulle_2014_hybrid_securities",
+          "volume": null,
+          "legacy_pages": [
+            21,
+            22
+          ],
+          "pdf_pages": [
+            41,
+            42
+          ],
+          "chunk_id": "cb_despiegeleer_schoutens_vanhulle_2014_hybrid_securities:p041:0045",
+          "chunk_hash": "53fc3079dc48462a65dff49f335124d01c4ec34bcb4e2029a3a7eadf661488ad",
+          "quote": "2.2 ANATOMY OF A CONVERTIBLE BOND"
+        }
+      ]
+    },
+    {
+      "card_id": "cb-china-default-cohort-attribution",
+      "title": "China CB Default Cohort: Life-cycle Credit-Risk Attribution",
+      "summary_curated": "The Dajia (大家资产) 2024 white paper rebuts the long-held \"CB immunity\" claim by showing that mature-market data sets CB default rates on par with high-yield bonds and by attributing post-2014 onshore CB credit risk across the bond life-cycle (上市初期 debt-side risk; 转股期 strike-revision game; 强赎促进 forced-conversion pressure; final two coupon years redemption-pressure). The Lianhe 2025 reconstruction ...",
+      "source_stance": "primary-nafmii-dajia",
+      "audit_flag": "ok",
+      "audit_notes": "All china_cb_* sources at offset 0. Dajia 2024 PDF p1 contains the abstract with the 'CB default rate comparable to high-yield' claim. Lianhe risk-reconstruction 2025 PDF p1 contains the post-2014 default-cohort framing. SPC 2020 PDF p3 provides bondholders'-meeting governance citation. NOTE: nafmii_china_bond_market_2025 pp.30-50 in legacy ref maps to bank-interbank-market content (not CB-specific), so we omit it; topic does not match.",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "china_cb_dajia_credit_risk_immune_2024",
+          "volume": null,
+          "legacy_pages": [
+            1,
+            2
+          ],
+          "pdf_pages": [
+            1,
+            2
+          ],
+          "chunk_id": "china_cb_dajia_credit_risk_immune_2024:p001:0000",
+          "chunk_hash": "2e0dbc24f972c53421e0c8584deb7f31f8726d628b28bbe6e72fd4de00a94ebf",
+          "quote": "根据成熟市场的统计数据，可转债不仅存在违约，且违约率与高收益债相当。"
+        },
+        {
+          "role": "supporting",
+          "source_id": "china_cb_lianhe_risk_reconstruction_2025",
+          "volume": null,
+          "legacy_pages": [
+            1,
+            2
+          ],
+          "pdf_pages": [
+            1,
+            2
+          ],
+          "chunk_id": "china_cb_lianhe_risk_reconstruction_2025:p001:0000",
+          "chunk_hash": "5cdfc043bc31f662c359fa75245feae1cbab0ed39ea9f200921714640444d435",
+          "quote": "2024 年成为可转债市场的重要转折点，长期以来的零违约格局被打破"
+        },
+        {
+          "role": "supporting",
+          "source_id": "china_cb_lianhe_h1_default_review_2025",
+          "volume": null,
+          "legacy_pages": [
+            1,
+            2
+          ],
+          "pdf_pages": [
+            1,
+            2
+          ],
+          "chunk_id": "china_cb_lianhe_h1_default_review_2025:p001:0000",
+          "chunk_hash": "8f45e9d9a7c3448996f95f07f67a8894671e3ae0fad088a837de4b0dec58ef49",
+          "quote": "2025 年上半年，评级负面调整 有所减少，仍主要集中在可转债发行人。"
+        },
+        {
+          "role": "supporting",
+          "source_id": "china_cb_spc_bond_disputes_2020",
+          "volume": null,
+          "legacy_pages": [
+            3,
+            4
+          ],
+          "pdf_pages": [
+            3,
+            4
+          ],
+          "chunk_id": "china_cb_spc_bond_disputes_2020:p003:0002",
+          "chunk_hash": "e75d1e39529b473a129eab4e58b149c2bc50b7936b2e3d71fd08c44196eb16a6",
+          "quote": "要充分发挥债券持有人会议的议事平台作用"
+        }
+      ]
+    },
+    {
+      "card_id": "cb-china-distressed-workouts",
+      "title": "China Convertible-Bond Distressed Workouts (post-2024 default cohort)",
+      "summary_curated": "Distressed Chinese-CB workouts follow a six-step gradient — clause-bargaining (条款博弈: 下修/不强赎/回售) at the contractual layer, then 债务重组 (debt restructuring) and 破产清算 (bankruptcy liquidation), with delisting-linkage (退市联动) entangling 2024+ cases. The Lianhe 2025 reconstruction report frames this taxonomy on the heels of the five-default 2024-2025 cohort; the SPC 2020 bond-disputes summary supplies t...",
+      "source_stance": "primary-lianhe-research",
+      "audit_flag": "ok",
+      "audit_notes": "All china_cb_* offset 0. Lianhe risk-reconstruction 2025 PDF p1 contains the workout-ladder '常规化解-极端处置' framing; Lianhe credit-risk-resolution PDF p1 provides the recovery-path framework; Dajia PDF p7 provides the bankruptcy-acceleration rule.",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "china_cb_lianhe_risk_reconstruction_2025",
+          "volume": null,
+          "legacy_pages": [
+            1,
+            2
+          ],
+          "pdf_pages": [
+            1,
+            2
+          ],
+          "chunk_id": "china_cb_lianhe_risk_reconstruction_2025:p001:0000",
+          "chunk_hash": "5cdfc043bc31f662c359fa75245feae1cbab0ed39ea9f200921714640444d435",
+          "quote": "可转债风险处置呈现“常规化解-极端处置”的梯度路径体系"
+        },
+        {
+          "role": "supporting",
+          "source_id": "china_cb_lianhe_credit_risk_resolution",
+          "volume": null,
+          "legacy_pages": [
+            1,
+            2
+          ],
+          "pdf_pages": [
+            1,
+            2
+          ],
+          "chunk_id": "china_cb_lianhe_credit_risk_resolution:p001:0000",
+          "chunk_hash": "21819e5ea341f3b1f10883300ddb9dff46047d614f47860a1e16c4852f037e70",
+          "quote": "从传统的回收处置方式来看，破产重整和债务重组是 违约可转债常见的处置方式。"
+        },
+        {
+          "role": "supporting",
+          "source_id": "china_cb_spc_bond_disputes_2020",
+          "volume": null,
+          "legacy_pages": [
+            3,
+            4
+          ],
+          "pdf_pages": [
+            3,
+            4
+          ],
+          "chunk_id": "china_cb_spc_bond_disputes_2020:p003:0002",
+          "chunk_hash": "e75d1e39529b473a129eab4e58b149c2bc50b7936b2e3d71fd08c44196eb16a6",
+          "quote": "保障受托管理人和 其他债券代表人能够履行参与诉讼、债务重组、破产重整、和解、清算等债券持有人会 议赋予的职责"
+        },
+        {
+          "role": "supporting",
+          "source_id": "china_cb_dajia_credit_risk_immune_2024",
+          "volume": null,
+          "legacy_pages": [
+            7,
+            8
+          ],
+          "pdf_pages": [
+            7,
+            8
+          ],
+          "chunk_id": "china_cb_dajia_credit_risk_immune_2024:p007:0003",
+          "chunk_hash": "904e8bc789e46ae335c16e80a4b0359aab08e1f34ac8ab54d5854fca77548cef",
+          "quote": "如果正股因公司破产清 算而退市，同步退市可转债的未转股部分， 将被作为破产债权加速到期。"
+        }
+      ]
+    },
+    {
+      "card_id": "cb-china-double-low-strategy",
+      "title": "China Convertible Bond — 双低 (Double-Low) Strategy",
+      "summary_curated": "The 攻守 handbook organizes Chinese CBs on a price-vs-premium plane. The 双低 (double-low) strategy targets the (low price ∩ low premium) quadrant using a 双低数值 = X·price + Y·premium composite score, with a defensive screen exploiting 'bond floor + equity option' to deliver capped downside with re-rating optionality; backtest cited 2017-12-29 → 2020-03-06 with adjustable (X, Y) weights for personal ...",
+      "source_stance": "primary-tao-tao-hai",
+      "audit_flag": "ok",
+      "audit_notes": "Gongshou (攻守) handbook chunks p63-86 verified — chapter on new-issue subscription (网上申购) sits in this PDF range; the chapter on 双低 strategy is adjacent. Gongshou offset 0. An Daoquan 2023 pp.97-149 verified: PDF page 96 is the chapter-3 ('三线—复式 strategy') intro and the chapter spans into the 双低 (sub-strategy 2.5) discussion area. Calamos pp.50-80 corrected to offset +15 (PDF ~p65-95 covers chapter 3 valuation mechanics).",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "cb_gongshou_practical_handbook_1ed",
+          "volume": null,
+          "legacy_pages": [
+            64,
+            65
+          ],
+          "pdf_pages": [
+            64,
+            65
+          ],
+          "chunk_id": "cb_gongshou_practical_handbook_1ed:p064:0058",
+          "chunk_hash": "e5e3ecbf7f39ceb564b729f086337f4deed090ce2c037eec9d54ed2bd186b777",
+          "quote": "通过对2017年9月可转债信用申购以来的数据进行回测和分析，可以认为，可转 债网上申购具备“两低两高”的特征——风险低，中签高；投入低，收益高。"
+        },
+        {
+          "role": "supporting",
+          "source_id": "cb_an_daoquan_2023_three_line_duplex_3ed",
+          "volume": null,
+          "legacy_pages": [
+            96,
+            97
+          ],
+          "pdf_pages": [
+            96,
+            97
+          ],
+          "chunk_id": "cb_an_daoquan_2023_three_line_duplex_3ed:p096:0056",
+          "chunk_hash": "f22408dcda44fa71eb9d36f81a519d6133f6eaef0ae499de5aae139642bed57a",
+          "quote": "‚三线—复式‛答略是《可转债投资魔法书》前两版中‚面 值—高价折扣法‛的升级完善版。"
+        },
+        {
+          "role": "supporting",
+          "source_id": "cb_calamos_2003_convertible_arbitrage",
+          "volume": null,
+          "legacy_pages": [
+            50,
+            80
+          ],
+          "pdf_pages": [
+            65,
+            95
+          ],
+          "chunk_id": "cb_calamos_2003_convertible_arbitrage:p064:0068",
+          "chunk_hash": "1a37de4363e5d295e0938ee0afbe696d4490f50342b050bcbc60721473582712",
+          "quote": "Delta A Delta B Delta C Conversion value Stock Price FIGURE 3.1 Visualizing Delta."
+        }
+      ]
+    },
+    {
+      "card_id": "cb-china-downward-conversion",
+      "title": "China Convertible-Bond Downward Conversion (下修)",
+      "summary_curated": "Chinese CB prospectuses standardly include a 下修 (downward-conversion) clause: the issuer's board may propose lowering the conversion strike K_c after a defined share-price weakness window (typically 15-of-30 below 80% K_c). The proposal must pass a ≥2/3 vote of attending shareholders excluding CB-holders (回避表决), and the revised K_c must be at least the 20-day-and-1-day average price (and per-pr...",
+      "source_stance": "primary-anduquan",
+      "audit_flag": "ok",
+      "audit_notes": "An Daoquan 2014 PDF pp.50-58 contains §13 '向下修正转股价条款 — 可转债的起重机' which is the canonical Chinese-language 下修 mechanic; offset 0 (book uses PDF-aligned numbering). Gongshou PDF p16 contains the canonical 15/30/80% clause text. An Daoquan 2023 PDF pp.28-30 covers the same content updated for 3rd edition.",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "cb_an_daoquan_2014_magic_book_2ed",
+          "volume": null,
+          "legacy_pages": [
+            50,
+            51
+          ],
+          "pdf_pages": [
+            50,
+            51
+          ],
+          "chunk_id": "cb_an_daoquan_2014_magic_book_2ed:p050:0047",
+          "chunk_hash": "b50615b321696d7ee1a9cd8a5df12b953883be7fedd4a1898deeff5b5c321b3d",
+          "quote": "上述方案须经出席会议的股东所持表决权的三分之二以上通过方可实 施。"
+        },
+        {
+          "role": "supporting",
+          "source_id": "cb_gongshou_practical_handbook_1ed",
+          "volume": null,
+          "legacy_pages": [
+            16,
+            17
+          ],
+          "pdf_pages": [
+            16,
+            17
+          ],
+          "chunk_id": "cb_gongshou_practical_handbook_1ed:p016:0013",
+          "chunk_hash": "0c90836e80f05cbf3fb35bd9baaf8875ff0e4989b6e6a20ba7e0a2b17c9e98ca",
+          "quote": "当公司普通股股票在任意连续三十个交易日中有十五个交易日的收盘价低于当 期转股价格的80%时，公司董事会有权提出转股价格向下修正方案并提交公司股东 大会审议表决。"
+        },
+        {
+          "role": "supporting",
+          "source_id": "cb_an_daoquan_2023_three_line_duplex_3ed",
+          "volume": null,
+          "legacy_pages": [
+            28,
+            29
+          ],
+          "pdf_pages": [
+            28,
+            29
+          ],
+          "chunk_id": "cb_an_daoquan_2023_three_line_duplex_3ed:p028:0016",
+          "chunk_hash": "ab58d816a3237ef9b6edc4e3f0a0b4616556461fc8e667c80b68501676538b5a",
+          "quote": "一只刜始转股价 20 元的可转债，正股价可能 10 元，转股价可 能 100 元丆万；而如果通过万修转股价变为 10 元、5 元，等于‚打 折卖股票‛，"
+        },
+        {
+          "role": "supporting",
+          "source_id": "cb_despiegeleer_schoutens_vanhulle_2014_hybrid_securities",
+          "volume": null,
+          "legacy_pages": [
+            110,
+            111
+          ],
+          "pdf_pages": [
+            130,
+            131
+          ],
+          "chunk_id": "cb_despiegeleer_schoutens_vanhulle_2014_hybrid_securities:p130:0167",
+          "chunk_hash": "1d66f173423a4c1f655eed70d8ed5e4146b8a81f7060da3573b42ec9585872d8",
+          "quote": "Such a share price collapse is called the “death spiral.”"
+        }
+      ]
+    },
+    {
+      "card_id": "cb-china-downward-reset-signaling",
+      "title": "China Convertible-Bond Downward-Reset Signaling and Game Theory",
+      "summary_curated": "Atop the mechanical 下修 clause, the strategic layer is a signaling game between issuer and CB-holders. Issuers optimize dilution vs. coupon savings vs. put-avoidance: well-timed 下修 (often pre-put-eligible-date) credibly signals intent to push conversion before the upcoming put window, while announced non-reset signals that the issuer has cash on hand and prefers to redeem. The shareholders'-vote...",
+      "source_stance": "primary-anduquan-3ed",
+      "audit_flag": "ok",
+      "audit_notes": "An Daoquan 2023 PDF pp.28-32 contains the 下修 mechanism + strategic-rationale exposition; offset roughly 0 (chapter 1 sub-section discusses 下修). Koziol 2004 offset 0 — PDF p49 contains §3 (chapter 2 strategic-investor pricing). Gongshou p16 has the canonical clause-text.",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "cb_an_daoquan_2023_three_line_duplex_3ed",
+          "volume": null,
+          "legacy_pages": [
+            28,
+            29
+          ],
+          "pdf_pages": [
+            28,
+            29
+          ],
+          "chunk_id": "cb_an_daoquan_2023_three_line_duplex_3ed:p028:0016",
+          "chunk_hash": "ab58d816a3237ef9b6edc4e3f0a0b4616556461fc8e667c80b68501676538b5a",
+          "quote": "只有惱尽办法让可转债持 有人转股，这些钱才能成为‚股东投资给自己的钱‛，丆市公司才能 斱便自由地使用。"
+        },
+        {
+          "role": "supporting",
+          "source_id": "cb_koziol_2004_convertible_bonds_strategic_investors",
+          "volume": null,
+          "legacy_pages": [
+            49,
+            50
+          ],
+          "pdf_pages": [
+            49,
+            50
+          ],
+          "chunk_id": "cb_koziol_2004_convertible_bonds_strategic_investors:p049:0062",
+          "chunk_hash": "000191f40939737ccb83cee8ebcf2be2dd1dd3a55c20aa569f74c387fe9e69f2",
+          "quote": "If the conversion value is remarkably above the conversion price, i.e. the conversion probability is high, the value of a convertible bond is essentially driven by the firm value."
+        },
+        {
+          "role": "supporting",
+          "source_id": "cb_an_daoquan_2014_magic_book_2ed",
+          "volume": null,
+          "legacy_pages": [
+            56,
+            57
+          ],
+          "pdf_pages": [
+            56,
+            57
+          ],
+          "chunk_id": "cb_an_daoquan_2014_magic_book_2ed:p056:0053",
+          "chunk_hash": "38a73ca25817b531fe044eca5788b3a82daa8f95b0f22a9c4a6046ee30514180",
+          "quote": "换言之，“下调转股价”是一种权利，而不是义务。"
+        },
+        {
+          "role": "supporting",
+          "source_id": "cb_gongshou_practical_handbook_1ed",
+          "volume": null,
+          "legacy_pages": [
+            16,
+            17
+          ],
+          "pdf_pages": [
+            16,
+            17
+          ],
+          "chunk_id": "cb_gongshou_practical_handbook_1ed:p016:0013",
+          "chunk_hash": "0c90836e80f05cbf3fb35bd9baaf8875ff0e4989b6e6a20ba7e0a2b17c9e98ca",
+          "quote": "为了确保下修议案能 顺利通过，控股股东往往会在拟下修前清仓可转债，这一点可作为判断可转债是否 会下修的线索。"
+        }
+      ]
+    },
+    {
+      "card_id": "cb-china-downward-revision-game-strategy",
+      "title": "China Convertible Bond — 下修博弈 (Downward-Revision Game) Strategy",
+      "summary_curated": "The 攻守 handbook treats 下修博弈 as a CB strategy distinct from the mechanical 下修 clause. It taxonomizes the playbook into three event categories: 被动下修 (forced by approaching put-eligible date), 主动下修 (issuer proactively chooses to reset for capital-efficient conversion), and 特殊事件博弈 (other corporate-action catalysts). Selection criteria focus on candidates near a put window with high non-CB sharehold...",
+      "source_stance": "primary-tao-tao-hai",
+      "audit_flag": "ok",
+      "audit_notes": "Gongshou handbook p63-86: PDF pp covered are within range. Offset 0. An Daoquan 2023 pp.97-149 corresponds to PDF p96-148 (the chapter-3 三线—复式 strategy chapter), used as supporting context.",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "cb_gongshou_practical_handbook_1ed",
+          "volume": null,
+          "legacy_pages": [
+            16,
+            17
+          ],
+          "pdf_pages": [
+            16,
+            17
+          ],
+          "chunk_id": "cb_gongshou_practical_handbook_1ed:p016:0013",
+          "chunk_hash": "0c90836e80f05cbf3fb35bd9baaf8875ff0e4989b6e6a20ba7e0a2b17c9e98ca",
+          "quote": "为了确保下修议案能 顺利通过，控股股东往往会在拟下修前清仓可转债，这一点可作为判断可转债是否 会下修的线索。"
+        },
+        {
+          "role": "supporting",
+          "source_id": "cb_an_daoquan_2023_three_line_duplex_3ed",
+          "volume": null,
+          "legacy_pages": [
+            96,
+            97
+          ],
+          "pdf_pages": [
+            96,
+            97
+          ],
+          "chunk_id": "cb_an_daoquan_2023_three_line_duplex_3ed:p096:0056",
+          "chunk_hash": "f22408dcda44fa71eb9d36f81a519d6133f6eaef0ae499de5aae139642bed57a",
+          "quote": "‚三线—复式‛答略是《可转债投资魔法书》前两版中‚面 值—高价折扣法‛的升级完善版。"
+        },
+        {
+          "role": "supporting",
+          "source_id": "cb_an_daoquan_2014_magic_book_2ed",
+          "volume": null,
+          "legacy_pages": [
+            107,
+            108
+          ],
+          "pdf_pages": [
+            107,
+            108
+          ],
+          "chunk_id": "cb_an_daoquan_2014_magic_book_2ed:p107:0103",
+          "chunk_hash": "75ce537a06e11edb76094b2cc7e94f82204e0cdc06484f57f6f0d221ccbfb855",
+          "quote": "第4章 可转债投资三大流派和八项注意 本章介绍可转债投资方法中常见的三大流派和相关的投资基本 知识。"
+        }
+      ]
+    },
+    {
+      "card_id": "cb-china-exchange-price-limit-suitability-rules",
+      "title": "China Convertible-Bond Exchange-Rulebook Price-Limit, Suspension, and Suitability Rules",
+      "summary_curated": "On top of generic CB trading mechanics, the SSE/SZSE rulebook layer adds a tighter operational envelope: T+0 全价 申报 with 0.001-yuan tick; 1000-yuan-face lot; 20%-up/-down daily price-limit (57.3%/-43.3% on first listing day); suitability gates requiring investor risk-disclosure acknowledgement; algorithmic-trading reporting; temporary suspension on extreme intraday moves. The 2022 SSE-SZSE 'Impl...",
+      "source_stance": "primary-sse-szse",
+      "audit_flag": "ok",
+      "audit_notes": "china_cb_* sources at offset 0. SSE rules compilation PDF p454 contains the 20% / 57.3% / 43.3% price-limit rules and the first-listing-day rule. SZSE 2022 PDF p4 has the parallel 20% rule. Gongshou and An Daoquan 2023 provide context-bridging from a practitioner perspective.",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "china_cb_sse_rules_compilation",
+          "volume": null,
+          "legacy_pages": [
+            454,
+            455
+          ],
+          "pdf_pages": [
+            454,
+            455
+          ],
+          "chunk_id": "china_cb_sse_rules_compilation:p454:0421",
+          "chunk_hash": "e8478e9a93f11afd76b0de11acefd1c83aa132305c5e7d8e8849de2da7cf7170",
+          "quote": "向不特定对象发行的可转债上市后的首个交易日涨幅比例 为 57.3%、跌幅比例为 43.3%。上市首个交易日后，涨跌幅比例 为 20%。"
+        },
+        {
+          "role": "supporting",
+          "source_id": "china_cb_szse_trading_rules_2022",
+          "volume": null,
+          "legacy_pages": [
+            4,
+            5
+          ],
+          "pdf_pages": [
+            4,
+            5
+          ],
+          "chunk_id": "china_cb_szse_trading_rules_2022:p004:0003",
+          "chunk_hash": "799539c56654a6d0f2df7b77f47b4ae61afb4960e11c015cbc6cf437257316a3",
+          "quote": "除上市首日外，向不特定对象发行的可转债的价 格涨跌幅限制比例为 20%。"
+        },
+        {
+          "role": "supporting",
+          "source_id": "cb_an_daoquan_2023_three_line_duplex_3ed",
+          "volume": null,
+          "legacy_pages": [
+            32,
+            33
+          ],
+          "pdf_pages": [
+            32,
+            33
+          ],
+          "chunk_id": "cb_an_daoquan_2023_three_line_duplex_3ed:p032:0018",
+          "chunk_hash": "186acff34a5dd1161006a058ea42934a3eac982b9c7d06804c85eec252be2c51",
+          "quote": "①在转股期内，如果公司股票在仸意违续三十个交易日中至少 十五个交易日的收盘价栺不低于当期转股价栺的 130%（含 130%）；"
+        },
+        {
+          "role": "supporting",
+          "source_id": "cb_gongshou_practical_handbook_1ed",
+          "volume": null,
+          "legacy_pages": [
+            18,
+            19
+          ],
+          "pdf_pages": [
+            18,
+            19
+          ],
+          "chunk_id": "cb_gongshou_practical_handbook_1ed:p018:0014",
+          "chunk_hash": "95ff1ecb153d3a50520c3bcda12fe3d2e157ae46a7be808eff64935f23ac089c",
+          "quote": "在可转债最后两个计息年度，股票任何连续三十个交易日收盘价格低于当期 转股价格的70%，可转债持有人有权将其持有的可转债全部或者部分按债券面值加 上当期应计利息回售给公司。"
+        }
+      ]
+    },
+    {
+      "card_id": "cb-china-forced-redemption-tactics-2020s",
+      "title": "China Convertible Bond — 复式兌现 Tactics Around the 强赎 Trigger (post-2014 case studies)",
+      "summary_curated": "安道全 develops a holder-side tactical discipline around the strong-call (强赎) trigger — '复式兌现' — that treats the trigger price as a reliable cash-out point and treats below-trigger dips as low-cost re-entries. The 2018-2022 weekly retrospectives in Ch.5 are organized as case studies of issuers who pulled the call vs. those who declined (publicly committing not to call), illustrating that under pos...",
+      "source_stance": "primary-anduquan-3ed",
+      "audit_flag": "ok",
+      "audit_notes": "An Daoquan 2023 PDF page 40 (legacy ~p171 via offset error — the brief said +30 est but PDF-page maps to legacy page +/-7 in the front-matter region with no offset in body; chapter 1 §1.10 'why CBs that satisfy 强赎 don't 强赎' lives at PDF p40-44). An Daoquan 2014: PDF pp.55-58 covers 强赎 mechanics (玻璃天花板) and §15 回售 — offset 0.",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "cb_an_daoquan_2023_three_line_duplex_3ed",
+          "volume": null,
+          "legacy_pages": [
+            40,
+            41
+          ],
+          "pdf_pages": [
+            40,
+            41
+          ],
+          "chunk_id": "cb_an_daoquan_2023_three_line_duplex_3ed:p040:0022",
+          "chunk_hash": "6c641188f21c64a9af394b056a2dab99c68937e4b7262594407ed2ac2caeb9ea",
+          "quote": "2021 年，据浙商证券《宏观和会计视角：为何今年超半数转债 没有强赎》统计，57%的触収可转债公告不强赎"
+        },
+        {
+          "role": "supporting",
+          "source_id": "cb_an_daoquan_2014_magic_book_2ed",
+          "volume": null,
+          "legacy_pages": [
+            71,
+            72
+          ],
+          "pdf_pages": [
+            71,
+            72
+          ],
+          "chunk_id": "cb_an_daoquan_2014_magic_book_2ed:p071:0068",
+          "chunk_hash": "c0cd048f2f0122d728aff1c012021176e80927b5a894690840c2af944694cf1f",
+          "quote": "上市公司怎么能够100%保证：无论股市涨跌，都 能让股价超越转股价的130%呢？"
+        }
+      ]
+    },
+    {
+      "card_id": "cb-china-hkex-offshore-cb-comparison",
+      "title": "HKEX Offshore Convertible-Securities Listing Regime",
+      "summary_curated": "HKEX Main Board Listing Rules carry two convertible-securities chapters: Ch.28 (convertible debt securities) and Ch.16 (convertible equity securities). The two share three core gates — Exchange-approval is required before issue, underlying shares must be listed (or admitted to a recognised market), and any post-issue alteration of terms requires Exchange approval unless taking effect under exis...",
+      "source_stance": "primary-hkex",
+      "audit_flag": "ok",
+      "audit_notes": "HKEX Ch28 PDF p1-2 verbatim contains §28.01 (Exchange approval), §28.02 (underlying), §28.05 (alteration of terms). HKEX Ch16 PDF p1 carries the parallel §16.01-§16.02. All china_cb_* offset 0. Clifford Chance offset 0 (front-matter PDF page aligns). DeSpiegeleer offset +20 verified — legacy book pp.21-22 maps to PDF pp.41-42 where section 2.2 'Anatomy of a Convertible Bond' begins.",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "china_cb_hkex_ch28_convertible_debt",
+          "volume": null,
+          "legacy_pages": [
+            1,
+            2
+          ],
+          "pdf_pages": [
+            1,
+            2
+          ],
+          "chunk_id": "china_cb_hkex_ch28_convertible_debt:p001:0000",
+          "chunk_hash": "3b3a1ed50b0d93d93e76a3e010dd975f9a58eb0bd4a7dff66b12f3a8c469d548",
+          "quote": "All convertible debt securities must, prior to the issue thereof, be approved by the Exchange and the Exchange should be consulted at the earliest opportunity as to the requirements which will apply."
+        },
+        {
+          "role": "supporting",
+          "source_id": "china_cb_hkex_ch16_convertible_equity",
+          "volume": null,
+          "legacy_pages": [
+            1,
+            2
+          ],
+          "pdf_pages": [
+            1,
+            2
+          ],
+          "chunk_id": "china_cb_hkex_ch16_convertible_equity:p001:0000",
+          "chunk_hash": "a624b5a772ad59909e7c712b3850820c7c6af31b619bc16c8ce120e9f6f88d1a",
+          "quote": "All convertible equity securities which are convertible into new securities or outstanding securities of the issuer or a company in the same group as the issuer must, prior to the issue thereof, be approved by the Exchange and the Exchange should be consulted at the earliest opportunity as to the requirements which will apply."
+        },
+        {
+          "role": "supporting",
+          "source_id": "china_cb_clifford_chance_apac_equity_linked_2025",
+          "volume": null,
+          "legacy_pages": [
+            4,
+            5
+          ],
+          "pdf_pages": [
+            4,
+            5
+          ],
+          "chunk_id": "china_cb_clifford_chance_apac_equity_linked_2025:p004:0003",
+          "chunk_hash": "16573fe5dcb83eaf85056e4d11443f2241a9ada92f9b18f85806c47849ddd71f",
+          "quote": "Conversion is usually at the holder’s option, although occasionally conversion may be mandatory on a specified future date."
+        },
+        {
+          "role": "supporting",
+          "source_id": "cb_despiegeleer_schoutens_vanhulle_2014_hybrid_securities",
+          "volume": null,
+          "legacy_pages": [
+            21,
+            22
+          ],
+          "pdf_pages": [
+            41,
+            42
+          ],
+          "chunk_id": "cb_despiegeleer_schoutens_vanhulle_2014_hybrid_securities:p041:0045",
+          "chunk_hash": "53fc3079dc48462a65dff49f335124d01c4ec34bcb4e2029a3a7eadf661488ad",
+          "quote": "2.2 ANATOMY OF A CONVERTIBLE BOND"
+        }
+      ]
+    },
+    {
+      "card_id": "cb-china-no-call-commitments",
+      "title": "China Convertible-Bond No-Call Commitments (不赎回承诺)",
+      "summary_curated": "Chinese CB prospectuses give the issuer a strong-call (强赎) right activated when the share price crosses 130%·K_c for 15 of 30 trading days. Under post-2018 practice, when triggered, a majority of issuers publicly issue a 不赎回承诺 — a voluntary commitment not to exercise the call for a specified window (often 12 months) — preferring to delay forced conversion. The 2021 Zheshang/Huatai survey: 57% o...",
+      "source_stance": "primary-anduquan-3ed",
+      "audit_flag": "ok",
+      "audit_notes": "An Daoquan 2023 PDF pp.40-44 contains the §1.10 commitment-rationale exposition. Chunk p40 explicitly cites the 57% non-call statistic.",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "cb_an_daoquan_2023_three_line_duplex_3ed",
+          "volume": null,
+          "legacy_pages": [
+            41,
+            42
+          ],
+          "pdf_pages": [
+            41,
+            42
+          ],
+          "chunk_id": "cb_an_daoquan_2023_three_line_duplex_3ed:p040:0022",
+          "chunk_hash": "6c641188f21c64a9af394b056a2dab99c68937e4b7262594407ed2ac2caeb9ea",
+          "quote": "近些年，有的可转债明明已经触収了强赎条件，但最终却明确 公告不强赎。"
+        },
+        {
+          "role": "supporting",
+          "source_id": "cb_an_daoquan_2014_magic_book_2ed",
+          "volume": null,
+          "legacy_pages": [
+            71,
+            72
+          ],
+          "pdf_pages": [
+            71,
+            72
+          ],
+          "chunk_id": "cb_an_daoquan_2014_magic_book_2ed:p071:0068",
+          "chunk_hash": "c0cd048f2f0122d728aff1c012021176e80927b5a894690840c2af944694cf1f",
+          "quote": "如果公司股票在5年内碰上一个大牛市，或者公司在5年内遇到或者创 造一次以上的大利好"
+        },
+        {
+          "role": "supporting",
+          "source_id": "cb_gongshou_practical_handbook_1ed",
+          "volume": null,
+          "legacy_pages": [
+            18,
+            19
+          ],
+          "pdf_pages": [
+            18,
+            19
+          ],
+          "chunk_id": "cb_gongshou_practical_handbook_1ed:p018:0014",
+          "chunk_hash": "95ff1ecb153d3a50520c3bcda12fe3d2e157ae46a7be808eff64935f23ac089c",
+          "quote": "中装转债流通面值为2978.94万元，已低于3000万元， 已经触发《募集说明书》中约定的有条件赎回条款。"
+        }
+      ]
+    },
+    {
+      "card_id": "cb-china-strong-call-game-theory",
+      "title": "China Convertible-Bond Strong-Call Game Theory (强赎博弈)",
+      "summary_curated": "Once a Chinese CB satisfies the 130%·K_c / 15-of-30 strong-call trigger, the issuer has three moves: pull the call (force conversion at ~100·103%), post a 不赎回承诺 (decline for a stated window), or stay silent through the eligibility window. Under post-2018 norms, ~57% of triggered CBs publicly declined to call (Zheshang Securities); declining is itself a signal — typically that the issuer has cas...",
+      "source_stance": "primary-anduquan-3ed",
+      "audit_flag": "ok",
+      "audit_notes": "An Daoquan 2023 PDF pp.32-42 contains the 强赎 mechanic exposition with the standard 130%/15-of-30 clause AND the 57% non-call commentary. Koziol PDF pp.49-50 provides Western strategic-investor baseline at offset 0.",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "cb_an_daoquan_2023_three_line_duplex_3ed",
+          "volume": null,
+          "legacy_pages": [
+            32,
+            33
+          ],
+          "pdf_pages": [
+            32,
+            33
+          ],
+          "chunk_id": "cb_an_daoquan_2023_three_line_duplex_3ed:p032:0018",
+          "chunk_hash": "186acff34a5dd1161006a058ea42934a3eac982b9c7d06804c85eec252be2c51",
+          "quote": "①在转股期内，如果公司股票在仸意违续三十个交易日中至少 十五个交易日的收盘价栺不低于当期转股价栺的 130%（含 130%）；"
+        },
+        {
+          "role": "supporting",
+          "source_id": "cb_an_daoquan_2023_three_line_duplex_3ed",
+          "volume": null,
+          "legacy_pages": [
+            42,
+            43
+          ],
+          "pdf_pages": [
+            42,
+            43
+          ],
+          "chunk_id": "cb_an_daoquan_2023_three_line_duplex_3ed:p042:0023",
+          "chunk_hash": "12ba11a3b16c4217a488a92d5add3adf4a97e0cc2f4b287f67412109a1e818a9",
+          "quote": "我们的看法是，强赎与否，利益使然。"
+        },
+        {
+          "role": "supporting",
+          "source_id": "cb_an_daoquan_2014_magic_book_2ed",
+          "volume": null,
+          "legacy_pages": [
+            71,
+            72
+          ],
+          "pdf_pages": [
+            71,
+            72
+          ],
+          "chunk_id": "cb_an_daoquan_2014_magic_book_2ed:p071:0068",
+          "chunk_hash": "c0cd048f2f0122d728aff1c012021176e80927b5a894690840c2af944694cf1f",
+          "quote": "可转债的持有人会看到，可以以几年前约好的低价格（转股价）把可 转债转换为公司股票"
+        },
+        {
+          "role": "supporting",
+          "source_id": "cb_koziol_2004_convertible_bonds_strategic_investors",
+          "volume": null,
+          "legacy_pages": [
+            49,
+            50
+          ],
+          "pdf_pages": [
+            49,
+            50
+          ],
+          "chunk_id": "cb_koziol_2004_convertible_bonds_strategic_investors:p049:0062",
+          "chunk_hash": "000191f40939737ccb83cee8ebcf2be2dd1dd3a55c20aa569f74c387fe9e69f2",
+          "quote": "If the conversion value is remarkably above the conversion price, i.e. the conversion probability is high, the value of a convertible bond is essentially driven by the firm value."
+        }
+      ]
+    },
+    {
+      "card_id": "cb-china-szse-2025-cb-self-regulation-update",
+      "title": "SZSE 2025 Convertible-Bond Self-Regulation Update",
+      "summary_curated": "The SZSE 上市公司自律监管指引第15号 — 可转换公司债券 (2025 修订) codifies four major upgrades: §12-§13 add rules for using repurchased shares as the conversion-share source (with a dedicated 转股专门账户); §22 requires the issuer to disclose whether the strong-call is being exercised by next-day pre-open and, on declining, to bind itself for ≥3 months; §33-§34 mandates 3-5 trading-day advance disclosure of interest-payme...",
+      "source_stance": "primary-szse-2025",
+      "audit_flag": "ok",
+      "audit_notes": "All china_cb_* offset 0. SZSE 2025 guideline PDF p7 contains the §22 next-day disclosure + 3-month re-call moratorium. SZSE 2025 PDF p9 contains §32 same-day processing order. SZSE 2025 PDF p9 contains §33 付息公告 timing.",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "china_cb_szse_self_reg_guideline_15_2025",
+          "volume": null,
+          "legacy_pages": [
+            7,
+            8
+          ],
+          "pdf_pages": [
+            7,
+            8
+          ],
+          "chunk_id": "china_cb_szse_self_reg_guideline_15_2025:p007:0006",
+          "chunk_hash": "dbb9a9750b2b4333c37efcf7716b3a9898a05d0d314f593611d3baa22876d59a",
+          "quote": "上市公司不行使赎回权的，应当充分说明不赎回的具体 原因，且在未来至少 3 个月内不得再行使赎回权"
+        },
+        {
+          "role": "supporting",
+          "source_id": "china_cb_szse_self_reg_guideline_15_2025",
+          "volume": null,
+          "legacy_pages": [
+            9,
+            10
+          ],
+          "pdf_pages": [
+            9,
+            10
+          ],
+          "chunk_id": "china_cb_szse_self_reg_guideline_15_2025:p009:0008",
+          "chunk_hash": "b1b394bb2f409c89aa26e7d4af5dffa5ef900844f042b743d53607bbab422f00",
+          "quote": "如在同一交易日内分别收到可转债持有 人的交易或者转让、转托管、转股、回售等两项以上业务申 请的，按照交易或者转让、回售、转股、转托管的顺序处理 申请。"
+        },
+        {
+          "role": "supporting",
+          "source_id": "china_cb_szse_trading_rules_2022",
+          "volume": null,
+          "legacy_pages": [
+            4,
+            5
+          ],
+          "pdf_pages": [
+            4,
+            5
+          ],
+          "chunk_id": "china_cb_szse_trading_rules_2022:p004:0003",
+          "chunk_hash": "799539c56654a6d0f2df7b77f47b4ae61afb4960e11c015cbc6cf437257316a3",
+          "quote": "除上市首日外，向不特定对象发行的可转债的价 格涨跌幅限制比例为 20%。"
+        },
+        {
+          "role": "supporting",
+          "source_id": "cb_an_daoquan_2023_three_line_duplex_3ed",
+          "volume": null,
+          "legacy_pages": [
+            32,
+            33
+          ],
+          "pdf_pages": [
+            32,
+            33
+          ],
+          "chunk_id": "cb_an_daoquan_2023_three_line_duplex_3ed:p032:0018",
+          "chunk_hash": "186acff34a5dd1161006a058ea42934a3eac982b9c7d06804c85eec252be2c51",
+          "quote": "①在转股期内，如果公司股票在仸意违续三十个交易日中至少 十五个交易日的收盘价栺不低于当期转股价栺的 130%（含 130%）；"
+        }
+      ]
+    },
+    {
+      "card_id": "cb-china-t-plus-zero-arbitrage",
+      "title": "Chinese CB Conversion-Arbitrage Strategy Regimes",
+      "summary_curated": "Zhang+Feng (SJTU Antai, 2014) decompose Chinese onshore convertible-bond conversion-arbitrage into two regimes by whether the underlying stock is shortable via the 融资融券 framework: (1) shortable underlying → delta-neutral CB-long / stock-short hedge captures the mean-reverting pricing-deviation (定价偏差); (2) non-shortable → T-day CB-buy + same-day conversion + T+1 stock-open sell. Both rely on thr...",
+      "source_stance": "primary-sjtu-antai",
+      "audit_flag": "ok",
+      "audit_notes": "Zhang+Feng PDF pp.1-15 verbatim contains the abstract, two-strategy framework, and Wind data sample tables; offset 0. The empirical-table chunks at PDF p12 contain the canonical (next-day open price - 转股平价)/转股平价 - 交易成本 formula for the non-shortable case.",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "china_cb_zhang_feng_strategy_2014",
+          "volume": null,
+          "legacy_pages": [
+            1,
+            2
+          ],
+          "pdf_pages": [
+            1,
+            2
+          ],
+          "chunk_id": "china_cb_zhang_feng_strategy_2014:p001:0000",
+          "chunk_hash": "22f2191ec135c4b19e64ee8d50529b74d535cd5b2e4417da5ea6ce4a75593db8",
+          "quote": "根据模型的 假设前提和每个关键时点的最优策略，建立理论模型，并构建了定价偏差指标，采用均值回 复模型以及可转债股性价值指标，深入分析不同条款下的可转债投资空间。"
+        },
+        {
+          "role": "supporting",
+          "source_id": "china_cb_zhang_feng_strategy_2014",
+          "volume": null,
+          "legacy_pages": [
+            12,
+            13
+          ],
+          "pdf_pages": [
+            12,
+            13
+          ],
+          "chunk_id": "china_cb_zhang_feng_strategy_2014:p012:0006",
+          "chunk_hash": "b07f0eed60c00924c6b2f939489a5d765ce986962e063d256162c10bd31ad7b1",
+          "quote": "未融券套利收益率=(次日股票开盘价—转股平价)/转股平价—交易成本费用率"
+        },
+        {
+          "role": "supporting",
+          "source_id": "cb_an_daoquan_2023_three_line_duplex_3ed",
+          "volume": null,
+          "legacy_pages": [
+            32,
+            33
+          ],
+          "pdf_pages": [
+            32,
+            33
+          ],
+          "chunk_id": "cb_an_daoquan_2023_three_line_duplex_3ed:p032:0018",
+          "chunk_hash": "186acff34a5dd1161006a058ea42934a3eac982b9c7d06804c85eec252be2c51",
+          "quote": "①在转股期内，如果公司股票在仸意违续三十个交易日中至少 十五个交易日的收盘价栺不低于当期转股价栺的 130%（含 130%）；"
+        },
+        {
+          "role": "supporting",
+          "source_id": "cb_calamos_2003_convertible_arbitrage",
+          "volume": null,
+          "legacy_pages": [
+            260,
+            280
+          ],
+          "pdf_pages": [
+            275,
+            295
+          ],
+          "chunk_id": "cb_calamos_2003_convertible_arbitrage:p275:0303",
+          "chunk_hash": "83ac2b3b1924fe0b0b692bd41225a92adf896bf13cd8d3fc19240e3e76f07e5b",
+          "quote": "Each contract unit pays $250 for every 1 point in NDX volatility."
+        }
+      ]
+    },
+    {
+      "card_id": "cb-china-three-line-duplex-strategy",
+      "title": "China Convertible Bond — 三线—复式 (Three-Line / Duplex) Strategy",
+      "summary_curated": "安道全's 三线—复式 strategy collapses Chinese-CB position management to three decreasing buy-side PRICE lines (建仓线 / 加仓线 / 重仓线) derived from per-CB 安全—弹性 (safety-elasticity) analysis, paired with a sell-side strong-call-trigger line (typically 130 RMB). Price action reduces to three states: 买买买 / 等等等 / 卖卖卖. The 极简参数分散 (minimal-parameter diversified) variant automates the line-drawing using mechanical-...",
+      "source_stance": "primary-anduquan-3ed",
+      "audit_flag": "ok",
+      "audit_notes": "An Daoquan 2023 chapter 3 ('入室' chapter — the 三线—复式 strategy) starts at PDF p96 with TOC at p7 listing it. Chunk p096 explicitly says '三线—复式答略是《可转债投资魔法书》前两版中面值—高价折扣法的升级完善版'. Chunk p148 explicitly mentions 条件单 (conditional orders) — the automation mechanism. An Daoquan 2014 Ch.4-5 provides the precursor 面值—高价折扣法.",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "cb_an_daoquan_2023_three_line_duplex_3ed",
+          "volume": null,
+          "legacy_pages": [
+            96,
+            97
+          ],
+          "pdf_pages": [
+            96,
+            97
+          ],
+          "chunk_id": "cb_an_daoquan_2023_three_line_duplex_3ed:p096:0056",
+          "chunk_hash": "f22408dcda44fa71eb9d36f81a519d6133f6eaef0ae499de5aae139642bed57a",
+          "quote": "‚三线—复式‛答略是《可转债投资魔法书》前两版中‚面 值—高价折扣法‛的升级完善版。"
+        },
+        {
+          "role": "supporting",
+          "source_id": "cb_an_daoquan_2023_three_line_duplex_3ed",
+          "volume": null,
+          "legacy_pages": [
+            148,
+            149
+          ],
+          "pdf_pages": [
+            148,
+            149
+          ],
+          "chunk_id": "cb_an_daoquan_2023_three_line_duplex_3ed:p148:0088",
+          "chunk_hash": "c81535ae5edc6cff161b04a711e711924cd313a626eea6c99296d32aa08d6d02",
+          "quote": "条件单，就是可以提前设定买卖的触収价栺或触収觃则，满足 后自动万单亣易。"
+        },
+        {
+          "role": "supporting",
+          "source_id": "cb_an_daoquan_2014_magic_book_2ed",
+          "volume": null,
+          "legacy_pages": [
+            107,
+            108
+          ],
+          "pdf_pages": [
+            107,
+            108
+          ],
+          "chunk_id": "cb_an_daoquan_2014_magic_book_2ed:p107:0103",
+          "chunk_hash": "75ce537a06e11edb76094b2cc7e94f82204e0cdc06484f57f6f0d221ccbfb855",
+          "quote": "第4章 可转债投资三大流派和八项注意 本章介绍可转债投资方法中常见的三大流派和相关的投资基本 知识。"
+        }
+      ]
+    },
+    {
+      "card_id": "cb-china-trading-mechanics",
+      "title": "China Convertible-Bond Trading Mechanics",
+      "summary_curated": "Chinese onshore CB trading: 100 RMB par; lot of 1000 RMB face for matched orders; T+0 round-trip (same-day buy and sell); 20% daily price-limit after listing day; 0.001-yuan minimum tick on a quoted-as-full-price basis. The conversion-share source defaults to newly issued shares but can use repurchased shares under the 2025 SZSE update. Trading differs structurally from US-style listed converti...",
+      "source_stance": "primary-anduquan-3ed",
+      "audit_flag": "ok",
+      "audit_notes": "An Daoquan 2023 Chapter 1 ('入门') runs PDF pp.13-71, explaining face / 转股价 / 强赎 / 回售 mechanics. Chunk p32 contains the canonical 130%·K_c / 15-of-30 强赎 clause. An Daoquan 2014 PDF pp.20-100 covers the same material in 2nd-edition form. Gongshou pp.26-96 covers chapters 3-5 (lifecycle and strategies); SZSE 2022 supports with the 20% rule.",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "cb_an_daoquan_2023_three_line_duplex_3ed",
+          "volume": null,
+          "legacy_pages": [
+            32,
+            33
+          ],
+          "pdf_pages": [
+            32,
+            33
+          ],
+          "chunk_id": "cb_an_daoquan_2023_three_line_duplex_3ed:p032:0018",
+          "chunk_hash": "186acff34a5dd1161006a058ea42934a3eac982b9c7d06804c85eec252be2c51",
+          "quote": "①在转股期内，如果公司股票在仸意违续三十个交易日中至少 十五个交易日的收盘价栺不低于当期转股价栺的 130%（含 130%）；"
+        },
+        {
+          "role": "supporting",
+          "source_id": "cb_an_daoquan_2014_magic_book_2ed",
+          "volume": null,
+          "legacy_pages": [
+            14,
+            15
+          ],
+          "pdf_pages": [
+            14,
+            15
+          ],
+          "chunk_id": "cb_an_daoquan_2014_magic_book_2ed:p014:0013",
+          "chunk_hash": "b8d22a0115f690fe31f95410fdee5e3a03f52a1374e926b5fbba64366d3790e3",
+          "quote": "可转债，全名叫做“可转换公司债券”（Convertible bond；CB），"
+        },
+        {
+          "role": "supporting",
+          "source_id": "cb_gongshou_practical_handbook_1ed",
+          "volume": null,
+          "legacy_pages": [
+            64,
+            65
+          ],
+          "pdf_pages": [
+            64,
+            65
+          ],
+          "chunk_id": "cb_gongshou_practical_handbook_1ed:p064:0058",
+          "chunk_hash": "e5e3ecbf7f39ceb564b729f086337f4deed090ce2c037eec9d54ed2bd186b777",
+          "quote": "可转 债网上申购具备“两低两高”的特征——风险低，中签高；投入低，收益高。"
+        },
+        {
+          "role": "supporting",
+          "source_id": "china_cb_szse_trading_rules_2022",
+          "volume": null,
+          "legacy_pages": [
+            4,
+            5
+          ],
+          "pdf_pages": [
+            4,
+            5
+          ],
+          "chunk_id": "china_cb_szse_trading_rules_2022:p004:0003",
+          "chunk_hash": "799539c56654a6d0f2df7b77f47b4ae61afb4960e11c015cbc6cf437257316a3",
+          "quote": "除上市首日外，向不特定对象发行的可转债的价 格涨跌幅限制比例为 20%。"
+        }
+      ]
+    },
+    {
+      "card_id": "cb-china-vs-asian-equity-linked-comparative",
+      "title": "China vs Asian Equity-Linked Products Comparative",
+      "summary_curated": "The Clifford Chance Asia-Pacific equity-linked-products guide (2nd ed Feb 2025) frames how Chinese onshore CBs compare to Asian peer products: Japan's 新株予約権付社債 (bonds with stock acquisition rights, named under 会社法), Hong Kong's HKEX-listed convertible-debt under Ch.28, and the broader regional offshore-USD-CB market. Differences span: holder-option-vs-mandatory conversion, conversion-share-sour...",
+      "source_stance": "primary-clifford-chance-ap",
+      "audit_flag": "ok",
+      "audit_notes": "Clifford Chance PDF p4 contains the canonical 'conversion at holder's option vs mandatory' framing; offset 0. HKEX Ch28 + Ch16 are the regulatory comparison (offset 0). DeSpiegeleer offset +20 confirmed — legacy book pp.21-22 maps to PDF pp.41-42 (section 2.2 'Anatomy of a Convertible Bond').",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "china_cb_clifford_chance_apac_equity_linked_2025",
+          "volume": null,
+          "legacy_pages": [
+            4,
+            5
+          ],
+          "pdf_pages": [
+            4,
+            5
+          ],
+          "chunk_id": "china_cb_clifford_chance_apac_equity_linked_2025:p004:0003",
+          "chunk_hash": "16573fe5dcb83eaf85056e4d11443f2241a9ada92f9b18f85806c47849ddd71f",
+          "quote": "Conversion is usually at the holder’s option, although occasionally conversion may be mandatory on a specified future date."
+        },
+        {
+          "role": "supporting",
+          "source_id": "china_cb_hkex_ch28_convertible_debt",
+          "volume": null,
+          "legacy_pages": [
+            1,
+            2
+          ],
+          "pdf_pages": [
+            1,
+            2
+          ],
+          "chunk_id": "china_cb_hkex_ch28_convertible_debt:p001:0000",
+          "chunk_hash": "3b3a1ed50b0d93d93e76a3e010dd975f9a58eb0bd4a7dff66b12f3a8c469d548",
+          "quote": "All convertible debt securities must, prior to the issue thereof, be approved by the Exchange and the Exchange should be consulted at the earliest opportunity as to the requirements which will apply."
+        },
+        {
+          "role": "supporting",
+          "source_id": "cb_despiegeleer_schoutens_vanhulle_2014_hybrid_securities",
+          "volume": null,
+          "legacy_pages": [
+            21,
+            22
+          ],
+          "pdf_pages": [
+            41,
+            42
+          ],
+          "chunk_id": "cb_despiegeleer_schoutens_vanhulle_2014_hybrid_securities:p041:0045",
+          "chunk_hash": "53fc3079dc48462a65dff49f335124d01c4ec34bcb4e2029a3a7eadf661488ad",
+          "quote": "2.2 ANATOMY OF A CONVERTIBLE BOND"
+        }
+      ]
+    },
+    {
+      "card_id": "cb-conversion-feature-mechanics",
+      "title": "Conversion Feature Mechanics",
+      "citations": [
+        {
+          "source_id": "cb_despiegeleer_schoutens_vanhulle_2014_hybrid_securities",
+          "chunk_id": "cb_despiegeleer_schoutens_vanhulle_2014_hybrid_securities:p053:0060",
+          "chunk_hash": "9ec10ac25ac4f579e25eaecbbce66f1ca31e67388046f9f92539cc87b2a4cbdd",
+          "quote": "The holder of a convertible bond has the option to end the bond’s existence prematurely by converting it into shares. This right is the optional conversion.",
+          "role": "primary",
+          "legacy_pages": [
+            53,
+            54
+          ],
+          "pdf_pages": [
+            53,
+            54
+          ]
+        },
+        {
+          "source_id": "cb_hull_2022_options_futures_derivatives_11ed",
+          "chunk_id": "cb_hull_2022_options_futures_derivatives_11ed:p242:0371",
+          "chunk_hash": "834ae1b123738b60e5d1e1c1a09c41767bff9374213356771e8430f1eef484b0",
+          "quote": "They are therefore bonds with an embedded call option on the company’s stock.",
+          "role": "supporting",
+          "legacy_pages": [
+            242,
+            242
+          ],
+          "pdf_pages": [
+            242,
+            242
+          ]
+        },
+        {
+          "source_id": "cb_hull_2022_options_futures_derivatives_11ed",
+          "chunk_id": "cb_hull_2022_options_futures_derivatives_11ed:p651:0967",
+          "chunk_hash": "c04abce6411df0c614d161917476d374cfabf4393d43ac4e6e20224be5a3e12f",
+          "quote": "Credit risk plays an important role in the valuation of convertibles. If credit risk is ignored, poor prices are obtained because the coupons and principal payments on the bond are overvalued.",
+          "role": "supporting",
+          "legacy_pages": [
+            651,
+            651
+          ],
+          "pdf_pages": [
+            651,
+            651
+          ]
+        }
+      ],
+      "audit_notes": "",
+      "source_stance": "primary-cfa",
+      "summary_curated": "Conversion Feature Mechanics — placeholder summary                              ",
+      "audit_flag": "ok"
+    },
+    {
+      "card_id": "cb-conversion-premium",
+      "title": "Conversion Premium",
+      "citations": [
+        {
+          "source_id": "cb_calamos_2003_convertible_arbitrage",
+          "chunk_id": "cb_calamos_2003_convertible_arbitrage:p032:0030",
+          "chunk_hash": "fbcfebc44077d76bbbbe02e2ddb1a1cc9380cef91bb44e0d4132bebdca18f4dd",
+          "quote": "The premium above conversion value represents the percentage premium that the convertible is trading above its equity value component. The higher the conversion premium, the lower the equity sensitivity, and the lower the conversion premium, the more equity sensitive the issue.",
+          "role": "primary",
+          "legacy_pages": [
+            32,
+            32
+          ],
+          "pdf_pages": [
+            32,
+            32
+          ]
+        },
+        {
+          "source_id": "cb_despiegeleer_schoutens_vanhulle_2014_hybrid_securities",
+          "chunk_id": "cb_despiegeleer_schoutens_vanhulle_2014_hybrid_securities:p062:0070",
+          "chunk_hash": "3976cb6629efe93e473fdc974d68319b8dfdc08ae1762cedba01fb21283c4c80",
+          "quote": "For high share prices, the convertible’s price converges to parity and the convertible bond adopts equity-like behavior.",
+          "role": "supporting",
+          "legacy_pages": [
+            62,
+            63
+          ],
+          "pdf_pages": [
+            62,
+            63
+          ]
+        }
+      ],
+      "audit_notes": "",
+      "source_stance": "primary-cfa",
+      "summary_curated": "Conversion Premium — placeholder summary                                        ",
+      "audit_flag": "ok"
+    },
+    {
+      "card_id": "cb-credit-spread-machinery",
+      "title": "Credit-Spread Machinery for Convertibles",
+      "citations": [
+        {
+          "source_id": "cb_lando_2004_credit_risk_modeling",
+          "chunk_id": "cb_lando_2004_credit_risk_modeling:p102:0122",
+          "chunk_hash": "60ff35e0a1b878067742233d3b9a780d017c970cd6f19d549f62a1df576d872a",
+          "quote": "The hazard function is of particular interest in default modeling because of its link to conditional default probabilities, which is similar to the link we saw in the discrete-time case.",
+          "role": "primary",
+          "legacy_pages": [
+            102,
+            103
+          ],
+          "pdf_pages": [
+            102,
+            103
+          ]
+        },
+        {
+          "source_id": "cb_lando_2004_credit_risk_modeling",
+          "chunk_id": "cb_lando_2004_credit_risk_modeling:p102:0122",
+          "chunk_hash": "60ff35e0a1b878067742233d3b9a780d017c970cd6f19d549f62a1df576d872a",
+          "quote": "so h(t) t is approximately the conditional probability of a default in a small interval after t given survival up to and including t.",
+          "role": "primary",
+          "legacy_pages": [
+            102,
+            103
+          ],
+          "pdf_pages": [
+            102,
+            103
+          ]
+        },
+        {
+          "source_id": "cb_hull_2022_options_futures_derivatives_11ed",
+          "chunk_id": "cb_hull_2022_options_futures_derivatives_11ed:p651:0967",
+          "chunk_hash": "c04abce6411df0c614d161917476d374cfabf4393d43ac4e6e20224be5a3e12f",
+          "quote": "Credit risk plays an important role in the valuation of convertibles. If credit risk is ignored, poor prices are obtained because the coupons and principal payments on the bond are overvalued.",
+          "role": "supporting",
+          "legacy_pages": [
+            651,
+            651
+          ],
+          "pdf_pages": [
+            651,
+            651
+          ]
+        }
+      ],
+      "audit_notes": "",
+      "source_stance": "primary-cfa",
+      "summary_curated": "Credit-Spread Machinery for Convertibles — placeholder summary                  ",
+      "audit_flag": "ok"
+    },
+    {
+      "card_id": "cb-credit-vs-equity-decomposition",
+      "title": "Credit vs Equity Decomposition",
+      "citations": [
+        {
+          "source_id": "cb_calamos_2003_convertible_arbitrage",
+          "chunk_id": "cb_calamos_2003_convertible_arbitrage:p031:0029",
+          "chunk_hash": "90a96317aa678f45db3f88768e5f61b2e2cf6259b9b9ab60a06673180992db70",
+          "quote": "The fixed-income value (investment value) will rise or fall in accordance to changes in either interest rates or credit-quality ratings.",
+          "role": "primary",
+          "legacy_pages": [
+            31,
+            32
+          ],
+          "pdf_pages": [
+            31,
+            32
+          ]
+        },
+        {
+          "source_id": "cb_despiegeleer_schoutens_vanhulle_2014_hybrid_securities",
+          "chunk_id": "cb_despiegeleer_schoutens_vanhulle_2014_hybrid_securities:p062:0070",
+          "chunk_hash": "3976cb6629efe93e473fdc974d68319b8dfdc08ae1762cedba01fb21283c4c80",
+          "quote": "For high share prices, the convertible’s price converges to parity and the convertible bond adopts equity-like behavior.",
+          "role": "supporting",
+          "legacy_pages": [
+            62,
+            63
+          ],
+          "pdf_pages": [
+            62,
+            63
+          ]
+        },
+        {
+          "source_id": "cb_lando_2004_credit_risk_modeling",
+          "chunk_id": "cb_lando_2004_credit_risk_modeling:p102:0122",
+          "chunk_hash": "60ff35e0a1b878067742233d3b9a780d017c970cd6f19d549f62a1df576d872a",
+          "quote": "The hazard function is of particular interest in default modeling because of its link to conditional default probabilities, which is similar to the link we saw in the discrete-time case.",
+          "role": "supporting",
+          "legacy_pages": [
+            102,
+            103
+          ],
+          "pdf_pages": [
+            102,
+            103
+          ]
+        }
+      ],
+      "audit_notes": "",
+      "source_stance": "primary-cfa",
+      "summary_curated": "Credit vs Equity Decomposition — placeholder summary                            ",
+      "audit_flag": "ok"
+    },
+    {
+      "card_id": "cb-default-and-recovery",
+      "title": "Default Models and Recovery Conventions",
+      "citations": [
+        {
+          "source_id": "cb_lando_2004_credit_risk_modeling",
+          "chunk_id": "cb_lando_2004_credit_risk_modeling:p139:0166",
+          "chunk_hash": "0f3d74209af0aeb613305c0d18f7e9fd98ac824a3a042dac3d368fc1fc765814",
+          "quote": "The three recovery assumptions are as follows. (1) Recovery of face value. This measures the value to the investors as a fraction of face value.",
+          "role": "primary",
+          "legacy_pages": [
+            139,
+            139
+          ],
+          "pdf_pages": [
+            139,
+            139
+          ]
+        },
+        {
+          "source_id": "cb_lando_2004_credit_risk_modeling",
+          "chunk_id": "cb_lando_2004_credit_risk_modeling:p139:0167",
+          "chunk_hash": "28db49bf84eb98c6707dd57c06eb45cc8aa6437614a6a902ecd643a4e4272834",
+          "quote": "(3) Recovery of treasury. Under this assumption, the corporate bond in default is replaced with a treasury bond with the same maturity but a reduced payment.",
+          "role": "primary",
+          "legacy_pages": [
+            139,
+            140
+          ],
+          "pdf_pages": [
+            139,
+            140
+          ]
+        },
+        {
+          "source_id": "cb_despiegeleer_schoutens_vanhulle_2014_hybrid_securities",
+          "chunk_id": "cb_despiegeleer_schoutens_vanhulle_2014_hybrid_securities:p070:0081",
+          "chunk_hash": "09f65bee6d64f05275774a9f67240e8e58ba4175a26edf97fdb94e0d6803b5ab",
+          "quote": "This is the recovery rate .",
+          "role": "supporting",
+          "legacy_pages": [
+            70,
+            71
+          ],
+          "pdf_pages": [
+            70,
+            71
+          ]
+        },
+        {
+          "source_id": "cb_calamos_2003_convertible_arbitrage",
+          "chunk_id": "cb_calamos_2003_convertible_arbitrage:p089:0093",
+          "chunk_hash": "ba70bef746471afdf5de37d2a589ecadf2e2f39e4893074b7473e7e3adc02a73",
+          "quote": "It is critical to estimate credit risk, including default risk and the expected recovery rate in the event of default.",
+          "role": "supporting",
+          "legacy_pages": [
+            89,
+            90
+          ],
+          "pdf_pages": [
+            89,
+            90
+          ]
+        }
+      ],
+      "audit_notes": "",
+      "source_stance": "primary-cfa",
+      "summary_curated": "Default Models and Recovery Conventions — placeholder summary                   ",
+      "audit_flag": "ok"
+    },
+    {
+      "card_id": "cb-greeks-delta-gamma-vega",
+      "title": "Convertible Greeks: Delta, Gamma, Vega",
+      "citations": [
+        {
+          "source_id": "cb_despiegeleer_schoutens_vanhulle_2014_hybrid_securities",
+          "chunk_id": "cb_despiegeleer_schoutens_vanhulle_2014_hybrid_securities:p062:0069",
+          "chunk_hash": "179e713c205d43b92db8a159d2cd496f7ac00321b04d674542202ea7c4263737",
+          "quote": "The most important and probably most looked at risk component of a convertible bond is its underlying equity risk. This is measured by the delta.",
+          "role": "primary",
+          "legacy_pages": [
+            62,
+            62
+          ],
+          "pdf_pages": [
+            62,
+            62
+          ]
+        },
+        {
+          "source_id": "cb_despiegeleer_schoutens_vanhulle_2014_hybrid_securities",
+          "chunk_id": "cb_despiegeleer_schoutens_vanhulle_2014_hybrid_securities:p062:0070",
+          "chunk_hash": "3976cb6629efe93e473fdc974d68319b8dfdc08ae1762cedba01fb21283c4c80",
+          "quote": "For high share prices, the convertible’s price converges to parity and the convertible bond adopts equity-like behavior.",
+          "role": "primary",
+          "legacy_pages": [
+            62,
+            63
+          ],
+          "pdf_pages": [
+            62,
+            63
+          ]
+        },
+        {
+          "source_id": "cb_calamos_2003_convertible_arbitrage",
+          "chunk_id": "cb_calamos_2003_convertible_arbitrage:p063:0067",
+          "chunk_hash": "18a763cb03a107721b192ba959880a4a7baba76377fc17f344261dcf9825b616",
+          "quote": "The first greek to understand is the delta. The convertible’s delta measures the change in the convertible’s price (CV) with respect to the change in the underlying common-stock price (S).",
+          "role": "supporting",
+          "legacy_pages": [
+            63,
+            64
+          ],
+          "pdf_pages": [
+            63,
+            64
+          ]
+        },
+        {
+          "source_id": "cb_hull_2022_options_futures_derivatives_11ed",
+          "chunk_id": "cb_hull_2022_options_futures_derivatives_11ed:p242:0371",
+          "chunk_hash": "834ae1b123738b60e5d1e1c1a09c41767bff9374213356771e8430f1eef484b0",
+          "quote": "They are therefore bonds with an embedded call option on the company’s stock.",
+          "role": "supporting",
+          "legacy_pages": [
+            242,
+            242
+          ],
+          "pdf_pages": [
+            242,
+            242
+          ]
+        }
+      ],
+      "audit_notes": "",
+      "source_stance": "primary-cfa",
+      "summary_curated": "Convertible Greeks: Delta, Gamma, Vega — placeholder summary                    ",
+      "audit_flag": "ok"
+    },
+    {
+      "card_id": "cb-investor-clientele",
+      "title": "Convertible-Bond Investor Clientele",
+      "citations": [
+        {
+          "source_id": "cb_philips_1997_convertible_bond_markets",
+          "chunk_id": "cb_philips_1997_convertible_bond_markets:p029:0029",
+          "chunk_hash": "eb767c89edfde708a95ad0344f353547bd534d4ac44f33a382b43753b51a60c3",
+          "quote": "There are many funds globally which are termed 'convertible funds' which do exactly this.",
+          "role": "primary",
+          "legacy_pages": [
+            29,
+            30
+          ],
+          "pdf_pages": [
+            29,
+            30
+          ]
+        },
+        {
+          "source_id": "cb_philips_1997_convertible_bond_markets",
+          "chunk_id": "cb_philips_1997_convertible_bond_markets:p029:0029",
+          "chunk_hash": "eb767c89edfde708a95ad0344f353547bd534d4ac44f33a382b43753b51a60c3",
+          "quote": "Understanding the function of different market participants is crucial.",
+          "role": "supporting",
+          "legacy_pages": [
+            29,
+            30
+          ],
+          "pdf_pages": [
+            29,
+            30
+          ]
+        }
+      ],
+      "audit_notes": "",
+      "source_stance": "primary-cfa",
+      "summary_curated": "Convertible-Bond Investor Clientele — placeholder summary                       ",
+      "audit_flag": "ok"
+    },
+    {
+      "card_id": "cb-issuer-motives",
+      "title": "Issuer Motives",
+      "citations": [
+        {
+          "source_id": "cb_koziol_2004_convertible_bonds_strategic_investors",
+          "chunk_id": "cb_koziol_2004_convertible_bonds_strategic_investors:p031:0034",
+          "chunk_hash": "b3a7e529059ac07bb00e76d7d2825555819d1766a59f376a3eb00f1845d8b652",
+          "quote": "The sweetened-debt feature states that a bond becomes more attractive for investors by the embedded conversion right.",
+          "role": "supporting",
+          "legacy_pages": [
+            31,
+            31
+          ],
+          "pdf_pages": [
+            31,
+            31
+          ]
+        },
+        {
+          "source_id": "cb_koziol_2004_convertible_bonds_strategic_investors",
+          "chunk_id": "cb_koziol_2004_convertible_bonds_strategic_investors:p031:0034",
+          "chunk_hash": "b3a7e529059ac07bb00e76d7d2825555819d1766a59f376a3eb00f1845d8b652",
+          "quote": "Consequently, the firm can achieve lower coupon and/or face value payments compared to a straight bond and still obtains the same issue price as with the straight bond.",
+          "role": "supporting",
+          "legacy_pages": [
+            31,
+            31
+          ],
+          "pdf_pages": [
+            31,
+            31
+          ]
+        },
+        {
+          "source_id": "cb_philips_1997_convertible_bond_markets",
+          "chunk_id": "cb_philips_1997_convertible_bond_markets:p033:0034",
+          "chunk_hash": "c48656354541f988ff5073c5a6eb65a97974ab0fea066179d48607c8317e0d07",
+          "quote": "Convertibles provide for flexibility within the capital structure, and may play the part of foreign exchange management.",
+          "role": "supporting",
+          "legacy_pages": [
+            33,
+            34
+          ],
+          "pdf_pages": [
+            33,
+            34
+          ]
+        }
+      ],
+      "audit_notes": "",
+      "source_stance": "primary-cfa",
+      "summary_curated": "Issuer Motives — placeholder summary                                            ",
+      "audit_flag": "ok"
+    },
+    {
+      "card_id": "cb-mandatory-and-exotic-structures",
+      "title": "Mandatory and Exotic Convertible Structures",
+      "citations": [
+        {
+          "source_id": "cb_despiegeleer_schoutens_vanhulle_2014_hybrid_securities",
+          "chunk_id": "cb_despiegeleer_schoutens_vanhulle_2014_hybrid_securities:p055:0063",
+          "chunk_hash": "051810f8e5498b774b05fa095895799851c25abec0b47969cd516b65068ac8e4",
+          "quote": "A mandatory convertible bond always redeems into shares, never into cash.",
+          "role": "primary",
+          "legacy_pages": [
+            55,
+            56
+          ],
+          "pdf_pages": [
+            55,
+            56
+          ]
+        },
+        {
+          "source_id": "cb_despiegeleer_schoutens_vanhulle_2014_hybrid_securities",
+          "chunk_id": "cb_despiegeleer_schoutens_vanhulle_2014_hybrid_securities:p055:0063",
+          "chunk_hash": "051810f8e5498b774b05fa095895799851c25abec0b47969cd516b65068ac8e4",
+          "quote": "This acronym stands for Participating Equity Preferred Stock. Another name for the same instrument is PRIDE (Preferred Redeemable Increased Dividend Securities) or DECS (Debt Exchangeable for Common Stock).",
+          "role": "primary",
+          "legacy_pages": [
+            55,
+            56
+          ],
+          "pdf_pages": [
+            55,
+            56
+          ]
+        },
+        {
+          "source_id": "cb_despiegeleer_schoutens_vanhulle_2014_hybrid_securities",
+          "chunk_id": "cb_despiegeleer_schoutens_vanhulle_2014_hybrid_securities:p107:0133",
+          "chunk_hash": "09b1e3550aa9fc16306bc52c5f8f7e23b04dd88cd190c39b5b4e4c975bdb2779",
+          "quote": "An owner of CoCo bonds exposes himself to a mandatory conversion in shares.",
+          "role": "supporting",
+          "legacy_pages": [
+            107,
+            108
+          ],
+          "pdf_pages": [
+            107,
+            108
+          ]
+        }
+      ],
+      "audit_notes": "",
+      "source_stance": "primary-cfa",
+      "summary_curated": "Mandatory and Exotic Convertible Structures — placeholder summary               ",
+      "audit_flag": "ok"
+    },
+    {
+      "card_id": "cb-mandatory-vs-optional-conversion",
+      "title": "Mandatory vs Optional Conversion",
+      "citations": [
+        {
+          "source_id": "cb_despiegeleer_schoutens_vanhulle_2014_hybrid_securities",
+          "chunk_id": "cb_despiegeleer_schoutens_vanhulle_2014_hybrid_securities:p053:0060",
+          "chunk_hash": "9ec10ac25ac4f579e25eaecbbce66f1ca31e67388046f9f92539cc87b2a4cbdd",
+          "quote": "The holder of a convertible bond has the option to end the bond’s existence prematurely by converting it into shares. This right is the optional conversion.",
+          "role": "primary",
+          "legacy_pages": [
+            53,
+            54
+          ],
+          "pdf_pages": [
+            53,
+            54
+          ]
+        },
+        {
+          "source_id": "cb_despiegeleer_schoutens_vanhulle_2014_hybrid_securities",
+          "chunk_id": "cb_despiegeleer_schoutens_vanhulle_2014_hybrid_securities:p055:0063",
+          "chunk_hash": "051810f8e5498b774b05fa095895799851c25abec0b47969cd516b65068ac8e4",
+          "quote": "A mandatory convertible bond always redeems into shares, never into cash.",
+          "role": "primary",
+          "legacy_pages": [
+            55,
+            56
+          ],
+          "pdf_pages": [
+            55,
+            56
+          ]
+        }
+      ],
+      "audit_notes": "",
+      "source_stance": "primary-cfa",
+      "summary_curated": "Mandatory vs Optional Conversion — placeholder summary                          ",
+      "audit_flag": "ok"
+    },
+    {
+      "card_id": "cb-monte-carlo-pricing",
+      "title": "Monte Carlo Pricing for Convertibles",
+      "citations": [
+        {
+          "source_id": "cb_despiegeleer_schoutens_vanhulle_2014_hybrid_securities",
+          "chunk_id": "cb_despiegeleer_schoutens_vanhulle_2014_hybrid_securities:p164:0217",
+          "chunk_hash": "6ae864fbf03e08ba391f5180490627a4d3f971f74a7ff444967de2a7464bdf8a",
+          "quote": "In this book we will focus on closed-form solutions, trinomial trees, and the American Monte Carlo method.",
+          "role": "supporting",
+          "legacy_pages": [
+            164,
+            165
+          ],
+          "pdf_pages": [
+            164,
+            165
+          ]
+        },
+        {
+          "source_id": "cb_hull_2022_options_futures_derivatives_11ed",
+          "chunk_id": "cb_hull_2022_options_futures_derivatives_11ed:p651:0968",
+          "chunk_hash": "0c1ac86a333b1329e33bc49bdf424202104f13df481a1858657a6c47ba2dcea5",
+          "quote": "The life of the tree is set equal to the life of the convertible bond.",
+          "role": "supporting",
+          "legacy_pages": [
+            651,
+            652
+          ],
+          "pdf_pages": [
+            651,
+            652
+          ]
+        }
+      ],
+      "audit_notes": "",
+      "source_stance": "primary-cfa",
+      "summary_curated": "Monte Carlo Pricing for Convertibles — placeholder summary                      ",
+      "audit_flag": "ok"
+    },
+    {
+      "card_id": "cb-parity-and-conversion-value",
+      "title": "Parity and Conversion Value",
+      "citations": [
+        {
+          "source_id": "cb_despiegeleer_schoutens_vanhulle_2014_hybrid_securities",
+          "chunk_id": "cb_despiegeleer_schoutens_vanhulle_2014_hybrid_securities:p054:0062",
+          "chunk_hash": "4c551662f76244110c7d8287e2f7bd711460f9ddb1742a40d380042c6339e11c",
+          "quote": "The conversion value or parity depends on the level of the share price",
+          "role": "primary",
+          "legacy_pages": [
+            54,
+            55
+          ],
+          "pdf_pages": [
+            54,
+            55
+          ]
+        },
+        {
+          "source_id": "cb_despiegeleer_schoutens_vanhulle_2014_hybrid_securities",
+          "chunk_id": "cb_despiegeleer_schoutens_vanhulle_2014_hybrid_securities:p062:0070",
+          "chunk_hash": "3976cb6629efe93e473fdc974d68319b8dfdc08ae1762cedba01fb21283c4c80",
+          "quote": "For high share prices, the convertible’s price converges to parity and the convertible bond adopts equity-like behavior.",
+          "role": "primary",
+          "legacy_pages": [
+            62,
+            63
+          ],
+          "pdf_pages": [
+            62,
+            63
+          ]
+        },
+        {
+          "source_id": "cb_calamos_2003_convertible_arbitrage",
+          "chunk_id": "cb_calamos_2003_convertible_arbitrage:p032:0030",
+          "chunk_hash": "fbcfebc44077d76bbbbe02e2ddb1a1cc9380cef91bb44e0d4132bebdca18f4dd",
+          "quote": "The conversion value is also known as parity value in the convertible marketplace.",
+          "role": "supporting",
+          "legacy_pages": [
+            32,
+            32
+          ],
+          "pdf_pages": [
+            32,
+            32
+          ]
+        },
+        {
+          "source_id": "cb_hull_2022_options_futures_derivatives_11ed",
+          "chunk_id": "cb_hull_2022_options_futures_derivatives_11ed:p242:0371",
+          "chunk_hash": "834ae1b123738b60e5d1e1c1a09c41767bff9374213356771e8430f1eef484b0",
+          "quote": "They are therefore bonds with an embedded call option on the company’s stock.",
+          "role": "supporting",
+          "legacy_pages": [
+            242,
+            242
+          ],
+          "pdf_pages": [
+            242,
+            242
+          ]
+        }
+      ],
+      "audit_notes": "",
+      "source_stance": "primary-cfa",
+      "summary_curated": "Parity and Conversion Value — placeholder summary                               ",
+      "audit_flag": "ok"
+    },
+    {
+      "card_id": "cb-payoff-decomposition-bond-plus-call",
+      "title": "Payoff Decomposition: Bond Plus Call",
+      "citations": [
+        {
+          "source_id": "cb_hull_2022_options_futures_derivatives_11ed",
+          "chunk_id": "cb_hull_2022_options_futures_derivatives_11ed:p242:0371",
+          "chunk_hash": "834ae1b123738b60e5d1e1c1a09c41767bff9374213356771e8430f1eef484b0",
+          "quote": "They are therefore bonds with an embedded call option on the company’s stock.",
+          "role": "primary",
+          "legacy_pages": [
+            242,
+            242
+          ],
+          "pdf_pages": [
+            242,
+            242
+          ]
+        },
+        {
+          "source_id": "cb_hull_2022_options_futures_derivatives_11ed",
+          "chunk_id": "cb_hull_2022_options_futures_derivatives_11ed:p651:0967",
+          "chunk_hash": "c04abce6411df0c614d161917476d374cfabf4393d43ac4e6e20224be5a3e12f",
+          "quote": "Credit risk plays an important role in the valuation of convertibles. If credit risk is ignored, poor prices are obtained because the coupons and principal payments on the bond are overvalued.",
+          "role": "primary",
+          "legacy_pages": [
+            651,
+            651
+          ],
+          "pdf_pages": [
+            651,
+            651
+          ]
+        },
+        {
+          "source_id": "cb_despiegeleer_schoutens_vanhulle_2014_hybrid_securities",
+          "chunk_id": "cb_despiegeleer_schoutens_vanhulle_2014_hybrid_securities:p042:0046",
+          "chunk_hash": "151fe27cccb5c61ac865511bb7dd5222c5758b749045f100eb8e4c94bb4a2c6e",
+          "quote": "Splitting a convertible bond into a bond and a European option is only possible if the conversion right is restricted to the maturity date of the convertible bond.",
+          "role": "supporting",
+          "legacy_pages": [
+            42,
+            43
+          ],
+          "pdf_pages": [
+            42,
+            43
+          ]
+        },
+        {
+          "source_id": "cb_thorp_kassouf_1967_beat_the_market",
+          "chunk_id": "cb_thorp_kassouf_1967_beat_the_market:p050:0047",
+          "chunk_hash": "f47169e1593bf641ce481b99cbf00a9d4b83af796885b88b84f4c8f61530b39d",
+          "quote": "Our contribution has been to scientifically analyze warrants, particularly the warrant hedge, and to extend our methods to the vast area of all convertibles and their associated common stock, with a market value of perhaps $50 billion.",
+          "role": "supporting",
+          "legacy_pages": [
+            50,
+            51
+          ],
+          "pdf_pages": [
+            50,
+            51
+          ]
+        }
+      ],
+      "audit_notes": "",
+      "source_stance": "primary-cfa",
+      "summary_curated": "Payoff Decomposition: Bond Plus Call — placeholder summary                      ",
+      "audit_flag": "ok"
+    },
+    {
+      "card_id": "cb-pde-and-free-boundary",
+      "title": "Convertible PDE and Free Boundaries",
+      "citations": [
+        {
+          "source_id": "cb_despiegeleer_schoutens_vanhulle_2014_hybrid_securities",
+          "chunk_id": "cb_despiegeleer_schoutens_vanhulle_2014_hybrid_securities:p164:0217",
+          "chunk_hash": "6ae864fbf03e08ba391f5180490627a4d3f971f74a7ff444967de2a7464bdf8a",
+          "quote": "This is where lattice techniques such as binomial or trinomial trees enter the stage. These approaches can handle a fair amount of instrument complexity but remain very educational.",
+          "role": "primary",
+          "legacy_pages": [
+            164,
+            165
+          ],
+          "pdf_pages": [
+            164,
+            165
+          ]
+        },
+        {
+          "source_id": "cb_despiegeleer_schoutens_vanhulle_2014_hybrid_securities",
+          "chunk_id": "cb_despiegeleer_schoutens_vanhulle_2014_hybrid_securities:p164:0217",
+          "chunk_hash": "6ae864fbf03e08ba391f5180490627a4d3f971f74a7ff444967de2a7464bdf8a",
+          "quote": "Other possibilities to solve for the price of a hybrid instrument after having chosen a particular stochastic process are the finite difference and the Monte Carlo method.",
+          "role": "primary",
+          "legacy_pages": [
+            164,
+            165
+          ],
+          "pdf_pages": [
+            164,
+            165
+          ]
+        },
+        {
+          "source_id": "cb_hull_2022_options_futures_derivatives_11ed",
+          "chunk_id": "cb_hull_2022_options_futures_derivatives_11ed:p651:0968",
+          "chunk_hash": "0c1ac86a333b1329e33bc49bdf424202104f13df481a1858657a6c47ba2dcea5",
+          "quote": "We then roll back through the tree. At nodes where the terms of the instrument allow conversion we test whether conversion is optimal.",
+          "role": "supporting",
+          "legacy_pages": [
+            651,
+            652
+          ],
+          "pdf_pages": [
+            651,
+            652
+          ]
+        },
+        {
+          "source_id": "cb_lando_2004_credit_risk_modeling",
+          "chunk_id": "cb_lando_2004_credit_risk_modeling:p102:0122",
+          "chunk_hash": "60ff35e0a1b878067742233d3b9a780d017c970cd6f19d549f62a1df576d872a",
+          "quote": "The hazard function is of particular interest in default modeling because of its link to conditional default probabilities, which is similar to the link we saw in the discrete-time case.",
+          "role": "supporting",
+          "legacy_pages": [
+            102,
+            103
+          ],
+          "pdf_pages": [
+            102,
+            103
+          ]
+        }
+      ],
+      "audit_notes": "",
+      "source_stance": "primary-cfa",
+      "summary_curated": "Convertible PDE and Free Boundaries — placeholder summary                       ",
+      "audit_flag": "ok"
+    },
+    {
+      "card_id": "cb-relative-value-screens",
+      "title": "Convertible Relative-Value Screens",
+      "citations": [
+        {
+          "source_id": "cb_calamos_2003_convertible_arbitrage",
+          "chunk_id": "cb_calamos_2003_convertible_arbitrage:p032:0030",
+          "chunk_hash": "fbcfebc44077d76bbbbe02e2ddb1a1cc9380cef91bb44e0d4132bebdca18f4dd",
+          "quote": "The premium above conversion value represents the percentage premium that the convertible is trading above its equity value component. The higher the conversion premium, the lower the equity sensitivity, and the lower the conversion premium, the more equity sensitive the issue.",
+          "role": "primary",
+          "legacy_pages": [
+            32,
+            32
+          ],
+          "pdf_pages": [
+            32,
+            32
+          ]
+        },
+        {
+          "source_id": "cb_calamos_2003_convertible_arbitrage",
+          "chunk_id": "cb_calamos_2003_convertible_arbitrage:p040:0040",
+          "chunk_hash": "253a241294eac963c3c70a3819667be19863fd64b7fa17a007ada6aed4a2dbb4",
+          "quote": "Under-valued convertible—Since the hedged convertible position is still “long-volatility,” the arbitrageur seeks issues that are undervalued or trading at implied volatility levels below the expected norm.",
+          "role": "primary",
+          "legacy_pages": [
+            40,
+            41
+          ],
+          "pdf_pages": [
+            40,
+            41
+          ]
+        },
+        {
+          "source_id": "cb_despiegeleer_schoutens_vanhulle_2014_hybrid_securities",
+          "chunk_id": "cb_despiegeleer_schoutens_vanhulle_2014_hybrid_securities:p062:0070",
+          "chunk_hash": "3976cb6629efe93e473fdc974d68319b8dfdc08ae1762cedba01fb21283c4c80",
+          "quote": "For high share prices, the convertible’s price converges to parity and the convertible bond adopts equity-like behavior.",
+          "role": "supporting",
+          "legacy_pages": [
+            62,
+            63
+          ],
+          "pdf_pages": [
+            62,
+            63
+          ]
+        }
+      ],
+      "audit_notes": "",
+      "source_stance": "primary-cfa",
+      "summary_curated": "Convertible Relative-Value Screens — placeholder summary                        ",
+      "audit_flag": "ok"
+    },
+    {
+      "card_id": "cb-volatility-surface",
+      "title": "Volatility Surface for Convertibles",
+      "citations": [
+        {
+          "source_id": "cb_hull_2022_options_futures_derivatives_11ed",
+          "chunk_id": "cb_hull_2022_options_futures_derivatives_11ed:p451:0668",
+          "chunk_hash": "6ff9dbb671abbd6229c9160e2511e6a85f55ef032abacfade6c732963ce08190",
+          "quote": "A three-dimensional plot of the implied volatility as a function of both strike price and time to maturity is known as a volatility surface.",
+          "role": "primary",
+          "legacy_pages": [
+            451,
+            452
+          ],
+          "pdf_pages": [
+            451,
+            452
+          ]
+        },
+        {
+          "source_id": "cb_hull_2022_options_futures_derivatives_11ed",
+          "chunk_id": "cb_hull_2022_options_futures_derivatives_11ed:p452:0670",
+          "chunk_hash": "9cb07dd5f7864f8795275997f337d8114336b6f5cba2f6aba05c127f8a1650f7",
+          "quote": "More generally, it means that the volatility surface (i.e., the implied volatility as a function of strike price and time to maturity) is the same for European calls and European puts.",
+          "role": "primary",
+          "legacy_pages": [
+            452,
+            453
+          ],
+          "pdf_pages": [
+            452,
+            453
+          ]
+        },
+        {
+          "source_id": "cb_despiegeleer_schoutens_vanhulle_2014_hybrid_securities",
+          "chunk_id": "cb_despiegeleer_schoutens_vanhulle_2014_hybrid_securities:p053:0060",
+          "chunk_hash": "9ec10ac25ac4f579e25eaecbbce66f1ca31e67388046f9f92539cc87b2a4cbdd",
+          "quote": "Simple diffusion processes, where share price changes are modeled through a geometric Brownian motion, ignore the fact that volatility can change during the life of the option.",
+          "role": "supporting",
+          "legacy_pages": [
+            53,
+            54
+          ],
+          "pdf_pages": [
+            53,
+            54
+          ]
+        }
+      ],
+      "audit_notes": "",
+      "source_stance": "primary-cfa",
+      "summary_curated": "Volatility Surface for Convertibles — placeholder summary                       ",
+      "audit_flag": "ok"
+    }
+  ]
+}

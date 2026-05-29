@@ -1,0 +1,1 @@
+{"diagnostics":[{"code":"CACG-SUM-001","file":"<summary-too-short>","message":"summary missing or too short: String should have at least 80 characters","severity":"error"}],"oracle_layer":"parse","schema_version":"cacg.v0"}

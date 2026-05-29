@@ -1,0 +1,38 @@
+name: parity
+
+# Committed-fixture byte-equal parity gate.
+# Runs `cargo xtask parity` and asserts Rust CLI output byte-matches
+# the committed oracle fixtures under tests/parity_corpus/out_python/.
+# No Python installation required — all 16 gating rows read from
+# committed fixtures.
+
+on:
+  pull_request:
+    branches: ["**"]
+  push:
+    branches: [main]
+
+jobs:
+  parity:
+    name: Committed-fixture byte-equal parity
+    strategy:
+      fail-fast: false
+      matrix:
+        runner:
+          - ubuntu-24.04
+          - ubuntu-24.04-arm
+    runs-on: ${{ matrix.runner }}
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Rust
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          toolchain: "1.85"
+
+      - name: Cargo workspace parity (committed-fixture byte-diff harness)
+        run: cargo run -p xtask -- parity --corpus tests/parity_corpus/
+
+      - name: Audit schema fixtures
+        run: cargo run -p xtask -- audit-schema-fixtures

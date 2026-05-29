@@ -1,0 +1,71 @@
+{
+  "generated_by": "emit_behavioral_finance_first_slice.py",
+  "reading_id": "10_behavioral_finance",
+  "schema_version": "cfa_legacy.page_coordinate_map.v1",
+  "sources": [
+    {
+      "legacy_coordinate": "printed_book_page",
+      "pdf_coordinate_rule": "pdf_page = legacy_page + 9",
+      "source_id": "bf_shleifer_2000_inefficient_markets",
+      "verified_evidence": [
+        {
+          "evidence": "chapter 2 opens on PDF page 37",
+          "legacy_page": 28,
+          "pdf_page": 37
+        },
+        {
+          "evidence": "printed page 52 appears on PDF page 61",
+          "legacy_page": 52,
+          "pdf_page": 61
+        },
+        {
+          "evidence": "chapter 4 opens on PDF page 98",
+          "legacy_page": 89,
+          "pdf_page": 98
+        },
+        {
+          "evidence": "printed page 111 appears on PDF page 120",
+          "legacy_page": 111,
+          "pdf_page": 120
+        },
+        {
+          "evidence": "chapter 5 opens on PDF page 121",
+          "legacy_page": 112,
+          "pdf_page": 121
+        },
+        {
+          "evidence": "printed page 153 appears on PDF page 162",
+          "legacy_page": 153,
+          "pdf_page": 162
+        },
+        {
+          "evidence": "printed page 174 appears on PDF page 183",
+          "legacy_page": 174,
+          "pdf_page": 183
+        }
+      ]
+    },
+    {
+      "legacy_coordinate": "physical_pdf_page_for_first_slice_refs",
+      "pdf_coordinate_rule": "pdf_page = legacy_page",
+      "source_id": "econ_hart_mascolell_2013_simple_adaptive_strategies",
+      "verified_evidence": [
+        {
+          "evidence": "regret-matching overview appears in the cited PDF-page window",
+          "legacy_page": 22,
+          "pdf_page": 22
+        },
+        {
+          "evidence": "Regret Matching Theorem appears in the cited PDF-page window",
+          "legacy_page": 23,
+          "pdf_page": 23
+        },
+        {
+          "evidence": "dynamics/equilibria overview appears in the cited PDF-page window",
+          "legacy_page": 35,
+          "pdf_page": 35
+        }
+      ]
+    }
+  ]
+}

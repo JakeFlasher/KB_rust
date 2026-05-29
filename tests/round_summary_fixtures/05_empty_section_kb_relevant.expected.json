@@ -1,0 +1,6 @@
+{
+  "exit_code": 1,
+  "fixture_sha256": "057b9b1165b334d32e4836f19f4ace8360bbe1e2f3ab635154294a230f6fd7d2",
+  "stderr": "(section): STALE (CACG-RS-004: empty Knowledge Consulted section on KB-relevant work)\n",
+  "stdout": ""
+}

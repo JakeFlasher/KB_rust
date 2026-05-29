@@ -1,0 +1,56 @@
+{
+  "mutex_groups": [],
+  "name": "search",
+  "options": [
+    {
+      "action": "_StoreTrueAction",
+      "default": false,
+      "dest": "json",
+      "is_positional": false,
+      "option_strings": [
+        "--json"
+      ],
+      "required": false
+    },
+    {
+      "action": "_StoreAction",
+      "default": null,
+      "dest": "source_matrix",
+      "is_positional": false,
+      "option_strings": [
+        "--source-matrix"
+      ],
+      "required": true
+    },
+    {
+      "action": "_StoreAction",
+      "default": "out/summaries.json",
+      "dest": "summaries",
+      "is_positional": false,
+      "option_strings": [
+        "--summaries"
+      ],
+      "required": false
+    },
+    {
+      "action": "_StoreAction",
+      "default": 10,
+      "dest": "top_k",
+      "is_positional": false,
+      "option_strings": [
+        "--top-k"
+      ],
+      "required": false
+    }
+  ],
+  "positionals": [
+    {
+      "action": "_StoreAction",
+      "default": null,
+      "dest": "query",
+      "is_positional": true,
+      "nargs": null,
+      "required": true
+    }
+  ]
+}

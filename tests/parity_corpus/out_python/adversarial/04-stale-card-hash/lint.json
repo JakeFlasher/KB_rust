@@ -1,0 +1,1 @@
+{"diagnostics":[{"code":"CACG-HASH-002","file":"tests/parity_corpus/adversarial/04-stale-card-hash.md","message":"card_hash is stale: stored=ffffffffffff..., recomputed=d6a3ca2b04da...; run `kb index` after editing the card","severity":"error"}],"schema_version":"cacg.v0"}

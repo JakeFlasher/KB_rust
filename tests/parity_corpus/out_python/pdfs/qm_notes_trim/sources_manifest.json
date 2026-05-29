@@ -1,0 +1,1 @@
+{"schema_version":"cacg.v0","sources":[{"extracted_at":"1970-01-01T00:00:00Z","page_count":20,"parser_name":"pypdfium2","parser_version":"5.8.0+pdfium149.0.7825.0","schema_version":"cacg.v0","source_id":"qm_notes_trim","source_path":"tests/parity_corpus/pdfs/qm_notes_trim.pdf","source_sha256":"1ba174a43cda30b28ab475793e8eeaee6572f55ee7dac714a20c579e9bce5fca"}]}

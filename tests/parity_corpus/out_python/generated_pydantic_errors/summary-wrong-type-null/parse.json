@@ -1,0 +1,1 @@
+{"diagnostics":[{"code":"CACG-FM-008","file":"<summary-wrong-type-null>","message":"validation error at summary: Input should be a valid string","severity":"error"}],"oracle_layer":"parse","schema_version":"cacg.v0"}

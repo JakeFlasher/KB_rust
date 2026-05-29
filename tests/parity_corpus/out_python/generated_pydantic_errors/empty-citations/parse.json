@@ -1,0 +1,1 @@
+{"diagnostics":[{"code":"CACG-FM-008","file":"<empty-citations>","message":"validation error at citations: List should have at least 1 item after validation, not 0","severity":"error"}],"oracle_layer":"parse","schema_version":"cacg.v0"}

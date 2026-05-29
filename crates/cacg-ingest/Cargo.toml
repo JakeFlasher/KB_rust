@@ -1,0 +1,34 @@
+[package]
+name = "cacg-ingest"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+publish.workspace = true
+description = "CACG PDF ingest: pdfium-render text extraction + chunker + manifest publisher. THE ONLY workspace crate that depends on Pdfium."
+
+[features]
+default = []
+# `ingest` gates the Pdfium dependency so non-ingest builds can compile
+# the workspace without the native Pdfium binary. Common-path verbs
+# (lint/verify/search/show) MUST NOT enable this feature.
+ingest = ["dep:pdfium-render"]
+
+[dependencies]
+cacg-core = { path = "../cacg-core" }
+serde = { workspace = true }
+serde_json = { workspace = true }
+# YAML loader for the optional `--config` chunker tunables. Strict
+# deserialization (`#[serde(deny_unknown_fields)]`) drives the
+# unknown-key rejection contract Python's `_coerce_int` enforces.
+serde_yaml_bw = { workspace = true }
+thiserror = { workspace = true }
+pdfium-render = { workspace = true, optional = true }
+tracing = { workspace = true }
+
+[dev-dependencies]
+insta = { workspace = true }
+tempfile = { workspace = true }
+
+[lints]
+workspace = true

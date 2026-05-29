@@ -1,0 +1,1 @@
+{"diagnostics":[{"code":"CACG-CITE-005","file":"tests/parity_corpus/adversarial/06-page-disjoint.md","message":"citations[0]: page_range [10, 12] is disjoint from chunk pages [1, 2]","severity":"error"}],"schema_version":"cacg.v0"}

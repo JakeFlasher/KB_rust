@@ -1,0 +1,1 @@
+{"exit_code":1,"scenario":"dependency_retracted-01-show-default-unauthorized-source","schema_version":"cacg.v0.parity","stderr":"CACG-AUTH-002: card 'cascade-child' cites source_id 'sample' which is not authorized for reading_id 'reading_01'\n","stdout":""}

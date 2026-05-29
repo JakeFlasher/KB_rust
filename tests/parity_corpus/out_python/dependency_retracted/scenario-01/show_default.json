@@ -1,0 +1,1 @@
+{"exit_code":1,"scaffold_exit_code":0,"scenario":"dependency_retracted-01-show-default","schema_version":"cacg.v0.parity","stderr":"CACG-SHOW-001: card 'cascade-child' is DEPENDENCY-RETRACTED and `--allow-retracted` was not supplied\n","stdout":""}

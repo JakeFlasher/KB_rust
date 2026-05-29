@@ -1,0 +1,1 @@
+{"diagnostics":[{"code":"CACG-HASH-002","file":"tests/parity_corpus/generated_pydantic_errors/_lint_probe_card-hash-all-zero-placeholder.md","message":"card_hash is stale: stored=000000000000..., recomputed=a69c8337ce57...; run `kb index` after editing the card","severity":"error"}],"oracle_layer":"lint","schema_version":"cacg.v0"}

@@ -1,0 +1,465 @@
+[
+  {
+    "audit_rating": "FORMAT_NOT_AUDITABLE",
+    "category": "convertible_bonds",
+    "cfa_relevance_hint": "n/a",
+    "citation_method": "n/a",
+    "edition": "Maitland 2022 1ed",
+    "exclude_reason": "epub_blacklist",
+    "exists": true,
+    "format": "EPUB",
+    "legacy_abs_path": "/home/jakeshea/CFA_reading/CFA_reading/Convertible_Bonds/classic_books_CB_english/Maitland_Nelson_Partlow_2022_Convertible_Securities.epub",
+    "legacy_path": "Convertible_Bonds/classic_books_CB_english/Maitland_Nelson_Partlow_2022_Convertible_Securities.epub",
+    "primary_or_supporting": "n/a",
+    "quotable": "no",
+    "review_flags": [],
+    "sha256_matches_matrix": true,
+    "source_id": "convertible_bonds_classic_books_cb_english_maitland_nelson_partlow_2022_convertible_securities",
+    "source_sha256_actual": "65bd8c5d2f128aba34772dbc81c279de9d89156c113136665a492dd41bec1622",
+    "source_sha256_matrix": "65bd8c5d2f128aba34772dbc81c279de9d89156c113136665a492dd41bec1622",
+    "status": "excluded",
+    "subcorpora": [
+      "08"
+    ]
+  },
+  {
+    "audit_rating": "FORMAT_NOT_AUDITABLE",
+    "category": "convertible_bonds",
+    "cfa_relevance_hint": "n/a",
+    "citation_method": "n/a",
+    "edition": "攻守 1ed",
+    "exclude_reason": "epub_blacklist",
+    "exists": true,
+    "format": "EPUB",
+    "legacy_abs_path": "/home/jakeshea/CFA_reading/CFA_reading/Convertible_Bonds/targeted_books_Chinese/饕饕海 & 优美 & 定风波 - 攻守：可转债投资实用手册（饕餮海、定风波、优美著，雪球大V带你全流程玩转可转债，攻守兼备的投资工具，涵盖基础知识、交易规则、操作流程、交易策略、实.epub",
+    "legacy_path": "Convertible_Bonds/targeted_books_Chinese/饕饕海 & 优美 & 定风波 - 攻守：可转债投资实用手册（饕餮海、定风波、优美著，雪球大V带你全流程玩转可转债，攻守兼备的投资工具，涵盖基础知识、交易规则、操作流程、交易策略、实.epub",
+    "primary_or_supporting": "n/a",
+    "quotable": "no",
+    "review_flags": [],
+    "sha256_matches_matrix": true,
+    "source_id": "convertible_bonds_targeted_books_chinese_v",
+    "source_sha256_actual": "962e7e67574832cf9a3f54c63374e8930d478b1034e7d38e8de47bdd88be5886",
+    "source_sha256_matrix": "962e7e67574832cf9a3f54c63374e8930d478b1034e7d38e8de47bdd88be5886",
+    "status": "excluded",
+    "subcorpora": [
+      "08"
+    ]
+  },
+  {
+    "audit_rating": "SCAN (0.0 cpp)",
+    "category": "01_quantitative_methods",
+    "cfa_relevance_hint": "n/a",
+    "citation_method": "n/a",
+    "edition": "Wooldridge Cross/Panel 2e 2010 (MIT Press); REPLACE-PENDING: SCAN 0.0 cpp (Network ScanGear Ver.2.21); sourcing clean MIT Press 2010 publisher PDF required before citation",
+    "exclude_reason": "scan_nonquotable",
+    "exists": true,
+    "format": "PDF",
+    "legacy_abs_path": "/home/jakeshea/CFA_reading/CFA_reading/01_Quantitative_Methods/Econometric Analysis of Cross Section and Panel Data, 2ed (Wooldridge J.M.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "legacy_path": "01_Quantitative_Methods/Econometric Analysis of Cross Section and Panel Data, 2ed (Wooldridge J.M.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "primary_or_supporting": "n/a",
+    "quotable": "no",
+    "review_flags": [],
+    "sha256_matches_matrix": true,
+    "source_id": "01_quantitative_methods_econometric_analysis_of_cross_section_and_panel_data_2ed_wooldridge_9ecc47d8",
+    "source_sha256_actual": "0637f1f78f1d32fc4a56cb3209657ae2090b81ab1a299b1f2bb151bf39de1ce6",
+    "source_sha256_matrix": "0637f1f78f1d32fc4a56cb3209657ae2090b81ab1a299b1f2bb151bf39de1ce6",
+    "status": "excluded",
+    "subcorpora": [
+      "01"
+    ]
+  },
+  {
+    "exclude_reason": "unregistered_pdf",
+    "exists": true,
+    "format": "PDF",
+    "legacy_abs_path": "/home/jakeshea/CFA_reading/CFA_reading/Trading_Price_Action/Brooks_2012_Trading_Price_Action_Reversals.pdf",
+    "legacy_path": "Trading_Price_Action/Brooks_2012_Trading_Price_Action_Reversals.pdf",
+    "review_flags": [
+      "metadata_mismatch: PDF metadata title appears to say Trading Ranges while legacy filename says Reversals",
+      "language_quality_risk: extracted text appears to be a Portuguese reversals text; keep excluded until manually registered and audited"
+    ],
+    "source_id": null,
+    "source_sha256_actual": "089a53fc296c89759a0e0d6277b3f3f1a486b70d4e5ab4cb8b9ebcfcb6955771",
+    "status": "excluded"
+  },
+  {
+    "exclude_reason": "deferred",
+    "exists": true,
+    "format": "PDF",
+    "legacy_abs_path": "/home/jakeshea/CFA_reading/CFA_reading/deferred_books/21_SOTA_Acquisitions_2026_Non_China/01_BIS_Basel/bcbs174_PONV_loss_absorbency_Jan2011.pdf",
+    "legacy_path": "deferred_books/21_SOTA_Acquisitions_2026_Non_China/01_BIS_Basel/bcbs174_PONV_loss_absorbency_Jan2011.pdf",
+    "source_id": null,
+    "source_sha256_actual": "768d333a0e209f34433b76455fe33afaef687681937c81b6521662ff2fca1001",
+    "status": "excluded"
+  },
+  {
+    "exclude_reason": "deferred",
+    "exists": true,
+    "format": "PDF",
+    "legacy_abs_path": "/home/jakeshea/CFA_reading/CFA_reading/deferred_books/21_SOTA_Acquisitions_2026_Non_China/01_BIS_Basel/bcbs189_Basel_III_global_regulatory_framework_2010rev2011.pdf",
+    "legacy_path": "deferred_books/21_SOTA_Acquisitions_2026_Non_China/01_BIS_Basel/bcbs189_Basel_III_global_regulatory_framework_2010rev2011.pdf",
+    "source_id": null,
+    "source_sha256_actual": "cbb1d8ea33595d817b18dc5a40c437335c750518d21bb3d063a6e77196eff96e",
+    "status": "excluded"
+  },
+  {
+    "exclude_reason": "deferred",
+    "exists": true,
+    "format": "PDF",
+    "legacy_abs_path": "/home/jakeshea/CFA_reading/CFA_reading/deferred_books/21_SOTA_Acquisitions_2026_Non_China/01_BIS_Basel/d417_Definition_of_capital_FAQ_Sep2017.pdf",
+    "legacy_path": "deferred_books/21_SOTA_Acquisitions_2026_Non_China/01_BIS_Basel/d417_Definition_of_capital_FAQ_Sep2017.pdf",
+    "source_id": null,
+    "source_sha256_actual": "07a68932a847dd65cedc1997bbf4dee7e25119a986ea17b52d20791ee240ddec",
+    "status": "excluded"
+  },
+  {
+    "exclude_reason": "deferred",
+    "exists": true,
+    "format": "PDF",
+    "legacy_abs_path": "/home/jakeshea/CFA_reading/CFA_reading/deferred_books/21_SOTA_Acquisitions_2026_Non_China/01_BIS_Basel/d424_Basel_III_Finalising_post-crisis_reforms_Dec2017.pdf",
+    "legacy_path": "deferred_books/21_SOTA_Acquisitions_2026_Non_China/01_BIS_Basel/d424_Basel_III_Finalising_post-crisis_reforms_Dec2017.pdf",
+    "source_id": null,
+    "source_sha256_actual": "32afd37cade34f8439bdc16f606d5520d4612b7339ef1cf8c44ebb706df6bac4",
+    "status": "excluded"
+  },
+  {
+    "exclude_reason": "deferred",
+    "exists": true,
+    "format": "PDF",
+    "legacy_abs_path": "/home/jakeshea/CFA_reading/CFA_reading/deferred_books/21_SOTA_Acquisitions_2026_Non_China/01_BIS_Basel/d544_Evaluation_Basel_III_reforms_Dec2022.pdf",
+    "legacy_path": "deferred_books/21_SOTA_Acquisitions_2026_Non_China/01_BIS_Basel/d544_Evaluation_Basel_III_reforms_Dec2022.pdf",
+    "source_id": null,
+    "source_sha256_actual": "254661bdf38b3f50629a3eecaf0ec1ac05189b3ec31222e643e21315d5cf5e95",
+    "status": "excluded"
+  },
+  {
+    "exclude_reason": "deferred",
+    "exists": true,
+    "format": "PDF",
+    "legacy_abs_path": "/home/jakeshea/CFA_reading/CFA_reading/deferred_books/21_SOTA_Acquisitions_2026_Non_China/01_BIS_Basel/d555_Report_2023_banking_turmoil_Oct2023.pdf",
+    "legacy_path": "deferred_books/21_SOTA_Acquisitions_2026_Non_China/01_BIS_Basel/d555_Report_2023_banking_turmoil_Oct2023.pdf",
+    "source_id": null,
+    "source_sha256_actual": "ace9d7a66adc91216bcf72c869b01652fc69bb18cf68bc15d05eb963bc214210",
+    "status": "excluded"
+  },
+  {
+    "exclude_reason": "deferred",
+    "exists": true,
+    "format": "PDF",
+    "legacy_abs_path": "/home/jakeshea/CFA_reading/CFA_reading/deferred_books/21_SOTA_Acquisitions_2026_Non_China/01_BIS_Basel/d582_2023_banking_turmoil_liquidity_progress_2024.pdf",
+    "legacy_path": "deferred_books/21_SOTA_Acquisitions_2026_Non_China/01_BIS_Basel/d582_2023_banking_turmoil_liquidity_progress_2024.pdf",
+    "source_id": null,
+    "source_sha256_actual": "c7209f938fed2f59a87654a874ec47da7c90f57da932bad505f12814ddb2c70a",
+    "status": "excluded"
+  },
+  {
+    "exclude_reason": "deferred",
+    "exists": true,
+    "format": "PDF",
+    "legacy_abs_path": "/home/jakeshea/CFA_reading/CFA_reading/deferred_books/21_SOTA_Acquisitions_2026_Non_China/01_BIS_Basel/d609_Basel_III_Monitoring_Report_Mar2026.pdf",
+    "legacy_path": "deferred_books/21_SOTA_Acquisitions_2026_Non_China/01_BIS_Basel/d609_Basel_III_Monitoring_Report_Mar2026.pdf",
+    "source_id": null,
+    "source_sha256_actual": "75a3281757164507c9405fa4998126b5347e05804d34dc2f4f4b7596cf9f0efb",
+    "status": "excluded"
+  },
+  {
+    "exclude_reason": "deferred",
+    "exists": true,
+    "format": "PDF",
+    "legacy_abs_path": "/home/jakeshea/CFA_reading/CFA_reading/deferred_books/21_SOTA_Acquisitions_2026_Non_China/01_BIS_Basel/qt1309f_CoCos_a_primer_Sep2013.pdf",
+    "legacy_path": "deferred_books/21_SOTA_Acquisitions_2026_Non_China/01_BIS_Basel/qt1309f_CoCos_a_primer_Sep2013.pdf",
+    "source_id": null,
+    "source_sha256_actual": "fae497098aefd8d0e4d7648a266b32ba36176eff91ab9bd379913e12022dccca",
+    "status": "excluded"
+  },
+  {
+    "exclude_reason": "deferred",
+    "exists": true,
+    "format": "PDF",
+    "legacy_abs_path": "/home/jakeshea/CFA_reading/CFA_reading/deferred_books/21_SOTA_Acquisitions_2026_Non_China/01_BIS_Basel/work678_CoCo_issuance_bank_fragility_2017.pdf",
+    "legacy_path": "deferred_books/21_SOTA_Acquisitions_2026_Non_China/01_BIS_Basel/work678_CoCo_issuance_bank_fragility_2017.pdf",
+    "source_id": null,
+    "source_sha256_actual": "7d9fbe76a1b38fd322b684065b5f165b3e175421867a7d61de0945d332069a2f",
+    "status": "excluded"
+  },
+  {
+    "exclude_reason": "deferred",
+    "exists": true,
+    "format": "PDF",
+    "legacy_abs_path": "/home/jakeshea/CFA_reading/CFA_reading/deferred_books/21_SOTA_Acquisitions_2026_Non_China/02_FSB_Switzerland_Fed/FINMA_Lessons_Learned_CS_Crisis_19Dec2023.pdf",
+    "legacy_path": "deferred_books/21_SOTA_Acquisitions_2026_Non_China/02_FSB_Switzerland_Fed/FINMA_Lessons_Learned_CS_Crisis_19Dec2023.pdf",
+    "source_id": null,
+    "source_sha256_actual": "2c69d3c25c8f261f309f0fb85ff58c0455e19eb97e4808661b1d2938fb74a2e2",
+    "status": "excluded"
+  },
+  {
+    "exclude_reason": "deferred",
+    "exists": true,
+    "format": "PDF",
+    "legacy_abs_path": "/home/jakeshea/CFA_reading/CFA_reading/deferred_books/21_SOTA_Acquisitions_2026_Non_China/02_FSB_Switzerland_Fed/FSB_2023_Bank_Failures_Preliminary_lessons_Oct2023.pdf",
+    "legacy_path": "deferred_books/21_SOTA_Acquisitions_2026_Non_China/02_FSB_Switzerland_Fed/FSB_2023_Bank_Failures_Preliminary_lessons_Oct2023.pdf",
+    "source_id": null,
+    "source_sha256_actual": "f887b2fece75f22538770174a9011d473a43144e539cd81f9c780266d2d2fd02",
+    "status": "excluded"
+  },
+  {
+    "exclude_reason": "deferred",
+    "exists": true,
+    "format": "PDF",
+    "legacy_abs_path": "/home/jakeshea/CFA_reading/CFA_reading/deferred_books/21_SOTA_Acquisitions_2026_Non_China/02_FSB_Switzerland_Fed/FSB_2023_Resolution_Report_Applying_lessons_learnt_Dec2023.pdf",
+    "legacy_path": "deferred_books/21_SOTA_Acquisitions_2026_Non_China/02_FSB_Switzerland_Fed/FSB_2023_Resolution_Report_Applying_lessons_learnt_Dec2023.pdf",
+    "source_id": null,
+    "source_sha256_actual": "2d4e8398a520fc72ac4975c40944dbb1e9cc35188f33142cad8e9a611b797823",
+    "status": "excluded"
+  },
+  {
+    "exclude_reason": "deferred",
+    "exists": true,
+    "format": "PDF",
+    "legacy_abs_path": "/home/jakeshea/CFA_reading/CFA_reading/deferred_books/21_SOTA_Acquisitions_2026_Non_China/02_FSB_Switzerland_Fed/FSB_Peer_Review_Switzerland_Feb2024.pdf",
+    "legacy_path": "deferred_books/21_SOTA_Acquisitions_2026_Non_China/02_FSB_Switzerland_Fed/FSB_Peer_Review_Switzerland_Feb2024.pdf",
+    "source_id": null,
+    "source_sha256_actual": "42003029fdd3915214fcf051a3f0125cf05e459dfd8241b8894096ce11642050",
+    "status": "excluded"
+  },
+  {
+    "exclude_reason": "deferred",
+    "exists": true,
+    "format": "PDF",
+    "legacy_abs_path": "/home/jakeshea/CFA_reading/CFA_reading/deferred_books/21_SOTA_Acquisitions_2026_Non_China/02_FSB_Switzerland_Fed/Fed_Barr_Review_SVB_Supervision_28Apr2023.pdf",
+    "legacy_path": "deferred_books/21_SOTA_Acquisitions_2026_Non_China/02_FSB_Switzerland_Fed/Fed_Barr_Review_SVB_Supervision_28Apr2023.pdf",
+    "source_id": null,
+    "source_sha256_actual": "601c32a73e833d3b2a2d6fa5d25a23c56eac85a6fa87558dcd5aa3e30a96f2d6",
+    "status": "excluded"
+  },
+  {
+    "exclude_reason": "deferred",
+    "exists": true,
+    "format": "PDF",
+    "legacy_abs_path": "/home/jakeshea/CFA_reading/CFA_reading/deferred_books/21_SOTA_Acquisitions_2026_Non_China/02_FSB_Switzerland_Fed/Fed_OIG_MLR_SVB_Sep2023.pdf",
+    "legacy_path": "deferred_books/21_SOTA_Acquisitions_2026_Non_China/02_FSB_Switzerland_Fed/Fed_OIG_MLR_SVB_Sep2023.pdf",
+    "source_id": null,
+    "source_sha256_actual": "8283a468bd5c17f892b36cb49b90cbcb20f6beac0dd3a88371b76dfa07937183",
+    "status": "excluded"
+  },
+  {
+    "exclude_reason": "deferred",
+    "exists": true,
+    "format": "PDF",
+    "legacy_abs_path": "/home/jakeshea/CFA_reading/CFA_reading/deferred_books/21_SOTA_Acquisitions_2026_Non_China/04_FASB_IASB_FRC/FASB_ASU_2020-06_Convertible_Debt_Aug2020.pdf",
+    "legacy_path": "deferred_books/21_SOTA_Acquisitions_2026_Non_China/04_FASB_IASB_FRC/FASB_ASU_2020-06_Convertible_Debt_Aug2020.pdf",
+    "source_id": null,
+    "source_sha256_actual": "c527b9fa12f353f0fa004a0a57c650438b8000a4f53520acce42db1416e86f2d",
+    "status": "excluded"
+  },
+  {
+    "exclude_reason": "deferred",
+    "exists": true,
+    "format": "PDF",
+    "legacy_abs_path": "/home/jakeshea/CFA_reading/CFA_reading/deferred_books/21_SOTA_Acquisitions_2026_Non_China/04_FASB_IASB_FRC/FASB_ASU_2024-04_Induced_Conversions_Nov2024.pdf",
+    "legacy_path": "deferred_books/21_SOTA_Acquisitions_2026_Non_China/04_FASB_IASB_FRC/FASB_ASU_2024-04_Induced_Conversions_Nov2024.pdf",
+    "source_id": null,
+    "source_sha256_actual": "191a710f8423352b04c579712f67557f54fd78622523cdc4a085da12ad623461",
+    "status": "excluded"
+  },
+  {
+    "exclude_reason": "deferred",
+    "exists": true,
+    "format": "PDF",
+    "legacy_abs_path": "/home/jakeshea/CFA_reading/CFA_reading/deferred_books/21_SOTA_Acquisitions_2026_Non_China/04_FASB_IASB_FRC/IRS_Pub_1212_OID_Dec2025.pdf",
+    "legacy_path": "deferred_books/21_SOTA_Acquisitions_2026_Non_China/04_FASB_IASB_FRC/IRS_Pub_1212_OID_Dec2025.pdf",
+    "source_id": null,
+    "source_sha256_actual": "b6a6c3363ff7a06b4e925861f2149ed5c7ad28caeb57c4bea2ba6cc7b689fd37",
+    "status": "excluded"
+  },
+  {
+    "exclude_reason": "deferred",
+    "exists": true,
+    "format": "PDF",
+    "legacy_abs_path": "/home/jakeshea/CFA_reading/CFA_reading/deferred_books/21_SOTA_Acquisitions_2026_Non_China/06_NAFMII_Quarterly_and_Sample_Issuer/NAFMII_Q2-2025_Rating_Agency_Compliance_Report.pdf",
+    "legacy_path": "deferred_books/21_SOTA_Acquisitions_2026_Non_China/06_NAFMII_Quarterly_and_Sample_Issuer/NAFMII_Q2-2025_Rating_Agency_Compliance_Report.pdf",
+    "source_id": null,
+    "source_sha256_actual": "bb73090232ffcbc9ee1cdaef6c921be369c311cd5d790ea1ad93fed1cdf1dab1",
+    "status": "excluded"
+  },
+  {
+    "exclude_reason": "deferred",
+    "exists": true,
+    "format": "PDF",
+    "legacy_abs_path": "/home/jakeshea/CFA_reading/CFA_reading/deferred_books/21_SOTA_Acquisitions_2026_Non_China/06_NAFMII_Quarterly_and_Sample_Issuer/NAFMII_Q3-2024_Rating_Agency_Compliance_Report.pdf",
+    "legacy_path": "deferred_books/21_SOTA_Acquisitions_2026_Non_China/06_NAFMII_Quarterly_and_Sample_Issuer/NAFMII_Q3-2024_Rating_Agency_Compliance_Report.pdf",
+    "source_id": null,
+    "source_sha256_actual": "bba2e3f6fd2cf8f533dea7a6d57f4840980aa5f1f8ec215c9e82cefce210c51b",
+    "status": "excluded"
+  },
+  {
+    "exclude_reason": "deferred",
+    "exists": true,
+    "format": "PDF",
+    "legacy_abs_path": "/home/jakeshea/CFA_reading/CFA_reading/deferred_books/21_SOTA_Acquisitions_2026_Non_China/06_NAFMII_Quarterly_and_Sample_Issuer/NAFMII_Q4-2024_Rating_Agency_Compliance_Report.pdf",
+    "legacy_path": "deferred_books/21_SOTA_Acquisitions_2026_Non_China/06_NAFMII_Quarterly_and_Sample_Issuer/NAFMII_Q4-2024_Rating_Agency_Compliance_Report.pdf",
+    "source_id": null,
+    "source_sha256_actual": "933287c026f05e886497cc7b9dd732d68862fe07d5c9ec2ae016a28e9b851dc7",
+    "status": "excluded"
+  },
+  {
+    "exclude_reason": "deferred",
+    "exists": true,
+    "format": "PDF",
+    "legacy_abs_path": "/home/jakeshea/CFA_reading/CFA_reading/deferred_books/21_SOTA_Acquisitions_2026_Non_China/06_NAFMII_Quarterly_and_Sample_Issuer/Sample_CCXI_2025_Issuer_Rating_Report_CITIC_Securities.pdf",
+    "legacy_path": "deferred_books/21_SOTA_Acquisitions_2026_Non_China/06_NAFMII_Quarterly_and_Sample_Issuer/Sample_CCXI_2025_Issuer_Rating_Report_CITIC_Securities.pdf",
+    "source_id": null,
+    "source_sha256_actual": "56d74739aca30bf40e1d37f9e2deecf2c11fab80704a6c4e850bf87502d1644c",
+    "status": "excluded"
+  },
+  {
+    "exclude_reason": "deferred",
+    "exists": true,
+    "format": "PDF",
+    "legacy_abs_path": "/home/jakeshea/CFA_reading/CFA_reading/deferred_books/21_SOTA_Acquisitions_2026_Non_China/07_Big4_Practitioner_US_focused/MayerBrown_Convertible_Bonds_Issuers_Guide_2025.pdf",
+    "legacy_path": "deferred_books/21_SOTA_Acquisitions_2026_Non_China/07_Big4_Practitioner_US_focused/MayerBrown_Convertible_Bonds_Issuers_Guide_2025.pdf",
+    "source_id": null,
+    "source_sha256_actual": "f0264759f20506c13200c8a9f3de01b79639db98940417525222d4bb27e8528e",
+    "status": "excluded"
+  },
+  {
+    "exclude_reason": "deferred",
+    "exists": true,
+    "format": "PDF",
+    "legacy_abs_path": "/home/jakeshea/CFA_reading/CFA_reading/deferred_books/21_SOTA_Acquisitions_2026_Non_China/07_Big4_Practitioner_US_focused/RSM_Debt_Modifications_Restructurings_Guide_May2025.pdf",
+    "legacy_path": "deferred_books/21_SOTA_Acquisitions_2026_Non_China/07_Big4_Practitioner_US_focused/RSM_Debt_Modifications_Restructurings_Guide_May2025.pdf",
+    "source_id": null,
+    "source_sha256_actual": "9210e2a2ee82e653a8d233ea04ab3ef18a6f20e8f3e02ab3587bb692e4f947b7",
+    "status": "excluded"
+  },
+  {
+    "exclude_reason": "deferred",
+    "exists": true,
+    "format": "PDF",
+    "legacy_abs_path": "/home/jakeshea/CFA_reading/CFA_reading/deferred_books/21_SOTA_Acquisitions_2026_Non_China/08_Academic_Papers_global/Asquith_2000_Convertible_Bonds_Not_Called_Late_NBER_w7657.pdf",
+    "legacy_path": "deferred_books/21_SOTA_Acquisitions_2026_Non_China/08_Academic_Papers_global/Asquith_2000_Convertible_Bonds_Not_Called_Late_NBER_w7657.pdf",
+    "source_id": null,
+    "source_sha256_actual": "56d1cb4270c15bbfba7596bf7be7917be45fe51c74094b36d3d38a3a00e36910",
+    "status": "excluded"
+  },
+  {
+    "exclude_reason": "deferred",
+    "exists": true,
+    "format": "PDF",
+    "legacy_abs_path": "/home/jakeshea/CFA_reading/CFA_reading/deferred_books/21_SOTA_Acquisitions_2026_Non_China/08_Academic_Papers_global/FEDS_2024-051_Optimal_Design_Contingent_Capital.pdf",
+    "legacy_path": "deferred_books/21_SOTA_Acquisitions_2026_Non_China/08_Academic_Papers_global/FEDS_2024-051_Optimal_Design_Contingent_Capital.pdf",
+    "source_id": null,
+    "source_sha256_actual": "9e49e34b60fcf0ba6abf2ffab468d1781e64db2193128bd94effed64ab88103b",
+    "status": "excluded"
+  },
+  {
+    "exclude_reason": "deferred",
+    "exists": true,
+    "format": "PDF",
+    "legacy_abs_path": "/home/jakeshea/CFA_reading/CFA_reading/deferred_books/21_SOTA_Acquisitions_2026_Non_China/08_Academic_Papers_global/Kang_Kim_Park_Stulz_1995_Japanese_Offshore_USD_CB_Warrant_Bonds_NBER_w5113.pdf",
+    "legacy_path": "deferred_books/21_SOTA_Acquisitions_2026_Non_China/08_Academic_Papers_global/Kang_Kim_Park_Stulz_1995_Japanese_Offshore_USD_CB_Warrant_Bonds_NBER_w5113.pdf",
+    "source_id": null,
+    "source_sha256_actual": "bdb8bcad8f8b89dc02f6ec52b1b4d7cece6f27589a1aa75746d11fd4540c8214",
+    "status": "excluded"
+  },
+  {
+    "exclude_reason": "deferred",
+    "exists": true,
+    "format": "PDF",
+    "legacy_abs_path": "/home/jakeshea/CFA_reading/CFA_reading/deferred_books/21_SOTA_Acquisitions_2026_Non_China/08_Academic_Papers_global/LopezdePrado_Causality_Factor_Investing_Primer_CFA_2025.pdf",
+    "legacy_path": "deferred_books/21_SOTA_Acquisitions_2026_Non_China/08_Academic_Papers_global/LopezdePrado_Causality_Factor_Investing_Primer_CFA_2025.pdf",
+    "source_id": null,
+    "source_sha256_actual": "2d466d6a723f7880e3bb6d40ebf7b0e5cb11c0cfeb66b077ed3ab47267accd07",
+    "status": "excluded"
+  },
+  {
+    "exclude_reason": "deferred",
+    "exists": true,
+    "format": "PDF",
+    "legacy_abs_path": "/home/jakeshea/CFA_reading/CFA_reading/deferred_books/21_SOTA_Acquisitions_2026_Non_China/08_Academic_Papers_global/Mitchell_Pedersen_Pulvino_2007_Slow_Moving_Capital_NBER_w12877.pdf",
+    "legacy_path": "deferred_books/21_SOTA_Acquisitions_2026_Non_China/08_Academic_Papers_global/Mitchell_Pedersen_Pulvino_2007_Slow_Moving_Capital_NBER_w12877.pdf",
+    "source_id": null,
+    "source_sha256_actual": "d79148cd44c6d4317a910eab79551461cf520c8751ecebdb55c8ef0548fc2b37",
+    "status": "excluded"
+  },
+  {
+    "exclude_reason": "deferred",
+    "exists": true,
+    "format": "PDF",
+    "legacy_abs_path": "/home/jakeshea/CFA_reading/CFA_reading/deferred_books/21_SOTA_Acquisitions_2026_Non_China/08_Academic_Papers_global/Sirbu_Pikovsky_Shreve_Perpetual_Convertible_Bonds_SIAM_2004.pdf",
+    "legacy_path": "deferred_books/21_SOTA_Acquisitions_2026_Non_China/08_Academic_Papers_global/Sirbu_Pikovsky_Shreve_Perpetual_Convertible_Bonds_SIAM_2004.pdf",
+    "source_id": null,
+    "source_sha256_actual": "dca5b85eb04828c7353e39cf5ffe94650e6a87d78be329412f7d8538a2492b6b",
+    "status": "excluded"
+  },
+  {
+    "exclude_reason": "deferred",
+    "exists": true,
+    "format": "PDF",
+    "legacy_abs_path": "/home/jakeshea/CFA_reading/CFA_reading/deferred_books/21_SOTA_Acquisitions_2026_Non_China/09_OpenAccess_Books_global/Acharya_Richardson_Schoenholtz_Tuckman_2023_SVB_and_Beyond_CEPR.pdf",
+    "legacy_path": "deferred_books/21_SOTA_Acquisitions_2026_Non_China/09_OpenAccess_Books_global/Acharya_Richardson_Schoenholtz_Tuckman_2023_SVB_and_Beyond_CEPR.pdf",
+    "source_id": null,
+    "source_sha256_actual": "984a37f0ab4389386728c7129b649ae70b8ef87a389803271112f6d275af5b71",
+    "status": "excluded"
+  },
+  {
+    "exclude_reason": "deferred",
+    "exists": true,
+    "format": "PDF",
+    "legacy_abs_path": "/home/jakeshea/CFA_reading/CFA_reading/deferred_books/21_SOTA_Acquisitions_2026_Non_China/09_OpenAccess_Books_global/Bayer_dosReis_Horvath_Oberhauser_2025_Signature_Methods_in_Finance_Springer_OA.pdf",
+    "legacy_path": "deferred_books/21_SOTA_Acquisitions_2026_Non_China/09_OpenAccess_Books_global/Bayer_dosReis_Horvath_Oberhauser_2025_Signature_Methods_in_Finance_Springer_OA.pdf",
+    "source_id": null,
+    "source_sha256_actual": "ea5abb669319fb3e44292990abd2b5885d6ba23ef88ecf2ecae0fc4686d76dc9",
+    "status": "excluded"
+  },
+  {
+    "exclude_reason": "deferred",
+    "exists": true,
+    "format": "PDF",
+    "legacy_abs_path": "/home/jakeshea/CFA_reading/CFA_reading/deferred_books/21_SOTA_Acquisitions_2026_Non_China/11_India_Korea/ADB_Korea_Bond_Market_Guide_ASEAN3_Update_2024.pdf",
+    "legacy_path": "deferred_books/21_SOTA_Acquisitions_2026_Non_China/11_India_Korea/ADB_Korea_Bond_Market_Guide_ASEAN3_Update_2024.pdf",
+    "source_id": null,
+    "source_sha256_actual": "d57630b252c3fca8dd4dba3d11417cee58af78b03c67d5f932f731705dd81da2",
+    "status": "excluded"
+  },
+  {
+    "exclude_reason": "deferred",
+    "exists": true,
+    "format": "PDF",
+    "legacy_abs_path": "/home/jakeshea/CFA_reading/CFA_reading/deferred_books/21_SOTA_Acquisitions_2026_Non_China/11_India_Korea/RBI_Master_Direction_FI_2018-19.pdf",
+    "legacy_path": "deferred_books/21_SOTA_Acquisitions_2026_Non_China/11_India_Korea/RBI_Master_Direction_FI_2018-19.pdf",
+    "source_id": null,
+    "source_sha256_actual": "bf6c40c7c7065ee75497f443996c1db9772b43d839f706f9a00ef1ada246cc54",
+    "status": "excluded"
+  },
+  {
+    "exclude_reason": "deferred",
+    "exists": true,
+    "format": "PDF",
+    "legacy_abs_path": "/home/jakeshea/CFA_reading/CFA_reading/deferred_books/21_SOTA_Acquisitions_2026_Non_China/12_Industry_Reports_global/SSGA_Look_Under_Convertible_Bond_Bonnet_Apr2025.pdf",
+    "legacy_path": "deferred_books/21_SOTA_Acquisitions_2026_Non_China/12_Industry_Reports_global/SSGA_Look_Under_Convertible_Bond_Bonnet_Apr2025.pdf",
+    "source_id": null,
+    "source_sha256_actual": "d4bd6400adb5b99e4704bb467c4ed0bba2588c0da0021c25e8d33a91a1816a73",
+    "status": "excluded"
+  },
+  {
+    "exclude_reason": "notes_user_volatile",
+    "exists": true,
+    "format": "PDF",
+    "legacy_abs_path": "/home/jakeshea/CFA_reading/CFA_reading/notes/CFA_note_2.ocr.pdf",
+    "legacy_path": "notes/CFA_note_2.ocr.pdf",
+    "source_id": null,
+    "source_sha256_actual": "e1dd88c9c0311dda138f9c6dd492adc04a45881e962426139d6b1e0fdd2610ec",
+    "status": "excluded"
+  },
+  {
+    "exclude_reason": "notes_user_volatile",
+    "exists": true,
+    "format": "PDF",
+    "legacy_abs_path": "/home/jakeshea/CFA_reading/CFA_reading/notes/CFA_note_2.pdf",
+    "legacy_path": "notes/CFA_note_2.pdf",
+    "source_id": null,
+    "source_sha256_actual": "71fdb651d89ec9798a73bc45fe1c2c371e0e6aef90570f2a0e03033a22d92bef",
+    "status": "excluded"
+  }
+]

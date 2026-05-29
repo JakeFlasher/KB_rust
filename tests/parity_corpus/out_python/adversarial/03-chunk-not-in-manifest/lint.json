@@ -1,0 +1,1 @@
+{"diagnostics":[{"code":"CACG-CITE-004","file":"tests/parity_corpus/adversarial/03-chunk-not-in-manifest.md","message":"citations[0]: chunk_id 'sample:p999:0099' not present in chunks manifest","severity":"error"}],"schema_version":"cacg.v0"}

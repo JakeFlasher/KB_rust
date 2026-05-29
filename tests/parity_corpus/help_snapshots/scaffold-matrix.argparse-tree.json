@@ -1,0 +1,47 @@
+{
+  "mutex_groups": [],
+  "name": "scaffold-matrix",
+  "options": [
+    {
+      "action": "_StoreAction",
+      "default": null,
+      "dest": "cards_dir",
+      "is_positional": false,
+      "option_strings": [
+        "--cards-dir"
+      ],
+      "required": false
+    },
+    {
+      "action": "_StoreAction",
+      "default": "out/cards_manifest.json",
+      "dest": "cards_manifest",
+      "is_positional": false,
+      "option_strings": [
+        "--cards-manifest"
+      ],
+      "required": false
+    },
+    {
+      "action": "_StoreAction",
+      "default": "out/chunks_manifest.json",
+      "dest": "chunks_manifest",
+      "is_positional": false,
+      "option_strings": [
+        "--chunks-manifest"
+      ],
+      "required": false
+    },
+    {
+      "action": "_StoreAction",
+      "default": "out/source_matrix.json",
+      "dest": "out",
+      "is_positional": false,
+      "option_strings": [
+        "--out"
+      ],
+      "required": false
+    }
+  ],
+  "positionals": []
+}

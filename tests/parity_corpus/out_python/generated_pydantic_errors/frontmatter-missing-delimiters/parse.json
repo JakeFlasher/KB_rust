@@ -1,0 +1,1 @@
+{"diagnostics":[{"code":"CACG-FM-004","file":"<frontmatter-missing-delimiters>","message":"card is missing YAML frontmatter delimited by '---'","severity":"error"}],"oracle_layer":"parse","schema_version":"cacg.v0"}

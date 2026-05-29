@@ -1,0 +1,1 @@
+{"diagnostics":[{"code":"CACG-FM-008","file":"<reading_id-wrong-type-array>","message":"validation error at reading_id: Input should be a valid string","severity":"error"}],"oracle_layer":"parse","schema_version":"cacg.v0"}

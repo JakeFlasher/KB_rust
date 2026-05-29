@@ -1,0 +1,1 @@
+{"diagnostics":[{"code":"CACG-FM-006","file":"<yaml-duplicate-key-id>","message":"YAML parse error: duplicate key 'id' in mapping at line 3","severity":"error"}],"oracle_layer":"parse","schema_version":"cacg.v0"}

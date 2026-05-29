@@ -1,0 +1,6 @@
+{
+  "exit_code": 2,
+  "fixture_sha256": "276bfea48df73b467950efbf8498700852d46825d1f5abeeaf7f4ff61dafc7b6",
+  "stderr": "CACG-RS-001: ## Knowledge Consulted section missing on KB-relevant work\n",
+  "stdout": ""
+}

@@ -1,0 +1,54 @@
+{
+  "mutex_groups": [],
+  "name": "new",
+  "options": [
+    {
+      "action": "_StoreAction",
+      "default": "cards",
+      "dest": "cards_dir",
+      "is_positional": false,
+      "option_strings": [
+        "--cards-dir"
+      ],
+      "required": false
+    },
+    {
+      "action": "_StoreTrueAction",
+      "default": false,
+      "dest": "force",
+      "is_positional": false,
+      "option_strings": [
+        "--force"
+      ],
+      "required": false
+    },
+    {
+      "action": "_StoreAction",
+      "default": null,
+      "dest": "title",
+      "is_positional": false,
+      "option_strings": [
+        "--title"
+      ],
+      "required": false
+    }
+  ],
+  "positionals": [
+    {
+      "action": "_StoreAction",
+      "default": null,
+      "dest": "reading_id",
+      "is_positional": true,
+      "nargs": null,
+      "required": true
+    },
+    {
+      "action": "_StoreAction",
+      "default": null,
+      "dest": "slug",
+      "is_positional": true,
+      "nargs": null,
+      "required": true
+    }
+  ]
+}

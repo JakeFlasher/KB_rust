@@ -1,0 +1,1 @@
+{"diagnostics":[{"code":"CACG-CITE-003","file":"tests/parity_corpus/adversarial/02-reversed-page-range.md","message":"citations.0.page_range: page_range must be ascending start<=end (Value error, page_range must be ascending (start <= end))","severity":"error"}],"schema_version":"cacg.v0"}

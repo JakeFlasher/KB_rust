@@ -1,0 +1,1 @@
+{"diagnostics":[{"code":"CACG-FM-003","file":"<extra-field>","message":"unknown frontmatter field: extra_unknown_field","severity":"error"}],"oracle_layer":"parse","schema_version":"cacg.v0"}

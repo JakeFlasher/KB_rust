@@ -1,0 +1,1 @@
+{"schema_version":"cacg.v0","sources":[{"extracted_at":"1970-01-01T00:00:00Z","page_count":58,"parser_name":"pypdfium2","parser_version":"5.8.0+pdfium149.0.7825.0","schema_version":"cacg.v0","source_id":"qm_greene_trim","source_path":"tests/parity_corpus/pdfs/qm_greene_trim.pdf","source_sha256":"1a3f0bcf1a1e2741bb6205eb5d0f9bac4d587503f26a65fc27b6b6c5de74b4df"}]}

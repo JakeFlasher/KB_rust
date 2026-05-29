@@ -1,0 +1,1 @@
+{"diagnostics":[{"code":"CACG-FM-005","file":"<yaml-alias>","message":"forbidden YAML construct: YAML alias not allowed: *foo at line 3","severity":"error"}],"oracle_layer":"parse","schema_version":"cacg.v0"}

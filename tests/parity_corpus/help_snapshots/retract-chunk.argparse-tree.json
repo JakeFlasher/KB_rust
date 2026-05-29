@@ -1,0 +1,36 @@
+{
+  "mutex_groups": [],
+  "name": "retract-chunk",
+  "options": [
+    {
+      "action": "_StoreAction",
+      "default": null,
+      "dest": "cards_dir",
+      "is_positional": false,
+      "option_strings": [
+        "--cards-dir"
+      ],
+      "required": false
+    },
+    {
+      "action": "_StoreAction",
+      "default": "out",
+      "dest": "out",
+      "is_positional": false,
+      "option_strings": [
+        "--out"
+      ],
+      "required": false
+    }
+  ],
+  "positionals": [
+    {
+      "action": "_StoreAction",
+      "default": null,
+      "dest": "chunk_id",
+      "is_positional": true,
+      "nargs": null,
+      "required": true
+    }
+  ]
+}

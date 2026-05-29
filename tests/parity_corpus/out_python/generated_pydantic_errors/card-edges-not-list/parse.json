@@ -1,0 +1,1 @@
+{"diagnostics":[{"code":"CACG-FM-008","file":"<card-edges-not-list>","message":"validation error at card_edges: Input should be a valid list","severity":"error"}],"oracle_layer":"parse","schema_version":"cacg.v0"}

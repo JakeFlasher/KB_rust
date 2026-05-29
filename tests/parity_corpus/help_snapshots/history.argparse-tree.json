@@ -1,0 +1,26 @@
+{
+  "mutex_groups": [],
+  "name": "history",
+  "options": [
+    {
+      "action": "_StoreTrueAction",
+      "default": false,
+      "dest": "validate",
+      "is_positional": false,
+      "option_strings": [
+        "--validate"
+      ],
+      "required": false
+    }
+  ],
+  "positionals": [
+    {
+      "action": "_StoreAction",
+      "default": null,
+      "dest": "card",
+      "is_positional": true,
+      "nargs": null,
+      "required": true
+    }
+  ]
+}

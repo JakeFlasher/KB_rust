@@ -1,0 +1,1 @@
+tests/parity_corpus/adversarial/01-malformed-hash.md: CACG-CITE-002 citations.0.chunk_hash: chunk_hash must be 64-hex SHA256 (Value error, chunk_hash must be 64-hex SHA256)

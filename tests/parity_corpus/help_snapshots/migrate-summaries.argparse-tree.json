@@ -1,0 +1,55 @@
+{
+  "mutex_groups": [
+    {
+      "index": 0,
+      "member_dests": [
+        "auto_heuristic",
+        "strict"
+      ],
+      "required": false
+    }
+  ],
+  "name": "migrate-summaries",
+  "options": [
+    {
+      "action": "_StoreTrueAction",
+      "default": false,
+      "dest": "auto_heuristic",
+      "is_positional": false,
+      "option_strings": [
+        "--auto-heuristic"
+      ],
+      "required": false
+    },
+    {
+      "action": "_StoreAction",
+      "default": "out",
+      "dest": "out",
+      "is_positional": false,
+      "option_strings": [
+        "--out"
+      ],
+      "required": false
+    },
+    {
+      "action": "_StoreTrueAction",
+      "default": false,
+      "dest": "strict",
+      "is_positional": false,
+      "option_strings": [
+        "--strict"
+      ],
+      "required": false
+    }
+  ],
+  "positionals": [
+    {
+      "action": "_StoreAction",
+      "default": "cards",
+      "dest": "cards_dir",
+      "is_positional": true,
+      "nargs": "?",
+      "required": false
+    }
+  ]
+}

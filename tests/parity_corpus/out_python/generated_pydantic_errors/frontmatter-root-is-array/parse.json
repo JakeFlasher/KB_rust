@@ -1,0 +1,1 @@
+{"diagnostics":[{"code":"CACG-FM-007","file":"<frontmatter-root-is-array>","message":"frontmatter top-level must be a mapping","severity":"error"}],"oracle_layer":"parse","schema_version":"cacg.v0"}

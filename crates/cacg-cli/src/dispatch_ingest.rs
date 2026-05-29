@@ -1,0 +1,239 @@
+//! `kb ingest` dispatch module.
+
+use std::process::ExitCode;
+
+use cacg_cli::IngestArgs;
+
+/// `kb ingest <pdf>` dispatcher. Reads the PDF, runs pdfium-render
+/// text extraction via cacg-ingest, builds the
+/// `sources_manifest.json` + `chunks_manifest.json` pair, and
+/// pair-atomically publishes them into `--out`. Diagnostics + exit
+/// codes mirror Python `_cmd_ingest` (with `parser_name` /
+/// `parser_version` a declared divergence per the DEC-2 resolution).
+///
+/// Available only when the `ingest` Cargo feature is enabled (the
+/// shipped binary builds it by default). With
+/// `--no-default-features`, this falls through to
+/// `unimplemented_subcommand("ingest")`.
+#[cfg(feature = "ingest")]
+pub(crate) fn dispatch_ingest(args: &IngestArgs) -> ExitCode {
+    use cacg_core::atomic_publish::PublishError;
+    use cacg_core::determinism::DeterminismContext;
+    use cacg_ingest::config::load_config;
+    use cacg_ingest::extract_pages;
+    use cacg_ingest::manifest::{build_manifests_with_config, publish_manifests, ManifestError};
+    use cacg_ingest::IngestError;
+
+    use crate::dispatch_show::py_repr;
+
+    if !args.pdf.is_file() {
+        eprintln!(
+            "CACG-CLI-001: pdf not found or not a regular file: {}",
+            args.pdf.display()
+        );
+        return ExitCode::FAILURE;
+    }
+
+    if args.out.exists() && !args.out.is_dir() {
+        eprintln!(
+            "CACG-CLI-001: out path is not a directory: {}",
+            args.out.display()
+        );
+        return ExitCode::FAILURE;
+    }
+
+    let source_id = args
+        .source_id
+        .clone()
+        .unwrap_or_else(|| slugify_source(&args.pdf));
+    if !is_valid_source_id(&source_id) {
+        // Python `_cmd_ingest` formats this with `!r` on both the
+        // regex pattern AND the source_id; the pattern is plain ASCII
+        // so the literal here is already single-quoted, but the
+        // source_id needs py_repr to byte-match Python's repr().
+        eprintln!(
+            "CACG-CLI-003: source_id must match '^[a-z0-9][a-z0-9_]*$': {}",
+            py_repr(&source_id)
+        );
+        return ExitCode::from(2);
+    }
+
+    // Optional YAML config: absent → ChunkConfig::default(); present
+    // → load + validate, mapping every ConfigError variant to
+    // CACG-CLI-004 with exit 2 (mirrors Python `_cmd_ingest`'s
+    // `except (ConfigError, ValueError)` block at cli.py:659-661).
+    let chunk_config = match load_config(args.config.as_deref()) {
+        Ok(c) => c,
+        Err(err) => {
+            eprintln!("CACG-CLI-004: {err}");
+            return ExitCode::from(2);
+        }
+    };
+
+    let pdf_bytes = match std::fs::read(&args.pdf) {
+        Ok(b) => b,
+        Err(e) => {
+            eprintln!("CACG-INGEST-001: {}", e);
+            return ExitCode::FAILURE;
+        }
+    };
+
+    let pages_owned = match extract_pages(&pdf_bytes) {
+        Ok(pages) => pages,
+        Err(IngestError::Corrupt { detail }) => {
+            eprintln!("CACG-INGEST-001: {}", detail);
+            return ExitCode::FAILURE;
+        }
+        Err(e) => {
+            // Other IngestError variants (Empty, PublishFailed) are
+            // not produced by extract_pages; fold defensively under
+            // CACG-INGEST-001 if they ever surface here.
+            eprintln!("CACG-INGEST-001: {}", e);
+            return ExitCode::FAILURE;
+        }
+    };
+
+    let pages: Vec<(u32, &str)> = pages_owned
+        .iter()
+        .enumerate()
+        .map(|(idx, text)| {
+            let page_num = u32::try_from(idx + 1).expect("page index fits in u32");
+            (page_num, text.as_str())
+        })
+        .collect();
+
+    // source_path stored verbatim in SourceRecord matches Python's
+    // `str(p)` for the input Path -- callers control relative vs
+    // absolute; the parity oracle uses a relative path.
+    let source_path = args.pdf.display().to_string();
+    let det = DeterminismContext::from_env();
+
+    let output = match build_manifests_with_config(
+        &source_id,
+        &source_path,
+        &pdf_bytes,
+        &pages,
+        &det,
+        &chunk_config,
+    ) {
+        Ok(o) => o,
+        Err(ManifestError::NoPages) => {
+            eprintln!(
+                "CACG-INGEST-002: no chunks produced (empty PDF text?) for {}",
+                args.pdf.display()
+            );
+            return ExitCode::FAILURE;
+        }
+        Err(e) => {
+            eprintln!("CACG-INGEST-001: {}", e);
+            return ExitCode::FAILURE;
+        }
+    };
+
+    if output.chunks.chunks.is_empty() {
+        eprintln!(
+            "CACG-INGEST-002: no chunks produced (empty PDF text?) for {}",
+            args.pdf.display()
+        );
+        return ExitCode::FAILURE;
+    }
+
+    if let Err(err) = publish_manifests(&args.out, &output) {
+        match err {
+            ManifestError::Publish(PublishError::PreexistingSidecars { paths, .. }) => {
+                eprintln!(
+                    "CACG-MAN-002: refusing to clobber existing manifest \
+                     sidecar(s): {:?}",
+                    paths
+                );
+            }
+            ManifestError::Publish(PublishError::NonFileCanonical { paths, .. }) => {
+                eprintln!(
+                    "CACG-MAN-003: refusing to overwrite non-file canonical \
+                     target(s): {:?}",
+                    paths
+                );
+            }
+            ManifestError::PriorManifestsPresent { .. } => {
+                // Display already carries CACG-INGEST-003.
+                eprintln!("{}", err);
+            }
+            ManifestError::EmptySourceId
+            | ManifestError::EmptySourcePath
+            | ManifestError::NoPages
+            | ManifestError::PageCountOverflow
+            | ManifestError::Chunker(_)
+            | ManifestError::Canonical(_)
+            | ManifestError::Publish(PublishError::Io { .. }) => {
+                eprintln!("CACG-INGEST-003: manifest publish failed: {}", err);
+            }
+        }
+        return ExitCode::FAILURE;
+    }
+
+    let sources_path = args.out.join("sources_manifest.json");
+    let chunks_path = args.out.join("chunks_manifest.json");
+    println!("sources_manifest: {}", sources_path.display());
+    println!("chunks_manifest:  {}", chunks_path.display());
+    println!("chunks_count:     {}", output.chunks.chunks.len());
+    println!("source_id:        {}", source_id);
+    println!(
+        "source_sha256:    {}",
+        output.sources.sources[0].source_sha256
+    );
+
+    ExitCode::SUCCESS
+}
+
+/// Stub fallback when the `ingest` Cargo feature is disabled. Keeps
+/// the `kb` parser surface stable for the help-snapshot parity row
+/// while making the absence of pdfium obvious to the operator.
+#[cfg(not(feature = "ingest"))]
+pub(crate) fn dispatch_ingest(_args: &IngestArgs) -> ExitCode {
+    cacg_cli::unimplemented_subcommand("ingest")
+}
+
+#[cfg(feature = "ingest")]
+/// Derive a `source_id` from a PDF path stem. Byte-equal port of
+/// Python `_slugify_source`: `stem.lower()` ->
+/// `re.sub(r"[^a-z0-9]+", "_", _)` -> `strip("_")` ->
+/// `"source"` fallback on empty result.
+fn slugify_source(path: &std::path::Path) -> String {
+    let stem = path
+        .file_stem()
+        .and_then(|s| s.to_str())
+        .unwrap_or("")
+        .to_lowercase();
+
+    let mut out = String::with_capacity(stem.len());
+    let mut last_was_underscore = false;
+    for c in stem.chars() {
+        if c.is_ascii_lowercase() || c.is_ascii_digit() {
+            out.push(c);
+            last_was_underscore = false;
+        } else if !last_was_underscore {
+            out.push('_');
+            last_was_underscore = true;
+        }
+    }
+    let trimmed = out.trim_matches('_').to_owned();
+    if trimmed.is_empty() {
+        "source".to_owned()
+    } else {
+        trimmed
+    }
+}
+
+#[cfg(feature = "ingest")]
+/// Validate a `source_id` against the Python `_SOURCE_ID_RE` pattern
+/// `^[a-z0-9][a-z0-9_]*$`.
+fn is_valid_source_id(s: &str) -> bool {
+    let mut chars = s.chars();
+    let Some(first) = chars.next() else {
+        return false;
+    };
+    if !(first.is_ascii_lowercase() || first.is_ascii_digit()) {
+        return false;
+    }
+    chars.all(|c| c.is_ascii_lowercase() || c.is_ascii_digit() || c == '_')
+}

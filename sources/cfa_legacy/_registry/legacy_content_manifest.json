@@ -1,0 +1,2120 @@
+[
+  {
+    "legacy_path": ".claude/knowledge/01_quantitative_methods/_chapter_overviews.md",
+    "role": "legacy_auxiliary_metadata",
+    "sha256": "5361969e5a46bf28df2a2e7c0f3a75db8dac54e52b6e473ad2d94ee9538518a9",
+    "size_bytes": 11689
+  },
+  {
+    "legacy_path": ".claude/knowledge/01_quantitative_methods/_dependency_order.md",
+    "role": "legacy_auxiliary_metadata",
+    "sha256": "42c7d7b79cacd5e844c7cea8d681713cd23879af473c50066fa71f937fa9bd78",
+    "size_bytes": 2820
+  },
+  {
+    "legacy_path": ".claude/knowledge/01_quantitative_methods/_diagram_primitives.md",
+    "role": "legacy_auxiliary_metadata",
+    "sha256": "837d5c71ab0398b2542656873005b59e4d768bbfaee6d0b1dffa38ab30998a97",
+    "size_bytes": 16601
+  },
+  {
+    "legacy_path": ".claude/knowledge/01_quantitative_methods/_source_role_map.md",
+    "role": "legacy_auxiliary_metadata",
+    "sha256": "19ea9e32bf6a50d3a219bba1be6fbd238b2bceac713f8ff46b6b7b1bb59191a3",
+    "size_bytes": 23303
+  },
+  {
+    "legacy_path": ".claude/knowledge/01_quantitative_methods/_style_guide.md",
+    "role": "legacy_auxiliary_metadata",
+    "sha256": "c5ecf4172ed0fedeaf758099ae3cf0706a5fc1e17321e6df32f5ab9e836eaf84",
+    "size_bytes": 27969
+  },
+  {
+    "legacy_path": ".claude/knowledge/01_quantitative_methods/qm-aic-bic-model-selection.md",
+    "role": "legacy_card",
+    "sha256": "26ef3fabae7d13cf97b139c0805c2e672467b14325f13297c3e5502880c64582",
+    "size_bytes": 9451
+  },
+  {
+    "legacy_path": ".claude/knowledge/01_quantitative_methods/qm-anova-table.md",
+    "role": "legacy_card",
+    "sha256": "a7272e6152d8cb03e07ccf9d6f01c17dc04b2c43392b805ba68e428b7c7f3dcd",
+    "size_bytes": 8348
+  },
+  {
+    "legacy_path": ".claude/knowledge/01_quantitative_methods/qm-arch-conditional-heteroskedasticity.md",
+    "role": "legacy_card",
+    "sha256": "fdaa5e8f92cf39c0ca6740454b9f5c7b4475f693c6d30874511b2faff0b23966",
+    "size_bytes": 10394
+  },
+  {
+    "legacy_path": ".claude/knowledge/01_quantitative_methods/qm-cb-arb-factor-construction.md",
+    "role": "legacy_card",
+    "sha256": "2a2cfff0f147e5901e03acc43d18aa3158a756e6a11cff73f022c447078193b7",
+    "size_bytes": 13524
+  },
+  {
+    "legacy_path": ".claude/knowledge/01_quantitative_methods/qm-decision-trees-and-roots.md",
+    "role": "legacy_card",
+    "sha256": "574d85b3273fec069a818f5e70521e287260f919875e89b09656bf62d62810dd",
+    "size_bytes": 10856
+  },
+  {
+    "legacy_path": ".claude/knowledge/01_quantitative_methods/qm-goodness-of-fit-r2-adj-r2.md",
+    "role": "legacy_card",
+    "sha256": "7ee254673ed14d3cd908c1f731a876fc30dbb14bc786efc11e07d423884cc78a",
+    "size_bytes": 9391
+  },
+  {
+    "legacy_path": ".claude/knowledge/01_quantitative_methods/qm-influence-analysis-leverage.md",
+    "role": "legacy_card",
+    "sha256": "9dc1195f5abf2e8b10d2cb903469bca0d1ee0d893cc4b6a51d3abc28e580bf7c",
+    "size_bytes": 9355
+  },
+  {
+    "legacy_path": ".claude/knowledge/01_quantitative_methods/qm-multiple-linear-regression-foundations.md",
+    "role": "legacy_card",
+    "sha256": "da7b7e5b8b7c97ba8a41d613fa59b265166099c8f6446c9d915f5b43c02e817e",
+    "size_bytes": 8965
+  },
+  {
+    "legacy_path": ".claude/knowledge/01_quantitative_methods/qm-panel-cb-factor-inference.md",
+    "role": "legacy_card",
+    "sha256": "d61c236839832312a4d4006aa33180c2c210a21694e4dbaf540fa1a379e8f43d",
+    "size_bytes": 15167
+  },
+  {
+    "legacy_path": ".claude/knowledge/01_quantitative_methods/qm-penalized-regression-lasso.md",
+    "role": "legacy_card",
+    "sha256": "b308fdeb400f76c7af5fdf0f918f8ad3e9a357221d79cc67989ae061f40ff52d",
+    "size_bytes": 9319
+  },
+  {
+    "legacy_path": ".claude/knowledge/01_quantitative_methods/qm-projection-and-dimensionality-reduction.md",
+    "role": "legacy_card",
+    "sha256": "3d2503530eb45d7b6f77b63a6a755f8c22f31eb84f6da772e895cb2dd0d3c6f6",
+    "size_bytes": 9611
+  },
+  {
+    "legacy_path": ".claude/knowledge/01_quantitative_methods/qm-regression-assumption-violations.md",
+    "role": "legacy_card",
+    "sha256": "c2e6f5c688ad247605097e71964b855b76b6732e6d7686e4ac11bee8be9244e2",
+    "size_bytes": 10704
+  },
+  {
+    "legacy_path": ".claude/knowledge/01_quantitative_methods/qm-regression-hypothesis-tests.md",
+    "role": "legacy_card",
+    "sha256": "b343a2cf1d57661a1ea4b9573b592245ce9fdc56a640968c956e0f8d454d27bc",
+    "size_bytes": 10280
+  },
+  {
+    "legacy_path": ".claude/knowledge/01_quantitative_methods/qm-signal-validation-oos-discipline.md",
+    "role": "legacy_card",
+    "sha256": "789553f30acb687db09408bc11000c655698111a8ca8cdf0f52f1d0a008192c2",
+    "size_bytes": 10049
+  },
+  {
+    "legacy_path": ".claude/knowledge/01_quantitative_methods/qm-structured-data-ml.md",
+    "role": "legacy_card",
+    "sha256": "1d771bb7c59b6a13d8e9a5e1d174f64f9f3a4f24bb5d596e39a7e866c4202c92",
+    "size_bytes": 10955
+  },
+  {
+    "legacy_path": ".claude/knowledge/01_quantitative_methods/qm-time-series-foundations.md",
+    "role": "legacy_card",
+    "sha256": "af0e03a200d9ca8f407ac65b70fb3cffd590a9c926693c4e91d5888126f64d16",
+    "size_bytes": 10720
+  },
+  {
+    "legacy_path": ".claude/knowledge/01_quantitative_methods/qm-volatility-model-garch-multivariate.md",
+    "role": "legacy_card",
+    "sha256": "d8f8c66af90fc1223d244be5bf6f99561c1c39a81b3d2cf4d282f403b2e7cc29",
+    "size_bytes": 12807
+  },
+  {
+    "legacy_path": ".claude/knowledge/02_economics/_chapter_overviews.md",
+    "role": "legacy_auxiliary_metadata",
+    "sha256": "8b6d4c8a90bf3e49f65e8386557bc809bd8599e9658c4f14dbaf4eb713e11064",
+    "size_bytes": 15036
+  },
+  {
+    "legacy_path": ".claude/knowledge/02_economics/_dependency_order.md",
+    "role": "legacy_auxiliary_metadata",
+    "sha256": "6200259bed10250937e110d844fe64cc1e81473c6913be8c7f6e336eaffc7d56",
+    "size_bytes": 9741
+  },
+  {
+    "legacy_path": ".claude/knowledge/02_economics/_diagram_primitives.md",
+    "role": "legacy_auxiliary_metadata",
+    "sha256": "b222d10254b1631765766a1e72366e09af90d0b814eb642ea66c2759f87fc815",
+    "size_bytes": 12031
+  },
+  {
+    "legacy_path": ".claude/knowledge/02_economics/_source_role_map.md",
+    "role": "legacy_auxiliary_metadata",
+    "sha256": "ddfdb6b09e4a74f09ee4ae1339706d36fc91b4474b28a54ca4036eccf55afde7",
+    "size_bytes": 23656
+  },
+  {
+    "legacy_path": ".claude/knowledge/02_economics/_style_guide.md",
+    "role": "legacy_auxiliary_metadata",
+    "sha256": "4299d8aa49a0aab27d8b534e81523fe2fcdd1f27044ae99660d4d9f5cd877963",
+    "size_bytes": 13974
+  },
+  {
+    "legacy_path": ".claude/knowledge/02_economics/ec-aggregate-demand-representative-consumer.md",
+    "role": "legacy_card",
+    "sha256": "6f43da664a44f0670a033a5ea982b6bac2955a3b9db48158da6fe81b44a3582a",
+    "size_bytes": 13796
+  },
+  {
+    "legacy_path": ".claude/knowledge/02_economics/ec-aggregate-supply-demand-mechanics.md",
+    "role": "legacy_card",
+    "sha256": "e331dc54624a0ac6adb7448bbb97d0d859ce6172d7de366015385d7f8ed3b5bc",
+    "size_bytes": 9328
+  },
+  {
+    "legacy_path": ".claude/knowledge/02_economics/ec-business-cycles-and-output-gaps.md",
+    "role": "legacy_card",
+    "sha256": "5c9d6ecc75131fe88d29e2d99ae3afea735cbf56d7dcc6d90c86f50a1c247d69",
+    "size_bytes": 10037
+  },
+  {
+    "legacy_path": ".claude/knowledge/02_economics/ec-commodity-price-forecasting.md",
+    "role": "legacy_card",
+    "sha256": "1e0c27586d5e0078d5221ac2d7af707fc716776f69a64b0b250a95d45006cdcc",
+    "size_bytes": 10289
+  },
+  {
+    "legacy_path": ".claude/knowledge/02_economics/ec-consumer-preference-and-choice.md",
+    "role": "legacy_card",
+    "sha256": "7ae069e4a1c15a054fe6e35f77884acc79348210736405620a6b26905bb64c71",
+    "size_bytes": 10754
+  },
+  {
+    "legacy_path": ".claude/knowledge/02_economics/ec-consumer-utility-and-demand.md",
+    "role": "legacy_card",
+    "sha256": "e665ce99b504eb8b3c9050c782532ce510960a62eb5403e39607b49b16fd7764",
+    "size_bytes": 7369
+  },
+  {
+    "legacy_path": ".claude/knowledge/02_economics/ec-currency-exchange-rates-and-parity.md",
+    "role": "legacy_card",
+    "sha256": "471735a33065d00415139e02da62ca7c66baaab46650dbff0854a72ce96fe1c4",
+    "size_bytes": 10769
+  },
+  {
+    "legacy_path": ".claude/knowledge/02_economics/ec-elasticity-and-demand-curves.md",
+    "role": "legacy_card",
+    "sha256": "3036517cf0c3824c512705f782e2b6adf8c018fa1d01c03646fbf7f44c263344",
+    "size_bytes": 8349
+  },
+  {
+    "legacy_path": ".claude/knowledge/02_economics/ec-endogenous-growth-and-convergence.md",
+    "role": "legacy_card",
+    "sha256": "3e23a1eb609b7c690e747257e674ecb78018227706289aa00afe394d75173bdf",
+    "size_bytes": 9402
+  },
+  {
+    "legacy_path": ".claude/knowledge/02_economics/ec-externalities-and-public-goods.md",
+    "role": "legacy_card",
+    "sha256": "34b1f8caffeb8e247f810e80fa2e0b87dbe67cdb5dffb830a26fb3e1965cbc71",
+    "size_bytes": 11170
+  },
+  {
+    "legacy_path": ".claude/knowledge/02_economics/ec-firm-profit-maximization.md",
+    "role": "legacy_card",
+    "sha256": "13a85011e631be7bd2303da0dd444a8b5bd5262f31463b4059971a1d6ec9a674",
+    "size_bytes": 7607
+  },
+  {
+    "legacy_path": ".claude/knowledge/02_economics/ec-fiscal-policy-and-budget-deficits.md",
+    "role": "legacy_card",
+    "sha256": "771dac199b8e78fd61dd6e726316eb8cf80438caaf5ed6071d666a71aee582c2",
+    "size_bytes": 10084
+  },
+  {
+    "legacy_path": ".claude/knowledge/02_economics/ec-game-theory-and-strategic-equilibrium.md",
+    "role": "legacy_card",
+    "sha256": "f87713239925a1761a8601edb96debbb7103b57a4b894dea2e3be3862fb7e183",
+    "size_bytes": 10555
+  },
+  {
+    "legacy_path": ".claude/knowledge/02_economics/ec-international-trade-and-capital-flows.md",
+    "role": "legacy_card",
+    "sha256": "52bcbe31a54aaafb13061541ab5ad98e71db8d029000e666eb28985f8f42df33",
+    "size_bytes": 11124
+  },
+  {
+    "legacy_path": ".claude/knowledge/02_economics/ec-investment-cost-of-capital.md",
+    "role": "legacy_card",
+    "sha256": "b945ef94788a74d7472034afa18554db47fdc68aff803680b5a5a1e674a50f7b",
+    "size_bytes": 9528
+  },
+  {
+    "legacy_path": ".claude/knowledge/02_economics/ec-monetary-fiscal-policy-mechanics-l1.md",
+    "role": "legacy_card",
+    "sha256": "d1c3af409cd1b88ebb77f7ea77d4c85b694d1da80e99d93a31abf4ff89279d6a",
+    "size_bytes": 9806
+  },
+  {
+    "legacy_path": ".claude/knowledge/02_economics/ec-monetary-policy-and-inflation.md",
+    "role": "legacy_card",
+    "sha256": "0f20732e6ce9bb1dc9c06a7176b4f5a54fd4391e88fe7f9e2c0193a8002715a0",
+    "size_bytes": 10435
+  },
+  {
+    "legacy_path": ".claude/knowledge/02_economics/ec-monopoly-pricing.md",
+    "role": "legacy_card",
+    "sha256": "6c14168b885bb710dbda2c1fccf7933b7d6e0e0a0d8fe39d70dbb4dc4f414c1c",
+    "size_bytes": 9316
+  },
+  {
+    "legacy_path": ".claude/knowledge/02_economics/ec-nominal-rigidity-and-NK-monetary.md",
+    "role": "legacy_card",
+    "sha256": "f91e580db12f66a0ee8c9c4529e4082b3eb0cf48c9ae24787a6cb8d23410a407",
+    "size_bytes": 9465
+  },
+  {
+    "legacy_path": ".claude/knowledge/02_economics/ec-perfect-competition-equilibrium.md",
+    "role": "legacy_card",
+    "sha256": "aa510310a78bfa446a9f6eb552a132ca0d952c8f1791933e9378a050cc5217fa",
+    "size_bytes": 9945
+  },
+  {
+    "legacy_path": ".claude/knowledge/02_economics/ec-permanent-income-consumption.md",
+    "role": "legacy_card",
+    "sha256": "0be89de242e4494ad819636b86eef952c50b7be0ed5899991cd12ab13612a255",
+    "size_bytes": 10292
+  },
+  {
+    "legacy_path": ".claude/knowledge/02_economics/ec-production-functions-and-firm.md",
+    "role": "legacy_card",
+    "sha256": "712fd9796315e049f287511549638fb8c51986606bf6ee0351dbe7091840d03e",
+    "size_bytes": 7853
+  },
+  {
+    "legacy_path": ".claude/knowledge/02_economics/ec-ramsey-cass-koopmans-savings.md",
+    "role": "legacy_card",
+    "sha256": "e1158486a8b3424d992d40ac36d72f841bd89c876ae722df4d87fd327bbd2621",
+    "size_bytes": 9100
+  },
+  {
+    "legacy_path": ".claude/knowledge/02_economics/ec-real-business-cycle-theory.md",
+    "role": "legacy_card",
+    "sha256": "0225eb804455151755fd5f4b54a109d0baad0dd8fc951e9332e1a1926e48aece",
+    "size_bytes": 9745
+  },
+  {
+    "legacy_path": ".claude/knowledge/02_economics/ec-rental-rate-of-capital-microeconomic-foundation.md",
+    "role": "legacy_card",
+    "sha256": "b38ac4ac51d08ea132cc4fbcbb49ca06996049c59df819556fd9ce14b0a99466",
+    "size_bytes": 11088
+  },
+  {
+    "legacy_path": ".claude/knowledge/02_economics/ec-risk-aversion-utility-derivation.md",
+    "role": "legacy_card",
+    "sha256": "86b630f0b4dd4ec24114996b5684adaa6393c256b3811715c715b7742201adb5",
+    "size_bytes": 8130
+  },
+  {
+    "legacy_path": ".claude/knowledge/02_economics/ec-solow-growth-model.md",
+    "role": "legacy_card",
+    "sha256": "37640aef3b21646acdc4c71696ff6a88a6d63b29f9c906f93124d4f8883495c9",
+    "size_bytes": 10513
+  },
+  {
+    "legacy_path": ".claude/knowledge/02_economics/ec-utility-and-choice-under-uncertainty.md",
+    "role": "legacy_card",
+    "sha256": "149df6efc80fc1e143e3932fb0d0e5390279abfbc7a4bf90bc2ab3255b906c2c",
+    "size_bytes": 10199
+  },
+  {
+    "legacy_path": ".claude/knowledge/02_economics/ec-welfare-theorems.md",
+    "role": "legacy_card",
+    "sha256": "347beb2d8166e9a8d48fa0ec10be1417e41ce227377ccbe60761e2f11bfa4611",
+    "size_bytes": 10093
+  },
+  {
+    "legacy_path": ".claude/knowledge/03_financial_reporting_analysis/_chapter_overviews.md",
+    "role": "legacy_auxiliary_metadata",
+    "sha256": "569d8560b95b7a5556bf2c10df6725ea382e6a4c4aaf380b3f4a9e0701009226",
+    "size_bytes": 16128
+  },
+  {
+    "legacy_path": ".claude/knowledge/03_financial_reporting_analysis/_dependency_order.md",
+    "role": "legacy_auxiliary_metadata",
+    "sha256": "2aab66a291b2419cef4388299d198129820392c4483b7ede0be688030efd978e",
+    "size_bytes": 19742
+  },
+  {
+    "legacy_path": ".claude/knowledge/03_financial_reporting_analysis/_diagram_primitives.md",
+    "role": "legacy_auxiliary_metadata",
+    "sha256": "1c443047b0257b5a15585c7cabdc97363599f7ed83306ce6b5f7895a9f266665",
+    "size_bytes": 15663
+  },
+  {
+    "legacy_path": ".claude/knowledge/03_financial_reporting_analysis/_future_03_resolution.md",
+    "role": "legacy_auxiliary_metadata",
+    "sha256": "fd53940eedcb37c97ea5b77c7441b2a0447f6e5ec994338c42ab10a3b8f59cb2",
+    "size_bytes": 13346
+  },
+  {
+    "legacy_path": ".claude/knowledge/03_financial_reporting_analysis/_source_role_map.md",
+    "role": "legacy_auxiliary_metadata",
+    "sha256": "7e10089051de3bf32c5186e94b887a5f6f0c5e7d64a8046270514d002b71ec8b",
+    "size_bytes": 25427
+  },
+  {
+    "legacy_path": ".claude/knowledge/03_financial_reporting_analysis/_style_guide.md",
+    "role": "legacy_auxiliary_metadata",
+    "sha256": "b7ffb4d563b7cfafd48df2ffbef03b22a5a6f11235a5f10d31546a98aa514818",
+    "size_bytes": 33663
+  },
+  {
+    "legacy_path": ".claude/knowledge/03_financial_reporting_analysis/fra-accrual-anomaly-and-factor-scoring.md",
+    "role": "legacy_card",
+    "sha256": "cbe3f23c48a2fc0bd4947f67bf6fcaf8f1978c3e7178abef7383fb90b3432f2c",
+    "size_bytes": 11292
+  },
+  {
+    "legacy_path": ".claude/knowledge/03_financial_reporting_analysis/fra-articulation-of-financial-statements.md",
+    "role": "legacy_card",
+    "sha256": "67383918ed2db7e55914803884ad3c49a48be8fbceb414d0bc7333c374cc969e",
+    "size_bytes": 9872
+  },
+  {
+    "legacy_path": ".claude/knowledge/03_financial_reporting_analysis/fra-balance-sheet-foundations.md",
+    "role": "legacy_card",
+    "sha256": "676da0b330323c1758c4287bf602fafbc10ca94ffa1cefe047651556aee91596",
+    "size_bytes": 10013
+  },
+  {
+    "legacy_path": ".claude/knowledge/03_financial_reporting_analysis/fra-cash-flow-statement-mechanics.md",
+    "role": "legacy_card",
+    "sha256": "28ddf516f880d72525a68013017905da109ef3e8709ccf624063796b05783780",
+    "size_bytes": 11197
+  },
+  {
+    "legacy_path": ".claude/knowledge/03_financial_reporting_analysis/fra-cash-vs-accrual-accounting.md",
+    "role": "legacy_card",
+    "sha256": "40ca53d35e5a4403d58f956c4cd4ca8ee97490c3dc25e934b10061c84c4e15b9",
+    "size_bytes": 10381
+  },
+  {
+    "legacy_path": ".claude/knowledge/03_financial_reporting_analysis/fra-compound-instrument-disclosure-requirements.md",
+    "role": "legacy_card",
+    "sha256": "72de6e142e839cd43b65ae9753ca2e788f42d32937aa641b80bf2ba4cf0a534e",
+    "size_bytes": 16789
+  },
+  {
+    "legacy_path": ".claude/knowledge/03_financial_reporting_analysis/fra-conversion-extinguishment-accounting.md",
+    "role": "legacy_card",
+    "sha256": "39801a5c0f78f8c90a709623dfd1cfc162b7c96a4d15232dee422993c15029f7",
+    "size_bytes": 13200
+  },
+  {
+    "legacy_path": ".claude/knowledge/03_financial_reporting_analysis/fra-credit-risk-from-accounting.md",
+    "role": "legacy_card",
+    "sha256": "23b7f5d45d53b55f8b423416612ac81ee17868c4d05eb3e222972651de85a94b",
+    "size_bytes": 12717
+  },
+  {
+    "legacy_path": ".claude/knowledge/03_financial_reporting_analysis/fra-depreciation-and-amortization.md",
+    "role": "legacy_card",
+    "sha256": "991a79391fa4371c09e637bfd5bd64286674c96fa6abc203e64c715cb8874a2f",
+    "size_bytes": 11531
+  },
+  {
+    "legacy_path": ".claude/knowledge/03_financial_reporting_analysis/fra-double-entry-mechanics.md",
+    "role": "legacy_card",
+    "sha256": "3bb21a1e884b6def8f0fe53b105b98972d8dbe186a1aa548bea0c40868115e80",
+    "size_bytes": 9622
+  },
+  {
+    "legacy_path": ".claude/knowledge/03_financial_reporting_analysis/fra-earnings-based-valuation.md",
+    "role": "legacy_card",
+    "sha256": "3fe5eb75ec25012cd0c17ab4c66f4e4ddd6fa27c1ea66fb6349f7ba6da700b3f",
+    "size_bytes": 11298
+  },
+  {
+    "legacy_path": ".claude/knowledge/03_financial_reporting_analysis/fra-earnings-quality-and-sustainability.md",
+    "role": "legacy_card",
+    "sha256": "4f61d813d3853d224fad19078225925e4be3872c84b72015bacf0640bb6f2a05",
+    "size_bytes": 10488
+  },
+  {
+    "legacy_path": ".claude/knowledge/03_financial_reporting_analysis/fra-effective-interest-amortization-bond-side.md",
+    "role": "legacy_card",
+    "sha256": "f9a5d86e465d82c033dcb314b255a85d3ed41d8fdb097ccf087b19c0717b443b",
+    "size_bytes": 13325
+  },
+  {
+    "legacy_path": ".claude/knowledge/03_financial_reporting_analysis/fra-equity-risk-from-accounting.md",
+    "role": "legacy_card",
+    "sha256": "7a61b553506b8ca0a759ee5f1b441ab5cab7cc122f0d89af16e54220e3af0e98",
+    "size_bytes": 12914
+  },
+  {
+    "legacy_path": ".claude/knowledge/03_financial_reporting_analysis/fra-financial-analysis-techniques.md",
+    "role": "legacy_card",
+    "sha256": "6250396cb641d300a4eb78ad64928cb285d3ffae76a1e155bc37d01acd0154ac",
+    "size_bytes": 11109
+  },
+  {
+    "legacy_path": ".claude/knowledge/03_financial_reporting_analysis/fra-financial-statement-applications.md",
+    "role": "legacy_card",
+    "sha256": "f788e8529191e06ea96b462f0f6b878286f58a73e0fbef9cbd38964b3b2e3236",
+    "size_bytes": 12680
+  },
+  {
+    "legacy_path": ".claude/knowledge/03_financial_reporting_analysis/fra-financial-statement-objectives.md",
+    "role": "legacy_card",
+    "sha256": "a165e0da697d26295c747b08ab1d70bce6a0ab35497fcf5a4236cc02ef9b0d4a",
+    "size_bytes": 10811
+  },
+  {
+    "legacy_path": ".claude/knowledge/03_financial_reporting_analysis/fra-ifrs-vs-us-gaap-framework.md",
+    "role": "legacy_card",
+    "sha256": "af931b3ac016a3693d49e3d654952338185919d068f0b0eb75e8f7ead24c0acc",
+    "size_bytes": 13013
+  },
+  {
+    "legacy_path": ".claude/knowledge/03_financial_reporting_analysis/fra-ifrs9-vs-ias32-compound-evolution.md",
+    "role": "legacy_card",
+    "sha256": "806408b47a51be3d2adfaf76e759f70bc12b489be8cf687bf919f9bb5db1e485",
+    "size_bytes": 18008
+  },
+  {
+    "legacy_path": ".claude/knowledge/03_financial_reporting_analysis/fra-income-statement-foundations.md",
+    "role": "legacy_card",
+    "sha256": "18b69e8c59b9f7eabdf1d68ff62c6be6436073c019aaf457091553342084128d",
+    "size_bytes": 11820
+  },
+  {
+    "legacy_path": ".claude/knowledge/03_financial_reporting_analysis/fra-income-tax-accounting.md",
+    "role": "legacy_card",
+    "sha256": "1bf305c52782871c307d9955e3c0bbca131cf1bb9b26d85e7532db69584b2751",
+    "size_bytes": 11474
+  },
+  {
+    "legacy_path": ".claude/knowledge/03_financial_reporting_analysis/fra-inventory-cost-methods.md",
+    "role": "legacy_card",
+    "sha256": "d5670db45af03dffee3824a83c2181661d2706ea6402dd91f669b69a58f1542d",
+    "size_bytes": 10094
+  },
+  {
+    "legacy_path": ".claude/knowledge/03_financial_reporting_analysis/fra-issuer-side-compound-instrument-split.md",
+    "role": "legacy_card",
+    "sha256": "6bb879020e4e8d3c4e0ab8dccb6dfcb50eb6548012d0022e532c08326d40b121",
+    "size_bytes": 12343
+  },
+  {
+    "legacy_path": ".claude/knowledge/03_financial_reporting_analysis/fra-long-lived-asset-capitalization.md",
+    "role": "legacy_card",
+    "sha256": "d24bb86ba1c83b6c6bd7a62d7b80cb9a32ed49338eb279f3d4ae76dc2eba4de8",
+    "size_bytes": 11138
+  },
+  {
+    "legacy_path": ".claude/knowledge/03_financial_reporting_analysis/fra-non-current-liabilities.md",
+    "role": "legacy_card",
+    "sha256": "a11deca0711a3f58f07d62883d6f47ca8954b35c7b0e2cfb7f7dd72492dbe7a1",
+    "size_bytes": 14492
+  },
+  {
+    "legacy_path": ".claude/knowledge/03_financial_reporting_analysis/fra-quality-of-financial-statements.md",
+    "role": "legacy_card",
+    "sha256": "5d1aef42031684f3e60e31aa2471f5eacf5c3dab5f01c26dd65383b70e6410c6",
+    "size_bytes": 11611
+  },
+  {
+    "legacy_path": ".claude/knowledge/03_financial_reporting_analysis/fra-ratio-decomposition-dupont.md",
+    "role": "legacy_card",
+    "sha256": "c3f31a19ff6a519a09d971e46463157a985769c55f7d837bb293c599f82d72b4",
+    "size_bytes": 9737
+  },
+  {
+    "legacy_path": ".claude/knowledge/03_financial_reporting_analysis/fra-reporting-quality-framework.md",
+    "role": "legacy_card",
+    "sha256": "9236b414faef46d3d4e69e77d89aa074b132968b31d87f67d266520011551e78",
+    "size_bytes": 12089
+  },
+  {
+    "legacy_path": ".claude/knowledge/03_financial_reporting_analysis/fra-residual-earnings-valuation.md",
+    "role": "legacy_card",
+    "sha256": "765da0908bf47a85d997eac8c32a96b7271cbc89e43b029dd9b5bae45a4bb007",
+    "size_bytes": 11736
+  },
+  {
+    "legacy_path": ".claude/knowledge/05_equity/_chapter_overviews.md",
+    "role": "legacy_auxiliary_metadata",
+    "sha256": "e24988f32971765c4ef880975c66020d23c93d2e1c7835e52a9349f1c813e3db",
+    "size_bytes": 8721
+  },
+  {
+    "legacy_path": ".claude/knowledge/05_equity/_dependency_order.md",
+    "role": "legacy_auxiliary_metadata",
+    "sha256": "e284c9c92484201f3b18eb158855724f296c41cac56db09ffca970d33449a302",
+    "size_bytes": 13117
+  },
+  {
+    "legacy_path": ".claude/knowledge/05_equity/_diagram_primitives.md",
+    "role": "legacy_auxiliary_metadata",
+    "sha256": "d0b49a12f35cb370a1f057bfd82e82c185ef43f49e99015fee18c1dc34f49db0",
+    "size_bytes": 9432
+  },
+  {
+    "legacy_path": ".claude/knowledge/05_equity/_source_role_map.md",
+    "role": "legacy_auxiliary_metadata",
+    "sha256": "dabe5e88710c9fcf14a8e73749790638c76110ee8edee758f7f343844422286d",
+    "size_bytes": 28880
+  },
+  {
+    "legacy_path": ".claude/knowledge/05_equity/_style_guide.md",
+    "role": "legacy_auxiliary_metadata",
+    "sha256": "e2cdfdb2ebc1a7d36ad73c30fcb0d004be5b9a7d00c64c8185ddffd817824626",
+    "size_bytes": 15802
+  },
+  {
+    "legacy_path": ".claude/knowledge/05_equity/eq-comparable-company-analysis.md",
+    "role": "legacy_card",
+    "sha256": "cad50f28847f51a96b99ad4e920480ae5daf3c6b7df72e60013ba5bdbbe61656",
+    "size_bytes": 9751
+  },
+  {
+    "legacy_path": ".claude/knowledge/05_equity/eq-cross-sectional-multiples-distribution.md",
+    "role": "legacy_card",
+    "sha256": "a094ee6119dcdf0fbfb8e1a7963429035e129088d5568bd806b62ad1af877ea4",
+    "size_bytes": 10942
+  },
+  {
+    "legacy_path": ".claude/knowledge/05_equity/eq-cyclicality-and-cycle-adjustment.md",
+    "role": "legacy_card",
+    "sha256": "c8448217ebd910e36bccffba8d98d71b68139644915e37aaab22181756eb1448",
+    "size_bytes": 10763
+  },
+  {
+    "legacy_path": ".claude/knowledge/05_equity/eq-dcf-mechanics.md",
+    "role": "legacy_card",
+    "sha256": "723255b2bc70e787f4b988ddc9e37a80d52d6080d2a8356fd00aa90cfa8967e2",
+    "size_bytes": 8820
+  },
+  {
+    "legacy_path": ".claude/knowledge/05_equity/eq-discount-rate-and-required-return-foundations.md",
+    "role": "legacy_card",
+    "sha256": "1bda9a1c891ddda08c2e3d53c6ce9277d29954ed33fdb460b194e0a97b6aa36f",
+    "size_bytes": 7859
+  },
+  {
+    "legacy_path": ".claude/knowledge/05_equity/eq-dividend-discount-models.md",
+    "role": "legacy_card",
+    "sha256": "3c2ca87fd1553c969976f7672c60b5d32b891cc3928d561919aa74ded2d4e3bf",
+    "size_bytes": 7530
+  },
+  {
+    "legacy_path": ".claude/knowledge/05_equity/eq-equity-cost-of-capital-estimation.md",
+    "role": "legacy_card",
+    "sha256": "745e9c61b9b9032cd78b6ca9a550174997465003453982c020ede73aaaa62503",
+    "size_bytes": 11922
+  },
+  {
+    "legacy_path": ".claude/knowledge/05_equity/eq-equity-risk-premium-intuition.md",
+    "role": "legacy_card",
+    "sha256": "3871957aa72766ffc82e8aba4e2c98c3f49f0c071bca4c7fa8bbe9fe67a720ab",
+    "size_bytes": 7703
+  },
+  {
+    "legacy_path": ".claude/knowledge/05_equity/eq-fama-french-construction-at-security-level.md",
+    "role": "legacy_card",
+    "sha256": "4e47c38989981eee7b58039edcea7fe18eedc9e89b4ca90e941ecd823ef71875",
+    "size_bytes": 12616
+  },
+  {
+    "legacy_path": ".claude/knowledge/05_equity/eq-fcfe-fcff-decomposition.md",
+    "role": "legacy_card",
+    "sha256": "f324238a1fd0a25c54ea965632ae1e46cfffc764d7012cf5d9b6774da85ea72e",
+    "size_bytes": 9810
+  },
+  {
+    "legacy_path": ".claude/knowledge/05_equity/eq-implied-cost-of-capital-foundations.md",
+    "role": "legacy_card",
+    "sha256": "9b9ed44775e5e75973b3e90ca7d147bfddbbc9b12a520926444da27a0edbacb4",
+    "size_bytes": 10884
+  },
+  {
+    "legacy_path": ".claude/knowledge/05_equity/eq-implied-cost-of-capital-from-market-prices.md",
+    "role": "legacy_card",
+    "sha256": "614eb3fbbec1ae63fa8efefe6a4a5f71e4dc4b26aaeae9de89660aefdd7a1be2",
+    "size_bytes": 12355
+  },
+  {
+    "legacy_path": ".claude/knowledge/05_equity/eq-industry-and-sector-factor-models.md",
+    "role": "legacy_card",
+    "sha256": "14b2b422b9edd652dc3c05a755cb1deeea86ce4ebb1a93c1fb939d4d017f1b02",
+    "size_bytes": 11555
+  },
+  {
+    "legacy_path": ".claude/knowledge/05_equity/eq-intrinsic-value.md",
+    "role": "legacy_card",
+    "sha256": "2b1e78b8ca93eeca0c66c86c24c5f3f61cfd981593b857702faa8a384abd81e4",
+    "size_bytes": 7241
+  },
+  {
+    "legacy_path": ".claude/knowledge/05_equity/eq-multiples-dispersion.md",
+    "role": "legacy_card",
+    "sha256": "ba394d2be5060dd766f3b68e8bb1572b94f6b23c398752ee6fd58043772a18a7",
+    "size_bytes": 10519
+  },
+  {
+    "legacy_path": ".claude/knowledge/05_equity/eq-payout-policy-and-growth.md",
+    "role": "legacy_card",
+    "sha256": "3485959e7cb27dfb3ee357807162d6c02e6de79c5cf78c0b641053f5818da225",
+    "size_bytes": 8166
+  },
+  {
+    "legacy_path": ".claude/knowledge/05_equity/eq-pb-and-multiples-taxonomy.md",
+    "role": "legacy_card",
+    "sha256": "4d5cc015c9cdacb1ce71f48f0e5461a2861903707602fd43c8715f3e1d598bf3",
+    "size_bytes": 8335
+  },
+  {
+    "legacy_path": ".claude/knowledge/05_equity/eq-pe-and-relative-valuation.md",
+    "role": "legacy_card",
+    "sha256": "508ad5c749b78da1114a37b2c87bed40a0af7eb7fef8e2413340119fda1fbac4",
+    "size_bytes": 8061
+  },
+  {
+    "legacy_path": ".claude/knowledge/05_equity/eq-private-vs-public-equity-valuation-l1.md",
+    "role": "legacy_card",
+    "sha256": "7a2bb2f4b298e454fe006bb05f44ccf3e827f65eb13b15cdb48a74c66a3980d3",
+    "size_bytes": 10648
+  },
+  {
+    "legacy_path": ".claude/knowledge/05_equity/eq-quality-and-low-vol-factor-scoring.md",
+    "role": "legacy_card",
+    "sha256": "8216d1962a14b6c25ef5bf551522908563cf717cc011c170b40ea67f31ddd7fc",
+    "size_bytes": 13942
+  },
+  {
+    "legacy_path": ".claude/knowledge/05_equity/eq-share-count-and-per-share-effects.md",
+    "role": "legacy_card",
+    "sha256": "e400b00594bf77402ee67624dcc201e8cb3e5981b910502eb9d0baa6aac1edfc",
+    "size_bytes": 10536
+  },
+  {
+    "legacy_path": ".claude/knowledge/05_equity/eq-sum-of-parts-valuation.md",
+    "role": "legacy_card",
+    "sha256": "1f5ac1895ffadc4bebc8c67e39d29a3ef796daf6fde617075ab24e6e307ef79e",
+    "size_bytes": 11593
+  },
+  {
+    "legacy_path": ".claude/knowledge/05_equity/eq-terminal-value-and-sensitivity.md",
+    "role": "legacy_card",
+    "sha256": "bcbf4cfa13b7f00d38a5644098de819bf15b587e467ba30a97c3e5b753b63a88",
+    "size_bytes": 9395
+  },
+  {
+    "legacy_path": ".claude/knowledge/05_equity/eq-value-and-momentum-factor-scoring.md",
+    "role": "legacy_card",
+    "sha256": "fa92d9deed4a18e99172e872a990a0653cf365a2fdc495998ffc99e7a8b4c3d5",
+    "size_bytes": 12359
+  },
+  {
+    "legacy_path": ".claude/knowledge/06_fixed_income_and_credit/_chapter_overviews.md",
+    "role": "legacy_auxiliary_metadata",
+    "sha256": "102004255b7d0cebb5c3d299cfa34269077471403ad396d0c520443f63611d27",
+    "size_bytes": 12990
+  },
+  {
+    "legacy_path": ".claude/knowledge/06_fixed_income_and_credit/_dependency_order.md",
+    "role": "legacy_auxiliary_metadata",
+    "sha256": "7aee19cc3c66d99b06b413ebe5921bce60a74e45f455a36ada659ef5eff992a4",
+    "size_bytes": 11596
+  },
+  {
+    "legacy_path": ".claude/knowledge/06_fixed_income_and_credit/_diagram_primitives.md",
+    "role": "legacy_auxiliary_metadata",
+    "sha256": "5f9778297fecf9728e509d224f5742ee4316cfda6b550baa0c3f7e7b47f0f289",
+    "size_bytes": 5724
+  },
+  {
+    "legacy_path": ".claude/knowledge/06_fixed_income_and_credit/_source_role_map.md",
+    "role": "legacy_auxiliary_metadata",
+    "sha256": "907d168324d87a570aebf3d8d97a1d17fc875e950250cb19c4d936ceee2bc181",
+    "size_bytes": 20161
+  },
+  {
+    "legacy_path": ".claude/knowledge/06_fixed_income_and_credit/_style_guide.md",
+    "role": "legacy_auxiliary_metadata",
+    "sha256": "eb3ca6e0246f941e182188a7ad82092a380e046767cd7ffa8f73bb5b269dd083",
+    "size_bytes": 6926
+  },
+  {
+    "legacy_path": ".claude/knowledge/06_fixed_income_and_credit/fi-arbitrage-free-valuation-l2.md",
+    "role": "legacy_card",
+    "sha256": "173a34883dc2cae444b12ff0641ef914e00634d7a98b318f0e9b846e5983ca0b",
+    "size_bytes": 12071
+  },
+  {
+    "legacy_path": ".claude/knowledge/06_fixed_income_and_credit/fi-binomial-tree-callable-pricing-l2.md",
+    "role": "legacy_card",
+    "sha256": "05418e4f0a3abb565a29f6cd9111bec85978432bb8b0ab4792575c6c55478410",
+    "size_bytes": 11259
+  },
+  {
+    "legacy_path": ".claude/knowledge/06_fixed_income_and_credit/fi-bond-anatomy-and-cashflows.md",
+    "role": "legacy_card",
+    "sha256": "bdda2cf71d1f567b314e6d9479034f4fd2a834aebba329397ca995543d5dde05",
+    "size_bytes": 4817
+  },
+  {
+    "legacy_path": ".claude/knowledge/06_fixed_income_and_credit/fi-butterfly-and-curve-trades.md",
+    "role": "legacy_card",
+    "sha256": "e88ca83daff538ae23d901a6e2d6d389271f289a10560ae103921d11ddb4a2a4",
+    "size_bytes": 10312
+  },
+  {
+    "legacy_path": ".claude/knowledge/06_fixed_income_and_credit/fi-callable-and-putable-bonds.md",
+    "role": "legacy_card",
+    "sha256": "183d75bb5086fa4d2fefb31eacc9c9cac639d213179b7c8119e6a878fda94d88",
+    "size_bytes": 5724
+  },
+  {
+    "legacy_path": ".claude/knowledge/06_fixed_income_and_credit/fi-cash-bond-liquidity.md",
+    "role": "legacy_card",
+    "sha256": "a3bc234e9813bb0d053dd40bb3668882b637f87dcd515beb969d29e3e2f4fe19",
+    "size_bytes": 5493
+  },
+  {
+    "legacy_path": ".claude/knowledge/06_fixed_income_and_credit/fi-cds-basics.md",
+    "role": "legacy_card",
+    "sha256": "94a57cfd6c864d87a0efb3adae7958d63ee3ff769f56ccd86055f52657a1e83f",
+    "size_bytes": 5647
+  },
+  {
+    "legacy_path": ".claude/knowledge/06_fixed_income_and_credit/fi-chinese-cb-recovery.md",
+    "role": "legacy_card",
+    "sha256": "d7e5458f6168366fec9cef5a63952d18ee7a579721f059d4774b4535c4f6a2d1",
+    "size_bytes": 12571
+  },
+  {
+    "legacy_path": ".claude/knowledge/06_fixed_income_and_credit/fi-cmo-tranching-mechanics.md",
+    "role": "legacy_card",
+    "sha256": "5921fc173fc52ad9f5b9a89acf56e9b2dbc4ee11d8613917649631c67dc17103",
+    "size_bytes": 12320
+  },
+  {
+    "legacy_path": ".claude/knowledge/06_fixed_income_and_credit/fi-collateralization-and-csa.md",
+    "role": "legacy_card",
+    "sha256": "d233d2876a17812b9151158528eb9885e3462944b51fce1d72d81ce7d8664944",
+    "size_bytes": 6262
+  },
+  {
+    "legacy_path": ".claude/knowledge/06_fixed_income_and_credit/fi-counterparty-risk-cva.md",
+    "role": "legacy_card",
+    "sha256": "75b4a4a3107cfc3d4330ec25748414354d66e7770533c5e482765705db347c3a",
+    "size_bytes": 5944
+  },
+  {
+    "legacy_path": ".claude/knowledge/06_fixed_income_and_credit/fi-credit-risk-fundamentals.md",
+    "role": "legacy_card",
+    "sha256": "2ec04940f31130e052bdcf4a8f94d514525671caffbffcd1ddebd59012108c99",
+    "size_bytes": 6437
+  },
+  {
+    "legacy_path": ".claude/knowledge/06_fixed_income_and_credit/fi-credit-spread-machinery.md",
+    "role": "legacy_card",
+    "sha256": "741cf6c56ad098ded2a902dab3779faad672efce0e34a4cfb35feb33787e0af3",
+    "size_bytes": 5298
+  },
+  {
+    "legacy_path": ".claude/knowledge/06_fixed_income_and_credit/fi-default-models-and-recovery.md",
+    "role": "legacy_card",
+    "sha256": "a5f8e1a20f216c6fdaf2b2aaa8caeaa1125db6a025d7d9331b9283e4b5388d4e",
+    "size_bytes": 5753
+  },
+  {
+    "legacy_path": ".claude/knowledge/06_fixed_income_and_credit/fi-duration-and-convexity.md",
+    "role": "legacy_card",
+    "sha256": "a4a81cbd81e5456ec76209ad7eb2606db832fc54d1a0ce0377049bc6299ca5de",
+    "size_bytes": 5396
+  },
+  {
+    "legacy_path": ".claude/knowledge/06_fixed_income_and_credit/fi-floaters-and-reset-mechanics.md",
+    "role": "legacy_card",
+    "sha256": "468cc07b40220f22054ae82196fa584df21f1248da00478a1398db45f19a1446",
+    "size_bytes": 4723
+  },
+  {
+    "legacy_path": ".claude/knowledge/06_fixed_income_and_credit/fi-hjm-forward-rate-framework.md",
+    "role": "legacy_card",
+    "sha256": "2df1473352df7ea45452d2f1212f26f07b45428f1ec0b07cff05633bb14dae09",
+    "size_bytes": 5031
+  },
+  {
+    "legacy_path": ".claude/knowledge/06_fixed_income_and_credit/fi-key-rate-and-partial-duration.md",
+    "role": "legacy_card",
+    "sha256": "96bd333d620a1d096dc6ed3e58cb27210b7976d891fd6e9344bac7e85535789f",
+    "size_bytes": 4933
+  },
+  {
+    "legacy_path": ".claude/knowledge/06_fixed_income_and_credit/fi-mbs-burnout-and-seasoning.md",
+    "role": "legacy_card",
+    "sha256": "160256d9324d369bbe05dfd4ee698bc2e3330f28d39478027e0b6fca588106e3",
+    "size_bytes": 10592
+  },
+  {
+    "legacy_path": ".claude/knowledge/06_fixed_income_and_credit/fi-mbs-key-rate-and-effective-duration.md",
+    "role": "legacy_card",
+    "sha256": "e6eb137b8fff3da78d61f1a1dcb599600968176fa2978f966851cb23f9c8e9e4",
+    "size_bytes": 10806
+  },
+  {
+    "legacy_path": ".claude/knowledge/06_fixed_income_and_credit/fi-mbs-oas-calculation-depth.md",
+    "role": "legacy_card",
+    "sha256": "bc0514ee2d7eb9c44a984680260838bf926904778764a37be630c00143c2bb61",
+    "size_bytes": 11243
+  },
+  {
+    "legacy_path": ".claude/knowledge/06_fixed_income_and_credit/fi-mbs-prepayment-models.md",
+    "role": "legacy_card",
+    "sha256": "c53a2ad0c13c3b09dfdfe985d402f91f858001521203bdad6a019de148361a4f",
+    "size_bytes": 11623
+  },
+  {
+    "legacy_path": ".claude/knowledge/06_fixed_income_and_credit/fi-oas-and-effective-duration.md",
+    "role": "legacy_card",
+    "sha256": "fb2ace34ae7b6ed937d02968d827d994fc677bf0e00f8e59097ea6f4630092b2",
+    "size_bytes": 5620
+  },
+  {
+    "legacy_path": ".claude/knowledge/06_fixed_income_and_credit/fi-on-the-run-off-the-run-mechanics.md",
+    "role": "legacy_card",
+    "sha256": "6b391c70150a1355ccc98a0362c3649cfda81ceeab58fa565208d65e0ff878a5",
+    "size_bytes": 8923
+  },
+  {
+    "legacy_path": ".claude/knowledge/06_fixed_income_and_credit/fi-prepayment-risk-intuition.md",
+    "role": "legacy_card",
+    "sha256": "479cdf900ac0072216b66acd95ca897afbb8042f714de2d11e0fb25a0b32d315",
+    "size_bytes": 5178
+  },
+  {
+    "legacy_path": ".claude/knowledge/06_fixed_income_and_credit/fi-relative-value-screens.md",
+    "role": "legacy_card",
+    "sha256": "3a0aa8594364bed4154d2286d5473b0f908708cf2a3c789d7d086ead23c9c8d9",
+    "size_bytes": 5599
+  },
+  {
+    "legacy_path": ".claude/knowledge/06_fixed_income_and_credit/fi-repo-and-specials-mechanics.md",
+    "role": "legacy_card",
+    "sha256": "c3b26389d6c2fcb657a9fccc6888663984a51841daf714166531d271a9c9988d",
+    "size_bytes": 10303
+  },
+  {
+    "legacy_path": ".claude/knowledge/06_fixed_income_and_credit/fi-securitization-fundamentals.md",
+    "role": "legacy_card",
+    "sha256": "429dcf0e3bddaeacd7f6505d94dfc4548cc829daf821b4a75803ac05d4502478",
+    "size_bytes": 5500
+  },
+  {
+    "legacy_path": ".claude/knowledge/06_fixed_income_and_credit/fi-short-rate-models.md",
+    "role": "legacy_card",
+    "sha256": "c59d939f9586b0dd66b0d773d3c2c413ff6e58a101cc373b40c22f0cedc0a1a5",
+    "size_bytes": 6360
+  },
+  {
+    "legacy_path": ".claude/knowledge/06_fixed_income_and_credit/fi-spot-par-forward-curves.md",
+    "role": "legacy_card",
+    "sha256": "e047cc9653a163797b69161c4ce03ddf5c5e1fdd5dfe1a3d48965c0b03d66f64",
+    "size_bytes": 5256
+  },
+  {
+    "legacy_path": ".claude/knowledge/06_fixed_income_and_credit/fi-swap-spreads-and-libor-curve.md",
+    "role": "legacy_card",
+    "sha256": "e2febb792e3134601c533737a8269aa86403bddf883968e0936d339ed0cebf25",
+    "size_bytes": 10761
+  },
+  {
+    "legacy_path": ".claude/knowledge/06_fixed_income_and_credit/fi-term-structure-factor-models.md",
+    "role": "legacy_card",
+    "sha256": "490a040fd3c11ec86687ef873881b25604a2e32e04b3e6a6c1d1653b31ff7f0c",
+    "size_bytes": 10866
+  },
+  {
+    "legacy_path": ".claude/knowledge/06_fixed_income_and_credit/fi-term-structure-theories.md",
+    "role": "legacy_card",
+    "sha256": "a83f48a481ad6cbf71e5d9fcf7b589707594b0ae4e310bc4c27c8127d301e0dc",
+    "size_bytes": 5937
+  },
+  {
+    "legacy_path": ".claude/knowledge/06_fixed_income_and_credit/fi-treasury-futures-basis.md",
+    "role": "legacy_card",
+    "sha256": "b6f97af16aa0937ed68900b1a43d7ec45279b45042813006a24dd0744b860413",
+    "size_bytes": 10693
+  },
+  {
+    "legacy_path": ".claude/knowledge/06_fixed_income_and_credit/fi-yield-and-price-mechanics.md",
+    "role": "legacy_card",
+    "sha256": "5a323cb828d5930064c16de922e1fcbcd52ca0da8590d9f1f94599cbfd91a1bc",
+    "size_bytes": 5059
+  },
+  {
+    "legacy_path": ".claude/knowledge/06_fixed_income_and_credit/fi-yield-curve-construction.md",
+    "role": "legacy_card",
+    "sha256": "15242ecb72948e608d1237218feddc91d4d879765e42c828be5a98ea4b7791ba",
+    "size_bytes": 5366
+  },
+  {
+    "legacy_path": ".claude/knowledge/07_derivatives_and_volatility/_chapter_overviews.md",
+    "role": "legacy_auxiliary_metadata",
+    "sha256": "5c1f12873a8aab6427a610e0a3223462de6afbdfcd27b0644ac8b37a1fbebff5",
+    "size_bytes": 7475
+  },
+  {
+    "legacy_path": ".claude/knowledge/07_derivatives_and_volatility/_dependency_order.md",
+    "role": "legacy_auxiliary_metadata",
+    "sha256": "bef2d342834e42769045d352f1085a1dbfe2a3787f1e088564c8f9abc1862390",
+    "size_bytes": 6115
+  },
+  {
+    "legacy_path": ".claude/knowledge/07_derivatives_and_volatility/_diagram_primitives.md",
+    "role": "legacy_auxiliary_metadata",
+    "sha256": "206857870d599655ce0aefc694c08321503da1300a9a120b2d342845f8cbd2c4",
+    "size_bytes": 6336
+  },
+  {
+    "legacy_path": ".claude/knowledge/07_derivatives_and_volatility/_source_role_map.md",
+    "role": "legacy_auxiliary_metadata",
+    "sha256": "754ffc29ec36ea8076d80fff047f0c69aa415f59327f7a44c774611edb4cc062",
+    "size_bytes": 8620
+  },
+  {
+    "legacy_path": ".claude/knowledge/07_derivatives_and_volatility/_style_guide.md",
+    "role": "legacy_auxiliary_metadata",
+    "sha256": "019fb759cac0c0362d73dde52d62af239f1338b33f5970351dcb3cfbe5c4f10e",
+    "size_bytes": 5631
+  },
+  {
+    "legacy_path": ".claude/knowledge/07_derivatives_and_volatility/deriv-anatomy-and-instrument-types.md",
+    "role": "legacy_card",
+    "sha256": "84c3ce4f7a29181bf352753eb920c7a7b05d8b095059afe786843647d6d32e78",
+    "size_bytes": 5845
+  },
+  {
+    "legacy_path": ".claude/knowledge/07_derivatives_and_volatility/deriv-binomial-tree-valuation.md",
+    "role": "legacy_card",
+    "sha256": "ddb0c92b4f208b9234550963d7cbc6a0d6f66afe58b8838ab83c8e2297853adb",
+    "size_bytes": 5982
+  },
+  {
+    "legacy_path": ".claude/knowledge/07_derivatives_and_volatility/deriv-bsm-formula.md",
+    "role": "legacy_card",
+    "sha256": "97c0ef4323e7e82e92b96768553519d127ddb8c72db7676228bd919956c7f558",
+    "size_bytes": 5835
+  },
+  {
+    "legacy_path": ".claude/knowledge/07_derivatives_and_volatility/deriv-delta-and-hedging.md",
+    "role": "legacy_card",
+    "sha256": "fa5062c2f837203b695f3d8b1bf891b766917dc56ef7821d506653773e31e797",
+    "size_bytes": 6142
+  },
+  {
+    "legacy_path": ".claude/knowledge/07_derivatives_and_volatility/deriv-discretization-and-bias.md",
+    "role": "legacy_card",
+    "sha256": "8f0b543d2a1a9d5017bf4b61c5c62ca9482bb1bf9f483c5e67d62dc5663d7e71",
+    "size_bytes": 7421
+  },
+  {
+    "legacy_path": ".claude/knowledge/07_derivatives_and_volatility/deriv-forward-and-futures-payoff.md",
+    "role": "legacy_card",
+    "sha256": "91df5c9a2decc3b4cfaf31a89bc6086db661afcf8e8bf8c822970f94eb375e2f",
+    "size_bytes": 5488
+  },
+  {
+    "legacy_path": ".claude/knowledge/07_derivatives_and_volatility/deriv-greeks-overview.md",
+    "role": "legacy_card",
+    "sha256": "ec77a524917cc65ad470b41d35528e99826b1c49ea0ca25062ff409eddb7ea28",
+    "size_bytes": 6322
+  },
+  {
+    "legacy_path": ".claude/knowledge/07_derivatives_and_volatility/deriv-implied-volatility.md",
+    "role": "legacy_card",
+    "sha256": "fb6ec810fc106a743c6b6835d9fad0d3ce68a8ea212429771ac7609b4c7e388a",
+    "size_bytes": 5712
+  },
+  {
+    "legacy_path": ".claude/knowledge/07_derivatives_and_volatility/deriv-local-volatility.md",
+    "role": "legacy_card",
+    "sha256": "7b4b895b73e81c99c23e2541999e581587497b9777de509609fbbf8ad0835b1f",
+    "size_bytes": 6198
+  },
+  {
+    "legacy_path": ".claude/knowledge/07_derivatives_and_volatility/deriv-mc-greek-estimation.md",
+    "role": "legacy_card",
+    "sha256": "275509a8ffed3f81b846741f23a9fd9b147311ca119b4b8c1487d5dd39478d7d",
+    "size_bytes": 6899
+  },
+  {
+    "legacy_path": ".claude/knowledge/07_derivatives_and_volatility/deriv-monte-carlo-pricing.md",
+    "role": "legacy_card",
+    "sha256": "f1b30a84ef4a3de9dc7bf46619ea0bb46e05293508d31ccadf3d4b20b45b1928",
+    "size_bytes": 6472
+  },
+  {
+    "legacy_path": ".claude/knowledge/07_derivatives_and_volatility/deriv-no-arbitrage-bounds.md",
+    "role": "legacy_card",
+    "sha256": "f4009f669ae403ab7fd878cce39279b52b6a909e5c20303b37871962a1f863c3",
+    "size_bytes": 5680
+  },
+  {
+    "legacy_path": ".claude/knowledge/07_derivatives_and_volatility/deriv-option-payoff-anatomy.md",
+    "role": "legacy_card",
+    "sha256": "369b1489fff61a1a9ecf3746c79003598e13d9beb1df2790e3261ff076288eda",
+    "size_bytes": 5686
+  },
+  {
+    "legacy_path": ".claude/knowledge/07_derivatives_and_volatility/deriv-put-call-parity.md",
+    "role": "legacy_card",
+    "sha256": "da662d1ea2e9ff89b53121ae04040e5a0804f659be79fb0a090f7432cb1a0e81",
+    "size_bytes": 5878
+  },
+  {
+    "legacy_path": ".claude/knowledge/07_derivatives_and_volatility/deriv-risk-neutral-measure.md",
+    "role": "legacy_card",
+    "sha256": "6720f2cea5a55e72f15f574e93bca4205176f858bd6511db17deff7e787982cc",
+    "size_bytes": 6364
+  },
+  {
+    "legacy_path": ".claude/knowledge/07_derivatives_and_volatility/deriv-stochastic-vol-models.md",
+    "role": "legacy_card",
+    "sha256": "34083b1a6ffe8ee208573a595c20ff9d96dc0263269e2d303d33e6ebd29bf4e8",
+    "size_bytes": 5997
+  },
+  {
+    "legacy_path": ".claude/knowledge/07_derivatives_and_volatility/deriv-swap-cashflow-mechanics.md",
+    "role": "legacy_card",
+    "sha256": "a8df72cbe3cf24cd62d4d1fbe00c29e2f3a7b5b3189b19f2e24c101344e50802",
+    "size_bytes": 6169
+  },
+  {
+    "legacy_path": ".claude/knowledge/07_derivatives_and_volatility/deriv-variance-reduction.md",
+    "role": "legacy_card",
+    "sha256": "0c45412b03f0fd4c8f67bcd3c97fb516095a8a864cbc51c0c6dd35bdab797939",
+    "size_bytes": 7513
+  },
+  {
+    "legacy_path": ".claude/knowledge/07_derivatives_and_volatility/deriv-vega-and-theta.md",
+    "role": "legacy_card",
+    "sha256": "aa87a96a48bf3471813e73c2b04ce720577d90d8fa8ae9bbe8d09f13cd66693c",
+    "size_bytes": 6391
+  },
+  {
+    "legacy_path": ".claude/knowledge/07_derivatives_and_volatility/deriv-vol-surface-anatomy.md",
+    "role": "legacy_card",
+    "sha256": "d1a1ef0fc544b104e4bd46651d0b85855cfdc2133c71e4e6d966bfca956afae4",
+    "size_bytes": 6400
+  },
+  {
+    "legacy_path": ".claude/knowledge/08_convertible_bonds/README.md",
+    "role": "legacy_auxiliary_metadata",
+    "sha256": "f1e71a9674ead56c11a414dfdbec4457d7b5db1a3c8ed2880a5967d48477a199",
+    "size_bytes": 4034
+  },
+  {
+    "legacy_path": ".claude/knowledge/08_convertible_bonds/_chapter_overviews.md",
+    "role": "legacy_auxiliary_metadata",
+    "sha256": "cb6980bf047ebcd690f5dc8a93fd0b77e19474b0105ec0729e24cc86072b7dbb",
+    "size_bytes": 43884
+  },
+  {
+    "legacy_path": ".claude/knowledge/08_convertible_bonds/_dependency_order.md",
+    "role": "legacy_auxiliary_metadata",
+    "sha256": "523528ba5c133e047bc30716172949bc226c4d60aa09685ea82cbf562324e51a",
+    "size_bytes": 13112
+  },
+  {
+    "legacy_path": ".claude/knowledge/08_convertible_bonds/_diagram_primitives.md",
+    "role": "legacy_auxiliary_metadata",
+    "sha256": "1f4e89f54dd5a95bb96b64da670e1f960091fa99e1971a36f4b754ed56e99d08",
+    "size_bytes": 4247
+  },
+  {
+    "legacy_path": ".claude/knowledge/08_convertible_bonds/_source_role_map.md",
+    "role": "legacy_auxiliary_metadata",
+    "sha256": "81ad1d6203d2628da32f204644353deac635be7f80c491cb9050dfe892237f67",
+    "size_bytes": 47243
+  },
+  {
+    "legacy_path": ".claude/knowledge/08_convertible_bonds/_style_guide.md",
+    "role": "legacy_auxiliary_metadata",
+    "sha256": "99aaec8f6068d0abaced912de4e64f3f29b9d2cdd939285a17bc799ddcb7c95f",
+    "size_bytes": 4285
+  },
+  {
+    "legacy_path": ".claude/knowledge/08_convertible_bonds/cb-arbitrage-strategy.md",
+    "role": "legacy_card",
+    "sha256": "8c4b2030a75039e56d894cc17b992fddced94985daf6058d511f23d0dec4c791",
+    "size_bytes": 8442
+  },
+  {
+    "legacy_path": ".claude/knowledge/08_convertible_bonds/cb-binomial-tree-valuation.md",
+    "role": "legacy_card",
+    "sha256": "699da4640586cc3e396491c4fadafae8dac57efacdfc5ce33122b517749f7acc",
+    "size_bytes": 9120
+  },
+  {
+    "legacy_path": ".claude/knowledge/08_convertible_bonds/cb-bond-anatomy-and-cashflows.md",
+    "role": "legacy_card",
+    "sha256": "9dd1dc3aa03c06e46ad662850861a7ffcd1fe5ece3193dd5a3f45746118f9321",
+    "size_bytes": 6299
+  },
+  {
+    "legacy_path": ".claude/knowledge/08_convertible_bonds/cb-bond-floor-investment-value.md",
+    "role": "legacy_card",
+    "sha256": "1d5609e93645fe794b1fda3f188bdcdbbae7e21e7773019174dd898d4ab00a28",
+    "size_bytes": 6446
+  },
+  {
+    "legacy_path": ".claude/knowledge/08_convertible_bonds/cb-brooks-price-action-guardrails.md",
+    "role": "legacy_card",
+    "sha256": "e8dcd7c3f003870a4cd71373f9c26369d2791bdcd92cc2ec5f714477d89127c4",
+    "size_bytes": 13363
+  },
+  {
+    "legacy_path": ".claude/knowledge/08_convertible_bonds/cb-brooks-pullback-depth-position-sizing.md",
+    "role": "legacy_card",
+    "sha256": "4b7c2f8b0652a7c0658afd4689d4917916c2c274c0219ca7a4053e438a593b49",
+    "size_bytes": 11832
+  },
+  {
+    "legacy_path": ".claude/knowledge/08_convertible_bonds/cb-brooks-range-mean-reversion-double-low.md",
+    "role": "legacy_card",
+    "sha256": "a599a3f166d711f8cfe446c9f7d1b3f27598ea85364ae730b0fa27aa47409441",
+    "size_bytes": 11625
+  },
+  {
+    "legacy_path": ".claude/knowledge/08_convertible_bonds/cb-brooks-support-resistance-clause-lines.md",
+    "role": "legacy_card",
+    "sha256": "4f530c70fe05532f20ab5f8c80b697ab6ff25cd20090cd1af09031758137a253",
+    "size_bytes": 12418
+  },
+  {
+    "legacy_path": ".claude/knowledge/08_convertible_bonds/cb-brooks-trailing-exit-duplex-cashout.md",
+    "role": "legacy_card",
+    "sha256": "780cb041b69561e0d90a025b921e771b72e081a4754270dbd501ff4881cb72ab",
+    "size_bytes": 11580
+  },
+  {
+    "legacy_path": ".claude/knowledge/08_convertible_bonds/cb-brooks-trend-range-regime-map.md",
+    "role": "legacy_card",
+    "sha256": "10e2806a915f39dbca01b150019a3bb940e0ee588d91501669feb01587642dec",
+    "size_bytes": 11544
+  },
+  {
+    "legacy_path": ".claude/knowledge/08_convertible_bonds/cb-call-and-put-protection.md",
+    "role": "legacy_card",
+    "sha256": "540bf11fc0960964bc64c25c64c9c7a316653d0da7061ffdb32fb3301075df10",
+    "size_bytes": 7497
+  },
+  {
+    "legacy_path": ".claude/knowledge/08_convertible_bonds/cb-china-asset-management-regulation-and-fund-suitability.md",
+    "role": "legacy_card",
+    "sha256": "8b7f3f977b018055532903bcf0b4fc95b9544b2ba4cac2f3c179766a2387dac8",
+    "size_bytes": 11124
+  },
+  {
+    "legacy_path": ".claude/knowledge/08_convertible_bonds/cb-china-basket-diversification-strategy.md",
+    "role": "legacy_card",
+    "sha256": "e3d39c5a2d41f17a867082a386b639cbafa3e82be85aa0ec6347c74d2bd1b3d2",
+    "size_bytes": 8312
+  },
+  {
+    "legacy_path": ".claude/knowledge/08_convertible_bonds/cb-china-call-redemption-rules.md",
+    "role": "legacy_card",
+    "sha256": "25aa96a89f1c0deab2e474a77089c83d8cb1fae427a7b2a260755b672d61f604",
+    "size_bytes": 8484
+  },
+  {
+    "legacy_path": ".claude/knowledge/08_convertible_bonds/cb-china-cb-vs-eb-comparison.md",
+    "role": "legacy_card",
+    "sha256": "22a6bac17f6f0d3adb49d38a95e5d0fde16f49fb3a48909f14abd8a090445941",
+    "size_bytes": 8001
+  },
+  {
+    "legacy_path": ".claude/knowledge/08_convertible_bonds/cb-china-csdc-settlement-depth-2023-2025.md",
+    "role": "legacy_card",
+    "sha256": "0a1d26da0c76094e3ed75a1cba6bda7b96290d64964fef8693925d15878aa6d2",
+    "size_bytes": 13893
+  },
+  {
+    "legacy_path": ".claude/knowledge/08_convertible_bonds/cb-china-csdc-settlement-mechanics.md",
+    "role": "legacy_card",
+    "sha256": "95b58b317f2193f417d35a489e97578e19781dad522eb2b49efdd521d52b2fd1",
+    "size_bytes": 12837
+  },
+  {
+    "legacy_path": ".claude/knowledge/08_convertible_bonds/cb-china-csrc-disclosure-timing.md",
+    "role": "legacy_card",
+    "sha256": "def9212fae20714a21e6d01bb6b9a7fbbc609fa461b2e3105683e708eb54606c",
+    "size_bytes": 12458
+  },
+  {
+    "legacy_path": ".claude/knowledge/08_convertible_bonds/cb-china-default-cohort-attribution.md",
+    "role": "legacy_card",
+    "sha256": "6eb83bca06368768e575889de13a77333063099f1654e5d0ad1f52267f55eae6",
+    "size_bytes": 12497
+  },
+  {
+    "legacy_path": ".claude/knowledge/08_convertible_bonds/cb-china-distressed-workouts.md",
+    "role": "legacy_card",
+    "sha256": "0cc97b8c11f2bf7d85d56435e35b76fbbd214d6e7e71cd2f9746bfe494502d76",
+    "size_bytes": 11154
+  },
+  {
+    "legacy_path": ".claude/knowledge/08_convertible_bonds/cb-china-double-low-strategy.md",
+    "role": "legacy_card",
+    "sha256": "2705af233d6344436e8cd3883cc8e473c6d37fb703e7f6e5e8606c64d7e92445",
+    "size_bytes": 6807
+  },
+  {
+    "legacy_path": ".claude/knowledge/08_convertible_bonds/cb-china-downward-conversion.md",
+    "role": "legacy_card",
+    "sha256": "dfddc98f26335d8a3a4a5399fb882b0ae91285e14d127288f653ceef76693d73",
+    "size_bytes": 8528
+  },
+  {
+    "legacy_path": ".claude/knowledge/08_convertible_bonds/cb-china-downward-reset-signaling.md",
+    "role": "legacy_card",
+    "sha256": "1b7f8d6dec5be4136dfe5a573aa16a75775d65ff3972c49f72421ffedfea61ec",
+    "size_bytes": 10423
+  },
+  {
+    "legacy_path": ".claude/knowledge/08_convertible_bonds/cb-china-downward-revision-game-strategy.md",
+    "role": "legacy_card",
+    "sha256": "db593df6e3ff91bdb03f651a7107fa777eece44d7059f6c47e8f257b0072cfec",
+    "size_bytes": 8266
+  },
+  {
+    "legacy_path": ".claude/knowledge/08_convertible_bonds/cb-china-exchange-price-limit-suitability-rules.md",
+    "role": "legacy_card",
+    "sha256": "f632bde0e3083b535fb319ad71427cc5eb97e02ec50e02b2dde34539726c6079",
+    "size_bytes": 11186
+  },
+  {
+    "legacy_path": ".claude/knowledge/08_convertible_bonds/cb-china-forced-redemption-tactics-2020s.md",
+    "role": "legacy_card",
+    "sha256": "2dc2ed78a16d70065e873b00aa31fd001acaed3f64c4c694821d365bc2e2d5f2",
+    "size_bytes": 7725
+  },
+  {
+    "legacy_path": ".claude/knowledge/08_convertible_bonds/cb-china-hkex-offshore-cb-comparison.md",
+    "role": "legacy_card",
+    "sha256": "3381618915ee1d1e90109f0c74d530f6e675cf9debcd192f6e5289266a645e85",
+    "size_bytes": 14741
+  },
+  {
+    "legacy_path": ".claude/knowledge/08_convertible_bonds/cb-china-no-call-commitments.md",
+    "role": "legacy_card",
+    "sha256": "e6217dcc85524f9a83cf6f83127565106a3c7d631b22233ac6998c034c0cb7ac",
+    "size_bytes": 8346
+  },
+  {
+    "legacy_path": ".claude/knowledge/08_convertible_bonds/cb-china-strong-call-game-theory.md",
+    "role": "legacy_card",
+    "sha256": "3b05b248fd2393cdf38d44d7fc33a50a43c7a02c5dd709d25f18e96e6ba34357",
+    "size_bytes": 14710
+  },
+  {
+    "legacy_path": ".claude/knowledge/08_convertible_bonds/cb-china-szse-2025-cb-self-regulation-update.md",
+    "role": "legacy_card",
+    "sha256": "04f00210412aa76d5d0d03aeb3372a8fef65ac30eef53cae72777230b193b12c",
+    "size_bytes": 13265
+  },
+  {
+    "legacy_path": ".claude/knowledge/08_convertible_bonds/cb-china-t-plus-zero-arbitrage.md",
+    "role": "legacy_card",
+    "sha256": "a32c5a040ecf011f2429cd3e856694056550b41f25caee85393f6ba1f4a074b4",
+    "size_bytes": 15117
+  },
+  {
+    "legacy_path": ".claude/knowledge/08_convertible_bonds/cb-china-three-line-duplex-strategy.md",
+    "role": "legacy_card",
+    "sha256": "c893eb10e8b02027a6fe421d7dea249192fb4e353d813d9b4f210e30597c701b",
+    "size_bytes": 8055
+  },
+  {
+    "legacy_path": ".claude/knowledge/08_convertible_bonds/cb-china-trading-mechanics.md",
+    "role": "legacy_card",
+    "sha256": "8fe6ff14ad8f927a3e560f35a2003240c71d9c7a06f35a92946d31edb0d1d8d1",
+    "size_bytes": 9870
+  },
+  {
+    "legacy_path": ".claude/knowledge/08_convertible_bonds/cb-china-vs-asian-equity-linked-comparative.md",
+    "role": "legacy_card",
+    "sha256": "786ea92a40bf82a03ea943f1ad2269b8baf3b5b9fd24b9eb4234856fb2b6e316",
+    "size_bytes": 14815
+  },
+  {
+    "legacy_path": ".claude/knowledge/08_convertible_bonds/cb-conversion-feature-mechanics.md",
+    "role": "legacy_card",
+    "sha256": "3b66b888ad410a81b3bda1334c75e8ed52c439eb11f7a8cbb693da36d9a63ed3",
+    "size_bytes": 7573
+  },
+  {
+    "legacy_path": ".claude/knowledge/08_convertible_bonds/cb-conversion-premium.md",
+    "role": "legacy_card",
+    "sha256": "cf8ec118c66ba9712b530aeadb7f8579a18f0d2e6643b24fd58d32c16e80f164",
+    "size_bytes": 6326
+  },
+  {
+    "legacy_path": ".claude/knowledge/08_convertible_bonds/cb-credit-spread-machinery.md",
+    "role": "legacy_card",
+    "sha256": "98f546c6eabee2dae74789edd7e0bec83fb1963d78bb4cfc96910bc7d3c58cb0",
+    "size_bytes": 8650
+  },
+  {
+    "legacy_path": ".claude/knowledge/08_convertible_bonds/cb-credit-vs-equity-decomposition.md",
+    "role": "legacy_card",
+    "sha256": "6fc7739b39979789fc2ff455dc92c25ed2922219a9073eb9d408dc3719dc02b3",
+    "size_bytes": 5908
+  },
+  {
+    "legacy_path": ".claude/knowledge/08_convertible_bonds/cb-default-and-recovery.md",
+    "role": "legacy_card",
+    "sha256": "cc93a0a7c74db09196ce7a5b577a55520b4df40d7964ad3f5be0d57fa576e672",
+    "size_bytes": 9307
+  },
+  {
+    "legacy_path": ".claude/knowledge/08_convertible_bonds/cb-greeks-delta-gamma-vega.md",
+    "role": "legacy_card",
+    "sha256": "3e440dfbb803b446e438cda21dbf90c095b967e61f3da66419aa7bc1a47ecfe5",
+    "size_bytes": 7813
+  },
+  {
+    "legacy_path": ".claude/knowledge/08_convertible_bonds/cb-investor-clientele.md",
+    "role": "legacy_card",
+    "sha256": "748be299b92ac9346e3cbf9e83b9c5cb0e65174ec36f2600f495b937bbcbe3e8",
+    "size_bytes": 10456
+  },
+  {
+    "legacy_path": ".claude/knowledge/08_convertible_bonds/cb-issuer-motives.md",
+    "role": "legacy_card",
+    "sha256": "5028674ef855477c97ada86753a524f2bec306bcc92ffb72a661d07743160932",
+    "size_bytes": 8124
+  },
+  {
+    "legacy_path": ".claude/knowledge/08_convertible_bonds/cb-mandatory-and-exotic-structures.md",
+    "role": "legacy_card",
+    "sha256": "87dbf8407b6d2bdf9c4136a3fa5487393e0458953846a13d456454b30ae056c1",
+    "size_bytes": 11024
+  },
+  {
+    "legacy_path": ".claude/knowledge/08_convertible_bonds/cb-mandatory-vs-optional-conversion.md",
+    "role": "legacy_card",
+    "sha256": "42bcfd9e5049845593b95c5dd76b37627bcfee0bb3f297548fc449bf600c7a9c",
+    "size_bytes": 6809
+  },
+  {
+    "legacy_path": ".claude/knowledge/08_convertible_bonds/cb-monte-carlo-pricing.md",
+    "role": "legacy_card",
+    "sha256": "015a8a3427990c4efbe292bfe0c0e897d868c909db09fab3291fcad502b95035",
+    "size_bytes": 9059
+  },
+  {
+    "legacy_path": ".claude/knowledge/08_convertible_bonds/cb-parity-and-conversion-value.md",
+    "role": "legacy_card",
+    "sha256": "3d3df18d7e901e883e24a5201c308f24bb28ab68113cb93bcb177eacb101fd47",
+    "size_bytes": 6252
+  },
+  {
+    "legacy_path": ".claude/knowledge/08_convertible_bonds/cb-payoff-decomposition-bond-plus-call.md",
+    "role": "legacy_card",
+    "sha256": "71ee25d62e3b2b243147f09afb8345519c0086aee8e3cb9b97f848cfb97e27a2",
+    "size_bytes": 9202
+  },
+  {
+    "legacy_path": ".claude/knowledge/08_convertible_bonds/cb-pde-and-free-boundary.md",
+    "role": "legacy_card",
+    "sha256": "508fe60c8a8019f1c3f7fd0fc52ce1142b64832438afe6c09e9b228f4557bea8",
+    "size_bytes": 9071
+  },
+  {
+    "legacy_path": ".claude/knowledge/08_convertible_bonds/cb-relative-value-screens.md",
+    "role": "legacy_card",
+    "sha256": "970d36bdf51613cb19865a8b914c029c959712686fb04e3b0330abecc5511710",
+    "size_bytes": 9631
+  },
+  {
+    "legacy_path": ".claude/knowledge/08_convertible_bonds/cb-volatility-surface.md",
+    "role": "legacy_card",
+    "sha256": "2f48858b4b35c9728ac4929f125d54a0daf5f45c10a0f7996ec171ef84190922",
+    "size_bytes": 9414
+  },
+  {
+    "legacy_path": ".claude/knowledge/09_portfolio_management_and_asset_pricing/_chapter_overviews.md",
+    "role": "legacy_auxiliary_metadata",
+    "sha256": "f7a7b45f167cea5b3ef88c115fc0430898ecdd908b1bd0dc1916da77d12197a5",
+    "size_bytes": 8445
+  },
+  {
+    "legacy_path": ".claude/knowledge/09_portfolio_management_and_asset_pricing/_dependency_order.md",
+    "role": "legacy_auxiliary_metadata",
+    "sha256": "d0bbe30b61914d17209c8122f6c1f808dae2fc37ccb1f365c98350c9ff7bb5f8",
+    "size_bytes": 11339
+  },
+  {
+    "legacy_path": ".claude/knowledge/09_portfolio_management_and_asset_pricing/_diagram_primitives.md",
+    "role": "legacy_auxiliary_metadata",
+    "sha256": "e97244f2eef6e7ea7108d83c768bcd1b744cb951d3aa4af1226d254c676ce052",
+    "size_bytes": 8809
+  },
+  {
+    "legacy_path": ".claude/knowledge/09_portfolio_management_and_asset_pricing/_source_role_map.md",
+    "role": "legacy_auxiliary_metadata",
+    "sha256": "4580e5c0a6a0aa42b14439c0e9ab67fd93f9c20915a0fd043960c8779fcf2e87",
+    "size_bytes": 17397
+  },
+  {
+    "legacy_path": ".claude/knowledge/09_portfolio_management_and_asset_pricing/_style_guide.md",
+    "role": "legacy_auxiliary_metadata",
+    "sha256": "e3c8e7edb2028b2cfbe977c02bf5ad7c587c8c9e4faf8b10340bde238268cf2f",
+    "size_bytes": 10655
+  },
+  {
+    "legacy_path": ".claude/knowledge/09_portfolio_management_and_asset_pricing/pm-active-management-and-alpha.md",
+    "role": "legacy_card",
+    "sha256": "037501ccd6d0a3c7d2b317c944b176789d1cfa6ebbbb0b03030865f4275f1d4e",
+    "size_bytes": 10558
+  },
+  {
+    "legacy_path": ".claude/knowledge/09_portfolio_management_and_asset_pricing/pm-active-vs-passive-decision.md",
+    "role": "legacy_card",
+    "sha256": "02ff78f0a8d2bb5755e62b07e564e09be994379614f0d6b13c5691c7629071d1",
+    "size_bytes": 8633
+  },
+  {
+    "legacy_path": ".claude/knowledge/09_portfolio_management_and_asset_pricing/pm-allocation-process.md",
+    "role": "legacy_card",
+    "sha256": "d203d4f26391a98135e7350f218095ad7800d8cc8b71c2f44a7b3205cf7e4187",
+    "size_bytes": 7869
+  },
+  {
+    "legacy_path": ".claude/knowledge/09_portfolio_management_and_asset_pricing/pm-anomalies-and-cross-sectional-pricing.md",
+    "role": "legacy_card",
+    "sha256": "9ef3f18d119c541101a817dad613b9d41e6cf4cfbf7cd5bec4ad6ccfe2cc891b",
+    "size_bytes": 11742
+  },
+  {
+    "legacy_path": ".claude/knowledge/09_portfolio_management_and_asset_pricing/pm-beta-and-factor-exposure.md",
+    "role": "legacy_card",
+    "sha256": "0af203cd7700678f71ee28e9d2c08a5affc56077a4f92d144437a5aa78cfcc89",
+    "size_bytes": 7298
+  },
+  {
+    "legacy_path": ".claude/knowledge/09_portfolio_management_and_asset_pricing/pm-capital-market-line.md",
+    "role": "legacy_card",
+    "sha256": "ea6bc997c026716b51e81768e65e555be637bbc2d14ba10ee3b4e6b133fc13ee",
+    "size_bytes": 5768
+  },
+  {
+    "legacy_path": ".claude/knowledge/09_portfolio_management_and_asset_pricing/pm-capm-and-sml.md",
+    "role": "legacy_card",
+    "sha256": "9e1f7c6cecfe4ba4c81c1982425cca95f44d305a13b0ca25e7e6712f7b83f676",
+    "size_bytes": 7026
+  },
+  {
+    "legacy_path": ".claude/knowledge/09_portfolio_management_and_asset_pricing/pm-diversification-and-correlation.md",
+    "role": "legacy_card",
+    "sha256": "4cd27f7b86f9e72f0eb1127a5f47750dc291a98712b851c2297449f1b25bf6f3",
+    "size_bytes": 6382
+  },
+  {
+    "legacy_path": ".claude/knowledge/09_portfolio_management_and_asset_pricing/pm-efficient-frontier.md",
+    "role": "legacy_card",
+    "sha256": "754dcba20d343aa2e643d75ff156d7962c3f748096ccb0db20ef4f7eddc2ddf2",
+    "size_bytes": 5968
+  },
+  {
+    "legacy_path": ".claude/knowledge/09_portfolio_management_and_asset_pricing/pm-efficient-markets-and-anomalies.md",
+    "role": "legacy_card",
+    "sha256": "4a8b0027ab6e5eb4d492a175641263c2f0890d439d20bd53072011bd05448918",
+    "size_bytes": 10054
+  },
+  {
+    "legacy_path": ".claude/knowledge/09_portfolio_management_and_asset_pricing/pm-factor-models-intuition.md",
+    "role": "legacy_card",
+    "sha256": "b7d6a30884b39fd105782525bbd8b71e188682666e2ba9c69f532f835b8fb2f3",
+    "size_bytes": 8501
+  },
+  {
+    "legacy_path": ".claude/knowledge/09_portfolio_management_and_asset_pricing/pm-investment-policy-statement.md",
+    "role": "legacy_card",
+    "sha256": "c68ce7eebc5b3aa23dff94bb20160bd8a7f0baa3095563a4f1ff3ff80d29b08f",
+    "size_bytes": 7446
+  },
+  {
+    "legacy_path": ".claude/knowledge/09_portfolio_management_and_asset_pricing/pm-investor-types.md",
+    "role": "legacy_card",
+    "sha256": "0e0c29136d405c20c3c40a02f8d64dbc288826c087a5eb7edca74419c7fd418e",
+    "size_bytes": 11089
+  },
+  {
+    "legacy_path": ".claude/knowledge/09_portfolio_management_and_asset_pricing/pm-market-efficiency-core.md",
+    "role": "legacy_card",
+    "sha256": "4de3cc3b5ab7231426226a843264b1abf98b0b9037c3d7b834000eed73dbb598",
+    "size_bytes": 8598
+  },
+  {
+    "legacy_path": ".claude/knowledge/09_portfolio_management_and_asset_pricing/pm-multifactor-asset-pricing-intuition.md",
+    "role": "legacy_card",
+    "sha256": "edaebace7e3ff8cf007253f8497db70e4b2d67dd0160f3591f57c81fc44ae46f",
+    "size_bytes": 9129
+  },
+  {
+    "legacy_path": ".claude/knowledge/09_portfolio_management_and_asset_pricing/pm-performance-ratios-definitions.md",
+    "role": "legacy_card",
+    "sha256": "329ec200166610ba74d16b5ea049458064a805e9cab4aa7be08509d3fc6a2b15",
+    "size_bytes": 8081
+  },
+  {
+    "legacy_path": ".claude/knowledge/09_portfolio_management_and_asset_pricing/pm-portfolio-constraints.md",
+    "role": "legacy_card",
+    "sha256": "79c0f5b264ac89e10877affb2a36f1bc4604e1fdeca36ca9dca5681cd41bc847",
+    "size_bytes": 10023
+  },
+  {
+    "legacy_path": ".claude/knowledge/09_portfolio_management_and_asset_pricing/pm-portfolio-perspective.md",
+    "role": "legacy_card",
+    "sha256": "d73f36ad6d131d4116abcf579e26be5f38b942305bb14d0513d4168394295ae3",
+    "size_bytes": 5765
+  },
+  {
+    "legacy_path": ".claude/knowledge/09_portfolio_management_and_asset_pricing/pm-rebalancing-mechanics.md",
+    "role": "legacy_card",
+    "sha256": "b5e2729fe3428ae530f2ec636ca65dabb83a752c7bcdc1cce3bbd49aa301f164",
+    "size_bytes": 7597
+  },
+  {
+    "legacy_path": ".claude/knowledge/09_portfolio_management_and_asset_pricing/pm-return-and-risk-fundamentals.md",
+    "role": "legacy_card",
+    "sha256": "915f9cdcde7e5d270da4c0a233a5402d89f71cc3bd39d8d1292fd02b0ded2c90",
+    "size_bytes": 6149
+  },
+  {
+    "legacy_path": ".claude/knowledge/09_portfolio_management_and_asset_pricing/pm-risk-tolerance-and-objectives.md",
+    "role": "legacy_card",
+    "sha256": "08532790d67aea5e7b2ba330c195c48640034355754e712c6e34b7afccee0da9",
+    "size_bytes": 8999
+  },
+  {
+    "legacy_path": ".claude/knowledge/09_portfolio_management_and_asset_pricing/pm-stochastic-discount-factor-intuition.md",
+    "role": "legacy_card",
+    "sha256": "ebd159174dda53b1bd55545f6563d0695bc5a2ae44c99049f27d10a335313f89",
+    "size_bytes": 9245
+  },
+  {
+    "legacy_path": ".claude/knowledge/09_portfolio_management_and_asset_pricing/pm-systematic-vs-idiosyncratic-risk.md",
+    "role": "legacy_card",
+    "sha256": "ea35cc3b98ae1d9f88bcd91cfd368d857868fc7bd500487a62d8bd0042c4dff7",
+    "size_bytes": 8865
+  },
+  {
+    "legacy_path": ".claude/knowledge/09_portfolio_management_and_asset_pricing/pm-tracking-error-and-active-risk.md",
+    "role": "legacy_card",
+    "sha256": "8efdfe988c953913f338b0319e917e830ac6f80ca38ff4d6300bff01d608c1ae",
+    "size_bytes": 8929
+  },
+  {
+    "legacy_path": ".claude/knowledge/10_behavioral_finance/_chapter_overviews.md",
+    "role": "legacy_auxiliary_metadata",
+    "sha256": "2621e58ebd2e25cf67f63c4560fae8c342cc614d574bcbaf63f56f1c99f45106",
+    "size_bytes": 11323
+  },
+  {
+    "legacy_path": ".claude/knowledge/10_behavioral_finance/_dependency_order.md",
+    "role": "legacy_auxiliary_metadata",
+    "sha256": "fcaae38edba72304abbce03fe30091eed9eee98bd527421a2d14c08bd6b716d3",
+    "size_bytes": 7124
+  },
+  {
+    "legacy_path": ".claude/knowledge/10_behavioral_finance/_diagram_primitives.md",
+    "role": "legacy_auxiliary_metadata",
+    "sha256": "6e1aa72d09b3a66d3121b27fce6ef14cae303ac1170e829dc36827a4664865fa",
+    "size_bytes": 11357
+  },
+  {
+    "legacy_path": ".claude/knowledge/10_behavioral_finance/_source_role_map.md",
+    "role": "legacy_auxiliary_metadata",
+    "sha256": "a64cc887d71f4b5da227f8d82bfb8a068a7f385455992a74203e8b05c92af57d",
+    "size_bytes": 8291
+  },
+  {
+    "legacy_path": ".claude/knowledge/10_behavioral_finance/_style_guide.md",
+    "role": "legacy_auxiliary_metadata",
+    "sha256": "304f31c9f7663185a562fab3daf237d2d167361857985bee57e0e6baf500952e",
+    "size_bytes": 17904
+  },
+  {
+    "legacy_path": ".claude/knowledge/10_behavioral_finance/be-limits-of-arbitrage.md",
+    "role": "legacy_card",
+    "sha256": "d713206e1f654adfd77337d7e55e45519414d029280a887dc7b928526f4db7f4",
+    "size_bytes": 11846
+  },
+  {
+    "legacy_path": ".claude/knowledge/10_behavioral_finance/be-noise-trader-equilibrium.md",
+    "role": "legacy_card",
+    "sha256": "1a62e54860dc6c4389316bb30ba21f7caff714591c4148108003842319dc1639",
+    "size_bytes": 10613
+  },
+  {
+    "legacy_path": ".claude/knowledge/10_behavioral_finance/be-regret-matching-foundations.md",
+    "role": "legacy_card",
+    "sha256": "e4e73b56445e7b99e84552797789fe5d15cb06bdd9689ed34e1fb83c546aff2d",
+    "size_bytes": 12212
+  },
+  {
+    "legacy_path": ".claude/knowledge/10_behavioral_finance/be-sentiment-vs-fundamentals.md",
+    "role": "legacy_card",
+    "sha256": "5e1eab2009aa2dd9d3f5c5d2d1679ff427010c52cde2783ae19ca6a671638636",
+    "size_bytes": 11428
+  },
+  {
+    "legacy_path": ".claude/knowledge/10_behavioral_finance/be-two-model-mispricing.md",
+    "role": "legacy_card",
+    "sha256": "b985dca0f46daa0f1c0c31830678ece5752d894b50625ae855cf3bc5059428e7",
+    "size_bytes": 11044
+  },
+  {
+    "legacy_path": ".claude/knowledge/11_risk_management/_chapter_overviews.md",
+    "role": "legacy_auxiliary_metadata",
+    "sha256": "285f3861c29ddee1d25ecee8e410edc0dc925fe24ae8dc2dac13398c11241cf2",
+    "size_bytes": 15817
+  },
+  {
+    "legacy_path": ".claude/knowledge/11_risk_management/_dependency_order.md",
+    "role": "legacy_auxiliary_metadata",
+    "sha256": "8b07cd6d4b11292e4523ed1c8e7d1e2d6e191f6af7b3e993a0b294206ed69908",
+    "size_bytes": 6408
+  },
+  {
+    "legacy_path": ".claude/knowledge/11_risk_management/_diagram_primitives.md",
+    "role": "legacy_auxiliary_metadata",
+    "sha256": "6306b855f58cb868dd04c97dc5f3444dffa1ffd62fd290226f48f3366c4e2360",
+    "size_bytes": 9610
+  },
+  {
+    "legacy_path": ".claude/knowledge/11_risk_management/_source_role_map.md",
+    "role": "legacy_auxiliary_metadata",
+    "sha256": "4cacd52aa4df67864a2fbb1946a6c6c03ec34aec73b81e88a967845e17947e2f",
+    "size_bytes": 31984
+  },
+  {
+    "legacy_path": ".claude/knowledge/11_risk_management/_style_guide.md",
+    "role": "legacy_auxiliary_metadata",
+    "sha256": "20a01fab856d96e100358e8f020bec45cc6d2878415ae4b03cd8ab4f4337814c",
+    "size_bytes": 15911
+  },
+  {
+    "legacy_path": ".claude/knowledge/11_risk_management/rm-backtesting-investment-strategies.md",
+    "role": "legacy_card",
+    "sha256": "2f1fe9f1d91ce99dfd3332e8486ea2de156b9bd010072329b8dfc07914100781",
+    "size_bytes": 11114
+  },
+  {
+    "legacy_path": ".claude/knowledge/11_risk_management/rm-chinese-cb-default-cohort-attribution.md",
+    "role": "legacy_card",
+    "sha256": "84f95664757d6bc5c7eaf0e68162b1eccb1d786adb9494854382728cff884e47",
+    "size_bytes": 13854
+  },
+  {
+    "legacy_path": ".claude/knowledge/11_risk_management/rm-credit-risk-metrics-restatement.md",
+    "role": "legacy_card",
+    "sha256": "1541c86e73947cd2d3382d7f6193c2bcb53ab83fbf528b25afb4782d29dd1ae2",
+    "size_bytes": 11652
+  },
+  {
+    "legacy_path": ".claude/knowledge/11_risk_management/rm-credit-var-portfolio.md",
+    "role": "legacy_card",
+    "sha256": "f0b435741e547fec51c878cbce94615481d3c189715b84a7aad2ce6fadf285de",
+    "size_bytes": 12505
+  },
+  {
+    "legacy_path": ".claude/knowledge/11_risk_management/rm-delta-gamma-vega-pl-decomposition.md",
+    "role": "legacy_card",
+    "sha256": "64ca529c957887695264594e82049db84595e54482a90f8900237e62d7151e6a",
+    "size_bytes": 11029
+  },
+  {
+    "legacy_path": ".claude/knowledge/11_risk_management/rm-expected-shortfall-mechanics.md",
+    "role": "legacy_card",
+    "sha256": "bf54226abd644ede151c9c5be00c0463feb88ae8c1510d3f0ad4509730a0bf1b",
+    "size_bytes": 10887
+  },
+  {
+    "legacy_path": ".claude/knowledge/11_risk_management/rm-historical-simulation-var.md",
+    "role": "legacy_card",
+    "sha256": "769dba0d158b2bf3392181415b580043c3fe4b2a1368f4553981b48c83ab4ac2",
+    "size_bytes": 10214
+  },
+  {
+    "legacy_path": ".claude/knowledge/11_risk_management/rm-integrated-firm-wide-risk-aggregation.md",
+    "role": "legacy_card",
+    "sha256": "84b108757afeb66c12648644060fdd3fcd39504ad7e8d16ed939a6fae854237e",
+    "size_bytes": 11915
+  },
+  {
+    "legacy_path": ".claude/knowledge/11_risk_management/rm-loss-distribution-anatomy.md",
+    "role": "legacy_card",
+    "sha256": "0cc34dacb1bf37ee32bace15940eb7c43d34457c5a4de4d572bf098c2c5b4641",
+    "size_bytes": 9849
+  },
+  {
+    "legacy_path": ".claude/knowledge/11_risk_management/rm-monte-carlo-var.md",
+    "role": "legacy_card",
+    "sha256": "e8272b1fc1a6cda6e2adcebff77258b0801712a9691bcd940229e5fef2292924",
+    "size_bytes": 11702
+  },
+  {
+    "legacy_path": ".claude/knowledge/11_risk_management/rm-operational-risk-basics.md",
+    "role": "legacy_card",
+    "sha256": "58606adbc22b3e1536e136f5115ff47459bbdacd14686867d036f365e93433a3",
+    "size_bytes": 11480
+  },
+  {
+    "legacy_path": ".claude/knowledge/11_risk_management/rm-operational-risk-quantification.md",
+    "role": "legacy_card",
+    "sha256": "ece4cd86b8205cb55fadfc61e8e39f68964aa49e357123366e4a4dd8ac212112",
+    "size_bytes": 11375
+  },
+  {
+    "legacy_path": ".claude/knowledge/11_risk_management/rm-parametric-var.md",
+    "role": "legacy_card",
+    "sha256": "dd410c5a66b9806f08db02c5e6138a7fc5f9a35c55f34a413e9b9edcd394f60a",
+    "size_bytes": 10685
+  },
+  {
+    "legacy_path": ".claude/knowledge/11_risk_management/rm-portfolio-xva-aggregation.md",
+    "role": "legacy_card",
+    "sha256": "d5376ec1599a558f04b9305a99cea7845629a9dee9b245461d026ab24f78f332",
+    "size_bytes": 13408
+  },
+  {
+    "legacy_path": ".claude/knowledge/11_risk_management/rm-real-rate-policy-rate-notes.md",
+    "role": "legacy_card",
+    "sha256": "83747e4db03dc0a675d985b60214fe2c6e9ae4c7dfa8107244ec5d569cd9a34e",
+    "size_bytes": 11619
+  },
+  {
+    "legacy_path": ".claude/knowledge/11_risk_management/rm-risk-measure-axioms.md",
+    "role": "legacy_card",
+    "sha256": "4edeadc6ff4de0d32e66dd6b23d7d6173eaf8435c2f736eb1c89670b7ca19a91",
+    "size_bytes": 11017
+  },
+  {
+    "legacy_path": ".claude/knowledge/11_risk_management/rm-risk-objectives-and-tolerance.md",
+    "role": "legacy_card",
+    "sha256": "5179ae00bc16d25f01258f671855e66eb3111e96b1ecef78e26c44fba3879a05",
+    "size_bytes": 10398
+  },
+  {
+    "legacy_path": ".claude/knowledge/11_risk_management/rm-risk-type-taxonomy.md",
+    "role": "legacy_card",
+    "sha256": "7a70278147f581a72b14c10c14e7a5ac74e291dbe4bc093cec8c87c2e0d4742b",
+    "size_bytes": 12103
+  },
+  {
+    "legacy_path": ".claude/knowledge/11_risk_management/rm-scenario-analysis.md",
+    "role": "legacy_card",
+    "sha256": "536b85d7f049f71f502b4778a38868392b59b1e80c0e93bc34f262c6aa6a518e",
+    "size_bytes": 11435
+  },
+  {
+    "legacy_path": ".claude/knowledge/11_risk_management/rm-sensitivity-versus-simulation.md",
+    "role": "legacy_card",
+    "sha256": "57ccaaef2f7c43c4ad7be1d5bec19e41b4776d4f544aa18aebf4b0e3e96d7704",
+    "size_bytes": 9996
+  },
+  {
+    "legacy_path": ".claude/knowledge/11_risk_management/rm-stress-testing.md",
+    "role": "legacy_card",
+    "sha256": "b5a06c0446308beb7e0a4a65718cca1ef677629694a4c4344eb76ec1b1e917f3",
+    "size_bytes": 12386
+  },
+  {
+    "legacy_path": ".claude/knowledge/11_risk_management/rm-value-added-active-return.md",
+    "role": "legacy_card",
+    "sha256": "33aa1aaca4bf277f24d725a4b98ed19a4b858c650e608810d926a67138b4c116",
+    "size_bytes": 11790
+  },
+  {
+    "legacy_path": ".claude/knowledge/11_risk_management/rm-value-at-risk-notes.md",
+    "role": "legacy_card",
+    "sha256": "68a774d1f46e53b21d7c23b75470ef1c91a1e9625169a3db76ca204c1f1082d2",
+    "size_bytes": 10588
+  },
+  {
+    "legacy_path": ".claude/knowledge/11_risk_management/rm-var-and-es-taxonomy.md",
+    "role": "legacy_card",
+    "sha256": "1e4c6e4bdd55ce172b71e33b1c48b75990f0092e9bbdf778a546e90ec73377f1",
+    "size_bytes": 9763
+  },
+  {
+    "legacy_path": ".claude/knowledge/17_cross_cutting/_chapter_overviews.md",
+    "role": "legacy_auxiliary_metadata",
+    "sha256": "46590adccd784ea80b72777a268a1f13e724555b223251b04f088a1d49588a13",
+    "size_bytes": 12098
+  },
+  {
+    "legacy_path": ".claude/knowledge/17_cross_cutting/_dependency_order.md",
+    "role": "legacy_auxiliary_metadata",
+    "sha256": "c481e5741ffaf31d91e2f95bd3e8631c1725ac4765d1729ee6cc2290bf0e3147",
+    "size_bytes": 2466
+  },
+  {
+    "legacy_path": ".claude/knowledge/17_cross_cutting/_diagram_primitives.md",
+    "role": "legacy_auxiliary_metadata",
+    "sha256": "60f8d7cde8029ff0c204544a8675c428ff8b0fb333af6cad4bb9200fd549b04a",
+    "size_bytes": 13691
+  },
+  {
+    "legacy_path": ".claude/knowledge/17_cross_cutting/_source_role_map.md",
+    "role": "legacy_auxiliary_metadata",
+    "sha256": "11fec90937d2d57da6f1612091c9b55b00b531bcfe7f3e7a984f29bd1be3d00c",
+    "size_bytes": 12330
+  },
+  {
+    "legacy_path": ".claude/knowledge/17_cross_cutting/_style_guide.md",
+    "role": "legacy_auxiliary_metadata",
+    "sha256": "6ea78816d1cb1d6550a83429976cd4520cb10d0aa034b18321ce4e1dc070a0b0",
+    "size_bytes": 11564
+  },
+  {
+    "legacy_path": ".claude/knowledge/17_cross_cutting/cc-code-of-ethics.md",
+    "role": "legacy_card",
+    "sha256": "ac1a84a77ec57113aca42f435ef1cf70e1ca59115be5fa143c6cffa9518e77bb",
+    "size_bytes": 8687
+  },
+  {
+    "legacy_path": ".claude/knowledge/17_cross_cutting/cc-ethics-and-trust.md",
+    "role": "legacy_card",
+    "sha256": "b042d04780bfad0dd1aeb70d86fa4b286eb302ba7e82d30b5927a6cd5bef33a0",
+    "size_bytes": 8784
+  },
+  {
+    "legacy_path": ".claude/knowledge/17_cross_cutting/cc-gips-claim-compliance-basics.md",
+    "role": "legacy_card",
+    "sha256": "b7155e9a8bcea6ea1d8006cb887d07ea881510ea67568048076a00675761bd4b",
+    "size_bytes": 8858
+  },
+  {
+    "legacy_path": ".claude/knowledge/17_cross_cutting/cc-material-info-and-dissemination-delay.md",
+    "role": "legacy_card",
+    "sha256": "407546acd9fd2c671b6e09f8647f0e03608aabd08b87d0c946d0d18338fa51d6",
+    "size_bytes": 9884
+  },
+  {
+    "legacy_path": ".claude/knowledge/17_cross_cutting/cc-standard-i-a-b-knowledge-of-law-and-independence.md",
+    "role": "legacy_card",
+    "sha256": "257cafb4f104d606a3a18b7406943441ea02606b80797526bd680116cb41be2b",
+    "size_bytes": 8719
+  },
+  {
+    "legacy_path": ".claude/knowledge/17_cross_cutting/cc-standard-i-c-misrepresentation.md",
+    "role": "legacy_card",
+    "sha256": "cffc29145fec1c8205c80d9838fe8f54e4b46ff41c5a1080efcd266906e2f417",
+    "size_bytes": 8992
+  },
+  {
+    "legacy_path": ".claude/knowledge/17_cross_cutting/cc-standard-i-d-misconduct.md",
+    "role": "legacy_card",
+    "sha256": "30cb8589526329bd9b0e1c36b671608f125082abe36f336d01bb245801330540",
+    "size_bytes": 9816
+  },
+  {
+    "legacy_path": ".claude/knowledge/17_cross_cutting/cc-standard-ii-a-material-nonpublic.md",
+    "role": "legacy_card",
+    "sha256": "2bee10f111a8e77d2d8676ae78c772dff99fc03d2373182100acbfc7583f4abb",
+    "size_bytes": 9832
+  },
+  {
+    "legacy_path": ".claude/knowledge/17_cross_cutting/cc-standard-ii-b-market-manipulation.md",
+    "role": "legacy_card",
+    "sha256": "259be4e19140046cfe1ef6173663e620e50f1a6f9ff3ec72454b999a78b2f6ea",
+    "size_bytes": 9511
+  },
+  {
+    "legacy_path": ".claude/knowledge/17_cross_cutting/cc-standard-iii-a-b-loyalty-prudence-and-fair-dealing.md",
+    "role": "legacy_card",
+    "sha256": "29fc8c5c45173b7ba45e17dd74cc9a499a0bcf36588471c899cae344d73fe9a3",
+    "size_bytes": 9574
+  },
+  {
+    "legacy_path": ".claude/knowledge/17_cross_cutting/cc-standard-iii-c-d-e-suitability-performance-confidentiality.md",
+    "role": "legacy_card",
+    "sha256": "3221544a092a1d02d9a2a949a044e6cddd0dd83aa9f1aa88b7de9914146da872",
+    "size_bytes": 9842
+  },
+  {
+    "legacy_path": ".claude/knowledge/17_cross_cutting/cc-standard-iv-a-loyalty-to-employer.md",
+    "role": "legacy_card",
+    "sha256": "4462aa90e60694b8107317cfb1eabf0c1b1dcc2f5dd9da8f3bab30e1928863d3",
+    "size_bytes": 9891
+  },
+  {
+    "legacy_path": ".claude/knowledge/17_cross_cutting/cc-standard-iv-b-c-additional-comp-and-responsibilities.md",
+    "role": "legacy_card",
+    "sha256": "648db5cd4f0a303addd51a773e72835fc9264c33765900ebbb2ecb7d787646e0",
+    "size_bytes": 9745
+  },
+  {
+    "legacy_path": ".claude/knowledge/17_cross_cutting/cc-standard-v-investment-analysis-diligence.md",
+    "role": "legacy_card",
+    "sha256": "fa9e7ebd4c3338ed548ad0e698bba9bf206bfedcd92b4a640a236ba9853b319b",
+    "size_bytes": 10179
+  },
+  {
+    "legacy_path": ".claude/knowledge/17_cross_cutting/cc-standard-vi-conflicts-of-interest.md",
+    "role": "legacy_card",
+    "sha256": "03e6f5d8f7413c8bdbc977d25b2db3ccc06b65f3c58f4add97c4a4b77f961ff8",
+    "size_bytes": 9669
+  },
+  {
+    "legacy_path": ".claude/knowledge/17_cross_cutting/cc-standard-vii-responsibilities-as-cfa-institute-member-or-candidate.md",
+    "role": "legacy_card",
+    "sha256": "ffd835121e9d8dd579d61f4bda6cde57b7137c7f987c2ee4288f855a6de5dae5",
+    "size_bytes": 9747
+  },
+  {
+    "legacy_path": ".claude/knowledge/INDEX.md",
+    "role": "legacy_auxiliary_metadata",
+    "sha256": "cf045b80e6b90970657cd1accc93aaf7be7335d03dbffc0d2761078792ee8efc",
+    "size_bytes": 1886
+  },
+  {
+    "legacy_path": ".claude/knowledge/_style_guide_common.md",
+    "role": "legacy_auxiliary_metadata",
+    "sha256": "d9384b505c94779e1eabd51e7cfacbba4ed862fdbab934e8b68c3bec85c1c745",
+    "size_bytes": 6723
+  },
+  {
+    "legacy_path": "volumes/cb-volume-draft.md",
+    "role": "legacy_volume",
+    "sha256": "648dae7c3a324c50ab372b3d8a7a2a113ab20ae605ef35952b283131142b6b33",
+    "size_bytes": 59982
+  },
+  {
+    "legacy_path": "volumes/cfa-quick-read-cb-volume-outline.md",
+    "role": "legacy_volume",
+    "sha256": "c0d0a4037087b2fe5457a8f5e8dcb4be35daf19196ec6aa2fa3ff1a7df32ac7f",
+    "size_bytes": 12322
+  },
+  {
+    "legacy_path": "volumes/cfa-quick-read-derivatives-volume-outline.md",
+    "role": "legacy_volume",
+    "sha256": "5d97e656f942605287cd66e09c2deece6acd0213a3d24f62f0179d05d14d46d9",
+    "size_bytes": 7439
+  },
+  {
+    "legacy_path": "volumes/cfa-quick-read-economics-volume-outline.md",
+    "role": "legacy_volume",
+    "sha256": "0174eef33b3533d18e54784dd1fcb7bd0e49ec6f0dd17a8865d2bcbdbebe8b4f",
+    "size_bytes": 9226
+  },
+  {
+    "legacy_path": "volumes/cfa-quick-read-equity-volume-outline.md",
+    "role": "legacy_volume",
+    "sha256": "761f7af290dfbb5ce23e089b8b67d17e63296728c8abe887e571fd2162a58a34",
+    "size_bytes": 11865
+  },
+  {
+    "legacy_path": "volumes/cfa-quick-read-ethics-volume-outline.md",
+    "role": "legacy_volume",
+    "sha256": "8c0954496b1fc120079d08d9dd9a07a126b060718106d9baaca6762a078d98c4",
+    "size_bytes": 7820
+  },
+  {
+    "legacy_path": "volumes/cfa-quick-read-fi-volume-outline.md",
+    "role": "legacy_volume",
+    "sha256": "cf2a40f62326e64437997c5d60e5545d2e1a015eb9c8ab18fdf1d1bb75b72d6c",
+    "size_bytes": 12141
+  },
+  {
+    "legacy_path": "volumes/cfa-quick-read-fra-volume-outline.md",
+    "role": "legacy_volume",
+    "sha256": "f63824c438fc9a07f17041b6e960e544dc158e4d74798befc349d48c7229fff0",
+    "size_bytes": 15279
+  },
+  {
+    "legacy_path": "volumes/cfa-quick-read-pm-volume-outline.md",
+    "role": "legacy_volume",
+    "sha256": "65e1efb890c5ad091ee1a3e79a9f37e2ad4dcc3ee589d502d3086b70482022a7",
+    "size_bytes": 10297
+  },
+  {
+    "legacy_path": "volumes/cfa-quick-read-quantitative-methods-volume-outline.md",
+    "role": "legacy_volume",
+    "sha256": "effee556e39e000cb16c326b48124d653c6e45b38c9cc6935caed698d4661965",
+    "size_bytes": 9225
+  },
+  {
+    "legacy_path": "volumes/cfa-quick-read-risk-management-volume-outline.md",
+    "role": "legacy_volume",
+    "sha256": "6f91aebde08d05d51005c2ea8f95e8c25400141be58c0d2425222af4eae17fb8",
+    "size_bytes": 9189
+  },
+  {
+    "legacy_path": "volumes/derivatives-volume-draft.md",
+    "role": "legacy_volume",
+    "sha256": "e910094ce9c3dd330156a625ad50783dd9f6a7db6d0eb0370e453b08f5a15015",
+    "size_bytes": 29155
+  },
+  {
+    "legacy_path": "volumes/economics-volume-draft.md",
+    "role": "legacy_volume",
+    "sha256": "86357b0a4e5144b1337a2665bb74f3b314fa826506395c0a4ed7c118414276c3",
+    "size_bytes": 31871
+  },
+  {
+    "legacy_path": "volumes/equity-volume-draft.md",
+    "role": "legacy_volume",
+    "sha256": "40dda99d97c5c7431999debdc7a157539bb8ae3346382f80bb7626722dbe090e",
+    "size_bytes": 83760
+  },
+  {
+    "legacy_path": "volumes/ethics-volume-draft.md",
+    "role": "legacy_volume",
+    "sha256": "b6f9d5497595c469eb786bd27acf6baa9aba4858f9ecad3f0d0c9ccca4e69809",
+    "size_bytes": 24799
+  },
+  {
+    "legacy_path": "volumes/fi-volume-draft.md",
+    "role": "legacy_volume",
+    "sha256": "368b9ae423a1c84715a2c775cc0b31d023f27fd542c680f8709a8fc8e428cd40",
+    "size_bytes": 52095
+  },
+  {
+    "legacy_path": "volumes/fra-volume-draft.md",
+    "role": "legacy_volume",
+    "sha256": "d1c30bd7a4a4bffcb62fbdef084289848d4352667cc4d290ff3b8aef6f18407f",
+    "size_bytes": 98762
+  },
+  {
+    "legacy_path": "volumes/pm-volume-draft.md",
+    "role": "legacy_volume",
+    "sha256": "ce44c6a622c2d42ff93024facf79d18cefbe94aa55af58651031bca1f35a791d",
+    "size_bytes": 88438
+  },
+  {
+    "legacy_path": "volumes/qm-volume-draft.md",
+    "role": "legacy_volume",
+    "sha256": "768349b3deea7588f2539b0d167aeffe47af5cf8df4860d30eb6bf6c61f6644d",
+    "size_bytes": 30473
+  },
+  {
+    "legacy_path": "volumes/rm-volume-draft.md",
+    "role": "legacy_volume",
+    "sha256": "2348eefc4e2beacc4b050fa4213e2f9556334024a174ff258be97b5de699b1db",
+    "size_bytes": 93804
+  }
+]

@@ -1,0 +1,574 @@
+{
+  "schema_version": "cfa_legacy.cc_17_curated.v1",
+  "generated_by": "17_CC card audit subagent swarm (2 batches: 8 + 8)",
+  "generated_at_utc": "1970-01-01T00:00:00Z",
+  "audit_summary": {
+    "total_cards": 16,
+    "audit_ok": 16,
+    "audit_wrong_volume_corrected": 0,
+    "notes": "All 16 cards passed audit cleanly. Unlike 09_PM (where 13/18 had wrong-volume Vol.6 citations that were actually Vol.5 content), the 17_CC cards genuinely live in Vol.6 (CFA L1 2022 Ethics R55-R57 + GIPS R59), so the legacy Vol.6 citations are correct. PDF pages stay in [3524, 3767], well below the 3841 V6 cap. One card (cc-material-info-and-dissemination-delay) emits from the scrubbed _legacy_reference/ copy where 7 bare-alias CFA_note_2 citations were already removed."
+  },
+  "_": "Merged from /tmp/17_cc_curated_batch_a.json + /tmp/17_cc_curated_batch_b.json",
+  "cards": [
+    {
+      "card_id": "cc-code-of-ethics",
+      "title": "Code of Ethics and Standards of Professional Conduct",
+      "summary_curated": "Enumerates the six binding principles of the CFA Institute Code of Ethics and frames the seven Standards-of-Professional-Conduct headings (I-VII) as the testable conduct rules that operationalize the Code; both are voluntarily adopted by Members and Candidates and enforced by the Professional Conduct Program.",
+      "source_stance": "primary-cfa",
+      "audit_flag": "ok",
+      "audit_notes": "",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "cfa_2022_l1_combined",
+          "volume": 6,
+          "legacy_pages": [
+            285,
+            304
+          ],
+          "pdf_pages": [
+            3554,
+            3573
+          ],
+          "chunk_id": "cfa_2022_l1_combined:p3564:5351",
+          "chunk_hash": "98b2afcc2c96d617e88c6f1fcb9359ece8050a08a72c8f7523c82b4d7d85e8a2",
+          "quote": "Place the integrity of the investment profession and the interests of clients above their own personal interests."
+        },
+        {
+          "role": "primary",
+          "source_id": "cfa_2022_l1_combined",
+          "volume": 6,
+          "legacy_pages": [
+            285,
+            304
+          ],
+          "pdf_pages": [
+            3554,
+            3573
+          ],
+          "chunk_id": "cfa_2022_l1_combined:p3555:5334",
+          "chunk_hash": "aa6361beb6d7bfae5542ae60d89bb150b44e6c4a01d66428861e6d4690421ee3",
+          "quote": "The Code and Standards should be viewed and interpreted as an interwoven tapestry of ethical requirements."
+        }
+      ]
+    },
+    {
+      "card_id": "cc-ethics-and-trust",
+      "title": "Ethics and Trust in the Investment Profession",
+      "summary_curated": "Frames why an ethics framework matters to the investment profession: trust is the mechanism that resolves the principal-agent information asymmetry between investment professionals and clients, and individual ethics breaches have market-level externalities for capital allocation, making the Code and Standards a public good rather than a private moral preference.",
+      "source_stance": "primary-cfa",
+      "audit_flag": "ok",
+      "audit_notes": "",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "cfa_2022_l1_combined",
+          "volume": 6,
+          "legacy_pages": [
+            255,
+            284
+          ],
+          "pdf_pages": [
+            3524,
+            3553
+          ],
+          "chunk_id": "cfa_2022_l1_combined:p3527:5294",
+          "chunk_hash": "faa21a49bd0a18cbe9e442a83181ac5f6a5a39aac82ce61e97ae633f4af1f25d",
+          "quote": "Ethics can be described as a set of moral principles that provide guidance for our behavior; these may be moral principles shared by a community or societal group."
+        },
+        {
+          "role": "primary",
+          "source_id": "cfa_2022_l1_combined",
+          "volume": 6,
+          "legacy_pages": [
+            255,
+            284
+          ],
+          "pdf_pages": [
+            3524,
+            3553
+          ],
+          "chunk_id": "cfa_2022_l1_combined:p3528:5295",
+          "chunk_hash": "c189ff7e3f57c5d04ab130eabe40df5d3f98011c97c734636e461333f3c36121",
+          "quote": "For a profession to be credible, a primary goal is to establish trust among clients and among society in general."
+        },
+        {
+          "role": "supporting",
+          "source_id": "cfa_2022_l1_combined",
+          "volume": 6,
+          "legacy_pages": [
+            285,
+            354
+          ],
+          "pdf_pages": [
+            3554,
+            3623
+          ],
+          "chunk_id": "cfa_2022_l1_combined:p3611:5425",
+          "chunk_hash": "b0ce9988e05bb0c6bf2e31d5e4c11588b7b5a9c674e0d8e552d0f6b1102abdef",
+          "quote": "Standard II(A) promotes and maintains a high level of confidence in market integrity, which is one of the foundations of the investment profession."
+        }
+      ]
+    },
+    {
+      "card_id": "cc-gips-claim-compliance-basics",
+      "title": "GIPS Claim-Compliance Basics (Reading 59 only)",
+      "summary_curated": "A \"claim of GIPS compliance\" requires the firm to include all actual, discretionary, fee-paying portfolios in at least one composite; the claim applies firm-wide, partial-firm claims are prohibited, and GIPS compliance is a Recommended Procedure for Standard III.D rather than an independent Standard.",
+      "source_stance": "primary-cfa",
+      "audit_flag": "ok",
+      "audit_notes": "",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "cfa_2022_l1_combined",
+          "volume": 6,
+          "legacy_pages": [
+            491,
+            498
+          ],
+          "pdf_pages": [
+            3760,
+            3767
+          ],
+          "chunk_id": "cfa_2022_l1_combined:p3761:5667",
+          "chunk_hash": "489150d6b52c55f959af4e59affbf2872fcf2be32bd1a7eaa7739cb43b160c19",
+          "quote": "The GIPS standards are a practitioner-driven set of ethical principles that establish a standardized, industry-wide approach for investment firms to follow"
+        },
+        {
+          "role": "primary",
+          "source_id": "cfa_2022_l1_combined",
+          "volume": 6,
+          "legacy_pages": [
+            491,
+            498
+          ],
+          "pdf_pages": [
+            3760,
+            3767
+          ],
+          "chunk_id": "cfa_2022_l1_combined:p3762:5668",
+          "chunk_hash": "40f5ef943a4c97f2612a819c3dd0db3cc818d71c9cd3d10e96ea6b4d3775b2d6",
+          "quote": "Compliance is a firm-wide process that cannot be achieved on a single product or composite."
+        }
+      ]
+    },
+    {
+      "card_id": "cc-material-info-and-dissemination-delay",
+      "title": "Application Case: Material Information and Dissemination Delay (Ghosh Fact Pattern)",
+      "summary_curated": "Applies Standard II.A to the dissemination-delay window between regulator/issuer awareness of material non-public information and full public dissemination; during this window the analyst is in possession of material non-public information and is bound by the \"act on or cause others to act on\" prohibition, with disseminate-or-refrain as the controlling resolution framework.",
+      "source_stance": "primary-cfa",
+      "audit_flag": "ok",
+      "audit_notes": "Scrubbed body at _legacy_reference used as authoritative source per instructions; the prior user-volatile CFA_note_2 citations have been removed and replaced with a Critical Rule 9 disclaimer; primary and supporting share the same Vol.6 pp.343-354 range so distinct quotes were curated (II.A Standard text vs Recommended Procedures dissemination subsection).",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "cfa_2022_l1_combined",
+          "volume": 6,
+          "legacy_pages": [
+            343,
+            354
+          ],
+          "pdf_pages": [
+            3612,
+            3623
+          ],
+          "chunk_id": "cfa_2022_l1_combined:p3611:5425",
+          "chunk_hash": "b0ce9988e05bb0c6bf2e31d5e4c11588b7b5a9c674e0d8e552d0f6b1102abdef",
+          "quote": "Members and Candidates who possess material nonpublic information that could affect the value of an investment must not act or cause others to act on the information."
+        },
+        {
+          "role": "supporting",
+          "source_id": "cfa_2022_l1_combined",
+          "volume": 6,
+          "legacy_pages": [
+            343,
+            354
+          ],
+          "pdf_pages": [
+            3612,
+            3623
+          ],
+          "chunk_id": "cfa_2022_l1_combined:p3616:5433",
+          "chunk_hash": "4ee3cdb2de287e6f09ba272e3aaa4860766fb66c175fa080ddfc81b86a029ead",
+          "quote": "If a member or candidate determines that information is material, the member or candidate should make reasonable efforts to achieve public dissemination of the information."
+        }
+      ]
+    },
+    {
+      "card_id": "cc-standard-i-a-b-knowledge-of-law-and-independence",
+      "title": "Standard I(A) Knowledge of the Law and I(B) Independence and Objectivity",
+      "summary_curated": "Standard I.A requires Members/Candidates to understand and comply with all applicable laws and regulations governing their professional activities, including the more-strict-of-law-or-Standard rule for cross-border conduct; I.B requires reasonable care and judgment to maintain independence and objectivity around gifts, soft dollars, and analyst-coverage pressure.",
+      "source_stance": "primary-cfa",
+      "audit_flag": "ok",
+      "audit_notes": "",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "cfa_2022_l1_combined",
+          "volume": 6,
+          "legacy_pages": [
+            305,
+            327
+          ],
+          "pdf_pages": [
+            3574,
+            3596
+          ],
+          "chunk_id": "cfa_2022_l1_combined:p3574:5364",
+          "chunk_hash": "09692e63fb1ee96f568a3d44223d48b08c4572ae9eba8007bf94405d705d5f9a",
+          "quote": "Members and candidates must understand the applicable laws and regulations of the countries and jurisdictions where they engage in professional activities."
+        },
+        {
+          "role": "primary",
+          "source_id": "cfa_2022_l1_combined",
+          "volume": 6,
+          "legacy_pages": [
+            305,
+            327
+          ],
+          "pdf_pages": [
+            3574,
+            3596
+          ],
+          "chunk_id": "cfa_2022_l1_combined:p3583:5378",
+          "chunk_hash": "95f474e10b4eac2b55bf94fc25666dd849c1e07104c8d7242e341b640a3dfca9",
+          "quote": "Members and Candidates must use reasonable care and judgment to achieve and maintain independence and objectivity in their professional activities."
+        }
+      ]
+    },
+    {
+      "card_id": "cc-standard-i-c-misrepresentation",
+      "title": "Standard I(C) Misrepresentation",
+      "summary_curated": "Standard I.C prohibits Members/Candidates from knowingly making any misrepresentation in investment analysis, recommendations, actions, or other professional activities; the prohibition reaches plagiarism, performance-claim misstatement (overstated returns, cherry-picked composites), and material-omission misrepresentation where omitted context makes an otherwise-true statement misleading.",
+      "source_stance": "primary-cfa",
+      "audit_flag": "ok",
+      "audit_notes": "",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "cfa_2022_l1_combined",
+          "volume": 6,
+          "legacy_pages": [
+            328,
+            339
+          ],
+          "pdf_pages": [
+            3597,
+            3608
+          ],
+          "chunk_id": "cfa_2022_l1_combined:p3597:5401",
+          "chunk_hash": "cad1d390b04abd01110506a863095cce525c17aa274406cf015bb005ca5455fd",
+          "quote": "Members and Candidates must not knowingly make any misrepresentations relating to investment analysis, recommendations, actions, or other professional activities."
+        },
+        {
+          "role": "primary",
+          "source_id": "cfa_2022_l1_combined",
+          "volume": 6,
+          "legacy_pages": [
+            328,
+            339
+          ],
+          "pdf_pages": [
+            3597,
+            3608
+          ],
+          "chunk_id": "cfa_2022_l1_combined:p3597:5401",
+          "chunk_hash": "cad1d390b04abd01110506a863095cce525c17aa274406cf015bb005ca5455fd",
+          "quote": "Trust is the foundation of the investment profession. Investors must be able to rely on the statements and information provided to them"
+        }
+      ]
+    },
+    {
+      "card_id": "cc-standard-i-d-misconduct",
+      "title": "Standard I(D) Misconduct",
+      "summary_curated": "Standard I.D prohibits any professional conduct involving dishonesty, fraud, or deceit and any act that reflects adversely on professional reputation, integrity, or competence; the residual-reputation prong reaches lying/cheating/stealing, fraudulent bankruptcy, and business-hours intoxication, while carving out private morality absent a professional nexus.",
+      "source_stance": "primary-cfa",
+      "audit_flag": "ok",
+      "audit_notes": "",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "cfa_2022_l1_combined",
+          "volume": 6,
+          "legacy_pages": [
+            340,
+            342
+          ],
+          "pdf_pages": [
+            3609,
+            3611
+          ],
+          "chunk_id": "cfa_2022_l1_combined:p3608:5420",
+          "chunk_hash": "94030cca638d1700966431fc80477cdbf94866ecbe2cb9762f34ba10796c0baa",
+          "quote": "Standard I(D) addresses all conduct that reflects poorly on the professional integrity, good reputation, or competence of members and candidates."
+        },
+        {
+          "role": "primary",
+          "source_id": "cfa_2022_l1_combined",
+          "volume": 6,
+          "legacy_pages": [
+            340,
+            342
+          ],
+          "pdf_pages": [
+            3609,
+            3611
+          ],
+          "chunk_id": "cfa_2022_l1_combined:p3609:5421",
+          "chunk_hash": "d5524b3921749bb1e642aa207f4ea45ad7e31757443942650f522fd450c26a3d",
+          "quote": "The integrity of the investment profession is built on trust."
+        }
+      ]
+    },
+    {
+      "card_id": "cc-standard-ii-a-material-nonpublic",
+      "title": "Standard II(A) Material Nonpublic Information",
+      "summary_curated": "Standard II.A prohibits Members/Candidates who possess material nonpublic information from acting on or causing others to act on it; the gate requires both materiality and non-public status; the mosaic-theory carve-out permits analyst-derived material conclusions from non-material non-public plus public inputs; disseminate-or-refrain governs unsolicited possession.",
+      "source_stance": "primary-cfa",
+      "audit_flag": "ok",
+      "audit_notes": "",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "cfa_2022_l1_combined",
+          "volume": 6,
+          "legacy_pages": [
+            343,
+            354
+          ],
+          "pdf_pages": [
+            3612,
+            3623
+          ],
+          "chunk_id": "cfa_2022_l1_combined:p3611:5425",
+          "chunk_hash": "b0ce9988e05bb0c6bf2e31d5e4c11588b7b5a9c674e0d8e552d0f6b1102abdef",
+          "quote": "Members and Candidates who possess material nonpublic information that could affect the value of an investment must not act or cause others to act on the information."
+        },
+        {
+          "role": "primary",
+          "source_id": "cfa_2022_l1_combined",
+          "volume": 6,
+          "legacy_pages": [
+            343,
+            354
+          ],
+          "pdf_pages": [
+            3612,
+            3623
+          ],
+          "chunk_id": "cfa_2022_l1_combined:p3614:5429",
+          "chunk_hash": "899856bc6e25d75eac22182aa129fff294f0d5ad3704ccc087721ad402cdc708",
+          "quote": "Under the “mosaic theory,” financial analysts are free to act on this collection, or mosaic, of information without risking violation."
+        }
+      ]
+    },
+    {
+      "card_id": "cc-standard-ii-b-market-manipulation",
+      "title": "Standard II(B) Market Manipulation",
+      "summary_curated": "Standard II.B PROHIBITS market manipulation: practices that distort security prices or trading volume with intent to deceive market participants. Covers both information-based manipulation (false rumors, pump-and-dump schemes) and transaction-based manipulation (wash trades, spoofing, marking the close); preserves legitimate trading on perceived market inefficiencies.",
+      "source_stance": "primary-cfa",
+      "audit_flag": "ok",
+      "audit_notes": "",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "cfa_2022_l1_combined",
+          "volume": 6,
+          "legacy_pages": [
+            355,
+            360
+          ],
+          "pdf_pages": [
+            3624,
+            3629
+          ],
+          "chunk_id": "cfa_2022_l1_combined:p3624:5446",
+          "quote": "Market manipulation includes practices that distort security prices or trading volume with the intent to deceive people or entities that rely on information in the market",
+          "chunk_hash": "ee6f01176a69715aa25cd5f2d877ddae7a238c9d062722801525638a5fb63edc"
+        }
+      ]
+    },
+    {
+      "card_id": "cc-standard-iii-a-b-loyalty-prudence-and-fair-dealing",
+      "title": "Standard III(A) Loyalty, Prudence, and Care + III(B) Fair Dealing",
+      "summary_curated": "Standard III.A REQUIRES Members and Candidates to act with loyalty, prudence, and care to clients, placing client interests above their own and their employer's. III.B requires fair and objective dealing across clients in analysis, recommendations, and actions; fiduciary duty is mandate-relative and tied to the IPS.",
+      "source_stance": "primary-cfa",
+      "audit_flag": "ok",
+      "audit_notes": "",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "cfa_2022_l1_combined",
+          "volume": 6,
+          "legacy_pages": [
+            361,
+            378
+          ],
+          "pdf_pages": [
+            3630,
+            3647
+          ],
+          "chunk_id": "cfa_2022_l1_combined:p3631:5457",
+          "quote": "Although fiduciary duty often encompasses the principles of loyalty, prudence, and care, Standard III(A) does not render all members and candidates fiduciaries.",
+          "chunk_hash": "d5901bf3b617baf40dc90b7c8fa21c435b5f9b6d454e32324e823e4f1916c1d0"
+        }
+      ]
+    },
+    {
+      "card_id": "cc-standard-iii-c-d-e-suitability-performance-confidentiality",
+      "title": "Standard III(C) Suitability + III(D) Performance Presentation + III(E) Preservation of Confidentiality",
+      "summary_curated": "Standard III.C REQUIRES reasonable inquiry into client objectives/constraints and suitability of investments in the context of the client's total portfolio; III.D requires fair, accurate, complete performance disclosure (GIPS recommended); III.E requires client-information confidentiality subject to legal disclosure overrides.",
+      "source_stance": "primary-cfa",
+      "audit_flag": "ok",
+      "audit_notes": "",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "cfa_2022_l1_combined",
+          "volume": 6,
+          "legacy_pages": [
+            379,
+            395
+          ],
+          "pdf_pages": [
+            3648,
+            3664
+          ],
+          "chunk_id": "cfa_2022_l1_combined:p3648:5486",
+          "quote": "c Judge the suitability of investments in the context of the client’s total portfolio.",
+          "chunk_hash": "889d17e8601ba998a1c39a289b90b3959e8578f3659d353cbd5776f98bc0939e"
+        }
+      ]
+    },
+    {
+      "card_id": "cc-standard-iv-a-loyalty-to-employer",
+      "title": "Standard IV(A) Loyalty (to Employer)",
+      "summary_curated": "Standard IV.A REQUIRES Members and Candidates, in matters related to their employment, to act for the employer's benefit and not engage in conduct that harms the employer's interests; carve-outs permit whistleblowing on illegal/unethical conduct; post-employment client solicitation rules distinguish skills (Member's) from confidential employer property.",
+      "source_stance": "primary-cfa",
+      "audit_flag": "ok",
+      "audit_notes": "",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "cfa_2022_l1_combined",
+          "volume": 6,
+          "legacy_pages": [
+            396,
+            405
+          ],
+          "pdf_pages": [
+            3665,
+            3674
+          ],
+          "chunk_id": "cfa_2022_l1_combined:p3665:5512",
+          "quote": "In matters related to their employment, members and candidates must not engage in conduct that harms the interests of their employer.",
+          "chunk_hash": "dc017a02673062b2331d7708da8d296f4d8ca9519618529503bbed806eacc477"
+        }
+      ]
+    },
+    {
+      "card_id": "cc-standard-iv-b-c-additional-comp-and-responsibilities",
+      "title": "Standard IV(B) Additional Compensation Arrangements + IV(C) Responsibilities of Supervisors",
+      "summary_curated": "Standard IV.B REQUIRES written consent of all parties before accepting compensation that could compete with the employer's interest; IV.C imposes affirmative detect/prevent/document obligations on supervisors and reaches supervisors who fail to escalate inadequate compliance systems even absent direct knowledge of subordinate violations.",
+      "source_stance": "primary-cfa",
+      "audit_flag": "ok",
+      "audit_notes": "",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "cfa_2022_l1_combined",
+          "volume": 6,
+          "legacy_pages": [
+            406,
+            418
+          ],
+          "pdf_pages": [
+            3675,
+            3687
+          ],
+          "chunk_id": "cfa_2022_l1_combined:p3680:5536",
+          "quote": "A member or candidate with supervisory responsibility should bring an inadequate compliance system to the attention of the firm’s senior managers and recommend corrective",
+          "chunk_hash": "0729441fd5fa055a3a2ab224e5c179b1aa2d0d4c733a020b833efa33930fd4a0"
+        }
+      ]
+    },
+    {
+      "card_id": "cc-standard-v-investment-analysis-diligence",
+      "title": "Standard V(A) Diligence and Reasonable Basis + V(B) Communication + V(C) Record Retention",
+      "summary_curated": "Standard V.A REQUIRES diligence/independence/thoroughness with a reasonable and adequate basis (calibrated to investment complexity) for any recommendation; V.B requires disclosure of investment process and clear opinion/fact distinction; V.C requires record retention sufficient to support ex-post audit of the V.A reasonable-basis analysis.",
+      "source_stance": "primary-cfa",
+      "audit_flag": "ok",
+      "audit_notes": "",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "cfa_2022_l1_combined",
+          "volume": 6,
+          "legacy_pages": [
+            419,
+            442
+          ],
+          "pdf_pages": [
+            3688,
+            3711
+          ],
+          "chunk_id": "cfa_2022_l1_combined:p3688:5550",
+          "quote": "A reasonable basis is formed through a balance of these resources appropriate for the security or decision being analyzed.",
+          "chunk_hash": "edfcb8c731db341214862bf9421b13b1d66fd002d97300781d635d83f91b2c80"
+        }
+      ]
+    },
+    {
+      "card_id": "cc-standard-vi-conflicts-of-interest",
+      "title": "Standard VI(A) Disclosure of Conflicts + VI(B) Priority of Transactions + VI(C) Referral Fees",
+      "summary_curated": "Standard VI.A REQUIRES full and fair disclosure of all matters that could impair independence/objectivity; VI.B REQUIRES client and employer transactions to take priority over Member's beneficial-owner trades; VI.C REQUIRES disclosure of referral-fee arrangements to clients, prospective clients, and employer.",
+      "source_stance": "primary-cfa",
+      "audit_flag": "ok",
+      "audit_notes": "",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "cfa_2022_l1_combined",
+          "volume": 6,
+          "legacy_pages": [
+            443,
+            460
+          ],
+          "pdf_pages": [
+            3712,
+            3729
+          ],
+          "chunk_id": "cfa_2022_l1_combined:p3712:5589",
+          "quote": "Members and candidates have the responsibility of determining how often, in what manner, and in what particular circumstances the disclosure of conflicts must be made.",
+          "chunk_hash": "60546bfc84b2223a498003e073ebf8008f0b2cf478dd0120ad9f9c71b1ed5685"
+        }
+      ]
+    },
+    {
+      "card_id": "cc-standard-vii-responsibilities-as-cfa-institute-member-or-candidate",
+      "title": "Standard VII Responsibilities as a CFA Institute Member or CFA Candidate",
+      "summary_curated": "Standard VII.A PROHIBITS conduct that compromises the reputation/integrity of CFA Institute, the CFA designation, or program integrity (exam secrecy, candidate conduct, public-representation conduct). VII.B REQUIRES accurate reference to CFA Institute, the designation, candidacy, and the CFA marks per published guidelines; misrepresentation of meaning or implications violates the Standard.",
+      "source_stance": "primary-cfa",
+      "audit_flag": "ok",
+      "audit_notes": "",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "cfa_2022_l1_combined",
+          "volume": 6,
+          "legacy_pages": [
+            461,
+            490
+          ],
+          "pdf_pages": [
+            3730,
+            3759
+          ],
+          "chunk_id": "cfa_2022_l1_combined:p3730:5617",
+          "quote": "CFA Institute program rules, regulations, and policies prohibit candidates from disclosing confidential material gained during the exam process.",
+          "chunk_hash": "41b4d4168aabdc13be35b37a89e7ab0b7cef20708894431d3695bfb5a381cf40"
+        }
+      ]
+    }
+  ]
+}

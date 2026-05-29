@@ -1,0 +1,1 @@
+{"diagnostics":[{"code":"CACG-CITE-001","file":"tests/parity_corpus/generated_pydantic_errors/_lint_probe_citation-chunk-id-prefix-divergent.md","message":"citations[0]: malformed chunk_id 'DIFFERENT_PREFIX:p001:0000'","severity":"error"}],"oracle_layer":"lint","schema_version":"cacg.v0"}

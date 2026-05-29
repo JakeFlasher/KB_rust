@@ -1,0 +1,1 @@
+{"bench": "bm25_iai", "benchmark": "bm25_index_and_score", "event": "Ir", "instructions": 429062, "max_regression_pct": 5.0}

@@ -1,0 +1,1 @@
+{"diagnostics":[{"code":"CACG-FM-008","file":"<card-edges-invalid-edge-type>","message":"validation error at card_edges.0.edge_type: Input should be 'depends_on' or 'extends'","severity":"error"}],"oracle_layer":"parse","schema_version":"cacg.v0"}

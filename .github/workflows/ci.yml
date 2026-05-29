@@ -1,0 +1,74 @@
+name: CI
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+    branches: ["**"]
+
+jobs:
+  test:
+    name: Rust workspace tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Rust
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          toolchain: "1.85"
+          components: rustfmt, clippy
+
+      - name: Install cargo-deny
+        run: cargo install cargo-deny --locked
+
+      - name: cargo fmt
+        run: cargo fmt --all -- --check
+
+      - name: cargo clippy
+        run: cargo clippy --workspace --all-targets --all-features -- -D warnings
+
+      - name: cargo deny
+        run: cargo deny check
+
+      - name: xtask lint-determinism
+        run: cargo run -p xtask -- lint-determinism
+
+      - name: xtask lint-trust-leak
+        run: cargo run -p xtask -- lint-trust-leak
+
+      - name: xtask lint-runner-bypass
+        run: cargo run -p xtask -- lint-runner-bypass
+
+      - name: xtask lint-rename-outside-publisher
+        run: cargo run -p xtask -- lint-rename-outside-publisher
+
+      - name: xtask audit-cacg-core-deps
+        run: cargo run -p xtask -- audit-cacg-core-deps
+
+      - name: xtask audit-default-kb-deps
+        run: cargo run -p xtask -- audit-default-kb-deps
+
+      - name: xtask audit-schema-fixtures
+        run: cargo run -p xtask -- audit-schema-fixtures
+
+      - name: xtask lint-workflow-labels
+        run: cargo run -p xtask -- lint-workflow-labels
+
+      - name: xtask audit-semantic-cache-provenance
+        run: cargo run -p xtask -- audit-semantic-cache-provenance
+
+      - name: xtask lint-unwrap
+        run: cargo run -p xtask -- lint-unwrap
+
+      - name: xtask lint-error-swallow
+        run: cargo run -p xtask -- lint-error-swallow
+
+      - name: xtask lint-structural
+        run: cargo run -p xtask -- lint-structural
+
+      - name: Cargo test (workspace)
+        env:
+          KB_FROZEN_CLOCK: "1"
+        run: cargo test --workspace --all-targets

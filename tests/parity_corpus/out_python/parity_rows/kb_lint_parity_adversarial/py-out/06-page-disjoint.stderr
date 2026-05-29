@@ -1,0 +1,1 @@
+tests/parity_corpus/adversarial/06-page-disjoint.md: CACG-CITE-005 citations[0]: page_range [10, 12] is disjoint from chunk pages [1, 2]

@@ -1,0 +1,5 @@
+  0.0043  synthetic-card-01  [reading_01]  Synthetic Card 1  -> tests/parity_corpus/cards/reading_01/synthetic-card-01.md
+  0.0043  synthetic-card-02  [reading_01]  Synthetic Card 2  -> tests/parity_corpus/cards/reading_01/synthetic-card-02.md
+  0.0043  synthetic-card-03  [reading_01]  Synthetic Card 3  -> tests/parity_corpus/cards/reading_01/synthetic-card-03.md
+  0.0036  content-addressable-identity  [reading_01]  Content-Addressable Identity  -> tests/parity_corpus/cards/reading_01/01-content-addressable-identity.md
+  0.0034  determinism-is-a-kept-promise  [reading_01]  Determinism Is A Kept Promise  -> tests/parity_corpus/cards/reading_01/02-determinism-is-a-kept-promise.md

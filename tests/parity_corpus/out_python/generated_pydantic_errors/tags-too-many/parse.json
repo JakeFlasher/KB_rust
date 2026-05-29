@@ -1,0 +1,1 @@
+{"diagnostics":[{"code":"CACG-SUM-004","file":"<tags-too-many>","message":"tags oversized: Value error, tags has 20 entries; max is 10","severity":"error"}],"oracle_layer":"parse","schema_version":"cacg.v0"}

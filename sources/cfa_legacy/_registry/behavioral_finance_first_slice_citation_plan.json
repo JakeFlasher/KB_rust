@@ -1,0 +1,190 @@
+{
+  "card_ids": [
+    "be-limits-of-arbitrage",
+    "be-noise-trader-equilibrium",
+    "be-regret-matching-foundations",
+    "be-sentiment-vs-fundamentals",
+    "be-two-model-mispricing"
+  ],
+  "cards": {
+    "be-limits-of-arbitrage": [
+      {
+        "chunk_hash": "07c806da83ef5920df6c0bcfcdac87ec184a133f7efc67584cf833dc4a4cda11",
+        "chunk_id": "bf_shleifer_2000_inefficient_markets:p098:0109",
+        "edge_type": "supports",
+        "legacy_ref": "Shleifer printed pp.89-111 -> PDF pp.98-120",
+        "page_range": [
+          98,
+          99
+        ],
+        "quote": "arbitrageurs can become most constrained precisely when they have the best opportunities",
+        "source_id": "bf_shleifer_2000_inefficient_markets"
+      }
+    ],
+    "be-noise-trader-equilibrium": [
+      {
+        "chunk_hash": "bb3b7e3fd9ba5567928c652b9224321819f67d983ece824b9fad0f86fa699378",
+        "chunk_id": "bf_shleifer_2000_inefficient_markets:p037:0039",
+        "edge_type": "supports",
+        "legacy_ref": "Shleifer printed pp.28-52 -> PDF pp.37-61",
+        "page_range": [
+          37,
+          38
+        ],
+        "quote": "must be borne by any arbitrageur with a short time horizon",
+        "source_id": "bf_shleifer_2000_inefficient_markets"
+      },
+      {
+        "chunk_hash": "5032f88e4e140497d7e576db9520a61ecac25d2c07149a1c98500f136f922c8c",
+        "chunk_id": "econ_hart_mascolell_2013_simple_adaptive_strategies:p022:0024",
+        "edge_type": "supports",
+        "legacy_ref": "Hart/Mas-Colell PDF pp.5-30",
+        "page_range": [
+          22,
+          22
+        ],
+        "quote": "Switch next period to a different action with a probability that is proportional to the regret",
+        "source_id": "econ_hart_mascolell_2013_simple_adaptive_strategies"
+      }
+    ],
+    "be-regret-matching-foundations": [
+      {
+        "chunk_hash": "091fed234825fe3cc5279a1ec773305a329a9652040756ca01e32911962b10e7",
+        "chunk_id": "econ_hart_mascolell_2013_simple_adaptive_strategies:p023:0026",
+        "edge_type": "defines",
+        "legacy_ref": "Hart/Mas-Colell PDF pp.5-50",
+        "page_range": [
+          23,
+          24
+        ],
+        "quote": "joint distribution of play converges to the set of correlated equilibria",
+        "source_id": "econ_hart_mascolell_2013_simple_adaptive_strategies"
+      },
+      {
+        "chunk_hash": "9e4cdfc3e292cad5a45fa55011c61b8fe5ca4053785a2a651c26acea3787c0f2",
+        "chunk_id": "bf_shleifer_2000_inefficient_markets:p121:0138",
+        "edge_type": "supports",
+        "legacy_ref": "Shleifer printed pp.112-153 -> PDF pp.121-162",
+        "page_range": [
+          121,
+          122
+        ],
+        "quote": "conservatism, defined as the slow updating of models in the face of new evidence",
+        "source_id": "bf_shleifer_2000_inefficient_markets"
+      }
+    ],
+    "be-sentiment-vs-fundamentals": [
+      {
+        "chunk_hash": "cb806cf8956744b1516d01a7aa44d139cdf16e98453ce1e3e6efe03ee9410ff7",
+        "chunk_id": "bf_shleifer_2000_inefficient_markets:p163:0184",
+        "edge_type": "supports",
+        "legacy_ref": "Shleifer printed pp.112-174 -> PDF pp.121-183",
+        "page_range": [
+          163,
+          164
+        ],
+        "quote": "It can result from extrapolative expectations about prices, or trend chasing",
+        "source_id": "bf_shleifer_2000_inefficient_markets"
+      },
+      {
+        "chunk_hash": "9a3492843977401b78f8681d112e53cfcda0cde381a9dea11109bae16c182e23",
+        "chunk_id": "econ_hart_mascolell_2013_simple_adaptive_strategies:p035:0042",
+        "edge_type": "supports",
+        "legacy_ref": "Hart/Mas-Colell PDF pp.30-50",
+        "page_range": [
+          35,
+          35
+        ],
+        "quote": "correlated equilibria are, in contrast, “dynamically easy.”",
+        "source_id": "econ_hart_mascolell_2013_simple_adaptive_strategies"
+      }
+    ],
+    "be-two-model-mispricing": [
+      {
+        "chunk_hash": "3957b4864cb441abe4ac95320470e0f9e4d26e0d37af6b30f88c75b0b36cacb2",
+        "chunk_id": "bf_shleifer_2000_inefficient_markets:p120:0137",
+        "edge_type": "defines",
+        "legacy_ref": "Shleifer printed pp.112-153 -> PDF pp.121-162",
+        "page_range": [
+          121,
+          121
+        ],
+        "quote": "regularities, already mentioned in Chapter 1, are conveniently called underreaction and overreaction",
+        "source_id": "bf_shleifer_2000_inefficient_markets"
+      }
+    ]
+  },
+  "page_coordinate_map": {
+    "generated_by": "emit_behavioral_finance_first_slice.py",
+    "reading_id": "10_behavioral_finance",
+    "schema_version": "cfa_legacy.page_coordinate_map.v1",
+    "sources": [
+      {
+        "legacy_coordinate": "printed_book_page",
+        "pdf_coordinate_rule": "pdf_page = legacy_page + 9",
+        "source_id": "bf_shleifer_2000_inefficient_markets",
+        "verified_evidence": [
+          {
+            "evidence": "chapter 2 opens on PDF page 37",
+            "legacy_page": 28,
+            "pdf_page": 37
+          },
+          {
+            "evidence": "printed page 52 appears on PDF page 61",
+            "legacy_page": 52,
+            "pdf_page": 61
+          },
+          {
+            "evidence": "chapter 4 opens on PDF page 98",
+            "legacy_page": 89,
+            "pdf_page": 98
+          },
+          {
+            "evidence": "printed page 111 appears on PDF page 120",
+            "legacy_page": 111,
+            "pdf_page": 120
+          },
+          {
+            "evidence": "chapter 5 opens on PDF page 121",
+            "legacy_page": 112,
+            "pdf_page": 121
+          },
+          {
+            "evidence": "printed page 153 appears on PDF page 162",
+            "legacy_page": 153,
+            "pdf_page": 162
+          },
+          {
+            "evidence": "printed page 174 appears on PDF page 183",
+            "legacy_page": 174,
+            "pdf_page": 183
+          }
+        ]
+      },
+      {
+        "legacy_coordinate": "physical_pdf_page_for_first_slice_refs",
+        "pdf_coordinate_rule": "pdf_page = legacy_page",
+        "source_id": "econ_hart_mascolell_2013_simple_adaptive_strategies",
+        "verified_evidence": [
+          {
+            "evidence": "regret-matching overview appears in the cited PDF-page window",
+            "legacy_page": 22,
+            "pdf_page": 22
+          },
+          {
+            "evidence": "Regret Matching Theorem appears in the cited PDF-page window",
+            "legacy_page": 23,
+            "pdf_page": 23
+          },
+          {
+            "evidence": "dynamics/equilibria overview appears in the cited PDF-page window",
+            "legacy_page": 35,
+            "pdf_page": 35
+          }
+        ]
+      }
+    ]
+  },
+  "reading_id": "10_behavioral_finance",
+  "schema_version": "cfa_legacy.behavioral_finance_first_slice_citation_plan.v1"
+}

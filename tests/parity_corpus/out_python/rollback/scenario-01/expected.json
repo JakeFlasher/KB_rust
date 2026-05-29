@@ -1,0 +1,1 @@
+{"expected_diagnostic_code":"CACG-MAN-002","ingest_exit_code":1,"post_state_hash":"782e989577e454aafe9c425b57340893385d9de59cd97ce5442e7f75bd407369","pre_state_hash":"782e989577e454aafe9c425b57340893385d9de59cd97ce5442e7f75bd407369","scenario":"rollback-01","schema_version":"cacg.v0.parity","state_unchanged":true}

@@ -1,0 +1,6 @@
+{
+  "exit_code": 0,
+  "fixture_sha256": "f95b30c8856a7a56b3237deb473480be1b20ad657b3e8821c56600bba1ee2dba",
+  "stderr": "",
+  "stdout": "tests/parity_corpus/cards/reading_01/01-content-addressable-identity.md: VERIFIED\n"
+}

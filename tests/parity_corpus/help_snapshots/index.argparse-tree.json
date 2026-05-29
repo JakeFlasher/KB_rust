@@ -1,0 +1,26 @@
+{
+  "mutex_groups": [],
+  "name": "index",
+  "options": [
+    {
+      "action": "_StoreAction",
+      "default": "out",
+      "dest": "out",
+      "is_positional": false,
+      "option_strings": [
+        "--out"
+      ],
+      "required": false
+    }
+  ],
+  "positionals": [
+    {
+      "action": "_StoreAction",
+      "default": "cards",
+      "dest": "cards_dir",
+      "is_positional": true,
+      "nargs": "?",
+      "required": false
+    }
+  ]
+}

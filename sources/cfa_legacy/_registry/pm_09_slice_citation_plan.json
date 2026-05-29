@@ -1,0 +1,185 @@
+{
+  "cards": {
+    "pm-active-vs-passive-decision": {
+      "chunk_id": "cfa_2022_l1_combined:p3690:5552",
+      "legacy_primary": "Vol.6/pp.420-441 -> PDF 3689-3710",
+      "page_range": [
+        3690,
+        3690
+      ],
+      "quote_preview": "If such a policy is not in place at the firm, the member or candidate should enc",
+      "title": "Active vs Passive Decision"
+    },
+    "pm-allocation-process": {
+      "chunk_id": "cfa_2022_l1_combined:p3289:4953",
+      "legacy_primary": "Vol.6/pp.20-40 -> PDF 3289-3309",
+      "page_range": [
+        3289,
+        3289
+      ],
+      "quote_preview": "For example, a stockbroker should consider having a relatively low weighting in ",
+      "title": "Asset Allocation Process"
+    },
+    "pm-beta-and-factor-exposure": {
+      "chunk_id": "cfa_2022_l1_combined:p3805:5738",
+      "legacy_primary": "Vol.6/pp.536-572 -> PDF 3805-3841",
+      "page_range": [
+        3805,
+        3805
+      ],
+      "quote_preview": "American depository share The underlying shares on which American depository rec",
+      "title": "Beta and Factor Exposure"
+    },
+    "pm-capital-market-line": {
+      "chunk_id": "cfa_2022_l1_combined:p3789:5712",
+      "legacy_primary": "Vol.6/pp.520-545 -> PDF 3789-3814",
+      "page_range": [
+        3789,
+        3789
+      ],
+      "quote_preview": "She leaves DeLaurier on good terms, providing her supervisor with all the backgr",
+      "title": "Capital Market Line"
+    },
+    "pm-capm-and-sml": {
+      "chunk_id": "cfa_2022_l1_combined:p3809:5752",
+      "legacy_primary": "Vol.6/pp.540-565 -> PDF 3809-3834",
+      "page_range": [
+        3809,
+        3809
+      ],
+      "quote_preview": "Classical cycle Refers to fluctuations in the level of economic activity when me",
+      "title": "CAPM and the Security Market Line"
+    },
+    "pm-diversification-and-correlation": {
+      "chunk_id": "cfa_2022_l1_combined:p3731:5618",
+      "legacy_primary": "Vol.6/pp.460-500 -> PDF 3729-3769",
+      "page_range": [
+        3731,
+        3731
+      ],
+      "quote_preview": "The organization works with both individual candidates and the sponsors of onlin",
+      "title": "Diversification and Correlation"
+    },
+    "pm-efficient-frontier": {
+      "chunk_id": "cfa_2022_l1_combined:p3762:5668",
+      "legacy_primary": "Vol.6/pp.490-519 -> PDF 3759-3788",
+      "page_range": [
+        3762,
+        3762
+      ],
+      "quote_preview": "Asset owners may comply with the GIPS standards in the same way as firms if they",
+      "title": "Efficient Frontier"
+    },
+    "pm-factor-models-intuition": {
+      "chunk_id": "cfa_2022_l1_combined:p3829:5817",
+      "legacy_primary": "Vol.6/pp.560-572 -> PDF 3829-3841",
+      "page_range": [
+        3829,
+        3829
+      ],
+      "quote_preview": "Point estimate A single numerical estimate of an unknown quantity, such as a pop",
+      "title": "Factor Models — Intuition"
+    },
+    "pm-investment-policy-statement": {
+      "chunk_id": "cfa_2022_l1_combined:p3276:4933",
+      "legacy_primary": "Vol.6/pp.5-25 -> PDF 3274-3294",
+      "page_range": [
+        3276,
+        3276
+      ],
+      "quote_preview": "The constraints section covers factors that need to be taken into account when c",
+      "title": "Investment Policy Statement"
+    },
+    "pm-investor-types": {
+      "chunk_id": "cfa_2022_l1_combined:p3690:5552",
+      "legacy_primary": "Vol.6/pp.420-441 -> PDF 3689-3710",
+      "page_range": [
+        3690,
+        3690
+      ],
+      "quote_preview": "If such a policy is not in place at the firm, the member or candidate should enc",
+      "title": "Investor Types"
+    },
+    "pm-market-efficiency-core": {
+      "chunk_id": "cfa_2022_l1_combined:p3690:5552",
+      "legacy_primary": "Vol.6/pp.420-441 -> PDF 3689-3710",
+      "page_range": [
+        3690,
+        3690
+      ],
+      "quote_preview": "If such a policy is not in place at the firm, the member or candidate should enc",
+      "title": "Market Efficiency — Three Forms"
+    },
+    "pm-performance-ratios-definitions": {
+      "chunk_id": "cfa_2022_l1_combined:p3824:5801",
+      "legacy_primary": "Vol.6/pp.555-572 -> PDF 3824-3841",
+      "page_range": [
+        3824,
+        3824
+      ],
+      "quote_preview": "Markowitz efficient frontier The graph of the set of portfolios offering the max",
+      "title": "Performance Ratios — Sharpe, Treynor, Information"
+    },
+    "pm-portfolio-constraints": {
+      "chunk_id": "cfa_2022_l1_combined:p3279:4939",
+      "legacy_primary": "Vol.6/pp.10-35 -> PDF 3279-3304",
+      "page_range": [
+        3279,
+        3279
+      ],
+      "quote_preview": "For ease of expression, from this point on we will refer to ability to bear risk",
+      "title": "Portfolio Constraints — The LLTTU Families"
+    },
+    "pm-portfolio-perspective": {
+      "chunk_id": "cfa_2022_l1_combined:p3674:5527",
+      "legacy_primary": "Vol.6/pp.405-441 -> PDF 3674-3710",
+      "page_range": [
+        3674,
+        3674
+      ],
+      "quote_preview": "In her experience, the lack of any effect is a very unlikely occurrence.",
+      "title": "Portfolio Perspective"
+    },
+    "pm-rebalancing-mechanics": {
+      "chunk_id": "cfa_2022_l1_combined:p3305:4975",
+      "legacy_primary": "Vol.6/pp.35-48 -> PDF 3304-3317",
+      "page_range": [
+        3305,
+        3305
+      ],
+      "quote_preview": "Contrary to the investment committee’s expectations, both European and internati",
+      "title": "Rebalancing Mechanics"
+    },
+    "pm-return-and-risk-fundamentals": {
+      "chunk_id": "cfa_2022_l1_combined:p3713:5590",
+      "legacy_primary": "Vol.6/pp.442-475 -> PDF 3711-3744",
+      "page_range": [
+        3713,
+        3713
+      ],
+      "quote_preview": "In making and updating disclosures of conflicts of interest, members and candida",
+      "title": "Return and Risk Fundamentals"
+    },
+    "pm-risk-tolerance-and-objectives": {
+      "chunk_id": "cfa_2022_l1_combined:p3276:4933",
+      "legacy_primary": "Vol.6/pp.5-25 -> PDF 3274-3294",
+      "page_range": [
+        3276,
+        3276
+      ],
+      "quote_preview": "The constraints section covers factors that need to be taken into account when c",
+      "title": "Risk Tolerance and Objectives"
+    },
+    "pm-systematic-vs-idiosyncratic-risk": {
+      "chunk_id": "cfa_2022_l1_combined:p3769:5675",
+      "legacy_primary": "Vol.6/pp.500-540 -> PDF 3769-3809",
+      "page_range": [
+        3769,
+        3769
+      ],
+      "quote_preview": "SBS charges its clients an asset-based fee for these services.",
+      "title": "Systematic vs Idiosyncratic Risk"
+    }
+  },
+  "schema_version": "cfa_legacy.pm_09_slice.v1"
+}

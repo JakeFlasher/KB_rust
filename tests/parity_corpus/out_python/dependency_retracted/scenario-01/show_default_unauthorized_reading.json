@@ -1,0 +1,1 @@
+{"exit_code":1,"scenario":"dependency_retracted-01-show-default-unauthorized-reading","schema_version":"cacg.v0.parity","stderr":"CACG-AUTH-001: card 'cascade-child' reading_id 'reading_01' is not present in source_matrix.allowed\n","stdout":""}

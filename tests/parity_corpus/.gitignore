@@ -1,0 +1,29 @@
+# Per-card history journal lock files (transient flock sidecars).
+**/*.history.jsonl.lock
+**/*.jsonl.lock
+
+# FTS5 sidecar bytes are EXCLUDED from the byte-equal contract per
+# DEC-8 carry-forward. Query-rowset hashes are the trust boundary;
+# raw bytes vary by SQLite page allocation and B-tree splits.
+out_python/summaries.sqlite
+out_python/**/*.sqlite
+
+# Phase-4 incremental kb index cache: performance heuristic only
+# (DEC-13). Contains mtime_ns + other ephemeral metadata.
+out_python/.kb_index_cache.json
+out_python/**/.kb_index_cache.json
+
+# Misc build artifacts.
+out_python/**/.bak
+out_python/**/.tmp
+
+# CFA first-bite fixture: `scripts/build_cfa_first_bite_corpus.py` strips
+# the FTS5 sidecar + kb-index cache after `kb index` (the kb_search parity
+# row exercises the in-memory backend, so the corpus is sidecar-free).
+# These guards keep a manual `kb index` re-run from leaking them.
+cfa_first_bite/summaries.sqlite
+cfa_first_bite/**/*.sqlite
+cfa_first_bite/.kb_index_cache.json
+cfa_first_bite/**/.kb_index_cache.json
+**/lint_journal.jsonl
+**/INDEX.md

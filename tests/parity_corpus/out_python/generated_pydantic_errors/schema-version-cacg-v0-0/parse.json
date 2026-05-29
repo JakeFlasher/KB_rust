@@ -1,0 +1,1 @@
+{"diagnostics":[{"code":"CACG-FM-002","file":"<schema-version-cacg-v0-0>","message":"unknown schema_version (must be 'cacg.v0'): Input should be 'cacg.v0'","severity":"error"}],"oracle_layer":"parse","schema_version":"cacg.v0"}

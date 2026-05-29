@@ -1,0 +1,1 @@
+{"diagnostics":[{"code":"CACG-FM-008","file":"<card-edges-duplicate-target-edgetype>","message":"validation error at card_edges: Value error, card_edges contains duplicate entry target='neighbor' edge_type='depends_on'","severity":"error"}],"oracle_layer":"parse","schema_version":"cacg.v0"}
