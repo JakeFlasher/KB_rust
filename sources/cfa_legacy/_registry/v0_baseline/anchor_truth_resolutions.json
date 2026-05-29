@@ -1,0 +1,70 @@
+{
+  "schema_version": "cfa_legacy_anchor_truth_resolutions/v1",
+  "generated_by": "Round 3 AC-5 closure: swarm-backed de-claims + DEC-2 oracle accept-rationales (no card-citation changes)",
+  "resolutions": [
+    {
+      "target_type": "card",
+      "target": "ec-risk-aversion-utility-derivation",
+      "kind": "de-claim",
+      "decided_by": "swarm:02_economics + claude(R3)",
+      "rationale": "Emitted card correctly anchors the Arrow-Pratt coefficient / small-gamble risk-premium derivation to MWG Ch.6 (two 'defines' citations: p204 risk-averter definition, p206); the cfa_2022_l1_combined cite is a legitimate CONCEPTUAL supporting link to CFA L1 R53 (individuals as utility-maximizers under risk), not a placeholder, and no false 'not in CFA L1' body claim remains. The content_mismatch_noted flag was over-cautious about the conceptual-only CFA supporting role.",
+      "evidence": "citations = MWG p204:0334, MWG p206, cfa_2022_l1_combined[3364,3365] (R53 conceptual); swarm:02_economics verdict=confirm/de-claim; AC-4 Layer-2 verify passes."
+    },
+    {
+      "target_type": "card",
+      "target": "ec-utility-and-choice-under-uncertainty",
+      "kind": "de-claim",
+      "decided_by": "swarm:02_economics + claude(R3)",
+      "rationale": "The vNM expected-utility theorem is correctly anchored to MWG (p190 independence axiom, p194 expected-utility theorem); the cfa_2022_l1_combined cite is a conceptual supporting link to R53 Risk Management only. No placeholder anchor or false exclusion claim remains in the emitted card.",
+      "evidence": "citations = MWG p190:0310, MWG p194:0316, cfa_2022_l1_combined[3364,3365] (R53 conceptual); swarm:02_economics verdict=confirm/de-claim; AC-4 Layer-2 verify passes."
+    },
+    {
+      "target_type": "card",
+      "target": "deriv-delta-and-hedging",
+      "kind": "de-claim",
+      "decided_by": "swarm:07_derivatives_and_volatility + claude(R3)",
+      "rationale": "The emitted card cites Hull p431 only; the wrong CFA L1 R46 supporting cite (which mapped to Portfolio Management, not derivatives) was already dropped at curation. Hull Ch.19 is the correct anchor; no placeholder CFA cite or false 'not in CFA L1' body claim remains. CFA L1 genuinely does not develop delta hedging, so there is nothing to re-anchor to within CFA.",
+      "evidence": "citations = cb_hull_2022...[431,431]; swarm:07 verdict=confirm/de-claim; AC-4 Layer-2 verify passes."
+    },
+    {
+      "target_type": "card",
+      "target": "deriv-greeks-overview",
+      "kind": "de-claim",
+      "decided_by": "swarm:07_derivatives_and_volatility + claude(R3)",
+      "rationale": "Emitted card cites Hull Ch.19 (Greek Letters) only; the wrong CFA supporting cite was already dropped. The Greeks taxonomy is not in CFA L1 R45/R46, so the correct anchor is Hull and there is no placeholder/exclusion-claim defect remaining in the emitted card.",
+      "evidence": "citations = cb_hull_2022...[445,445]; swarm:07 verdict=confirm/de-claim; AC-4 Layer-2 verify passes."
+    },
+    {
+      "target_type": "card",
+      "target": "deriv-stochastic-vol-models",
+      "kind": "de-claim",
+      "decided_by": "swarm:07_derivatives_and_volatility + claude(R3)",
+      "rationale": "Emitted card cites three Hull Ch.27 chunks (p646/p647/p648) that strongly support the stochastic-volatility content; the wrong CFA supporting cite was already dropped. Heston/SABR are not in CFA L1, so Hull is the correct anchor and no placeholder/exclusion-claim defect remains.",
+      "evidence": "citations = cb_hull_2022...[646],[647],[648]; swarm:07 verdict=confirm/de-claim; AC-4 Layer-2 verify passes."
+    },
+    {
+      "target_type": "card",
+      "target": "deriv-vol-surface-anatomy",
+      "kind": "de-claim",
+      "decided_by": "swarm:07_derivatives_and_volatility + claude(R3)",
+      "rationale": "Emitted card cites three Hull Ch.20 chunks (p451 surface definition, p456, p463) that precisely match the volatility-surface content; the wrong CFA supporting cite was already dropped. Volatility smile/skew/surface is not in CFA L1, so Hull is the correct anchor and no placeholder/exclusion-claim defect remains.",
+      "evidence": "citations = cb_hull_2022...[451],[456],[463]; swarm:07 verdict=confirm/de-claim; AC-4 Layer-2 verify passes."
+    },
+    {
+      "target_type": "oracle",
+      "target": "08_convertible_bonds.json/cb_an_daoquan_2014_magic_book_2ed",
+      "kind": "accept-oracle",
+      "decided_by": "claude(R3)",
+      "rationale": "The single verified_evidence anchor (legacy 1 -> pdf 31) implies offset +30, but the audit batches genuinely disagreed (+0/+12/+30) and the map deliberately uses +0 because most cited chunks bind under that convention. This affects ONLY the registry-side human legacy-page locator (DEC-2: volume_page/legacy_page is registry-side evidence for v0, not in card frontmatter). Every card citing this source binds by its pdf chunk_id and passes Layer-2 verify (AC-4). Precise multi-anchor offset re-derivation is deferred to a future locator pass.",
+      "evidence": "AC-4 corpus verify 263/263 pass; DEC-2 keeps volume_page registry-side for v0; chunk_id is the load-bearing coordinate."
+    },
+    {
+      "target_type": "oracle",
+      "target": "08_convertible_bonds.json/cb_despiegeleer_schoutens_vanhulle_2014_hybrid_securities",
+      "kind": "accept-oracle",
+      "decided_by": "claude(R3)",
+      "rationale": "The single verified_evidence anchor (legacy 56 -> pdf 76) implies offset +20, but the map uses the +19 running-header consensus (batches A/C found +19; batch B found +20) -- a +/-1 registry-side legacy-locator ambiguity (DEC-2). Cards bind by pdf chunk_id and pass Layer-2 verify (AC-4); the human legacy-page locator is registry-side for v0. FUT: add anchors to pin the offset precisely.",
+      "evidence": "AC-4 corpus verify 263/263 pass; DEC-2 registry-side locator; chunk_id is the load-bearing coordinate."
+    }
+  ]
+}
