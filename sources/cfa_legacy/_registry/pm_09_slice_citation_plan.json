@@ -1,185 +1,427 @@
 {
   "cards": {
-    "pm-active-vs-passive-decision": {
-      "chunk_id": "cfa_2022_l1_combined:p3690:5552",
-      "legacy_primary": "Vol.6/pp.420-441 -> PDF 3689-3710",
-      "page_range": [
-        3690,
-        3690
+    "pm-active-management-and-alpha": {
+      "citations": [
+        {
+          "chunk_id": "pm_pedersen_2015_efficiently_inefficient:p048:0052",
+          "edge_type": "defines",
+          "source_id": "pm_pedersen_2015_efficiently_inefficient"
+        },
+        {
+          "chunk_id": "cfa_2022_l1_combined:p3838:5848",
+          "edge_type": "supports",
+          "source_id": "cfa_2022_l1_combined"
+        }
       ],
-      "quote_preview": "If such a policy is not in place at the firm, the member or candidate should enc",
+      "legacy_provenance": null,
+      "title": "Active Management and Alpha"
+    },
+    "pm-active-vs-passive-decision": {
+      "citations": [
+        {
+          "chunk_id": "cfa_2022_l1_combined:p3065:4578",
+          "edge_type": "supports",
+          "source_id": "cfa_2022_l1_combined"
+        }
+      ],
+      "legacy_provenance": {
+        "legacy_primary": "Vol.6/pp.420-441",
+        "note": "curated anchor deviates from legacy page reference (legacy ref re-anchored to correct content by curation; verified on-topic + lint/verify-clean)",
+        "overlaps_cited_chunk": false,
+        "pdf_range": [
+          3689,
+          3710
+        ]
+      },
       "title": "Active vs Passive Decision"
     },
     "pm-allocation-process": {
-      "chunk_id": "cfa_2022_l1_combined:p3289:4953",
-      "legacy_primary": "Vol.6/pp.20-40 -> PDF 3289-3309",
-      "page_range": [
-        3289,
-        3289
+      "citations": [
+        {
+          "chunk_id": "cfa_2022_l1_combined:p3292:4957",
+          "edge_type": "defines",
+          "source_id": "cfa_2022_l1_combined"
+        }
       ],
-      "quote_preview": "For example, a stockbroker should consider having a relatively low weighting in ",
+      "legacy_provenance": {
+        "legacy_primary": "Vol.6/pp.20-40",
+        "note": "curated anchor matches legacy page reference",
+        "overlaps_cited_chunk": true,
+        "pdf_range": [
+          3289,
+          3309
+        ]
+      },
       "title": "Asset Allocation Process"
     },
-    "pm-beta-and-factor-exposure": {
-      "chunk_id": "cfa_2022_l1_combined:p3805:5738",
-      "legacy_primary": "Vol.6/pp.536-572 -> PDF 3805-3841",
-      "page_range": [
-        3805,
-        3805
+    "pm-anomalies-and-cross-sectional-pricing": {
+      "citations": [
+        {
+          "chunk_id": "pm_pedersen_2015_efficiently_inefficient:p156:0205",
+          "edge_type": "defines",
+          "source_id": "pm_pedersen_2015_efficiently_inefficient"
+        },
+        {
+          "chunk_id": "pm_cochrane_2005_asset_pricing_revised:p167:0197",
+          "edge_type": "supports",
+          "source_id": "pm_cochrane_2005_asset_pricing_revised"
+        }
       ],
-      "quote_preview": "American depository share The underlying shares on which American depository rec",
+      "legacy_provenance": null,
+      "title": "Anomalies and Cross-Sectional Pricing"
+    },
+    "pm-beta-and-factor-exposure": {
+      "citations": [
+        {
+          "chunk_id": "cfa_2022_l1_combined:p3175:4735",
+          "edge_type": "defines",
+          "source_id": "cfa_2022_l1_combined"
+        }
+      ],
+      "legacy_provenance": {
+        "legacy_primary": "Vol.6/pp.536-572",
+        "note": "curated anchor deviates from legacy page reference (legacy ref re-anchored to correct content by curation; verified on-topic + lint/verify-clean)",
+        "overlaps_cited_chunk": false,
+        "pdf_range": [
+          3805,
+          3841
+        ]
+      },
       "title": "Beta and Factor Exposure"
     },
     "pm-capital-market-line": {
-      "chunk_id": "cfa_2022_l1_combined:p3789:5712",
-      "legacy_primary": "Vol.6/pp.520-545 -> PDF 3789-3814",
-      "page_range": [
-        3789,
-        3789
+      "citations": [
+        {
+          "chunk_id": "cfa_2022_l1_combined:p3164:4718",
+          "edge_type": "defines",
+          "source_id": "cfa_2022_l1_combined"
+        }
       ],
-      "quote_preview": "She leaves DeLaurier on good terms, providing her supervisor with all the backgr",
+      "legacy_provenance": {
+        "legacy_primary": "Vol.6/pp.520-545",
+        "note": "curated anchor deviates from legacy page reference (legacy ref re-anchored to correct content by curation; verified on-topic + lint/verify-clean)",
+        "overlaps_cited_chunk": false,
+        "pdf_range": [
+          3789,
+          3814
+        ]
+      },
       "title": "Capital Market Line"
     },
     "pm-capm-and-sml": {
-      "chunk_id": "cfa_2022_l1_combined:p3809:5752",
-      "legacy_primary": "Vol.6/pp.540-565 -> PDF 3809-3834",
-      "page_range": [
-        3809,
-        3809
+      "citations": [
+        {
+          "chunk_id": "cfa_2022_l1_combined:p3180:4744",
+          "edge_type": "defines",
+          "source_id": "cfa_2022_l1_combined"
+        }
       ],
-      "quote_preview": "Classical cycle Refers to fluctuations in the level of economic activity when me",
+      "legacy_provenance": {
+        "legacy_primary": "Vol.6/pp.540-565",
+        "note": "curated anchor deviates from legacy page reference (legacy ref re-anchored to correct content by curation; verified on-topic + lint/verify-clean)",
+        "overlaps_cited_chunk": false,
+        "pdf_range": [
+          3809,
+          3834
+        ]
+      },
       "title": "CAPM and the Security Market Line"
     },
     "pm-diversification-and-correlation": {
-      "chunk_id": "cfa_2022_l1_combined:p3731:5618",
-      "legacy_primary": "Vol.6/pp.460-500 -> PDF 3729-3769",
-      "page_range": [
-        3731,
-        3731
+      "citations": [
+        {
+          "chunk_id": "cfa_2022_l1_combined:p3115:4655",
+          "edge_type": "defines",
+          "source_id": "cfa_2022_l1_combined"
+        }
       ],
-      "quote_preview": "The organization works with both individual candidates and the sponsors of onlin",
+      "legacy_provenance": {
+        "legacy_primary": "Vol.6/pp.460-500",
+        "note": "curated anchor deviates from legacy page reference (legacy ref re-anchored to correct content by curation; verified on-topic + lint/verify-clean)",
+        "overlaps_cited_chunk": false,
+        "pdf_range": [
+          3729,
+          3769
+        ]
+      },
       "title": "Diversification and Correlation"
     },
     "pm-efficient-frontier": {
-      "chunk_id": "cfa_2022_l1_combined:p3762:5668",
-      "legacy_primary": "Vol.6/pp.490-519 -> PDF 3759-3788",
-      "page_range": [
-        3762,
-        3762
+      "citations": [
+        {
+          "chunk_id": "cfa_2022_l1_combined:p3130:4675",
+          "edge_type": "defines",
+          "source_id": "cfa_2022_l1_combined"
+        }
       ],
-      "quote_preview": "Asset owners may comply with the GIPS standards in the same way as firms if they",
+      "legacy_provenance": {
+        "legacy_primary": "Vol.6/pp.490-519",
+        "note": "curated anchor deviates from legacy page reference (legacy ref re-anchored to correct content by curation; verified on-topic + lint/verify-clean)",
+        "overlaps_cited_chunk": false,
+        "pdf_range": [
+          3759,
+          3788
+        ]
+      },
       "title": "Efficient Frontier"
     },
-    "pm-factor-models-intuition": {
-      "chunk_id": "cfa_2022_l1_combined:p3829:5817",
-      "legacy_primary": "Vol.6/pp.560-572 -> PDF 3829-3841",
-      "page_range": [
-        3829,
-        3829
+    "pm-efficient-markets-and-anomalies": {
+      "citations": [
+        {
+          "chunk_id": "pm_pedersen_2015_efficiently_inefficient:p025:0021",
+          "edge_type": "defines",
+          "source_id": "pm_pedersen_2015_efficiently_inefficient"
+        },
+        {
+          "chunk_id": "cfa_2022_l1_combined:p3702:5573",
+          "edge_type": "supports",
+          "source_id": "cfa_2022_l1_combined"
+        }
       ],
-      "quote_preview": "Point estimate A single numerical estimate of an unknown quantity, such as a pop",
+      "legacy_provenance": null,
+      "title": "Efficiently Inefficient Markets"
+    },
+    "pm-factor-models-intuition": {
+      "citations": [
+        {
+          "chunk_id": "cfa_2022_l1_combined:p3171:4729",
+          "edge_type": "supports",
+          "source_id": "cfa_2022_l1_combined"
+        }
+      ],
+      "legacy_provenance": {
+        "legacy_primary": "Vol.6/pp.560-572",
+        "note": "curated anchor deviates from legacy page reference (legacy ref re-anchored to correct content by curation; verified on-topic + lint/verify-clean)",
+        "overlaps_cited_chunk": false,
+        "pdf_range": [
+          3829,
+          3841
+        ]
+      },
       "title": "Factor Models — Intuition"
     },
     "pm-investment-policy-statement": {
-      "chunk_id": "cfa_2022_l1_combined:p3276:4933",
-      "legacy_primary": "Vol.6/pp.5-25 -> PDF 3274-3294",
-      "page_range": [
-        3276,
-        3276
+      "citations": [
+        {
+          "chunk_id": "cfa_2022_l1_combined:p3275:4932",
+          "edge_type": "defines",
+          "source_id": "cfa_2022_l1_combined"
+        }
       ],
-      "quote_preview": "The constraints section covers factors that need to be taken into account when c",
+      "legacy_provenance": {
+        "legacy_primary": "Vol.6/pp.5-25",
+        "note": "curated anchor matches legacy page reference",
+        "overlaps_cited_chunk": true,
+        "pdf_range": [
+          3274,
+          3294
+        ]
+      },
       "title": "Investment Policy Statement"
     },
     "pm-investor-types": {
-      "chunk_id": "cfa_2022_l1_combined:p3690:5552",
-      "legacy_primary": "Vol.6/pp.420-441 -> PDF 3689-3710",
-      "page_range": [
-        3690,
-        3690
+      "citations": [
+        {
+          "chunk_id": "cfa_2022_l1_combined:p3055:4566",
+          "edge_type": "supports",
+          "source_id": "cfa_2022_l1_combined"
+        }
       ],
-      "quote_preview": "If such a policy is not in place at the firm, the member or candidate should enc",
+      "legacy_provenance": {
+        "legacy_primary": "Vol.6/pp.420-441",
+        "note": "curated anchor deviates from legacy page reference (legacy ref re-anchored to correct content by curation; verified on-topic + lint/verify-clean)",
+        "overlaps_cited_chunk": false,
+        "pdf_range": [
+          3689,
+          3710
+        ]
+      },
       "title": "Investor Types"
     },
     "pm-market-efficiency-core": {
-      "chunk_id": "cfa_2022_l1_combined:p3690:5552",
-      "legacy_primary": "Vol.6/pp.420-441 -> PDF 3689-3710",
-      "page_range": [
-        3690,
-        3690
+      "citations": [
+        {
+          "chunk_id": "cfa_2022_l1_combined:p2181:3200",
+          "edge_type": "defines",
+          "source_id": "cfa_2022_l1_combined"
+        }
       ],
-      "quote_preview": "If such a policy is not in place at the firm, the member or candidate should enc",
+      "legacy_provenance": {
+        "legacy_primary": "Vol.6/pp.420-441",
+        "note": "curated anchor deviates from legacy page reference (legacy ref re-anchored to correct content by curation; verified on-topic + lint/verify-clean)",
+        "overlaps_cited_chunk": false,
+        "pdf_range": [
+          3689,
+          3710
+        ]
+      },
       "title": "Market Efficiency — Three Forms"
     },
-    "pm-performance-ratios-definitions": {
-      "chunk_id": "cfa_2022_l1_combined:p3824:5801",
-      "legacy_primary": "Vol.6/pp.555-572 -> PDF 3824-3841",
-      "page_range": [
-        3824,
-        3824
+    "pm-multifactor-asset-pricing-intuition": {
+      "citations": [
+        {
+          "chunk_id": "pm_cochrane_2005_asset_pricing_revised:p097:0111",
+          "edge_type": "defines",
+          "source_id": "pm_cochrane_2005_asset_pricing_revised"
+        },
+        {
+          "chunk_id": "cfa_2022_l1_combined:p3832:5828",
+          "edge_type": "supports",
+          "source_id": "cfa_2022_l1_combined"
+        }
       ],
-      "quote_preview": "Markowitz efficient frontier The graph of the set of portfolios offering the max",
+      "legacy_provenance": null,
+      "title": "Multifactor Asset Pricing — Intuition"
+    },
+    "pm-performance-ratios-definitions": {
+      "citations": [
+        {
+          "chunk_id": "cfa_2022_l1_combined:p3188:4756",
+          "edge_type": "defines",
+          "source_id": "cfa_2022_l1_combined"
+        }
+      ],
+      "legacy_provenance": {
+        "legacy_primary": "Vol.6/pp.555-572",
+        "note": "curated anchor deviates from legacy page reference (legacy ref re-anchored to correct content by curation; verified on-topic + lint/verify-clean)",
+        "overlaps_cited_chunk": false,
+        "pdf_range": [
+          3824,
+          3841
+        ]
+      },
       "title": "Performance Ratios — Sharpe, Treynor, Information"
     },
     "pm-portfolio-constraints": {
-      "chunk_id": "cfa_2022_l1_combined:p3279:4939",
-      "legacy_primary": "Vol.6/pp.10-35 -> PDF 3279-3304",
-      "page_range": [
-        3279,
-        3279
+      "citations": [
+        {
+          "chunk_id": "cfa_2022_l1_combined:p3284:4947",
+          "edge_type": "defines",
+          "source_id": "cfa_2022_l1_combined"
+        }
       ],
-      "quote_preview": "For ease of expression, from this point on we will refer to ability to bear risk",
+      "legacy_provenance": {
+        "legacy_primary": "Vol.6/pp.10-35",
+        "note": "curated anchor matches legacy page reference",
+        "overlaps_cited_chunk": true,
+        "pdf_range": [
+          3279,
+          3304
+        ]
+      },
       "title": "Portfolio Constraints — The LLTTU Families"
     },
     "pm-portfolio-perspective": {
-      "chunk_id": "cfa_2022_l1_combined:p3674:5527",
-      "legacy_primary": "Vol.6/pp.405-441 -> PDF 3674-3710",
-      "page_range": [
-        3674,
-        3674
+      "citations": [
+        {
+          "chunk_id": "cfa_2022_l1_combined:p3042:4550",
+          "edge_type": "defines",
+          "source_id": "cfa_2022_l1_combined"
+        }
       ],
-      "quote_preview": "In her experience, the lack of any effect is a very unlikely occurrence.",
+      "legacy_provenance": {
+        "legacy_primary": "Vol.6/pp.405-441",
+        "note": "curated anchor deviates from legacy page reference (legacy ref re-anchored to correct content by curation; verified on-topic + lint/verify-clean)",
+        "overlaps_cited_chunk": false,
+        "pdf_range": [
+          3674,
+          3710
+        ]
+      },
       "title": "Portfolio Perspective"
     },
     "pm-rebalancing-mechanics": {
-      "chunk_id": "cfa_2022_l1_combined:p3305:4975",
-      "legacy_primary": "Vol.6/pp.35-48 -> PDF 3304-3317",
-      "page_range": [
-        3305,
-        3305
+      "citations": [
+        {
+          "chunk_id": "cfa_2022_l1_combined:p3302:4972",
+          "edge_type": "defines",
+          "source_id": "cfa_2022_l1_combined"
+        }
       ],
-      "quote_preview": "Contrary to the investment committee’s expectations, both European and internati",
+      "legacy_provenance": {
+        "legacy_primary": "Vol.6/pp.35-48",
+        "note": "curated anchor deviates from legacy page reference (legacy ref re-anchored to correct content by curation; verified on-topic + lint/verify-clean)",
+        "overlaps_cited_chunk": false,
+        "pdf_range": [
+          3304,
+          3317
+        ]
+      },
       "title": "Rebalancing Mechanics"
     },
     "pm-return-and-risk-fundamentals": {
-      "chunk_id": "cfa_2022_l1_combined:p3713:5590",
-      "legacy_primary": "Vol.6/pp.442-475 -> PDF 3711-3744",
-      "page_range": [
-        3713,
-        3713
+      "citations": [
+        {
+          "chunk_id": "cfa_2022_l1_combined:p3079:4599",
+          "edge_type": "defines",
+          "source_id": "cfa_2022_l1_combined"
+        }
       ],
-      "quote_preview": "In making and updating disclosures of conflicts of interest, members and candida",
+      "legacy_provenance": {
+        "legacy_primary": "Vol.6/pp.442-475",
+        "note": "curated anchor deviates from legacy page reference (legacy ref re-anchored to correct content by curation; verified on-topic + lint/verify-clean)",
+        "overlaps_cited_chunk": false,
+        "pdf_range": [
+          3711,
+          3744
+        ]
+      },
       "title": "Return and Risk Fundamentals"
     },
     "pm-risk-tolerance-and-objectives": {
-      "chunk_id": "cfa_2022_l1_combined:p3276:4933",
-      "legacy_primary": "Vol.6/pp.5-25 -> PDF 3274-3294",
-      "page_range": [
-        3276,
-        3276
+      "citations": [
+        {
+          "chunk_id": "cfa_2022_l1_combined:p3278:4938",
+          "edge_type": "defines",
+          "source_id": "cfa_2022_l1_combined"
+        }
       ],
-      "quote_preview": "The constraints section covers factors that need to be taken into account when c",
+      "legacy_provenance": {
+        "legacy_primary": "Vol.6/pp.5-25",
+        "note": "curated anchor matches legacy page reference",
+        "overlaps_cited_chunk": true,
+        "pdf_range": [
+          3274,
+          3294
+        ]
+      },
       "title": "Risk Tolerance and Objectives"
     },
-    "pm-systematic-vs-idiosyncratic-risk": {
-      "chunk_id": "cfa_2022_l1_combined:p3769:5675",
-      "legacy_primary": "Vol.6/pp.500-540 -> PDF 3769-3809",
-      "page_range": [
-        3769,
-        3769
+    "pm-stochastic-discount-factor-intuition": {
+      "citations": [
+        {
+          "chunk_id": "pm_cochrane_2005_asset_pricing_revised:p026:0030",
+          "edge_type": "defines",
+          "source_id": "pm_cochrane_2005_asset_pricing_revised"
+        },
+        {
+          "chunk_id": "cfa_2022_l1_combined:p3821:5793",
+          "edge_type": "supports",
+          "source_id": "cfa_2022_l1_combined"
+        }
       ],
-      "quote_preview": "SBS charges its clients an asset-based fee for these services.",
+      "legacy_provenance": null,
+      "title": "Stochastic Discount Factor — Intuition"
+    },
+    "pm-systematic-vs-idiosyncratic-risk": {
+      "citations": [
+        {
+          "chunk_id": "cfa_2022_l1_combined:p3169:4725",
+          "edge_type": "defines",
+          "source_id": "cfa_2022_l1_combined"
+        }
+      ],
+      "legacy_provenance": {
+        "legacy_primary": "Vol.6/pp.500-540",
+        "note": "curated anchor deviates from legacy page reference (legacy ref re-anchored to correct content by curation; verified on-topic + lint/verify-clean)",
+        "overlaps_cited_chunk": false,
+        "pdf_range": [
+          3769,
+          3809
+        ]
+      },
       "title": "Systematic vs Idiosyncratic Risk"
     }
   },
-  "schema_version": "cfa_legacy.pm_09_slice.v1"
+  "schema_version": "cfa_legacy.pm_09_slice.v2"
 }

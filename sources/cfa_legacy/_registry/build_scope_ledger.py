@@ -5,16 +5,28 @@ The scope ledger is the machine-readable record that partitions every
 legacy active card (the universe enumerated in
 ``card_migration_queue.json``) into exactly one disposition:
 
-  * ``active_emitted``            -- a card present in ``cards_manifest.json``.
+  * ``active_emitted``            -- a baseline card present in
+                                     ``cards_manifest.json``.
+  * ``active_deferred_then_emitted_this_loop``
+                                  -- a card deferred at baseline (it needed a
+                                     single-source page-offset map) and emitted
+                                     during THIS stabilization loop once that map
+                                     was built (the 5 Pedersen/Cochrane PM cards).
+                                     Present in the manifest, like
+                                     ``active_emitted``, but tracked separately so
+                                     the deferred->emitted transition is auditable.
   * ``active_deferred_this_loop`` -- a non-tainted card not yet emitted,
                                      slated for emission once its single-
-                                     source page-offset map exists
-                                     (the Pedersen/Cochrane PM stragglers).
+                                     source page-offset map exists (empty now
+                                     that the PM stragglers are emitted).
   * ``quarantined``               -- a notes-tainted card held out of the
                                      active corpus under Critical Rule 9.
   * ``excluded``                  -- a legacy card deliberately dropped
                                      from v0 scope for a recorded reason
                                      (empty today; reserved).
+
+The active corpus is ``active_emitted`` + ``active_deferred_then_emitted_this_loop``
+(both in the manifest); count reconciliation is against that sum.
 
 Disposition is derived from EMISSION REALITY (the manifest), not from the
 queue's own status booleans, because several queue flags
@@ -57,6 +69,19 @@ QUARANTINE_REAUTHOR_CRITERION = (
     "notes-provenance policy) before re-admitting to the active corpus"
 )
 DEFERRED_BLOCKER = "single-source page-offset map required before emission"
+RESOLVED_BLOCKER = "single-source page-offset map built"
+
+# Cards deferred at baseline (no single-source offset map) and emitted during this
+# stabilization loop once the Pedersen/Cochrane v1 offset maps were built. They live
+# in cards_manifest.json like any active card, but are tracked as a disjoint bucket so
+# the deferred->emitted transition stays auditable (AC-2). Each MUST now be emitted.
+DEFERRED_THEN_EMITTED_IDS: set[str] = {
+    "pm-active-management-and-alpha",
+    "pm-anomalies-and-cross-sectional-pricing",
+    "pm-efficient-markets-and-anomalies",
+    "pm-multifactor-asset-pricing-intuition",
+    "pm-stochastic-discount-factor-intuition",
+}
 
 
 def find_disk_cards(cards_dir: Path) -> set[str]:
@@ -110,23 +135,39 @@ def build_ledger(queue: list[dict], manifest_ids: list[str]) -> tuple[dict, list
     if orphans:
         failures.append(f"manifest cards absent from the legacy queue: {orphans}")
 
-    emitted = queue_ids & manifest_set
+    emitted_all = queue_ids & manifest_set
     unemitted = queue_ids - manifest_set
+
+    # Split the emitted set: cards deferred-at-baseline-but-emitted-this-loop are
+    # tracked separately from the baseline active_emitted set (AC-2). Every id in
+    # DEFERRED_THEN_EMITTED_IDS must be a known legacy card AND actually emitted.
+    dte_unknown = sorted(DEFERRED_THEN_EMITTED_IDS - queue_ids)
+    if dte_unknown:
+        failures.append(f"deferred-then-emitted ids absent from the legacy queue: {dte_unknown}")
+    dte_not_emitted = sorted(DEFERRED_THEN_EMITTED_IDS - manifest_set)
+    if dte_not_emitted:
+        failures.append(
+            f"deferred-then-emitted ids not present in cards_manifest.json: {dte_not_emitted}"
+        )
+    deferred_then_emitted = emitted_all & DEFERRED_THEN_EMITTED_IDS
+    emitted = emitted_all - deferred_then_emitted
 
     quarantined = {cid for cid in unemitted if queue_by_id[cid].get("notes_taint") is True}
     deferred = {cid for cid in unemitted if cid not in quarantined}
     excluded = set(EXCLUDED_IDS)
 
     # Excluded ids, if any, must be carved out of whichever bucket they
-    # would otherwise land in so the four sets stay disjoint.
+    # would otherwise land in so the buckets stay disjoint.
     emitted -= excluded
+    deferred_then_emitted -= excluded
     deferred -= excluded
     quarantined -= excluded
 
     # notes_taint=true cards that were emitted anyway: provenance was
     # superseded by a re-anchor; flag for review, do not quarantine.
     taint_emitted_review = sorted(
-        cid for cid in emitted if queue_by_id[cid].get("notes_taint") is True
+        cid for cid in (emitted | deferred_then_emitted)
+        if queue_by_id[cid].get("notes_taint") is True
     )
 
     def reading_of(cid: str) -> str:
@@ -135,14 +176,25 @@ def build_ledger(queue: list[dict], manifest_ids: list[str]) -> tuple[dict, list
     ledger = {
         "schema_version": LEDGER_SCHEMA_VERSION,
         "legacy_active_total": len(queue_ids),
+        "active_corpus_total": len(emitted) + len(deferred_then_emitted),
         "counts": {
             "active_emitted": len(emitted),
+            "active_deferred_then_emitted_this_loop": len(deferred_then_emitted),
             "active_deferred_this_loop": len(deferred),
             "quarantined": len(quarantined),
             "excluded": len(excluded),
         },
         "categories": {
             "active_emitted": sorted(emitted),
+            "active_deferred_then_emitted_this_loop": [
+                {
+                    "card_id": cid,
+                    "reading_id": reading_of(cid),
+                    "emitted": True,
+                    "resolved_blocker": RESOLVED_BLOCKER,
+                }
+                for cid in sorted(deferred_then_emitted)
+            ],
             "active_deferred_this_loop": [
                 {
                     "card_id": cid,
@@ -172,6 +224,7 @@ def build_ledger(queue: list[dict], manifest_ids: list[str]) -> tuple[dict, list
     # Invariant 1: pairwise disjoint.
     buckets = {
         "active_emitted": emitted,
+        "active_deferred_then_emitted_this_loop": deferred_then_emitted,
         "active_deferred_this_loop": deferred,
         "quarantined": quarantined,
         "excluded": excluded,
@@ -186,7 +239,7 @@ def build_ledger(queue: list[dict], manifest_ids: list[str]) -> tuple[dict, list
                 )
 
     # Invariant 2: union == universe.
-    union = emitted | deferred | quarantined | excluded
+    union = emitted | deferred_then_emitted | deferred | quarantined | excluded
     missing = sorted(queue_ids - union)
     extra = sorted(union - queue_ids)
     if missing:
@@ -213,19 +266,25 @@ def main() -> int:
     manifest_ids = load_manifest_ids(args.manifest)
     ledger, failures = build_ledger(queue, manifest_ids)
 
-    # Count reconciliation (Invariant 4).
+    # Count reconciliation (Invariant 4). The active corpus on disk/in the
+    # manifest is the SUM of both emitted buckets (active_emitted +
+    # active_deferred_then_emitted_this_loop), not active_emitted alone.
     disk_slugs = find_disk_cards(args.cards_dir)
     disk_count = len(disk_slugs)
     sidecar_count = count_history_sidecars(args.cards_dir)
     manifest_count = len(manifest_ids)
-    emitted_count = ledger["counts"]["active_emitted"]
+    active_corpus_count = ledger["active_corpus_total"]
 
     reconciliation = {
         "disk_md": disk_count,
         "manifest": manifest_count,
         "history_sidecars": sidecar_count,
-        "ledger_active_emitted": emitted_count,
-        "consistent": disk_count == manifest_count == sidecar_count == emitted_count,
+        "ledger_active_corpus": active_corpus_count,
+        "ledger_active_emitted": ledger["counts"]["active_emitted"],
+        "ledger_active_deferred_then_emitted_this_loop": ledger["counts"][
+            "active_deferred_then_emitted_this_loop"
+        ],
+        "consistent": disk_count == manifest_count == sidecar_count == active_corpus_count,
     }
     ledger["reconciliation"] = reconciliation
 
@@ -233,7 +292,7 @@ def main() -> int:
         failures.append(
             "count reconciliation mismatch: "
             f"disk_md={disk_count}, manifest={manifest_count}, "
-            f"sidecars={sidecar_count}, ledger_emitted={emitted_count}"
+            f"sidecars={sidecar_count}, ledger_active_corpus={active_corpus_count}"
         )
 
     # On-disk slugs and the manifest id set must agree exactly.
@@ -255,9 +314,11 @@ def main() -> int:
     print(
         "counts: "
         f"active_emitted={ledger['counts']['active_emitted']}, "
+        f"active_deferred_then_emitted_this_loop={ledger['counts']['active_deferred_then_emitted_this_loop']}, "
         f"active_deferred_this_loop={ledger['counts']['active_deferred_this_loop']}, "
         f"quarantined={ledger['counts']['quarantined']}, "
         f"excluded={ledger['counts']['excluded']}, "
+        f"active_corpus={ledger['active_corpus_total']}, "
         f"universe={ledger['legacy_active_total']}"
     )
     print(

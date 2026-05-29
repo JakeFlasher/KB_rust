@@ -1,44 +1,68 @@
 #!/usr/bin/env python3
 """Emit the 09_portfolio_management_and_asset_pricing slice of CFA legacy cacg.v0 cards.
 
-Scope: the 18 cards that cite ONLY cfa_2022_l1_combined (using the v2 per-volume
-offset map built in bucket 1). The 5 multi-source PM cards (citing Pedersen or
-Cochrane) are deferred until those single-source offset maps are built.
+Scope: all 23 active PM cards, rendered from two curated citation registries:
 
-Pipeline per card:
-  1. Read legacy frontmatter -> extract Vol.N/pp.<start>-<end>, "Use when",
-     title (H1 in body).
-  2. Convert volume_page -> pdf_page via volume_page_map.py.
-  3. Find smallest chunk in chunks_manifest with source_id=cfa_2022_l1_combined
-     and page range overlapping the cited PDF range.
-  4. Pick a verbatim quote: first sentence-like phrase 40-200 chars from chunk
-     text, preferring substantive content.
-  5. Build cacg.v0 frontmatter (schema_version, id, title, reading_id, summary
-     [<=400 chars], tags, citations).
-  6. Render card body (preserved verbatim from legacy).
-  7. Atomic write to cards/cfa_legacy/09_portfolio_management_and_asset_pricing/.
+  * 18 CFA-only cards -> pm_09_cfa_curated_citations.json (each cites
+    cfa_2022_l1_combined).
+  * 5 multi-source cards -> pm_09_multi_source_citations.json (each cites a
+    Pedersen/Cochrane `defines` primary, backed by a single-source v1 offset map,
+    plus a CFA-combined/Cochrane `supports` secondary). These 5 were deferred at
+    baseline until the single-source offset maps were built.
+
+Why curated (not a heuristic)?  The naive "legacy Vol.N/pp -> v2 offset map ->
+smallest overlapping chunk -> first-sentence quote" path does NOT reproduce the
+hand-curated on-disk cards: for 14 of the 18 CFA cards the curated anchor
+deliberately deviates from the legacy page reference (the legacy ref maps, via the
+combined offset map, to a different — often wrong — chunk; curation re-anchored each
+to the correct content). Driving emission from curated citations is therefore the
+only faithful, reproducible path. The legacy reference + its offset-map range are
+recorded as `legacy_provenance` in the CFA curated registry and echoed into the
+emitted plan sidecar (pm_09_slice_citation_plan.json) for auditability — they are
+NOT written into card frontmatter (cards carry only cacg.v0 fields).
+
+Legacy card bodies are read verbatim from
+<legacy-root>/.claude/knowledge/09_.../<card_id>.md, where <legacy-root> defaults to
+/home/jakeshea/CFA_reading (override via --legacy-root or the KB_LEGACY_ROOT env).
+The on-disk card bodies are byte-identical to these legacy bodies.
+
+EVERY citation is validated before any card is written: the source is authorized for
+the reading (source_matrix.json); the chunk exists with a matching source_id;
+chunk_hash matches; page_range is within the chunk's [start_page, end_page] span; the
+quote is an exact, control-character-free substring of the chunk text; and for
+Pedersen/Cochrane the single-source offset map loads with >=3 verified_evidence
+triples. Any failure aborts the run (non-zero exit) before any write.
+
+Frontmatter is rendered without card_hash; run `KB_FROZEN_CLOCK=1 kb index`
+afterward to recompute card_hash + regenerate manifests/sidecars. With unchanged
+inputs the run is a no-op (cards regenerate byte-identically).
 """
 
 from __future__ import annotations
 
 import argparse
 import json
-import re
-import sys
+import os
+import unicodedata
 from pathlib import Path
 from typing import Any
 
 ROOT = Path(__file__).resolve().parents[3]
-LEGACY_ROOT = Path("/home/jakeshea/CFA_reading/CFA_reading")
+# Real legacy-card root (override via --legacy-root or KB_LEGACY_ROOT). The legacy
+# bodies live at <legacy-root>/.claude/knowledge/<reading>/. NOTE: an earlier nested
+# default (/home/jakeshea/CFA_reading/CFA_reading) was wrong and is corrected here.
+DEFAULT_LEGACY_ROOT = Path(os.environ.get("KB_LEGACY_ROOT", "/home/jakeshea/CFA_reading"))
 REGISTRY = ROOT / "sources/cfa_legacy/_registry"
 CARDS_DIR = ROOT / "cards/cfa_legacy/09_portfolio_management_and_asset_pricing"
 OUT = ROOT / "out/cfa_legacy"
 COORD_MAPS = REGISTRY / "page_coordinate_maps"
+SOURCE_MATRIX = OUT / "source_matrix.json"
+CFA_REGISTRY = REGISTRY / "pm_09_cfa_curated_citations.json"
+MULTI_SOURCE_REGISTRY = REGISTRY / "pm_09_multi_source_citations.json"
+READING_ID = "09_portfolio_management_and_asset_pricing"
+LEGACY_SUBDIR = ".claude/knowledge/09_portfolio_management_and_asset_pricing"
 
-sys.path.insert(0, str(COORD_MAPS))
-from volume_page_map import load_map, vol_page_to_pdf_page  # noqa: E402
-
-# 18 CFA-L1-only PM cards from the migration queue
+# Expected card sets (a guard against registry drift). Union = the 23 active PM cards.
 CARD_IDS = [
     "pm-active-vs-passive-decision",
     "pm-allocation-process",
@@ -59,11 +83,20 @@ CARD_IDS = [
     "pm-risk-tolerance-and-objectives",
     "pm-systematic-vs-idiosyncratic-risk",
 ]
+MULTI_SOURCE_CARD_IDS = [
+    "pm-active-management-and-alpha",
+    "pm-anomalies-and-cross-sectional-pricing",
+    "pm-efficient-markets-and-anomalies",
+    "pm-multifactor-asset-pricing-intuition",
+    "pm-stochastic-discount-factor-intuition",
+]
 
-VOL_PAGE_RE = re.compile(r"Vol\.(\d+)/pp\.(\d+)(?:-(\d+))?")
-PRIMARY_RE = re.compile(r"^Primary raw source:\s*(.+)$", re.MULTILINE)
-USE_WHEN_RE = re.compile(r"^Use when:\s*(.+?)(?=\n[A-Z][a-zA-Z ]+:|\n---)", re.DOTALL | re.MULTILINE)
-H1_RE = re.compile(r"^#\s+(.+)$", re.MULTILINE)
+# Sources whose single-source v1 offset map must load with >=3 verified_evidence
+# before any citation against them is accepted.
+SINGLE_SOURCE_MAP_SOURCES = {
+    "pm_pedersen_2015_efficiently_inefficient",
+    "pm_cochrane_2005_asset_pricing_revised",
+}
 
 
 def read_json(path: Path) -> Any:
@@ -85,81 +118,21 @@ def split_legacy_card(legacy_md: Path) -> tuple[str, str]:
     return parts[1], parts[2].lstrip("\n")
 
 
-def extract_use_when(frontmatter: str) -> str:
-    m = USE_WHEN_RE.search(frontmatter)
-    if not m:
-        return ""
-    txt = m.group(1).strip()
-    # Collapse newlines + whitespace
-    txt = re.sub(r"\s+", " ", txt)
-    return txt
+def illegal_text_chars(text: str) -> list[str]:
+    """Quote characters that are PDF-extraction artifacts / illegal in card text:
+    control (Cc), format (Cf — e.g. soft-hyphen U+00AD, ZWSP U+200B), line/paragraph
+    separators (Zl/Zp), and Unicode noncharacters (incl. U+FFFE from the Pdfium
+    STX->U+FFFE map). Newlines are Cc and thus rejected — quotes must be single-line."""
+    bad: list[str] = []
+    for c in text:
+        o = ord(c)
+        noncharacter = (0xFDD0 <= o <= 0xFDEF) or (o & 0xFFFE) == 0xFFFE
+        if noncharacter or unicodedata.category(c) in {"Cc", "Cf", "Zl", "Zp"}:
+            bad.append(hex(o))
+    return bad
 
 
-def extract_title(body: str) -> str:
-    m = H1_RE.search(body)
-    return m.group(1).strip() if m else "Untitled"
-
-
-def extract_primary_vol_pages(frontmatter: str) -> tuple[int, int, int]:
-    p = PRIMARY_RE.search(frontmatter)
-    if not p:
-        raise ValueError("no Primary raw source")
-    val = p.group(1).strip()
-    m = VOL_PAGE_RE.search(val)
-    if not m:
-        raise ValueError(f"no Vol.N/pp.X-Y pattern in: {val}")
-    vol = int(m.group(1))
-    page_start = int(m.group(2))
-    page_end = int(m.group(3)) if m.group(3) else page_start
-    return vol, page_start, page_end
-
-
-def normalize(text: str) -> str:
-    return " ".join(text.split())
-
-
-def find_smallest_overlap_chunk(chunks: list[dict], source_id: str, pdf_start: int, pdf_end: int) -> dict | None:
-    """Return the smallest-page-span chunk whose page range overlaps [pdf_start, pdf_end]."""
-    candidates = [
-        c for c in chunks
-        if c["source_id"] == source_id
-        and c["start_page"] <= pdf_end
-        and c["end_page"] >= pdf_start
-    ]
-    if not candidates:
-        return None
-    # Sort by page-span size (ascending), then by closeness to pdf_start
-    candidates.sort(key=lambda c: (c["end_page"] - c["start_page"], abs(c["start_page"] - pdf_start)))
-    return candidates[0]
-
-
-SENT_END = re.compile(r"(?<=[.?!])\s+(?=[A-Z])")
-
-
-def pick_quote(chunk_text: str, min_len: int = 40, max_len: int = 200) -> str:
-    """Pick a verbatim quote: first sentence-like phrase in [min_len, max_len]."""
-    text = normalize(chunk_text)
-    sentences = SENT_END.split(text)
-    for s in sentences:
-        # Skip boilerplate / headers
-        if any(s.upper().startswith(b) for b in ["READING ", "CHAPTER ", "VOLUME ", "CONTENTS", "STUDY SESSION"]):
-            continue
-        if "STANDARDS OF PRACTICE" in s.upper() and len(s) < 80:
-            continue
-        if min_len <= len(s) <= max_len:
-            return s.strip()
-    # Fallback: head of text up to max_len
-    return text[:max_len].rstrip()
-
-
-def derive_tags(card_id: str) -> list[str]:
-    """Generate tags from card_id: ['portfolio-management', '<topic-suffix>']."""
-    parts = card_id.split("-")
-    if len(parts) >= 2:
-        # Use first 2-3 words after 'pm' prefix
-        suffix = "-".join(parts[1:3]) if len(parts) > 2 else parts[1]
-        return ["portfolio-management", suffix]
-    return ["portfolio-management"]
+_REQUIRED_CITATION_FIELDS = ("source_id", "chunk_id", "chunk_hash", "page_range", "quote", "edge_type")
 
 
 def render_scalar(value: Any) -> str:
@@ -204,85 +177,195 @@ def render_card(frontmatter: dict[str, Any], body: str) -> str:
     return "\n".join(lines) + "\n" + body
 
 
+def validate_citation(
+    cit: dict[str, Any],
+    *,
+    card_id: str,
+    allowed: set[str],
+    chunks_by_id: dict[str, dict],
+    retracted_chunks: set[str],
+    retracted_sources: set[str],
+) -> None:
+    """Abort the run (non-zero exit) unless every trust check passes for `cit`.
+
+    Checks: every required field present; source authorized for the reading and not
+    retracted; chunk exists, not retracted, with matching source_id; chunk_hash
+    matches; page_range well-formed and within the chunk's [start_page, end_page]
+    span; quote is an exact, artifact-free substring of the chunk text; and for
+    Pedersen/Cochrane the single-source offset map loads with >=3 verified_evidence
+    and the cited page is within the source's PDF page count.
+    """
+    missing = [f for f in _REQUIRED_CITATION_FIELDS if f not in cit]
+    if missing:
+        raise SystemExit(f"{card_id}: citation missing required field(s) {missing}")
+    src = cit["source_id"]
+    if src not in allowed:
+        raise SystemExit(f"{card_id}: source {src!r} not authorized for {READING_ID}")
+    if src in retracted_sources:
+        raise SystemExit(f"{card_id}: source {src!r} is retracted")
+    if cit["chunk_id"] in retracted_chunks:
+        raise SystemExit(f"{card_id}: chunk {cit['chunk_id']} is retracted")
+    chunk = chunks_by_id.get(cit["chunk_id"])
+    if chunk is None:
+        raise SystemExit(f"{card_id}: chunk {cit['chunk_id']} not found in chunks_manifest")
+    if chunk["source_id"] != src:
+        raise SystemExit(
+            f"{card_id}: chunk {cit['chunk_id']} source {chunk['source_id']!r} != citation source {src!r}"
+        )
+    if chunk["chunk_hash"] != cit["chunk_hash"]:
+        raise SystemExit(f"{card_id}: chunk_hash mismatch for {cit['chunk_id']}")
+    pr = cit["page_range"]
+    if not (isinstance(pr, list) and len(pr) == 2 and all(isinstance(x, int) for x in pr)):
+        raise SystemExit(f"{card_id}: page_range {pr!r} is not a [int, int] pair ({cit['chunk_id']})")
+    if not (chunk["start_page"] <= pr[0] <= pr[1] <= chunk["end_page"]):
+        raise SystemExit(
+            f"{card_id}: page_range {pr} not within chunk span "
+            f"[{chunk['start_page']}, {chunk['end_page']}] for {cit['chunk_id']}"
+        )
+    if cit["quote"] not in chunk["text"]:
+        raise SystemExit(f"{card_id}: quote is not a verbatim substring of chunk {cit['chunk_id']}")
+    bad = illegal_text_chars(cit["quote"])
+    if bad:
+        raise SystemExit(f"{card_id}: quote contains illegal chars {bad} ({cit['chunk_id']})")
+    if src in SINGLE_SOURCE_MAP_SOURCES:
+        map_path = COORD_MAPS / f"{src}.json"
+        if not map_path.exists():
+            raise SystemExit(f"{card_id}: single-source offset map missing: {map_path}")
+        map_doc = read_json(map_path)
+        map_source = map_doc["sources"][0]
+        evidence = map_source.get("verified_evidence", [])
+        if len(evidence) < 3:
+            raise SystemExit(
+                f"{card_id}: offset map {src} has only {len(evidence)} verified_evidence (need >=3)"
+            )
+        page_count = map_source.get("page_count_pdf")
+        if isinstance(page_count, int) and not (1 <= pr[0] <= pr[1] <= page_count):
+            raise SystemExit(
+                f"{card_id}: cited page_range {pr} outside {src} PDF page count "
+                f"[1, {page_count}] ({cit['chunk_id']})"
+            )
+
+
+def emit_card(fm: dict[str, Any], body: str, card_id: str, *, force: bool, emitted: list[Path]) -> None:
+    text = render_card(fm, body)
+    target = CARDS_DIR / f"{card_id}.md"
+    if target.exists() and not force:
+        old = target.read_text(encoding="utf-8")
+        if old == text:
+            emitted.append(target)
+            return
+        raise SystemExit(f"{target}: exists and differs; rerun with --force")
+    write_atomic(target, text)
+    emitted.append(target)
+
+
+def emit_registry_card(
+    card: dict[str, Any],
+    *,
+    legacy_root: Path,
+    allowed: set[str],
+    chunks_by_id: dict[str, dict],
+    retracted_chunks: set[str],
+    retracted_sources: set[str],
+    force: bool,
+    plan_only: bool,
+    emitted: list[Path],
+    plan: dict[str, Any],
+) -> None:
+    """Validate + emit one curated card (body verbatim from legacy; metadata from the registry)."""
+    card_id = card["card_id"]
+    legacy_md = legacy_root / LEGACY_SUBDIR / f"{card_id}.md"
+    if not legacy_md.exists():
+        raise SystemExit(f"missing legacy card: {legacy_md}")
+    _legacy_fm, body = split_legacy_card(legacy_md)
+    citations = card["citations"]
+    if not citations:
+        raise SystemExit(f"{card_id}: curated registry entry has no citations")
+    for cit in citations:
+        validate_citation(
+            cit, card_id=card_id, allowed=allowed, chunks_by_id=chunks_by_id,
+            retracted_chunks=retracted_chunks, retracted_sources=retracted_sources,
+        )
+    plan[card_id] = {
+        "title": card["title"],
+        "citations": [
+            {"source_id": c["source_id"], "chunk_id": c["chunk_id"], "edge_type": c["edge_type"]}
+            for c in citations
+        ],
+        "legacy_provenance": card.get("legacy_provenance"),
+    }
+    if plan_only:
+        return
+    fm = {
+        "schema_version": "cacg.v0",
+        "id": card_id,
+        "title": card["title"],
+        "reading_id": READING_ID,
+        "summary": card["summary"],
+        "tags": card["tags"],
+        "citations": citations,
+    }
+    emit_card(fm, body, card_id, force=force, emitted=emitted)
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--plan-only", action="store_true")
     parser.add_argument("--force", action="store_true")
+    parser.add_argument(
+        "--legacy-root",
+        type=Path,
+        default=DEFAULT_LEGACY_ROOT,
+        help="Root holding .claude/knowledge/<reading>/ legacy card bodies "
+        "(default: $KB_LEGACY_ROOT or /home/jakeshea/CFA_reading)",
+    )
     args = parser.parse_args()
+    legacy_root = args.legacy_root
 
-    coord_map = load_map(COORD_MAPS / "cfa_2022_l1_combined.json")
-    chunks_manifest = read_json(OUT / "chunks_manifest.json")
-    chunks = chunks_manifest["chunks"]
+    manifest = read_json(OUT / "chunks_manifest.json")
+    chunks_by_id = {c["chunk_id"]: c for c in manifest["chunks"]}
+    retracted_chunks = set(manifest.get("retracted_chunk_ids", []))
+    retracted_sources = set(manifest.get("retracted_source_ids", []))
+    allowed = set(read_json(SOURCE_MATRIX)["allowed"][READING_ID])
 
-    emitted = []
-    plan = {}
-    for card_id in CARD_IDS:
-        legacy_md = LEGACY_ROOT / ".claude/knowledge/09_portfolio_management_and_asset_pricing" / f"{card_id}.md"
-        if not legacy_md.exists():
-            raise SystemExit(f"missing legacy card: {legacy_md}")
-        frontmatter, body = split_legacy_card(legacy_md)
-        title = extract_title(body)
-        use_when = extract_use_when(frontmatter)
-        vol, pg_start, pg_end = extract_primary_vol_pages(frontmatter)
-        pdf_start = vol_page_to_pdf_page(coord_map, volume=vol, volume_page=pg_start)
-        pdf_end = vol_page_to_pdf_page(coord_map, volume=vol, volume_page=pg_end)
-        chunk = find_smallest_overlap_chunk(chunks, "cfa_2022_l1_combined", pdf_start, pdf_end)
-        if chunk is None:
-            raise SystemExit(f"{card_id}: no overlapping chunk for Vol.{vol}/pp.{pg_start}-{pg_end} -> PDF {pdf_start}-{pdf_end}")
-        quote = pick_quote(chunk["text"])
-        cite_page_range = [max(chunk["start_page"], pdf_start), min(chunk["end_page"], pdf_end)]
-        citation = {
-            "source_id": "cfa_2022_l1_combined",
-            "chunk_id": chunk["chunk_id"],
-            "chunk_hash": chunk["chunk_hash"],
-            "page_range": cite_page_range,
-            "quote": quote,
-            "edge_type": "supports",
-        }
+    cfa_reg = read_json(CFA_REGISTRY)
+    ms_reg = read_json(MULTI_SOURCE_REGISTRY)
+    cfa_ids = [c["card_id"] for c in cfa_reg["cards"]]
+    ms_ids = [c["card_id"] for c in ms_reg["cards"]]
+    if set(cfa_ids) != set(CARD_IDS):
+        raise SystemExit(f"CFA registry card set drift: {set(cfa_ids) ^ set(CARD_IDS)}")
+    if set(ms_ids) != set(MULTI_SOURCE_CARD_IDS):
+        raise SystemExit(f"multi-source registry card set drift: {set(ms_ids) ^ set(MULTI_SOURCE_CARD_IDS)}")
 
-        # Summary: prefix title + use-when, truncate to 400
-        summary = f"{title}: {use_when}".strip()
-        if len(summary) > 400:
-            summary = summary[:397] + "..."
-        if len(summary) < 80:
-            summary = (summary + " " * 80)[:80]
-
-        plan[card_id] = {
-            "title": title,
-            "legacy_primary": f"Vol.{vol}/pp.{pg_start}-{pg_end} -> PDF {pdf_start}-{pdf_end}",
-            "chunk_id": chunk["chunk_id"],
-            "page_range": cite_page_range,
-            "quote_preview": quote[:80],
-        }
-
-        if args.plan_only:
-            continue
-
-        fm = {
-            "schema_version": "cacg.v0",
-            "id": card_id,
-            "title": title,
-            "reading_id": "09_portfolio_management_and_asset_pricing",
-            "summary": summary,
-            "tags": derive_tags(card_id),
-            "citations": [citation],
-        }
-        text = render_card(fm, body)
-        target = CARDS_DIR / f"{card_id}.md"
-        if target.exists() and not args.force:
-            old = target.read_text(encoding="utf-8")
-            if old == text:
-                emitted.append(target)
-                continue
-            raise SystemExit(f"{target}: exists and differs; rerun with --force")
-        write_atomic(target, text)
-        emitted.append(target)
+    emitted: list[Path] = []
+    plan: dict[str, Any] = {}
+    for card in cfa_reg["cards"] + ms_reg["cards"]:
+        emit_registry_card(
+            card,
+            legacy_root=legacy_root,
+            allowed=allowed,
+            chunks_by_id=chunks_by_id,
+            retracted_chunks=retracted_chunks,
+            retracted_sources=retracted_sources,
+            force=args.force,
+            plan_only=args.plan_only,
+            emitted=emitted,
+            plan=plan,
+        )
 
     write_atomic(
         REGISTRY / "pm_09_slice_citation_plan.json",
-        json.dumps({"schema_version": "cfa_legacy.pm_09_slice.v1", "cards": plan}, indent=2, sort_keys=True, ensure_ascii=False) + "\n",
+        json.dumps(
+            {"schema_version": "cfa_legacy.pm_09_slice.v2", "cards": plan},
+            indent=2, sort_keys=True, ensure_ascii=False,
+        ) + "\n",
     )
-    print(json.dumps({"emitted": [str(p.relative_to(ROOT)) for p in emitted], "plan_only": args.plan_only}, indent=2))
+    print(json.dumps({
+        "emitted": [str(p.relative_to(ROOT)) for p in emitted],
+        "card_count": len(plan),
+        "cfa_legacy_anchor_deviations": cfa_reg.get("legacy_anchor_deviation_count"),
+        "plan_only": args.plan_only,
+    }, indent=2))
     return 0
 
 

@@ -1,0 +1,187 @@
+{
+  "schema_version": "cfa_legacy.pm_09_multi_source.v1",
+  "generated_by": "build (R6): curated from on-disk R5 cards; consumed by emit_09_pm_slice.py",
+  "note": "Curated multi-source citations for the 5 PM cards deferred at baseline (Pedersen/Cochrane single-source offset maps now built). Each card: one Pedersen/Cochrane `defines` primary + one CFA-combined/Cochrane `supports` secondary. emit_09_pm_slice.py validates every citation before writing.",
+  "cards": [
+    {
+      "card_id": "pm-active-management-and-alpha",
+      "title": "Active Management and Alpha",
+      "summary": "Active Management and Alpha: framing the evaluation of an active manager and the structure of alpha capacity — what makes a performance measure informative, why expected alpha decreases with assets under management, and how active risk-budgeting respects capacity limits",
+      "tags": [
+        "portfolio-management",
+        "active-management",
+        "alpha"
+      ],
+      "deferred_at_baseline": true,
+      "resolved_blocker": "single-source page-offset map built",
+      "citations": [
+        {
+          "source_id": "pm_pedersen_2015_efficiently_inefficient",
+          "chunk_id": "pm_pedersen_2015_efficiently_inefficient:p048:0052",
+          "chunk_hash": "f859afe4729bad71cf42dbe5f63c1745be745da084879b6e2ec033f848a97a30",
+          "page_range": [
+            48,
+            49
+          ],
+          "quote": "Beta is the strategy’s market exposure, while alpha is the excess return after accounting for performance due to market movements.",
+          "edge_type": "defines"
+        },
+        {
+          "source_id": "cfa_2022_l1_combined",
+          "chunk_id": "cfa_2022_l1_combined:p3838:5848",
+          "chunk_hash": "3e27d3610cdb4797e0e87430597c332b3ca7d6e3bdfc7dafa9fcbaf80de1a02f",
+          "page_range": [
+            3838,
+            3838
+          ],
+          "quote": "Tracking error The standard deviation of the differences between a portfolio’s returns and its benchmark’s returns; a synonym of active risk.",
+          "edge_type": "supports"
+        }
+      ]
+    },
+    {
+      "card_id": "pm-anomalies-and-cross-sectional-pricing",
+      "title": "Anomalies and Cross-Sectional Pricing",
+      "summary": "Anomalies and Cross-Sectional Pricing: cataloging the empirical cross-sectional anomalies (value, momentum, quality, low-volatility, size) at intuition level — what each anomaly captures, why it persists in equilibrium under the efficiently-inefficient framing, and how the anomalies fit into the multifactor pricing structure",
+      "tags": [
+        "portfolio-management",
+        "anomalies",
+        "cross-sectional"
+      ],
+      "deferred_at_baseline": true,
+      "resolved_blocker": "single-source page-offset map built",
+      "citations": [
+        {
+          "source_id": "pm_pedersen_2015_efficiently_inefficient",
+          "chunk_id": "pm_pedersen_2015_efficiently_inefficient:p156:0205",
+          "chunk_hash": "2c89310c15d929ee677b0ab90fdbb9902f9f782218630f35ad46219d11a93dd1",
+          "page_range": [
+            156,
+            157
+          ],
+          "quote": "Fundamental quants trade on factors such as value, momentum, quality, size, and low risk.",
+          "edge_type": "defines"
+        },
+        {
+          "source_id": "pm_cochrane_2005_asset_pricing_revised",
+          "chunk_id": "pm_cochrane_2005_asset_pricing_revised:p167:0197",
+          "chunk_hash": "00811a8ca8754959fe9d90828803106cc237aa9c222f78eece5d95eb19df89b4",
+          "page_range": [
+            167,
+            168
+          ],
+          "quote": "Linear factor pricing models are the most popular models of this sort in finance.",
+          "edge_type": "supports"
+        }
+      ]
+    },
+    {
+      "card_id": "pm-efficient-markets-and-anomalies",
+      "title": "Efficiently Inefficient Markets",
+      "summary": "Efficiently Inefficient Markets: framing the Pedersen \"efficiently inefficient\" view of markets — why prices are nearly but not exactly efficient, why active managers can earn returns above the market in equilibrium, and how anomalies fit as compensation for risk-bearing capacity rather than as mispricings to be arbitraged away",
+      "tags": [
+        "portfolio-management",
+        "efficient-markets",
+        "anomalies"
+      ],
+      "deferred_at_baseline": true,
+      "resolved_blocker": "single-source page-offset map built",
+      "citations": [
+        {
+          "source_id": "pm_pedersen_2015_efficiently_inefficient",
+          "chunk_id": "pm_pedersen_2015_efficiently_inefficient:p025:0021",
+          "chunk_hash": "3eda5ef5742536df7a6aed802b0a6027adce67a31bd04464133fd25f27b8cebf",
+          "page_range": [
+            25,
+            25
+          ],
+          "quote": "The truth is equally well-defined: the truth is that markets are efficiently inefficient.",
+          "edge_type": "defines"
+        },
+        {
+          "source_id": "cfa_2022_l1_combined",
+          "chunk_id": "cfa_2022_l1_combined:p3702:5573",
+          "chunk_hash": "fb658aff770f546e1aded65a2942252bf51ee1595d8c599639cd84cf38f96a17",
+          "page_range": [
+            3702,
+            3702
+          ],
+          "quote": "Capacity is the investment amount beyond which returns will be negatively affected by new investments.",
+          "edge_type": "supports"
+        }
+      ]
+    },
+    {
+      "card_id": "pm-multifactor-asset-pricing-intuition",
+      "title": "Multifactor Asset Pricing — Intuition",
+      "summary": "Multifactor Asset Pricing — Intuition: extending the single-factor CAPM into a linear multifactor pricing intuition — what makes a \"factor\", why expected return is linear in factor exposures, and how the multibeta representation connects to mean-variance frontier geometry",
+      "tags": [
+        "portfolio-management",
+        "multifactor",
+        "asset-pricing"
+      ],
+      "deferred_at_baseline": true,
+      "resolved_blocker": "single-source page-offset map built",
+      "citations": [
+        {
+          "source_id": "pm_cochrane_2005_asset_pricing_revised",
+          "chunk_id": "pm_cochrane_2005_asset_pricing_revised:p097:0111",
+          "chunk_hash": "fdc5c6685baf0fb5b3f68ee976c5b13bfd1453e850048304822cdaa99301a3b0",
+          "page_range": [
+            97,
+            98
+          ],
+          "quote": "βi, a is interpreted as the amount of exposure of asset i to factor a risks, and λa is interpreted as the price of such risk exposure.",
+          "edge_type": "defines"
+        },
+        {
+          "source_id": "cfa_2022_l1_combined",
+          "chunk_id": "cfa_2022_l1_combined:p3832:5828",
+          "chunk_hash": "6880f6dd6335640d98bb23c16f1332a72427fbfdc57266fd56512c49ef2b1795",
+          "page_range": [
+            3832,
+            3832
+          ],
+          "quote": "of the expected return of a security given certain parameters and estimates of the values of the independent variables in the model.",
+          "edge_type": "supports"
+        }
+      ]
+    },
+    {
+      "card_id": "pm-stochastic-discount-factor-intuition",
+      "title": "Stochastic Discount Factor — Intuition",
+      "summary": "Stochastic Discount Factor — Intuition: framing the stochastic discount factor (SDF) as the unifying object of asset pricing — what role it plays, how it produces every linear factor pricing model as a special case, and why its existence follows from the law of one price",
+      "tags": [
+        "portfolio-management",
+        "stochastic-discount-factor",
+        "asset-pricing"
+      ],
+      "deferred_at_baseline": true,
+      "resolved_blocker": "single-source page-offset map built",
+      "citations": [
+        {
+          "source_id": "pm_cochrane_2005_asset_pricing_revised",
+          "chunk_id": "pm_cochrane_2005_asset_pricing_revised:p026:0030",
+          "chunk_hash": "a1d4dc94a457f2c7bda430e8b42d7ace91978bab74c27717d6ac90fdcc61e053",
+          "page_range": [
+            26,
+            27
+          ],
+          "quote": "All asset pricing models amount to alternative ways of connecting the stochastic discount factor to data.",
+          "edge_type": "defines"
+        },
+        {
+          "source_id": "cfa_2022_l1_combined",
+          "chunk_id": "cfa_2022_l1_combined:p3821:5793",
+          "chunk_hash": "1a3b2797bfa0ffc817eec8a05bfcfe57b6c1f913c466dc9aaa7bd90b43e5a295",
+          "page_range": [
+            3821,
+            3822
+          ],
+          "quote": "The condition in a financial market in which two equivalent financial instruments or combinations of financial instruments can sell for only one price.",
+          "edge_type": "supports"
+        }
+      ]
+    }
+  ]
+}
