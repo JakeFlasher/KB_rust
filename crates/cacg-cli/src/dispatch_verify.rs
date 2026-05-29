@@ -7,6 +7,7 @@ use cacg_cli::round_summary::{
     verify_round_summary, RoundSummaryResult, Verdict, VerifyRoundSummaryError,
 };
 use cacg_cli::VerifyArgs;
+use cacg_core::diagnostic::{codes, Diagnostic, Severity};
 use cacg_core::retraction::RetractionSpec;
 use cacg_core::source_matrix::AuthSpec;
 use cacg_core::verify::{verify_one_card, SemanticEvaluator};
@@ -99,6 +100,36 @@ pub(crate) fn dispatch_verify(args: VerifyArgs) -> ExitCode {
         return ExitCode::FAILURE;
     };
 
+    // Card-path shape preflight (BL-20260518-shape-check-fs-inputs).
+    // A missing / directory / dangling-symlink card path is a CLI input
+    // error: report `CACG-CLI-001` "file not found" at the boundary,
+    // BEFORE building the Layer-3 evaluator, deriving the sibling
+    // `cards_manifest.json`, or touching the shared lint journal. The
+    // contracted `kb verify <missing> --source-matrix <m>` command omits
+    // `--chunks-manifest`, so the derived manifest AND the journal both
+    // default to the root `out/`; a stale/malformed manifest there would
+    // otherwise fail-close with `CACG-MAN-001`, and a pre-existing
+    // corrupt journal with `CACG-JNL-001` — either of which would shadow
+    // the real diagnostic. Like the sibling `CACG-CLI-003` input error
+    // above, a nonexistent path is reported directly: it has no card
+    // identity to verify or journal, so it never enters the
+    // verification/journal pipeline (the core `verify_one_card` runner
+    // still journals a missing card when invoked directly). `is_file()`
+    // (not `exists()`) routes a directory or dangling symlink here too,
+    // and reusing the canonical `CLI_001` code + diagnostic formatter
+    // keeps the wire shape `<path>: CACG-CLI-001 file not found: <path>`
+    // identical to the runner's own preflight.
+    if !card_path.is_file() {
+        let diag = Diagnostic::new(
+            codes::CLI_001,
+            Severity::Error,
+            format!("file not found: {}", card_path.display()),
+        )
+        .with_file(card_path.display().to_string());
+        emit_lint_diagnostics(&[diag]);
+        return ExitCode::FAILURE;
+    }
+
     // Build the optional Layer-3 evaluator BEFORE consuming any
     // `args` fields by move so a bad `--semantic <path>` fails fast
     // with `CACG-MAN-001` (mirrors Python `_build_semantic_spec`).
@@ -126,7 +157,10 @@ pub(crate) fn dispatch_verify(args: VerifyArgs) -> ExitCode {
     // Derive cards_manifest.json from the chunks-manifest directory.
     // A present-but-malformed manifest is fail-closed: surface
     // CACG-MAN-001 rather than silently treating it as
-    // no-retractions (mirrors Python `_cmd_verify`).
+    // no-retractions (mirrors Python `_cmd_verify`). Reached only for an
+    // EXISTING card, so manifest validation is never weakened by the
+    // missing-card shortcut above
+    // (BL-20260522-port-pydantic-validators-not-just-fields).
     let cards_manifest_path = chunks_manifest_path.parent().map_or_else(
         || PathBuf::from("cards_manifest.json"),
         |p| p.join("cards_manifest.json"),

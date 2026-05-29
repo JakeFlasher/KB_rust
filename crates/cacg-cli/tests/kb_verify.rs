@@ -193,3 +193,52 @@ fn kb_verify_skip_lint_clean_card_succeeds() {
     );
     assert_eq!(count_journal_events(&journal), 1);
 }
+
+#[test]
+fn kb_verify_missing_card_short_command_is_cacg_cli_001_not_man_001() {
+    // Regression for the AC-1 contracted command shape:
+    //   kb verify <missing>.md --source-matrix <matrix>
+    // with NO --chunks-manifest. Omitting --chunks-manifest defaults it
+    // to `<cwd>/out/chunks_manifest.json`, so the derived sibling
+    // cards_manifest.json resolves to `<cwd>/out/cards_manifest.json`.
+    // When that sibling is stale/malformed, the pre-fix dispatcher
+    // fail-closed with CACG-MAN-001 BEFORE the missing-card preflight,
+    // shadowing the contracted CACG-CLI-001. The fix runs an `is_file()`
+    // card-path preflight first (BL-20260518-shape-check-fs-inputs), so a
+    // missing card path surfaces CACG-CLI-001 regardless of the sibling
+    // manifest's health, while an EXISTING card still fail-closes on a
+    // malformed manifest (covered elsewhere).
+    let tmp = tempfile::tempdir().expect("tempdir");
+    let out_dir = tmp.path().join("out");
+    fs::create_dir_all(&out_dir).expect("create out/ dir");
+    // A malformed sibling cards_manifest.json that WOULD fail-close with
+    // CACG-MAN-001 if it were ever loaded for this invocation.
+    fs::write(out_dir.join("cards_manifest.json"), "{ this is not valid json")
+        .expect("write malformed cards_manifest.json");
+
+    let output = Command::new(kb_bin())
+        .current_dir(tmp.path())
+        .arg("verify")
+        .arg("does-not-exist-card.md")
+        .arg("--source-matrix")
+        .arg(corpus_path(
+            "tests/parity_corpus/out_python/source_matrix.json",
+        ))
+        .env("KB_FROZEN_CLOCK", "1")
+        .output()
+        .expect("spawn kb verify");
+
+    let stderr = String::from_utf8_lossy(&output.stderr);
+    assert!(
+        !output.status.success(),
+        "a missing card path must exit non-zero; stderr={stderr}"
+    );
+    assert!(
+        stderr.contains("CACG-CLI-001") && stderr.contains("file not found"),
+        "missing card under the short command must surface CACG-CLI-001 file-not-found; got: {stderr}"
+    );
+    assert!(
+        !stderr.contains("CACG-MAN-001"),
+        "a stale sibling cards_manifest.json must NOT shadow the missing-card diagnostic; got: {stderr}"
+    );
+}
