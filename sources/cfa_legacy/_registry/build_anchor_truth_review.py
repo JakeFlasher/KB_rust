@@ -169,26 +169,31 @@ def derive_oracle(rows, chunk_by_id, combined_map, per_source_maps):
     for lst in cited_by_source.values():
         lst.sort(key=lambda c: c["chunk_id"])
 
-    # ---- combined volume/page oracle: per cited volume ----
-    cited_chunks_combined = cited_by_source.get(COMBINED_SOURCE, [])
+    # ---- combined volume/page oracle (THE AC-5 (volume,page) oracle) ----
+    # Standard: >= MIN_ORACLE_ANCHORS re-derived (volume,page) verified-evidence
+    # anchors that match, AND >= MIN_ORACLE_ANCHORS cited chunks whose oracle
+    # round-trip lands WITHIN the cited chunk's recorded page_range and span
+    # (containment, not start_page equality). Enforced map-wide (no per-volume waiver).
     cited_volumes: dict[int, list[dict]] = {}
-    for c in cited_chunks_combined:
+    for c in cited_by_source.get(COMBINED_SOURCE, []):
         try:
             vol, _ = vpm.pdf_page_to_vol_page(combined_map, c["start_page"])
             cited_volumes.setdefault(vol, []).append(c)
         except ValueError:
             pass
+    total_ev_ok = 0
+    total_conf = 0
+    per_volume: list[dict] = []
     for vol_row in combined_map["volume_table"]:
         vol = vol_row["volume"]
         if vol not in cited_volumes:
             continue
-        anchors_ok = 0
+        ev_ok = 0
         for ev in vol_row.get("verified_evidence", []):
             derived = vpm.vol_page_to_pdf_page(combined_map, vol, ev["volume_page"])
             ok = derived == ev["pdf_page"]
-            anchors_ok += ok
-            evidence.append({"map": "cfa_2022_l1_combined.json", "volume": vol,
-                             "kind": "map-evidence",
+            ev_ok += ok
+            evidence.append({"map": "cfa_2022_l1_combined.json", "volume": vol, "kind": "map-evidence",
                              "anchor": {"volume_page": ev["volume_page"], "pdf_page": ev["pdf_page"],
                                         "header_snippet": ev.get("header_snippet")},
                              "rederived_pdf_page": derived, "match": ok})
@@ -197,43 +202,52 @@ def derive_oracle(rows, chunk_by_id, combined_map, per_source_maps):
                                  "kind": "evidence-mismatch",
                                  "detail": f"V{vol} vp {ev['volume_page']} -> {derived} != {ev['pdf_page']}",
                                  "resolution": "correct the volume_table offset/evidence before relying on the oracle"})
-        # confirm >=3 anchors against cited chunk page_ranges (round-trip)
-        cited_confirms = []
+        conf = 0
         for c in cited_volumes[vol][:MIN_ORACLE_ANCHORS]:
             v2, p2 = vpm.pdf_page_to_vol_page(combined_map, c["start_page"])
             back = vpm.vol_page_to_pdf_page(combined_map, v2, p2)
-            cited_confirms.append({"chunk_id": c["chunk_id"], "derived_volume_page": [v2, p2],
-                                   "rederived_pdf_page": back, "cited_page_range": c["page_range"],
-                                   "confirmed": back == c["start_page"]})
-        evidence.extend({"map": "cfa_2022_l1_combined.json", "volume": vol, "kind": "cited-chunk",
-                         **cc} for cc in cited_confirms)
-        n_conf = sum(1 for cc in cited_confirms if cc["confirmed"])
-        below = anchors_ok < MIN_ORACLE_ANCHORS or n_conf < min(MIN_ORACLE_ANCHORS, len(cited_volumes[vol]))
-        coverage.append({"map": "cfa_2022_l1_combined.json", "volume": vol,
-                         "evidence_anchors_ok": anchors_ok, "cited_chunk_confirms": n_conf,
-                         "below_standard": below})
-        if anchors_ok < MIN_ORACLE_ANCHORS:
-            findings.append({"map": "cfa_2022_l1_combined.json", "volume": vol, "severity": "M",
-                             "kind": "below-standard-coverage",
-                             "detail": f"V{vol} has only {anchors_ok} re-derivable evidence anchors (< {MIN_ORACLE_ANCHORS})",
-                             "resolution": "add verified_evidence anchors for this volume"})
+            pr = c["page_range"] or [None, None]
+            lo, hi = pr[0], (pr[1] if pr[1] is not None else pr[0])
+            contained = (lo is not None and lo <= back <= hi
+                         and c["start_page"] <= back <= c["end_page"])
+            conf += contained
+            evidence.append({"map": "cfa_2022_l1_combined.json", "volume": vol, "kind": "cited-chunk",
+                             "chunk_id": c["chunk_id"], "derived_volume_page": [v2, p2],
+                             "rederived_pdf_page": back, "cited_page_range": c["page_range"],
+                             "chunk_span": [c["start_page"], c["end_page"]], "confirmed": bool(contained)})
+        total_ev_ok += ev_ok
+        total_conf += conf
+        per_volume.append({"volume": vol, "evidence_anchors_ok": ev_ok, "cited_chunk_confirms": conf})
+    combined_below = total_ev_ok < MIN_ORACLE_ANCHORS or total_conf < MIN_ORACLE_ANCHORS
+    coverage.append({"map": "cfa_2022_l1_combined.json", "ac5_oracle": True,
+                     "total_evidence_anchors_ok": total_ev_ok, "total_cited_chunk_confirms": total_conf,
+                     "per_volume": per_volume, "below_standard": combined_below})
+    if combined_below:
+        findings.append({"map": "cfa_2022_l1_combined.json", "severity": "M", "kind": "below-standard-coverage",
+                         "detail": f"combined oracle: {total_ev_ok} matching evidence anchors + "
+                                   f"{total_conf} cited-chunk confirmations (< {MIN_ORACLE_ANCHORS})",
+                         "resolution": "add verified_evidence / cited-chunk confirmations"})
 
-    # ---- per-source single-offset locators ----
+    # ---- per-source single-offset locators (NOT the AC-5 (volume,page) oracle) ----
+    # DEC-2: cards bind by pdf chunk_id, so these legacy-page offsets are
+    # registry-side human locators outside the AC-5 oracle standard. Coverage is
+    # reported transparently (ac5_oracle=false); only an evidence-vs-rule MISMATCH
+    # is raised as a finding (a wrong locator), which is then accept-rationalized.
     for map_name, per_source_map in per_source_maps.items():
         offsets = parse_source_offset(per_source_map)
         ev_by_source = {e["source_id"]: e for e in per_source_map.get("sources", [])}
         for source_id in sorted(set(ev_by_source) & set(cited_by_source)):
             entry = ev_by_source[source_id]
             off = offsets.get(source_id)
-            anchors_ok = 0
-            anchors_total = 0
+            ev_ok = 0
+            ev_total = 0
             for ev in entry.get("verified_evidence", []):
-                anchors_total += 1
+                ev_total += 1
                 if off is None:
                     continue
                 derived = ev["legacy_page"] + off
                 ok = derived == ev["pdf_page"]
-                anchors_ok += ok
+                ev_ok += ok
                 evidence.append({"map": map_name, "source_id": source_id, "kind": "map-evidence",
                                  "anchor": {"legacy_page": ev["legacy_page"], "pdf_page": ev["pdf_page"]},
                                  "rederived_pdf_page": derived, "match": ok})
@@ -243,13 +257,12 @@ def derive_oracle(rows, chunk_by_id, combined_map, per_source_maps):
                                      "scope": "registry-locator (DEC-2): cards bind by pdf chunk_id; offset is human-locator only",
                                      "detail": f"rule re-derives legacy {ev['legacy_page']} -> {derived} != verified_evidence pdf {ev['pdf_page']}",
                                      "resolution": "correct rule/evidence to agree, or accept-rationale (registry-side locator only for v0, DEC-2)"})
-            cited_n = len(cited_by_source.get(source_id, []))
-            coverage.append({"map": map_name, "source_id": source_id, "kind": "per-source-single-offset-locator",
-                             "evidence_anchors_ok": anchors_ok, "evidence_anchors_total": anchors_total,
-                             "cited_chunks": cited_n, "below_standard": anchors_ok < MIN_ORACLE_ANCHORS,
-                             "note": "registry-side legacy-page locator (DEC-2): cards bind by pdf chunk_id, "
-                                     "not by this offset; sparse evidence is acceptable for v0 -- only an "
-                                     "evidence-vs-rule MISMATCH is raised as a finding"})
+            coverage.append({"map": map_name, "source_id": source_id, "ac5_oracle": False,
+                             "evidence_anchors_ok": ev_ok, "evidence_anchors_total": ev_total,
+                             "cited_chunks": len(cited_by_source.get(source_id, [])),
+                             "note": "single-offset registry-side legacy-page locator (DEC-2): cards bind by "
+                                     "pdf chunk_id; outside the AC-5 (volume,page) oracle standard; only an "
+                                     "evidence-vs-rule MISMATCH is a finding"})
     return evidence, findings, coverage
 
 
@@ -407,16 +420,36 @@ def main() -> int:
         ci_map: dict[str, list[dict]] = {}
         for r in rows:
             ci_map.setdefault(r["card_id"], []).append(r)
+        # A resolution closes only SEMANTIC findings (content_mismatch / swarm).
+        # It must never mask a real MECHANICAL defect (quote not in chunk,
+        # unauthorized source, missing/mismatched chunk, page outside span); those
+        # are caught here so a bad re-anchor cannot be hidden by a resolution.
+        mech_markers = ("unauthorized-source", "chunk-missing", "quote-not-in-chunk",
+                        "chunk-source", "outside chunk span", "combined-oracle")
+
+        def has_mechanical_failure(checks: list | None) -> bool:
+            return any(any(m in c for m in mech_markers) for c in (checks or []))
+
         for card_id, rr in card_res.items():
-            hit = False
+            cite_idx = rr.get("citation_index")
+            hit = blocked = False
             for r in ci_map.get(card_id, []):
+                if cite_idx is not None and r.get("citation_index") != cite_idx:
+                    continue
                 if r["severity"] in ("M", "E", "H"):
+                    if has_mechanical_failure(r.get("checks")):
+                        blocked = True
+                        continue
                     r["severity"] = "W"
                     r["decision"] = f"RESOLVED({rr['kind']}): {rr.get('rationale', '')[:220]}"
                     r["resolution"] = {"kind": rr["kind"], "decided_by": rr.get("decided_by")}
                     hit = True
-            resolutions_applied.append({"target": card_id, "kind": rr["kind"], "applied": hit})
-            if not hit:
+            resolutions_applied.append({"target": card_id, "kind": rr["kind"], "applied": hit, "blocked_by_mechanical": blocked})
+            if blocked:
+                structural_failures.append(
+                    f"resolution for {card_id} cannot apply: an open row still has a MECHANICAL failure "
+                    f"(re-anchor did not actually fix the citation)")
+            elif not hit:
                 structural_failures.append(f"resolution for {card_id} matched no open finding (stale resolution?)")
         for of in oracle_findings:
             key = f"{of.get('map')}/{of.get('source_id', 'V' + str(of.get('volume')))}"
@@ -432,30 +465,38 @@ def main() -> int:
     if carded != expected_cards:
         structural_failures.append(f"coverage: reviewed {carded} cards but {expected_cards} on disk")
 
-    # ---- schema validation: every row must carry every required field ----
-    for r in rows:
-        missing = [k for k in REQUIRED_ROW_FIELDS if k not in r]
-        if missing:
-            structural_failures.append(f"row {r.get('card_id')}[{r.get('citation_index')}] missing fields {missing}")
-
     by_sev: dict[str, int] = {}
     for r in rows:
         by_sev[r["severity"]] = by_sev.get(r["severity"], 0) + 1
 
     open_rows_full = [r for r in rows if r["severity"] in ("M", "E", "H")]
-    open_rows = [{
-        "card_id": r["card_id"], "citation_index": r["citation_index"], "finding_scope": r["finding_scope"],
-        "source_id": r["source_id"], "chunk_id": r["chunk_id"],
-        "observed_pdf_page_range": r["observed_pdf_page_range"],
-        "expected_source": r["expected_source"], "expected_volume": r["expected_volume"],
-        "expected_pdf_page_range": r["expected_pdf_page_range"],
-        "severity": r["severity"], "audit_flag": r["audit_flag"], "decision": r["decision"],
-        "checks": r.get("checks", []),
-        "swarm_finding": r.get("swarm_finding"), "swarm_verdict": r.get("swarm_verdict"),
-    } for r in open_rows_full]
+    # open_findings_rows are schema-complete copies (every REQUIRED_ROW_FIELDS key)
+    # plus the merge metadata, so the open worklist is fully self-contained.
+    open_rows = []
+    for r in open_rows_full:
+        o = {k: r.get(k) for k in REQUIRED_ROW_FIELDS}
+        o["swarm_finding"] = r.get("swarm_finding")
+        o["swarm_verdict"] = r.get("swarm_verdict")
+        o["resolution"] = r.get("resolution")
+        open_rows.append(o)
     open_findings = sorted({r["card_id"] for r in open_rows_full})
+
+    # ---- schema validation: BOTH rows and open_findings_rows carry every field ----
+    for r in rows:
+        missing = [k for k in REQUIRED_ROW_FIELDS if k not in r]
+        if missing:
+            structural_failures.append(f"row {r.get('card_id')}[{r.get('citation_index')}] missing fields {missing}")
+    for o in open_rows:
+        missing = [k for k in REQUIRED_ROW_FIELDS if k not in o]
+        if missing:
+            structural_failures.append(f"open_findings_row {o.get('card_id')}[{o.get('citation_index')}] missing fields {missing}")
+
     open_oracle = [o for o in oracle_findings if not o.get("accepted")]
-    gate_clean = (not open_rows_full) and (not open_oracle) and (not structural_failures)
+    # gate_clean must be false while any AC-5 (volume,page) oracle coverage entry is
+    # below standard without a recorded acceptance.
+    ac5_below_unaccepted = [c for c in oracle_coverage
+                            if c.get("ac5_oracle") and c.get("below_standard") and not c.get("accepted")]
+    gate_clean = (not open_rows_full) and (not open_oracle) and (not ac5_below_unaccepted) and (not structural_failures)
 
     artifact = {
         "schema_version": "cfa_legacy_anchor_truth_review/v2",
@@ -476,6 +517,7 @@ def main() -> int:
             "open_meh_card_count": len(open_findings), "open_meh_row_count": len(open_rows_full),
             "oracle_anchors_checked": len(oracle_evidence),
             "oracle_findings_total": len(oracle_findings), "oracle_findings_open": len(open_oracle),
+            "ac5_oracle_below_unaccepted": len(ac5_below_unaccepted),
             "min_oracle_anchors": MIN_ORACLE_ANCHORS,
             "swarm": swarm_summary,
             "resolutions_applied": len(resolutions_applied),

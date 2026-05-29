@@ -33,6 +33,11 @@
         467,
         468
       ],
+      "observed_volume": 1,
+      "observed_volume_page": 451,
+      "reading_id": "01_quantitative_methods",
+      "resolution": null,
+      "reviewer": "deterministic-anchor-review/v1",
       "severity": "M",
       "source_id": "cfa_2022_l1_combined",
       "swarm_finding": null,
@@ -63,6 +68,11 @@
         467,
         468
       ],
+      "observed_volume": 1,
+      "observed_volume_page": 451,
+      "reading_id": "01_quantitative_methods",
+      "resolution": null,
+      "reviewer": "deterministic-anchor-review/v1",
       "severity": "M",
       "source_id": "cfa_2022_l1_combined",
       "swarm_finding": null,
@@ -93,6 +103,11 @@
         459,
         460
       ],
+      "observed_volume": 1,
+      "observed_volume_page": 443,
+      "reading_id": "01_quantitative_methods",
+      "resolution": null,
+      "reviewer": "deterministic-anchor-review/v1",
       "severity": "M",
       "source_id": "cfa_2022_l1_combined",
       "swarm_finding": null,
@@ -123,6 +138,11 @@
         462,
         463
       ],
+      "observed_volume": 1,
+      "observed_volume_page": 446,
+      "reading_id": "01_quantitative_methods",
+      "resolution": null,
+      "reviewer": "deterministic-anchor-review/v1",
       "severity": "M",
       "source_id": "cfa_2022_l1_combined",
       "swarm_finding": null,
@@ -153,6 +173,11 @@
         450,
         451
       ],
+      "observed_volume": 1,
+      "observed_volume_page": 434,
+      "reading_id": "01_quantitative_methods",
+      "resolution": null,
+      "reviewer": "deterministic-anchor-review/v1",
       "severity": "M",
       "source_id": "cfa_2022_l1_combined",
       "swarm_finding": null,
@@ -183,6 +208,11 @@
         447,
         448
       ],
+      "observed_volume": 1,
+      "observed_volume_page": 431,
+      "reading_id": "01_quantitative_methods",
+      "resolution": null,
+      "reviewer": "deterministic-anchor-review/v1",
       "severity": "M",
       "source_id": "cfa_2022_l1_combined",
       "swarm_finding": null,
@@ -213,6 +243,11 @@
         464,
         465
       ],
+      "observed_volume": 1,
+      "observed_volume_page": 448,
+      "reading_id": "01_quantitative_methods",
+      "resolution": null,
+      "reviewer": "deterministic-anchor-review/v1",
       "severity": "M",
       "source_id": "cfa_2022_l1_combined",
       "swarm_finding": null,
@@ -243,6 +278,11 @@
         463,
         464
       ],
+      "observed_volume": 1,
+      "observed_volume_page": 447,
+      "reading_id": "01_quantitative_methods",
+      "resolution": null,
+      "reviewer": "deterministic-anchor-review/v1",
       "severity": "M",
       "source_id": "cfa_2022_l1_combined",
       "swarm_finding": null,
@@ -273,6 +313,11 @@
         450,
         451
       ],
+      "observed_volume": 1,
+      "observed_volume_page": 434,
+      "reading_id": "01_quantitative_methods",
+      "resolution": null,
+      "reviewer": "deterministic-anchor-review/v1",
       "severity": "M",
       "source_id": "cfa_2022_l1_combined",
       "swarm_finding": null,
@@ -303,6 +348,11 @@
         450,
         451
       ],
+      "observed_volume": 1,
+      "observed_volume_page": 434,
+      "reading_id": "01_quantitative_methods",
+      "resolution": null,
+      "reviewer": "deterministic-anchor-review/v1",
       "severity": "M",
       "source_id": "cfa_2022_l1_combined",
       "swarm_finding": null,
@@ -333,6 +383,11 @@
         450,
         451
       ],
+      "observed_volume": 1,
+      "observed_volume_page": 434,
+      "reading_id": "01_quantitative_methods",
+      "resolution": null,
+      "reviewer": "deterministic-anchor-review/v1",
       "severity": "M",
       "source_id": "cfa_2022_l1_combined",
       "swarm_finding": null,
@@ -363,6 +418,11 @@
         447,
         448
       ],
+      "observed_volume": 1,
+      "observed_volume_page": 431,
+      "reading_id": "01_quantitative_methods",
+      "resolution": null,
+      "reviewer": "deterministic-anchor-review/v1",
       "severity": "M",
       "source_id": "cfa_2022_l1_combined",
       "swarm_finding": null,
@@ -393,6 +453,11 @@
         456,
         456
       ],
+      "observed_volume": 1,
+      "observed_volume_page": 440,
+      "reading_id": "01_quantitative_methods",
+      "resolution": null,
+      "reviewer": "deterministic-anchor-review/v1",
       "severity": "M",
       "source_id": "cfa_2022_l1_combined",
       "swarm_finding": null,
@@ -423,6 +488,11 @@
         456,
         456
       ],
+      "observed_volume": 1,
+      "observed_volume_page": 440,
+      "reading_id": "01_quantitative_methods",
+      "resolution": null,
+      "reviewer": "deterministic-anchor-review/v1",
       "severity": "M",
       "source_id": "cfa_2022_l1_combined",
       "swarm_finding": null,
@@ -455,6 +525,11 @@
         138,
         139
       ],
+      "observed_volume": null,
+      "observed_volume_page": null,
+      "reading_id": "03_financial_reporting_analysis",
+      "resolution": null,
+      "reviewer": "deterministic-anchor-review/v1",
       "severity": "M",
       "source_id": "fra_penman_fsa_security_valuation_5ed",
       "swarm_finding": {
@@ -485,6 +560,11 @@
         1085,
         1086
       ],
+      "observed_volume": 2,
+      "observed_volume_page": 508,
+      "reading_id": "03_financial_reporting_analysis",
+      "resolution": null,
+      "reviewer": "deterministic-anchor-review/v1",
       "severity": "M",
       "source_id": "cfa_2022_l1_combined",
       "swarm_finding": null,
@@ -515,6 +595,11 @@
         69,
         70
       ],
+      "observed_volume": null,
+      "observed_volume_page": null,
+      "reading_id": "03_financial_reporting_analysis",
+      "resolution": null,
+      "reviewer": "deterministic-anchor-review/v1",
       "severity": "M",
       "source_id": "fra_penman_fsa_security_valuation_5ed",
       "swarm_finding": null,
@@ -545,6 +630,11 @@
         460,
         460
       ],
+      "observed_volume": null,
+      "observed_volume_page": null,
+      "reading_id": "07_derivatives_and_volatility",
+      "resolution": null,
+      "reviewer": "deterministic-anchor-review/v1",
       "severity": "M",
       "source_id": "cb_hull_2022_options_futures_derivatives_11ed",
       "swarm_finding": null,
@@ -577,6 +667,11 @@
         128,
         129
       ],
+      "observed_volume": null,
+      "observed_volume_page": null,
+      "reading_id": "08_convertible_bonds",
+      "resolution": null,
+      "reviewer": "deterministic-anchor-review/v1",
       "severity": "M",
       "source_id": "cb_despiegeleer_schoutens_vanhulle_2014_hybrid_securities",
       "swarm_finding": {
@@ -609,6 +704,11 @@
         128,
         129
       ],
+      "observed_volume": null,
+      "observed_volume_page": null,
+      "reading_id": "08_convertible_bonds",
+      "resolution": null,
+      "reviewer": "deterministic-anchor-review/v1",
       "severity": "M",
       "source_id": "cb_despiegeleer_schoutens_vanhulle_2014_hybrid_securities",
       "swarm_finding": {
@@ -641,6 +741,11 @@
         88,
         89
       ],
+      "observed_volume": null,
+      "observed_volume_page": null,
+      "reading_id": "08_convertible_bonds",
+      "resolution": null,
+      "reviewer": "deterministic-anchor-review/v1",
       "severity": "M",
       "source_id": "cb_an_daoquan_2023_three_line_duplex_3ed",
       "swarm_finding": {
@@ -656,305 +761,276 @@
   ],
   "oracle_coverage": [
     {
+      "ac5_oracle": true,
       "below_standard": false,
-      "cited_chunk_confirms": 3,
-      "evidence_anchors_ok": 5,
       "map": "cfa_2022_l1_combined.json",
-      "volume": 1
+      "per_volume": [
+        {
+          "cited_chunk_confirms": 3,
+          "evidence_anchors_ok": 5,
+          "volume": 1
+        },
+        {
+          "cited_chunk_confirms": 3,
+          "evidence_anchors_ok": 5,
+          "volume": 2
+        },
+        {
+          "cited_chunk_confirms": 3,
+          "evidence_anchors_ok": 5,
+          "volume": 3
+        },
+        {
+          "cited_chunk_confirms": 2,
+          "evidence_anchors_ok": 5,
+          "volume": 4
+        },
+        {
+          "cited_chunk_confirms": 3,
+          "evidence_anchors_ok": 5,
+          "volume": 5
+        },
+        {
+          "cited_chunk_confirms": 3,
+          "evidence_anchors_ok": 5,
+          "volume": 6
+        }
+      ],
+      "total_cited_chunk_confirms": 17,
+      "total_evidence_anchors_ok": 30
     },
     {
-      "below_standard": false,
-      "cited_chunk_confirms": 3,
-      "evidence_anchors_ok": 5,
-      "map": "cfa_2022_l1_combined.json",
-      "volume": 2
-    },
-    {
-      "below_standard": false,
-      "cited_chunk_confirms": 3,
-      "evidence_anchors_ok": 5,
-      "map": "cfa_2022_l1_combined.json",
-      "volume": 3
-    },
-    {
-      "below_standard": false,
-      "cited_chunk_confirms": 2,
-      "evidence_anchors_ok": 5,
-      "map": "cfa_2022_l1_combined.json",
-      "volume": 4
-    },
-    {
-      "below_standard": false,
-      "cited_chunk_confirms": 3,
-      "evidence_anchors_ok": 5,
-      "map": "cfa_2022_l1_combined.json",
-      "volume": 5
-    },
-    {
-      "below_standard": false,
-      "cited_chunk_confirms": 3,
-      "evidence_anchors_ok": 5,
-      "map": "cfa_2022_l1_combined.json",
-      "volume": 6
-    },
-    {
-      "below_standard": false,
+      "ac5_oracle": false,
       "cited_chunks": 5,
       "evidence_anchors_ok": 6,
       "evidence_anchors_total": 6,
-      "kind": "per-source-single-offset-locator",
       "map": "01_quantitative_methods.json",
-      "note": "registry-side legacy-page locator (DEC-2): cards bind by pdf chunk_id, not by this offset; sparse evidence is acceptable for v0 -- only an evidence-vs-rule MISMATCH is raised as a finding",
+      "note": "single-offset registry-side legacy-page locator (DEC-2): cards bind by pdf chunk_id; outside the AC-5 (volume,page) oracle standard; only an evidence-vs-rule MISMATCH is a finding",
       "source_id": "qm_eslii_2009_2ed"
     },
     {
-      "below_standard": false,
+      "ac5_oracle": false,
       "cited_chunks": 3,
       "evidence_anchors_ok": 4,
       "evidence_anchors_total": 4,
-      "kind": "per-source-single-offset-locator",
       "map": "01_quantitative_methods.json",
-      "note": "registry-side legacy-page locator (DEC-2): cards bind by pdf chunk_id, not by this offset; sparse evidence is acceptable for v0 -- only an evidence-vs-rule MISMATCH is raised as a finding",
+      "note": "single-offset registry-side legacy-page locator (DEC-2): cards bind by pdf chunk_id; outside the AC-5 (volume,page) oracle standard; only an evidence-vs-rule MISMATCH is a finding",
       "source_id": "qm_greene_2019_econometric_analysis_8ed"
     },
     {
-      "below_standard": false,
+      "ac5_oracle": false,
       "cited_chunks": 2,
       "evidence_anchors_ok": 3,
       "evidence_anchors_total": 3,
-      "kind": "per-source-single-offset-locator",
       "map": "01_quantitative_methods.json",
-      "note": "registry-side legacy-page locator (DEC-2): cards bind by pdf chunk_id, not by this offset; sparse evidence is acceptable for v0 -- only an evidence-vs-rule MISMATCH is raised as a finding",
+      "note": "single-offset registry-side legacy-page locator (DEC-2): cards bind by pdf chunk_id; outside the AC-5 (volume,page) oracle standard; only an evidence-vs-rule MISMATCH is a finding",
       "source_id": "qm_islp_2023_python"
     },
     {
-      "below_standard": false,
+      "ac5_oracle": false,
       "cited_chunks": 2,
       "evidence_anchors_ok": 7,
       "evidence_anchors_total": 7,
-      "kind": "per-source-single-offset-locator",
       "map": "01_quantitative_methods.json",
-      "note": "registry-side legacy-page locator (DEC-2): cards bind by pdf chunk_id, not by this offset; sparse evidence is acceptable for v0 -- only an evidence-vs-rule MISMATCH is raised as a finding",
+      "note": "single-offset registry-side legacy-page locator (DEC-2): cards bind by pdf chunk_id; outside the AC-5 (volume,page) oracle standard; only an evidence-vs-rule MISMATCH is a finding",
       "source_id": "qm_tsay_2005_afts_2e"
     },
     {
-      "below_standard": false,
+      "ac5_oracle": false,
       "cited_chunks": 2,
       "evidence_anchors_ok": 9,
       "evidence_anchors_total": 9,
-      "kind": "per-source-single-offset-locator",
       "map": "01_quantitative_methods.json",
-      "note": "registry-side legacy-page locator (DEC-2): cards bind by pdf chunk_id, not by this offset; sparse evidence is acceptable for v0 -- only an evidence-vs-rule MISMATCH is raised as a finding",
+      "note": "single-offset registry-side legacy-page locator (DEC-2): cards bind by pdf chunk_id; outside the AC-5 (volume,page) oracle standard; only an evidence-vs-rule MISMATCH is a finding",
       "source_id": "qm_tsay_2014_multivariate_time_series"
     },
     {
-      "below_standard": false,
+      "ac5_oracle": false,
       "cited_chunks": 2,
       "evidence_anchors_ok": 7,
       "evidence_anchors_total": 7,
-      "kind": "per-source-single-offset-locator",
       "map": "01_quantitative_methods.json",
-      "note": "registry-side legacy-page locator (DEC-2): cards bind by pdf chunk_id, not by this offset; sparse evidence is acceptable for v0 -- only an evidence-vs-rule MISMATCH is raised as a finding",
+      "note": "single-offset registry-side legacy-page locator (DEC-2): cards bind by pdf chunk_id; outside the AC-5 (volume,page) oracle standard; only an evidence-vs-rule MISMATCH is a finding",
       "source_id": "qm_wooldridge_intro_econometrics_8ed"
     },
     {
-      "below_standard": false,
+      "ac5_oracle": false,
       "cited_chunks": 1,
       "evidence_anchors_ok": 4,
       "evidence_anchors_total": 4,
-      "kind": "per-source-single-offset-locator",
       "map": "02_economics.json",
-      "note": "registry-side legacy-page locator (DEC-2): cards bind by pdf chunk_id, not by this offset; sparse evidence is acceptable for v0 -- only an evidence-vs-rule MISMATCH is raised as a finding",
+      "note": "single-offset registry-side legacy-page locator (DEC-2): cards bind by pdf chunk_id; outside the AC-5 (volume,page) oracle standard; only an evidence-vs-rule MISMATCH is a finding",
       "source_id": "econ_cochrane_2023_fiscal_theory_price_level"
     },
     {
-      "below_standard": false,
+      "ac5_oracle": false,
       "cited_chunks": 2,
       "evidence_anchors_ok": 3,
       "evidence_anchors_total": 3,
-      "kind": "per-source-single-offset-locator",
       "map": "02_economics.json",
-      "note": "registry-side legacy-page locator (DEC-2): cards bind by pdf chunk_id, not by this offset; sparse evidence is acceptable for v0 -- only an evidence-vs-rule MISMATCH is raised as a finding",
+      "note": "single-offset registry-side legacy-page locator (DEC-2): cards bind by pdf chunk_id; outside the AC-5 (volume,page) oracle standard; only an evidence-vs-rule MISMATCH is a finding",
       "source_id": "econ_mascolell_general_equilibrium_game_theory"
     },
     {
-      "below_standard": false,
+      "ac5_oracle": false,
       "cited_chunks": 27,
       "evidence_anchors_ok": 4,
       "evidence_anchors_total": 4,
-      "kind": "per-source-single-offset-locator",
       "map": "02_economics.json",
-      "note": "registry-side legacy-page locator (DEC-2): cards bind by pdf chunk_id, not by this offset; sparse evidence is acceptable for v0 -- only an evidence-vs-rule MISMATCH is raised as a finding",
+      "note": "single-offset registry-side legacy-page locator (DEC-2): cards bind by pdf chunk_id; outside the AC-5 (volume,page) oracle standard; only an evidence-vs-rule MISMATCH is a finding",
       "source_id": "econ_mwg_1995_microeconomic_theory"
     },
     {
-      "below_standard": false,
+      "ac5_oracle": false,
       "cited_chunks": 20,
       "evidence_anchors_ok": 3,
       "evidence_anchors_total": 3,
-      "kind": "per-source-single-offset-locator",
       "map": "02_economics.json",
-      "note": "registry-side legacy-page locator (DEC-2): cards bind by pdf chunk_id, not by this offset; sparse evidence is acceptable for v0 -- only an evidence-vs-rule MISMATCH is raised as a finding",
+      "note": "single-offset registry-side legacy-page locator (DEC-2): cards bind by pdf chunk_id; outside the AC-5 (volume,page) oracle standard; only an evidence-vs-rule MISMATCH is a finding",
       "source_id": "econ_romer_2019_advanced_macro_5ed"
     },
     {
-      "below_standard": true,
+      "ac5_oracle": false,
       "cited_chunks": 3,
       "evidence_anchors_ok": 0,
       "evidence_anchors_total": 0,
-      "kind": "per-source-single-offset-locator",
       "map": "03_financial_reporting_analysis.json",
-      "note": "registry-side legacy-page locator (DEC-2): cards bind by pdf chunk_id, not by this offset; sparse evidence is acceptable for v0 -- only an evidence-vs-rule MISMATCH is raised as a finding",
+      "note": "single-offset registry-side legacy-page locator (DEC-2): cards bind by pdf chunk_id; outside the AC-5 (volume,page) oracle standard; only an evidence-vs-rule MISMATCH is a finding",
       "source_id": "fra_hkicpa_hkas_32_2022"
     },
     {
-      "below_standard": true,
+      "ac5_oracle": false,
       "cited_chunks": 1,
       "evidence_anchors_ok": 0,
       "evidence_anchors_total": 0,
-      "kind": "per-source-single-offset-locator",
       "map": "03_financial_reporting_analysis.json",
-      "note": "registry-side legacy-page locator (DEC-2): cards bind by pdf chunk_id, not by this offset; sparse evidence is acceptable for v0 -- only an evidence-vs-rule MISMATCH is raised as a finding",
+      "note": "single-offset registry-side legacy-page locator (DEC-2): cards bind by pdf chunk_id; outside the AC-5 (volume,page) oracle standard; only an evidence-vs-rule MISMATCH is a finding",
       "source_id": "fra_hkicpa_hkfrs_7_2018"
     },
     {
-      "below_standard": true,
+      "ac5_oracle": false,
       "cited_chunks": 1,
       "evidence_anchors_ok": 0,
       "evidence_anchors_total": 0,
-      "kind": "per-source-single-offset-locator",
       "map": "03_financial_reporting_analysis.json",
-      "note": "registry-side legacy-page locator (DEC-2): cards bind by pdf chunk_id, not by this offset; sparse evidence is acceptable for v0 -- only an evidence-vs-rule MISMATCH is raised as a finding",
+      "note": "single-offset registry-side legacy-page locator (DEC-2): cards bind by pdf chunk_id; outside the AC-5 (volume,page) oracle standard; only an evidence-vs-rule MISMATCH is a finding",
       "source_id": "fra_hkicpa_hkfrs_9_2024"
     },
     {
-      "below_standard": true,
+      "ac5_oracle": false,
       "cited_chunks": 6,
       "evidence_anchors_ok": 1,
       "evidence_anchors_total": 1,
-      "kind": "per-source-single-offset-locator",
       "map": "03_financial_reporting_analysis.json",
-      "note": "registry-side legacy-page locator (DEC-2): cards bind by pdf chunk_id, not by this offset; sparse evidence is acceptable for v0 -- only an evidence-vs-rule MISMATCH is raised as a finding",
+      "note": "single-offset registry-side legacy-page locator (DEC-2): cards bind by pdf chunk_id; outside the AC-5 (volume,page) oracle standard; only an evidence-vs-rule MISMATCH is a finding",
       "source_id": "fra_kieso_weygandt_warfield_2020_ifrs_4ed"
     },
     {
-      "below_standard": false,
+      "ac5_oracle": false,
       "cited_chunks": 32,
       "evidence_anchors_ok": 3,
       "evidence_anchors_total": 3,
-      "kind": "per-source-single-offset-locator",
       "map": "03_financial_reporting_analysis.json",
-      "note": "registry-side legacy-page locator (DEC-2): cards bind by pdf chunk_id, not by this offset; sparse evidence is acceptable for v0 -- only an evidence-vs-rule MISMATCH is raised as a finding",
+      "note": "single-offset registry-side legacy-page locator (DEC-2): cards bind by pdf chunk_id; outside the AC-5 (volume,page) oracle standard; only an evidence-vs-rule MISMATCH is a finding",
       "source_id": "fra_penman_fsa_security_valuation_5ed"
     },
     {
-      "below_standard": false,
+      "ac5_oracle": false,
       "cited_chunks": 9,
       "evidence_anchors_ok": 10,
       "evidence_anchors_total": 10,
-      "kind": "per-source-single-offset-locator",
       "map": "07_derivatives_and_volatility.json",
-      "note": "registry-side legacy-page locator (DEC-2): cards bind by pdf chunk_id, not by this offset; sparse evidence is acceptable for v0 -- only an evidence-vs-rule MISMATCH is raised as a finding",
+      "note": "single-offset registry-side legacy-page locator (DEC-2): cards bind by pdf chunk_id; outside the AC-5 (volume,page) oracle standard; only an evidence-vs-rule MISMATCH is a finding",
       "source_id": "cb_glasserman_2003_monte_carlo_methods"
     },
     {
-      "below_standard": true,
+      "ac5_oracle": false,
       "cited_chunks": 49,
       "evidence_anchors_ok": 2,
       "evidence_anchors_total": 2,
-      "kind": "per-source-single-offset-locator",
       "map": "07_derivatives_and_volatility.json",
-      "note": "registry-side legacy-page locator (DEC-2): cards bind by pdf chunk_id, not by this offset; sparse evidence is acceptable for v0 -- only an evidence-vs-rule MISMATCH is raised as a finding",
+      "note": "single-offset registry-side legacy-page locator (DEC-2): cards bind by pdf chunk_id; outside the AC-5 (volume,page) oracle standard; only an evidence-vs-rule MISMATCH is a finding",
       "source_id": "cb_hull_2022_options_futures_derivatives_11ed"
     },
     {
-      "below_standard": true,
+      "ac5_oracle": false,
       "cited_chunks": 11,
       "evidence_anchors_ok": 0,
       "evidence_anchors_total": 1,
-      "kind": "per-source-single-offset-locator",
       "map": "08_convertible_bonds.json",
-      "note": "registry-side legacy-page locator (DEC-2): cards bind by pdf chunk_id, not by this offset; sparse evidence is acceptable for v0 -- only an evidence-vs-rule MISMATCH is raised as a finding",
+      "note": "single-offset registry-side legacy-page locator (DEC-2): cards bind by pdf chunk_id; outside the AC-5 (volume,page) oracle standard; only an evidence-vs-rule MISMATCH is a finding",
       "source_id": "cb_an_daoquan_2014_magic_book_2ed"
     },
     {
-      "below_standard": true,
+      "ac5_oracle": false,
       "cited_chunks": 23,
       "evidence_anchors_ok": 0,
       "evidence_anchors_total": 0,
-      "kind": "per-source-single-offset-locator",
       "map": "08_convertible_bonds.json",
-      "note": "registry-side legacy-page locator (DEC-2): cards bind by pdf chunk_id, not by this offset; sparse evidence is acceptable for v0 -- only an evidence-vs-rule MISMATCH is raised as a finding",
+      "note": "single-offset registry-side legacy-page locator (DEC-2): cards bind by pdf chunk_id; outside the AC-5 (volume,page) oracle standard; only an evidence-vs-rule MISMATCH is a finding",
       "source_id": "cb_an_daoquan_2023_three_line_duplex_3ed"
     },
     {
-      "below_standard": true,
+      "ac5_oracle": false,
       "cited_chunks": 19,
       "evidence_anchors_ok": 0,
       "evidence_anchors_total": 0,
-      "kind": "per-source-single-offset-locator",
       "map": "08_convertible_bonds.json",
-      "note": "registry-side legacy-page locator (DEC-2): cards bind by pdf chunk_id, not by this offset; sparse evidence is acceptable for v0 -- only an evidence-vs-rule MISMATCH is raised as a finding",
+      "note": "single-offset registry-side legacy-page locator (DEC-2): cards bind by pdf chunk_id; outside the AC-5 (volume,page) oracle standard; only an evidence-vs-rule MISMATCH is a finding",
       "source_id": "cb_calamos_2003_convertible_arbitrage"
     },
     {
-      "below_standard": true,
+      "ac5_oracle": false,
       "cited_chunks": 29,
       "evidence_anchors_ok": 0,
       "evidence_anchors_total": 1,
-      "kind": "per-source-single-offset-locator",
       "map": "08_convertible_bonds.json",
-      "note": "registry-side legacy-page locator (DEC-2): cards bind by pdf chunk_id, not by this offset; sparse evidence is acceptable for v0 -- only an evidence-vs-rule MISMATCH is raised as a finding",
+      "note": "single-offset registry-side legacy-page locator (DEC-2): cards bind by pdf chunk_id; outside the AC-5 (volume,page) oracle standard; only an evidence-vs-rule MISMATCH is a finding",
       "source_id": "cb_despiegeleer_schoutens_vanhulle_2014_hybrid_securities"
     },
     {
-      "below_standard": true,
+      "ac5_oracle": false,
       "cited_chunks": 10,
       "evidence_anchors_ok": 0,
       "evidence_anchors_total": 0,
-      "kind": "per-source-single-offset-locator",
       "map": "08_convertible_bonds.json",
-      "note": "registry-side legacy-page locator (DEC-2): cards bind by pdf chunk_id, not by this offset; sparse evidence is acceptable for v0 -- only an evidence-vs-rule MISMATCH is raised as a finding",
+      "note": "single-offset registry-side legacy-page locator (DEC-2): cards bind by pdf chunk_id; outside the AC-5 (volume,page) oracle standard; only an evidence-vs-rule MISMATCH is a finding",
       "source_id": "cb_gongshou_practical_handbook_1ed"
     },
     {
-      "below_standard": true,
+      "ac5_oracle": false,
       "cited_chunks": 4,
       "evidence_anchors_ok": 0,
       "evidence_anchors_total": 0,
-      "kind": "per-source-single-offset-locator",
       "map": "08_convertible_bonds.json",
-      "note": "registry-side legacy-page locator (DEC-2): cards bind by pdf chunk_id, not by this offset; sparse evidence is acceptable for v0 -- only an evidence-vs-rule MISMATCH is raised as a finding",
+      "note": "single-offset registry-side legacy-page locator (DEC-2): cards bind by pdf chunk_id; outside the AC-5 (volume,page) oracle standard; only an evidence-vs-rule MISMATCH is a finding",
       "source_id": "cb_koziol_2004_convertible_bonds_strategic_investors"
     },
     {
-      "below_standard": true,
+      "ac5_oracle": false,
       "cited_chunks": 3,
       "evidence_anchors_ok": 0,
       "evidence_anchors_total": 0,
-      "kind": "per-source-single-offset-locator",
       "map": "08_convertible_bonds.json",
-      "note": "registry-side legacy-page locator (DEC-2): cards bind by pdf chunk_id, not by this offset; sparse evidence is acceptable for v0 -- only an evidence-vs-rule MISMATCH is raised as a finding",
+      "note": "single-offset registry-side legacy-page locator (DEC-2): cards bind by pdf chunk_id; outside the AC-5 (volume,page) oracle standard; only an evidence-vs-rule MISMATCH is a finding",
       "source_id": "cb_philips_1997_convertible_bond_markets"
     },
     {
-      "below_standard": true,
+      "ac5_oracle": false,
       "cited_chunks": 2,
       "evidence_anchors_ok": 0,
       "evidence_anchors_total": 0,
-      "kind": "per-source-single-offset-locator",
       "map": "08_convertible_bonds.json",
-      "note": "registry-side legacy-page locator (DEC-2): cards bind by pdf chunk_id, not by this offset; sparse evidence is acceptable for v0 -- only an evidence-vs-rule MISMATCH is raised as a finding",
+      "note": "single-offset registry-side legacy-page locator (DEC-2): cards bind by pdf chunk_id; outside the AC-5 (volume,page) oracle standard; only an evidence-vs-rule MISMATCH is a finding",
       "source_id": "cb_thorp_kassouf_1967_beat_the_market"
     },
     {
-      "below_standard": true,
+      "ac5_oracle": false,
       "cited_chunks": 1,
       "evidence_anchors_ok": 0,
       "evidence_anchors_total": 0,
-      "kind": "per-source-single-offset-locator",
       "map": "08_convertible_bonds.json",
-      "note": "registry-side legacy-page locator (DEC-2): cards bind by pdf chunk_id, not by this offset; sparse evidence is acceptable for v0 -- only an evidence-vs-rule MISMATCH is raised as a finding",
+      "note": "single-offset registry-side legacy-page locator (DEC-2): cards bind by pdf chunk_id; outside the AC-5 (volume,page) oracle standard; only an evidence-vs-rule MISMATCH is a finding",
       "source_id": "cb_zubulake_convertible_securities_worldwide"
     }
   ],
@@ -1021,6 +1097,10 @@
     },
     {
       "chunk_id": "cfa_2022_l1_combined:p447:0569",
+      "chunk_span": [
+        447,
+        448
+      ],
       "cited_page_range": [
         447,
         448
@@ -1037,6 +1117,10 @@
     },
     {
       "chunk_id": "cfa_2022_l1_combined:p447:0569",
+      "chunk_span": [
+        447,
+        448
+      ],
       "cited_page_range": [
         447,
         448
@@ -1053,6 +1137,10 @@
     },
     {
       "chunk_id": "cfa_2022_l1_combined:p450:0573",
+      "chunk_span": [
+        450,
+        451
+      ],
       "cited_page_range": [
         450,
         451
@@ -1129,6 +1217,10 @@
     },
     {
       "chunk_id": "cfa_2022_l1_combined:p1020:1457",
+      "chunk_span": [
+        1020,
+        1021
+      ],
       "cited_page_range": [
         1020,
         1021
@@ -1145,6 +1237,10 @@
     },
     {
       "chunk_id": "cfa_2022_l1_combined:p1021:1458",
+      "chunk_span": [
+        1021,
+        1022
+      ],
       "cited_page_range": [
         1021,
         1022
@@ -1161,6 +1257,10 @@
     },
     {
       "chunk_id": "cfa_2022_l1_combined:p1052:1501",
+      "chunk_span": [
+        1052,
+        1053
+      ],
       "cited_page_range": [
         1052,
         1053
@@ -1237,6 +1337,10 @@
     },
     {
       "chunk_id": "cfa_2022_l1_combined:p1191:1740",
+      "chunk_span": [
+        1191,
+        1192
+      ],
       "cited_page_range": [
         1191,
         1192
@@ -1253,6 +1357,10 @@
     },
     {
       "chunk_id": "cfa_2022_l1_combined:p1249:1825",
+      "chunk_span": [
+        1249,
+        1250
+      ],
       "cited_page_range": [
         1249,
         1250
@@ -1269,6 +1377,10 @@
     },
     {
       "chunk_id": "cfa_2022_l1_combined:p1305:1905",
+      "chunk_span": [
+        1305,
+        1306
+      ],
       "cited_page_range": [
         1305,
         1306
@@ -1345,6 +1457,10 @@
     },
     {
       "chunk_id": "cfa_2022_l1_combined:p2298:3368",
+      "chunk_span": [
+        2298,
+        2299
+      ],
       "cited_page_range": [
         2298,
         2299
@@ -1361,6 +1477,10 @@
     },
     {
       "chunk_id": "cfa_2022_l1_combined:p2305:3379",
+      "chunk_span": [
+        2305,
+        2306
+      ],
       "cited_page_range": [
         2305,
         2306
@@ -1437,6 +1557,10 @@
     },
     {
       "chunk_id": "cfa_2022_l1_combined:p2786:4151",
+      "chunk_span": [
+        2786,
+        2787
+      ],
       "cited_page_range": [
         2786,
         2787
@@ -1453,6 +1577,10 @@
     },
     {
       "chunk_id": "cfa_2022_l1_combined:p2795:4168",
+      "chunk_span": [
+        2795,
+        2796
+      ],
       "cited_page_range": [
         2795,
         2796
@@ -1469,6 +1597,10 @@
     },
     {
       "chunk_id": "cfa_2022_l1_combined:p2820:4213",
+      "chunk_span": [
+        2820,
+        2821
+      ],
       "cited_page_range": [
         2820,
         2821
@@ -1545,6 +1677,10 @@
     },
     {
       "chunk_id": "cfa_2022_l1_combined:p3364:5066",
+      "chunk_span": [
+        3364,
+        3365
+      ],
       "cited_page_range": [
         3364,
         3365
@@ -1561,6 +1697,10 @@
     },
     {
       "chunk_id": "cfa_2022_l1_combined:p3364:5066",
+      "chunk_span": [
+        3364,
+        3365
+      ],
       "cited_page_range": [
         3364,
         3365
@@ -1577,6 +1717,10 @@
     },
     {
       "chunk_id": "cfa_2022_l1_combined:p3403:5134",
+      "chunk_span": [
+        3403,
+        3404
+      ],
       "cited_page_range": [
         3403,
         3404
@@ -2389,31 +2533,37 @@
   "resolutions_applied": [
     {
       "applied": true,
+      "blocked_by_mechanical": false,
       "kind": "de-claim",
       "target": "ec-risk-aversion-utility-derivation"
     },
     {
       "applied": true,
+      "blocked_by_mechanical": false,
       "kind": "de-claim",
       "target": "ec-utility-and-choice-under-uncertainty"
     },
     {
       "applied": true,
+      "blocked_by_mechanical": false,
       "kind": "de-claim",
       "target": "deriv-delta-and-hedging"
     },
     {
       "applied": true,
+      "blocked_by_mechanical": false,
       "kind": "de-claim",
       "target": "deriv-greeks-overview"
     },
     {
       "applied": true,
+      "blocked_by_mechanical": false,
       "kind": "de-claim",
       "target": "deriv-stochastic-vol-models"
     },
     {
       "applied": true,
+      "blocked_by_mechanical": false,
       "kind": "de-claim",
       "target": "deriv-vol-surface-anatomy"
     },
@@ -16703,6 +16853,7 @@
     "17_cross_cutting"
   ],
   "summary": {
+    "ac5_oracle_below_unaccepted": 0,
     "by_severity": {
       "M": 21,
       "N": 258,
