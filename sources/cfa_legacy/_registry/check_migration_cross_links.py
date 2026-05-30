@@ -69,24 +69,30 @@ def migrated_card_paths() -> list[Path]:
     return out
 
 
-def changed_card_ids() -> set[str]:
-    """Card ids whose tracked file under cards/cfa_legacy changed vs HEAD, OR are
-    untracked (newly added). Used to verify only allowlisted released cards moved."""
+def changed_card_ids(baseline: str) -> set[str]:
+    """Card ids whose file under cards/cfa_legacy differs from the released baseline
+    (working tree vs ``baseline``, default the v0 release tag). Measured against the
+    baseline rather than the working-tree status so the check is stable before AND
+    after the edits are committed."""
     res = subprocess.run(
-        ["git", "-C", str(ROOT), "status", "--porcelain", "--", "cards/cfa_legacy"],
+        ["git", "-C", str(ROOT), "rev-parse", "--verify", "--quiet", baseline + "^{commit}"],
+        capture_output=True, text=True,
+    )
+    if res.returncode != 0:
+        raise SystemExit(f"baseline ref {baseline!r} not found; pass --baseline")
+    diff = subprocess.run(
+        ["git", "-C", str(ROOT), "diff", "--name-only", baseline, "--", "cards/cfa_legacy"],
         capture_output=True, text=True, check=True,
     )
     ids: set[str] = set()
-    for line in res.stdout.splitlines():
-        if not line.strip():
-            continue
-        path = line[3:].strip()
+    for path in diff.stdout.splitlines():
+        path = path.strip()
         if path.endswith(".md") and not path.endswith("INDEX.md") and "/_" not in path:
             ids.add(Path(path).stem)
     return ids
 
 
-def run_checks(cross_links_path: Path) -> list[str]:
+def run_checks(cross_links_path: Path, baseline: str) -> list[str]:
     failures: list[str] = []
     doc = load_map(cross_links_path)
     released = derive_links(doc)[1]
@@ -117,9 +123,9 @@ def run_checks(cross_links_path: Path) -> list[str]:
             if not (md.parent / target).resolve().is_file():
                 failures.append(f"{md.stem}: See Also link does not resolve: {dest}")
 
-    # 4. only allowlisted released (non-migrated-reading) cards changed.
+    # 4. only allowlisted released (non-migrated-reading) cards changed vs baseline.
     changed_released = {
-        cid for cid in changed_card_ids() if reading_of_safe(cid) not in NEW_READINGS
+        cid for cid in changed_card_ids(baseline) if reading_of_safe(cid) not in NEW_READINGS
     }
     if changed_released != allowlist:
         failures.append(
@@ -153,11 +159,14 @@ def _self_test() -> int:
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--cross-links", type=Path, default=DEFAULT_MAP)
+    ap.add_argument("--baseline", default="v0-candidate",
+                    help="released-corpus baseline ref to diff released-card edits against "
+                         "(default: v0-candidate)")
     ap.add_argument("--self-test", action="store_true")
     args = ap.parse_args()
     if args.self_test:
         return _self_test()
-    failures = run_checks(args.cross_links)
+    failures = run_checks(args.cross_links, args.baseline)
     if failures:
         print("CROSS-LINK GATE: FAIL")
         for f in failures:
