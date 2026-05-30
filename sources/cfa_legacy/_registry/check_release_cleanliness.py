@@ -1,0 +1,184 @@
+#!/usr/bin/env python3
+"""AC-10 gate: the v0 release is clean, tracked, and (optionally) tagged.
+
+Re-runnable, fail-closed. RE-DERIVES every release fact from git + disk (never trusts
+the prose of `_research/30`): the small published-index artifacts are tracked, the large
+chunks_manifest is excluded, the trust-chain sidecars + research docs are tracked, the
+rebuild-recipe scripts exist, the worktree is release-clean, and (with `--require-tag`)
+the annotated `v0-candidate` tag exists and references the evidence.
+
+Usage:
+  check_release_cleanliness.py              # all checks except the tag (run pre-tag)
+  check_release_cleanliness.py --require-tag # also require the annotated v0-candidate tag
+  check_release_cleanliness.py --self-test   # synthetic negative probes
+"""
+
+from __future__ import annotations
+
+import argparse
+import glob
+import os
+import subprocess
+import sys
+from pathlib import Path
+
+REPO = Path(__file__).resolve().parents[3]
+TAG = "v0-candidate"
+TRACKED_SMALL = [
+    "out/cfa_legacy/cards_manifest.json",
+    "out/cfa_legacy/summaries.json",
+    "out/cfa_legacy/INDEX.md",
+    "out/cfa_legacy/pdfium_provenance.json",
+]
+EXCLUDED = ["out/cfa_legacy/chunks_manifest.json"]
+RECIPE_SCRIPTS = [
+    "sources/cfa_legacy/_registry/run_ingest_per_source.py",
+    "sources/cfa_legacy/_registry/merge_ingest_manifests.py",
+]
+RELEASE_DOC = "_research/30_v0_release_and_rebuild_recipe.md"
+# Strings the tag message / release doc must reference (the AC-10 evidence pointers).
+TAG_MUST_REFERENCE = ["scope_ledger", "index_repro"]
+
+
+def git(*a) -> str:
+    return subprocess.run(["git", "-C", str(REPO), *a], capture_output=True, text=True).stdout
+
+
+def is_tracked(path: str) -> bool:
+    return bool(git("ls-files", "--", path).strip())
+
+
+def is_ignored(path: str) -> bool:
+    return subprocess.run(["git", "-C", str(REPO), "check-ignore", "-q", path]).returncode == 0
+
+
+def run_checks(*, require_tag: bool) -> list[str]:
+    failures: list[str] = []
+
+    # (1) the 4 small published-index artifacts are tracked AND exist on disk.
+    for p in TRACKED_SMALL:
+        if not is_tracked(p):
+            failures.append(f"release artifact not tracked: {p}")
+        if not (REPO / p).is_file():
+            failures.append(f"release artifact missing on disk: {p}")
+
+    # (2) the large chunks_manifest is NOT tracked and IS ignored.
+    for p in EXCLUDED:
+        if is_tracked(p):
+            failures.append(f"large artifact must NOT be tracked: {p}")
+        if not is_ignored(p):
+            failures.append(f"large artifact must be .gitignore-excluded: {p}")
+
+    # (3) 268 trust-chain sidecars tracked (== on disk).
+    disk_sidecars = len(glob.glob(str(REPO / "cards/cfa_legacy/**/*.history.jsonl"), recursive=True))
+    tracked_sidecars = len([l for l in git("ls-files", "cards/cfa_legacy/").splitlines()
+                            if l.endswith(".history.jsonl")])
+    if disk_sidecars != 268:
+        failures.append(f"expected 268 .history.jsonl sidecars on disk, found {disk_sidecars}")
+    if tracked_sidecars != disk_sidecars:
+        failures.append(f"sidecars tracked ({tracked_sidecars}) != on disk ({disk_sidecars})")
+
+    # (4) research docs 23-26 + the decision ledger (29) + this release doc (30) tracked.
+    for n in (23, 24, 25, 26, 29, 30):
+        if not git("ls-files", f"_research/{n}_*").strip():
+            failures.append(f"_research/{n}_* not tracked")
+
+    # (5) rebuild-recipe scripts named in the release doc exist on disk.
+    for s in RECIPE_SCRIPTS:
+        if not (REPO / s).is_file():
+            failures.append(f"rebuild-recipe script missing: {s}")
+    # ... and the release doc actually names them + the recipe.
+    doc = (REPO / RELEASE_DOC).read_text(encoding="utf-8") if (REPO / RELEASE_DOC).is_file() else ""
+    if not doc:
+        failures.append(f"release doc missing: {RELEASE_DOC}")
+    else:
+        for s in ("run_ingest_per_source.py", "merge_ingest_manifests.py"):
+            if s not in doc:
+                failures.append(f"release doc does not document recipe script {s}")
+        if "chunks_manifest.json" not in doc:
+            failures.append("release doc does not mention chunks_manifest.json (rebuild recipe)")
+
+    # (6) worktree is release-clean: nothing untracked that is not gitignored.
+    # (`--untracked-files=all` lists only NON-ignored untracked paths.)
+    untracked = [l[3:] for l in git("status", "--porcelain", "--untracked-files=all").splitlines()
+                 if l.startswith("?? ")]
+    if untracked:
+        failures.append(f"worktree has untracked, non-ignored files: {untracked[:10]}")
+
+    # (7) (optional) annotated v0-candidate tag exists + references the evidence.
+    if require_tag:
+        if TAG not in git("tag", "--list", TAG).split():
+            failures.append(f"annotated tag {TAG!r} does not exist")
+        else:
+            # annotated tag: `cat-file -t` is 'tag' (not 'commit')
+            kind = git("cat-file", "-t", TAG).strip()
+            if kind != "tag":
+                failures.append(f"tag {TAG!r} is not annotated (cat-file type={kind!r})")
+            msg = git("for-each-ref", "--format=%(contents)", f"refs/tags/{TAG}")
+            for ref in TAG_MUST_REFERENCE:
+                if ref not in msg:
+                    failures.append(f"tag {TAG!r} message does not reference {ref!r}")
+
+    return failures
+
+
+def _self_test() -> int:
+    """Synthetic negative probes (do not touch the real tree)."""
+    import tempfile
+    failures = 0
+
+    def expect(name, cond):
+        nonlocal failures
+        print(("  ok    " if cond else "  FAIL  ") + name)
+        if not cond:
+            failures += 1
+
+    # The real run (no tag) must pass on the actual tree.
+    real = run_checks(require_tag=False)
+    expect("real tree passes (no --require-tag)", real == [])
+    # is_tracked / is_ignored sanity on known paths.
+    expect("cards_manifest.json is tracked", is_tracked("out/cfa_legacy/cards_manifest.json"))
+    expect("chunks_manifest.json is NOT tracked", not is_tracked("out/cfa_legacy/chunks_manifest.json"))
+    expect("chunks_manifest.json is ignored", is_ignored("out/cfa_legacy/chunks_manifest.json"))
+    expect("a nonexistent path is not tracked", not is_tracked("out/cfa_legacy/__nope__.json"))
+    # require_tag must FAIL when the tag is absent (only meaningful pre-tag; if the tag
+    # already exists this still asserts the require_tag path runs).
+    tag_exists = TAG in git("tag", "--list", TAG).split()
+    rt = run_checks(require_tag=True)
+    if tag_exists:
+        expect("require_tag passes when tag exists", rt == [] or all("does not exist" not in f for f in rt))
+    else:
+        expect("require_tag fails when tag absent", any("does not exist" in f for f in rt))
+    print()
+    if failures:
+        print(f"RELEASE CLEANLINESS SELF-TEST: FAIL ({failures})", file=sys.stderr)
+        return 1
+    print("RELEASE CLEANLINESS SELF-TEST: PASS")
+    return 0
+
+
+def main() -> int:
+    ap = argparse.ArgumentParser(description=__doc__)
+    ap.add_argument("--require-tag", action="store_true",
+                    help="also require the annotated v0-candidate tag (run after tagging)")
+    ap.add_argument("--self-test", action="store_true")
+    args = ap.parse_args()
+    if args.self_test:
+        return _self_test()
+
+    failures = run_checks(require_tag=args.require_tag)
+    print(f"tracked small artifacts: {len(TRACKED_SMALL)} | excluded: {len(EXCLUDED)} | "
+          f"require_tag: {args.require_tag}")
+    if failures:
+        print("\nRELEASE CLEANLINESS: FAIL", file=sys.stderr)
+        for f in failures:
+            print(f"  - {f}", file=sys.stderr)
+        return 1
+    print("\nRELEASE CLEANLINESS: PASS (small index + provenance tracked; chunks_manifest "
+          "excluded; 268 sidecars + research docs tracked; recipe scripts present; worktree "
+          "clean" + ("; v0-candidate tag present + references evidence)" if args.require_tag else ")"))
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

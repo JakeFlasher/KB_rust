@@ -30,6 +30,20 @@ crates/cacg-cli/out/
 !/out/semantic_cache.json
 !/out/semantic_cache.provenance.json
 
+# AC-10 (v0 release): force-track the small published-index artifacts + the Pdfium
+# provenance record that live under the otherwise-ignored /out/ tree. The large
+# chunks_manifest.json (~85 MB), the regenerated source_matrix.json, and the transient
+# lint_journal.jsonl stay ignored — see `_research/30_v0_release_and_rebuild_recipe.md`
+# for the rebuild recipe + intentionally-untracked disposition. Git cannot un-ignore a
+# file whose parent dir is excluded, so re-include the dir, re-ignore its contents, then
+# re-include the four files.
+!/out/cfa_legacy/
+/out/cfa_legacy/*
+!/out/cfa_legacy/cards_manifest.json
+!/out/cfa_legacy/summaries.json
+!/out/cfa_legacy/INDEX.md
+!/out/cfa_legacy/pdfium_provenance.json
+
 # Avoid committing huge intermediate scratch files
 *.tmp
 # Local working-tree backup archive (multi-GB self-snapshot); never track.
