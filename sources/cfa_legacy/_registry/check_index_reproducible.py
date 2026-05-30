@@ -154,6 +154,15 @@ def main() -> int:
             f"load-bearing as expected (na={ev_na}, nb={ev_nb})"
         )
 
+    # The proof artifact is itself deterministic / re-run-clean: it records the frozen
+    # (deterministic) hashes + sidecar sentinel + the boolean assertions, but NOT the
+    # raw non-frozen ts/uuid values (those are random by design — embedding them would
+    # make this committed proof change on every run). The non-frozen NON-determinism is
+    # recorded as the fixed fact `nonfrozen_sidecar_nonreproducible`. Note: only `uuid`
+    # /`event_id` are guaranteed to differ every non-frozen run; `ts`/`timestamp` may
+    # coincide if two runs land in the same second — so we do NOT record which fields
+    # happened to vary (that would be non-deterministic), only the constant set of
+    # determinism-controlled fields.
     proof = {
         "schema_version": "cfa_legacy_index_repro/v1",
         "kb_binary": str(KB.relative_to(REPO)),
@@ -163,10 +172,12 @@ def main() -> int:
         "frozen_run_b_hashes": hfb,
         "frozen_byte_identical": all(hfa[n] == hfb[n] for n in ARTIFACTS),
         "published_artifacts_time_invariant": published_time_invariant,
-        "frozen_sidecar_event": ev_fa,
-        "nonfrozen_sidecar_event_a": ev_na,
-        "nonfrozen_sidecar_event_b": ev_nb,
+        "frozen_sidecar_event_sentinel": {
+            "ts": ev_fa["ts"], "timestamp": ev_fa["timestamp"],
+            "uuid": ev_fa["uuid"], "event_id": ev_fa["event_id"],
+        },
         "nonfrozen_sidecar_nonreproducible": nonfrozen_differs,
+        "determinism_controlled_fields": ["ts", "timestamp", "uuid", "event_id"],
         "passed": not failures,
     }
     PROOF.parent.mkdir(parents=True, exist_ok=True)
