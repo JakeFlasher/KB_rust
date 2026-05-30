@@ -89,6 +89,11 @@ def main() -> int:
             # 4. non-integer evidence page
             d = copy.deepcopy(base); d["sources"][0]["verified_evidence"][0]["pdf_page"] = "70"; write(d)
             expect_reject("non-integer evidence pdf_page", lambda: E.validate_single_source_map(ped))
+            # 4b. missing / non-positive page_count_pdf (would fail-open the cited-page bound)
+            d = copy.deepcopy(base); d["sources"][0].pop("page_count_pdf", None); write(d)
+            expect_reject("missing page_count_pdf", lambda: E.validate_single_source_map(ped))
+            d = copy.deepcopy(base); d["sources"][0]["page_count_pdf"] = 0; write(d)
+            expect_reject("non-positive page_count_pdf", lambda: E.validate_single_source_map(ped))
             # 5. positive control under the patched dir (uncorrupted copy still passes)
             write(copy.deepcopy(base))
             expect_pass("uncorrupted copy still validates", lambda: E.validate_single_source_map(ped))

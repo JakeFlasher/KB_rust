@@ -240,6 +240,10 @@ def validate_single_source_map(source_id: str) -> dict[str, Any]:
             f"{source_id}: only {confirmed} re-derived verified_evidence triples (need >=3)"
         )
     page_count = src.get("page_count_pdf")
+    if not (isinstance(page_count, int) and not isinstance(page_count, bool) and page_count > 0):
+        raise SystemExit(
+            f"{source_id}: page_count_pdf must be a positive integer, got {page_count!r}"
+        )
     return {"offset": offset, "page_count_pdf": page_count, "confirmed_evidence": confirmed}
 
 
@@ -299,8 +303,10 @@ def validate_citation(
         vmap = validated_maps.get(src)
         if vmap is None:
             raise SystemExit(f"{card_id}: single-source offset map for {src} was not validated")
-        page_count = vmap.get("page_count_pdf")
-        if isinstance(page_count, int) and not (1 <= pr[0] <= pr[1] <= page_count):
+        # page_count_pdf is guaranteed a positive int by validate_single_source_map,
+        # so the cited-page bound is always enforced (never silently skipped).
+        page_count = vmap["page_count_pdf"]
+        if not (1 <= pr[0] <= pr[1] <= page_count):
             raise SystemExit(
                 f"{card_id}: cited page_range {pr} outside {src} PDF page count "
                 f"[1, {page_count}] ({cit['chunk_id']})"

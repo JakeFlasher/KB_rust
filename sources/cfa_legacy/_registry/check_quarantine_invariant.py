@@ -8,16 +8,19 @@ Re-runnable, fail-closed (non-zero exit on any violation). Asserts:
      a non-empty re-authoring criterion.
   2. Each of the 6 quarantined IDs is ABSENT from `cards_manifest.json`,
      `summaries.json`, `INDEX.md`, and the on-disk card tree.
-  3. No ACTIVE card frontmatter contains a `notes_provenance` field (Rule 9 not
-     relaxed via a provenance escape hatch).
-  4. No ACTIVE card cites a `notes/` or `scripts/` path (the Rule-9 operational
-     invariant on the active corpus).
-  5. The canonical Critical Rule 9 statement in the legacy `CLAUDE.md` is intact
-     (hard-checked when that read-only sibling is reachable; a NOTE otherwise).
+  3. No ACTIVE card frontmatter contains a `notes_provenance` field at ANY nesting
+     (Rule 9 not relaxed via a provenance escape hatch).
+  4. No ACTIVE card cites a `notes/` or `scripts/` path in a source reference
+     (the Rule-9 operational invariant on the active corpus).
+  5. The canonical Critical Rule 9 statement in the legacy `CLAUDE.md` is intact.
+     This is fail-closed: if that source is unreachable the check FAILS unless
+     `KB_ALLOW_MISSING_RULE9_SOURCE=1` is set (then it downgrades to a NOTE).
 
 `--self-test` proves the negative tests fail closed: it feeds synthetic violations
-(a quarantine ID leaked into the manifest; a `notes_provenance` field on an active
-card; a relaxed Rule-9 text) through the same `run_checks` and asserts each is caught.
+(a quarantine ID leaked into the manifest/summaries/INDEX; a top-level AND a nested
+`notes_provenance` field; a cited `notes/` path including a non-leading path segment;
+a relaxed/absent Rule-9 source) through the same `run_checks` and asserts each is
+caught, while the clean baseline passes.
 """
 
 from __future__ import annotations
@@ -50,15 +53,17 @@ QUARANTINE_IDS = frozenset({
 # Key clauses of Critical Rule 9 that must remain present (unrelaxed) in legacy CLAUDE.md.
 RULE9_KEY_CLAUSES = ("User-volatile folders hard-block", "notes/", "hard-block")
 
-# Rule 9 forbids CITING a notes/ or scripts/ path as a source reference. Scope the
-# scan to source-reference lines (cacg.v0 `source_id:` + legacy `Primary raw source:`
-# / `Supporting sources:` / `**Source:**`) so prose mentioning "scripts/" is not a
-# false positive while a cited path still fails.
-_NOTES_SCRIPTS_PATH = re.compile(r"(?<![\w./-])(notes|scripts)/")
+# Rule 9 forbids CITING a notes/ or scripts/ path as a source reference. The lookbehind
+# excludes only WORD chars so `notes`/`scripts` as a word SUFFIX (endnotes/, transcripts/)
+# is not matched, but a path SEGMENT preceded by `/`, `.`, space, etc. (e.g. ../notes/foo,
+# /abs/scripts/x, notes/foo) IS matched. Scoped to source-reference lines so prose is safe.
+_NOTES_SCRIPTS_PATH = re.compile(r"(?<![A-Za-z0-9_])(notes|scripts)/")
 _SOURCE_REF_LINE = re.compile(
     r"(Primary raw source|Supporting sources|\*\*Source:\*\*|(?<![\w])Source:|source_id)",
     re.IGNORECASE,
 )
+# A notes_provenance key at any frontmatter nesting depth (top-level or indented).
+_NOTES_PROVENANCE_KEY = re.compile(r"(?m)^\s*notes_provenance\s*:")
 
 
 def find_active_card_files(cards_dir: Path) -> list[Path]:
@@ -72,16 +77,10 @@ def find_active_card_files(cards_dir: Path) -> list[Path]:
     return out
 
 
-def frontmatter_top_keys(text: str) -> set[str]:
+def frontmatter_block(text: str) -> str:
+    """The raw frontmatter block (between the first two `---`), or '' if absent."""
     parts = text.split("---", 2)
-    if len(parts) < 3:
-        return set()
-    keys = set()
-    for line in parts[1].splitlines():
-        m = re.match(r"^([A-Za-z_][\w]*):", line)
-        if m:
-            keys.add(m.group(1))
-    return keys
+    return parts[1] if len(parts) >= 3 else ""
 
 
 def load_active_cards(cards_dir: Path) -> list[dict]:
@@ -91,7 +90,7 @@ def load_active_cards(cards_dir: Path) -> list[dict]:
         cards.append({
             "id": md.stem,
             "rel": str(md.relative_to(REPO)),
-            "frontmatter_keys": frontmatter_top_keys(text),
+            "frontmatter": frontmatter_block(text),
             "text": text,
         })
     return cards
@@ -107,6 +106,7 @@ def run_checks(
     on_disk_ids: set[str],
     active_cards: list[dict],
     rule9_text: str | None,
+    allow_missing_rule9: bool = False,
 ) -> list[str]:
     """Return a list of failure strings; empty iff every invariant holds."""
     failures: list[str] = []
@@ -137,9 +137,9 @@ def run_checks(
         if qid in on_disk_ids:
             failures.append(f"quarantined {qid} present as an on-disk card file")
 
-    # (3) No active card frontmatter carries a notes_provenance field.
+    # (3) No active card frontmatter carries a notes_provenance field (any nesting).
     for card in active_cards:
-        if "notes_provenance" in card["frontmatter_keys"]:
+        if _NOTES_PROVENANCE_KEY.search(card.get("frontmatter", "")):
             failures.append(f"active card {card.get('rel', card['id'])} has a notes_provenance frontmatter field (Rule 9 relaxed)")
 
     # (4) No active card cites a notes/ or scripts/ path in a source reference.
@@ -152,8 +152,15 @@ def run_checks(
                 )
                 break
 
-    # (5) Canonical Rule 9 statement intact (hard when the legacy CLAUDE.md is reachable).
-    if rule9_text is not None:
+    # (5) Canonical Rule 9 statement intact — FAIL-CLOSED if the source is unreachable
+    # (unless explicitly allowed, e.g. a clean checkout without the legacy sibling).
+    if rule9_text is None:
+        if not allow_missing_rule9:
+            failures.append(
+                "Critical Rule 9 source (legacy CLAUDE.md) unreachable; cannot verify it is "
+                "unrelaxed. Set KB_ALLOW_MISSING_RULE9_SOURCE=1 to skip this cross-check."
+            )
+    else:
         missing = [c for c in RULE9_KEY_CLAUSES if c not in rule9_text]
         if missing:
             failures.append(f"Critical Rule 9 weakened/absent in legacy CLAUDE.md; missing clauses: {missing}")
@@ -173,8 +180,9 @@ def _self_test() -> int:
         summary_ids={"pm-capm-and-sml"},
         index_text="| pm-capm-and-sml | CAPM | 1 | abc |",
         on_disk_ids={"pm-capm-and-sml"},
-        active_cards=[{"id": "pm-capm-and-sml", "rel": "x.md", "frontmatter_keys": {"id", "citations"}, "text": "ok"}],
+        active_cards=[{"id": "pm-capm-and-sml", "rel": "x.md", "frontmatter": "id: x\ncitations:", "text": "ok"}],
         rule9_text="User-volatile folders hard-block ... notes/ ... hard-block",
+        allow_missing_rule9=False,
     )
     failures = 0
 
@@ -204,12 +212,24 @@ def _self_test() -> int:
                   summary_ids={"rm-parametric-var"})
     expect_caught("quarantine id leaked into INDEX", "INDEX.md",
                   index_text="| rm-monte-carlo-var | VaR | 1 | x |")
-    expect_caught("notes_provenance on active card", "notes_provenance",
-                  active_cards=[{"id": "c", "rel": "c.md", "frontmatter_keys": {"id", "notes_provenance"}, "text": "ok"}])
-    expect_caught("active card cites notes/ path", "notes/ or scripts/",
-                  active_cards=[{"id": "c", "rel": "c.md", "frontmatter_keys": {"id"}, "text": "**Source:** notes/foo.pdf"}])
+    expect_caught("notes_provenance on active card (top-level)", "notes_provenance",
+                  active_cards=[{"id": "c", "rel": "c.md", "frontmatter": "id: c\nnotes_provenance: foo", "text": "ok"}])
+    expect_caught("notes_provenance on active card (nested/indented)", "notes_provenance",
+                  active_cards=[{"id": "c", "rel": "c.md", "frontmatter": "id: c\ncitations:\n  - notes_provenance: foo", "text": "ok"}])
+    expect_caught("active card cites notes/ path (leading)", "notes/ or scripts/",
+                  active_cards=[{"id": "c", "rel": "c.md", "frontmatter": "id: c", "text": "**Source:** notes/foo.pdf"}])
+    expect_caught("active card cites notes/ path (non-leading segment)", "notes/ or scripts/",
+                  active_cards=[{"id": "c", "rel": "c.md", "frontmatter": "id: c", "text": "**Source:** ../user/notes/foo.pdf"}])
+    expect_caught("active card cites scripts/ path (abs)", "notes/ or scripts/",
+                  active_cards=[{"id": "c", "rel": "c.md", "frontmatter": "id: c", "text": "Primary raw source: /home/u/scripts/kb/x.py"}])
+    expect_clean("prose mentioning endnotes/ is NOT a violation",
+                 active_cards=[{"id": "c", "rel": "c.md", "frontmatter": "id: c", "text": "**Source:** Smith, endnotes/appendix discussion"}])
     expect_caught("Rule 9 weakened", "Critical Rule 9 weakened",
                   rule9_text="(rule removed)")
+    expect_caught("Rule 9 source unreachable + not allowed", "unreachable",
+                  rule9_text=None, allow_missing_rule9=False)
+    expect_clean("Rule 9 source unreachable but explicitly allowed",
+                 rule9_text=None, allow_missing_rule9=True)
     expect_caught("ledger missing a quarantine id", "quarantined set",
                   ledger_quarantined=base["ledger_quarantined"][:-1])
     expect_caught("ledger entry missing reauthor criterion", "re-authoring criterion",
@@ -239,12 +259,13 @@ def main() -> int:
     active_cards = load_active_cards(CARDS_DIR)
     on_disk_ids = {c["id"] for c in active_cards}
 
+    allow_missing_rule9 = bool(os.environ.get("KB_ALLOW_MISSING_RULE9_SOURCE"))
     rule9_text = None
     if LEGACY_CLAUDE_MD.is_file():
         rule9_text = LEGACY_CLAUDE_MD.read_text(encoding="utf-8", errors="replace")
-    else:
+    elif allow_missing_rule9:
         print(f"NOTE: legacy CLAUDE.md not reachable at {LEGACY_CLAUDE_MD}; "
-              "Rule-9 text pin skipped (operational checks still enforced).")
+              "Rule-9 text pin skipped (KB_ALLOW_MISSING_RULE9_SOURCE set; operational checks still enforced).")
 
     failures = run_checks(
         quarantine_ids=set(QUARANTINE_IDS),
@@ -255,11 +276,12 @@ def main() -> int:
         on_disk_ids=on_disk_ids,
         active_cards=active_cards,
         rule9_text=rule9_text,
+        allow_missing_rule9=allow_missing_rule9,
     )
 
+    pin = "checked" if rule9_text is not None else ("skipped (allowed)" if allow_missing_rule9 else "UNREACHABLE")
     print(f"quarantine IDs: {len(QUARANTINE_IDS)} | active cards scanned: {len(active_cards)} | "
-          f"manifest: {len(manifest_ids)} | summaries: {len(summary_ids)} | "
-          f"Rule-9 text pin: {'checked' if rule9_text is not None else 'skipped'}")
+          f"manifest: {len(manifest_ids)} | summaries: {len(summary_ids)} | Rule-9 text pin: {pin}")
     if failures:
         print("\nQUARANTINE INVARIANT: FAIL", file=sys.stderr)
         for f in failures:
