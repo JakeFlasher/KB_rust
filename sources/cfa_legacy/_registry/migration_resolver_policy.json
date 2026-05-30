@@ -1,0 +1,19 @@
+{
+  "schema_version": "cfa_legacy.migration_resolver_policy.v1",
+  "note": "Explicit, user-authorized overrides for resolve_migration_citations.py. The resolver fails closed on any condition NOT covered here; these two narrow exceptions were authorized by the user during the RLCR loop and are recorded for audit.",
+  "authorized_by": "user (RLCR loop, 2026-05-31)",
+  "allow_overlap_disambiguation": {
+    "enabled": true,
+    "rule": "best-fit: prefer a chunk whose page span fully contains the cited page_range, then the tightest span, then the lowest chunk_id",
+    "scope": "ONLY a multi-candidate whose matching chunks form a single overlapping page-span chain (kb's chunker emits overlapping chunks, so a quote verbatim-verifies against more than one adjacent chunk). A multi-candidate that is NOT a pure overlap chain (genuine duplicate text in distant chunks) still fails closed.",
+    "audit": "the chosen chunk_id and ALL candidate chunk_ids are recorded on the bind-report row.",
+    "rationale": "binding to the best-fit overlapping chunk is safe (the quote is a verbatim substring of the chosen chunk and its chunk_hash is correct); overlap is a structural chunker property, not content ambiguity."
+  },
+  "allow_low_auto_bind_for_ufffe_repair": {
+    "enabled": true,
+    "min_auto_bind_rate": 0.95,
+    "scope": "the >=95% per-set auto-bind guard is overridden ONLY because some authored quotes span a Pdfium STX->U+FFFE hyphenation marker the kernel preserves; the override covers ONLY trim/re-anchor repairs whose recorded reason is that U+FFFE condition. Any unbound, zero-match, boundary-spanning, or non-overlap-ambiguous citation still fails closed.",
+    "audit": "every repair is recorded in migration_quote_audit.json; the bind report records the per-set auto-bind rates and that the override was applied.",
+    "rationale": "user hybrid decision (trim where the clean run retains >=60%, else re-anchor to the best-overlap clean on-page sentence)."
+  }
+}

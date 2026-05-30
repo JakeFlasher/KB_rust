@@ -6,7 +6,7 @@ manifest, writing three curated citation registries (mt_14 / pa_15 / fa_22), an
 auditable bind report, and a quote-integrity audit. It PROPOSES a binding (the
 chunk whose page span intersects the citation page_range and whose normalized
 text contains the normalized quote) and CONFIRMS every binding with the REAL
-`kb verify` (the kernel is the containment authority -- AC-equivalent parity).
+`kb verify` (the kernel is the containment authority -- kernel-parity).
 Fail-closed: a citation that binds to zero/multiple/boundary chunks, or whose
 final quote does not pass `kb verify`, is reported and never silently bound.
 
@@ -55,8 +55,21 @@ SETS = (
 )
 BIND_REPORT = REGISTRY / "migration_bind_report.json"
 QUOTE_AUDIT = REGISTRY / "migration_quote_audit.json"
+POLICY_PATH = REGISTRY / "migration_resolver_policy.json"
 TRIM_RETAIN_MIN = 0.60   # >=60% of the quote retained -> trim; else re-anchor
 MIN_QUOTE_CHARS = 25
+MIN_AUTO_BIND_RATE = 0.95
+
+
+def load_policy() -> dict[str, Any]:
+    return json.loads(POLICY_PATH.read_text(encoding="utf-8")) if POLICY_PATH.is_file() else {}
+
+
+def is_overlap_set(chunks: list[dict[str, Any]]) -> bool:
+    """True iff the chunks form a single overlapping page-span chain (kb chunker overlap):
+    sorted by start_page, each chunk's start_page <= the previous chunk's end_page."""
+    s = sorted(chunks, key=lambda c: (c["start_page"], c["end_page"], c["chunk_id"]))
+    return all(s[i]["start_page"] <= s[i - 1]["end_page"] for i in range(1, len(s)))
 
 _LIGATURES = {"ﬀ": "ff", "ﬁ": "fi", "ﬂ": "fl", "ﬃ": "ffi",
               "ﬄ": "ffl", "ﬅ": "ft", "ﬆ": "st"}
@@ -205,10 +218,12 @@ def window_contains(chunk: dict[str, Any], lo: int, hi: int, needle_norm: str) -
     return needle_norm in normalize_text(chunk_pages_text(chunk, lo, hi))
 
 
-def bind_citation(cit: dict[str, Any], reading_id: str, by_src: dict[str, list]) -> dict[str, Any]:
+def bind_citation(cit: dict[str, Any], reading_id: str, by_src: dict[str, list],
+                  policy: dict[str, Any]) -> dict[str, Any]:
     """PROPOSE a binding for one citation via parity-proven normalize_text containment.
     Pure (no subprocess); the proposal is confirmed by a later parallel kb-verify pass.
-    Fail-closed: zero clean trim/re-anchor -> status 'unbound'."""
+    Fail-closed: >1 candidate -> 'ambiguous' (unless the committed policy authorizes
+    deterministic overlap disambiguation); zero clean trim/re-anchor -> 'unbound'."""
     sid = cit["source_id"]
     pr = cit["page_range"]
     lo, hi = (pr[0], pr[-1]) if isinstance(pr, list) else (pr, pr)
@@ -218,27 +233,46 @@ def bind_citation(cit: dict[str, Any], reading_id: str, by_src: dict[str, list])
     cand = sorted([c for c in by_src.get(sid, []) if not (c["end_page"] < lo or c["start_page"] > hi)],
                   key=lambda c: c["chunk_id"])
 
-    def bound(chunk, final_quote, final_pr, status, change):
-        return {"card_id": None, "status": status, "change": change,
-                "reading_id": reading_id,
-                "registry": {"source_id": sid, "chunk_id": chunk["chunk_id"],
-                             "chunk_hash": chunk["chunk_hash"], "page_range": final_pr,
-                             "quote": final_quote, "edge_type": edge},
-                "authored_page_range": [lo, hi]}
+    def page_change(cpr, chunk):
+        if cpr == [lo, hi]:
+            return None
+        return {"type": "page_window", "old_page_range": [lo, hi], "new_page_range": cpr,
+                "reason": f"cited page_range [{lo}, {hi}] clamped to the bound chunk's page span "
+                          f"[{chunk['start_page']}, {chunk['end_page']}] so the cited range lies within "
+                          f"the chunk (chunk covers page(s) {cpr[0]}..{cpr[1]} of the cited range)"}
+
+    def bound(chunk, final_quote, final_pr, status, change, overlap_alternatives=None):
+        rec = {"card_id": None, "status": status, "change": change, "reading_id": reading_id,
+               "registry": {"source_id": sid, "chunk_id": chunk["chunk_id"],
+                            "chunk_hash": chunk["chunk_hash"], "page_range": final_pr,
+                            "quote": final_quote, "edge_type": edge},
+               "authored_page_range": [lo, hi]}
+        if overlap_alternatives:
+            rec["overlap_alternatives"] = overlap_alternatives
+        return rec
+
+    def fit_key(item):
+        c = item[0]
+        contains = 0 if (c["start_page"] <= lo and hi <= c["end_page"]) else 1
+        return (contains, c["end_page"] - c["start_page"], c["chunk_id"])
 
     # 1. AUTO-bind: candidate(s) whose normalized cited-page-window text contains the authored quote.
-    # Chunks can OVERLAP, so pick the best-fit one deterministically (full containment, tightest span, id).
     proposed = [(c, [max(lo, c["start_page"]), min(hi, c["end_page"])]) for c in cand]
     proposed = [(c, cpr) for c, cpr in proposed if window_contains(c, cpr[0], cpr[1], nq)]
-    if proposed:
-        def fit_key(item):
-            c = item[0]
-            contains = 0 if (c["start_page"] <= lo and hi <= c["end_page"]) else 1
-            return (contains, c["end_page"] - c["start_page"], c["chunk_id"])
-        c, cpr = sorted(proposed, key=fit_key)[0]
-        corrected = cpr != [lo, hi]
-        return bound(c, quote, cpr, "auto", {"type": "page_window",
-                     "old_page_range": [lo, hi], "new_page_range": cpr} if corrected else None)
+    if len(proposed) == 1:
+        c, cpr = proposed[0]
+        return bound(c, quote, cpr, "auto", page_change(cpr, c))
+    if len(proposed) > 1:
+        # FAIL CLOSED on multiple verifying candidates, UNLESS the committed policy authorizes
+        # deterministic disambiguation of a pure chunker-OVERLAP set (record all alternatives).
+        chunks = [c for c, _ in proposed]
+        candidate_ids = sorted(c["chunk_id"] for c in chunks)
+        overlap = is_overlap_set(chunks)
+        if overlap and policy.get("allow_overlap_disambiguation", {}).get("enabled"):
+            c, cpr = sorted(proposed, key=fit_key)[0]
+            return bound(c, quote, cpr, "auto", page_change(cpr, c), overlap_alternatives=candidate_ids)
+        return {"status": "ambiguous", "authored_page_range": [lo, hi],
+                "candidate_chunk_ids": candidate_ids, "is_overlap_set": overlap}
 
     # 2. REPAIR (U+FFFE / no clean verbatim match). Best candidate chunk = the one whose
     # U+FFFE-stripped normalized text contains the quote, preferring full page containment.
@@ -288,6 +322,7 @@ def bind_citation(cit: dict[str, Any], reading_id: str, by_src: dict[str, list])
 
 def resolve() -> dict[str, Any]:
     skeletons = load_skeletons()
+    policy = load_policy()
     manifest = json.loads(CHUNKS_MANIFEST.read_text(encoding="utf-8"))["chunks"]
     by_src: dict[str, list] = {}
     for c in manifest:
@@ -301,7 +336,7 @@ def resolve() -> dict[str, Any]:
     for card in skeletons:
         for cit in card["citations"]:
             idx += 1
-            rec = bind_citation(cit, card["reading_id"], by_src)
+            rec = bind_citation(cit, card["reading_id"], by_src, policy)
             rec["card_id"] = card["card_id"]
             rec["_idx"] = idx
             items.append((card, cit, rec))
@@ -339,7 +374,10 @@ def resolve() -> dict[str, Any]:
         counts[prefix]["total"] += 1
         report.append({"card_id": card["card_id"], "source_id": cit["source_id"],
                        "status": rec["status"], "chunk_id": rec.get("registry", {}).get("chunk_id"),
-                       "authored_page_range": rec.get("authored_page_range"), "change": rec.get("change")})
+                       "authored_page_range": rec.get("authored_page_range"), "change": rec.get("change"),
+                       "candidate_chunk_ids": rec.get("candidate_chunk_ids"),
+                       "overlap_alternatives": rec.get("overlap_alternatives"),
+                       "is_overlap_set": rec.get("is_overlap_set")})
         resolved = by_card.setdefault(card["card_id"], [])
         if rec["status"] in ("auto", "trim", "reanchor"):
             counts[prefix][rec["status"]] += 1
@@ -368,10 +406,29 @@ def write_json(path: Path, payload: Any) -> None:
 
 
 def emit(result: dict[str, Any]) -> dict[str, Any]:
-    unbound = [r for r in result["report"] if r["status"] not in ("auto", "trim", "reanchor")]
-    if unbound:
-        raise SystemExit(f"{len(unbound)} citation(s) failed to bind (fail-closed): "
-                         f"{[(u['card_id'], u['status']) for u in unbound[:8]]}")
+    policy = load_policy()
+    report = result["report"]
+    counts = result["counts"]
+    # Fail closed on ANY citation not cleanly bound (ambiguous / unbound / no_candidate / confirm_failed).
+    failed = [r for r in report if r["status"] not in ("auto", "trim", "reanchor")]
+    if failed:
+        raise SystemExit(
+            f"{len(failed)} citation(s) not cleanly bound (fail-closed): "
+            f"{[(r['card_id'], r['status'], r.get('candidate_chunk_ids')) for r in failed[:8]]}")
+    # >=95% per-set auto-bind guard, overridable ONLY for the documented U+FFFE quote-repair condition.
+    rates = {p: (round(c["auto"] / c["total"], 4) if c["total"] else 1.0) for p, c in counts.items()}
+    low = sorted(p for p, r in rates.items() if r < MIN_AUTO_BIND_RATE)
+    override = bool(policy.get("allow_low_auto_bind_for_ufffe_repair", {}).get("enabled"))
+    non_ufffe_repairs = [a for a in result["audit"] if "U+FFFE" not in a.get("reason", "")]
+    override_applied = False
+    if low:
+        if override and not non_ufffe_repairs:
+            override_applied = True
+        else:
+            raise SystemExit(
+                f"auto-bind below {MIN_AUTO_BIND_RATE:.0%} for set(s) {low} (rates {rates}); not covered "
+                f"by the U+FFFE override (enabled={override}, non_ufffe_repairs={len(non_ufffe_repairs)}). "
+                "Fail-closed.")
     for _set in SETS:
         rid, prefix = _set[1], _set[2]
         write_json(REGISTRY / f"{prefix}_curated_citations.json", {
@@ -386,7 +443,15 @@ def emit(result: dict[str, Any]) -> dict[str, Any]:
     write_json(BIND_REPORT, {
         "schema_version": "cfa_legacy.migration_bind_report.v1",
         "skeleton_count": result["skeleton_count"],
-        "counts": result["counts"], "report": sorted(result["report"], key=lambda r: (r["card_id"], r["source_id"])),
+        "counts": result["counts"],
+        "auto_bind_rates": rates,
+        "policy": {
+            "auto_bind_min_rate": MIN_AUTO_BIND_RATE,
+            "low_auto_bind_sets": low,
+            "ufffe_auto_bind_override_applied": override_applied,
+            "overlap_disambiguation_enabled": bool(policy.get("allow_overlap_disambiguation", {}).get("enabled")),
+        },
+        "report": sorted(result["report"], key=lambda r: (r["card_id"], r["source_id"])),
     })
     write_json(QUOTE_AUDIT, {
         "schema_version": "cfa_legacy.migration_quote_audit.v1",
@@ -403,63 +468,99 @@ def emit(result: dict[str, Any]) -> dict[str, Any]:
 
 
 # --------------------------------------------------------------------------- #
-# AC-equivalent parity fixture: resolver containment vs real kb verify.
+# Explicit kernel-parity fixture. (a) normalize_text byte-parity to the kernel's
+# OWN documented vectors (crates/cacg-core/src/normalize.rs tests); (b) end-to-end:
+# the resolver's candidate-selection + containment == the real kb verify (selected
+# chunk_id + PASS/FAIL) on declared real-citation rows. The corpus chunks contain
+# no `-\n`/ligature (Pdfium emits U+FFFE hyphenation + pre-expands ligatures), so
+# those features are proven by the normalize_text vectors.
 # --------------------------------------------------------------------------- #
 
+PARITY_NORM_VECTORS = [
+    {"input": "word-\nnext", "expected": "wordnext", "tags": ["hyphen-linebreak"]},
+    {"input": "word-  \n  next", "expected": "wordnext", "tags": ["hyphen-linebreak"]},
+    {"input": "oﬁce", "expected": "ofice", "tags": ["ligature"]},
+    {"input": "oﬃce", "expected": "office", "tags": ["ligature"]},
+    {"input": "baﬄe", "expected": "baffle", "tags": ["ligature"]},
+    {"input": "oﬀ", "expected": "off", "tags": ["ligature"]},
+    {"input": "beﬆ", "expected": "best", "tags": ["ligature"]},
+    {"input": "a  b\t\tc", "expected": "a b c", "tags": ["whitespace-join"]},
+    {"input": "a b", "expected": "a b", "tags": ["whitespace-join"]},
+    {"input": "  hello  ", "expected": "hello", "tags": ["whitespace-join"]},
+]
+
+PARITY_CITATIONS = [
+    {"reading_id": "01_quantitative_methods", "source_id": "qm_eslii_2009_2ed", "page_range": [250, 250],
+     "quote": "Then for this set of models we define AIC(α) = err(α) + 2 · d(α) N σˆε 2 .",
+     "expect_pass": True, "expect_chunk_id": "qm_eslii_2009_2ed:p250:0316", "tags": ["whitespace-join"]},
+    {"reading_id": "01_quantitative_methods", "source_id": "qm_eslii_2009_2ed", "page_range": [252, 253],
+     "quote": "The generic form of BIC is BIC = −2 · loglik + (log N) · d.",
+     "expect_pass": True, "expect_chunk_id": "qm_eslii_2009_2ed:p252:0319", "tags": ["whitespace-join"]},
+    {"reading_id": "01_quantitative_methods", "source_id": "qm_eslii_2009_2ed", "page_range": [242, 242],
+     "quote": "we first explore in more detail the nature of test error and the bias–variance tradeoff.",
+     "expect_pass": True, "expect_chunk_id": "qm_eslii_2009_2ed:p242:0307", "tags": ["punctuation"]},
+    {"reading_id": "01_quantitative_methods", "source_id": "qm_tsay_2014_multivariate_time_series", "page_range": [421, 421],
+     "quote": "We study in Section 7.5 the simple Baba–Engle–Kraft– Kroner (BEKK) model of Engle and Kroner (1995) and discuss its pros and cons.",
+     "expect_pass": True, "expect_chunk_id": "qm_tsay_2014_multivariate_time_series:p421:0481", "tags": ["punctuation"]},
+    {"reading_id": "17_cross_cutting", "source_id": "cfa_2022_l1_combined", "page_range": [1, 3],
+     "quote": "volume 2, type “2-5”… and so forth. For example, to go to page 5 of vol",
+     "expect_pass": False, "expect_chunk_id": None, "tags": ["chunk-boundary"]},
+    {"reading_id": "01_quantitative_methods", "source_id": "qm_eslii_2009_2ed", "page_range": [250, 250],
+     "quote": "this is a deliberately fabricated quote that does not exist in the chunk ZZQX",
+     "expect_pass": False, "expect_chunk_id": None, "tags": ["known-fail"]},
+]
+
+REQUIRED_PARITY_TAGS = {"whitespace-join", "hyphen-linebreak", "ligature", "punctuation", "chunk-boundary"}
+
+
 def parity() -> int:
-    """Prove normalize_text-based containment agrees with real kb verify on >=10
-    existing v0 citations spanning edge cases, plus known-FAIL probes."""
-    import yaml
+    """Normalization-parity gate: prove (a) normalize_text matches the kernel's documented vectors and (b) the resolver's
+    candidate-selection + containment match the real kb verify (selected chunk_id + PASS/FAIL) on an
+    explicit fixture covering all REQUIRED_PARITY_TAGS + known-FAILs. Fails if a required tag is missing
+    or any row mismatches."""
     manifest = json.loads(CHUNKS_MANIFEST.read_text(encoding="utf-8"))["chunks"]
-    by_id = {c["chunk_id"]: c for c in manifest}
-    cards_manifest = json.loads(CARDS_MANIFEST.read_text(encoding="utf-8"))["cards"]
+    by_src: dict[str, list] = {}
+    for c in manifest:
+        by_src.setdefault(c["source_id"], []).append(c)
+    policy = load_policy()
     env = dict(os.environ, KB_FROZEN_CLOCK="1",
                LD_LIBRARY_PATH=":".join(["/usr/lib", os.environ.get("LD_LIBRARY_PATH", "")]).strip(":"))
-    # gather a diverse fixture of real v0 citations from on-disk cards
-    fixture = []
-    for cm in cards_manifest:
-        if len(fixture) >= 14:
-            break
-        path = ROOT / cm["path"]
-        if not path.is_file():
-            continue
-        fm = yaml.safe_load(path.read_text(encoding="utf-8").split("---", 2)[1])
-        for cit in fm.get("citations", []):
-            ch = by_id.get(cit["chunk_id"])
-            if ch is None:
-                continue
-            q = cit["quote"]
-            feats = (("hyphen" if "-" in q else "") + ("lig" if any(l in ch["text"] for l in _LIGATURES) else "")
-                     + ("ws" if "  " in ch["text"] else ""))
-            fixture.append((path, fm["reading_id"], cit, ch, feats))
-            break
+    tags = {t for row in PARITY_NORM_VECTORS + PARITY_CITATIONS for t in row["tags"]}
+    fail: list[str] = []
+    if REQUIRED_PARITY_TAGS - tags:
+        fail.append(f"missing required coverage tags: {sorted(REQUIRED_PARITY_TAGS - tags)}")
+    for v in PARITY_NORM_VECTORS:
+        got = normalize_text(v["input"])
+        if got != v["expected"]:
+            fail.append(f"norm vector {v['input']!r}: got {got!r} != {v['expected']!r}")
     work = Path(tempfile.mkdtemp(prefix="parity_"))
-    mism = []
     try:
-        for i, (path, rid, cit, ch, feats) in enumerate(fixture):
-            # resolver containment prediction (normalize_text within the cited page window)
-            pr = cit["page_range"]
-            win = chunk_pages_text(ch, pr[0], pr[-1])
-            pred_pass = normalize_text(cit["quote"]) in normalize_text(win)
-            real = kb_verify(rid, cit["source_id"], ch, pr, cit["quote"], cit["edge_type"], work, env, 1000 + i)
-            if pred_pass != real:
-                mism.append((path.name, feats, pred_pass, real, "PASS"))
-            # known-FAIL probe: mangle the quote -> both must be FAIL
-            mangled = cit["quote"][:-3] + "ZZqx" if len(cit["quote"]) > 10 else cit["quote"] + "ZZqx"
-            pred_fail = normalize_text(mangled) in normalize_text(win)
-            real_fail = kb_verify(rid, cit["source_id"], ch, pr, mangled, cit["edge_type"], work, env, 2000 + i)
-            if pred_fail or real_fail:
-                mism.append((path.name, feats, pred_fail, real_fail, "FAIL-probe"))
+        for i, row in enumerate(PARITY_CITATIONS):
+            cit = {"source_id": row["source_id"], "page_range": row["page_range"],
+                   "quote": row["quote"], "edge_type": "supports"}
+            rec = bind_citation(cit, row["reading_id"], by_src, policy)
+            auto = rec["status"] == "auto"
+            sel = rec.get("registry", {}).get("chunk_id")
+            # real kb verify on the AUTHORED quote against the selected chunk (PASS) or the first
+            # candidate chunk in the page window (FAIL rows must FAIL there too).
+            window = [c for c in by_src.get(row["source_id"], [])
+                      if not (c["end_page"] < row["page_range"][0] or c["start_page"] > row["page_range"][-1])]
+            target = next((c for c in window if c["chunk_id"] == sel), None) if auto else (window[0] if window else None)
+            real = kb_verify(row["reading_id"], row["source_id"], target, row["page_range"],
+                             row["quote"], "supports", work, env, 5000 + i) if target else False
+            if auto != row["expect_pass"]:
+                fail.append(f"row {i} {row['tags']}: resolver auto={auto} != expect_pass={row['expect_pass']}")
+            if auto != real:
+                fail.append(f"row {i} {row['tags']}: resolver auto={auto} != kb verify={real}")
+            if row["expect_pass"] and sel != row["expect_chunk_id"]:
+                fail.append(f"row {i}: selected chunk {sel} != expected {row['expect_chunk_id']}")
     finally:
-        import shutil
         shutil.rmtree(work, ignore_errors=True)
-    print(json.dumps({"fixture_size": len(fixture), "mismatches": len(mism),
-                      "detail": mism[:10]}, ensure_ascii=False))
-    if len(fixture) < 10:
-        print("PARITY: insufficient fixture (<10)"); return 1
-    if mism:
+    print(json.dumps({"norm_vectors": len(PARITY_NORM_VECTORS), "citations": len(PARITY_CITATIONS),
+                      "tags": sorted(tags), "failures": fail[:10]}, ensure_ascii=False))
+    if fail:
         print("PARITY: FAIL"); return 1
-    print("PARITY: PASS (resolver normalize_text containment == kb verify on the fixture + known-FAILs)")
+    print("PARITY: PASS (normalize_text == kernel vectors; resolver selected chunk_id + PASS/FAIL == kb verify)")
     return 0
 
 
