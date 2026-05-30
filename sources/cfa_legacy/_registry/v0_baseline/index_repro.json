@@ -1,0 +1,48 @@
+{
+  "artifacts": [
+    "cards_manifest.json",
+    "summaries.json",
+    "INDEX.md"
+  ],
+  "cards_dir": "cards/cfa_legacy",
+  "frozen_byte_identical": false,
+  "frozen_run_a_hashes": {
+    "INDEX.md": "7d2cc2c2358ac77a08178077951cf0dbcddf8db595d4df5c72326cf551b0611d",
+    "cards_manifest.json": "54bc22da56badde9353ce43a091db0ce2a4197ccbdddf49a617bd2e2eb0fb415",
+    "summaries.json": "81bfd98aa8fc40f8c40b9793f7aabd9e5889cdd9378b422bf7eecad0698a48bf"
+  },
+  "frozen_run_b_hashes": {
+    "INDEX.md": "7d2cc2c2358ac77a08178077951cf0dbcddf8db595d4df5c72326cf551b0611d",
+    "cards_manifest.json": "8d72971d4fc9072b16e4a6e15eeee9bfc9a24c473350275f80835605ce79b434",
+    "summaries.json": "4f9906addbaf34efc5330dd1842decd62aae0bd31308d12fbea7626679f53923"
+  },
+  "frozen_sidecar_event": {
+    "card": "be-limits-of-arbitrage.history.jsonl",
+    "event_id": null,
+    "n_events": 1,
+    "timestamp": "1970-01-01T00:00:00Z",
+    "ts": null,
+    "uuid": null
+  },
+  "kb_binary": "target/debug/kb",
+  "nonfrozen_sidecar_event_a": {
+    "card": "be-limits-of-arbitrage.history.jsonl",
+    "event_id": null,
+    "n_events": 1,
+    "timestamp": "1970-01-01T00:00:00Z",
+    "ts": null,
+    "uuid": null
+  },
+  "nonfrozen_sidecar_event_b": {
+    "card": "be-limits-of-arbitrage.history.jsonl",
+    "event_id": null,
+    "n_events": 1,
+    "timestamp": "1970-01-01T00:00:00Z",
+    "ts": null,
+    "uuid": null
+  },
+  "nonfrozen_sidecar_nonreproducible": false,
+  "passed": false,
+  "published_artifacts_time_invariant": false,
+  "schema_version": "cfa_legacy_index_repro/v1"
+}
