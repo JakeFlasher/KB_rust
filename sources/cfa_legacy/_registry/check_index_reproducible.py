@@ -1,35 +1,50 @@
 #!/usr/bin/env python3
 """AC-9 gate: the published index is byte-reproducible under the frozen clock.
 
-Re-runnable, fail-closed. Proves it by actually re-running the production Rust
-`kb index` binary. All work happens under the gitignored `out/cfa_legacy/_repro/`; the
-REAL corpus is never touched — `kb index <cards_dir>` mutates that dir (it can append a
-`.history.jsonl` event), so we run against throwaway copies.
+Re-runnable, fail-closed. Proves it by re-running the production Rust `kb index` binary.
+All work happens under the gitignored `out/cfa_legacy/_repro/`; the REAL corpus is never
+touched — `kb index <cards_dir>` can mutate that dir (it appends a `.history.jsonl`
+event when a card's content changes), so we run against throwaway copies.
 
-Two hard gates:
+The plan's AC-9 names the THREE PUBLISHED artifacts (`cards_manifest.json`,
+`summaries.json`, `INDEX.md`) and asks for a byte-identity check plus a non-frozen
+negative. This harness operates strictly on those three artifacts and reports the
+honest result:
 
-  POSITIVE — byte-reproducible published artifacts (the AC-9 core):
-    With a FIXED input directory, `KB_FROZEN_CLOCK=1 kb index <cards> --out A` and
-    `… --out B` produce byte-identical `cards_manifest.json`, `summaries.json`, and
-    `INDEX.md`. (Important nuance, verified: kb index emits the manifest/summaries in
-    filesystem WALK order, so they are byte-stable for a fixed input PATH but would
-    differ across two separate physical copies of the cards — same set, different
-    order. INDEX.md is section-sorted and stable either way. AC-9's "two staging dirs"
-    is therefore the two `--out` dirs from the SAME input, which is what we test.)
+  GATE 1 — POSITIVE (determinism): with a FIXED input dir,
+    `KB_FROZEN_CLOCK=1 kb index <cards> --out A` and `--out B` produce byte-identical
+    cards_manifest.json / summaries.json / INDEX.md.
 
-  NEGATIVE — the frozen clock is load-bearing (a non-frozen index is not reproducible):
-    The published artifacts carry no timestamp/uuid, so they are time-invariant; the
-    wall clock lands only in a freshly-APPENDED history-sidecar event (which kb index
-    writes when a card's content changes). We modify one card identically in two
-    throwaway copies, index one with `KB_FROZEN_CLOCK=1` and one without, and assert
-    the new event's `timestamp` is the frozen sentinel `1970-01-01T00:00:00Z` in the
-    frozen run but a real wall-clock value (≠ sentinel) in the non-frozen run — proving
-    a non-frozen index is not reproducible.
+  GATE 2 — CLOCK-INVARIANCE (the reconciled negative): a NON-frozen run over the SAME
+    input dir (`--out N`, no KB_FROZEN_CLOCK) is ALSO byte-identical to the frozen run
+    for all three published artifacts. The production index intentionally carries no
+    wall-clock/UUID in these artifacts, so they are clock-invariant — STRONGER than the
+    plan's assumption that a non-frozen run would differ. This gate also catches a
+    future regression: if a wall-clock/UUID ever leaked into a published artifact,
+    frozen != non-frozen would FAIL here.
+    (Honest reconciliation: we do NOT claim the published index is "non-reproducible"
+    without the frozen clock — it is reproducible. The clock's observable effect is the
+    audit sidecar, see GATE 3.)
+
+  GATE 3 — SUPPLEMENTARY, the clock-sensitive surface (NOT the published-index
+    negative): `KB_FROZEN_CLOCK` IS load-bearing on the per-card `.history.jsonl` audit
+    trail. Modify one card identically in two copies, index one frozen + one
+    non-frozen; the appended history event timestamp is the frozen sentinel
+    `1970-01-01T00:00:00Z` vs a real wall clock. This proves the frozen clock is not a
+    no-op and that the audit trail — not the published artifacts — is where the clock
+    lands.
+
+Cross-copy note (corrected): two SEPARATE physical copies of the cards at different
+paths produce different manifest/summaries bytes even though `kb index` SORTS paths and
+emits cards in `(reading_id, id)` order (same card set, same order). The difference is
+the serialized per-card `path` field, which is staging-relative (it records the
+as-invoked path), NOT filesystem walk order. AC-9 is therefore tested as
+same-input-dir / two-output-dirs, which isolates the comparison from the path prefix.
 
 Writes a DETERMINISTIC proof to
 `sources/cfa_legacy/_registry/v0_baseline/index_repro.json` (frozen hashes + the epoch
-sentinel + boolean assertions — never the random wall-clock value, so the committed
-proof is itself byte-stable across runs).
+sentinel + boolean assertions only — never the random wall-clock value, so the
+committed proof is itself byte-stable across runs).
 """
 
 from __future__ import annotations
@@ -49,7 +64,6 @@ STAGE = REPO / "out/cfa_legacy/_repro"
 PROOF = REPO / "sources/cfa_legacy/_registry/v0_baseline/index_repro.json"
 ARTIFACTS = ("cards_manifest.json", "summaries.json", "INDEX.md")
 FROZEN_SENTINEL = "1970-01-01T00:00:00Z"
-# A small, stable card whose history sidecar we inspect for the negative case.
 PROBE_CARD = "10_behavioral_finance/be-limits-of-arbitrage.md"
 PROBE_SIDECAR = "10_behavioral_finance/be-limits-of-arbitrage.history.jsonl"
 
@@ -99,60 +113,83 @@ def main() -> int:
     STAGE.mkdir(parents=True)
     failures: list[str] = []
 
-    # --- POSITIVE: same input dir, two --out dirs, both frozen -> byte-identical. ---
-    pos_cards = STAGE / "pos_cards"
-    shutil.copytree(CARDS, pos_cards)
-    out_a, out_b = STAGE / "out_a", STAGE / "out_b"
-    run_index(pos_cards, out_a, frozen=True)
-    run_index(pos_cards, out_b, frozen=True)
-    ha, hb = artifact_hashes(out_a), artifact_hashes(out_b)
+    # --- GATES 1 & 2: one fixed input dir; frozen A, frozen B, non-frozen N. ---
+    pub_cards = STAGE / "pub_cards"
+    shutil.copytree(CARDS, pub_cards)
+    out_a, out_b, out_n = STAGE / "out_a", STAGE / "out_b", STAGE / "out_n"
+    run_index(pub_cards, out_a, frozen=True)
+    run_index(pub_cards, out_b, frozen=True)
+    run_index(pub_cards, out_n, frozen=False)
+    ha, hb, hn = artifact_hashes(out_a), artifact_hashes(out_b), artifact_hashes(out_n)
+
+    # GATE 1 (positive determinism): two frozen runs byte-identical.
     for name in ARTIFACTS:
         if ha[name] != hb[name]:
-            failures.append(f"frozen runs differ on {name}: {ha[name][:12]} != {hb[name][:12]}")
+            failures.append(f"[determinism] frozen runs differ on {name}: {ha[name][:12]} != {hb[name][:12]}")
+    # GATE 2 (clock-invariance): frozen == non-frozen for all three published artifacts.
+    for name in ARTIFACTS:
+        if ha[name] != hn[name]:
+            failures.append(
+                f"[clock-invariance] frozen vs non-frozen differ on published {name}: "
+                f"{ha[name][:12]} != {hn[name][:12]} (a wall-clock/UUID may have leaked into the published index)"
+            )
+    frozen_byte_identical = all(ha[n] == hb[n] for n in ARTIFACTS)
+    clock_invariant = all(ha[n] == hn[n] for n in ARTIFACTS)
 
-    # --- NEGATIVE: modify one card identically in two copies; frozen vs non-frozen
-    # appended-event timestamp must be epoch vs wall-clock. ---
-    neg_f, neg_n = STAGE / "neg_frozen", STAGE / "neg_nonfrozen"
+    # --- GATE 3 (supplementary): the frozen clock is load-bearing on the audit sidecar. ---
+    neg_f, neg_n = STAGE / "side_frozen", STAGE / "side_nonfrozen"
     shutil.copytree(CARDS, neg_f)
     shutil.copytree(CARDS, neg_n)
-    probe_marker = "\n<!-- ac9-repro-probe -->\n"
+    marker = "\n<!-- ac9-clock-probe -->\n"
     for root in (neg_f, neg_n):
         card = root / PROBE_CARD
-        card.write_text(card.read_text(encoding="utf-8") + probe_marker, encoding="utf-8")
-    run_index(neg_f, STAGE / "out_neg_f", frozen=True)
-    run_index(neg_n, STAGE / "out_neg_n", frozen=False)
+        card.write_text(card.read_text(encoding="utf-8") + marker, encoding="utf-8")
+    run_index(neg_f, STAGE / "out_side_f", frozen=True)
+    run_index(neg_n, STAGE / "out_side_n", frozen=False)
     ts_frozen = last_event_timestamp(neg_f)
     ts_nonfrozen = last_event_timestamp(neg_n)
     if ts_frozen != FROZEN_SENTINEL:
-        failures.append(f"frozen appended-event timestamp is {ts_frozen!r}, expected {FROZEN_SENTINEL!r}")
+        failures.append(f"[sidecar] frozen appended-event timestamp is {ts_frozen!r}, expected {FROZEN_SENTINEL!r}")
     if ts_nonfrozen == FROZEN_SENTINEL:
-        failures.append(
-            "non-frozen appended-event timestamp is the frozen sentinel — the frozen "
-            "clock is not load-bearing (a non-frozen index would be wrongly reproducible)"
-        )
-    nonfrozen_differs = ts_frozen != ts_nonfrozen
+        failures.append("[sidecar] non-frozen appended-event timestamp is the frozen sentinel "
+                        "— KB_FROZEN_CLOCK appears to be a no-op")
+    sidecar_clock_load_bearing = (ts_frozen == FROZEN_SENTINEL and ts_nonfrozen != FROZEN_SENTINEL)
 
     proof = {
-        "schema_version": "cfa_legacy_index_repro/v1",
+        "schema_version": "cfa_legacy_index_repro/v2",
         "kb_binary": str(KB.relative_to(REPO)),
         "cards_dir": str(CARDS.relative_to(REPO)),
-        "method": (
-            "positive: KB_FROZEN_CLOCK=1 kb index <same cards copy> into two --out dirs, "
-            "byte-compare the 3 published artifacts. negative: modify one card identically "
-            "in two copies, index frozen vs non-frozen, compare the appended history event "
-            "timestamp (frozen sentinel vs wall clock)."
-        ),
         "artifacts": list(ARTIFACTS),
+        "method": (
+            "GATE 1 determinism: KB_FROZEN_CLOCK=1 kb index <one cards copy> into two --out "
+            "dirs, byte-compare the 3 published artifacts. GATE 2 clock-invariance: a "
+            "non-frozen run over the SAME input is byte-compared to the frozen run. GATE 3 "
+            "supplementary: modify a card, index frozen vs non-frozen, compare the appended "
+            "history-event timestamp."
+        ),
         "frozen_run_a_hashes": ha,
         "frozen_run_b_hashes": hb,
-        "frozen_byte_identical": all(ha[n] == hb[n] for n in ARTIFACTS),
-        "manifest_summaries_are_walk_ordered": (
-            "byte-stable for a fixed input path; differ across separate physical copies "
-            "(same card set, different order). INDEX.md is section-sorted and stable."
+        "nonfrozen_run_hashes": hn,
+        "frozen_byte_identical": frozen_byte_identical,
+        "published_artifacts_clock_invariant": clock_invariant,
+        "published_artifacts_carry_no_wall_clock": clock_invariant,
+        "clock_sensitive_surface": "history sidecar (audit events), not the 3 published artifacts",
+        "sidecar_clock_load_bearing": sidecar_clock_load_bearing,
+        "frozen_appended_event_timestamp": ts_frozen,  # deterministic: the epoch sentinel
+        "cross_copy_difference_cause": (
+            "the serialized per-card `path` field (staging-relative; records the as-invoked "
+            "path). kb index sorts paths and emits cards in (reading_id, id) order, so two "
+            "physical copies have the same card set + order and differ only by the path "
+            "prefix — NOT filesystem walk order."
         ),
-        "frozen_appended_event_timestamp": ts_frozen,        # deterministic: the sentinel
-        "nonfrozen_appended_event_is_wall_clock": ts_nonfrozen != FROZEN_SENTINEL,
-        "nonfrozen_index_nonreproducible": nonfrozen_differs,
+        "plan_negative_reconciliation": (
+            "Plan AC-9's negative assumes a non-frozen index injects a wall-clock timestamp "
+            "into the published artifacts. The production kb index does not: the 3 published "
+            "artifacts are clock-invariant (GATE 2), a stronger property. The frozen clock's "
+            "observable effect is the audit sidecar (GATE 3). This harness therefore asserts "
+            "clock-invariance of the published index and load-bearingness on the sidecar, "
+            "instead of a published-artifact difference that cannot occur."
+        ),
         "passed": not failures,
     }
     PROOF.parent.mkdir(parents=True, exist_ok=True)
@@ -160,11 +197,12 @@ def main() -> int:
 
     shutil.rmtree(STAGE)
 
-    print("frozen run A: " + ", ".join(f"{n}={ha[n][:12]}" for n in ARTIFACTS))
-    print("frozen run B: " + ", ".join(f"{n}={hb[n][:12]}" for n in ARTIFACTS))
-    print(f"frozen byte-identical (all 3 published artifacts): {proof['frozen_byte_identical']}")
-    print(f"negative: frozen event ts={ts_frozen} | non-frozen event ts={'<wall-clock>' if proof['nonfrozen_appended_event_is_wall_clock'] else ts_nonfrozen}")
-    print(f"non-frozen index non-reproducible: {nonfrozen_differs}")
+    print("GATE 1 frozen A: " + ", ".join(f"{n}={ha[n][:12]}" for n in ARTIFACTS))
+    print("GATE 1 frozen B: " + ", ".join(f"{n}={hb[n][:12]}" for n in ARTIFACTS))
+    print(f"GATE 1 frozen byte-identical (3 published artifacts): {frozen_byte_identical}")
+    print("GATE 2 non-frozen: " + ", ".join(f"{n}={hn[n][:12]}" for n in ARTIFACTS))
+    print(f"GATE 2 published artifacts clock-invariant (frozen==non-frozen): {clock_invariant}")
+    print(f"GATE 3 sidecar clock load-bearing (frozen={ts_frozen} vs non-frozen=<wall-clock>): {sidecar_clock_load_bearing}")
     print(f"proof written: {PROOF.relative_to(REPO)}")
 
     if failures:
@@ -173,9 +211,9 @@ def main() -> int:
             print(f"  - {f}", file=sys.stderr)
         return 1
     print("\nINDEX REPRODUCIBILITY: PASS (two frozen kb index runs over the same input are "
-          "byte-identical for cards_manifest.json + summaries.json + INDEX.md; the frozen "
-          "clock is load-bearing — a non-frozen run stamps a wall-clock history event and "
-          "is not reproducible)")
+          "byte-identical for cards_manifest.json + summaries.json + INDEX.md; a non-frozen "
+          "run is byte-identical too — the published artifacts are clock-invariant; the "
+          "frozen clock is load-bearing on the audit sidecar)")
     return 0
 
 
