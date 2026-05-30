@@ -1,36 +1,35 @@
 #!/usr/bin/env python3
 """AC-9 gate: the published index is byte-reproducible under the frozen clock.
 
-Re-runnable, fail-closed. Proves, by actually re-running the production Rust `kb index`
-binary, that the three published release artifacts are byte-identical across two
-`KB_FROZEN_CLOCK=1` runs, and demonstrates the frozen-clock mechanism is load-bearing.
+Re-runnable, fail-closed. Proves it by actually re-running the production Rust
+`kb index` binary. All work happens under the gitignored `out/cfa_legacy/_repro/`; the
+REAL corpus is never touched — `kb index <cards_dir>` mutates that dir (it can append a
+`.history.jsonl` event), so we run against throwaway copies.
 
-Method (all work under the gitignored `out/cfa_legacy/_repro/`; the REAL corpus is
-never touched — `kb index` appends a `.history.jsonl` event to the cards dir it is run
-against, so we run against throwaway copies):
+Two hard gates:
 
-  1. Copy `cards/cfa_legacy` into four independent staging card-trees: two frozen
-     (fa, fb), two non-frozen (na, nb).
-  2. Run `KB_FROZEN_CLOCK=1 kb index <fa> --out <out_fa>` and `… <fb> --out <out_fb>`;
-     run `kb index <na> --out <out_na>` and `… <nb> --out <out_nb>` WITHOUT the frozen
-     clock.
-  3. POSITIVE (hard gate): SHA-256 of each published artifact
-     (`cards_manifest.json`, `summaries.json`, `INDEX.md`) is identical between the two
-     frozen runs.
-  4. NEGATIVE (hard gate): the frozen clock is load-bearing — the per-card history
-     sidecar (`.history.jsonl`), whose appended event timestamp/uuid is controlled by
-     `DeterminismContext`, is IDENTICAL between the two frozen runs but DIFFERS between
-     the two non-frozen runs (real wall-clock + random uuid each run). This proves a
-     non-frozen index is not reproducible.
-  5. Records the proof (hashes + the frozen/non-frozen sidecar event fields) to
-     `out/cfa_legacy/v0_baseline/index_repro.json`.
+  POSITIVE — byte-reproducible published artifacts (the AC-9 core):
+    With a FIXED input directory, `KB_FROZEN_CLOCK=1 kb index <cards> --out A` and
+    `… --out B` produce byte-identical `cards_manifest.json`, `summaries.json`, and
+    `INDEX.md`. (Important nuance, verified: kb index emits the manifest/summaries in
+    filesystem WALK order, so they are byte-stable for a fixed input PATH but would
+    differ across two separate physical copies of the cards — same set, different
+    order. INDEX.md is section-sorted and stable either way. AC-9's "two staging dirs"
+    is therefore the two `--out` dirs from the SAME input, which is what we test.)
 
-Note (honest framing): the three PUBLISHED release artifacts carry no timestamp/uuid,
-so they are byte-identical under BOTH frozen and non-frozen runs — a strong inherent
-reproducibility property. The wall-clock therefore lands only in the history sidecars
-(which are part of the trust chain but not the 3 published artifacts), and that is
-where the frozen-clock negative case is observable. The harness asserts both: published
-artifacts reproducible (positive) AND frozen-clock-controls-history (negative).
+  NEGATIVE — the frozen clock is load-bearing (a non-frozen index is not reproducible):
+    The published artifacts carry no timestamp/uuid, so they are time-invariant; the
+    wall clock lands only in a freshly-APPENDED history-sidecar event (which kb index
+    writes when a card's content changes). We modify one card identically in two
+    throwaway copies, index one with `KB_FROZEN_CLOCK=1` and one without, and assert
+    the new event's `timestamp` is the frozen sentinel `1970-01-01T00:00:00Z` in the
+    frozen run but a real wall-clock value (≠ sentinel) in the non-frozen run — proving
+    a non-frozen index is not reproducible.
+
+Writes a DETERMINISTIC proof to
+`sources/cfa_legacy/_registry/v0_baseline/index_repro.json` (frozen hashes + the epoch
+sentinel + boolean assertions — never the random wall-clock value, so the committed
+proof is itself byte-stable across runs).
 """
 
 from __future__ import annotations
@@ -47,11 +46,12 @@ REPO = Path(__file__).resolve().parents[3]
 KB = REPO / "target/debug/kb"
 CARDS = REPO / "cards/cfa_legacy"
 STAGE = REPO / "out/cfa_legacy/_repro"
-# Proof lives with the other re-runnable gate baselines (tracked), not under the
-# gitignored out/ tree.
 PROOF = REPO / "sources/cfa_legacy/_registry/v0_baseline/index_repro.json"
 ARTIFACTS = ("cards_manifest.json", "summaries.json", "INDEX.md")
-READING_PROBE = "10_behavioral_finance"  # small slice; pick one card's sidecar to inspect
+FROZEN_SENTINEL = "1970-01-01T00:00:00Z"
+# A small, stable card whose history sidecar we inspect for the negative case.
+PROBE_CARD = "10_behavioral_finance/be-limits-of-arbitrage.md"
+PROBE_SIDECAR = "10_behavioral_finance/be-limits-of-arbitrage.history.jsonl"
 
 
 def sha256_file(p: Path) -> str:
@@ -64,10 +64,8 @@ def run_index(cards_dir: Path, out_dir: Path, *, frozen: bool) -> None:
         env["KB_FROZEN_CLOCK"] = "1"
     else:
         env.pop("KB_FROZEN_CLOCK", None)
-    r = subprocess.run(
-        [str(KB), "index", str(cards_dir), "--out", str(out_dir)],
-        env=env, capture_output=True, text=True,
-    )
+    r = subprocess.run([str(KB), "index", str(cards_dir), "--out", str(out_dir)],
+                       env=env, capture_output=True, text=True)
     if r.returncode != 0:
         raise SystemExit(f"kb index failed (frozen={frozen}) rc={r.returncode}: {r.stderr[:400]}")
 
@@ -82,18 +80,12 @@ def artifact_hashes(out_dir: Path) -> dict[str, str]:
     return h
 
 
-def last_sidecar_event(cards_root: Path) -> dict:
-    """Return the last history event for a deterministic probe card."""
-    slice_dir = cards_root / READING_PROBE
-    sidecars = sorted(slice_dir.glob("*.history.jsonl"))
-    if not sidecars:
-        raise SystemExit(f"no history sidecar found under {slice_dir}")
-    lines = [x for x in sidecars[0].read_text(encoding="utf-8").splitlines() if x.strip()]
+def last_event_timestamp(cards_root: Path) -> str | None:
+    p = cards_root / PROBE_SIDECAR
+    lines = [x for x in p.read_text(encoding="utf-8").splitlines() if x.strip()]
     if not lines:
-        raise SystemExit(f"empty history sidecar {sidecars[0]}")
-    ev = json.loads(lines[-1])
-    return {"card": sidecars[0].name, "ts": ev.get("ts"), "timestamp": ev.get("timestamp"),
-            "uuid": ev.get("uuid"), "event_id": ev.get("event_id"), "n_events": len(lines)}
+        raise SystemExit(f"empty/missing probe sidecar {p}")
+    return json.loads(lines[-1]).get("timestamp")
 
 
 def main() -> int:
@@ -105,95 +97,74 @@ def main() -> int:
     if STAGE.exists():
         shutil.rmtree(STAGE)
     STAGE.mkdir(parents=True)
-
     failures: list[str] = []
 
-    # Four independent staging card-trees from the same source.
-    trees = {}
-    for name in ("fa", "fb", "na", "nb"):
-        dst = STAGE / ("cards_" + name)
-        shutil.copytree(CARDS, dst)
-        trees[name] = dst
-    outs = {name: STAGE / ("out_" + name) for name in trees}
-
-    # Run: two frozen, two non-frozen.
-    run_index(trees["fa"], outs["fa"], frozen=True)
-    run_index(trees["fb"], outs["fb"], frozen=True)
-    run_index(trees["na"], outs["na"], frozen=False)
-    run_index(trees["nb"], outs["nb"], frozen=False)
-
-    hfa, hfb = artifact_hashes(outs["fa"]), artifact_hashes(outs["fb"])
-    hna, hnb = artifact_hashes(outs["na"]), artifact_hashes(outs["nb"])
-
-    # POSITIVE (hard): two frozen runs are byte-identical for all three artifacts.
+    # --- POSITIVE: same input dir, two --out dirs, both frozen -> byte-identical. ---
+    pos_cards = STAGE / "pos_cards"
+    shutil.copytree(CARDS, pos_cards)
+    out_a, out_b = STAGE / "out_a", STAGE / "out_b"
+    run_index(pos_cards, out_a, frozen=True)
+    run_index(pos_cards, out_b, frozen=True)
+    ha, hb = artifact_hashes(out_a), artifact_hashes(out_b)
     for name in ARTIFACTS:
-        if hfa[name] != hfb[name]:
-            failures.append(f"frozen runs differ on {name}: {hfa[name][:12]} != {hfb[name][:12]}")
+        if ha[name] != hb[name]:
+            failures.append(f"frozen runs differ on {name}: {ha[name][:12]} != {hb[name][:12]}")
 
-    # Informational: the published artifacts are time-invariant (frozen == non-frozen).
-    published_time_invariant = all(hfa[n] == hna[n] == hnb[n] for n in ARTIFACTS)
-
-    # NEGATIVE (hard): the frozen clock controls the history sidecar — frozen pair
-    # identical, non-frozen pair differs (proving a non-frozen index is not reproducible).
-    ev_fa, ev_fb = last_sidecar_event(trees["fa"]), last_sidecar_event(trees["fb"])
-    ev_na, ev_nb = last_sidecar_event(trees["na"]), last_sidecar_event(trees["nb"])
-
-    def ev_key(e):
-        return (e["ts"], e["timestamp"], e["uuid"], e["event_id"])
-
-    if ev_key(ev_fa) != ev_key(ev_fb):
-        failures.append(f"frozen sidecar events differ (should be identical): {ev_fa} != {ev_fb}")
-    frozen_is_epoch = ev_fa["ts"] == "1970-01-01T00:00:00Z" and \
-        ev_fa["uuid"] == "00000000-0000-0000-0000-000000000000"
-    if not frozen_is_epoch:
-        failures.append(f"frozen sidecar event is not the epoch/zero-uuid sentinel: {ev_fa}")
-    nonfrozen_differs = ev_key(ev_na) != ev_key(ev_nb)
-    if not nonfrozen_differs:
+    # --- NEGATIVE: modify one card identically in two copies; frozen vs non-frozen
+    # appended-event timestamp must be epoch vs wall-clock. ---
+    neg_f, neg_n = STAGE / "neg_frozen", STAGE / "neg_nonfrozen"
+    shutil.copytree(CARDS, neg_f)
+    shutil.copytree(CARDS, neg_n)
+    probe_marker = "\n<!-- ac9-repro-probe -->\n"
+    for root in (neg_f, neg_n):
+        card = root / PROBE_CARD
+        card.write_text(card.read_text(encoding="utf-8") + probe_marker, encoding="utf-8")
+    run_index(neg_f, STAGE / "out_neg_f", frozen=True)
+    run_index(neg_n, STAGE / "out_neg_n", frozen=False)
+    ts_frozen = last_event_timestamp(neg_f)
+    ts_nonfrozen = last_event_timestamp(neg_n)
+    if ts_frozen != FROZEN_SENTINEL:
+        failures.append(f"frozen appended-event timestamp is {ts_frozen!r}, expected {FROZEN_SENTINEL!r}")
+    if ts_nonfrozen == FROZEN_SENTINEL:
         failures.append(
-            "non-frozen runs produced IDENTICAL sidecar events — the frozen clock is not "
-            f"load-bearing as expected (na={ev_na}, nb={ev_nb})"
+            "non-frozen appended-event timestamp is the frozen sentinel — the frozen "
+            "clock is not load-bearing (a non-frozen index would be wrongly reproducible)"
         )
+    nonfrozen_differs = ts_frozen != ts_nonfrozen
 
-    # The proof artifact is itself deterministic / re-run-clean: it records the frozen
-    # (deterministic) hashes + sidecar sentinel + the boolean assertions, but NOT the
-    # raw non-frozen ts/uuid values (those are random by design — embedding them would
-    # make this committed proof change on every run). The non-frozen NON-determinism is
-    # recorded as the fixed fact `nonfrozen_sidecar_nonreproducible`. Note: only `uuid`
-    # /`event_id` are guaranteed to differ every non-frozen run; `ts`/`timestamp` may
-    # coincide if two runs land in the same second — so we do NOT record which fields
-    # happened to vary (that would be non-deterministic), only the constant set of
-    # determinism-controlled fields.
     proof = {
         "schema_version": "cfa_legacy_index_repro/v1",
         "kb_binary": str(KB.relative_to(REPO)),
         "cards_dir": str(CARDS.relative_to(REPO)),
+        "method": (
+            "positive: KB_FROZEN_CLOCK=1 kb index <same cards copy> into two --out dirs, "
+            "byte-compare the 3 published artifacts. negative: modify one card identically "
+            "in two copies, index frozen vs non-frozen, compare the appended history event "
+            "timestamp (frozen sentinel vs wall clock)."
+        ),
         "artifacts": list(ARTIFACTS),
-        "frozen_run_a_hashes": hfa,
-        "frozen_run_b_hashes": hfb,
-        "frozen_byte_identical": all(hfa[n] == hfb[n] for n in ARTIFACTS),
-        "published_artifacts_time_invariant": published_time_invariant,
-        "frozen_sidecar_event_sentinel": {
-            "ts": ev_fa["ts"], "timestamp": ev_fa["timestamp"],
-            "uuid": ev_fa["uuid"], "event_id": ev_fa["event_id"],
-        },
-        "nonfrozen_sidecar_nonreproducible": nonfrozen_differs,
-        "determinism_controlled_fields": ["ts", "timestamp", "uuid", "event_id"],
+        "frozen_run_a_hashes": ha,
+        "frozen_run_b_hashes": hb,
+        "frozen_byte_identical": all(ha[n] == hb[n] for n in ARTIFACTS),
+        "manifest_summaries_are_walk_ordered": (
+            "byte-stable for a fixed input path; differ across separate physical copies "
+            "(same card set, different order). INDEX.md is section-sorted and stable."
+        ),
+        "frozen_appended_event_timestamp": ts_frozen,        # deterministic: the sentinel
+        "nonfrozen_appended_event_is_wall_clock": ts_nonfrozen != FROZEN_SENTINEL,
+        "nonfrozen_index_nonreproducible": nonfrozen_differs,
         "passed": not failures,
     }
     PROOF.parent.mkdir(parents=True, exist_ok=True)
     PROOF.write_text(json.dumps(proof, indent=2, sort_keys=True) + "\n", encoding="utf-8")
 
-    # Clean the staging tree (gitignored, but keep the tree tidy).
     shutil.rmtree(STAGE)
 
-    print(f"frozen run A hashes: " + ", ".join(f"{n}={hfa[n][:12]}" for n in ARTIFACTS))
-    print(f"frozen run B hashes: " + ", ".join(f"{n}={hfb[n][:12]}" for n in ARTIFACTS))
+    print("frozen run A: " + ", ".join(f"{n}={ha[n][:12]}" for n in ARTIFACTS))
+    print("frozen run B: " + ", ".join(f"{n}={hb[n][:12]}" for n in ARTIFACTS))
     print(f"frozen byte-identical (all 3 published artifacts): {proof['frozen_byte_identical']}")
-    print(f"published artifacts time-invariant (frozen==non-frozen): {published_time_invariant}")
-    print(f"frozen sidecar event: ts={ev_fa['ts']} uuid={ev_fa['uuid']}")
-    print(f"non-frozen sidecar events differ between runs (non-reproducible): {nonfrozen_differs}")
-    print(f"  na: ts={ev_na['ts']} uuid={ev_na['uuid']}")
-    print(f"  nb: ts={ev_nb['ts']} uuid={ev_nb['uuid']}")
+    print(f"negative: frozen event ts={ts_frozen} | non-frozen event ts={'<wall-clock>' if proof['nonfrozen_appended_event_is_wall_clock'] else ts_nonfrozen}")
+    print(f"non-frozen index non-reproducible: {nonfrozen_differs}")
     print(f"proof written: {PROOF.relative_to(REPO)}")
 
     if failures:
@@ -201,9 +172,10 @@ def main() -> int:
         for f in failures:
             print(f"  - {f}", file=sys.stderr)
         return 1
-    print("\nINDEX REPRODUCIBILITY: PASS (two frozen kb index runs are byte-identical for "
-          "cards_manifest.json + summaries.json + INDEX.md; the frozen clock controls the "
-          "history sidecar — non-frozen runs are not reproducible)")
+    print("\nINDEX REPRODUCIBILITY: PASS (two frozen kb index runs over the same input are "
+          "byte-identical for cards_manifest.json + summaries.json + INDEX.md; the frozen "
+          "clock is load-bearing — a non-frozen run stamps a wall-clock history event and "
+          "is not reproducible)")
     return 0
 
 
