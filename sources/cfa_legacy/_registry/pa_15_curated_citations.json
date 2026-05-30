@@ -1,0 +1,1022 @@
+{
+  "cards": [
+    {
+      "card_id": "pa-active-risk-tracking-error-ex-ante-vs-ex-post",
+      "citations": [
+        {
+          "chunk_hash": "c35a0b08f62e46ed35a3c8d0aca8bd7b2f8ebea9fc2a428cdbfb9d41710bc93e",
+          "chunk_id": "pa_bacon_2022_rapm:p082:0073",
+          "edge_type": "defines",
+          "page_range": [
+            83,
+            83
+          ],
+          "quote": "The variability of excess return calculated using standard deviation is called tracking error, tracking risk, relative risk or active risk.",
+          "source_id": "pa_bacon_2022_rapm"
+        },
+        {
+          "chunk_hash": "4697ec94ddd23880a0131f63d528ae21dc234150aa627d7af8ae63f57078ef01",
+          "chunk_id": "pa_connor_goldberg_korajczyk_2010:p043:0041",
+          "edge_type": "supports",
+          "page_range": [
+            44,
+            44
+          ],
+          "quote": "Each manager can restate the portfolio management problem from his perspective as active return–active risk optimization of his subportfolio.",
+          "source_id": "pa_connor_goldberg_korajczyk_2010"
+        }
+      ],
+      "summary": "Tracking error (relative/active risk) is the standard deviation of excess return. It splits into ex-ante (predicted by a factor model on today's positions) and ex-post (realised from a return history); the two differ in meaning and are the denominator of the Information Ratio.",
+      "tags": [
+        "tracking-error",
+        "active-risk",
+        "information-ratio"
+      ],
+      "title": "Active Risk: Ex-Ante vs Ex-Post Tracking Error"
+    },
+    {
+      "card_id": "pa-arithmetic-vs-geometric-excess-return",
+      "citations": [
+        {
+          "chunk_hash": "bc5b140948bb80547369e5b679eaa22c3daacbdd2b0c7ab5155f379304a7b554",
+          "chunk_id": "pa_bacon_2023_attribution:p151:0187",
+          "edge_type": "defines",
+          "page_range": [
+            151,
+            151
+          ],
+          "quote": "in rising markets the arithmetic excess return is always greater than the geometric excess return and in falling markets the reverse is true",
+          "source_id": "pa_bacon_2023_attribution"
+        }
+      ],
+      "summary": "Two excess-return measures: arithmetic a=r-b (vs initial capital) and geometric g=(1+r)/(1+b)-1 (vs the notional fund). Arithmetic exceeds geometric in rising markets and falls below it in falling markets; geometric is convertible and compoundable.",
+      "tags": [
+        "excess-return",
+        "geometric-attribution",
+        "benchmark-relative"
+      ],
+      "title": "Arithmetic vs Geometric Excess Return"
+    },
+    {
+      "card_id": "pa-benchmark-quality-validation-statistics",
+      "citations": [
+        {
+          "chunk_hash": "a9758a6105b67da05d15e2eb078eaa242a6b278b07ba0d0cd5da238e59ea7b30",
+          "chunk_id": "pa_christopherson_carino_ferson_2009:p321:0323",
+          "edge_type": "defines",
+          "page_range": [
+            321,
+            321
+          ],
+          "quote": "If an index consistently appears in either the first or fourth quartile, it is likely to indicate a problem with the benchmark, not with the managers.",
+          "source_id": "pa_christopherson_carino_ferson_2009"
+        },
+        {
+          "chunk_hash": "ec01d6d9d037728d9ebfb9f0111f1de3cec22b6c8354b2937ec89a1c9e6a6077",
+          "chunk_id": "pa_christopherson_carino_ferson_2009:p319:0321",
+          "edge_type": "supports",
+          "page_range": [
+            320,
+            320
+          ],
+          "quote": "we would expect the beta of the average manager characteristic line regression relative to the style index to be closer to 1.0, the standard error closer to zero, and the R-squared closer to 1.00.",
+          "source_id": "pa_christopherson_carino_ferson_2009"
+        }
+      ],
+      "summary": "Statistical tests confirming a candidate benchmark fits a manager or style universe: regress manager returns on the benchmark and check beta toward 1, standard error toward 0, R-squared toward 1, plus a quartile/box-chart median-proximity test.",
+      "tags": [
+        "benchmark-validation",
+        "characteristic-line",
+        "style-analysis"
+      ],
+      "title": "Benchmark-Quality Validation Statistics"
+    },
+    {
+      "card_id": "pa-brinson-bhb-allocation-selection-interaction",
+      "citations": [
+        {
+          "chunk_hash": "4039bbcb6a77e9f649f77201bdc900d4a21c057414d75658e00d360187fb773b",
+          "chunk_id": "pa_bacon_2023_attribution:p271:0324",
+          "edge_type": "defines",
+          "page_range": [
+            272,
+            272
+          ],
+          "quote": "Interaction is not a residual or a balancing item. It is a mathematically defined term – the combination of allocation and selection decisions.",
+          "source_id": "pa_bacon_2023_attribution"
+        },
+        {
+          "chunk_hash": "1136ad5fadf45b9a17be8df8014b5ce84dbefb436d521184229b9beaf8e1eb9e",
+          "chunk_id": "pa_christopherson_carino_ferson_2009:p191:0187",
+          "edge_type": "supports",
+          "page_range": [
+            192,
+            192
+          ],
+          "quote": "the allocation and selection effects as defined do not combine to explain the active management effect completely.",
+          "source_id": "pa_christopherson_carino_ferson_2009"
+        },
+        {
+          "chunk_hash": "4af54a837ba89f0f4a6e3b158e1fdca096f57fcff412efa74af54049bae16110",
+          "chunk_id": "pa_colin_2016:p051:0049",
+          "edge_type": "supports",
+          "page_range": [
+            52,
+            52
+          ],
+          "quote": "3.2 Brinson attribution 3.2.1 Asset allocation The first type of return measured by Brinson attribution is value added by overweighting some sectors and underweighting others.",
+          "source_id": "pa_colin_2016"
+        }
+      ],
+      "summary": "The Brinson-Hood-Beebower model splits arithmetic excess (r-b) into allocation Ai=(wi-Wi)bi, selection Si=Wi(ri-bi), and interaction Ii=(wi-Wi)(ri-bi), built from a semi-notional and a selection-notional fund. Interaction is a defined cross-term, not a residual.",
+      "tags": [
+        "brinson-bhb",
+        "asset-allocation",
+        "attribution"
+      ],
+      "title": "The Brinson Decomposition: Allocation, Selection, and Interaction"
+    },
+    {
+      "card_id": "pa-brinson-fachler-benchmark-relative-allocation",
+      "citations": [
+        {
+          "chunk_hash": "b9c45c0a49edf6d5ef7fddc802282ae99737e39d225011e8c41e40bd744be87e",
+          "chunk_id": "pa_bacon_2023_attribution:p277:0332",
+          "edge_type": "defines",
+          "page_range": [
+            277,
+            278
+          ],
+          "quote": "The Brinson and Fachler model solves this problem by modifying the asset allocation factor",
+          "source_id": "pa_bacon_2023_attribution"
+        }
+      ],
+      "summary": "Brinson-Fachler refines BHB allocation to (wi-Wi)(bi-b), so an overweight adds value only when the sector beats the OVERALL benchmark, not merely when its return is positive; the redefinition sums to zero across sectors.",
+      "tags": [
+        "brinson-fachler",
+        "asset-allocation",
+        "attribution"
+      ],
+      "title": "Brinson-Fachler: Benchmark-Relative Allocation"
+    },
+    {
+      "card_id": "pa-capitalization-weighting-macroconsistency",
+      "citations": [
+        {
+          "chunk_hash": "1cf57524a6b9d1febb334c6d5ac8cb9482d596dfed3eabe9e62aee375197b1f9",
+          "chunk_id": "pa_christopherson_carino_ferson_2009:p261:0261",
+          "edge_type": "defines",
+          "page_range": [
+            261,
+            262
+          ],
+          "quote": "With other weighting methods, not all investors could hold the index.",
+          "source_id": "pa_christopherson_carino_ferson_2009"
+        }
+      ],
+      "summary": "Index-weighting taxonomy (price/cap/equal/fundamental) plus float adjustment; only cap-weighting is macroconsistent (holdable by all investors at once), links to the CAPM market portfolio and low turnover, and makes a portfolio ratio a cap-weighted average.",
+      "tags": [
+        "capitalization-weighting",
+        "macroconsistency",
+        "benchmark-construction"
+      ],
+      "title": "Capitalization Weighting and Macroconsistency"
+    },
+    {
+      "card_id": "pa-contribution-analysis-benchmark-free",
+      "citations": [
+        {
+          "chunk_hash": "a40a355c4725ea786f819df0f0d53959ebaad54fd4f6082ac5159f0e99c1dd07",
+          "chunk_id": "pa_bacon_2023_attribution:p401:0474",
+          "edge_type": "defines",
+          "page_range": [
+            402,
+            402
+          ],
+          "quote": "simply breaks down the total return of the portfolio by individual instrument or instrument",
+          "source_id": "pa_bacon_2023_attribution"
+        }
+      ],
+      "summary": "Benchmark-free contribution analysis decomposes a portfolio's total absolute return by individual instrument or instrument type; market-neutral strategies can still be attributed against a customised (zero/cash) benchmark.",
+      "tags": [
+        "contribution-analysis",
+        "absolute-return",
+        "attribution"
+      ],
+      "title": "Contribution Analysis: Benchmark-Free Absolute-Return Attribution"
+    },
+    {
+      "card_id": "pa-currency-attribution-karnosky-singer",
+      "citations": [
+        {
+          "chunk_hash": "b64612d9ed04ed43eb2998d41f02ce380d5bfe08ab0e1f56627e64bc6668ba18",
+          "chunk_id": "pa_bacon_2023_attribution:p322:0388",
+          "edge_type": "defines",
+          "page_range": [
+            323,
+            323
+          ],
+          "quote": "Trim Size: 170mm x 244mm ❦ Bacon831945 c06.tex V1 - 12/10/2022 1:04 P.M.",
+          "source_id": "pa_bacon_2023_attribution"
+        },
+        {
+          "chunk_hash": "c6a8b5c66aef198b035bd74a8ce501688ba47754ae34a24cfd587395430628a8",
+          "chunk_id": "pa_colin_2016:p086:0090",
+          "edge_type": "supports",
+          "page_range": [
+            86,
+            87
+          ],
+          "quote": "currency attribution is that spot exchange rates are insufficient to decide",
+          "source_id": "pa_colin_2016"
+        }
+      ],
+      "summary": "Karnosky-Singer splits multi-currency excess return into a local-premium leg (local return minus local cash rate) and a currency leg, prices forwards via interest-rate differentials, and uses continuously compounded returns to sidestep compounding.",
+      "tags": [
+        "currency-attribution",
+        "karnosky-singer",
+        "multi-currency"
+      ],
+      "title": "Currency Attribution: The Karnosky-Singer Framework"
+    },
+    {
+      "card_id": "pa-dgtw-cs-ct-as-decomposition",
+      "citations": [
+        {
+          "chunk_hash": "114b37f6d8b5a7d13282c618ba20697b6e78ee720d4bfa38df8d7286f8e7b7a2",
+          "chunk_id": "pa_fischer_wermers_2013:p114:0141",
+          "edge_type": "defines",
+          "page_range": [
+            114,
+            114
+          ],
+          "quote": "Recent research has shown that mutual funds show a distinct preference for other stock characteristics that are related to average returns— for example, stocks with greater liquidity (see Chen et al., 2000 and Wermers, 2000).19 For example, one might argue that our CS measure underestimates the stock-picking talents of funds since we do not control for the lower average returns that accrue to stocks with greater liquidity.",
+          "source_id": "pa_fischer_wermers_2013"
+        },
+        {
+          "chunk_hash": "0a784d821a61538e7dd9988fd8c67cd5952416308bca4f3c72ad899d5bc4a36c",
+          "chunk_id": "pa_connor_goldberg_korajczyk_2010:p332:0400",
+          "edge_type": "supports",
+          "page_range": [
+            333,
+            333
+          ],
+          "quote": "The three measures have an additive consistency property that their sum equals the excess return to the managed portfolio.",
+          "source_id": "pa_connor_goldberg_korajczyk_2010"
+        }
+      ],
+      "summary": "Daniel-Grinblatt-Titman-Wermers benchmarks each held stock against one of 125 size x book-to-market x prior-return fractile portfolios, then splits gross holdings return into characteristic selectivity (CS), characteristic timing (CT), and average style (AS): GR = CS + CT + AS.",
+      "tags": [
+        "dgtw",
+        "holdings-based-attribution",
+        "characteristic-benchmark"
+      ],
+      "title": "The DGTW Characteristic-Based Decomposition (CS/CT/AS)"
+    },
+    {
+      "card_id": "pa-dietz-methods-mwr-approximations",
+      "citations": [
+        {
+          "chunk_hash": "a91eed7fafb7c3a4d6c4a653c90284f7844c1e4970b422ed081b4a2ff2d761c1",
+          "chunk_id": "pa_bacon_2023_attribution:p054:0060",
+          "edge_type": "defines",
+          "page_range": [
+            54,
+            55
+          ],
+          "quote": "The modified Dietz method is a money-weighted rate of return and can be accurately described as an approximation of the internal rate of return.",
+          "source_id": "pa_bacon_2023_attribution"
+        },
+        {
+          "chunk_hash": "3a6662e6ed87b059df591979b188428e4647d14b32dc6d1f665ab3b32ee8438c",
+          "chunk_id": "pa_christopherson_carino_ferson_2009:p048:0043",
+          "edge_type": "supports",
+          "page_range": [
+            49,
+            49
+          ],
+          "quote": "Dietz proposed a simpler calculation than the IRR, one that also assumes a constant rate of growth over a period between valuations.",
+          "source_id": "pa_christopherson_carino_ferson_2009"
+        }
+      ],
+      "summary": "Simple Dietz assumes mid-period flows over average capital invested; modified Dietz day-weights each flow. Both are money-weighted returns, and modified Dietz is a first-order approximation to the IRR — not to the time-weighted return.",
+      "tags": [
+        "dietz-method",
+        "money-weighted-return",
+        "irr-approximation"
+      ],
+      "title": "Dietz Methods: Simple and Modified as IRR Approximations"
+    },
+    {
+      "card_id": "pa-drawdown-ratios-calmar-sterling-ulcer",
+      "citations": [
+        {
+          "chunk_hash": "aa98a4702175352ccf8ee09db38cf61301b05e31709975828130f391b610506c",
+          "chunk_id": "pa_bacon_2022_rapm:p130:0117",
+          "edge_type": "defines",
+          "page_range": [
+            131,
+            131
+          ],
+          "quote": "Drawdown deviation calculates a standard deviation type statistic using",
+          "source_id": "pa_bacon_2022_rapm"
+        }
+      ],
+      "summary": "Drawdown geometry (max vs largest-individual, recovery, drawdown deviation, Ulcer=RMS underwater, Pain=mean underwater) and the Sharpe-type ratios that substitute these for sigma in the denominator: Calmar/MAR, Sterling, Burke, Martin, Pain.",
+      "tags": [
+        "drawdown-ratios",
+        "risk-adjusted-return",
+        "calmar"
+      ],
+      "title": "Drawdown Ratios: Calmar, Sterling, Burke, Ulcer"
+    },
+    {
+      "card_id": "pa-factor-model-types-and-covariance-decomposition",
+      "citations": [
+        {
+          "chunk_hash": "b8883fee7cda118bf074b0d95313838dc0caca29da6971bb49318bf3aa8ac922",
+          "chunk_id": "pa_connor_goldberg_korajczyk_2010:p046:0045",
+          "edge_type": "defines",
+          "page_range": [
+            46,
+            47
+          ],
+          "quote": "As we explain below, the optimal portfolio weights do follow a linear equation, but are written in units of marginal risk.",
+          "source_id": "pa_connor_goldberg_korajczyk_2010"
+        }
+      ],
+      "summary": "The three return-factor-model types (statistical, macroeconomic, characteristic), the linear decomposition x = a + Bf + e that splits return covariance into common-factor B Cf B' plus idiosyncratic Ce, and the Euler/positive-homogeneity gradient d(w'Cw)/dw = 2Cw that makes marginal risk contributions value-additive across a nonlinear risk budget.",
+      "tags": [
+        "factor-model",
+        "covariance-decomposition",
+        "marginal-contribution-to-risk"
+      ],
+      "title": "Factor-Model Types and the Covariance Decomposition (Euler/MCR)"
+    },
+    {
+      "card_id": "pa-fi-carry-rolldown-pulltopar-time-decomposition",
+      "citations": [
+        {
+          "chunk_hash": "352925f520371ab3473911ab041bc29b29502ddf3c3889f2e0db5509d7ceef5a",
+          "chunk_id": "pa_colin_2016:p175:0184",
+          "edge_type": "defines",
+          "page_range": [
+            175,
+            175
+          ],
+          "quote": "However, rolldown return is seldom substantial, and will be overwhelmed by even quite small changes in the level or shape of the curve.",
+          "source_id": "pa_colin_2016"
+        }
+      ],
+      "summary": "Decomposes the market-closed deterministic bond return into carry (yield times elapsed time), pull-to-par, and roll-down (riding the curve), with carry sub-split into risk-free/credit and running/pull-to-par components.",
+      "tags": [
+        "fixed-income-attribution",
+        "carry-return",
+        "rolldown"
+      ],
+      "title": "Carry, Roll-Down, and Pull-to-Par Time Decomposition"
+    },
+    {
+      "card_id": "pa-fi-parametric-vs-nonparametric-curve-models",
+      "citations": [
+        {
+          "chunk_hash": "bd90123728a79f7787c7656174aa0c0cabeefb26aa97758feb7d9c4af039a088",
+          "chunk_id": "pa_colin_2016:p296:0307",
+          "edge_type": "defines",
+          "page_range": [
+            297,
+            297
+          ],
+          "quote": "■ Virtually any curve observed in the marketplace can be fitted to a Nelson-Siegel function, using least-squares or similar techniques.",
+          "source_id": "pa_colin_2016"
+        }
+      ],
+      "summary": "Two ways to read a yield curve for attribution: the parametric approach (Nelson-Siegel/polynomial, a few fitted parameters) versus the non-parametric spline approach (piecewise-polynomial interpolation on raw data); each trades smoothness against fidelity to observed points.",
+      "tags": [
+        "fixed-income-attribution",
+        "yield-curve-models",
+        "nelson-siegel"
+      ],
+      "title": "Parametric vs Non-Parametric Yield-Curve Models"
+    },
+    {
+      "card_id": "pa-fi-perturbational-attribution-equation",
+      "citations": [
+        {
+          "chunk_hash": "5f3c978442883ac44dd78a9f5937343bf296a3e17ad57179c74aa163ec368a83",
+          "chunk_id": "pa_colin_2016:p126:0132",
+          "edge_type": "defines",
+          "page_range": [
+            127,
+            127
+          ],
+          "quote": "Instead of requiring the details of how an arbitrary security is priced, it replicates the results of a returns calculation by using the security’s risk numbers: yield to maturity, modified duration and convexity.",
+          "source_id": "pa_colin_2016"
+        },
+        {
+          "chunk_hash": "c0580b90b4fd2e3641992a1c63558a8fce2b0c27d0ec0e611c0e2903e0be4634",
+          "chunk_id": "pa_bacon_2023_attribution:p353:0422",
+          "edge_type": "supports",
+          "page_range": [
+            353,
+            353
+          ],
+          "quote": "There is an alternative vocabulary of yield changes rather than returns.",
+          "source_id": "pa_bacon_2023_attribution"
+        }
+      ],
+      "summary": "Taylor-expanding a bond's price in time and yield yields r ~= y*dt - MD*dy + (1/2)C*dy^2, the master identity that maps a security's risk numbers into return components with no pricing model; residual dr = rM - rC.",
+      "tags": [
+        "fixed-income-attribution",
+        "perturbational-equation",
+        "duration-convexity"
+      ],
+      "title": "The Fixed-Income Perturbational Attribution Equation"
+    },
+    {
+      "card_id": "pa-fi-shift-twist-butterfly-and-krd",
+      "citations": [
+        {
+          "chunk_hash": "72ea8cc751b3bdd9c4705b21f4053114bb8f5ea8e13f6ae1f116ef355a976877",
+          "chunk_id": "pa_colin_2016:p153:0161",
+          "edge_type": "defines",
+          "page_range": [
+            153,
+            154
+          ],
+          "quote": "Curvature movement is sometimes referred to as butterfly, and attribution analysis that includes these three effects may be labelled shift-twist-butterfly",
+          "source_id": "pa_colin_2016"
+        },
+        {
+          "chunk_hash": "056b90509a3a64a5edc5db2f9420094ec9f3212b99bccbf6f16c38edefa90118",
+          "chunk_id": "pa_bacon_2023_attribution:p353:0423",
+          "edge_type": "supports",
+          "page_range": [
+            353,
+            354
+          ],
+          "quote": "The changing shape of the yield curve can be decomposed into three different movements: shift, twist (or slope) and curvature (or butterfly).",
+          "source_id": "pa_bacon_2023_attribution"
+        }
+      ],
+      "summary": "Nested four-curve repricing splits the sovereign-curve return into parallel shift, twist, and curvature (butterfly); the key-rate-duration partition is an alternative split that coincides exactly only via first-principles repricing.",
+      "tags": [
+        "fixed-income-attribution",
+        "yield-curve",
+        "key-rate-duration"
+      ],
+      "title": "Shift, Twist, Butterfly, and Key-Rate Duration"
+    },
+    {
+      "card_id": "pa-geometric-attribution-brinson-extended",
+      "citations": [
+        {
+          "chunk_hash": "797aa8eeb1928aad27d727f403289ef87185a5dc6d933f1aed81dbb69f25635a",
+          "chunk_id": "pa_bacon_2023_attribution:p283:0339",
+          "edge_type": "defines",
+          "page_range": [
+            283,
+            284
+          ],
+          "quote": "The total stock selection and asset allocation effects compound together to produce the",
+          "source_id": "pa_bacon_2023_attribution"
+        }
+      ],
+      "summary": "Geometric Brinson extension: allocation (1+bi)/(1+b) and selection effects with the 1/(1+bS) term COMPOUND, not sum, via (1+SG)(1+AG)-1 = (1+r)/(1+b)-1 to the geometric excess return.",
+      "tags": [
+        "geometric-attribution",
+        "brinson",
+        "excess-return"
+      ],
+      "title": "Geometric Attribution: The Compounding Brinson Extension"
+    },
+    {
+      "card_id": "pa-geometric-vs-arithmetic-linking-choice",
+      "citations": [
+        {
+          "chunk_hash": "30db2a9ea4eef3c8d2c00cf24039e30eab19a854aefd825d038038f359a5f06f",
+          "chunk_id": "pa_colin_2016:p094:0098",
+          "edge_type": "defines",
+          "page_range": [
+            95,
+            95
+          ],
+          "quote": "Arithmetic: numbers add up, but compounding over time is lost",
+          "source_id": "pa_colin_2016"
+        },
+        {
+          "chunk_hash": "69bf14e0a799ddeb9ee6629b5565771fe5af3e56deb70eed4e6e1a7a8bacbd77",
+          "chunk_id": "pa_bacon_2023_attribution:p383:0456",
+          "edge_type": "supports",
+          "page_range": [
+            384,
+            384
+          ],
+          "quote": "or linking algorithm must be employed; there is no economic justification other than presentational convenience.",
+          "source_id": "pa_bacon_2023_attribution"
+        }
+      ],
+      "summary": "Return contributions compound additively across markets but geometrically over time; the cross-term forces an arithmetic-vs-geometric rescaling to path-independence, with Carino's k=ln(1+r)/r as the canonical arithmetic bridge.",
+      "tags": [
+        "multiperiod-linking",
+        "smoothing-algorithms",
+        "path-independence"
+      ],
+      "title": "The Geometric-vs-Arithmetic Linking Choice"
+    },
+    {
+      "card_id": "pa-gips-2020-composites-and-mechanics",
+      "citations": [
+        {
+          "chunk_hash": "9ef6dacafa15dff0b7d6272ca64dbe63b9d7cc4f0aa4766dc146354045e12a79",
+          "chunk_id": "pa_bacon_2023_attribution:p427:0503",
+          "edge_type": "defines",
+          "page_range": [
+            428,
+            428
+          ],
+          "quote": "Clearly, it’s very inefficient for individual portfolio managers to be wasting their time ensuring returns are calculated correctly.",
+          "source_id": "pa_bacon_2023_attribution"
+        },
+        {
+          "chunk_hash": "bf9df0311da2fd3d0f57be4472cce9715fabcbcaa868f72f38b6b2cf72b87510",
+          "chunk_id": "pa_christopherson_carino_ferson_2009:p463:0477",
+          "edge_type": "supports",
+          "page_range": [
+            463,
+            464
+          ],
+          "quote": "These two principles provide a foundation for virtually all aspects",
+          "source_id": "pa_christopherson_carino_ferson_2009"
+        }
+      ],
+      "summary": "GIPS 2020 are voluntary fair-representation standards split into Firms, Asset-Owners, and Verifiers chapters; firms claim compliance on a firm-wide basis over a five-year minimum window, grouping similar mandates into composites reported on a TWR or MWR basis.",
+      "tags": [
+        "gips",
+        "composites",
+        "performance-presentation"
+      ],
+      "title": "GIPS 2020: Composites and Calculation Mechanics"
+    },
+    {
+      "card_id": "pa-irr-money-weighted-return",
+      "citations": [
+        {
+          "chunk_hash": "b2d06ce744a329f4cf6787e3bf53e877712014d8f74265a6a00edd383bb5b7d2",
+          "chunk_id": "pa_bacon_2023_attribution:p050:0055",
+          "edge_type": "defines",
+          "page_range": [
+            50,
+            50
+          ],
+          "quote": "IRR is an example of a money-weighted return methodology; each amount or dollar invested",
+          "source_id": "pa_bacon_2023_attribution"
+        }
+      ],
+      "summary": "IRR is the discount rate setting net present value to zero; as the money-weighted return it assigns every invested dollar one constant effective rate, which aids cash-flow-sensitive measurement but blocks attribution disaggregation.",
+      "tags": [
+        "money-weighted-return",
+        "irr",
+        "cash-flow"
+      ],
+      "title": "The Internal Rate of Return as the Money-Weighted Method"
+    },
+    {
+      "card_id": "pa-luck-vs-skill-fdr-and-bootstrap",
+      "citations": [
+        {
+          "chunk_hash": "3eca1aeb0bf6a1e73b0b38e9374c44982a9a425e157a76e6c1902fcf87bbb5bc",
+          "chunk_id": "pa_fischer_wermers_2013:p253:0344",
+          "edge_type": "defines",
+          "page_range": [
+            253,
+            253
+          ],
+          "quote": "precisely estimates the proportion of fund managers that are (1) unskilled, (2) zero-alpha, and (3) skilled, even with dependencies in cross-fund estimated alphas.",
+          "source_id": "pa_fischer_wermers_2013"
+        }
+      ],
+      "summary": "Across thousands of funds a naive count of significant alphas mistakes luck for skill; the FDR approach partitions the population into zero-alpha, unskilled, and skilled funds, and a residual bootstrap handles non-normal t-statistic tails.",
+      "tags": [
+        "false-discovery-rate",
+        "luck-vs-skill",
+        "bootstrap"
+      ],
+      "title": "Skill vs Luck: False-Discovery Rate and the Bootstrap"
+    },
+    {
+      "card_id": "pa-m2-risk-adjusted-return-transform",
+      "citations": [
+        {
+          "chunk_hash": "c74c43b23d98397c1a7d1f39a849e2436e1d02eff73800fa4a1145b89db80168",
+          "chunk_id": "pa_bacon_2022_rapm:p228:0198",
+          "edge_type": "defines",
+          "page_range": [
+            229,
+            229
+          ],
+          "quote": "a genuinely risk-adjusted return, extremely useful for comparing portfolios with different levels of risk.",
+          "source_id": "pa_bacon_2022_rapm"
+        },
+        {
+          "chunk_hash": "b51038e2c672032e687d475aa369a8af3f9afb574738306a3c1956c73d6b5bcd",
+          "chunk_id": "pa_christopherson_carino_ferson_2009:p110:0109",
+          "edge_type": "supports",
+          "page_range": [
+            110,
+            111
+          ],
+          "quote": "Therefore, MM is simply the portfolio return adjusted upward or downward to match the benchmark’s standard deviation.",
+          "source_id": "pa_christopherson_carino_ferson_2009"
+        }
+      ],
+      "summary": "Modigliani M2 rescales a portfolio's return along its Sharpe line to the benchmark's risk, producing a return metric (not a ratio) that preserves Sharpe rank while making risk-adjusted outperformance directly comparable; it generalises to MS2, adjusted M2, GH1/GH2, and differential return.",
+      "tags": [
+        "risk-adjusted-return",
+        "m-squared",
+        "sharpe-line"
+      ],
+      "title": "M-Squared: The Risk-Adjusted Return Transform"
+    },
+    {
+      "card_id": "pa-multifactor-alpha-timing-conditional",
+      "citations": [
+        {
+          "chunk_hash": "35af0af8a4a2793bd9388fa547738bd53e53410262ed0ac17a634b7206f29e4d",
+          "chunk_id": "pa_fischer_wermers_2013:p068:0088",
+          "edge_type": "defines",
+          "page_range": [
+            68,
+            69
+          ],
+          "quote": "alpha, usually called the Jensen alpha (since Jensen introduced this measure in his 1968 paper).",
+          "source_id": "pa_fischer_wermers_2013"
+        },
+        {
+          "chunk_hash": "2b13c6f56fc58e60764ca6eb37a733e14283a3d8d167b74f1d2a09af7ce99c7e",
+          "chunk_id": "pa_christopherson_carino_ferson_2009:p135:0135",
+          "edge_type": "supports",
+          "page_range": [
+            135,
+            136
+          ],
+          "quote": "Using a single coefficient a p in Equation (12.3) presumes that expected abnormal performance is constant over time.",
+          "source_id": "pa_christopherson_carino_ferson_2009"
+        }
+      ],
+      "summary": "Time-series regression of fund excess return on factor excess returns yields the intercept alpha (Jensen 1-factor, Carhart 4-factor, Fung-Hsieh 7-factor); quadratic/option timing terms split timing from selectivity, conditional betas vary with public information, and Roll (1978) shows benchmark choice makes alpha ambiguous.",
+      "tags": [
+        "jensen-alpha",
+        "market-timing",
+        "conditional-models"
+      ],
+      "title": "Multifactor Alpha, Market Timing, and Conditional Models"
+    },
+    {
+      "card_id": "pa-multilevel-attribution-successive-notional-funds",
+      "citations": [
+        {
+          "chunk_hash": "c9c366db3b41bcc8d68fdd2b98124b091d01c71777e7898da294eb94572240b7",
+          "chunk_id": "pa_bacon_2023_attribution:p266:0316",
+          "edge_type": "defines",
+          "page_range": [
+            266,
+            266
+          ],
+          "quote": "first articulation of successive notional portfolios, each isolating one step in the investment decision process.",
+          "source_id": "pa_bacon_2023_attribution"
+        },
+        {
+          "chunk_hash": "9ff7382d0364887b6a63f9a5eb3e5e18bed9ac24bdf5a98e88dc6172e22a0b49",
+          "chunk_id": "pa_bacon_2023_attribution:p405:0478",
+          "edge_type": "defines",
+          "page_range": [
+            406,
+            406
+          ],
+          "quote": "importantly, the order of the decision process, we can still employ the Brinson model.",
+          "source_id": "pa_bacon_2023_attribution"
+        }
+      ],
+      "summary": "Multi-level attribution as a chain of successive notional funds (policy -> strategy -> selection), each isolating one decision step; Holbrook's three-level pension framework links the chain to Fama-style risk decomposition.",
+      "tags": [
+        "multilevel-attribution",
+        "notional-funds",
+        "decision-tree"
+      ],
+      "title": "Multi-Level Attribution and Successive Notional Funds"
+    },
+    {
+      "card_id": "pa-multiperiod-linking-smoothing-vs-linking",
+      "citations": [
+        {
+          "chunk_hash": "d06490574f24a23ed8ced7b96d7ec7ca1220286965934f57d3d85628a5f7a6c5",
+          "chunk_id": "pa_bacon_2023_attribution:p388:0462",
+          "edge_type": "defines",
+          "page_range": [
+            389,
+            389
+          ],
+          "quote": "Carino and Menchero are examples of smoothing algorithms in which the natural residual of the multi-period arithmetic attribution is structurally distributed across all the contributions to performance.",
+          "source_id": "pa_bacon_2023_attribution"
+        },
+        {
+          "chunk_hash": "7677222169796785900832c5ba8a2f2fb3c768c404f464df0fc3405eb1184590",
+          "chunk_id": "pa_christopherson_carino_ferson_2009:p204:0199",
+          "edge_type": "supports",
+          "page_range": [
+            205,
+            205
+          ],
+          "quote": "Attempting to add returns over time leaves a residual.",
+          "source_id": "pa_christopherson_carino_ferson_2009"
+        }
+      ],
+      "summary": "Arithmetic attribution effects do not sum across periods (a residual remains); smoothing methods (Carino, Menchero) distribute that residual, while linking methods (GRAP, Frongello) compound it order-dependently.",
+      "tags": [
+        "multiperiod-attribution",
+        "smoothing",
+        "linking"
+      ],
+      "title": "Multi-Period Linking: Smoothing vs Linking Algorithms"
+    },
+    {
+      "card_id": "pa-normal-portfolio-construction",
+      "citations": [
+        {
+          "chunk_hash": "d46794767d704d03ff2bdbf9d0385c80cbca0bb14432a83a259a784e1f0390bf",
+          "chunk_id": "pa_christopherson_carino_ferson_2009:p236:0232",
+          "edge_type": "defines",
+          "page_range": [
+            236,
+            237
+          ],
+          "quote": "It is not clear that there should be a unique or single normal portfolio for a manager.",
+          "source_id": "pa_christopherson_carino_ferson_2009"
+        }
+      ],
+      "summary": "A normal portfolio is the Barra-origin habitat of securities a manager normally chooses, weighted as they normally would. Built in three steps (beginning universe, screen, weight), it separates style return from stock-selection skill.",
+      "tags": [
+        "normal-portfolio",
+        "custom-benchmark",
+        "style-vs-skill"
+      ],
+      "title": "Normal-Portfolio Construction"
+    },
+    {
+      "card_id": "pa-partial-moment-ratios-sortino-omega-kappa",
+      "citations": [
+        {
+          "chunk_hash": "8d97436b705cb6016f1c71afdea5f3e06d0473ec81039ac38085ae8f96ef5831",
+          "chunk_id": "pa_bacon_2022_rapm:p150:0135",
+          "edge_type": "defines",
+          "page_range": [
+            151,
+            151
+          ],
+          "quote": "For l = 1, K1 is the Omega–Sharpe ratio and for l = 2, K2 is the Sortino ratio.",
+          "source_id": "pa_bacon_2022_rapm"
+        }
+      ],
+      "summary": "Postmodern reward-to-downside ratios built on lower partial moments: downside variance is the 2nd LPM and downside potential the 1st; Omega, Omega-Sharpe, Sortino and Kappa are all special cases of the generalised Kappa K_l family indexed by moment order l.",
+      "tags": [
+        "downside-risk",
+        "partial-moments",
+        "risk-adjusted-return"
+      ],
+      "title": "Partial-Moment Ratios: Sortino, Omega, and Kappa"
+    },
+    {
+      "card_id": "pa-regression-appraisal-jensen-treynor",
+      "citations": [
+        {
+          "chunk_hash": "de17318fef996c6b08cdd880ed4ad17b314d17687b29d157e409d5bc6ccb1c28",
+          "chunk_id": "pa_bacon_2022_rapm:p100:0090",
+          "edge_type": "defines",
+          "page_range": [
+            101,
+            101
+          ],
+          "quote": "Jensen’s alpha is the intercept of the regression equation in the CAPM and is in effect the excess return adjusted for systematic risk.",
+          "source_id": "pa_bacon_2022_rapm"
+        }
+      ],
+      "summary": "CAPM-regression appraisal family: Jensen's alpha (intercept), Treynor and modified-Treynor reward ratios, the appraisal (Treynor-Black) and modified-Jensen ratios, bull/bear betas, and Fama selectivity/diversification/net-selectivity decomposition.",
+      "tags": [
+        "jensen-alpha",
+        "treynor-ratio",
+        "fama-decomposition"
+      ],
+      "title": "Regression Appraisal: Jensen's Alpha and the Treynor Ratio"
+    },
+    {
+      "card_id": "pa-return-gap-kacperczyk-sialm-zheng",
+      "citations": [
+        {
+          "chunk_hash": "fdeaee410f2c4b5b931d7c88807045833c8a7a99c5ddd03e2ee416a6809a598e",
+          "chunk_id": "pa_fischer_wermers_2013:p138:0170",
+          "edge_type": "defines",
+          "page_range": [
+            139,
+            139
+          ],
+          "quote": "It also allows an analysis of the missing performance due",
+          "source_id": "pa_fischer_wermers_2013"
+        }
+      ],
+      "summary": "The return gap is the realised net return minus the holdings-implied gross return; it isolates the value (positive) or destruction (negative) of a manager's unobserved interim actions and hidden trading costs not captured by disclosed end-of-period holdings.",
+      "tags": [
+        "return-gap",
+        "holdings-based",
+        "unobserved-actions"
+      ],
+      "title": "The Return Gap"
+    },
+    {
+      "card_id": "pa-returns-based-style-analysis",
+      "citations": [
+        {
+          "chunk_hash": "52df8bff33d63f6b9ae6f5c6bafea8975eb0bb5ecfc1643e8fd45eaa2da9ea20",
+          "chunk_id": "pa_christopherson_carino_ferson_2009:p438:0448",
+          "edge_type": "defines",
+          "page_range": [
+            439,
+            439
+          ],
+          "quote": "methodology is necessary to obtain a set of coefficients",
+          "source_id": "pa_christopherson_carino_ferson_2009"
+        }
+      ],
+      "summary": "Sharpe's effective-mix model regresses a manager's returns on style-index returns under no-short and full-investment constraints, inferring an investable implied benchmark via quadratic optimisation rather than unconstrained OLS.",
+      "tags": [
+        "returns-based-style-analysis",
+        "effective-mix",
+        "implied-benchmark"
+      ],
+      "title": "Returns-Based Style Analysis"
+    },
+    {
+      "card_id": "pa-transaction-based-attribution-and-trading-cost",
+      "citations": [
+        {
+          "chunk_hash": "d2f2fcd673ce582f33f53413e21f36aa1f82a2981c459cfd5f8b80732c15e7a5",
+          "chunk_id": "pa_bacon_2023_attribution:p268:0319",
+          "edge_type": "defines",
+          "page_range": [
+            268,
+            268
+          ],
+          "quote": "Transaction-based attribution is the most complete form of attribution identifying all sources of return and reconciling exactly to the published return.",
+          "source_id": "pa_bacon_2023_attribution"
+        },
+        {
+          "chunk_hash": "22d99d1e048fb580d74fb0ba60b78fc4f89cdaf5ac188a031a3def2562ddfdd5",
+          "chunk_id": "pa_christopherson_carino_ferson_2009:p192:0188",
+          "edge_type": "supports",
+          "page_range": [
+            193,
+            193
+          ],
+          "quote": "Cash Flows The framework by itself does not address cash flows between segments.",
+          "source_id": "pa_christopherson_carino_ferson_2009"
+        }
+      ],
+      "summary": "Transaction-based attribution reads value-add directly from trade-level data, reconciling exactly to the published return and capturing intraperiod timing, bid/offer, and transaction costs that holdings-based attribution leaves as a residual.",
+      "tags": [
+        "transaction-based-attribution",
+        "trading-cost",
+        "holdings-based"
+      ],
+      "title": "Transaction-Based Attribution and the Trading-Cost Bridge"
+    },
+    {
+      "card_id": "pa-true-twr-and-chain-linking",
+      "citations": [
+        {
+          "chunk_hash": "38a791dc91e8cac82a3a56a7b3a7219072bbb80bee8f1d6b371cac9b5b7b1a17",
+          "chunk_id": "pa_bacon_2023_attribution:p055:0061",
+          "edge_type": "defines",
+          "page_range": [
+            55,
+            56
+          ],
+          "quote": "sub-period between cash flows using simple wealth ratios. The sub-period returns are then",
+          "source_id": "pa_bacon_2023_attribution"
+        }
+      ],
+      "summary": "True (classical) TWR values the portfolio at every external cash flow, forms simple wealth-ratio sub-period returns, and geometrically chain-links them; the unit-price (NAV) method is its variant, at the cost of accurate valuation at each flow.",
+      "tags": [
+        "time-weighted-return",
+        "chain-linking",
+        "unit-price-nav"
+      ],
+      "title": "True Time-Weighted Return and Geometric Chain-Linking"
+    },
+    {
+      "card_id": "pa-twr-vs-mwr-when-each-applies",
+      "citations": [
+        {
+          "chunk_hash": "366759d4631678f342c5e18658e3b3669b030235b35558f5f86538005be4172e",
+          "chunk_id": "pa_bacon_2023_attribution:p060:0068",
+          "edge_type": "defines",
+          "page_range": [
+            61,
+            61
+          ],
+          "quote": "The time-weighted rate of return adjusts for cash flow and weights each time period equally, measuring the return that would have been achieved had there been no cash flows.",
+          "source_id": "pa_bacon_2023_attribution"
+        },
+        {
+          "chunk_hash": "a3fea8a49a7a625bfae2393911027ae2c6628d1d856eafb9bb91908523406d3c",
+          "chunk_id": "pa_christopherson_carino_ferson_2009:p052:0047",
+          "edge_type": "supports",
+          "page_range": [
+            53,
+            53
+          ],
+          "quote": "Because the time-weighted return controls for cash flows, it is a better measure to use when comparing the performance of different managers.",
+          "source_id": "pa_christopherson_carino_ferson_2009"
+        }
+      ],
+      "summary": "Distinguishes the time-weighted return (sub-periods weighted equally, cash-flow-neutral, the manager-evaluation canon) from the money-weighted return/IRR (each dollar earns one effective rate, the asset owner dollar experience), and when each applies.",
+      "tags": [
+        "time-weighted-return",
+        "money-weighted-return",
+        "cash-flows"
+      ],
+      "title": "Time-Weighted vs Money-Weighted Return: When Each Applies"
+    },
+    {
+      "card_id": "pa-valid-benchmark-properties",
+      "citations": [
+        {
+          "chunk_hash": "8b7a6bd9f8b3bfa3084beacd77925de5a6ee9eaf05289c03456f53c85e9916d2",
+          "chunk_id": "pa_christopherson_carino_ferson_2009:p251:0249",
+          "edge_type": "defines",
+          "page_range": [
+            252,
+            252
+          ],
+          "quote": "Given the purposes of a benchmark, a benchmark should include all the assets available for investment.",
+          "source_id": "pa_christopherson_carino_ferson_2009"
+        },
+        {
+          "chunk_hash": "936a1b31b06237a677dd30a95e2424c748b166b2f124b799e81076ffd88b43d9",
+          "chunk_id": "pa_christopherson_carino_ferson_2009:p252:0250",
+          "edge_type": "supports",
+          "page_range": [
+            252,
+            252
+          ],
+          "quote": "This characteristic can be called investability.",
+          "source_id": "pa_christopherson_carino_ferson_2009"
+        }
+      ],
+      "summary": "Christopherson, Cariño & Ferson ground a 'desirable benchmark' in four principles (naïve alternative, completeness, simplicity, representative weighting) plus named sub-characteristics—investability, believability, fairness, openness, reliability—and the trade-offs among them.",
+      "tags": [
+        "benchmark-quality",
+        "valid-benchmark",
+        "index-construction"
+      ],
+      "title": "Properties of a Valid Benchmark"
+    },
+    {
+      "card_id": "pa-variability-ratios-sharpe-information",
+      "citations": [
+        {
+          "chunk_hash": "9a129eb89b37b02953790fac0964c9918cf2eda23ee7e2f33bca7c552837460e",
+          "chunk_id": "pa_bacon_2022_rapm:p070:0062",
+          "edge_type": "defines",
+          "page_range": [
+            71,
+            71
+          ],
+          "quote": "The Sharpe ratio can be described as the return (or reward) per unit of variability (or risk).",
+          "source_id": "pa_bacon_2022_rapm"
+        },
+        {
+          "chunk_hash": "d9d5c235736326428a93b3287db7ea173427e1c0dfd5e8ffd77f5407ef5aff9c",
+          "chunk_id": "pa_christopherson_carino_ferson_2009:p113:0112",
+          "edge_type": "supports",
+          "page_range": [
+            114,
+            114
+          ],
+          "quote": "The appraisal ratio, more commonly called the information ratio, is the ratio of alpha to residual risk.",
+          "source_id": "pa_christopherson_carino_ferson_2009"
+        }
+      ],
+      "summary": "Family card for the Sharpe-form reward/variability template: ratio = excess return over a dispersion measure, read as the gradient on a return-risk plane. The Information Ratio is its benchmark-relative twin (excess over tracking error), with MAD, Gini, and skew/kurtosis-adjusted denominator variants.",
+      "tags": [
+        "sharpe-ratio",
+        "information-ratio",
+        "risk-adjusted-return"
+      ],
+      "title": "Variability Ratios: Sharpe and the Information Ratio"
+    }
+  ],
+  "generated_by": "resolve_migration_citations.py",
+  "note": "Resolved chunk_id/chunk_hash bound from incoming skeleton citations against the frozen merged chunks_manifest; confirmed by kb verify. Quote repairs (trim/re-anchor for U+FFFE hyphenation) are recorded in migration_quote_audit.json.",
+  "reading_id": "15_performance_and_attribution",
+  "schema_version": "cfa_legacy.migration_curated_citations.v1"
+}

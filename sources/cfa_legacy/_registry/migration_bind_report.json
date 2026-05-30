@@ -1,0 +1,3318 @@
+{
+  "counts": {
+    "fa_22": {
+      "auto": 49,
+      "page_corrections": 0,
+      "reanchor": 9,
+      "total": 66,
+      "trim": 8,
+      "unbound": 0
+    },
+    "mt_14": {
+      "auto": 90,
+      "page_corrections": 34,
+      "reanchor": 9,
+      "total": 110,
+      "trim": 11,
+      "unbound": 0
+    },
+    "pa_15": {
+      "auto": 37,
+      "page_corrections": 9,
+      "reanchor": 11,
+      "total": 54,
+      "trim": 6,
+      "unbound": 0
+    }
+  },
+  "report": [
+    {
+      "authored_page_range": [
+        93,
+        93
+      ],
+      "card_id": "fa-amihud-mendelson-and-priced-liquidity-risk",
+      "change": {
+        "final_quote": "These investors’ longer holding periods mitigate the compensation that they would have required for higher transaction costs on less liquid securities.",
+        "original_quote": "in equilibrium, less liquid securities are allocated to investors with longer holding periods",
+        "overlap": 0.259,
+        "reason": "authored quote spans a U+FFFE hyphenation marker and trimming would retain <60%; re-anchored to the best-overlap clean verbatim sentence on the cited page",
+        "type": "reanchor"
+      },
+      "chunk_id": "fa_vandermerwe_2015_market_liquidity_risk:p093:0096",
+      "source_id": "fa_vandermerwe_2015_market_liquidity_risk",
+      "status": "reanchor"
+    },
+    {
+      "authored_page_range": [
+        118,
+        118
+      ],
+      "card_id": "fa-amihud-mendelson-and-priced-liquidity-risk",
+      "change": null,
+      "chunk_id": "fa_vandermerwe_2015_market_liquidity_risk:p117:0124",
+      "source_id": "fa_vandermerwe_2015_market_liquidity_risk",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        121,
+        121
+      ],
+      "card_id": "fa-amihud-mendelson-and-priced-liquidity-risk",
+      "change": null,
+      "chunk_id": "fa_vandermerwe_2015_market_liquidity_risk:p120:0128",
+      "source_id": "fa_vandermerwe_2015_market_liquidity_risk",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        14,
+        14
+      ],
+      "card_id": "fa-dual-rail-pricing-nav-vs-market",
+      "change": null,
+      "chunk_id": "fa_hill_2025_cfa_rf_etfs_2e:p014:0013",
+      "source_id": "fa_hill_2025_cfa_rf_etfs_2e",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        23,
+        23
+      ],
+      "card_id": "fa-dual-rail-pricing-nav-vs-market",
+      "change": null,
+      "chunk_id": "fa_hill_2025_cfa_rf_etfs_2e:p022:0026",
+      "source_id": "fa_hill_2025_cfa_rf_etfs_2e",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        24,
+        24
+      ],
+      "card_id": "fa-etf-creation-redemption-arbitrage-band",
+      "change": null,
+      "chunk_id": "fa_hill_2025_cfa_rf_etfs_2e:p023:0028",
+      "source_id": "fa_hill_2025_cfa_rf_etfs_2e",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        91,
+        91
+      ],
+      "card_id": "fa-etf-creation-redemption-arbitrage-band",
+      "change": null,
+      "chunk_id": "fa_madhavan_2016_etfs_new_dynamics:p090:0109",
+      "source_id": "fa_madhavan_2016_etfs_new_dynamics",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        22,
+        22
+      ],
+      "card_id": "fa-etf-creation-redemption-mechanism",
+      "change": null,
+      "chunk_id": "fa_hill_2025_cfa_rf_etfs_2e:p021:0025",
+      "source_id": "fa_hill_2025_cfa_rf_etfs_2e",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        21,
+        21
+      ],
+      "card_id": "fa-etf-creation-redemption-mechanism",
+      "change": null,
+      "chunk_id": "fa_hill_2025_cfa_rf_etfs_2e:p021:0024",
+      "source_id": "fa_hill_2025_cfa_rf_etfs_2e",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        89,
+        89
+      ],
+      "card_id": "fa-etf-spread-below-basket-adverse-selection",
+      "change": null,
+      "chunk_id": "fa_madhavan_2016_etfs_new_dynamics:p088:0106",
+      "source_id": "fa_madhavan_2016_etfs_new_dynamics",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        86,
+        86
+      ],
+      "card_id": "fa-etf-spread-below-basket-adverse-selection",
+      "change": null,
+      "chunk_id": "fa_madhavan_2016_etfs_new_dynamics:p085:0102",
+      "source_id": "fa_madhavan_2016_etfs_new_dynamics",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        248,
+        248
+      ],
+      "card_id": "fa-etf-vs-cef-premium-discount",
+      "change": null,
+      "chunk_id": "fa_abner_2016_etf_handbook:p247:0329",
+      "source_id": "fa_abner_2016_etf_handbook",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        248,
+        248
+      ],
+      "card_id": "fa-etf-vs-cef-premium-discount",
+      "change": null,
+      "chunk_id": "fa_abner_2016_etf_handbook:p247:0329",
+      "source_id": "fa_abner_2016_etf_handbook",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        23,
+        23
+      ],
+      "card_id": "fa-etf-vs-cef-premium-discount",
+      "change": null,
+      "chunk_id": "fa_hill_2025_cfa_rf_etfs_2e:p023:0027",
+      "source_id": "fa_hill_2025_cfa_rf_etfs_2e",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        322,
+        322
+      ],
+      "card_id": "fa-etp-taxonomy-and-legal-structures",
+      "change": null,
+      "chunk_id": "fa_abner_2016_etf_handbook:p321:0424",
+      "source_id": "fa_abner_2016_etf_handbook",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        317,
+        317
+      ],
+      "card_id": "fa-etp-taxonomy-and-legal-structures",
+      "change": null,
+      "chunk_id": "fa_abner_2016_etf_handbook:p316:0417",
+      "source_id": "fa_abner_2016_etf_handbook",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        229,
+        229
+      ],
+      "card_id": "fa-funding-spirals-and-fire-sales",
+      "change": null,
+      "chunk_id": "fa_madhavan_2016_etfs_new_dynamics:p229:0282",
+      "source_id": "fa_madhavan_2016_etfs_new_dynamics",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        167,
+        167
+      ],
+      "card_id": "fa-funding-spirals-and-fire-sales",
+      "change": null,
+      "chunk_id": "fa_vandermerwe_2015_market_liquidity_risk:p166:0181",
+      "source_id": "fa_vandermerwe_2015_market_liquidity_risk",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        87,
+        87
+      ],
+      "card_id": "fa-funding-spirals-and-fire-sales",
+      "change": null,
+      "chunk_id": "fa_vandermerwe_2015_market_liquidity_risk:p086:0090",
+      "source_id": "fa_vandermerwe_2015_market_liquidity_risk",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        250,
+        250
+      ],
+      "card_id": "fa-iiv-iopv-intraday-fair-value",
+      "change": null,
+      "chunk_id": "fa_abner_2016_etf_handbook:p249:0331",
+      "source_id": "fa_abner_2016_etf_handbook",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        53,
+        53
+      ],
+      "card_id": "fa-iiv-iopv-intraday-fair-value",
+      "change": {
+        "final_quote": "The change (or innovation) in expected values conditional upon public information over the interval from t − 1 to t is denoted by =− − r .",
+        "original_quote": "I need to model three distinct values: (1) the ETF secondary market price, (2) NAV, and (3) the (unobserved) expected value of the ETF.",
+        "overlap": 0.135,
+        "reason": "authored quote spans a U+FFFE hyphenation marker and trimming would retain <60%; re-anchored to the best-overlap clean verbatim sentence on the cited page",
+        "type": "reanchor"
+      },
+      "chunk_id": "fa_madhavan_2016_etfs_new_dynamics:p052:0055",
+      "source_id": "fa_madhavan_2016_etfs_new_dynamics",
+      "status": "reanchor"
+    },
+    {
+      "authored_page_range": [
+        112,
+        112
+      ],
+      "card_id": "fa-illiquidity-discount-and-crisis-amplification",
+      "change": null,
+      "chunk_id": "fa_vandermerwe_2015_market_liquidity_risk:p111:0117",
+      "source_id": "fa_vandermerwe_2015_market_liquidity_risk",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        115,
+        115
+      ],
+      "card_id": "fa-illiquidity-discount-and-crisis-amplification",
+      "change": null,
+      "chunk_id": "fa_vandermerwe_2015_market_liquidity_risk:p115:0121",
+      "source_id": "fa_vandermerwe_2015_market_liquidity_risk",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        74,
+        75
+      ],
+      "card_id": "fa-in-kind-basket-design-and-fees",
+      "change": {
+        "final_quote": "amount of shares that can be submitted by an AP for either a creation or a redemption order.",
+        "original_quote": "Creation unit size is typically a minimum amount of shares that can be submitted by an AP for either a creation or a redemption order.",
+        "reason": "authored quote spans a U+FFFE hyphenation marker; trimmed to the longest clean verbatim run (>=60% retained)",
+        "retained_fraction": 0.687,
+        "type": "trim"
+      },
+      "chunk_id": "fa_abner_2016_etf_handbook:p074:0095",
+      "source_id": "fa_abner_2016_etf_handbook",
+      "status": "trim"
+    },
+    {
+      "authored_page_range": [
+        325,
+        325
+      ],
+      "card_id": "fa-in-kind-basket-design-and-fees",
+      "change": null,
+      "chunk_id": "fa_abner_2016_etf_handbook:p325:0429",
+      "source_id": "fa_abner_2016_etf_handbook",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        25,
+        25
+      ],
+      "card_id": "fa-in-kind-basket-design-and-fees",
+      "change": null,
+      "chunk_id": "fa_hill_2025_cfa_rf_etfs_2e:p024:0030",
+      "source_id": "fa_hill_2025_cfa_rf_etfs_2e",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        263,
+        263
+      ],
+      "card_id": "fa-international-price-discovery-and-enav",
+      "change": null,
+      "chunk_id": "fa_abner_2016_etf_handbook:p262:0348",
+      "source_id": "fa_abner_2016_etf_handbook",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        264,
+        264
+      ],
+      "card_id": "fa-international-price-discovery-and-enav",
+      "change": {
+        "final_quote": "net asset value (eNAV). Estimated NAVs have been used to value closed-end funds (CEFs) for many years prior to the invention of the ETF.",
+        "original_quote": "I call this the calculation of estimated net asset value (eNAV). Estimated NAVs have been used to value closed-end funds (CEFs) for many years prior to the invention of the ETF.",
+        "reason": "authored quote spans a U+FFFE hyphenation marker; trimmed to the longest clean verbatim run (>=60% retained)",
+        "retained_fraction": 0.768,
+        "type": "trim"
+      },
+      "chunk_id": "fa_abner_2016_etf_handbook:p263:0350",
+      "source_id": "fa_abner_2016_etf_handbook",
+      "status": "trim"
+    },
+    {
+      "authored_page_range": [
+        44,
+        44
+      ],
+      "card_id": "fa-international-price-discovery-and-enav",
+      "change": {
+        "final_quote": "A Comprehensive Guide to Exchange-Traded Funds (ETFs) 28 ©2015 The CFA Institute Research Foundation “stuck,” even as the ETF’s share price engages in price discovery.",
+        "original_quote": "“stuck,” even as the ETF’s share price engages in price discovery. In this situation, the INAV is no help in assessing fair value; in fact, it is misleading.",
+        "overlap": 0.297,
+        "reason": "authored quote spans a U+FFFE hyphenation marker and trimming would retain <60%; re-anchored to the best-overlap clean verbatim sentence on the cited page",
+        "type": "reanchor"
+      },
+      "chunk_id": "fa_hill_2015_cfa_rf_etfs_1e:p043:0049",
+      "source_id": "fa_hill_2015_cfa_rf_etfs_1e",
+      "status": "reanchor"
+    },
+    {
+      "authored_page_range": [
+        329,
+        329
+      ],
+      "card_id": "fa-limits-to-arbitrage-when-creation-channel-breaks",
+      "change": null,
+      "chunk_id": "fa_abner_2016_etf_handbook:p328:0434",
+      "source_id": "fa_abner_2016_etf_handbook",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        227,
+        227
+      ],
+      "card_id": "fa-limits-to-arbitrage-when-creation-channel-breaks",
+      "change": null,
+      "chunk_id": "fa_madhavan_2016_etfs_new_dynamics:p227:0279",
+      "source_id": "fa_madhavan_2016_etfs_new_dynamics",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        163,
+        163
+      ],
+      "card_id": "fa-liquidity-adjusted-var",
+      "change": {
+        "final_quote": "The concept behind the liquidity-adjusted VaR is simple.",
+        "original_quote": "liquidity-adjusted VaR is simple. Market risk is split into two components: the return risk, which can be thought of as a pure market risk",
+        "overlap": 0.261,
+        "reason": "authored quote spans a U+FFFE hyphenation marker and trimming would retain <60%; re-anchored to the best-overlap clean verbatim sentence on the cited page",
+        "type": "reanchor"
+      },
+      "chunk_id": "fa_vandermerwe_2015_market_liquidity_risk:p163:0177",
+      "source_id": "fa_vandermerwe_2015_market_liquidity_risk",
+      "status": "reanchor"
+    },
+    {
+      "authored_page_range": [
+        90,
+        90
+      ],
+      "card_id": "fa-liquidity-measurement-and-price-impact",
+      "change": null,
+      "chunk_id": "fa_madhavan_2016_etfs_new_dynamics:p090:0108",
+      "source_id": "fa_madhavan_2016_etfs_new_dynamics",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        96,
+        96
+      ],
+      "card_id": "fa-liquidity-measurement-and-price-impact",
+      "change": null,
+      "chunk_id": "fa_vandermerwe_2015_market_liquidity_risk:p095:0098",
+      "source_id": "fa_vandermerwe_2015_market_liquidity_risk",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        99,
+        99
+      ],
+      "card_id": "fa-liquidity-measurement-and-price-impact",
+      "change": null,
+      "chunk_id": "fa_vandermerwe_2015_market_liquidity_risk:p099:0102",
+      "source_id": "fa_vandermerwe_2015_market_liquidity_risk",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        118,
+        118
+      ],
+      "card_id": "fa-market-impact-transaction-costs-and-turbulence-breakdown",
+      "change": null,
+      "chunk_id": "fa_madhavan_2016_etfs_new_dynamics:p118:0141",
+      "source_id": "fa_madhavan_2016_etfs_new_dynamics",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        126,
+        126
+      ],
+      "card_id": "fa-market-impact-transaction-costs-and-turbulence-breakdown",
+      "change": null,
+      "chunk_id": "fa_weiner_2021_etf_portfolio:p125:0122",
+      "source_id": "fa_weiner_2021_etf_portfolio",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        125,
+        125
+      ],
+      "card_id": "fa-market-impact-transaction-costs-and-turbulence-breakdown",
+      "change": null,
+      "chunk_id": "fa_weiner_2021_etf_portfolio:p124:0121",
+      "source_id": "fa_weiner_2021_etf_portfolio",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        276,
+        276
+      ],
+      "card_id": "fa-market-impact-transaction-costs-and-turbulence-breakdown",
+      "change": null,
+      "chunk_id": "fa_weiner_2021_etf_portfolio:p275:0275",
+      "source_id": "fa_weiner_2021_etf_portfolio",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        274,
+        274
+      ],
+      "card_id": "fa-market-impact-transaction-costs-and-turbulence-breakdown",
+      "change": null,
+      "chunk_id": "fa_weiner_2021_etf_portfolio:p273:0273",
+      "source_id": "fa_weiner_2021_etf_portfolio",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        26,
+        26
+      ],
+      "card_id": "fa-market-liquidity-dimensions-and-no-arbitrage",
+      "change": {
+        "final_quote": "the theory rests on the critical assumptions of",
+        "low_retention": true,
+        "original_quote": "the theory rests on the critical assumptions of “unlimited access to capital” and “no risk.”",
+        "reason": "authored quote spans a U+FFFE hyphenation marker; the clean run retains <60% and no clean full sentence was available on the cited page to re-anchor, so the longest clean verbatim run is kept (flagged for review)",
+        "retained_fraction": 0.511,
+        "type": "trim"
+      },
+      "chunk_id": "fa_vandermerwe_2015_market_liquidity_risk:p026:0020",
+      "source_id": "fa_vandermerwe_2015_market_liquidity_risk",
+      "status": "trim"
+    },
+    {
+      "authored_page_range": [
+        24,
+        24
+      ],
+      "card_id": "fa-market-liquidity-dimensions-and-no-arbitrage",
+      "change": null,
+      "chunk_id": "fa_vandermerwe_2015_market_liquidity_risk:p024:0017",
+      "source_id": "fa_vandermerwe_2015_market_liquidity_risk",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        54,
+        54
+      ],
+      "card_id": "fa-nav-staleness-and-arbitrage-speed",
+      "change": {
+        "final_quote": "t t The arbitrager sells short the ETF and buys the underlying basket locking in a gross profit of ut per share.",
+        "original_quote": "where εt ~ (μ , σ ε2) is a liquidity shock and ψ is the autocorrelation coefficient.",
+        "overlap": 0.154,
+        "reason": "authored quote spans a U+FFFE hyphenation marker and trimming would retain <60%; re-anchored to the best-overlap clean verbatim sentence on the cited page",
+        "type": "reanchor"
+      },
+      "chunk_id": "fa_madhavan_2016_etfs_new_dynamics:p054:0057",
+      "source_id": "fa_madhavan_2016_etfs_new_dynamics",
+      "status": "reanchor"
+    },
+    {
+      "authored_page_range": [
+        56,
+        56
+      ],
+      "card_id": "fa-nav-staleness-and-arbitrage-speed",
+      "change": {
+        "final_quote": "tt =− ++ tt −1 (3.6) Here 0 ≤ φ ≤ 1 captures possible staleness and wμ ~( , σ ) t w w 2 is an error term that reflects microstructure effects.1 Any pricing noise will be reflected in w.",
+        "original_quote": "Here 0 ≤ φ ≤ 1 captures possible staleness and wt ~ (μ , σ w2 ) is an error term that",
+        "overlap": 0.4,
+        "reason": "authored quote spans a U+FFFE hyphenation marker and trimming would retain <60%; re-anchored to the best-overlap clean verbatim sentence on the cited page",
+        "type": "reanchor"
+      },
+      "chunk_id": "fa_madhavan_2016_etfs_new_dynamics:p056:0061",
+      "source_id": "fa_madhavan_2016_etfs_new_dynamics",
+      "status": "reanchor"
+    },
+    {
+      "authored_page_range": [
+        87,
+        87
+      ],
+      "card_id": "fa-pcf-cash-and-fund-seeding",
+      "change": null,
+      "chunk_id": "fa_abner_2016_etf_handbook:p087:0115",
+      "source_id": "fa_abner_2016_etf_handbook",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        82,
+        82
+      ],
+      "card_id": "fa-pcf-cash-and-fund-seeding",
+      "change": null,
+      "chunk_id": "fa_weiner_2021_etf_portfolio:p081:0077",
+      "source_id": "fa_weiner_2021_etf_portfolio",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        81,
+        81
+      ],
+      "card_id": "fa-pcf-cash-and-fund-seeding",
+      "change": null,
+      "chunk_id": "fa_weiner_2021_etf_portfolio:p080:0076",
+      "source_id": "fa_weiner_2021_etf_portfolio",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        92,
+        92
+      ],
+      "card_id": "fa-pcf-cash-and-fund-seeding",
+      "change": null,
+      "chunk_id": "fa_weiner_2021_etf_portfolio:p091:0089",
+      "source_id": "fa_weiner_2021_etf_portfolio",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        52,
+        53
+      ],
+      "card_id": "fa-premium-decomposition-and-estimation",
+      "change": {
+        "final_quote": "We can use the general framework to analyze questions concerning price discovery, the dynamics of premiums and discounts, return autocorrelations, performance and tracking relative to benchmark, transaction costs, and liquidity sourcing in underlying and secondary markets.",
+        "original_quote": "By explicitly modeling the temporal dynamics of price and NAV, we can statistically decompose the ETF’s price premium to its NAV into components corresponding to price discovery and transitory liquidity.",
+        "overlap": 0.217,
+        "reason": "authored quote spans a U+FFFE hyphenation marker and trimming would retain <60%; re-anchored to the best-overlap clean verbatim sentence on the cited page",
+        "type": "reanchor"
+      },
+      "chunk_id": "fa_madhavan_2016_etfs_new_dynamics:p050:0054",
+      "source_id": "fa_madhavan_2016_etfs_new_dynamics",
+      "status": "reanchor"
+    },
+    {
+      "authored_page_range": [
+        69,
+        70
+      ],
+      "card_id": "fa-premium-decomposition-and-estimation",
+      "change": {
+        "final_quote": "because it aligns with the model directly and lets us explicitly estimate the unobserved true premium,",
+        "original_quote": "I adopt the state-space representation because it aligns with the model directly and lets us explicitly estimate the unobserved true premium, ut .",
+        "reason": "authored quote spans a U+FFFE hyphenation marker; trimmed to the longest clean verbatim run (>=60% retained)",
+        "retained_fraction": 0.699,
+        "type": "trim"
+      },
+      "chunk_id": "fa_madhavan_2016_etfs_new_dynamics:p069:0080",
+      "source_id": "fa_madhavan_2016_etfs_new_dynamics",
+      "status": "trim"
+    },
+    {
+      "authored_page_range": [
+        101,
+        101
+      ],
+      "card_id": "fa-search-bargaining-liquidity-premium",
+      "change": {
+        "final_quote": "access to market makers receive tighter bid-ask spreads",
+        "original_quote": "sophisticated investors with better access to market makers receive tighter bid-ask spreads",
+        "reason": "authored quote spans a U+FFFE hyphenation marker; trimmed to the longest clean verbatim run (>=60% retained)",
+        "retained_fraction": 0.604,
+        "type": "trim"
+      },
+      "chunk_id": "fa_vandermerwe_2015_market_liquidity_risk:p100:0104",
+      "source_id": "fa_vandermerwe_2015_market_liquidity_risk",
+      "status": "trim"
+    },
+    {
+      "authored_page_range": [
+        104,
+        104
+      ],
+      "card_id": "fa-search-bargaining-liquidity-premium",
+      "change": {
+        "final_quote": "The liquidity premium is proportional to the bid-ask spread S charged by market makers and increases in the",
+        "original_quote": "The liquidity premium is proportional to the bid-ask spread S charged by market makers and increases in the bargaining power of the market maker.",
+        "reason": "authored quote spans a U+FFFE hyphenation marker; trimmed to the longest clean verbatim run (>=60% retained)",
+        "retained_fraction": 0.738,
+        "type": "trim"
+      },
+      "chunk_id": "fa_vandermerwe_2015_market_liquidity_risk:p103:0108",
+      "source_id": "fa_vandermerwe_2015_market_liquidity_risk",
+      "status": "trim"
+    },
+    {
+      "authored_page_range": [
+        46,
+        46
+      ],
+      "card_id": "fa-settlement-clearing-and-cascading-shorts",
+      "change": null,
+      "chunk_id": "fa_hill_2015_cfa_rf_etfs_1e:p046:0053",
+      "source_id": "fa_hill_2015_cfa_rf_etfs_1e",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        26,
+        26
+      ],
+      "card_id": "fa-settlement-clearing-and-cascading-shorts",
+      "change": null,
+      "chunk_id": "fa_hill_2025_cfa_rf_etfs_2e:p026:0033",
+      "source_id": "fa_hill_2025_cfa_rf_etfs_2e",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        27,
+        27
+      ],
+      "card_id": "fa-settlement-clearing-and-cascading-shorts",
+      "change": null,
+      "chunk_id": "fa_hill_2025_cfa_rf_etfs_2e:p026:0034",
+      "source_id": "fa_hill_2025_cfa_rf_etfs_2e",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        28,
+        28
+      ],
+      "card_id": "fa-settlement-clearing-and-cascading-shorts",
+      "change": null,
+      "chunk_id": "fa_hill_2025_cfa_rf_etfs_2e:p028:0036",
+      "source_id": "fa_hill_2025_cfa_rf_etfs_2e",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        108,
+        108
+      ],
+      "card_id": "fa-shleifer-vishny-limits-to-arbitrage",
+      "change": {
+        "final_quote": "This dynamic could significantly limit arbitrageurs’ effectiveness in achieving market efficiency because they do not have the capital resources to eliminate mispricing.",
+        "original_quote": "arbitrageurs can become capital constrained exactly when the best opportunities are available. This dynamic could significantly limit arbitrageurs",
+        "overlap": 0.258,
+        "reason": "authored quote spans a U+FFFE hyphenation marker and trimming would retain <60%; re-anchored to the best-overlap clean verbatim sentence on the cited page",
+        "type": "reanchor"
+      },
+      "chunk_id": "fa_vandermerwe_2015_market_liquidity_risk:p108:0113",
+      "source_id": "fa_vandermerwe_2015_market_liquidity_risk",
+      "status": "reanchor"
+    },
+    {
+      "authored_page_range": [
+        109,
+        109
+      ],
+      "card_id": "fa-shleifer-vishny-limits-to-arbitrage",
+      "change": {
+        "final_quote": "In this version of the model, we assume that the arbitrageur is a fund",
+        "low_retention": true,
+        "original_quote": "In this version of the model, we assume that the arbitrageur is a fund manager and that their allocated capital depends on their past performance.",
+        "reason": "authored quote spans a U+FFFE hyphenation marker; the clean run retains <60% and no clean full sentence was available on the cited page to re-anchor, so the longest clean verbatim run is kept (flagged for review)",
+        "retained_fraction": 0.479,
+        "type": "trim"
+      },
+      "chunk_id": "fa_vandermerwe_2015_market_liquidity_risk:p109:0115",
+      "source_id": "fa_vandermerwe_2015_market_liquidity_risk",
+      "status": "trim"
+    },
+    {
+      "authored_page_range": [
+        81,
+        81
+      ],
+      "card_id": "fa-tracking-error-attribution-and-tco",
+      "change": null,
+      "chunk_id": "fa_madhavan_2016_etfs_new_dynamics:p080:0095",
+      "source_id": "fa_madhavan_2016_etfs_new_dynamics",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        117,
+        117
+      ],
+      "card_id": "fa-tracking-error-attribution-and-tco",
+      "change": null,
+      "chunk_id": "fa_weiner_2021_etf_portfolio:p116:0114",
+      "source_id": "fa_weiner_2021_etf_portfolio",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        123,
+        123
+      ],
+      "card_id": "fa-tracking-error-attribution-and-tco",
+      "change": null,
+      "chunk_id": "fa_weiner_2021_etf_portfolio:p122:0119",
+      "source_id": "fa_weiner_2021_etf_portfolio",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        74,
+        74
+      ],
+      "card_id": "fa-true-vs-reported-premium-price-discovery-share",
+      "change": {
+        "final_quote": "Alternatively, if there is no NAV staleness and/or noise, then n v tt = and the premium entirely reflects the shock ut to the ETF price through the secondary market.",
+        "original_quote": "I define the price discovery component of the premium as the portion of total variance that is not attributable to transitory noise shocks",
+        "overlap": 0.15,
+        "reason": "authored quote spans a U+FFFE hyphenation marker and trimming would retain <60%; re-anchored to the best-overlap clean verbatim sentence on the cited page",
+        "type": "reanchor"
+      },
+      "chunk_id": "fa_madhavan_2016_etfs_new_dynamics:p074:0087",
+      "source_id": "fa_madhavan_2016_etfs_new_dynamics",
+      "status": "reanchor"
+    },
+    {
+      "authored_page_range": [
+        54,
+        54
+      ],
+      "card_id": "fa-true-vs-reported-premium-price-discovery-share",
+      "change": null,
+      "chunk_id": "fa_madhavan_2016_etfs_new_dynamics:p053:0056",
+      "source_id": "fa_madhavan_2016_etfs_new_dynamics",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        143,
+        143
+      ],
+      "card_id": "fa-volume-neq-liquidity-idts-ebils-components",
+      "change": null,
+      "chunk_id": "fa_abner_2016_etf_handbook:p142:0186",
+      "source_id": "fa_abner_2016_etf_handbook",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        132,
+        132
+      ],
+      "card_id": "fa-volume-neq-liquidity-idts-ebils-components",
+      "change": {
+        "final_quote": "of how many shares of an ETF are available to trade.",
+        "original_quote": "ETF liquidity is a measure of how many shares of an ETF are available to trade.",
+        "reason": "authored quote spans a U+FFFE hyphenation marker; trimmed to the longest clean verbatim run (>=60% retained)",
+        "retained_fraction": 0.658,
+        "type": "trim"
+      },
+      "chunk_id": "fa_abner_2016_etf_handbook:p131:0174",
+      "source_id": "fa_abner_2016_etf_handbook",
+      "status": "trim"
+    },
+    {
+      "authored_page_range": [
+        78,
+        78
+      ],
+      "card_id": "fa-volume-neq-liquidity-idts-ebils-components",
+      "change": null,
+      "chunk_id": "fa_hill_2015_cfa_rf_etfs_1e:p078:0090",
+      "source_id": "fa_hill_2015_cfa_rf_etfs_1e",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        284,
+        285
+      ],
+      "card_id": "mt-adverse-selection-short-term-alpha",
+      "change": {
+        "new_page_range": [
+          284,
+          284
+        ],
+        "old_page_range": [
+          284,
+          285
+        ],
+        "type": "page_window"
+      },
+      "chunk_id": "mt_cartea_jaimungal_penalva_2015_algorithmic_hf_trading:p283:0368",
+      "source_id": "mt_cartea_jaimungal_penalva_2015_algorithmic_hf_trading",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        158,
+        159
+      ],
+      "card_id": "mt-almgren-chriss-optimal-execution",
+      "change": null,
+      "chunk_id": "mt_cartea_jaimungal_penalva_2015_algorithmic_hf_trading:p158:0208",
+      "source_id": "mt_cartea_jaimungal_penalva_2015_algorithmic_hf_trading",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        265,
+        266
+      ],
+      "card_id": "mt-avellaneda-stoikov-market-making",
+      "change": {
+        "final_quote": "also induces mean reversion to an optimal inventory",
+        "original_quote": "the function h(t,q) also induces mean reversion to an optimal inventory level",
+        "reason": "authored quote spans a U+FFFE hyphenation marker; trimmed to the longest clean verbatim run (>=60% retained)",
+        "retained_fraction": 0.662,
+        "type": "trim"
+      },
+      "chunk_id": "mt_cartea_jaimungal_penalva_2015_algorithmic_hf_trading:p265:0344",
+      "source_id": "mt_cartea_jaimungal_penalva_2015_algorithmic_hf_trading",
+      "status": "trim"
+    },
+    {
+      "authored_page_range": [
+        91,
+        91
+      ],
+      "card_id": "mt-bayesian-learning-price-discovery",
+      "change": null,
+      "chunk_id": "mt_foucault_pagano_roell_2013:p091:0138",
+      "source_id": "mt_foucault_pagano_roell_2013",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        73,
+        74
+      ],
+      "card_id": "mt-bayesian-learning-price-discovery",
+      "change": null,
+      "chunk_id": "mt_ohara_1995_market_microstructure_theory_en:p073:0098",
+      "source_id": "mt_ohara_1995_market_microstructure_theory_en",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        53,
+        53
+      ],
+      "card_id": "mt-bid-ask-spread-immediacy-price",
+      "change": null,
+      "chunk_id": "mt_foucault_pagano_roell_2013:p052:0072",
+      "source_id": "mt_foucault_pagano_roell_2013",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        84,
+        84
+      ],
+      "card_id": "mt-bid-ask-spread-immediacy-price",
+      "change": {
+        "final_quote": "The difference of 1—which is half the bid/ask spread—is what she paid for liquidity.",
+        "original_quote": "her transaction cost per trade (exclusive of commissions) is half of the spread",
+        "overlap": 0.227,
+        "reason": "authored quote spans a U+FFFE hyphenation marker and trimming would retain <60%; re-anchored to the best-overlap clean verbatim sentence on the cited page",
+        "type": "reanchor"
+      },
+      "chunk_id": "mt_harris_2003_trading_and_exchanges:p084:0126",
+      "source_id": "mt_harris_2003_trading_and_exchanges",
+      "status": "reanchor"
+    },
+    {
+      "authored_page_range": [
+        341,
+        342
+      ],
+      "card_id": "mt-block-trader-upstairs-depth",
+      "change": {
+        "final_quote": "Good block traders must carefully set the prices at which they facilitate trades with their clients to ensure that they will be able to trade out of their positions at a profit.",
+        "original_quote": "The upstairs market serves large traders who cannot convey credible information about their trading motives and intentions",
+        "overlap": 0.071,
+        "reason": "authored quote spans a U+FFFE hyphenation marker and trimming would retain <60%; re-anchored to the best-overlap clean verbatim sentence on the cited page",
+        "type": "reanchor"
+      },
+      "chunk_id": "mt_harris_2003_trading_and_exchanges:p341:0568",
+      "source_id": "mt_harris_2003_trading_and_exchanges",
+      "status": "reanchor"
+    },
+    {
+      "authored_page_range": [
+        42,
+        42
+      ],
+      "card_id": "mt-bubbles-crashes-circuit-breakers",
+      "change": null,
+      "chunk_id": "mt_foucault_pagano_roell_2013:p042:0058",
+      "source_id": "mt_foucault_pagano_roell_2013",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        585,
+        586
+      ],
+      "card_id": "mt-bubbles-crashes-circuit-breakers",
+      "change": {
+        "new_page_range": [
+          585,
+          585
+        ],
+        "old_page_range": [
+          585,
+          586
+        ],
+        "type": "page_window"
+      },
+      "chunk_id": "mt_harris_2003_trading_and_exchanges:p584:0985",
+      "source_id": "mt_harris_2003_trading_and_exchanges",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        15,
+        15
+      ],
+      "card_id": "mt-buy-side-trader-best-execution",
+      "change": null,
+      "chunk_id": "mt_cartea_jaimungal_penalva_2015_algorithmic_hf_trading:p014:0008",
+      "source_id": "mt_cartea_jaimungal_penalva_2015_algorithmic_hf_trading",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        402,
+        402
+      ],
+      "card_id": "mt-buy-side-trader-best-execution",
+      "change": {
+        "final_quote": "Buy-side traders must pay close attention to their order submission",
+        "original_quote": "Buy-side traders must pay close attention to their order submission strategies in order to trade effectively.",
+        "reason": "authored quote spans a U+FFFE hyphenation marker; trimmed to the longest clean verbatim run (>=60% retained)",
+        "retained_fraction": 0.615,
+        "type": "trim"
+      },
+      "chunk_id": "mt_harris_2003_trading_and_exchanges:p402:0679",
+      "source_id": "mt_harris_2003_trading_and_exchanges",
+      "status": "trim"
+    },
+    {
+      "authored_page_range": [
+        133,
+        134
+      ],
+      "card_id": "mt-call-vs-continuous-auction",
+      "change": {
+        "final_quote": "In a single price auction, all trades take place at the same",
+        "original_quote": "In a single price auction, all trades take place at the same marketclearing price.",
+        "reason": "authored quote spans a U+FFFE hyphenation marker; trimmed to the longest clean verbatim run (>=60% retained)",
+        "retained_fraction": 0.732,
+        "type": "trim"
+      },
+      "chunk_id": "mt_harris_2003_trading_and_exchanges:p133:0211",
+      "source_id": "mt_harris_2003_trading_and_exchanges",
+      "status": "trim"
+    },
+    {
+      "authored_page_range": [
+        37,
+        38
+      ],
+      "card_id": "mt-competition-within-among-markets",
+      "change": null,
+      "chunk_id": "mt_foucault_pagano_roell_2013:p037:0049",
+      "source_id": "mt_foucault_pagano_roell_2013",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        562,
+        562
+      ],
+      "card_id": "mt-competition-within-among-markets",
+      "change": null,
+      "chunk_id": "mt_harris_2003_trading_and_exchanges:p562:0949",
+      "source_id": "mt_harris_2003_trading_and_exchanges",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        297,
+        297
+      ],
+      "card_id": "mt-dealer-inventory-control-price-discovery",
+      "change": {
+        "final_quote": "Dealers also may increase their bid sizes, and lower their ask sizes, to decrease their inventories.",
+        "original_quote": "When dealers want to decrease their inventories, they lower their bid and ask prices.",
+        "overlap": 0.529,
+        "reason": "authored quote spans a U+FFFE hyphenation marker and trimming would retain <60%; re-anchored to the best-overlap clean verbatim sentence on the cited page",
+        "type": "reanchor"
+      },
+      "chunk_id": "mt_harris_2003_trading_and_exchanges:p296:0489",
+      "source_id": "mt_harris_2003_trading_and_exchanges",
+      "status": "reanchor"
+    },
+    {
+      "authored_page_range": [
+        81,
+        81
+      ],
+      "card_id": "mt-dealer-inventory-problem-spread",
+      "change": null,
+      "chunk_id": "mt_foucault_pagano_roell_2013:p081:0114",
+      "source_id": "mt_foucault_pagano_roell_2013",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        37,
+        38
+      ],
+      "card_id": "mt-dealer-inventory-problem-spread",
+      "change": {
+        "new_page_range": [
+          37,
+          37
+        ],
+        "old_page_range": [
+          37,
+          38
+        ],
+        "type": "page_window"
+      },
+      "chunk_id": "mt_ohara_1995_market_microstructure_theory_en:p037:0046",
+      "source_id": "mt_ohara_1995_market_microstructure_theory_en",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        444,
+        444
+      ],
+      "card_id": "mt-effective-cost-trade-benchmark",
+      "change": null,
+      "chunk_id": "mt_harris_2003_trading_and_exchanges:p443:0746",
+      "source_id": "mt_harris_2003_trading_and_exchanges",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        155,
+        156
+      ],
+      "card_id": "mt-effective-cost-trade-benchmark",
+      "change": {
+        "final_quote": "called the effective cost, and corresponds to c in the basic Roll",
+        "original_quote": "This is generally called the effective cost, and corresponds to c in the basic Roll",
+        "reason": "authored quote spans a U+FFFE hyphenation marker; trimmed to the longest clean verbatim run (>=60% retained)",
+        "retained_fraction": 0.783,
+        "type": "trim"
+      },
+      "chunk_id": "mt_hasbrouck_2007_empirical_market_microstructure:p155:0199",
+      "source_id": "mt_hasbrouck_2007_empirical_market_microstructure",
+      "status": "trim"
+    },
+    {
+      "authored_page_range": [
+        166,
+        167
+      ],
+      "card_id": "mt-empirical-determinants-illiquidity",
+      "change": null,
+      "chunk_id": "mt_foucault_pagano_roell_2013:p166:0259",
+      "source_id": "mt_foucault_pagano_roell_2013",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        42,
+        42
+      ],
+      "card_id": "mt-empirical-determinants-illiquidity",
+      "change": null,
+      "chunk_id": "mt_hasbrouck_2007_empirical_market_microstructure:p041:0049",
+      "source_id": "mt_hasbrouck_2007_empirical_market_microstructure",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        28,
+        29
+      ],
+      "card_id": "mt-execution-systems-quote-vs-order-driven",
+      "change": {
+        "new_page_range": [
+          28,
+          28
+        ],
+        "old_page_range": [
+          28,
+          29
+        ],
+        "type": "page_window"
+      },
+      "chunk_id": "mt_foucault_pagano_roell_2013:p027:0034",
+      "source_id": "mt_foucault_pagano_roell_2013",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        105,
+        106
+      ],
+      "card_id": "mt-execution-systems-quote-vs-order-driven",
+      "change": {
+        "final_quote": "Traders use the hours before the open to collect and submit orders.",
+        "original_quote": "The three main types of markets are quotedriven markets, order-driven markets, and brokered markets. Hybrid markets use some combination of these three systems.",
+        "overlap": 0.115,
+        "reason": "authored quote spans a U+FFFE hyphenation marker and trimming would retain <60%; re-anchored to the best-overlap clean verbatim sentence on the cited page",
+        "type": "reanchor"
+      },
+      "chunk_id": "mt_harris_2003_trading_and_exchanges:p105:0164",
+      "source_id": "mt_harris_2003_trading_and_exchanges",
+      "status": "reanchor"
+    },
+    {
+      "authored_page_range": [
+        305,
+        306
+      ],
+      "card_id": "mt-funding-liquidity-fire-sales",
+      "change": {
+        "new_page_range": [
+          305,
+          305
+        ],
+        "old_page_range": [
+          305,
+          306
+        ],
+        "type": "page_window"
+      },
+      "chunk_id": "mt_foucault_pagano_roell_2013:p304:0462",
+      "source_id": "mt_foucault_pagano_roell_2013",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        23,
+        24
+      ],
+      "card_id": "mt-garman-order-flow-temporal-microstructure",
+      "change": null,
+      "chunk_id": "mt_ohara_1995_market_microstructure_theory_en:p023:0027",
+      "source_id": "mt_ohara_1995_market_microstructure_theory_en",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        79,
+        80
+      ],
+      "card_id": "mt-generalized-roll-spread-decomposition",
+      "change": {
+        "new_page_range": [
+          79,
+          79
+        ],
+        "old_page_range": [
+          79,
+          80
+        ],
+        "type": "page_window"
+      },
+      "chunk_id": "mt_hasbrouck_2007_empirical_market_microstructure:p078:0097",
+      "source_id": "mt_hasbrouck_2007_empirical_market_microstructure",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        84,
+        85
+      ],
+      "card_id": "mt-glosten-milgrom-adverse-selection",
+      "change": {
+        "new_page_range": [
+          84,
+          84
+        ],
+        "old_page_range": [
+          84,
+          85
+        ],
+        "type": "page_window"
+      },
+      "chunk_id": "mt_foucault_pagano_roell_2013:p084:0122",
+      "source_id": "mt_foucault_pagano_roell_2013",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        69,
+        70
+      ],
+      "card_id": "mt-glosten-milgrom-adverse-selection",
+      "change": null,
+      "chunk_id": "mt_ohara_1995_market_microstructure_theory_en:p069:0092",
+      "source_id": "mt_ohara_1995_market_microstructure_theory_en",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        38,
+        39
+      ],
+      "card_id": "mt-grossman-miller-inventory-liquidity-premium",
+      "change": {
+        "new_page_range": [
+          38,
+          38
+        ],
+        "old_page_range": [
+          38,
+          39
+        ],
+        "type": "page_window"
+      },
+      "chunk_id": "mt_cartea_jaimungal_penalva_2015_algorithmic_hf_trading:p037:0041",
+      "source_id": "mt_cartea_jaimungal_penalva_2015_algorithmic_hf_trading",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        97,
+        98
+      ],
+      "card_id": "mt-hasbrouck-var-trades-quotes",
+      "change": {
+        "final_quote": "decomposition of the random-walk variance provides a basis for measuring the importance of different sources of market",
+        "original_quote": "decomposition of the random-walk variance provides a basis for measuring the importance of different sources of market information",
+        "reason": "authored quote spans a U+FFFE hyphenation marker; trimmed to the longest clean verbatim run (>=60% retained)",
+        "retained_fraction": 0.908,
+        "type": "trim"
+      },
+      "chunk_id": "mt_hasbrouck_2007_empirical_market_microstructure:p096:0121",
+      "source_id": "mt_hasbrouck_2007_empirical_market_microstructure",
+      "status": "trim"
+    },
+    {
+      "authored_page_range": [
+        155,
+        156
+      ],
+      "card_id": "mt-implementation-shortfall",
+      "change": null,
+      "chunk_id": "mt_hasbrouck_2007_empirical_market_microstructure:p155:0199",
+      "source_id": "mt_hasbrouck_2007_empirical_market_microstructure",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        497,
+        498
+      ],
+      "card_id": "mt-index-portfolio-markets-design",
+      "change": {
+        "final_quote": "Index markets are far more liquid than the underlying cash markets upon which their products are based.",
+        "original_quote": "Price changes in index products generally lead changes in the cash index",
+        "overlap": 0.2,
+        "reason": "authored quote spans a U+FFFE hyphenation marker and trimming would retain <60%; re-anchored to the best-overlap clean verbatim sentence on the cited page",
+        "type": "reanchor"
+      },
+      "chunk_id": "mt_harris_2003_trading_and_exchanges:p496:0833",
+      "source_id": "mt_harris_2003_trading_and_exchanges",
+      "status": "reanchor"
+    },
+    {
+      "authored_page_range": [
+        112,
+        112
+      ],
+      "card_id": "mt-index-portfolio-markets-design",
+      "change": null,
+      "chunk_id": "mt_hasbrouck_2007_empirical_market_microstructure:p112:0143",
+      "source_id": "mt_hasbrouck_2007_empirical_market_microstructure",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        112,
+        113
+      ],
+      "card_id": "mt-information-shares-price-discovery",
+      "change": {
+        "new_page_range": [
+          112,
+          112
+        ],
+        "old_page_range": [
+          112,
+          113
+        ],
+        "type": "page_window"
+      },
+      "chunk_id": "mt_hasbrouck_2007_empirical_market_microstructure:p111:0142",
+      "source_id": "mt_hasbrouck_2007_empirical_market_microstructure",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        236,
+        237
+      ],
+      "card_id": "mt-informed-traders-price-efficiency",
+      "change": {
+        "final_quote": "They consider instruments to be undervalued if prices are less than their estimates of fundamental value, and overvalued if prices are greater.",
+        "original_quote": "Informed traders buy instruments that they believe are significantly undervalued and sell instruments that they believe are significantly overvalued",
+        "overlap": 0.231,
+        "reason": "authored quote spans a U+FFFE hyphenation marker and trimming would retain <60%; re-anchored to the best-overlap clean verbatim sentence on the cited page",
+        "type": "reanchor"
+      },
+      "chunk_id": "mt_harris_2003_trading_and_exchanges:p236:0384",
+      "source_id": "mt_harris_2003_trading_and_exchanges",
+      "status": "reanchor"
+    },
+    {
+      "authored_page_range": [
+        604,
+        605
+      ],
+      "card_id": "mt-insider-trading-policy",
+      "change": {
+        "final_quote": "Insider trading—like all informed trading—hurts traders who supply",
+        "original_quote": "Insider trading—like all informed trading—hurts traders who supply liquidity.",
+        "reason": "authored quote spans a U+FFFE hyphenation marker; trimmed to the longest clean verbatim run (>=60% retained)",
+        "retained_fraction": 0.857,
+        "type": "trim"
+      },
+      "chunk_id": "mt_harris_2003_trading_and_exchanges:p604:1020",
+      "source_id": "mt_harris_2003_trading_and_exchanges",
+      "status": "trim"
+    },
+    {
+      "authored_page_range": [
+        22,
+        23
+      ],
+      "card_id": "mt-institutional-setting-market-types",
+      "change": {
+        "new_page_range": [
+          22,
+          22
+        ],
+        "old_page_range": [
+          22,
+          23
+        ],
+        "type": "page_window"
+      },
+      "chunk_id": "mt_foucault_pagano_roell_2013:p021:0025",
+      "source_id": "mt_foucault_pagano_roell_2013",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        30,
+        30
+      ],
+      "card_id": "mt-internalization-preferencing-crossing",
+      "change": null,
+      "chunk_id": "mt_foucault_pagano_roell_2013:p030:0037",
+      "source_id": "mt_foucault_pagano_roell_2013",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        230,
+        231
+      ],
+      "card_id": "mt-internalization-preferencing-crossing",
+      "change": null,
+      "chunk_id": "mt_foucault_pagano_roell_2013:p230:0349",
+      "source_id": "mt_foucault_pagano_roell_2013",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        527,
+        527
+      ],
+      "card_id": "mt-internalization-preferencing-crossing",
+      "change": null,
+      "chunk_id": "mt_harris_2003_trading_and_exchanges:p526:0885",
+      "source_id": "mt_harris_2003_trading_and_exchanges",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        532,
+        532
+      ],
+      "card_id": "mt-internalization-preferencing-crossing",
+      "change": {
+        "final_quote": "Dealers expose themselves to well-informed traders and to large traders when they offer firm quotes that any trader can take.",
+        "original_quote": "Dealers who offer firm quotes do not want to receive orders from wellinformed traders, or from large traders, many of whom are well informed.",
+        "overlap": 0.281,
+        "reason": "authored quote spans a U+FFFE hyphenation marker and trimming would retain <60%; re-anchored to the best-overlap clean verbatim sentence on the cited page",
+        "type": "reanchor"
+      },
+      "chunk_id": "mt_harris_2003_trading_and_exchanges:p532:0895",
+      "source_id": "mt_harris_2003_trading_and_exchanges",
+      "status": "reanchor"
+    },
+    {
+      "authored_page_range": [
+        28,
+        28
+      ],
+      "card_id": "mt-inventory-prices-competitive-markets",
+      "change": null,
+      "chunk_id": "mt_foucault_pagano_roell_2013:p027:0034",
+      "source_id": "mt_foucault_pagano_roell_2013",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        57,
+        58
+      ],
+      "card_id": "mt-inventory-prices-competitive-markets",
+      "change": {
+        "new_page_range": [
+          57,
+          57
+        ],
+        "old_page_range": [
+          57,
+          58
+        ],
+        "type": "page_window"
+      },
+      "chunk_id": "mt_ohara_1995_market_microstructure_theory_en:p057:0074",
+      "source_id": "mt_ohara_1995_market_microstructure_theory_en",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        58,
+        58
+      ],
+      "card_id": "mt-kyle-lambda-market-depth-price-impact",
+      "change": null,
+      "chunk_id": "mt_foucault_pagano_roell_2013:p058:0081",
+      "source_id": "mt_foucault_pagano_roell_2013",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        104,
+        105
+      ],
+      "card_id": "mt-kyle-lambda-market-depth-price-impact",
+      "change": {
+        "new_page_range": [
+          104,
+          104
+        ],
+        "old_page_range": [
+          104,
+          105
+        ],
+        "type": "page_window"
+      },
+      "chunk_id": "mt_ohara_1995_market_microstructure_theory_en:p103:0134",
+      "source_id": "mt_ohara_1995_market_microstructure_theory_en",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        58,
+        58
+      ],
+      "card_id": "mt-kyle-strategic-informed-trader-lambda",
+      "change": null,
+      "chunk_id": "mt_foucault_pagano_roell_2013:p058:0081",
+      "source_id": "mt_foucault_pagano_roell_2013",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        98,
+        99
+      ],
+      "card_id": "mt-kyle-strategic-informed-trader-lambda",
+      "change": null,
+      "chunk_id": "mt_ohara_1995_market_microstructure_theory_en:p098:0128",
+      "source_id": "mt_ohara_1995_market_microstructure_theory_en",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        205,
+        206
+      ],
+      "card_id": "mt-limit-order-book-equilibrium",
+      "change": {
+        "new_page_range": [
+          205,
+          205
+        ],
+        "old_page_range": [
+          205,
+          206
+        ],
+        "type": "page_window"
+      },
+      "chunk_id": "mt_foucault_pagano_roell_2013:p204:0312",
+      "source_id": "mt_foucault_pagano_roell_2013",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        27,
+        27
+      ],
+      "card_id": "mt-limit-order-book-mechanics",
+      "change": null,
+      "chunk_id": "mt_cartea_jaimungal_penalva_2015_algorithmic_hf_trading:p026:0024",
+      "source_id": "mt_cartea_jaimungal_penalva_2015_algorithmic_hf_trading",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        299,
+        300
+      ],
+      "card_id": "mt-liquidity-adjusted-capm",
+      "change": {
+        "new_page_range": [
+          299,
+          299
+        ],
+        "old_page_range": [
+          299,
+          300
+        ],
+        "type": "page_window"
+      },
+      "chunk_id": "mt_foucault_pagano_roell_2013:p299:0453",
+      "source_id": "mt_foucault_pagano_roell_2013",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        17,
+        17
+      ],
+      "card_id": "mt-liquidity-depth-immediacy-width",
+      "change": null,
+      "chunk_id": "mt_foucault_pagano_roell_2013:p017:0018",
+      "source_id": "mt_foucault_pagano_roell_2013",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        411,
+        412
+      ],
+      "card_id": "mt-liquidity-depth-immediacy-width",
+      "change": {
+        "new_page_range": [
+          412,
+          412
+        ],
+        "old_page_range": [
+          411,
+          412
+        ],
+        "type": "page_window"
+      },
+      "chunk_id": "mt_harris_2003_trading_and_exchanges:p412:0696",
+      "source_id": "mt_harris_2003_trading_and_exchanges",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        340,
+        341
+      ],
+      "card_id": "mt-liquidity-feedback-corporate-investment",
+      "change": {
+        "new_page_range": [
+          340,
+          340
+        ],
+        "old_page_range": [
+          340,
+          341
+        ],
+        "type": "page_window"
+      },
+      "chunk_id": "mt_foucault_pagano_roell_2013:p340:0516",
+      "source_id": "mt_foucault_pagano_roell_2013",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        50,
+        54
+      ],
+      "card_id": "mt-liquidity-measures-spread-depth-resiliency",
+      "change": {
+        "new_page_range": [
+          52,
+          53
+        ],
+        "old_page_range": [
+          50,
+          54
+        ],
+        "type": "page_window"
+      },
+      "chunk_id": "mt_foucault_pagano_roell_2013:p052:0072",
+      "source_id": "mt_foucault_pagano_roell_2013",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        97,
+        97
+      ],
+      "card_id": "mt-liquidity-nature-provision-return",
+      "change": null,
+      "chunk_id": "mt_foucault_pagano_roell_2013:p097:0148",
+      "source_id": "mt_foucault_pagano_roell_2013",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        225,
+        226
+      ],
+      "card_id": "mt-liquidity-nature-provision-return",
+      "change": null,
+      "chunk_id": "mt_ohara_1995_market_microstructure_theory_en:p225:0297",
+      "source_id": "mt_ohara_1995_market_microstructure_theory_en",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        284,
+        285
+      ],
+      "card_id": "mt-liquidity-premium-asset-pricing",
+      "change": {
+        "new_page_range": [
+          284,
+          284
+        ],
+        "old_page_range": [
+          284,
+          285
+        ],
+        "type": "page_window"
+      },
+      "chunk_id": "mt_foucault_pagano_roell_2013:p284:0432",
+      "source_id": "mt_foucault_pagano_roell_2013",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        417,
+        418
+      ],
+      "card_id": "mt-liquidity-supplier-taxonomy",
+      "change": {
+        "final_quote": "therefore are not suppliers of liquidity but porters of",
+        "original_quote": "Arbitrageurs therefore are not suppliers of liquidity but porters of liquidity",
+        "reason": "authored quote spans a U+FFFE hyphenation marker; trimmed to the longest clean verbatim run (>=60% retained)",
+        "retained_fraction": 0.705,
+        "type": "trim"
+      },
+      "chunk_id": "mt_harris_2003_trading_and_exchanges:p417:0706",
+      "source_id": "mt_harris_2003_trading_and_exchanges",
+      "status": "trim"
+    },
+    {
+      "authored_page_range": [
+        193,
+        194
+      ],
+      "card_id": "mt-lit-dark-pool-optimal-execution",
+      "change": {
+        "new_page_range": [
+          193,
+          193
+        ],
+        "old_page_range": [
+          193,
+          194
+        ],
+        "type": "page_window"
+      },
+      "chunk_id": "mt_cartea_jaimungal_penalva_2015_algorithmic_hf_trading:p192:0252",
+      "source_id": "mt_cartea_jaimungal_penalva_2015_algorithmic_hf_trading",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        147,
+        147
+      ],
+      "card_id": "mt-lit-dark-pool-optimal-execution",
+      "change": null,
+      "chunk_id": "mt_harris_2003_trading_and_exchanges:p147:0232",
+      "source_id": "mt_harris_2003_trading_and_exchanges",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        225,
+        226
+      ],
+      "card_id": "mt-market-fragmentation",
+      "change": {
+        "new_page_range": [
+          225,
+          225
+        ],
+        "old_page_range": [
+          225,
+          226
+        ],
+        "type": "page_window"
+      },
+      "chunk_id": "mt_foucault_pagano_roell_2013:p225:0341",
+      "source_id": "mt_foucault_pagano_roell_2013",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        21,
+        21
+      ],
+      "card_id": "mt-market-fragmentation",
+      "change": null,
+      "chunk_id": "mt_harris_2003_trading_and_exchanges:p020:0021",
+      "source_id": "mt_harris_2003_trading_and_exchanges",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        98,
+        99
+      ],
+      "card_id": "mt-market-impact-price-concession",
+      "change": {
+        "final_quote": "order will have an adverse price impact: increasing the price when buying",
+        "original_quote": "order will have an adverse price impact: increasing the price when buying aggressively and lowering it when selling",
+        "reason": "authored quote spans a U+FFFE hyphenation marker; trimmed to the longest clean verbatim run (>=60% retained)",
+        "retained_fraction": 0.635,
+        "type": "trim"
+      },
+      "chunk_id": "mt_cartea_jaimungal_penalva_2015_algorithmic_hf_trading:p098:0130",
+      "source_id": "mt_cartea_jaimungal_penalva_2015_algorithmic_hf_trading",
+      "status": "trim"
+    },
+    {
+      "authored_page_range": [
+        85,
+        86
+      ],
+      "card_id": "mt-market-impact-price-concession",
+      "change": {
+        "final_quote": "Large sellers offer prices down to encourage buyers to buy from them.",
+        "original_quote": "The premiums that large buyers pay, and the discounts that large sellers offer, are price concessions. When traders move prices to fill their orders, they have market impact.",
+        "overlap": 0.2,
+        "reason": "authored quote spans a U+FFFE hyphenation marker and trimming would retain <60%; re-anchored to the best-overlap clean verbatim sentence on the cited page",
+        "type": "reanchor"
+      },
+      "chunk_id": "mt_harris_2003_trading_and_exchanges:p084:0127",
+      "source_id": "mt_harris_2003_trading_and_exchanges",
+      "status": "reanchor"
+    },
+    {
+      "authored_page_range": [
+        259,
+        271
+      ],
+      "card_id": "mt-market-manipulation-bluffing",
+      "change": {
+        "final_quote": "What is the relation between information-oriented technical traders and sentiment-oriented technical traders?",
+        "original_quote": "Market manipulation occurs when bluffers or their victims cause prices to change from what they would be if the bluffers did not pursue their bluffing strategies.",
+        "overlap": 0.061,
+        "reason": "authored quote spans a U+FFFE hyphenation marker and trimming would retain <60%; re-anchored to the best-overlap clean verbatim sentence on the cited page",
+        "type": "reanchor"
+      },
+      "chunk_id": "mt_harris_2003_trading_and_exchanges:p271:0449",
+      "source_id": "mt_harris_2003_trading_and_exchanges",
+      "status": "reanchor"
+    },
+    {
+      "authored_page_range": [
+        93,
+        93
+      ],
+      "card_id": "mt-market-quality-volatility-origins",
+      "change": null,
+      "chunk_id": "mt_cartea_jaimungal_penalva_2015_algorithmic_hf_trading:p092:0122",
+      "source_id": "mt_cartea_jaimungal_penalva_2015_algorithmic_hf_trading",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        426,
+        427
+      ],
+      "card_id": "mt-market-quality-volatility-origins",
+      "change": {
+        "new_page_range": [
+          426,
+          426
+        ],
+        "old_page_range": [
+          426,
+          427
+        ],
+        "type": "page_window"
+      },
+      "chunk_id": "mt_harris_2003_trading_and_exchanges:p426:0719",
+      "source_id": "mt_harris_2003_trading_and_exchanges",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        32,
+        32
+      ],
+      "card_id": "mt-market-transparency-dark-pools",
+      "change": null,
+      "chunk_id": "mt_foucault_pagano_roell_2013:p032:0041",
+      "source_id": "mt_foucault_pagano_roell_2013",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        114,
+        114
+      ],
+      "card_id": "mt-market-transparency-dark-pools",
+      "change": null,
+      "chunk_id": "mt_harris_2003_trading_and_exchanges:p114:0179",
+      "source_id": "mt_harris_2003_trading_and_exchanges",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        88,
+        88
+      ],
+      "card_id": "mt-market-viability-no-trade-breakdown",
+      "change": null,
+      "chunk_id": "mt_foucault_pagano_roell_2013:p088:0131",
+      "source_id": "mt_foucault_pagano_roell_2013",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        186,
+        187
+      ],
+      "card_id": "mt-market-viability-no-trade-breakdown",
+      "change": null,
+      "chunk_id": "mt_ohara_1995_market_microstructure_theory_en:p186:0241",
+      "source_id": "mt_ohara_1995_market_microstructure_theory_en",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        63,
+        63
+      ],
+      "card_id": "mt-microprice-midprice-spread",
+      "change": null,
+      "chunk_id": "mt_cartea_jaimungal_penalva_2015_algorithmic_hf_trading:p063:0080",
+      "source_id": "mt_cartea_jaimungal_penalva_2015_algorithmic_hf_trading",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        11,
+        12
+      ],
+      "card_id": "mt-microstructure-scope-price-formation",
+      "change": {
+        "new_page_range": [
+          11,
+          11
+        ],
+        "old_page_range": [
+          11,
+          12
+        ],
+        "type": "page_window"
+      },
+      "chunk_id": "mt_foucault_pagano_roell_2013:p010:0009",
+      "source_id": "mt_foucault_pagano_roell_2013",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        10,
+        11
+      ],
+      "card_id": "mt-microstructure-scope-price-formation",
+      "change": {
+        "new_page_range": [
+          10,
+          10
+        ],
+        "old_page_range": [
+          10,
+          11
+        ],
+        "type": "page_window"
+      },
+      "chunk_id": "mt_ohara_1995_market_microstructure_theory_en:p009:0007",
+      "source_id": "mt_ohara_1995_market_microstructure_theory_en",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        124,
+        124
+      ],
+      "card_id": "mt-multiple-informed-traders-competition",
+      "change": null,
+      "chunk_id": "mt_foucault_pagano_roell_2013:p123:0199",
+      "source_id": "mt_foucault_pagano_roell_2013",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        116,
+        117
+      ],
+      "card_id": "mt-multiple-informed-traders-competition",
+      "change": null,
+      "chunk_id": "mt_ohara_1995_market_microstructure_theory_en:p116:0150",
+      "source_id": "mt_ohara_1995_market_microstructure_theory_en",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        258,
+        259
+      ],
+      "card_id": "mt-order-anticipators-front-running",
+      "change": {
+        "new_page_range": [
+          258,
+          258
+        ],
+        "old_page_range": [
+          258,
+          259
+        ],
+        "type": "page_window"
+      },
+      "chunk_id": "mt_harris_2003_trading_and_exchanges:p257:0423",
+      "source_id": "mt_harris_2003_trading_and_exchanges",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        13,
+        13
+      ],
+      "card_id": "mt-order-flow-information-content",
+      "change": null,
+      "chunk_id": "mt_foucault_pagano_roell_2013:p013:0013",
+      "source_id": "mt_foucault_pagano_roell_2013",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        67,
+        68
+      ],
+      "card_id": "mt-order-flow-information-content",
+      "change": {
+        "new_page_range": [
+          67,
+          67
+        ],
+        "old_page_range": [
+          67,
+          68
+        ],
+        "type": "page_window"
+      },
+      "chunk_id": "mt_ohara_1995_market_microstructure_theory_en:p066:0088",
+      "source_id": "mt_ohara_1995_market_microstructure_theory_en",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        314,
+        315
+      ],
+      "card_id": "mt-order-imbalance-signal",
+      "change": null,
+      "chunk_id": "mt_cartea_jaimungal_penalva_2015_algorithmic_hf_trading:p314:0404",
+      "source_id": "mt_cartea_jaimungal_penalva_2015_algorithmic_hf_trading",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        27,
+        27
+      ],
+      "card_id": "mt-order-precedence-price-time",
+      "change": null,
+      "chunk_id": "mt_cartea_jaimungal_penalva_2015_algorithmic_hf_trading:p026:0024",
+      "source_id": "mt_cartea_jaimungal_penalva_2015_algorithmic_hf_trading",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        130,
+        130
+      ],
+      "card_id": "mt-order-precedence-price-time",
+      "change": {
+        "final_quote": "All order-matching markets use price priority as their primary order",
+        "original_quote": "All order-matching markets use price priority as their primary order precedence rule",
+        "reason": "authored quote spans a U+FFFE hyphenation marker; trimmed to the longest clean verbatim run (>=60% retained)",
+        "retained_fraction": 0.81,
+        "type": "trim"
+      },
+      "chunk_id": "mt_harris_2003_trading_and_exchanges:p130:0206",
+      "source_id": "mt_harris_2003_trading_and_exchanges",
+      "status": "trim"
+    },
+    {
+      "authored_page_range": [
+        84,
+        91
+      ],
+      "card_id": "mt-order-types-market-limit-stop",
+      "change": {
+        "new_page_range": [
+          84,
+          84
+        ],
+        "old_page_range": [
+          84,
+          91
+        ],
+        "type": "page_window"
+      },
+      "chunk_id": "mt_harris_2003_trading_and_exchanges:p083:0125",
+      "source_id": "mt_harris_2003_trading_and_exchanges",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        290,
+        291
+      ],
+      "card_id": "mt-pairs-trading-cointegration-statarb",
+      "change": {
+        "final_quote": "pairs trading fall under the class of strategies sometimes labeled as",
+        "original_quote": "pairs trading fall under the class of strategies sometimes labeled as statistical arbitrage",
+        "reason": "authored quote spans a U+FFFE hyphenation marker; trimmed to the longest clean verbatim run (>=60% retained)",
+        "retained_fraction": 0.758,
+        "type": "trim"
+      },
+      "chunk_id": "mt_cartea_jaimungal_penalva_2015_algorithmic_hf_trading:p290:0375",
+      "source_id": "mt_cartea_jaimungal_penalva_2015_algorithmic_hf_trading",
+      "status": "trim"
+    },
+    {
+      "authored_page_range": [
+        83,
+        84
+      ],
+      "card_id": "mt-permanent-vs-transitory-price-components",
+      "change": {
+        "new_page_range": [
+          83,
+          83
+        ],
+        "old_page_range": [
+          83,
+          84
+        ],
+        "type": "page_window"
+      },
+      "chunk_id": "mt_hasbrouck_2007_empirical_market_microstructure:p083:0104",
+      "source_id": "mt_hasbrouck_2007_empirical_market_microstructure",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        165,
+        165
+      ],
+      "card_id": "mt-pin-probability-informed-trading",
+      "change": null,
+      "chunk_id": "mt_foucault_pagano_roell_2013:p164:0257",
+      "source_id": "mt_foucault_pagano_roell_2013",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        69,
+        69
+      ],
+      "card_id": "mt-pin-probability-informed-trading",
+      "change": null,
+      "chunk_id": "mt_hasbrouck_2007_empirical_market_microstructure:p069:0086",
+      "source_id": "mt_hasbrouck_2007_empirical_market_microstructure",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        59,
+        59
+      ],
+      "card_id": "mt-price-impact-measures-amihud",
+      "change": null,
+      "chunk_id": "mt_foucault_pagano_roell_2013:p059:0082",
+      "source_id": "mt_foucault_pagano_roell_2013",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        104,
+        104
+      ],
+      "card_id": "mt-price-impact-measures-amihud",
+      "change": null,
+      "chunk_id": "mt_hasbrouck_2007_empirical_market_microstructure:p104:0132",
+      "source_id": "mt_hasbrouck_2007_empirical_market_microstructure",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        83,
+        83
+      ],
+      "card_id": "mt-prices-martingale-information-process",
+      "change": null,
+      "chunk_id": "mt_foucault_pagano_roell_2013:p082:0118",
+      "source_id": "mt_foucault_pagano_roell_2013",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        73,
+        74
+      ],
+      "card_id": "mt-prices-martingale-information-process",
+      "change": null,
+      "chunk_id": "mt_ohara_1995_market_microstructure_theory_en:p073:0098",
+      "source_id": "mt_ohara_1995_market_microstructure_theory_en",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        66,
+        66
+      ],
+      "card_id": "mt-prospective-execution-cost-tradeoff",
+      "change": null,
+      "chunk_id": "mt_cartea_jaimungal_penalva_2015_algorithmic_hf_trading:p065:0083",
+      "source_id": "mt_cartea_jaimungal_penalva_2015_algorithmic_hf_trading",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        156,
+        157
+      ],
+      "card_id": "mt-prospective-execution-cost-tradeoff",
+      "change": null,
+      "chunk_id": "mt_hasbrouck_2007_empirical_market_microstructure:p156:0201",
+      "source_id": "mt_hasbrouck_2007_empirical_market_microstructure",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        40,
+        40
+      ],
+      "card_id": "mt-random-walk-efficient-price",
+      "change": null,
+      "chunk_id": "mt_hasbrouck_2007_empirical_market_microstructure:p039:0046",
+      "source_id": "mt_hasbrouck_2007_empirical_market_microstructure",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        60,
+        61
+      ],
+      "card_id": "mt-roll-implicit-spread-estimator",
+      "change": null,
+      "chunk_id": "mt_foucault_pagano_roell_2013:p060:0084",
+      "source_id": "mt_foucault_pagano_roell_2013",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        40,
+        41
+      ],
+      "card_id": "mt-roll-implicit-spread-estimator",
+      "change": {
+        "final_quote": "estimated from the variance and first-order autocovariance of the price",
+        "original_quote": "These are most conveniently estimated from the variance and first-order autocovariance of the price changes",
+        "reason": "authored quote spans a U+FFFE hyphenation marker; trimmed to the longest clean verbatim run (>=60% retained)",
+        "retained_fraction": 0.664,
+        "type": "trim"
+      },
+      "chunk_id": "mt_hasbrouck_2007_empirical_market_microstructure:p041:0048",
+      "source_id": "mt_hasbrouck_2007_empirical_market_microstructure",
+      "status": "trim"
+    },
+    {
+      "authored_page_range": [
+        95,
+        96
+      ],
+      "card_id": "mt-spread-decomposition-components",
+      "change": {
+        "new_page_range": [
+          95,
+          95
+        ],
+        "old_page_range": [
+          95,
+          96
+        ],
+        "type": "page_window"
+      },
+      "chunk_id": "mt_foucault_pagano_roell_2013:p095:0144",
+      "source_id": "mt_foucault_pagano_roell_2013",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        320,
+        321
+      ],
+      "card_id": "mt-spread-equilibrium-timing-option",
+      "change": {
+        "new_page_range": [
+          320,
+          320
+        ],
+        "old_page_range": [
+          320,
+          321
+        ],
+        "type": "page_window"
+      },
+      "chunk_id": "mt_harris_2003_trading_and_exchanges:p319:0528",
+      "source_id": "mt_harris_2003_trading_and_exchanges",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        127,
+        128
+      ],
+      "card_id": "mt-stochastic-control-hjb-liquidation",
+      "change": {
+        "new_page_range": [
+          127,
+          127
+        ],
+        "old_page_range": [
+          127,
+          128
+        ],
+        "type": "page_window"
+      },
+      "chunk_id": "mt_cartea_jaimungal_penalva_2015_algorithmic_hf_trading:p126:0168",
+      "source_id": "mt_cartea_jaimungal_penalva_2015_algorithmic_hf_trading",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        104,
+        105
+      ],
+      "card_id": "mt-temporary-permanent-price-impact",
+      "change": {
+        "new_page_range": [
+          104,
+          104
+        ],
+        "old_page_range": [
+          104,
+          105
+        ],
+        "type": "page_window"
+      },
+      "chunk_id": "mt_cartea_jaimungal_penalva_2015_algorithmic_hf_trading:p104:0141",
+      "source_id": "mt_cartea_jaimungal_penalva_2015_algorithmic_hf_trading",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        165,
+        166
+      ],
+      "card_id": "mt-temporary-permanent-price-impact",
+      "change": {
+        "new_page_range": [
+          165,
+          165
+        ],
+        "old_page_range": [
+          165,
+          166
+        ],
+        "type": "page_window"
+      },
+      "chunk_id": "mt_hasbrouck_2007_empirical_market_microstructure:p164:0212",
+      "source_id": "mt_hasbrouck_2007_empirical_market_microstructure",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        17,
+        18
+      ],
+      "card_id": "mt-three-dimensions-liquidity",
+      "change": {
+        "new_page_range": [
+          17,
+          17
+        ],
+        "old_page_range": [
+          17,
+          18
+        ],
+        "type": "page_window"
+      },
+      "chunk_id": "mt_foucault_pagano_roell_2013:p017:0018",
+      "source_id": "mt_foucault_pagano_roell_2013",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        103,
+        104
+      ],
+      "card_id": "mt-trade-direction-signing",
+      "change": null,
+      "chunk_id": "mt_hasbrouck_2007_empirical_market_microstructure:p103:0131",
+      "source_id": "mt_hasbrouck_2007_empirical_market_microstructure",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        45,
+        46
+      ],
+      "card_id": "mt-trading-industry-participants",
+      "change": null,
+      "chunk_id": "mt_harris_2003_trading_and_exchanges:p045:0062",
+      "source_id": "mt_harris_2003_trading_and_exchanges",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        353,
+        354
+      ],
+      "card_id": "mt-value-traders-arbitrageurs",
+      "change": null,
+      "chunk_id": "mt_harris_2003_trading_and_exchanges:p353:0587",
+      "source_id": "mt_harris_2003_trading_and_exchanges",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        108,
+        108
+      ],
+      "card_id": "mt-volume-critique-time-clock",
+      "change": null,
+      "chunk_id": "mt_foucault_pagano_roell_2013:p107:0170",
+      "source_id": "mt_foucault_pagano_roell_2013",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        179,
+        180
+      ],
+      "card_id": "mt-volume-critique-time-clock",
+      "change": {
+        "new_page_range": [
+          179,
+          179
+        ],
+        "old_page_range": [
+          179,
+          180
+        ],
+        "type": "page_window"
+      },
+      "chunk_id": "mt_ohara_1995_market_microstructure_theory_en:p179:0232",
+      "source_id": "mt_ohara_1995_market_microstructure_theory_en",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        231,
+        231
+      ],
+      "card_id": "mt-vwap-pov-volume-targeting",
+      "change": null,
+      "chunk_id": "mt_cartea_jaimungal_penalva_2015_algorithmic_hf_trading:p231:0301",
+      "source_id": "mt_cartea_jaimungal_penalva_2015_algorithmic_hf_trading",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        437,
+        437
+      ],
+      "card_id": "mt-vwap-pov-volume-targeting",
+      "change": null,
+      "chunk_id": "mt_harris_2003_trading_and_exchanges:p436:0734",
+      "source_id": "mt_harris_2003_trading_and_exchanges",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        83,
+        83
+      ],
+      "card_id": "pa-active-risk-tracking-error-ex-ante-vs-ex-post",
+      "change": null,
+      "chunk_id": "pa_bacon_2022_rapm:p082:0073",
+      "source_id": "pa_bacon_2022_rapm",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        44,
+        44
+      ],
+      "card_id": "pa-active-risk-tracking-error-ex-ante-vs-ex-post",
+      "change": {
+        "final_quote": "Each manager can restate the portfolio management problem from his perspective as active return–active risk optimization of his subportfolio.",
+        "original_quote": "Active risk refers to the uncertainty of demeaned active return.",
+        "overlap": 0.227,
+        "reason": "authored quote spans a U+FFFE hyphenation marker and trimming would retain <60%; re-anchored to the best-overlap clean verbatim sentence on the cited page",
+        "type": "reanchor"
+      },
+      "chunk_id": "pa_connor_goldberg_korajczyk_2010:p043:0041",
+      "source_id": "pa_connor_goldberg_korajczyk_2010",
+      "status": "reanchor"
+    },
+    {
+      "authored_page_range": [
+        150,
+        151
+      ],
+      "card_id": "pa-arithmetic-vs-geometric-excess-return",
+      "change": {
+        "new_page_range": [
+          151,
+          151
+        ],
+        "old_page_range": [
+          150,
+          151
+        ],
+        "type": "page_window"
+      },
+      "chunk_id": "pa_bacon_2023_attribution:p151:0187",
+      "source_id": "pa_bacon_2023_attribution",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        321,
+        321
+      ],
+      "card_id": "pa-benchmark-quality-validation-statistics",
+      "change": null,
+      "chunk_id": "pa_christopherson_carino_ferson_2009:p321:0323",
+      "source_id": "pa_christopherson_carino_ferson_2009",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        320,
+        320
+      ],
+      "card_id": "pa-benchmark-quality-validation-statistics",
+      "change": null,
+      "chunk_id": "pa_christopherson_carino_ferson_2009:p319:0321",
+      "source_id": "pa_christopherson_carino_ferson_2009",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        272,
+        272
+      ],
+      "card_id": "pa-brinson-bhb-allocation-selection-interaction",
+      "change": null,
+      "chunk_id": "pa_bacon_2023_attribution:p271:0324",
+      "source_id": "pa_bacon_2023_attribution",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        192,
+        192
+      ],
+      "card_id": "pa-brinson-bhb-allocation-selection-interaction",
+      "change": null,
+      "chunk_id": "pa_christopherson_carino_ferson_2009:p191:0187",
+      "source_id": "pa_christopherson_carino_ferson_2009",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        52,
+        52
+      ],
+      "card_id": "pa-brinson-bhb-allocation-selection-interaction",
+      "change": {
+        "final_quote": "3.2 Brinson attribution 3.2.1 Asset allocation The first type of return measured by Brinson attribution is value added by overweighting some sectors and underweighting others.",
+        "original_quote": "decomposed into returns generated by asset allocation and stock selection decisions.",
+        "overlap": 0.133,
+        "reason": "authored quote spans a U+FFFE hyphenation marker and trimming would retain <60%; re-anchored to the best-overlap clean verbatim sentence on the cited page",
+        "type": "reanchor"
+      },
+      "chunk_id": "pa_colin_2016:p051:0049",
+      "source_id": "pa_colin_2016",
+      "status": "reanchor"
+    },
+    {
+      "authored_page_range": [
+        277,
+        278
+      ],
+      "card_id": "pa-brinson-fachler-benchmark-relative-allocation",
+      "change": null,
+      "chunk_id": "pa_bacon_2023_attribution:p277:0332",
+      "source_id": "pa_bacon_2023_attribution",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        260,
+        266
+      ],
+      "card_id": "pa-capitalization-weighting-macroconsistency",
+      "change": {
+        "final_quote": "With other weighting methods, not all investors could hold the index.",
+        "original_quote": "held cap-weighted index funds, and if there were no active investors, then all shares would be held with none left over.",
+        "overlap": 0.143,
+        "reason": "authored quote spans a U+FFFE hyphenation marker and trimming would retain <60%; re-anchored to the best-overlap clean verbatim sentence on the cited page",
+        "type": "reanchor"
+      },
+      "chunk_id": "pa_christopherson_carino_ferson_2009:p261:0261",
+      "source_id": "pa_christopherson_carino_ferson_2009",
+      "status": "reanchor"
+    },
+    {
+      "authored_page_range": [
+        402,
+        402
+      ],
+      "card_id": "pa-contribution-analysis-benchmark-free",
+      "change": {
+        "final_quote": "simply breaks down the total return of the portfolio by individual instrument or instrument",
+        "original_quote": "Contribution analysis simply breaks down the total return of the portfolio by individual instrument or instrument",
+        "reason": "authored quote spans a U+FFFE hyphenation marker; trimmed to the longest clean verbatim run (>=60% retained)",
+        "retained_fraction": 0.805,
+        "type": "trim"
+      },
+      "chunk_id": "pa_bacon_2023_attribution:p401:0474",
+      "source_id": "pa_bacon_2023_attribution",
+      "status": "trim"
+    },
+    {
+      "authored_page_range": [
+        323,
+        323
+      ],
+      "card_id": "pa-currency-attribution-karnosky-singer",
+      "change": {
+        "final_quote": "Trim Size: 170mm x 244mm ❦ Bacon831945 c06.tex V1 - 12/10/2022 1:04 P.M.",
+        "original_quote": "Karnosky and Singer have neatly sidestepped compounding issues and greatly simplified the mathematics by using continuously compounded or log returns.",
+        "overlap": 0.0,
+        "reason": "authored quote spans a U+FFFE hyphenation marker and trimming would retain <60%; re-anchored to the best-overlap clean verbatim sentence on the cited page",
+        "type": "reanchor"
+      },
+      "chunk_id": "pa_bacon_2023_attribution:p322:0388",
+      "source_id": "pa_bacon_2023_attribution",
+      "status": "reanchor"
+    },
+    {
+      "authored_page_range": [
+        86,
+        88
+      ],
+      "card_id": "pa-currency-attribution-karnosky-singer",
+      "change": {
+        "new_page_range": [
+          86,
+          87
+        ],
+        "old_page_range": [
+          86,
+          88
+        ],
+        "type": "page_window"
+      },
+      "chunk_id": "pa_colin_2016:p086:0090",
+      "source_id": "pa_colin_2016",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        333,
+        333
+      ],
+      "card_id": "pa-dgtw-cs-ct-as-decomposition",
+      "change": null,
+      "chunk_id": "pa_connor_goldberg_korajczyk_2010:p332:0400",
+      "source_id": "pa_connor_goldberg_korajczyk_2010",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        114,
+        115
+      ],
+      "card_id": "pa-dgtw-cs-ct-as-decomposition",
+      "change": {
+        "final_quote": "Recent research has shown that mutual funds show a distinct preference for other stock characteristics that are related to average returns— for example, stocks with greater liquidity (see Chen et al., 2000 and Wermers, 2000).19 For example, one might argue that our CS measure underestimates the stock-picking talents of funds since we do not control for the lower average returns that accrue to stocks with greater liquidity.",
+        "original_quote": "ranking procedure results in 125 fractile portfolios, each having a distinct combination of size, book-to-market, and momentum characteristics.",
+        "overlap": 0.092,
+        "reason": "authored quote spans a U+FFFE hyphenation marker and trimming would retain <60%; re-anchored to the best-overlap clean verbatim sentence on the cited page",
+        "type": "reanchor"
+      },
+      "chunk_id": "pa_fischer_wermers_2013:p114:0141",
+      "source_id": "pa_fischer_wermers_2013",
+      "status": "reanchor"
+    },
+    {
+      "authored_page_range": [
+        52,
+        55
+      ],
+      "card_id": "pa-dietz-methods-mwr-approximations",
+      "change": {
+        "new_page_range": [
+          54,
+          55
+        ],
+        "old_page_range": [
+          52,
+          55
+        ],
+        "type": "page_window"
+      },
+      "chunk_id": "pa_bacon_2023_attribution:p054:0060",
+      "source_id": "pa_bacon_2023_attribution",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        49,
+        51
+      ],
+      "card_id": "pa-dietz-methods-mwr-approximations",
+      "change": {
+        "new_page_range": [
+          49,
+          49
+        ],
+        "old_page_range": [
+          49,
+          51
+        ],
+        "type": "page_window"
+      },
+      "chunk_id": "pa_christopherson_carino_ferson_2009:p048:0043",
+      "source_id": "pa_christopherson_carino_ferson_2009",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        131,
+        131
+      ],
+      "card_id": "pa-drawdown-ratios-calmar-sterling-ulcer",
+      "change": {
+        "final_quote": "Drawdown deviation calculates a standard deviation type statistic using",
+        "original_quote": "Drawdown deviation calculates a standard deviation type statistic using individual drawdowns",
+        "reason": "authored quote spans a U+FFFE hyphenation marker; trimmed to the longest clean verbatim run (>=60% retained)",
+        "retained_fraction": 0.772,
+        "type": "trim"
+      },
+      "chunk_id": "pa_bacon_2022_rapm:p130:0117",
+      "source_id": "pa_bacon_2022_rapm",
+      "status": "trim"
+    },
+    {
+      "authored_page_range": [
+        46,
+        47
+      ],
+      "card_id": "pa-factor-model-types-and-covariance-decomposition",
+      "change": {
+        "final_quote": "As we explain below, the optimal portfolio weights do follow a linear equation, but are written in units of marginal risk.",
+        "original_quote": "Although the risk budgeting problem is not linear, the marginal contributions to portfolio risk are linear in the allocations to budget",
+        "overlap": 0.233,
+        "reason": "authored quote spans a U+FFFE hyphenation marker and trimming would retain <60%; re-anchored to the best-overlap clean verbatim sentence on the cited page",
+        "type": "reanchor"
+      },
+      "chunk_id": "pa_connor_goldberg_korajczyk_2010:p046:0045",
+      "source_id": "pa_connor_goldberg_korajczyk_2010",
+      "status": "reanchor"
+    },
+    {
+      "authored_page_range": [
+        175,
+        175
+      ],
+      "card_id": "pa-fi-carry-rolldown-pulltopar-time-decomposition",
+      "change": {
+        "final_quote": "However, rolldown return is seldom substantial, and will be overwhelmed by even quite small changes in the level or shape of the curve.",
+        "original_quote": "Rolldown is distinct from either source of return, and should be measured separately.",
+        "overlap": 0.207,
+        "reason": "authored quote spans a U+FFFE hyphenation marker and trimming would retain <60%; re-anchored to the best-overlap clean verbatim sentence on the cited page",
+        "type": "reanchor"
+      },
+      "chunk_id": "pa_colin_2016:p175:0184",
+      "source_id": "pa_colin_2016",
+      "status": "reanchor"
+    },
+    {
+      "authored_page_range": [
+        297,
+        297
+      ],
+      "card_id": "pa-fi-parametric-vs-nonparametric-curve-models",
+      "change": {
+        "final_quote": "■ Virtually any curve observed in the marketplace can be fitted to a Nelson-Siegel function, using least-squares or similar techniques.",
+        "original_quote": "In this case the form of a yield curve is assumed to follow a particular pattern that can be modelled by a mathematical function with a small number",
+        "overlap": 0.211,
+        "reason": "authored quote spans a U+FFFE hyphenation marker and trimming would retain <60%; re-anchored to the best-overlap clean verbatim sentence on the cited page",
+        "type": "reanchor"
+      },
+      "chunk_id": "pa_colin_2016:p296:0307",
+      "source_id": "pa_colin_2016",
+      "status": "reanchor"
+    },
+    {
+      "authored_page_range": [
+        353,
+        353
+      ],
+      "card_id": "pa-fi-perturbational-attribution-equation",
+      "change": null,
+      "chunk_id": "pa_bacon_2023_attribution:p353:0422",
+      "source_id": "pa_bacon_2023_attribution",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        127,
+        127
+      ],
+      "card_id": "pa-fi-perturbational-attribution-equation",
+      "change": null,
+      "chunk_id": "pa_colin_2016:p126:0132",
+      "source_id": "pa_colin_2016",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        353,
+        358
+      ],
+      "card_id": "pa-fi-shift-twist-butterfly-and-krd",
+      "change": {
+        "new_page_range": [
+          353,
+          354
+        ],
+        "old_page_range": [
+          353,
+          358
+        ],
+        "type": "page_window"
+      },
+      "chunk_id": "pa_bacon_2023_attribution:p353:0423",
+      "source_id": "pa_bacon_2023_attribution",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        153,
+        156
+      ],
+      "card_id": "pa-fi-shift-twist-butterfly-and-krd",
+      "change": {
+        "new_page_range": [
+          153,
+          154
+        ],
+        "old_page_range": [
+          153,
+          156
+        ],
+        "type": "page_window"
+      },
+      "chunk_id": "pa_colin_2016:p153:0161",
+      "source_id": "pa_colin_2016",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        282,
+        285
+      ],
+      "card_id": "pa-geometric-attribution-brinson-extended",
+      "change": {
+        "final_quote": "The total stock selection and asset allocation effects compound together to produce the",
+        "original_quote": "The total stock selection and asset allocation effects compound together to produce the geometric excess return",
+        "reason": "authored quote spans a U+FFFE hyphenation marker; trimmed to the longest clean verbatim run (>=60% retained)",
+        "retained_fraction": 0.784,
+        "type": "trim"
+      },
+      "chunk_id": "pa_bacon_2023_attribution:p283:0339",
+      "source_id": "pa_bacon_2023_attribution",
+      "status": "trim"
+    },
+    {
+      "authored_page_range": [
+        384,
+        384
+      ],
+      "card_id": "pa-geometric-vs-arithmetic-linking-choice",
+      "change": null,
+      "chunk_id": "pa_bacon_2023_attribution:p383:0456",
+      "source_id": "pa_bacon_2023_attribution",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        95,
+        95
+      ],
+      "card_id": "pa-geometric-vs-arithmetic-linking-choice",
+      "change": null,
+      "chunk_id": "pa_colin_2016:p094:0098",
+      "source_id": "pa_colin_2016",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        428,
+        430
+      ],
+      "card_id": "pa-gips-2020-composites-and-mechanics",
+      "change": {
+        "final_quote": "Clearly, it’s very inefficient for individual portfolio managers to be wasting their time ensuring returns are calculated correctly.",
+        "original_quote": "GIPS are ethical standards for investment performance presentation to ensure fair representation and full disclosure of a firm’s performance track record.",
+        "overlap": 0.111,
+        "reason": "authored quote spans a U+FFFE hyphenation marker and trimming would retain <60%; re-anchored to the best-overlap clean verbatim sentence on the cited page",
+        "type": "reanchor"
+      },
+      "chunk_id": "pa_bacon_2023_attribution:p427:0503",
+      "source_id": "pa_bacon_2023_attribution",
+      "status": "reanchor"
+    },
+    {
+      "authored_page_range": [
+        462,
+        466
+      ],
+      "card_id": "pa-gips-2020-composites-and-mechanics",
+      "change": {
+        "new_page_range": [
+          463,
+          464
+        ],
+        "old_page_range": [
+          462,
+          466
+        ],
+        "type": "page_window"
+      },
+      "chunk_id": "pa_christopherson_carino_ferson_2009:p463:0477",
+      "source_id": "pa_christopherson_carino_ferson_2009",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        50,
+        50
+      ],
+      "card_id": "pa-irr-money-weighted-return",
+      "change": null,
+      "chunk_id": "pa_bacon_2023_attribution:p050:0055",
+      "source_id": "pa_bacon_2023_attribution",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        253,
+        253
+      ],
+      "card_id": "pa-luck-vs-skill-fdr-and-bootstrap",
+      "change": {
+        "final_quote": "precisely estimates the proportion of fund managers that are (1) unskilled, (2) zero-alpha, and (3) skilled, even with dependencies in cross-fund estimated alphas.",
+        "original_quote": "The approach presented precisely estimates the proportion of fund managers that are (1) unskilled, (2) zero-alpha, and (3) skilled, even with dependencies in cross-fund estimated alphas.",
+        "reason": "authored quote spans a U+FFFE hyphenation marker; trimmed to the longest clean verbatim run (>=60% retained)",
+        "retained_fraction": 0.876,
+        "type": "trim"
+      },
+      "chunk_id": "pa_fischer_wermers_2013:p253:0344",
+      "source_id": "pa_fischer_wermers_2013",
+      "status": "trim"
+    },
+    {
+      "authored_page_range": [
+        229,
+        229
+      ],
+      "card_id": "pa-m2-risk-adjusted-return-transform",
+      "change": {
+        "final_quote": "a genuinely risk-adjusted return, extremely useful for comparing portfolios with different levels of risk.",
+        "original_quote": "M2 , a genuinely risk-adjusted return, extremely useful for comparing portfolios with different levels of risk.",
+        "reason": "authored quote spans a U+FFFE hyphenation marker; trimmed to the longest clean verbatim run (>=60% retained)",
+        "retained_fraction": 0.955,
+        "type": "trim"
+      },
+      "chunk_id": "pa_bacon_2022_rapm:p228:0198",
+      "source_id": "pa_bacon_2022_rapm",
+      "status": "trim"
+    },
+    {
+      "authored_page_range": [
+        110,
+        111
+      ],
+      "card_id": "pa-m2-risk-adjusted-return-transform",
+      "change": null,
+      "chunk_id": "pa_christopherson_carino_ferson_2009:p110:0109",
+      "source_id": "pa_christopherson_carino_ferson_2009",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        135,
+        137
+      ],
+      "card_id": "pa-multifactor-alpha-timing-conditional",
+      "change": {
+        "final_quote": "Using a single coefficient a p in Equation (12.3) presumes that expected abnormal performance is constant over time.",
+        "original_quote": "find that this covariance is a major source of measurement error in unconditional alphas of mutual funds.",
+        "overlap": 0.133,
+        "reason": "authored quote spans a U+FFFE hyphenation marker and trimming would retain <60%; re-anchored to the best-overlap clean verbatim sentence on the cited page",
+        "type": "reanchor"
+      },
+      "chunk_id": "pa_christopherson_carino_ferson_2009:p135:0135",
+      "source_id": "pa_christopherson_carino_ferson_2009",
+      "status": "reanchor"
+    },
+    {
+      "authored_page_range": [
+        68,
+        69
+      ],
+      "card_id": "pa-multifactor-alpha-timing-conditional",
+      "change": null,
+      "chunk_id": "pa_fischer_wermers_2013:p068:0088",
+      "source_id": "pa_fischer_wermers_2013",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        266,
+        266
+      ],
+      "card_id": "pa-multilevel-attribution-successive-notional-funds",
+      "change": null,
+      "chunk_id": "pa_bacon_2023_attribution:p266:0316",
+      "source_id": "pa_bacon_2023_attribution",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        406,
+        406
+      ],
+      "card_id": "pa-multilevel-attribution-successive-notional-funds",
+      "change": null,
+      "chunk_id": "pa_bacon_2023_attribution:p405:0478",
+      "source_id": "pa_bacon_2023_attribution",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        389,
+        389
+      ],
+      "card_id": "pa-multiperiod-linking-smoothing-vs-linking",
+      "change": null,
+      "chunk_id": "pa_bacon_2023_attribution:p388:0462",
+      "source_id": "pa_bacon_2023_attribution",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        205,
+        205
+      ],
+      "card_id": "pa-multiperiod-linking-smoothing-vs-linking",
+      "change": null,
+      "chunk_id": "pa_christopherson_carino_ferson_2009:p204:0199",
+      "source_id": "pa_christopherson_carino_ferson_2009",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        236,
+        238
+      ],
+      "card_id": "pa-normal-portfolio-construction",
+      "change": {
+        "final_quote": "It is not clear that there should be a unique or single normal portfolio for a manager.",
+        "original_quote": "A normal portfolio is a set of securities that contains all of the securities from which a manager normally chooses, weighted as the manager would normally weight them in a portfolio.",
+        "overlap": 0.188,
+        "reason": "authored quote spans a U+FFFE hyphenation marker and trimming would retain <60%; re-anchored to the best-overlap clean verbatim sentence on the cited page",
+        "type": "reanchor"
+      },
+      "chunk_id": "pa_christopherson_carino_ferson_2009:p236:0232",
+      "source_id": "pa_christopherson_carino_ferson_2009",
+      "status": "reanchor"
+    },
+    {
+      "authored_page_range": [
+        151,
+        151
+      ],
+      "card_id": "pa-partial-moment-ratios-sortino-omega-kappa",
+      "change": null,
+      "chunk_id": "pa_bacon_2022_rapm:p150:0135",
+      "source_id": "pa_bacon_2022_rapm",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        101,
+        101
+      ],
+      "card_id": "pa-regression-appraisal-jensen-treynor",
+      "change": null,
+      "chunk_id": "pa_bacon_2022_rapm:p100:0090",
+      "source_id": "pa_bacon_2022_rapm",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        139,
+        141
+      ],
+      "card_id": "pa-return-gap-kacperczyk-sialm-zheng",
+      "change": {
+        "new_page_range": [
+          139,
+          139
+        ],
+        "old_page_range": [
+          139,
+          141
+        ],
+        "type": "page_window"
+      },
+      "chunk_id": "pa_fischer_wermers_2013:p138:0170",
+      "source_id": "pa_fischer_wermers_2013",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        439,
+        439
+      ],
+      "card_id": "pa-returns-based-style-analysis",
+      "change": {
+        "final_quote": "methodology is necessary to obtain a set of coefficients",
+        "original_quote": "Quadratic optimization methodology is necessary to obtain a set of coefficients",
+        "reason": "authored quote spans a U+FFFE hyphenation marker; trimmed to the longest clean verbatim run (>=60% retained)",
+        "retained_fraction": 0.709,
+        "type": "trim"
+      },
+      "chunk_id": "pa_christopherson_carino_ferson_2009:p438:0448",
+      "source_id": "pa_christopherson_carino_ferson_2009",
+      "status": "trim"
+    },
+    {
+      "authored_page_range": [
+        268,
+        268
+      ],
+      "card_id": "pa-transaction-based-attribution-and-trading-cost",
+      "change": null,
+      "chunk_id": "pa_bacon_2023_attribution:p268:0319",
+      "source_id": "pa_bacon_2023_attribution",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        193,
+        193
+      ],
+      "card_id": "pa-transaction-based-attribution-and-trading-cost",
+      "change": null,
+      "chunk_id": "pa_christopherson_carino_ferson_2009:p192:0188",
+      "source_id": "pa_christopherson_carino_ferson_2009",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        55,
+        62
+      ],
+      "card_id": "pa-true-twr-and-chain-linking",
+      "change": {
+        "new_page_range": [
+          55,
+          56
+        ],
+        "old_page_range": [
+          55,
+          62
+        ],
+        "type": "page_window"
+      },
+      "chunk_id": "pa_bacon_2023_attribution:p055:0061",
+      "source_id": "pa_bacon_2023_attribution",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        61,
+        61
+      ],
+      "card_id": "pa-twr-vs-mwr-when-each-applies",
+      "change": null,
+      "chunk_id": "pa_bacon_2023_attribution:p060:0068",
+      "source_id": "pa_bacon_2023_attribution",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        53,
+        53
+      ],
+      "card_id": "pa-twr-vs-mwr-when-each-applies",
+      "change": null,
+      "chunk_id": "pa_christopherson_carino_ferson_2009:p052:0047",
+      "source_id": "pa_christopherson_carino_ferson_2009",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        252,
+        252
+      ],
+      "card_id": "pa-valid-benchmark-properties",
+      "change": null,
+      "chunk_id": "pa_christopherson_carino_ferson_2009:p251:0249",
+      "source_id": "pa_christopherson_carino_ferson_2009",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        252,
+        252
+      ],
+      "card_id": "pa-valid-benchmark-properties",
+      "change": null,
+      "chunk_id": "pa_christopherson_carino_ferson_2009:p252:0250",
+      "source_id": "pa_christopherson_carino_ferson_2009",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        71,
+        71
+      ],
+      "card_id": "pa-variability-ratios-sharpe-information",
+      "change": null,
+      "chunk_id": "pa_bacon_2022_rapm:p070:0062",
+      "source_id": "pa_bacon_2022_rapm",
+      "status": "auto"
+    },
+    {
+      "authored_page_range": [
+        114,
+        114
+      ],
+      "card_id": "pa-variability-ratios-sharpe-information",
+      "change": null,
+      "chunk_id": "pa_christopherson_carino_ferson_2009:p113:0112",
+      "source_id": "pa_christopherson_carino_ferson_2009",
+      "status": "auto"
+    }
+  ],
+  "schema_version": "cfa_legacy.migration_bind_report.v1",
+  "skeleton_count": 134
+}
