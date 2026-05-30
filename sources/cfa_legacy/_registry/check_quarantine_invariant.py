@@ -12,15 +12,19 @@ Re-runnable, fail-closed (non-zero exit on any violation). Asserts:
      (Rule 9 not relaxed via a provenance escape hatch).
   4. No ACTIVE card cites a `notes/` or `scripts/` path in a source reference
      (the Rule-9 operational invariant on the active corpus).
-  5. The canonical Critical Rule 9 statement in the legacy `CLAUDE.md` is intact.
-     This is fail-closed: if that source is unreachable the check FAILS unless
-     `KB_ALLOW_MISSING_RULE9_SOURCE=1` is set (then it downgrades to a NOTE).
+  5. The canonical Critical Rule 9 statement is intact. REPRODUCIBLE: validated against
+     the TRACKED in-repo pin `rule9_canonical.md` (fail-closed if that committed pin is
+     missing or weakened). The live legacy `CLAUDE.md` is an OPTIONAL drift cross-check —
+     if present it must also carry the key clauses; if absent it is a NOTE, not a failure,
+     so the gate passes on a clean checkout / CI box that lacks the author's legacy
+     sibling (no `KB_ALLOW_MISSING_RULE9_SOURCE` opt-in required).
 
 `--self-test` proves the negative tests fail closed: it feeds synthetic violations
 (a quarantine ID leaked into the manifest/summaries/INDEX; a top-level AND a nested
 `notes_provenance` field; a cited `notes/` path including a non-leading path segment;
-a relaxed/absent Rule-9 source) through the same `run_checks` and asserts each is
-caught, while the clean baseline passes.
+a missing tracked pin; a weakened pin; a weakened live legacy source) through the same
+`run_checks` and asserts each is caught, while the clean baseline — including the
+legacy-absent case — passes.
 """
 
 from __future__ import annotations
@@ -39,6 +43,11 @@ CARDS_DIR = REPO / "cards/cfa_legacy"
 SCOPE_LEDGER = REPO / "sources/cfa_legacy/_registry/v0_baseline/scope_ledger.json"
 LEGACY_ROOT = Path(os.environ.get("KB_LEGACY_ROOT", "/home/jakeshea/CFA_reading"))
 LEGACY_CLAUDE_MD = LEGACY_ROOT / "CLAUDE.md"
+# Tracked, in-repo source-of-record for Critical Rule 9 (makes the gate reproducible off
+# the author's machine). The validated text is delimited by these markers.
+RULE9_PIN = REPO / "sources/cfa_legacy/_registry/rule9_canonical.md"
+RULE9_PIN_BEGIN = "<!-- CANONICAL-RULE9-BEGIN -->"
+RULE9_PIN_END = "<!-- CANONICAL-RULE9-END -->"
 
 # Canonical AC-7 quarantine set (plan AC-7 positive test).
 QUARANTINE_IDS = frozenset({
@@ -65,6 +74,53 @@ _SOURCE_REF_LINE = re.compile(
 # A notes_provenance key at any frontmatter nesting depth: leading whitespace and/or
 # YAML list dashes (`- `) may precede it (top-level, indented map key, or list-item key).
 _NOTES_PROVENANCE_KEY = re.compile(r"(?m)^[ \t-]*notes_provenance[ \t]*:")
+
+
+def extract_pinned_rule9(pin_path: Path) -> str | None:
+    """Return the verbatim Rule-9 text between the canonical markers in the tracked pin,
+    or None if the file or either marker is absent. Only the delimited block is returned
+    so the pin's prose header can never mask a weakening of the rule."""
+    if not pin_path.is_file():
+        return None
+    text = pin_path.read_text(encoding="utf-8", errors="replace")
+    b = text.find(RULE9_PIN_BEGIN)
+    e = text.find(RULE9_PIN_END)
+    if b == -1 or e == -1 or e <= b:
+        return None
+    return text[b + len(RULE9_PIN_BEGIN):e].strip()
+
+
+def rule9_failures(
+    *,
+    pinned_rule9_text: str | None,
+    legacy_rule9_text: str | None,
+    key_clauses: tuple[str, ...] = RULE9_KEY_CLAUSES,
+) -> list[str]:
+    """Pure: validate Critical Rule 9 is intact and unrelaxed.
+
+    Reproducible part (fail-closed): the TRACKED in-repo pin must be present and must
+    contain every key clause. The pin is committed, so its absence is a real defect.
+
+    Drift part (optional): if the live legacy `CLAUDE.md` text is provided it must also
+    contain the clauses; if it is None (clean checkout without the legacy sibling) that is
+    NOT a failure — the tracked pin is authoritative for the gate. This is what makes the
+    release gate reproducible off the author's filesystem.
+    """
+    failures: list[str] = []
+    if pinned_rule9_text is None:
+        failures.append(
+            f"tracked Critical-Rule-9 pin missing/malformed at {RULE9_PIN.name} "
+            "(expected the canonical markers); cannot verify Rule 9 reproducibly"
+        )
+    else:
+        missing = [c for c in key_clauses if c not in pinned_rule9_text]
+        if missing:
+            failures.append(f"tracked Critical-Rule-9 pin weakened/incomplete; missing clauses: {missing}")
+    if legacy_rule9_text is not None:
+        missing = [c for c in key_clauses if c not in legacy_rule9_text]
+        if missing:
+            failures.append(f"Critical Rule 9 weakened/absent in legacy CLAUDE.md; missing clauses: {missing}")
+    return failures
 
 
 def find_active_card_files(cards_dir: Path) -> list[Path]:
@@ -106,8 +162,8 @@ def run_checks(
     index_text: str,
     on_disk_ids: set[str],
     active_cards: list[dict],
-    rule9_text: str | None,
-    allow_missing_rule9: bool = False,
+    pinned_rule9_text: str | None,
+    legacy_rule9_text: str | None,
 ) -> list[str]:
     """Return a list of failure strings; empty iff every invariant holds."""
     failures: list[str] = []
@@ -153,18 +209,12 @@ def run_checks(
                 )
                 break
 
-    # (5) Canonical Rule 9 statement intact — FAIL-CLOSED if the source is unreachable
-    # (unless explicitly allowed, e.g. a clean checkout without the legacy sibling).
-    if rule9_text is None:
-        if not allow_missing_rule9:
-            failures.append(
-                "Critical Rule 9 source (legacy CLAUDE.md) unreachable; cannot verify it is "
-                "unrelaxed. Set KB_ALLOW_MISSING_RULE9_SOURCE=1 to skip this cross-check."
-            )
-    else:
-        missing = [c for c in RULE9_KEY_CLAUSES if c not in rule9_text]
-        if missing:
-            failures.append(f"Critical Rule 9 weakened/absent in legacy CLAUDE.md; missing clauses: {missing}")
+    # (5) Canonical Rule 9 intact — validated against the TRACKED pin (reproducible,
+    # fail-closed) with the live legacy CLAUDE.md as an OPTIONAL drift cross-check.
+    failures.extend(rule9_failures(
+        pinned_rule9_text=pinned_rule9_text,
+        legacy_rule9_text=legacy_rule9_text,
+    ))
 
     return failures
 
@@ -182,8 +232,8 @@ def _self_test() -> int:
         index_text="| pm-capm-and-sml | CAPM | 1 | abc |",
         on_disk_ids={"pm-capm-and-sml"},
         active_cards=[{"id": "pm-capm-and-sml", "rel": "x.md", "frontmatter": "id: x\ncitations:", "text": "ok"}],
-        rule9_text="User-volatile folders hard-block ... notes/ ... scripts/ ... hard-block",
-        allow_missing_rule9=False,
+        pinned_rule9_text="User-volatile folders hard-block ... notes/ ... scripts/ ... hard-block",
+        legacy_rule9_text="User-volatile folders hard-block ... notes/ ... scripts/ ... hard-block",
     )
     failures = 0
 
@@ -225,14 +275,18 @@ def _self_test() -> int:
                   active_cards=[{"id": "c", "rel": "c.md", "frontmatter": "id: c", "text": "Primary raw source: /home/u/scripts/kb/x.py"}])
     expect_clean("prose mentioning endnotes/ is NOT a violation",
                  active_cards=[{"id": "c", "rel": "c.md", "frontmatter": "id: c", "text": "**Source:** Smith, endnotes/appendix discussion"}])
-    expect_caught("Rule 9 weakened", "Critical Rule 9 weakened",
-                  rule9_text="(rule removed)")
-    expect_caught("Rule 9 dropped scripts/ clause", "Critical Rule 9 weakened",
-                  rule9_text="User-volatile folders hard-block ... notes/ ... hard-block")
-    expect_caught("Rule 9 source unreachable + not allowed", "unreachable",
-                  rule9_text=None, allow_missing_rule9=False)
-    expect_clean("Rule 9 source unreachable but explicitly allowed",
-                 rule9_text=None, allow_missing_rule9=True)
+    # (5) Rule-9 reproducible-pin + optional-legacy-drift probes.
+    expect_caught("tracked Rule-9 pin missing", "pin missing/malformed",
+                  pinned_rule9_text=None)
+    expect_caught("tracked Rule-9 pin weakened", "pin weakened/incomplete",
+                  pinned_rule9_text="(rule removed)")
+    expect_caught("tracked Rule-9 pin dropped scripts/ clause", "pin weakened/incomplete",
+                  pinned_rule9_text="User-volatile folders hard-block ... notes/ ... hard-block")
+    expect_caught("live legacy Rule 9 weakened (drift)", "legacy CLAUDE.md",
+                  legacy_rule9_text="(rule removed)")
+    expect_clean("legacy source absent is a NOTE, not a failure (reproducible)",
+                 legacy_rule9_text=None)
+    expect_clean("pin good + legacy absent passes clean", legacy_rule9_text=None)
     expect_caught("ledger missing a quarantine id", "quarantined set",
                   ledger_quarantined=base["ledger_quarantined"][:-1])
     expect_caught("ledger entry missing reauthor criterion", "re-authoring criterion",
@@ -262,13 +316,16 @@ def main() -> int:
     active_cards = load_active_cards(CARDS_DIR)
     on_disk_ids = {c["id"] for c in active_cards}
 
-    allow_missing_rule9 = bool(os.environ.get("KB_ALLOW_MISSING_RULE9_SOURCE"))
-    rule9_text = None
+    # Reproducible source-of-record: the TRACKED in-repo pin (required).
+    pinned_rule9_text = extract_pinned_rule9(RULE9_PIN)
+    # Optional drift cross-check: the live legacy CLAUDE.md (absent on a clean checkout).
+    legacy_rule9_text = None
     if LEGACY_CLAUDE_MD.is_file():
-        rule9_text = LEGACY_CLAUDE_MD.read_text(encoding="utf-8", errors="replace")
-    elif allow_missing_rule9:
-        print(f"NOTE: legacy CLAUDE.md not reachable at {LEGACY_CLAUDE_MD}; "
-              "Rule-9 text pin skipped (KB_ALLOW_MISSING_RULE9_SOURCE set; operational checks still enforced).")
+        legacy_rule9_text = LEGACY_CLAUDE_MD.read_text(encoding="utf-8", errors="replace")
+    else:
+        print(f"NOTE: legacy CLAUDE.md not present at {LEGACY_CLAUDE_MD}; Rule-9 drift "
+              "cross-check skipped. The tracked pin (rule9_canonical.md) is authoritative "
+              "and is still enforced.")
 
     failures = run_checks(
         quarantine_ids=set(QUARANTINE_IDS),
@@ -278,13 +335,15 @@ def main() -> int:
         index_text=index_text,
         on_disk_ids=on_disk_ids,
         active_cards=active_cards,
-        rule9_text=rule9_text,
-        allow_missing_rule9=allow_missing_rule9,
+        pinned_rule9_text=pinned_rule9_text,
+        legacy_rule9_text=legacy_rule9_text,
     )
 
-    pin = "checked" if rule9_text is not None else ("skipped (allowed)" if allow_missing_rule9 else "UNREACHABLE")
+    pin_status = "present" if pinned_rule9_text is not None else "MISSING"
+    drift = "checked" if legacy_rule9_text is not None else "skipped (legacy absent)"
     print(f"quarantine IDs: {len(QUARANTINE_IDS)} | active cards scanned: {len(active_cards)} | "
-          f"manifest: {len(manifest_ids)} | summaries: {len(summary_ids)} | Rule-9 text pin: {pin}")
+          f"manifest: {len(manifest_ids)} | summaries: {len(summary_ids)} | "
+          f"Rule-9 tracked pin: {pin_status} | legacy drift cross-check: {drift}")
     if failures:
         print("\nQUARANTINE INVARIANT: FAIL", file=sys.stderr)
         for f in failures:
