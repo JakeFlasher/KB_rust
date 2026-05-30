@@ -24,6 +24,8 @@ from __future__ import annotations
 
 import argparse
 import glob
+import json
+import os
 import re
 import sys
 from pathlib import Path
@@ -43,6 +45,43 @@ def find_ledger() -> Path:
     return Path(matches[0])
 
 
+def derive_disk_facts(repo: Path) -> dict:
+    """Re-derive the on-disk truth the ledger's factual rulings must match — NOT trust
+    the ledger's own prose (the R8 errors came from trusting analyze prose).
+
+    Returns: tsay AFTS edition/year (from source_inventory.json) and the set of
+    `targeted_books_Chinese` sources that are status:active AND cited by >=1 active card.
+    """
+    reg = repo / "sources/cfa_legacy/_registry"
+    inv_raw = json.loads((reg / "source_inventory.json").read_text(encoding="utf-8"))
+    inv = inv_raw["sources"] if isinstance(inv_raw, dict) and "sources" in inv_raw else \
+        {e["source_id"]: e for e in inv_raw if isinstance(e, dict) and "source_id" in e}
+    tsay = inv.get("qm_tsay_2005_afts_2e", {})
+    # The Tsay `edition` is a single descriptive string (e.g. "Tsay 2e 2005 *...*").
+    tsay_edition = str(tsay.get("edition", ""))
+    chinese_active = [
+        sid for sid, e in inv.items()
+        if "targeted_books_Chinese" in json.dumps(e, ensure_ascii=False) and e.get("status") == "active"
+    ]
+    cited = set()
+    cards = [
+        c for c in glob.glob(str(repo / "cards/cfa_legacy/**/*.md"), recursive=True)
+        if ".history" not in c and os.path.basename(c) != "INDEX.md" and not os.path.basename(c).startswith("_")
+    ]
+    for c in cards:
+        parts = Path(c).read_text(encoding="utf-8", errors="replace").split("---", 2)
+        fm = parts[1] if len(parts) >= 3 else ""
+        for sid in chinese_active:
+            if ('source_id: "%s"' % sid) in fm:
+                cited.add(sid)
+    return {
+        "tsay_edition": tsay_edition,
+        "tsay_is_2e_2005": ("2e" in tsay_edition and "2005" in tsay_edition),
+        "tsay_has_3e_2010": ("3e" in tsay_edition or "2010" in tsay_edition),
+        "chinese_active_cited": sorted(cited),
+    }
+
+
 def parse_rows(text: str) -> list[tuple[str, str, str, str]]:
     """Return [(qid, status, evidence_or_fut, ruling)] from the disposition table."""
     rows = []
@@ -53,7 +92,8 @@ def parse_rows(text: str) -> list[tuple[str, str, str, str]]:
     return rows
 
 
-def run_checks(text: str, *, repo: Path, evidence_must_exist: bool = True) -> list[str]:
+def run_checks(text: str, *, repo: Path, evidence_must_exist: bool = True,
+               disk_facts: dict | None = None) -> list[str]:
     failures: list[str] = []
     rows = parse_rows(text)
     by_id: dict[str, tuple[str, str, str, str]] = {}
@@ -111,25 +151,74 @@ def run_checks(text: str, *, repo: Path, evidence_must_exist: bool = True) -> li
         if fut not in text:
             failures.append(f"{fut} not linked in the ledger")
 
+    facts = disk_facts if disk_facts is not None else derive_disk_facts(repo)
+
+    # (7) Tsay AFTS edition (Codex R8 gap 2): the machine-check block must assert
+    # 2e/2005, the on-disk metadata must AGREE (re-derived, not prose-trusted), and the
+    # ledger must not reintroduce the false 3e/2010 finding.
+    te, ty = _val("tsay_afts_edition"), _val("tsay_afts_year")
+    if te is None or ty is None:
+        failures.append("Tsay machine-check block missing (need tsay_afts_edition + tsay_afts_year)")
+    elif (te, ty) != ("2e", "2005"):
+        failures.append(f"Tsay machine-check must assert 2e/2005, got {te!r}/{ty!r}")
+    if not facts.get("tsay_is_2e_2005") or facts.get("tsay_has_3e_2010"):
+        failures.append(
+            f"on-disk Tsay edition metadata is {facts.get('tsay_edition')!r}; must be 2e/2005 "
+            "(PDF title page reads 'Second Edition') and must not say 3e/2010"
+        )
+    for bad in ("actual edition is Tsay 3e", "suggests 3e/2010", "token falsely claims", "CRITICAL MISMATCH"):
+        if bad in text:
+            failures.append(f"reintroduced false Tsay 3e/2010 claim: {bad!r}")
+
+    # (8) Q2 targeted-Chinese (Codex R8 gap 1): re-derive the active+cited set from disk;
+    # if non-empty the ledger must NOT claim all-excluded, the machine flag must be false,
+    # and the Q2 ruling must acknowledge each active+cited source by id.
+    active_cited = facts.get("chinese_active_cited", [])
+    q2 = by_id.get("Q2")
+    q2text = q2[3] if q2 else ""
+    all_excl = _val("q2_targeted_chinese_all_excluded")
+    if active_cited:
+        if all_excl != "false":
+            failures.append(
+                f"Q2 machine-check q2_targeted_chinese_all_excluded must be false "
+                f"({len(active_cited)} targeted_books_Chinese sources are active+cited), got {all_excl!r}"
+            )
+        for sid in active_cited:
+            if sid not in q2text:
+                failures.append(f"Q2 ruling does not acknowledge active+cited Chinese source {sid}")
+        for bad in ("no active v0 card cites them", "already excluded on disk",
+                    "are already excluded"):
+            if bad in q2text:
+                failures.append(f"Q2 ruling contains a false blanket-exclusion phrase: {bad!r}")
+
     return failures
 
 
 def _self_test() -> int:
+    # Hermetic synthetic disk facts (so the self-test does not depend on live disk):
+    # one active+cited Chinese source + Tsay correct at 2e/2005.
+    FACTS = {"tsay_edition": "Tsay 2e 2005 *AFTS*", "tsay_is_2e_2005": True,
+             "tsay_has_3e_2010": False, "chinese_active_cited": ["cb_probe_active_cited"]}
+    q2_good = "| Q2 | DECIDED | `x` | v0 accepts cb_probe_active_cited (active+cited); EPUB excluded |"
     base_rows = "\n".join(
-        f"| Q{i} | DECIDED | — | ruling {i} |" for i in range(1, 13)
+        (q2_good if i == 2 else f"| Q{i} | DECIDED | — | ruling {i} |") for i in range(1, 13)
     )
+    machine = ("\nv0_card_citation_coordinate: pdf_page\nvolume_page_in_card_frontmatter: false\n"
+               "tsay_afts_edition: 2e\ntsay_afts_year: 2005\n"
+               "q2_targeted_chinese_all_excluded: false\n")
     good = (
         "# ledger\n\nv0 complete := 268 active cards + 6 quarantined legacy cards.\n\n"
         "| Question | Status | Evidence / FUT | Ruling |\n|--|--|--|--|\n"
         + base_rows
         + "\nFUT-1 ... FUT-2 ... FUT-4 ...\n"
-        + "\nv0_card_citation_coordinate: pdf_page\nvolume_page_in_card_frontmatter: false\n"
+        + machine
     )
     failures = 0
 
     def expect_clean(name, text, **kw):
         nonlocal failures
         kw.setdefault("evidence_must_exist", False)
+        kw.setdefault("disk_facts", FACTS)
         res = run_checks(text, repo=REPO, **kw)
         if res:
             failures += 1; print(f"  FAIL (clean flagged): {name} -> {res}")
@@ -139,6 +228,7 @@ def _self_test() -> int:
     def expect_caught(name, text, needle, **kw):
         nonlocal failures
         kw.setdefault("evidence_must_exist", False)
+        kw.setdefault("disk_facts", FACTS)
         res = run_checks(text, repo=REPO, **kw)
         if any(needle in f for f in res):
             print(f"  fires (caught): {name}")
@@ -176,6 +266,22 @@ def _self_test() -> int:
     # missing v0 DoD
     no_dod = good.replace("v0 complete := 268 active cards + 6 quarantined legacy cards.", "v0 is done.")
     expect_caught("missing v0 DoD", no_dod, "definition-of-done")
+    # (R9 check 7) Tsay guards
+    tsay_block = good.replace("tsay_afts_edition: 2e", "tsay_afts_edition: 3e")
+    expect_caught("Tsay machine-block says 3e", tsay_block, "must assert 2e/2005")
+    expect_caught("Tsay on-disk metadata is 3e/2010", good, "on-disk Tsay edition metadata",
+                  disk_facts={"tsay_edition": "Tsay 3e 2010", "tsay_is_2e_2005": False,
+                              "tsay_has_3e_2010": True, "chinese_active_cited": ["cb_probe_active_cited"]})
+    tsay_false = good + "\nThe actual edition is Tsay 3e per audit; suggests 3e/2010.\n"
+    expect_caught("Tsay false prose reintroduced", tsay_false, "reintroduced false Tsay")
+    # (R9 check 8) Q2 Chinese guards
+    q2_allexcl = good.replace("q2_targeted_chinese_all_excluded: false", "q2_targeted_chinese_all_excluded: true")
+    expect_caught("Q2 flag true while active exist", q2_allexcl, "must be false")
+    q2_unack = good.replace(q2_good, "| Q2 | DECIDED | `x` | all four Chinese books excluded |")
+    expect_caught("Q2 ruling omits an active+cited source", q2_unack, "does not acknowledge active+cited")
+    q2_blanket = good.replace(q2_good,
+                              "| Q2 | DECIDED | `x` | cb_probe_active_cited: no active v0 card cites them |")
+    expect_caught("Q2 ruling has blanket-exclusion phrase", q2_blanket, "blanket-exclusion phrase")
 
     print()
     if failures:
