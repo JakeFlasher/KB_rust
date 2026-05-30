@@ -281,7 +281,8 @@ def reproduce_chunk_hashes() -> dict[str, Any]:
     }
 
 
-def run_check(require_ingest_ready: bool, write_status: bool) -> tuple[dict[str, Any], bool]:
+def run_check(require_ingest_ready: bool, write_status: bool,
+              require_library_ready: bool = False) -> tuple[dict[str, Any], bool]:
     if not LOCK_PATH.is_file():
         raise SystemExit(f"missing committed pin: {LOCK_PATH} (run with --write-lock first)")
     lock = json.loads(LOCK_PATH.read_text(encoding="utf-8"))
@@ -318,23 +319,32 @@ def run_check(require_ingest_ready: bool, write_status: bool) -> tuple[dict[str,
     # Binary-independent recipe proof over EVERY recorded chunk hash.
     repro = reproduce_chunk_hashes()
 
-    # The pre-ingest readiness conjunction: every identity fact must be
-    # provisioned and consistent.
-    ingest_ready = (
+    # LIBRARY readiness: the parser + kb identity needed to ingest reproducibly.
+    # This is MANIFEST-INDEPENDENT — it is the correct PRE-ingest gate, because a
+    # clean rebuild produces the (uncommitted) chunks_manifest.json that the recipe
+    # check below reads; requiring that recipe proof before ingest would block the
+    # ingest on a file it is supposed to create.
+    library_ready = (
         lib_status in {"satisfied", "satisfied_via_proof", "deviation_recorded"}
         and kb_status == "satisfied"
-        and repro["status"] == "byte_identical"
+        and render_ok
     )
+    # FULL ingest readiness additionally requires the binary-independent recipe
+    # proof over the recorded chunk hashes (only meaningful once the manifest exists).
+    ingest_ready = library_ready and repro["status"] == "byte_identical"
 
     # Default mode fails closed only on a real defect: a present-but-mismatched
     # library, a version drift, or a recipe divergence on a PRESENT manifest. A
     # merely-absent external artifact (libpdfium / kb / chunks_manifest) is a
-    # note unless --require-ingest-ready demands the full provisioned set.
+    # note unless a require_* flag demands the corresponding provisioned set.
+    # --require-library-ready (the pre-ingest gate) does NOT require the manifest;
+    # --require-ingest-ready (post-ingest evidence) requires the full set.
     hard_fail = (
         (lib_status == "mismatch_abort")
         or (not render_ok)
         or (kb_status == "version_drift")
         or (repro["status"] == "mismatch")
+        or (require_library_ready and not library_ready)
         or (require_ingest_ready and not ingest_ready)
     )
 
@@ -362,7 +372,9 @@ def run_check(require_ingest_ready: bool, write_status: bool) -> tuple[dict[str,
             ),
         },
         "chunk_hash_reproduction": repro,
+        "library_ready": library_ready,
         "ingest_ready": ingest_ready,
+        "require_library_ready": require_library_ready,
         "require_ingest_ready": require_ingest_ready,
         "ok": not hard_fail,
     }

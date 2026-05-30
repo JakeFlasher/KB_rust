@@ -129,7 +129,9 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--force", action="store_true", help="replace differing merged manifests")
     parser.add_argument("--out", default=str(OUT_DIR), help="merged out directory")
-    parser.add_argument("--require-count", type=int, default=70)
+    parser.add_argument("--require-count", type=int, default=87,
+                        help="the authorized/ingested source count (v1: 87 = 70 original + 17 migrated); "
+                             "the rebuild recipe passes this explicitly")
     args = parser.parse_args()
 
     plan = load_json(PLAN_PATH)

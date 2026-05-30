@@ -31,10 +31,12 @@ REPO = Path(__file__).resolve().parents[3]
 REGISTRY = REPO / "sources/cfa_legacy/_registry"
 EXPECTED = {"active": 402, "total": 408, "sources": 87, "readings": 14}
 
-# Gate scripts that must not hard-code a load-bearing v0 count comparison.
+# Gate/recipe scripts that must not hard-code a load-bearing v0 count (comparison or
+# default). Includes merge_ingest_manifests.py so the v1 source-count default (87) is
+# covered — a reintroduced --require-count default of 70 fails the sweep.
 GATE_SCRIPTS = [
     "check_release_cleanliness.py", "check_decision_ledger.py", "build_scope_ledger.py",
-    "check_quarantine_invariant.py", "check_index_reproducible.py",
+    "check_quarantine_invariant.py", "check_index_reproducible.py", "merge_ingest_manifests.py",
 ]
 # Patterns that would be a STALE load-bearing v0 constant (comparison / default).
 STALE_PATTERNS = [

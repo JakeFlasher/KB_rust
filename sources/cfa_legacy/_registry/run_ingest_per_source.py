@@ -43,22 +43,26 @@ def load_plan() -> list[dict[str, object]]:
 def verify_pdfium_library() -> None:
     """Refuse to ingest unless the libpdfium identity is reproducibility-ready.
 
-    Routes through the shared reproducibility-lock gate in
-    ``--require-ingest-ready`` mode: the host build must match the pin OR be a
-    proven-equivalent build recorded in the committed equivalence proof (a blind
-    ``KB_SKIP_PDFIUM_HASH_CHECK=1`` is honored by that gate as an explicitly
-    recorded deviation). A drifted, unproven parser aborts before any chunk is
-    written.
+    Routes through the shared reproducibility-lock gate in LIBRARY-readiness mode:
+    the host build must match the pin OR be a proven-equivalent build recorded in
+    the committed equivalence proof (a blind ``KB_SKIP_PDFIUM_HASH_CHECK=1`` is
+    honored by that gate as an explicitly recorded deviation). A drifted, unproven
+    parser aborts before any chunk is written.
+
+    This is the PRE-ingest gate, so it requires LIBRARY readiness (libpdfium + kb +
+    pdfium-render identity) only — NOT the binary-independent recipe proof over
+    ``chunks_manifest.json``. In a clean rebuild that manifest does not yet exist
+    (it is produced by this very ingest+merge); requiring it here would block the
+    rebuild on the file it is supposed to create.
     """
-    status, ok = run_check(require_ingest_ready=True, write_status=False)
+    status, ok = run_check(require_ingest_ready=False, require_library_ready=True, write_status=False)
     if ok:
         return
     lib = status["libpdfium"]
-    repro = status["chunk_hash_reproduction"]
     raise SystemExit(
         "refusing to ingest: libpdfium is not reproducibility-ready. "
         f"libpdfium={lib['status']} (observed={lib['observed_sha256']} pin={lib['pinned_sha256']}); "
-        f"kb={status['kb_binary']['status']}; chunk_hash_repro={repro['status']}. "
+        f"kb={status['kb_binary']['status']}; pdfium_render_ok={status['pdfium_render']['ok']}. "
         "Provision the pinned or a proven-equivalent libpdfium (see "
         "check_ingest_reproducibility_lock.py --require-ingest-ready), or set "
         "KB_SKIP_PDFIUM_HASH_CHECK=1 to record an explicit non-reproducible deviation."

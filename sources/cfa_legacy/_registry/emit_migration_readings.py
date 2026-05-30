@@ -339,7 +339,14 @@ def emit(skeleton_root: Path, *, force: bool, dry_run: bool, cross_links_path: P
     retracted_chunks = set(manifest.get("retracted_chunk_ids", []))
     retracted_sources = set(manifest.get("retracted_source_ids", []))
     matrix_allowed = read_json(SOURCE_MATRIX)["allowed"]
-    published_ids = {c["id"] for c in read_json(CARDS_MANIFEST)["cards"]}
+    # The PRE-MIGRATION published id set: cards in readings OTHER than the migrated
+    # ones. After the v1 `kb index` the manifest also contains the 134 migrated ids,
+    # so a rerun from the released tree must not treat a migrated card's own published
+    # id as a collision — the guard only catches a new id clashing with a released
+    # (non-migrated-reading) card.
+    migrated_reading_ids = {r.reading_id for r in READINGS}
+    published_ids = {c["id"] for c in read_json(CARDS_MANIFEST)["cards"]
+                     if c.get("reading_id") not in migrated_reading_ids}
     # Cross-reading See Also links for the documented overlap pairs are injected
     # into each new card's body from the committed map (the released-card side is
     # applied separately, since those cards are not emitted from skeletons). The map
