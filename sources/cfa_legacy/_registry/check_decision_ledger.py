@@ -59,10 +59,14 @@ def derive_disk_facts(repo: Path) -> dict:
     tsay = inv.get("qm_tsay_2005_afts_2e", {})
     # The Tsay `edition` is a single descriptive string (e.g. "Tsay 2e 2005 *...*").
     tsay_edition = str(tsay.get("edition", ""))
-    chinese_active = [
-        sid for sid, e in inv.items()
-        if "targeted_books_Chinese" in json.dumps(e, ensure_ascii=False) and e.get("status") == "active"
-    ]
+    chinese = [(sid, e) for sid, e in inv.items()
+               if "targeted_books_Chinese" in json.dumps(e, ensure_ascii=False)]
+    chinese_active = [sid for sid, e in chinese if e.get("status") == "active"]
+    # The excluded targeted-Chinese source(s): id + exclude_reason, re-derived from disk
+    # (R10: the ledger must name THESE, not a paraphrase).
+    chinese_excluded = sorted(sid for sid, e in chinese if e.get("status") == "excluded")
+    excluded_reasons = {sid: str(e.get("exclude_reason", ""))
+                        for sid, e in chinese if e.get("status") == "excluded"}
     cited = set()
     cards = [
         c for c in glob.glob(str(repo / "cards/cfa_legacy/**/*.md"), recursive=True)
@@ -79,6 +83,8 @@ def derive_disk_facts(repo: Path) -> dict:
         "tsay_is_2e_2005": ("2e" in tsay_edition and "2005" in tsay_edition),
         "tsay_has_3e_2010": ("3e" in tsay_edition or "2010" in tsay_edition),
         "chinese_active_cited": sorted(cited),
+        "chinese_excluded": chinese_excluded,
+        "chinese_excluded_reasons": excluded_reasons,
     }
 
 
@@ -191,6 +197,39 @@ def run_checks(text: str, *, repo: Path, evidence_must_exist: bool = True,
             if bad in q2text:
                 failures.append(f"Q2 ruling contains a false blanket-exclusion phrase: {bad!r}")
 
+    # (9) Q2 excluded targeted-Chinese EPUB identity + reason (Codex R10 gap):
+    # re-derive from disk; the ledger must name THAT exact source_id + exclude_reason in
+    # the machine-block AND the Q2 ruling, and must not name any excluded source id not
+    # on disk (the R9 error invented `cb_chinese_convertible_epub_unregistered`).
+    chinese_excluded = facts.get("chinese_excluded", [])
+    excluded_reasons = facts.get("chinese_excluded_reasons", {})
+    ml_excl_id = _val("q2_excluded_chinese_source_id")
+    ml_excl_reason = _val("q2_excluded_chinese_reason")
+    if chinese_excluded:
+        # exactly the disk-derived excluded ids must be the machine-block value(s)
+        disk_excl = chinese_excluded[0] if len(chinese_excluded) == 1 else ",".join(chinese_excluded)
+        if ml_excl_id != disk_excl.lower():
+            failures.append(
+                f"Q2 machine-check q2_excluded_chinese_source_id must be {disk_excl!r} "
+                f"(re-derived from source_inventory.json), got {ml_excl_id!r}"
+            )
+        disk_reason = excluded_reasons.get(chinese_excluded[0], "")
+        if disk_reason and ml_excl_reason != disk_reason.lower():
+            failures.append(
+                f"Q2 machine-check q2_excluded_chinese_reason must be {disk_reason!r}, got {ml_excl_reason!r}"
+            )
+        for sid in chinese_excluded:
+            if sid not in q2text:
+                failures.append(f"Q2 ruling does not name the on-disk excluded Chinese source {sid}")
+            if disk_reason and disk_reason not in q2text:
+                failures.append(f"Q2 ruling does not state the on-disk exclude_reason {disk_reason!r}")
+        # No invented excluded id: any 'cb_*' or 'convertible_*' id named in Q2 must be a
+        # real disk source id (active+cited or excluded).
+        for m in re.finditer(r"\b(cb_[a-z0-9_]+|convertible_[a-z0-9_]+)\b", q2text):
+            tok = m.group(1)
+            if tok not in active_cited and tok not in chinese_excluded:
+                failures.append(f"Q2 ruling names a source id not on disk (active or excluded): {tok}")
+
     return failures
 
 
@@ -198,14 +237,19 @@ def _self_test() -> int:
     # Hermetic synthetic disk facts (so the self-test does not depend on live disk):
     # one active+cited Chinese source + Tsay correct at 2e/2005.
     FACTS = {"tsay_edition": "Tsay 2e 2005 *AFTS*", "tsay_is_2e_2005": True,
-             "tsay_has_3e_2010": False, "chinese_active_cited": ["cb_probe_active_cited"]}
-    q2_good = "| Q2 | DECIDED | `x` | v0 accepts cb_probe_active_cited (active+cited); EPUB excluded |"
+             "tsay_has_3e_2010": False, "chinese_active_cited": ["cb_probe_active_cited"],
+             "chinese_excluded": ["convertible_probe_excluded_epub"],
+             "chinese_excluded_reasons": {"convertible_probe_excluded_epub": "epub_blacklist"}}
+    q2_good = ("| Q2 | DECIDED | `x` | v0 accepts cb_probe_active_cited (active+cited); "
+               "convertible_probe_excluded_epub excluded (epub_blacklist) |")
     base_rows = "\n".join(
         (q2_good if i == 2 else f"| Q{i} | DECIDED | — | ruling {i} |") for i in range(1, 13)
     )
     machine = ("\nv0_card_citation_coordinate: pdf_page\nvolume_page_in_card_frontmatter: false\n"
                "tsay_afts_edition: 2e\ntsay_afts_year: 2005\n"
-               "q2_targeted_chinese_all_excluded: false\n")
+               "q2_targeted_chinese_all_excluded: false\n"
+               "q2_excluded_chinese_source_id: convertible_probe_excluded_epub\n"
+               "q2_excluded_chinese_reason: epub_blacklist\n")
     good = (
         "# ledger\n\nv0 complete := 268 active cards + 6 quarantined legacy cards.\n\n"
         "| Question | Status | Evidence / FUT | Ruling |\n|--|--|--|--|\n"
@@ -282,6 +326,16 @@ def _self_test() -> int:
     q2_blanket = good.replace(q2_good,
                               "| Q2 | DECIDED | `x` | cb_probe_active_cited: no active v0 card cites them |")
     expect_caught("Q2 ruling has blanket-exclusion phrase", q2_blanket, "blanket-exclusion phrase")
+    # (R10 check 9) Q2 excluded-EPUB identity + reason guards
+    excl_id_ml = good.replace("q2_excluded_chinese_source_id: convertible_probe_excluded_epub",
+                              "q2_excluded_chinese_source_id: cb_invented_epub_unregistered")
+    expect_caught("Q2 excluded machine-id wrong", excl_id_ml, "q2_excluded_chinese_source_id must be")
+    excl_reason_ml = good.replace("q2_excluded_chinese_reason: epub_blacklist",
+                                  "q2_excluded_chinese_reason: unregistered_pdf")
+    expect_caught("Q2 excluded machine-reason wrong", excl_reason_ml, "q2_excluded_chinese_reason must be")
+    excl_ruling = good.replace(q2_good,
+                               "| Q2 | DECIDED | `x` | v0 accepts cb_probe_active_cited; cb_invented_epub_unregistered excluded (unregistered_pdf) |")
+    expect_caught("Q2 ruling names invented excluded id", excl_ruling, "not on disk")
 
     print()
     if failures:
