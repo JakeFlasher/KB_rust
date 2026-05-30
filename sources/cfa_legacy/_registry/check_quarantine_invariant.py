@@ -49,7 +49,7 @@ RULE9_PIN = REPO / "sources/cfa_legacy/_registry/rule9_canonical.md"
 RULE9_PIN_BEGIN = "<!-- CANONICAL-RULE9-BEGIN -->"
 RULE9_PIN_END = "<!-- CANONICAL-RULE9-END -->"
 
-# Canonical AC-7 quarantine set (plan AC-7 positive test).
+# Canonical notes-taint quarantine set (positive test).
 QUARANTINE_IDS = frozenset({
     "rm-historical-simulation-var",
     "rm-monte-carlo-var",

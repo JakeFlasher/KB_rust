@@ -37,7 +37,7 @@ RECIPE_SCRIPTS = [
     "sources/cfa_legacy/_registry/merge_ingest_manifests.py",
 ]
 RELEASE_DOC = "_research/30_v0_release_and_rebuild_recipe.md"
-# Strings the tag message / release doc must reference (the AC-10 evidence pointers).
+# Strings the tag message / release doc must reference (the release evidence pointers).
 TAG_MUST_REFERENCE = ["scope_ledger", "index_repro"]
 
 

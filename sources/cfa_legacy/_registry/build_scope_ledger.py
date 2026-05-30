@@ -74,7 +74,7 @@ RESOLVED_BLOCKER = "single-source page-offset map built"
 # Cards deferred at baseline (no single-source offset map) and emitted during this
 # stabilization loop once the Pedersen/Cochrane v1 offset maps were built. They live
 # in cards_manifest.json like any active card, but are tracked as a disjoint bucket so
-# the deferred->emitted transition stays auditable (AC-2). Each MUST now be emitted.
+# the deferred->emitted transition stays auditable. Each MUST now be emitted.
 DEFERRED_THEN_EMITTED_IDS: set[str] = {
     "pm-active-management-and-alpha",
     "pm-anomalies-and-cross-sectional-pricing",
@@ -139,7 +139,7 @@ def build_ledger(queue: list[dict], manifest_ids: list[str]) -> tuple[dict, list
     unemitted = queue_ids - manifest_set
 
     # Split the emitted set: cards deferred-at-baseline-but-emitted-this-loop are
-    # tracked separately from the baseline active_emitted set (AC-2). Every id in
+    # tracked separately from the baseline active_emitted set. Every id in
     # DEFERRED_THEN_EMITTED_IDS must be a known legacy card AND actually emitted.
     dte_unknown = sorted(DEFERRED_THEN_EMITTED_IDS - queue_ids)
     if dte_unknown:

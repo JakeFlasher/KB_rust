@@ -406,8 +406,8 @@ def main() -> int:
     if set(ms_ids) != set(MULTI_SOURCE_CARD_IDS):
         raise SystemExit(f"multi-source registry card set drift: {set(ms_ids) ^ set(MULTI_SOURCE_CARD_IDS)}")
 
-    # AC-6 negative test (plan line 68): every single-source offset map must
-    # re-derive each verified_evidence triple and carry >=3 confirmed triples.
+    # Negative test: every single-source offset map must re-derive each
+    # verified_evidence triple and carry >=3 confirmed triples.
     # Validated once up front for both --plan-only and emission.
     validated_maps = {s: validate_single_source_map(s) for s in sorted(SINGLE_SOURCE_MAP_SOURCES)}
 
