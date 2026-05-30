@@ -1718,5 +1718,25 @@
     ],
     "out_dir": "out/cfa_legacy/ingest_per_source/pa_fischer_wermers_2013",
     "source_id": "pa_fischer_wermers_2013"
+  },
+  {
+    "canonical_path": "sources/cfa_legacy/pdfs/14_microstructure_and_trading/mt_ohara_1995_market_microstructure_theory_en.pdf",
+    "command": [
+      "cargo",
+      "run",
+      "-p",
+      "cacg-cli",
+      "--bin",
+      "kb",
+      "--",
+      "ingest",
+      "sources/cfa_legacy/pdfs/14_microstructure_and_trading/mt_ohara_1995_market_microstructure_theory_en.pdf",
+      "--source-id",
+      "mt_ohara_1995_market_microstructure_theory_en",
+      "--out",
+      "out/cfa_legacy/ingest_per_source/mt_ohara_1995_market_microstructure_theory_en"
+    ],
+    "out_dir": "out/cfa_legacy/ingest_per_source/mt_ohara_1995_market_microstructure_theory_en",
+    "source_id": "mt_ohara_1995_market_microstructure_theory_en"
   }
 ]
