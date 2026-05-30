@@ -60,7 +60,7 @@ crates/cacg-cli/out/
 # (they need to capture the Python oracle's exact lock-file behavior).
 /cards/**/*.history.jsonl.lock
 /out/**/*.lint_journal.jsonl.lock
-/sources/cfa_legacy/_registry/v0_baseline/*.lock
+/sources/cfa_legacy/_registry/release_baseline/*.lock
 
 # Cargo build artifacts (Rust port workspace)
 target/

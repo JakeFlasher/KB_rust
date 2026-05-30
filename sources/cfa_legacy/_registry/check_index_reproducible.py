@@ -42,7 +42,7 @@ as-invoked path), NOT filesystem walk order. AC-9 is therefore tested as
 same-input-dir / two-output-dirs, which isolates the comparison from the path prefix.
 
 Writes a DETERMINISTIC proof to
-`sources/cfa_legacy/_registry/v0_baseline/index_repro.json` (frozen hashes + the epoch
+`sources/cfa_legacy/_registry/release_baseline/index_repro.json` (frozen hashes + the epoch
 sentinel + boolean assertions only — never the random wall-clock value, so the
 committed proof is itself byte-stable across runs).
 """
@@ -61,7 +61,7 @@ REPO = Path(__file__).resolve().parents[3]
 KB = REPO / "target/debug/kb"
 CARDS = REPO / "cards/cfa_legacy"
 STAGE = REPO / "out/cfa_legacy/_repro"
-PROOF = REPO / "sources/cfa_legacy/_registry/v0_baseline/index_repro.json"
+PROOF = REPO / "sources/cfa_legacy/_registry/release_baseline/index_repro.json"
 ARTIFACTS = ("cards_manifest.json", "summaries.json", "INDEX.md")
 FROZEN_SENTINEL = "1970-01-01T00:00:00Z"
 PROBE_CARD = "10_behavioral_finance/be-limits-of-arbitrage.md"

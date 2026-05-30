@@ -40,7 +40,7 @@ from typing import Any
 REPO = Path(__file__).resolve().parents[3]
 OUT = REPO / "out/cfa_legacy"
 CARDS_DIR = REPO / "cards/cfa_legacy"
-SCOPE_LEDGER = REPO / "sources/cfa_legacy/_registry/v0_baseline/scope_ledger.json"
+SCOPE_LEDGER = REPO / "sources/cfa_legacy/_registry/release_baseline/scope_ledger.json"
 LEGACY_ROOT = Path(os.environ.get("KB_LEGACY_ROOT", "/home/jakeshea/CFA_reading"))
 LEGACY_CLAUDE_MD = LEGACY_ROOT / "CLAUDE.md"
 # Tracked, in-repo source-of-record for Critical Rule 9 (makes the gate reproducible off

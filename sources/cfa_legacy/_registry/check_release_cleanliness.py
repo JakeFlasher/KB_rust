@@ -117,7 +117,7 @@ def run_checks(*, require_tag: bool) -> list[str]:
     if dirty:
         failures.append(f"worktree is not release-clean (uncommitted changes): {dirty[:10]}")
 
-    # (7) (optional) annotated v0-candidate tag exists, is annotated, references the
+    # (7) (optional) annotated v1-candidate tag exists, is annotated, references the
     # evidence, AND points AT THE RELEASE COMMIT (its target == HEAD). A tag left
     # pointing at an earlier commit must not certify the current worktree.
     if require_tag:
@@ -238,7 +238,7 @@ def _self_test() -> int:
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--require-tag", action="store_true",
-                    help="also require the annotated v0-candidate tag (run after tagging)")
+                    help="also require the annotated v1-candidate tag (run after tagging)")
     ap.add_argument("--self-test", action="store_true")
     args = ap.parse_args()
     if args.self_test:

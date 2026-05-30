@@ -259,7 +259,7 @@ def main() -> int:
                     default=repo / "out/cfa_legacy/cards_manifest.json")
     ap.add_argument("--cards-dir", type=Path, default=repo / "cards/cfa_legacy")
     ap.add_argument("--out", type=Path,
-                    default=repo / "sources/cfa_legacy/_registry/v0_baseline/scope_ledger.json")
+                    default=repo / "sources/cfa_legacy/_registry/release_baseline/scope_ledger.json")
     args = ap.parse_args()
 
     queue = load_queue(args.queue)

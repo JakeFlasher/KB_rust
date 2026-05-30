@@ -25,7 +25,7 @@ finding and no UNACCEPTED oracle finding.
 Every emitted review row and every open-finding row is validated against a fixed
 required-field schema before the artifact is written.
 
-Output: ``v0_baseline/anchor_truth_review.json``.
+Output: ``release_baseline/anchor_truth_review.json``.
 
 Exit codes:
   2  structural failure (coverage incomplete OR a row missing a required field).
@@ -51,9 +51,9 @@ import volume_page_map as vpm  # type: ignore  # noqa: E402  (path injected abov
 CHUNKS_MANIFEST = REPO / "out/cfa_legacy/chunks_manifest.json"
 SOURCE_MATRIX = REPO / "out/cfa_legacy/source_matrix.json"
 CARDS_ROOT = REPO / "cards/cfa_legacy"
-OUT = REGISTRY / "v0_baseline/anchor_truth_review.json"
-SWARM_VERDICTS = REGISTRY / "v0_baseline/anchor_truth_swarm_verdicts.json"
-RESOLUTIONS = REGISTRY / "v0_baseline/anchor_truth_resolutions.json"
+OUT = REGISTRY / "release_baseline/anchor_truth_review.json"
+SWARM_VERDICTS = REGISTRY / "release_baseline/anchor_truth_swarm_verdicts.json"
+RESOLUTIONS = REGISTRY / "release_baseline/anchor_truth_resolutions.json"
 
 REVIEWER = "deterministic-anchor-review/v1"
 MIN_ORACLE_ANCHORS = 3  # AC-5: >=3 re-derived anchors per used map/volume

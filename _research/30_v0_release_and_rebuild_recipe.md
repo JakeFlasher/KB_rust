@@ -33,7 +33,7 @@ total).** All ten acceptance criteria pass, each backed by a re-runnable gate:
 | AC-6 | Active scope = 268 (Pedersen/Cochrane maps re-derived; 5 PM cards) | `emit_09_pm_slice.py --plan-only` + `test_emit_09_validation.py` |
 | AC-7 | Notes-taint quarantine frozen + invariant-checked | `check_quarantine_invariant.py` (gate step [4/4]) |
 | AC-8 | `_research/29` decision ledger (Q1–Q12 + rulings) | `check_decision_ledger.py` |
-| AC-9 | Byte-reproducible frozen index | `check_index_reproducible.py` (+ `v0_baseline/index_repro.json`) |
+| AC-9 | Byte-reproducible frozen index | `check_index_reproducible.py` (+ `release_baseline/index_repro.json`) |
 | AC-10 | Clean, tracked, tagged release | this doc + `check_release_cleanliness.py` |
 
 Constraints honored (per the plan): no re-ingest for v0; no citation-frontmatter schema
@@ -63,7 +63,7 @@ The release is self-describing from version control:
 - **Registry + gates** — `sources/cfa_legacy/_registry/` scripts (scope ledger, anchor
   review, quarantine, decision-ledger, index-repro, release-cleanliness checkers; the
   emitters; curated-citation registries; page-coordinate maps) and the tracked
-  `v0_baseline/` artifacts (`scope_ledger.json`, `index_repro.json`,
+  `release_baseline/` artifacts (`scope_ledger.json`, `index_repro.json`,
   `lint_journal_baseline.jsonl`, `verify_baseline_tally.json`,
   `anchor_truth_review.json` + resolutions/verdicts).
 - **Decision records** — `_research/23`–`_research/29` (bootstrap → decision ledger) and
@@ -134,12 +134,12 @@ content-addressed cards + manifests, not in git ancestry.
 
 ## Reproducibility & scope evidence
 
-- **Byte-reproducible index (AC-9):** `sources/cfa_legacy/_registry/v0_baseline/index_repro.json`
+- **Byte-reproducible index (AC-9):** `sources/cfa_legacy/_registry/release_baseline/index_repro.json`
   — two `KB_FROZEN_CLOCK=1 kb index` runs over the same input are byte-identical for
   `cards_manifest.json` / `summaries.json` / `INDEX.md`; the published artifacts are
   clock-invariant; the frozen clock is load-bearing on the audit sidecar. Re-derive with
   `check_index_reproducible.py`.
-- **Scope reconciliation (AC-2):** `sources/cfa_legacy/_registry/v0_baseline/scope_ledger.json`
+- **Scope reconciliation (AC-2):** `sources/cfa_legacy/_registry/release_baseline/scope_ledger.json`
   — active_emitted 263 + active_deferred_then_emitted_this_loop 5 + quarantined 6 +
   excluded 0 = 274; disk == manifest == sidecars == 268 active. Re-derive with
   `build_scope_ledger.py`.
