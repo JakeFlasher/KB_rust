@@ -28867,6 +28867,1812 @@
       "target_path": "cards/cfa_legacy/17_cross_cutting/cc-standard-vii-responsibilities-as-cfa-institute-member-or-candidate.md",
       "title": "Standard VII Responsibilities as a CFA Institute Member or CFA Candidate",
       "unauthorized_source_ids": []
+    },
+    {
+      "card_id": "fa-amihud-mendelson-and-priced-liquidity-risk",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "22_fund_level_arbitrage",
+      "source_ids": [
+        "fa_vandermerwe_2015_market_liquidity_risk"
+      ],
+      "target_path": "cards/cfa_legacy/22_fund_level_arbitrage/fa-amihud-mendelson-and-priced-liquidity-risk.md",
+      "title": "Amihud-Mendelson & Priced Liquidity Risk: Level Premium + the LCAPM"
+    },
+    {
+      "card_id": "fa-dual-rail-pricing-nav-vs-market",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "22_fund_level_arbitrage",
+      "source_ids": [
+        "fa_hill_2025_cfa_rf_etfs_2e"
+      ],
+      "target_path": "cards/cfa_legacy/22_fund_level_arbitrage/fa-dual-rail-pricing-nav-vs-market.md",
+      "title": "Dual-Rail Pricing: NAV vs Market Price"
+    },
+    {
+      "card_id": "fa-etf-creation-redemption-arbitrage-band",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "22_fund_level_arbitrage",
+      "source_ids": [
+        "fa_hill_2025_cfa_rf_etfs_2e",
+        "fa_madhavan_2016_etfs_new_dynamics"
+      ],
+      "target_path": "cards/cfa_legacy/22_fund_level_arbitrage/fa-etf-creation-redemption-arbitrage-band.md",
+      "title": "The ETF Creation-Redemption Arbitrage Band: Why Price Tracks NAV"
+    },
+    {
+      "card_id": "fa-etf-creation-redemption-mechanism",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "22_fund_level_arbitrage",
+      "source_ids": [
+        "fa_hill_2025_cfa_rf_etfs_2e"
+      ],
+      "target_path": "cards/cfa_legacy/22_fund_level_arbitrage/fa-etf-creation-redemption-mechanism.md",
+      "title": "The ETF Creation-Redemption Mechanism"
+    },
+    {
+      "card_id": "fa-etf-spread-below-basket-adverse-selection",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "22_fund_level_arbitrage",
+      "source_ids": [
+        "fa_madhavan_2016_etfs_new_dynamics"
+      ],
+      "target_path": "cards/cfa_legacy/22_fund_level_arbitrage/fa-etf-spread-below-basket-adverse-selection.md",
+      "title": "Why the ETF Spread Sits Below the Basket Spread: Diversified Adverse Selection"
+    },
+    {
+      "card_id": "fa-etf-vs-cef-premium-discount",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "22_fund_level_arbitrage",
+      "source_ids": [
+        "fa_abner_2016_etf_handbook",
+        "fa_hill_2025_cfa_rf_etfs_2e"
+      ],
+      "target_path": "cards/cfa_legacy/22_fund_level_arbitrage/fa-etf-vs-cef-premium-discount.md",
+      "title": "ETF vs Closed-End-Fund Premium/Discount: Transient vs Persistent"
+    },
+    {
+      "card_id": "fa-etp-taxonomy-and-legal-structures",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "22_fund_level_arbitrage",
+      "source_ids": [
+        "fa_abner_2016_etf_handbook"
+      ],
+      "target_path": "cards/cfa_legacy/22_fund_level_arbitrage/fa-etp-taxonomy-and-legal-structures.md",
+      "title": "ETP Taxonomy: ETF vs ETN vs ETV/ETC & Legal Wrappers"
+    },
+    {
+      "card_id": "fa-funding-spirals-and-fire-sales",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "22_fund_level_arbitrage",
+      "source_ids": [
+        "fa_madhavan_2016_etfs_new_dynamics",
+        "fa_vandermerwe_2015_market_liquidity_risk"
+      ],
+      "target_path": "cards/cfa_legacy/22_fund_level_arbitrage/fa-funding-spirals-and-fire-sales.md",
+      "title": "Funding & Market-Liquidity Spirals and Fire Sales"
+    },
+    {
+      "card_id": "fa-iiv-iopv-intraday-fair-value",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "22_fund_level_arbitrage",
+      "source_ids": [
+        "fa_abner_2016_etf_handbook",
+        "fa_madhavan_2016_etfs_new_dynamics"
+      ],
+      "target_path": "cards/cfa_legacy/22_fund_level_arbitrage/fa-iiv-iopv-intraday-fair-value.md",
+      "title": "IIV / iNAV / IOPV: The Intraday Fair-Value Signal"
+    },
+    {
+      "card_id": "fa-illiquidity-discount-and-crisis-amplification",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "22_fund_level_arbitrage",
+      "source_ids": [
+        "fa_vandermerwe_2015_market_liquidity_risk"
+      ],
+      "target_path": "cards/cfa_legacy/22_fund_level_arbitrage/fa-illiquidity-discount-and-crisis-amplification.md",
+      "title": "The Illiquidity Discount & Crisis Amplification"
+    },
+    {
+      "card_id": "fa-in-kind-basket-design-and-fees",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "22_fund_level_arbitrage",
+      "source_ids": [
+        "fa_abner_2016_etf_handbook",
+        "fa_hill_2025_cfa_rf_etfs_2e"
+      ],
+      "target_path": "cards/cfa_legacy/22_fund_level_arbitrage/fa-in-kind-basket-design-and-fees.md",
+      "title": "In-Kind Basket Design, Custom Baskets & Creation Fees"
+    },
+    {
+      "card_id": "fa-international-price-discovery-and-enav",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "22_fund_level_arbitrage",
+      "source_ids": [
+        "fa_abner_2016_etf_handbook",
+        "fa_hill_2015_cfa_rf_etfs_1e"
+      ],
+      "target_path": "cards/cfa_legacy/22_fund_level_arbitrage/fa-international-price-discovery-and-enav.md",
+      "title": "International ETFs: Price Discovery When the Underlying Market Is Closed"
+    },
+    {
+      "card_id": "fa-limits-to-arbitrage-when-creation-channel-breaks",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "22_fund_level_arbitrage",
+      "source_ids": [
+        "fa_abner_2016_etf_handbook",
+        "fa_madhavan_2016_etfs_new_dynamics"
+      ],
+      "target_path": "cards/cfa_legacy/22_fund_level_arbitrage/fa-limits-to-arbitrage-when-creation-channel-breaks.md",
+      "title": "When the Creation Channel Breaks: an Open-End Fund Trades Like a CEF"
+    },
+    {
+      "card_id": "fa-liquidity-adjusted-var",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "22_fund_level_arbitrage",
+      "source_ids": [
+        "fa_vandermerwe_2015_market_liquidity_risk"
+      ],
+      "target_path": "cards/cfa_legacy/22_fund_level_arbitrage/fa-liquidity-adjusted-var.md",
+      "title": "Liquidity-Adjusted VaR: Splitting Out the Liquidation Cost"
+    },
+    {
+      "card_id": "fa-liquidity-measurement-and-price-impact",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "22_fund_level_arbitrage",
+      "source_ids": [
+        "fa_madhavan_2016_etfs_new_dynamics",
+        "fa_vandermerwe_2015_market_liquidity_risk"
+      ],
+      "target_path": "cards/cfa_legacy/22_fund_level_arbitrage/fa-liquidity-measurement-and-price-impact.md",
+      "title": "Measuring Liquidity & Price Impact: Roll, Kyle, Amihud"
+    },
+    {
+      "card_id": "fa-market-impact-transaction-costs-and-turbulence-breakdown",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "22_fund_level_arbitrage",
+      "source_ids": [
+        "fa_madhavan_2016_etfs_new_dynamics",
+        "fa_weiner_2021_etf_portfolio"
+      ],
+      "target_path": "cards/cfa_legacy/22_fund_level_arbitrage/fa-market-impact-transaction-costs-and-turbulence-breakdown.md",
+      "title": "Market Impact, Best-Execution Tension & Turbulence Breakdown"
+    },
+    {
+      "card_id": "fa-market-liquidity-dimensions-and-no-arbitrage",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "22_fund_level_arbitrage",
+      "source_ids": [
+        "fa_vandermerwe_2015_market_liquidity_risk"
+      ],
+      "target_path": "cards/cfa_legacy/22_fund_level_arbitrage/fa-market-liquidity-dimensions-and-no-arbitrage.md",
+      "title": "Market-Liquidity Dimensions (Tightness, Depth, Resiliency) & the No-Arbitrage Baseline"
+    },
+    {
+      "card_id": "fa-nav-staleness-and-arbitrage-speed",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "22_fund_level_arbitrage",
+      "source_ids": [
+        "fa_madhavan_2016_etfs_new_dynamics"
+      ],
+      "target_path": "cards/cfa_legacy/22_fund_level_arbitrage/fa-nav-staleness-and-arbitrage-speed.md",
+      "title": "NAV Staleness & Arbitrage Speed: phi, psi and the Mean-Reversion Half-Life"
+    },
+    {
+      "card_id": "fa-pcf-cash-and-fund-seeding",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "22_fund_level_arbitrage",
+      "source_ids": [
+        "fa_abner_2016_etf_handbook",
+        "fa_weiner_2021_etf_portfolio"
+      ],
+      "target_path": "cards/cfa_legacy/22_fund_level_arbitrage/fa-pcf-cash-and-fund-seeding.md",
+      "title": "The Portfolio Composition File, the Cash DOF & Fund Seeding"
+    },
+    {
+      "card_id": "fa-premium-decomposition-and-estimation",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "22_fund_level_arbitrage",
+      "source_ids": [
+        "fa_madhavan_2016_etfs_new_dynamics"
+      ],
+      "target_path": "cards/cfa_legacy/22_fund_level_arbitrage/fa-premium-decomposition-and-estimation.md",
+      "title": "Premium Decomposition: Price Discovery vs Transitory Liquidity"
+    },
+    {
+      "card_id": "fa-search-bargaining-liquidity-premium",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "22_fund_level_arbitrage",
+      "source_ids": [
+        "fa_vandermerwe_2015_market_liquidity_risk"
+      ],
+      "target_path": "cards/cfa_legacy/22_fund_level_arbitrage/fa-search-bargaining-liquidity-premium.md",
+      "title": "Search & Bargaining in OTC Markets: Endogenous Liquidity Premia"
+    },
+    {
+      "card_id": "fa-settlement-clearing-and-cascading-shorts",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "22_fund_level_arbitrage",
+      "source_ids": [
+        "fa_hill_2015_cfa_rf_etfs_1e",
+        "fa_hill_2025_cfa_rf_etfs_2e"
+      ],
+      "target_path": "cards/cfa_legacy/22_fund_level_arbitrage/fa-settlement-clearing-and-cascading-shorts.md",
+      "title": "Settlement, Clearing & the Cascading-Shorts Daisy Chain"
+    },
+    {
+      "card_id": "fa-shleifer-vishny-limits-to-arbitrage",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "22_fund_level_arbitrage",
+      "source_ids": [
+        "fa_vandermerwe_2015_market_liquidity_risk"
+      ],
+      "target_path": "cards/cfa_legacy/22_fund_level_arbitrage/fa-shleifer-vishny-limits-to-arbitrage.md",
+      "title": "Shleifer-Vishny Limits to Arbitrage: Performance-Sensitive Capital"
+    },
+    {
+      "card_id": "fa-tracking-error-attribution-and-tco",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "22_fund_level_arbitrage",
+      "source_ids": [
+        "fa_madhavan_2016_etfs_new_dynamics",
+        "fa_weiner_2021_etf_portfolio"
+      ],
+      "target_path": "cards/cfa_legacy/22_fund_level_arbitrage/fa-tracking-error-attribution-and-tco.md",
+      "title": "Tracking Difference vs Error & Total Cost of Ownership"
+    },
+    {
+      "card_id": "fa-true-vs-reported-premium-price-discovery-share",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "22_fund_level_arbitrage",
+      "source_ids": [
+        "fa_madhavan_2016_etfs_new_dynamics"
+      ],
+      "target_path": "cards/cfa_legacy/22_fund_level_arbitrage/fa-true-vs-reported-premium-price-discovery-share.md",
+      "title": "True vs Reported Premium & the Price-Discovery Share"
+    },
+    {
+      "card_id": "fa-volume-neq-liquidity-idts-ebils-components",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "22_fund_level_arbitrage",
+      "source_ids": [
+        "fa_abner_2016_etf_handbook",
+        "fa_hill_2015_cfa_rf_etfs_1e"
+      ],
+      "target_path": "cards/cfa_legacy/22_fund_level_arbitrage/fa-volume-neq-liquidity-idts-ebils-components.md",
+      "title": "Volume != Liquidity: Implied Liquidity, IDTS & the EBILS Grid"
+    },
+    {
+      "card_id": "mt-adverse-selection-short-term-alpha",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "14_microstructure_and_trading",
+      "source_ids": [
+        "mt_cartea_jaimungal_penalva_2015_algorithmic_hf_trading"
+      ],
+      "target_path": "cards/cfa_legacy/14_microstructure_and_trading/mt-adverse-selection-short-term-alpha.md",
+      "title": "Market Making with Adverse Selection and Short-Term Alpha"
+    },
+    {
+      "card_id": "mt-almgren-chriss-optimal-execution",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "14_microstructure_and_trading",
+      "source_ids": [
+        "mt_cartea_jaimungal_penalva_2015_algorithmic_hf_trading"
+      ],
+      "target_path": "cards/cfa_legacy/14_microstructure_and_trading/mt-almgren-chriss-optimal-execution.md",
+      "title": "Almgren-Chriss Optimal Execution: Temporary vs Permanent Impact and the Urgency Trade-off"
+    },
+    {
+      "card_id": "mt-avellaneda-stoikov-market-making",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "14_microstructure_and_trading",
+      "source_ids": [
+        "mt_cartea_jaimungal_penalva_2015_algorithmic_hf_trading"
+      ],
+      "target_path": "cards/cfa_legacy/14_microstructure_and_trading/mt-avellaneda-stoikov-market-making.md",
+      "title": "Dynamic Market Making under Inventory Risk: Optimal Bid/Ask Depth Postings"
+    },
+    {
+      "card_id": "mt-bayesian-learning-price-discovery",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "14_microstructure_and_trading",
+      "source_ids": [
+        "mt_foucault_pagano_roell_2013",
+        "mt_ohara_1995_market_microstructure_theory_en"
+      ],
+      "target_path": "cards/cfa_legacy/14_microstructure_and_trading/mt-bayesian-learning-price-discovery.md",
+      "title": "Bayesian Learning and Price Discovery: Quotes Converge to Full-Information Value"
+    },
+    {
+      "card_id": "mt-bid-ask-spread-immediacy-price",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "14_microstructure_and_trading",
+      "source_ids": [
+        "mt_foucault_pagano_roell_2013",
+        "mt_harris_2003_trading_and_exchanges"
+      ],
+      "target_path": "cards/cfa_legacy/14_microstructure_and_trading/mt-bid-ask-spread-immediacy-price.md",
+      "title": "The Bid-Ask Spread as the Price of Immediacy"
+    },
+    {
+      "card_id": "mt-block-trader-upstairs-depth",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "14_microstructure_and_trading",
+      "source_ids": [
+        "mt_harris_2003_trading_and_exchanges"
+      ],
+      "target_path": "cards/cfa_legacy/14_microstructure_and_trading/mt-block-trader-upstairs-depth.md",
+      "title": "Block Traders and Upstairs Markets: Supplying Depth to Large Orders"
+    },
+    {
+      "card_id": "mt-bubbles-crashes-circuit-breakers",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "14_microstructure_and_trading",
+      "source_ids": [
+        "mt_foucault_pagano_roell_2013",
+        "mt_harris_2003_trading_and_exchanges"
+      ],
+      "target_path": "cards/cfa_legacy/14_microstructure_and_trading/mt-bubbles-crashes-circuit-breakers.md",
+      "title": "Bubbles, Crashes, and Circuit Breakers: Volatility Interruptions"
+    },
+    {
+      "card_id": "mt-buy-side-trader-best-execution",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "14_microstructure_and_trading",
+      "source_ids": [
+        "mt_cartea_jaimungal_penalva_2015_algorithmic_hf_trading",
+        "mt_harris_2003_trading_and_exchanges"
+      ],
+      "target_path": "cards/cfa_legacy/14_microstructure_and_trading/mt-buy-side-trader-best-execution.md",
+      "title": "Buy-Side Traders and the Best-Execution Mandate"
+    },
+    {
+      "card_id": "mt-call-vs-continuous-auction",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "14_microstructure_and_trading",
+      "source_ids": [
+        "mt_harris_2003_trading_and_exchanges"
+      ],
+      "target_path": "cards/cfa_legacy/14_microstructure_and_trading/mt-call-vs-continuous-auction.md",
+      "title": "Call (Single-Price) vs Continuous Auctions and Pricing Rules"
+    },
+    {
+      "card_id": "mt-competition-within-among-markets",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "14_microstructure_and_trading",
+      "source_ids": [
+        "mt_foucault_pagano_roell_2013",
+        "mt_harris_2003_trading_and_exchanges"
+      ],
+      "target_path": "cards/cfa_legacy/14_microstructure_and_trading/mt-competition-within-among-markets.md",
+      "title": "Competition Within and Among Markets: Floor vs Automated Trading Systems"
+    },
+    {
+      "card_id": "mt-dealer-inventory-control-price-discovery",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "14_microstructure_and_trading",
+      "source_ids": [
+        "mt_harris_2003_trading_and_exchanges"
+      ],
+      "target_path": "cards/cfa_legacy/14_microstructure_and_trading/mt-dealer-inventory-control-price-discovery.md",
+      "title": "Dealer Inventory Control and the Price-Discovery Process"
+    },
+    {
+      "card_id": "mt-dealer-inventory-problem-spread",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "14_microstructure_and_trading",
+      "source_ids": [
+        "mt_foucault_pagano_roell_2013",
+        "mt_ohara_1995_market_microstructure_theory_en"
+      ],
+      "target_path": "cards/cfa_legacy/14_microstructure_and_trading/mt-dealer-inventory-problem-spread.md",
+      "title": "The Dealer's Inventory Problem: Bid-Ask Spread as Inventory-Risk Compensation"
+    },
+    {
+      "card_id": "mt-effective-cost-trade-benchmark",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "14_microstructure_and_trading",
+      "source_ids": [
+        "mt_harris_2003_trading_and_exchanges",
+        "mt_hasbrouck_2007_empirical_market_microstructure"
+      ],
+      "target_path": "cards/cfa_legacy/14_microstructure_and_trading/mt-effective-cost-trade-benchmark.md",
+      "title": "Effective Cost and Transaction-Cost Benchmark Taxonomy"
+    },
+    {
+      "card_id": "mt-empirical-determinants-illiquidity",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "14_microstructure_and_trading",
+      "source_ids": [
+        "mt_foucault_pagano_roell_2013",
+        "mt_hasbrouck_2007_empirical_market_microstructure"
+      ],
+      "target_path": "cards/cfa_legacy/14_microstructure_and_trading/mt-empirical-determinants-illiquidity.md",
+      "title": "Estimating the Determinants of Market Illiquidity: Structural vs Reduced-Form"
+    },
+    {
+      "card_id": "mt-execution-systems-quote-vs-order-driven",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "14_microstructure_and_trading",
+      "source_ids": [
+        "mt_foucault_pagano_roell_2013",
+        "mt_harris_2003_trading_and_exchanges"
+      ],
+      "target_path": "cards/cfa_legacy/14_microstructure_and_trading/mt-execution-systems-quote-vs-order-driven.md",
+      "title": "Execution Systems: Quote-Driven vs Order-Driven vs Brokered Markets"
+    },
+    {
+      "card_id": "mt-funding-liquidity-fire-sales",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "14_microstructure_and_trading",
+      "source_ids": [
+        "mt_foucault_pagano_roell_2013"
+      ],
+      "target_path": "cards/cfa_legacy/14_microstructure_and_trading/mt-funding-liquidity-fire-sales.md",
+      "title": "Funding Liquidity, Fire Sales, and Limits to Arbitrage"
+    },
+    {
+      "card_id": "mt-garman-order-flow-temporal-microstructure",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "14_microstructure_and_trading",
+      "source_ids": [
+        "mt_ohara_1995_market_microstructure_theory_en"
+      ],
+      "target_path": "cards/cfa_legacy/14_microstructure_and_trading/mt-garman-order-flow-temporal-microstructure.md",
+      "title": "Garman Order-Flow Foundation: Stochastic Arrival and Temporal Microstructure"
+    },
+    {
+      "card_id": "mt-generalized-roll-spread-decomposition",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "14_microstructure_and_trading",
+      "source_ids": [
+        "mt_hasbrouck_2007_empirical_market_microstructure"
+      ],
+      "target_path": "cards/cfa_legacy/14_microstructure_and_trading/mt-generalized-roll-spread-decomposition.md",
+      "title": "Generalized Roll Model: Decomposing the Spread into Adverse-Selection and Cost Components"
+    },
+    {
+      "card_id": "mt-glosten-milgrom-adverse-selection",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "14_microstructure_and_trading",
+      "source_ids": [
+        "mt_foucault_pagano_roell_2013",
+        "mt_ohara_1995_market_microstructure_theory_en"
+      ],
+      "target_path": "cards/cfa_legacy/14_microstructure_and_trading/mt-glosten-milgrom-adverse-selection.md",
+      "title": "The Glosten-Milgrom Sequential-Trade Model: Spread from Adverse Selection"
+    },
+    {
+      "card_id": "mt-grossman-miller-inventory-liquidity-premium",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "14_microstructure_and_trading",
+      "source_ids": [
+        "mt_cartea_jaimungal_penalva_2015_algorithmic_hf_trading"
+      ],
+      "target_path": "cards/cfa_legacy/14_microstructure_and_trading/mt-grossman-miller-inventory-liquidity-premium.md",
+      "title": "Grossman-Miller Market Making: Inventory Risk and the Liquidity Premium"
+    },
+    {
+      "card_id": "mt-hasbrouck-var-trades-quotes",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "14_microstructure_and_trading",
+      "source_ids": [
+        "mt_hasbrouck_2007_empirical_market_microstructure"
+      ],
+      "target_path": "cards/cfa_legacy/14_microstructure_and_trading/mt-hasbrouck-var-trades-quotes.md",
+      "title": "Hasbrouck VAR: Vector Autoregression of Trades and Quotes"
+    },
+    {
+      "card_id": "mt-implementation-shortfall",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "14_microstructure_and_trading",
+      "source_ids": [
+        "mt_hasbrouck_2007_empirical_market_microstructure"
+      ],
+      "target_path": "cards/cfa_legacy/14_microstructure_and_trading/mt-implementation-shortfall.md",
+      "title": "Implementation Shortfall: The Master Measure of Trading Cost"
+    },
+    {
+      "card_id": "mt-index-portfolio-markets-design",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "14_microstructure_and_trading",
+      "source_ids": [
+        "mt_harris_2003_trading_and_exchanges",
+        "mt_hasbrouck_2007_empirical_market_microstructure"
+      ],
+      "target_path": "cards/cfa_legacy/14_microstructure_and_trading/mt-index-portfolio-markets-design.md",
+      "title": "Index and Portfolio Markets: Index Construction and ETF/Index-Product Design"
+    },
+    {
+      "card_id": "mt-information-shares-price-discovery",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "14_microstructure_and_trading",
+      "source_ids": [
+        "mt_hasbrouck_2007_empirical_market_microstructure"
+      ],
+      "target_path": "cards/cfa_legacy/14_microstructure_and_trading/mt-information-shares-price-discovery.md",
+      "title": "Information Shares: Where Price Discovery Happens Across Venues"
+    },
+    {
+      "card_id": "mt-informed-traders-price-efficiency",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "14_microstructure_and_trading",
+      "source_ids": [
+        "mt_harris_2003_trading_and_exchanges"
+      ],
+      "target_path": "cards/cfa_legacy/14_microstructure_and_trading/mt-informed-traders-price-efficiency.md",
+      "title": "Informed Traders, Fundamental Value, and Price Efficiency"
+    },
+    {
+      "card_id": "mt-insider-trading-policy",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "14_microstructure_and_trading",
+      "source_ids": [
+        "mt_harris_2003_trading_and_exchanges"
+      ],
+      "target_path": "cards/cfa_legacy/14_microstructure_and_trading/mt-insider-trading-policy.md",
+      "title": "Insider Trading: Adverse Selection, Market Quality, and Policy"
+    },
+    {
+      "card_id": "mt-institutional-setting-market-types",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "14_microstructure_and_trading",
+      "source_ids": [
+        "mt_foucault_pagano_roell_2013"
+      ],
+      "target_path": "cards/cfa_legacy/14_microstructure_and_trading/mt-institutional-setting-market-types.md",
+      "title": "The Institutional Setting: Limit-Order, Dealer, and Hybrid Markets"
+    },
+    {
+      "card_id": "mt-internalization-preferencing-crossing",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "14_microstructure_and_trading",
+      "source_ids": [
+        "mt_foucault_pagano_roell_2013",
+        "mt_harris_2003_trading_and_exchanges"
+      ],
+      "target_path": "cards/cfa_legacy/14_microstructure_and_trading/mt-internalization-preferencing-crossing.md",
+      "title": "Internalization, Preferencing, and Crossing Networks"
+    },
+    {
+      "card_id": "mt-inventory-prices-competitive-markets",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "14_microstructure_and_trading",
+      "source_ids": [
+        "mt_foucault_pagano_roell_2013",
+        "mt_ohara_1995_market_microstructure_theory_en"
+      ],
+      "target_path": "cards/cfa_legacy/14_microstructure_and_trading/mt-inventory-prices-competitive-markets.md",
+      "title": "Prices and Inventories in Competitive Dealer Markets"
+    },
+    {
+      "card_id": "mt-kyle-lambda-market-depth-price-impact",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "14_microstructure_and_trading",
+      "source_ids": [
+        "mt_foucault_pagano_roell_2013",
+        "mt_ohara_1995_market_microstructure_theory_en"
+      ],
+      "target_path": "cards/cfa_legacy/14_microstructure_and_trading/mt-kyle-lambda-market-depth-price-impact.md",
+      "title": "Kyle's Lambda: Linear Price Impact and Market Depth (1/lambda)"
+    },
+    {
+      "card_id": "mt-kyle-strategic-informed-trader-lambda",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "14_microstructure_and_trading",
+      "source_ids": [
+        "mt_foucault_pagano_roell_2013",
+        "mt_ohara_1995_market_microstructure_theory_en"
+      ],
+      "target_path": "cards/cfa_legacy/14_microstructure_and_trading/mt-kyle-strategic-informed-trader-lambda.md",
+      "title": "The Kyle (1985) Model: Strategic Informed Trader, Noise Traders, and Camouflage"
+    },
+    {
+      "card_id": "mt-limit-order-book-equilibrium",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "14_microstructure_and_trading",
+      "source_ids": [
+        "mt_foucault_pagano_roell_2013"
+      ],
+      "target_path": "cards/cfa_legacy/14_microstructure_and_trading/mt-limit-order-book-equilibrium.md",
+      "title": "Limit Order Book Markets: The Limit-vs-Market Order Choice as an Option"
+    },
+    {
+      "card_id": "mt-limit-order-book-mechanics",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "14_microstructure_and_trading",
+      "source_ids": [
+        "mt_cartea_jaimungal_penalva_2015_algorithmic_hf_trading"
+      ],
+      "target_path": "cards/cfa_legacy/14_microstructure_and_trading/mt-limit-order-book-mechanics.md",
+      "title": "Limit Order Book Mechanics: Price-Time Priority, Walking the Book, and Maker-Taker Fees"
+    },
+    {
+      "card_id": "mt-liquidity-adjusted-capm",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "14_microstructure_and_trading",
+      "source_ids": [
+        "mt_foucault_pagano_roell_2013"
+      ],
+      "target_path": "cards/cfa_legacy/14_microstructure_and_trading/mt-liquidity-adjusted-capm.md",
+      "title": "Liquidity-Adjusted CAPM: Net Returns and the Three Liquidity Betas"
+    },
+    {
+      "card_id": "mt-liquidity-depth-immediacy-width",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "14_microstructure_and_trading",
+      "source_ids": [
+        "mt_foucault_pagano_roell_2013",
+        "mt_harris_2003_trading_and_exchanges"
+      ],
+      "target_path": "cards/cfa_legacy/14_microstructure_and_trading/mt-liquidity-depth-immediacy-width.md",
+      "title": "Liquidity as a Bilateral Search Problem: Depth, Immediacy, Width"
+    },
+    {
+      "card_id": "mt-liquidity-feedback-corporate-investment",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "14_microstructure_and_trading",
+      "source_ids": [
+        "mt_foucault_pagano_roell_2013"
+      ],
+      "target_path": "cards/cfa_legacy/14_microstructure_and_trading/mt-liquidity-feedback-corporate-investment.md",
+      "title": "Feedback from Secondary-Market Liquidity to Real Investment and Corporate Policy"
+    },
+    {
+      "card_id": "mt-liquidity-measures-spread-depth-resiliency",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "14_microstructure_and_trading",
+      "source_ids": [
+        "mt_foucault_pagano_roell_2013"
+      ],
+      "target_path": "cards/cfa_legacy/14_microstructure_and_trading/mt-liquidity-measures-spread-depth-resiliency.md",
+      "title": "Measuring Liquidity: Quoted, Effective, and Realized Spread; Depth; Resiliency"
+    },
+    {
+      "card_id": "mt-liquidity-nature-provision-return",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "14_microstructure_and_trading",
+      "source_ids": [
+        "mt_foucault_pagano_roell_2013",
+        "mt_ohara_1995_market_microstructure_theory_en"
+      ],
+      "target_path": "cards/cfa_legacy/14_microstructure_and_trading/mt-liquidity-nature-provision-return.md",
+      "title": "The Nature of Liquidity and the Return to Liquidity Provision"
+    },
+    {
+      "card_id": "mt-liquidity-premium-asset-pricing",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "14_microstructure_and_trading",
+      "source_ids": [
+        "mt_foucault_pagano_roell_2013"
+      ],
+      "target_path": "cards/cfa_legacy/14_microstructure_and_trading/mt-liquidity-premium-asset-pricing.md",
+      "title": "Liquidity and Asset Prices: The Illiquidity Premium and the Clientele Effect"
+    },
+    {
+      "card_id": "mt-liquidity-supplier-taxonomy",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "14_microstructure_and_trading",
+      "source_ids": [
+        "mt_harris_2003_trading_and_exchanges"
+      ],
+      "target_path": "cards/cfa_legacy/14_microstructure_and_trading/mt-liquidity-supplier-taxonomy.md",
+      "title": "Liquidity-Supplier Taxonomy: Five Types of Liquidity Providers"
+    },
+    {
+      "card_id": "mt-lit-dark-pool-optimal-execution",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "14_microstructure_and_trading",
+      "source_ids": [
+        "mt_cartea_jaimungal_penalva_2015_algorithmic_hf_trading",
+        "mt_harris_2003_trading_and_exchanges"
+      ],
+      "target_path": "cards/cfa_legacy/14_microstructure_and_trading/mt-lit-dark-pool-optimal-execution.md",
+      "title": "Optimal Execution Across Lit and Dark Venues with Order-Flow Trends"
+    },
+    {
+      "card_id": "mt-market-fragmentation",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "14_microstructure_and_trading",
+      "source_ids": [
+        "mt_foucault_pagano_roell_2013",
+        "mt_harris_2003_trading_and_exchanges"
+      ],
+      "target_path": "cards/cfa_legacy/14_microstructure_and_trading/mt-market-fragmentation.md",
+      "title": "Market Fragmentation vs Consolidation and Liquidity Externalities"
+    },
+    {
+      "card_id": "mt-market-impact-price-concession",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "14_microstructure_and_trading",
+      "source_ids": [
+        "mt_cartea_jaimungal_penalva_2015_algorithmic_hf_trading",
+        "mt_harris_2003_trading_and_exchanges"
+      ],
+      "target_path": "cards/cfa_legacy/14_microstructure_and_trading/mt-market-impact-price-concession.md",
+      "title": "Market Impact and Price Concession on Large Orders"
+    },
+    {
+      "card_id": "mt-market-manipulation-bluffing",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "14_microstructure_and_trading",
+      "source_ids": [
+        "mt_harris_2003_trading_and_exchanges"
+      ],
+      "target_path": "cards/cfa_legacy/14_microstructure_and_trading/mt-market-manipulation-bluffing.md",
+      "title": "Market Manipulation: Bluffing, Rumormongering, and Painting the Tape"
+    },
+    {
+      "card_id": "mt-market-quality-volatility-origins",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "14_microstructure_and_trading",
+      "source_ids": [
+        "mt_cartea_jaimungal_penalva_2015_algorithmic_hf_trading",
+        "mt_harris_2003_trading_and_exchanges"
+      ],
+      "target_path": "cards/cfa_legacy/14_microstructure_and_trading/mt-market-quality-volatility-origins.md",
+      "title": "The Origins of Volatility and Market Quality"
+    },
+    {
+      "card_id": "mt-market-transparency-dark-pools",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "14_microstructure_and_trading",
+      "source_ids": [
+        "mt_foucault_pagano_roell_2013",
+        "mt_harris_2003_trading_and_exchanges"
+      ],
+      "target_path": "cards/cfa_legacy/14_microstructure_and_trading/mt-market-transparency-dark-pools.md",
+      "title": "Market Transparency, Dark Pools, and the Transparency-Liquidity Tradeoff"
+    },
+    {
+      "card_id": "mt-market-viability-no-trade-breakdown",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "14_microstructure_and_trading",
+      "source_ids": [
+        "mt_foucault_pagano_roell_2013",
+        "mt_ohara_1995_market_microstructure_theory_en"
+      ],
+      "target_path": "cards/cfa_legacy/14_microstructure_and_trading/mt-market-viability-no-trade-breakdown.md",
+      "title": "Market Viability: When Adverse Selection Causes Market Breakdown"
+    },
+    {
+      "card_id": "mt-microprice-midprice-spread",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "14_microstructure_and_trading",
+      "source_ids": [
+        "mt_cartea_jaimungal_penalva_2015_algorithmic_hf_trading"
+      ],
+      "target_path": "cards/cfa_legacy/14_microstructure_and_trading/mt-microprice-midprice-spread.md",
+      "title": "Midprice, Microprice, Quoted Spread and Market-Quality Measures"
+    },
+    {
+      "card_id": "mt-microstructure-scope-price-formation",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "14_microstructure_and_trading",
+      "source_ids": [
+        "mt_foucault_pagano_roell_2013",
+        "mt_ohara_1995_market_microstructure_theory_en"
+      ],
+      "target_path": "cards/cfa_legacy/14_microstructure_and_trading/mt-microstructure-scope-price-formation.md",
+      "title": "Market Microstructure: Studying How Prices Form Under Explicit Trading Rules"
+    },
+    {
+      "card_id": "mt-multiple-informed-traders-competition",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "14_microstructure_and_trading",
+      "source_ids": [
+        "mt_foucault_pagano_roell_2013",
+        "mt_ohara_1995_market_microstructure_theory_en"
+      ],
+      "target_path": "cards/cfa_legacy/14_microstructure_and_trading/mt-multiple-informed-traders-competition.md",
+      "title": "Multiple Informed Traders and Competition Among the Informed"
+    },
+    {
+      "card_id": "mt-order-anticipators-front-running",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "14_microstructure_and_trading",
+      "source_ids": [
+        "mt_harris_2003_trading_and_exchanges"
+      ],
+      "target_path": "cards/cfa_legacy/14_microstructure_and_trading/mt-order-anticipators-front-running.md",
+      "title": "Order Anticipators: Front-Running and Parasitic Trading"
+    },
+    {
+      "card_id": "mt-order-flow-information-content",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "14_microstructure_and_trading",
+      "source_ids": [
+        "mt_foucault_pagano_roell_2013",
+        "mt_ohara_1995_market_microstructure_theory_en"
+      ],
+      "target_path": "cards/cfa_legacy/14_microstructure_and_trading/mt-order-flow-information-content.md",
+      "title": "Adverse Selection and the Information Content of Trades"
+    },
+    {
+      "card_id": "mt-order-imbalance-signal",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "14_microstructure_and_trading",
+      "source_ids": [
+        "mt_cartea_jaimungal_penalva_2015_algorithmic_hf_trading"
+      ],
+      "target_path": "cards/cfa_legacy/14_microstructure_and_trading/mt-order-imbalance-signal.md",
+      "title": "Order Imbalance as a Short-Horizon Trading Signal"
+    },
+    {
+      "card_id": "mt-order-precedence-price-time",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "14_microstructure_and_trading",
+      "source_ids": [
+        "mt_cartea_jaimungal_penalva_2015_algorithmic_hf_trading",
+        "mt_harris_2003_trading_and_exchanges"
+      ],
+      "target_path": "cards/cfa_legacy/14_microstructure_and_trading/mt-order-precedence-price-time.md",
+      "title": "Order Precedence Rules: Price Priority and Time Precedence"
+    },
+    {
+      "card_id": "mt-order-types-market-limit-stop",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "14_microstructure_and_trading",
+      "source_ids": [
+        "mt_harris_2003_trading_and_exchanges"
+      ],
+      "target_path": "cards/cfa_legacy/14_microstructure_and_trading/mt-order-types-market-limit-stop.md",
+      "title": "Order Types: Market, Limit, and Stop Orders"
+    },
+    {
+      "card_id": "mt-pairs-trading-cointegration-statarb",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "14_microstructure_and_trading",
+      "source_ids": [
+        "mt_cartea_jaimungal_penalva_2015_algorithmic_hf_trading"
+      ],
+      "target_path": "cards/cfa_legacy/14_microstructure_and_trading/mt-pairs-trading-cointegration-statarb.md",
+      "title": "Pairs Trading and Statistical Arbitrage via Cointegration with Optimal Bands"
+    },
+    {
+      "card_id": "mt-permanent-vs-transitory-price-components",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "14_microstructure_and_trading",
+      "source_ids": [
+        "mt_hasbrouck_2007_empirical_market_microstructure"
+      ],
+      "target_path": "cards/cfa_legacy/14_microstructure_and_trading/mt-permanent-vs-transitory-price-components.md",
+      "title": "Permanent vs Transitory Price Components (Random-Walk + Pricing Error)"
+    },
+    {
+      "card_id": "mt-pin-probability-informed-trading",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "14_microstructure_and_trading",
+      "source_ids": [
+        "mt_foucault_pagano_roell_2013",
+        "mt_hasbrouck_2007_empirical_market_microstructure"
+      ],
+      "target_path": "cards/cfa_legacy/14_microstructure_and_trading/mt-pin-probability-informed-trading.md",
+      "title": "PIN: The Probability of Informed Trading from Buy/Sell Order Counts"
+    },
+    {
+      "card_id": "mt-price-impact-measures-amihud",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "14_microstructure_and_trading",
+      "source_ids": [
+        "mt_foucault_pagano_roell_2013",
+        "mt_hasbrouck_2007_empirical_market_microstructure"
+      ],
+      "target_path": "cards/cfa_legacy/14_microstructure_and_trading/mt-price-impact-measures-amihud.md",
+      "title": "Price-Impact Liquidity Measures: Kyle-Lambda Regression and the Amihud Illiquidity Ratio"
+    },
+    {
+      "card_id": "mt-prices-martingale-information-process",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "14_microstructure_and_trading",
+      "source_ids": [
+        "mt_foucault_pagano_roell_2013",
+        "mt_ohara_1995_market_microstructure_theory_en"
+      ],
+      "target_path": "cards/cfa_legacy/14_microstructure_and_trading/mt-prices-martingale-information-process.md",
+      "title": "Prices as a Martingale and the Information-Impounding Price Process"
+    },
+    {
+      "card_id": "mt-prospective-execution-cost-tradeoff",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "14_microstructure_and_trading",
+      "source_ids": [
+        "mt_cartea_jaimungal_penalva_2015_algorithmic_hf_trading",
+        "mt_hasbrouck_2007_empirical_market_microstructure"
+      ],
+      "target_path": "cards/cfa_legacy/14_microstructure_and_trading/mt-prospective-execution-cost-tradeoff.md",
+      "title": "Prospective Execution: The Market-Order vs Limit-Order Cost/Opportunity Trade-off"
+    },
+    {
+      "card_id": "mt-random-walk-efficient-price",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "14_microstructure_and_trading",
+      "source_ids": [
+        "mt_hasbrouck_2007_empirical_market_microstructure"
+      ],
+      "target_path": "cards/cfa_legacy/14_microstructure_and_trading/mt-random-walk-efficient-price.md",
+      "title": "Random-Walk / Martingale Model of the Fundamental (Efficient) Price"
+    },
+    {
+      "card_id": "mt-roll-implicit-spread-estimator",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "14_microstructure_and_trading",
+      "source_ids": [
+        "mt_foucault_pagano_roell_2013",
+        "mt_hasbrouck_2007_empirical_market_microstructure"
+      ],
+      "target_path": "cards/cfa_legacy/14_microstructure_and_trading/mt-roll-implicit-spread-estimator.md",
+      "title": "Roll's Implicit Bid-Ask Spread Estimator from Serial Covariance"
+    },
+    {
+      "card_id": "mt-spread-decomposition-components",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "14_microstructure_and_trading",
+      "source_ids": [
+        "mt_foucault_pagano_roell_2013"
+      ],
+      "target_path": "cards/cfa_legacy/14_microstructure_and_trading/mt-spread-decomposition-components.md",
+      "title": "Decomposing the Spread: Adverse-Selection vs Order-Processing (and Inventory) Components"
+    },
+    {
+      "card_id": "mt-spread-equilibrium-timing-option",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "14_microstructure_and_trading",
+      "source_ids": [
+        "mt_harris_2003_trading_and_exchanges"
+      ],
+      "target_path": "cards/cfa_legacy/14_microstructure_and_trading/mt-spread-equilibrium-timing-option.md",
+      "title": "Spread Anatomy: Limit-Order Timing Option and Adverse Selection"
+    },
+    {
+      "card_id": "mt-stochastic-control-hjb-liquidation",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "14_microstructure_and_trading",
+      "source_ids": [
+        "mt_cartea_jaimungal_penalva_2015_algorithmic_hf_trading"
+      ],
+      "target_path": "cards/cfa_legacy/14_microstructure_and_trading/mt-stochastic-control-hjb-liquidation.md",
+      "title": "Stochastic Optimal Control for Trading: The Dynamic Programming / HJB Equation"
+    },
+    {
+      "card_id": "mt-temporary-permanent-price-impact",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "14_microstructure_and_trading",
+      "source_ids": [
+        "mt_cartea_jaimungal_penalva_2015_algorithmic_hf_trading",
+        "mt_hasbrouck_2007_empirical_market_microstructure"
+      ],
+      "target_path": "cards/cfa_legacy/14_microstructure_and_trading/mt-temporary-permanent-price-impact.md",
+      "title": "Price Impact: Temporary vs Permanent and the Empirics of Walking the LOB"
+    },
+    {
+      "card_id": "mt-three-dimensions-liquidity",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "14_microstructure_and_trading",
+      "source_ids": [
+        "mt_foucault_pagano_roell_2013"
+      ],
+      "target_path": "cards/cfa_legacy/14_microstructure_and_trading/mt-three-dimensions-liquidity.md",
+      "title": "The Three Dimensions of Liquidity: Market, Funding, and Monetary"
+    },
+    {
+      "card_id": "mt-trade-direction-signing",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "14_microstructure_and_trading",
+      "source_ids": [
+        "mt_hasbrouck_2007_empirical_market_microstructure"
+      ],
+      "target_path": "cards/cfa_legacy/14_microstructure_and_trading/mt-trade-direction-signing.md",
+      "title": "Signing Trades and the Trade-Direction Indicator (Lee-Ready)"
+    },
+    {
+      "card_id": "mt-trading-industry-participants",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "14_microstructure_and_trading",
+      "source_ids": [
+        "mt_harris_2003_trading_and_exchanges"
+      ],
+      "target_path": "cards/cfa_legacy/14_microstructure_and_trading/mt-trading-industry-participants.md",
+      "title": "The Trading Industry: Who Trades, Brokers, and the Buy Side"
+    },
+    {
+      "card_id": "mt-value-traders-arbitrageurs",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "14_microstructure_and_trading",
+      "source_ids": [
+        "mt_harris_2003_trading_and_exchanges"
+      ],
+      "target_path": "cards/cfa_legacy/14_microstructure_and_trading/mt-value-traders-arbitrageurs.md",
+      "title": "Value Traders and Arbitrageurs: Resilience and Cross-Market Liquidity Transfer"
+    },
+    {
+      "card_id": "mt-volume-critique-time-clock",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "14_microstructure_and_trading",
+      "source_ids": [
+        "mt_foucault_pagano_roell_2013",
+        "mt_ohara_1995_market_microstructure_theory_en"
+      ],
+      "target_path": "cards/cfa_legacy/14_microstructure_and_trading/mt-volume-critique-time-clock.md",
+      "title": "The Volume Critique and the Role of Time in Price Adjustment"
+    },
+    {
+      "card_id": "mt-vwap-pov-volume-targeting",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "14_microstructure_and_trading",
+      "source_ids": [
+        "mt_cartea_jaimungal_penalva_2015_algorithmic_hf_trading",
+        "mt_harris_2003_trading_and_exchanges"
+      ],
+      "target_path": "cards/cfa_legacy/14_microstructure_and_trading/mt-vwap-pov-volume-targeting.md",
+      "title": "Volume-Targeting Execution: VWAP, Percentage-of-Volume (POV) and Percentage-of-Cumulative-Volume"
+    },
+    {
+      "card_id": "pa-active-risk-tracking-error-ex-ante-vs-ex-post",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "15_performance_and_attribution",
+      "source_ids": [
+        "pa_bacon_2022_rapm",
+        "pa_connor_goldberg_korajczyk_2010"
+      ],
+      "target_path": "cards/cfa_legacy/15_performance_and_attribution/pa-active-risk-tracking-error-ex-ante-vs-ex-post.md",
+      "title": "Active Risk: Ex-Ante vs Ex-Post Tracking Error"
+    },
+    {
+      "card_id": "pa-arithmetic-vs-geometric-excess-return",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "15_performance_and_attribution",
+      "source_ids": [
+        "pa_bacon_2023_attribution"
+      ],
+      "target_path": "cards/cfa_legacy/15_performance_and_attribution/pa-arithmetic-vs-geometric-excess-return.md",
+      "title": "Arithmetic vs Geometric Excess Return"
+    },
+    {
+      "card_id": "pa-benchmark-quality-validation-statistics",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "15_performance_and_attribution",
+      "source_ids": [
+        "pa_christopherson_carino_ferson_2009"
+      ],
+      "target_path": "cards/cfa_legacy/15_performance_and_attribution/pa-benchmark-quality-validation-statistics.md",
+      "title": "Benchmark-Quality Validation Statistics"
+    },
+    {
+      "card_id": "pa-brinson-bhb-allocation-selection-interaction",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "15_performance_and_attribution",
+      "source_ids": [
+        "pa_bacon_2023_attribution",
+        "pa_christopherson_carino_ferson_2009",
+        "pa_colin_2016"
+      ],
+      "target_path": "cards/cfa_legacy/15_performance_and_attribution/pa-brinson-bhb-allocation-selection-interaction.md",
+      "title": "The Brinson Decomposition: Allocation, Selection, and Interaction"
+    },
+    {
+      "card_id": "pa-brinson-fachler-benchmark-relative-allocation",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "15_performance_and_attribution",
+      "source_ids": [
+        "pa_bacon_2023_attribution"
+      ],
+      "target_path": "cards/cfa_legacy/15_performance_and_attribution/pa-brinson-fachler-benchmark-relative-allocation.md",
+      "title": "Brinson-Fachler: Benchmark-Relative Allocation"
+    },
+    {
+      "card_id": "pa-capitalization-weighting-macroconsistency",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "15_performance_and_attribution",
+      "source_ids": [
+        "pa_christopherson_carino_ferson_2009"
+      ],
+      "target_path": "cards/cfa_legacy/15_performance_and_attribution/pa-capitalization-weighting-macroconsistency.md",
+      "title": "Capitalization Weighting and Macroconsistency"
+    },
+    {
+      "card_id": "pa-contribution-analysis-benchmark-free",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "15_performance_and_attribution",
+      "source_ids": [
+        "pa_bacon_2023_attribution"
+      ],
+      "target_path": "cards/cfa_legacy/15_performance_and_attribution/pa-contribution-analysis-benchmark-free.md",
+      "title": "Contribution Analysis: Benchmark-Free Absolute-Return Attribution"
+    },
+    {
+      "card_id": "pa-currency-attribution-karnosky-singer",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "15_performance_and_attribution",
+      "source_ids": [
+        "pa_bacon_2023_attribution",
+        "pa_colin_2016"
+      ],
+      "target_path": "cards/cfa_legacy/15_performance_and_attribution/pa-currency-attribution-karnosky-singer.md",
+      "title": "Currency Attribution: The Karnosky-Singer Framework"
+    },
+    {
+      "card_id": "pa-dgtw-cs-ct-as-decomposition",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "15_performance_and_attribution",
+      "source_ids": [
+        "pa_connor_goldberg_korajczyk_2010",
+        "pa_fischer_wermers_2013"
+      ],
+      "target_path": "cards/cfa_legacy/15_performance_and_attribution/pa-dgtw-cs-ct-as-decomposition.md",
+      "title": "The DGTW Characteristic-Based Decomposition (CS/CT/AS)"
+    },
+    {
+      "card_id": "pa-dietz-methods-mwr-approximations",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "15_performance_and_attribution",
+      "source_ids": [
+        "pa_bacon_2023_attribution",
+        "pa_christopherson_carino_ferson_2009"
+      ],
+      "target_path": "cards/cfa_legacy/15_performance_and_attribution/pa-dietz-methods-mwr-approximations.md",
+      "title": "Dietz Methods: Simple and Modified as IRR Approximations"
+    },
+    {
+      "card_id": "pa-drawdown-ratios-calmar-sterling-ulcer",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "15_performance_and_attribution",
+      "source_ids": [
+        "pa_bacon_2022_rapm"
+      ],
+      "target_path": "cards/cfa_legacy/15_performance_and_attribution/pa-drawdown-ratios-calmar-sterling-ulcer.md",
+      "title": "Drawdown Ratios: Calmar, Sterling, Burke, Ulcer"
+    },
+    {
+      "card_id": "pa-factor-model-types-and-covariance-decomposition",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "15_performance_and_attribution",
+      "source_ids": [
+        "pa_connor_goldberg_korajczyk_2010"
+      ],
+      "target_path": "cards/cfa_legacy/15_performance_and_attribution/pa-factor-model-types-and-covariance-decomposition.md",
+      "title": "Factor-Model Types and the Covariance Decomposition (Euler/MCR)"
+    },
+    {
+      "card_id": "pa-fi-carry-rolldown-pulltopar-time-decomposition",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "15_performance_and_attribution",
+      "source_ids": [
+        "pa_colin_2016"
+      ],
+      "target_path": "cards/cfa_legacy/15_performance_and_attribution/pa-fi-carry-rolldown-pulltopar-time-decomposition.md",
+      "title": "Carry, Roll-Down, and Pull-to-Par Time Decomposition"
+    },
+    {
+      "card_id": "pa-fi-parametric-vs-nonparametric-curve-models",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "15_performance_and_attribution",
+      "source_ids": [
+        "pa_colin_2016"
+      ],
+      "target_path": "cards/cfa_legacy/15_performance_and_attribution/pa-fi-parametric-vs-nonparametric-curve-models.md",
+      "title": "Parametric vs Non-Parametric Yield-Curve Models"
+    },
+    {
+      "card_id": "pa-fi-perturbational-attribution-equation",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "15_performance_and_attribution",
+      "source_ids": [
+        "pa_bacon_2023_attribution",
+        "pa_colin_2016"
+      ],
+      "target_path": "cards/cfa_legacy/15_performance_and_attribution/pa-fi-perturbational-attribution-equation.md",
+      "title": "The Fixed-Income Perturbational Attribution Equation"
+    },
+    {
+      "card_id": "pa-fi-shift-twist-butterfly-and-krd",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "15_performance_and_attribution",
+      "source_ids": [
+        "pa_bacon_2023_attribution",
+        "pa_colin_2016"
+      ],
+      "target_path": "cards/cfa_legacy/15_performance_and_attribution/pa-fi-shift-twist-butterfly-and-krd.md",
+      "title": "Shift, Twist, Butterfly, and Key-Rate Duration"
+    },
+    {
+      "card_id": "pa-geometric-attribution-brinson-extended",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "15_performance_and_attribution",
+      "source_ids": [
+        "pa_bacon_2023_attribution"
+      ],
+      "target_path": "cards/cfa_legacy/15_performance_and_attribution/pa-geometric-attribution-brinson-extended.md",
+      "title": "Geometric Attribution: The Compounding Brinson Extension"
+    },
+    {
+      "card_id": "pa-geometric-vs-arithmetic-linking-choice",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "15_performance_and_attribution",
+      "source_ids": [
+        "pa_bacon_2023_attribution",
+        "pa_colin_2016"
+      ],
+      "target_path": "cards/cfa_legacy/15_performance_and_attribution/pa-geometric-vs-arithmetic-linking-choice.md",
+      "title": "The Geometric-vs-Arithmetic Linking Choice"
+    },
+    {
+      "card_id": "pa-gips-2020-composites-and-mechanics",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "15_performance_and_attribution",
+      "source_ids": [
+        "pa_bacon_2023_attribution",
+        "pa_christopherson_carino_ferson_2009"
+      ],
+      "target_path": "cards/cfa_legacy/15_performance_and_attribution/pa-gips-2020-composites-and-mechanics.md",
+      "title": "GIPS 2020: Composites and Calculation Mechanics"
+    },
+    {
+      "card_id": "pa-irr-money-weighted-return",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "15_performance_and_attribution",
+      "source_ids": [
+        "pa_bacon_2023_attribution"
+      ],
+      "target_path": "cards/cfa_legacy/15_performance_and_attribution/pa-irr-money-weighted-return.md",
+      "title": "The Internal Rate of Return as the Money-Weighted Method"
+    },
+    {
+      "card_id": "pa-luck-vs-skill-fdr-and-bootstrap",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "15_performance_and_attribution",
+      "source_ids": [
+        "pa_fischer_wermers_2013"
+      ],
+      "target_path": "cards/cfa_legacy/15_performance_and_attribution/pa-luck-vs-skill-fdr-and-bootstrap.md",
+      "title": "Skill vs Luck: False-Discovery Rate and the Bootstrap"
+    },
+    {
+      "card_id": "pa-m2-risk-adjusted-return-transform",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "15_performance_and_attribution",
+      "source_ids": [
+        "pa_bacon_2022_rapm",
+        "pa_christopherson_carino_ferson_2009"
+      ],
+      "target_path": "cards/cfa_legacy/15_performance_and_attribution/pa-m2-risk-adjusted-return-transform.md",
+      "title": "M-Squared: The Risk-Adjusted Return Transform"
+    },
+    {
+      "card_id": "pa-multifactor-alpha-timing-conditional",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "15_performance_and_attribution",
+      "source_ids": [
+        "pa_christopherson_carino_ferson_2009",
+        "pa_fischer_wermers_2013"
+      ],
+      "target_path": "cards/cfa_legacy/15_performance_and_attribution/pa-multifactor-alpha-timing-conditional.md",
+      "title": "Multifactor Alpha, Market Timing, and Conditional Models"
+    },
+    {
+      "card_id": "pa-multilevel-attribution-successive-notional-funds",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "15_performance_and_attribution",
+      "source_ids": [
+        "pa_bacon_2023_attribution"
+      ],
+      "target_path": "cards/cfa_legacy/15_performance_and_attribution/pa-multilevel-attribution-successive-notional-funds.md",
+      "title": "Multi-Level Attribution and Successive Notional Funds"
+    },
+    {
+      "card_id": "pa-multiperiod-linking-smoothing-vs-linking",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "15_performance_and_attribution",
+      "source_ids": [
+        "pa_bacon_2023_attribution",
+        "pa_christopherson_carino_ferson_2009"
+      ],
+      "target_path": "cards/cfa_legacy/15_performance_and_attribution/pa-multiperiod-linking-smoothing-vs-linking.md",
+      "title": "Multi-Period Linking: Smoothing vs Linking Algorithms"
+    },
+    {
+      "card_id": "pa-normal-portfolio-construction",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "15_performance_and_attribution",
+      "source_ids": [
+        "pa_christopherson_carino_ferson_2009"
+      ],
+      "target_path": "cards/cfa_legacy/15_performance_and_attribution/pa-normal-portfolio-construction.md",
+      "title": "Normal-Portfolio Construction"
+    },
+    {
+      "card_id": "pa-partial-moment-ratios-sortino-omega-kappa",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "15_performance_and_attribution",
+      "source_ids": [
+        "pa_bacon_2022_rapm"
+      ],
+      "target_path": "cards/cfa_legacy/15_performance_and_attribution/pa-partial-moment-ratios-sortino-omega-kappa.md",
+      "title": "Partial-Moment Ratios: Sortino, Omega, and Kappa"
+    },
+    {
+      "card_id": "pa-regression-appraisal-jensen-treynor",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "15_performance_and_attribution",
+      "source_ids": [
+        "pa_bacon_2022_rapm"
+      ],
+      "target_path": "cards/cfa_legacy/15_performance_and_attribution/pa-regression-appraisal-jensen-treynor.md",
+      "title": "Regression Appraisal: Jensen's Alpha and the Treynor Ratio"
+    },
+    {
+      "card_id": "pa-return-gap-kacperczyk-sialm-zheng",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "15_performance_and_attribution",
+      "source_ids": [
+        "pa_fischer_wermers_2013"
+      ],
+      "target_path": "cards/cfa_legacy/15_performance_and_attribution/pa-return-gap-kacperczyk-sialm-zheng.md",
+      "title": "The Return Gap"
+    },
+    {
+      "card_id": "pa-returns-based-style-analysis",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "15_performance_and_attribution",
+      "source_ids": [
+        "pa_christopherson_carino_ferson_2009"
+      ],
+      "target_path": "cards/cfa_legacy/15_performance_and_attribution/pa-returns-based-style-analysis.md",
+      "title": "Returns-Based Style Analysis"
+    },
+    {
+      "card_id": "pa-transaction-based-attribution-and-trading-cost",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "15_performance_and_attribution",
+      "source_ids": [
+        "pa_bacon_2023_attribution",
+        "pa_christopherson_carino_ferson_2009"
+      ],
+      "target_path": "cards/cfa_legacy/15_performance_and_attribution/pa-transaction-based-attribution-and-trading-cost.md",
+      "title": "Transaction-Based Attribution and the Trading-Cost Bridge"
+    },
+    {
+      "card_id": "pa-true-twr-and-chain-linking",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "15_performance_and_attribution",
+      "source_ids": [
+        "pa_bacon_2023_attribution"
+      ],
+      "target_path": "cards/cfa_legacy/15_performance_and_attribution/pa-true-twr-and-chain-linking.md",
+      "title": "True Time-Weighted Return and Geometric Chain-Linking"
+    },
+    {
+      "card_id": "pa-twr-vs-mwr-when-each-applies",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "15_performance_and_attribution",
+      "source_ids": [
+        "pa_bacon_2023_attribution",
+        "pa_christopherson_carino_ferson_2009"
+      ],
+      "target_path": "cards/cfa_legacy/15_performance_and_attribution/pa-twr-vs-mwr-when-each-applies.md",
+      "title": "Time-Weighted vs Money-Weighted Return: When Each Applies"
+    },
+    {
+      "card_id": "pa-valid-benchmark-properties",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "15_performance_and_attribution",
+      "source_ids": [
+        "pa_christopherson_carino_ferson_2009"
+      ],
+      "target_path": "cards/cfa_legacy/15_performance_and_attribution/pa-valid-benchmark-properties.md",
+      "title": "Properties of a Valid Benchmark"
+    },
+    {
+      "card_id": "pa-variability-ratios-sharpe-information",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "15_performance_and_attribution",
+      "source_ids": [
+        "pa_bacon_2022_rapm",
+        "pa_christopherson_carino_ferson_2009"
+      ],
+      "target_path": "cards/cfa_legacy/15_performance_and_attribution/pa-variability-ratios-sharpe-information.md",
+      "title": "Variability Ratios: Sharpe and the Information Ratio"
     }
   ],
   "generated_at_utc": "1970-01-01T00:00:00Z",
@@ -28906,6 +30712,18 @@
     "schema_version": "cfa_legacy.preflight_input_fingerprints.v1"
   },
   "legacy_root": "/home/jakeshea/CFA_reading/CFA_reading",
+  "migration_additions": {
+    "count": 134,
+    "generated_by": "emit_migration_readings.py",
+    "notes_taint": false,
+    "origin": "deferred_books_skeleton",
+    "reading_counts": {
+      "14_microstructure_and_trading": 73,
+      "15_performance_and_attribution": 35,
+      "22_fund_level_arbitrage": 26
+    },
+    "schema_version": "cfa_legacy.migration_queue_additions.v1"
+  },
   "schema_version": "cfa_legacy.card_migration_preflight.v1",
   "summary": {
     "active_legacy_cards": 274,
