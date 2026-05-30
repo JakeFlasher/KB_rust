@@ -197,7 +197,7 @@ def do_write() -> dict[str, Any]:
         "source_id": SOURCE_ID,
         "reading_id": READING_ID,
         "rationale": (
-            "DEC-equivalent sandbox-first: the image-only O'Hara scan is rendered into a deterministic "
+            "Sandbox-first (recorded decision): the image-only O'Hara scan is rendered into a deterministic "
             "text-layer PDF from the pinned OCR text and ingested as a normal source; the Pdfium trust "
             "path is unchanged. Source registered with the SANDWICH artifact's own SHA (its _sources.json "
             "value is the original image PDF and intentionally does not match)."

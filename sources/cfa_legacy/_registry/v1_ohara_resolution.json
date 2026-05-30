@@ -235,7 +235,7 @@
   },
   "generated_at_utc": "1970-01-01T00:00:00Z",
   "page_count": 293,
-  "rationale": "DEC-equivalent sandbox-first: the image-only O'Hara scan is rendered into a deterministic text-layer PDF from the pinned OCR text and ingested as a normal source; the Pdfium trust path is unchanged. Source registered with the SANDWICH artifact's own SHA (its _sources.json value is the original image PDF and intentionally does not match).",
+  "rationale": "Sandbox-first (recorded decision): the image-only O'Hara scan is rendered into a deterministic text-layer PDF from the pinned OCR text and ingested as a normal source; the Pdfium trust path is unchanged. Source registered with the SANDWICH artifact's own SHA (its _sources.json value is the original image PDF and intentionally does not match).",
   "reading_id": "14_microstructure_and_trading",
   "sandwich_pdf": "sources/cfa_legacy/pdfs/14_microstructure_and_trading/mt_ohara_1995_market_microstructure_theory_en.pdf",
   "sandwich_sha256": "487c00b9d236fa41fdc4ba542741b0b41b7cb8e876d7dab92dbda5c79f2f8f2c",
