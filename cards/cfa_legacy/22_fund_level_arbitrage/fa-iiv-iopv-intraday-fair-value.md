@@ -16,7 +16,7 @@ citations:
     chunk_id: "fa_madhavan_2016_etfs_new_dynamics:p052:0055"
     chunk_hash: "788a8edc6d61404d6b8dac8f62bcd541d45fcdb42e144a1815ef6130acc86fe8"
     page_range: [53, 53]
-    quote: "The change (or innovation) in expected values conditional upon public information over the interval from t − 1 to t is denoted by =− − r ."
+    quote: "values: (1) the ETF secondary market price, (2) NAV, and (3) the"
     edge_type: "supports"
 ---
 # IIV / iNAV / IOPV: The Intraday Fair-Value Signal

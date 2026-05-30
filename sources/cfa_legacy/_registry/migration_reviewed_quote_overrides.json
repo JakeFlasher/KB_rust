@@ -1,0 +1,28 @@
+{
+  "schema_version": "cfa_legacy.migration_reviewed_quote_overrides.v1",
+  "note": "Human-reviewed faithful re-anchors that SUPERSEDE the resolver's heuristic repair for specific citations the independent faithfulness review flagged as semantically unfaithful. The resolver's 'longest clean run / best-overlap clean sentence' heuristic landed on typesetting noise or an adjacent equation because the actually-cited sentence is densely broken by Pdfium U+FFFE hyphenation, so no complete clean sentence captures it. Each override is a clean, word-bounded verbatim run WITHIN the cited sentence that faithfully supports the card's claim; the resolver verifies it is a verbatim substring of the cited-page window and confirms it with real kb verify, then tags it `reviewed_faithful_reanchor` (authorized in migration_resolver_policy.json). Keyed by (source_id, original authored quote).",
+  "authorized_by": "user RLCR loop faithfulness review (2026-05-31)",
+  "overrides": [
+    {
+      "card_id": "pa-currency-attribution-karnosky-singer",
+      "source_id": "pa_bacon_2023_attribution",
+      "original_quote": "Karnosky and Singer have neatly sidestepped compounding issues and greatly simplified the mathematics by using continuously compounded or log returns.",
+      "final_quote": "by using continuously compounded returns in their model and solve the forward premium concern",
+      "reason": "review: the heuristic re-anchored to a PDF typesetting running-header ('Trim Size: 170mm x 244mm ...'), which carries no semantic content; re-anchored to the clean on-page Karnosky-Singer sentence describing their use of continuously compounded returns and forward-premium handling, which is the claim the card cites."
+    },
+    {
+      "card_id": "mt-execution-systems-quote-vs-order-driven",
+      "source_id": "mt_harris_2003_trading_and_exchanges",
+      "original_quote": "The three main types of markets are quotedriven markets, order-driven markets, and brokered markets. Hybrid markets use some combination of these three systems.",
+      "final_quote": "order-driven markets, and brokered markets.",
+      "reason": "review: the heuristic re-anchored to an unrelated market-hours sentence ('Traders use the hours before the open...'); the cited execution-system taxonomy sentence on the same page is U+FFFE-broken at 'quote-driven', so re-anchored to its clean word-bounded run naming the order-driven and brokered execution systems the card defines."
+    },
+    {
+      "card_id": "fa-iiv-iopv-intraday-fair-value",
+      "source_id": "fa_madhavan_2016_etfs_new_dynamics",
+      "original_quote": "I need to model three distinct values: (1) the ETF secondary market price, (2) NAV, and (3) the (unobserved) expected value of the ETF.",
+      "final_quote": "values: (1) the ETF secondary market price, (2) NAV, and (3) the",
+      "reason": "review: the heuristic re-anchored to an adjacent return-innovation equation sentence unrelated to the card's claim; re-anchored to the clean on-page enumeration of the three distinct values (secondary-market price, NAV, expected value) the card models."
+    }
+  ]
+}

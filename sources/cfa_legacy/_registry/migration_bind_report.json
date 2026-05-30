@@ -34,7 +34,8 @@
     "authorized_repair_causes": [
       "chunk_boundary_span",
       "equation_extraction_mismatch",
-      "pdfium_ufffe_hyphenation"
+      "pdfium_ufffe_hyphenation",
+      "reviewed_faithful_reanchor"
     ],
     "auto_bind_min_rate": 0.95,
     "auto_bind_override_applied": true,
@@ -48,7 +49,8 @@
   "repair_cause_counts": {
     "chunk_boundary_span": 5,
     "equation_extraction_mismatch": 1,
-    "pdfium_ufffe_hyphenation": 48
+    "pdfium_ufffe_hyphenation": 45,
+    "reviewed_faithful_reanchor": 3
   },
   "report": [
     {
@@ -352,11 +354,11 @@
       "candidate_chunk_ids": null,
       "card_id": "fa-iiv-iopv-intraday-fair-value",
       "change": {
-        "cause": "pdfium_ufffe_hyphenation",
-        "final_quote": "The change (or innovation) in expected values conditional upon public information over the interval from t − 1 to t is denoted by =− − r .",
+        "cause": "reviewed_faithful_reanchor",
+        "final_quote": "values: (1) the ETF secondary market price, (2) NAV, and (3) the",
         "original_quote": "I need to model three distinct values: (1) the ETF secondary market price, (2) NAV, and (3) the (unobserved) expected value of the ETF.",
-        "overlap": 0.135,
-        "reason": "authored quote spans a Pdfium STX->U+FFFE hyphenation marker the kernel preserves; trimmed to the longest clean verbatim run, else re-anchored to the best-overlap clean on-page sentence",
+        "overlap": 0.524,
+        "reason": "review: the heuristic re-anchored to an adjacent return-innovation equation sentence unrelated to the card's claim; re-anchored to the clean on-page enumeration of the three distinct values (secondary-market price, NAV, expected value) the card models.",
         "type": "reanchor"
       },
       "chunk_id": "fa_madhavan_2016_etfs_new_dynamics:p052:0055",
@@ -1540,11 +1542,11 @@
       "candidate_chunk_ids": null,
       "card_id": "mt-execution-systems-quote-vs-order-driven",
       "change": {
-        "cause": "pdfium_ufffe_hyphenation",
-        "final_quote": "Traders use the hours before the open to collect and submit orders.",
+        "cause": "reviewed_faithful_reanchor",
+        "final_quote": "order-driven markets, and brokered markets.",
         "original_quote": "The three main types of markets are quotedriven markets, order-driven markets, and brokered markets. Hybrid markets use some combination of these three systems.",
-        "overlap": 0.115,
-        "reason": "authored quote spans a Pdfium STX->U+FFFE hyphenation marker the kernel preserves; trimmed to the longest clean verbatim run, else re-anchored to the best-overlap clean on-page sentence",
+        "overlap": 0.278,
+        "reason": "review: the heuristic re-anchored to an unrelated market-hours sentence ('Traders use the hours before the open...'); the cited execution-system taxonomy sentence on the same page is U+FFFE-broken at 'quote-driven', so re-anchored to its clean word-bounded run naming the order-driven and brokered execution systems the card defines. (page corrected [105, 106] -> [105, 105] to the page holding the curated run)",
         "type": "reanchor"
       },
       "chunk_id": "mt_harris_2003_trading_and_exchanges:p105:0164",
@@ -3402,11 +3404,11 @@
       "candidate_chunk_ids": null,
       "card_id": "pa-currency-attribution-karnosky-singer",
       "change": {
-        "cause": "pdfium_ufffe_hyphenation",
-        "final_quote": "Trim Size: 170mm x 244mm ❦ Bacon831945 c06.tex V1 - 12/10/2022 1:04 P.M.",
+        "cause": "reviewed_faithful_reanchor",
+        "final_quote": "by using continuously compounded returns in their model and solve the forward premium concern",
         "original_quote": "Karnosky and Singer have neatly sidestepped compounding issues and greatly simplified the mathematics by using continuously compounded or log returns.",
-        "overlap": 0.0,
-        "reason": "authored quote spans a Pdfium STX->U+FFFE hyphenation marker the kernel preserves; trimmed to the longest clean verbatim run, else re-anchored to the best-overlap clean on-page sentence",
+        "overlap": 0.269,
+        "reason": "review: the heuristic re-anchored to a PDF typesetting running-header ('Trim Size: 170mm x 244mm ...'), which carries no semantic content; re-anchored to the clean on-page Karnosky-Singer sentence describing their use of continuously compounded returns and forward-premium handling, which is the claim the card cites. (page corrected [323, 323] -> [322, 322] to the page holding the curated run)",
         "type": "reanchor"
       },
       "chunk_id": "pa_bacon_2023_attribution:p322:0388",

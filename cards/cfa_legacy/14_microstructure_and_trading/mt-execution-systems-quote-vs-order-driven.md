@@ -10,7 +10,7 @@ citations:
     chunk_id: "mt_harris_2003_trading_and_exchanges:p105:0164"
     chunk_hash: "887b3665796d5c50e5b5d7b1751dbf28c733c98f1dc52c3831b77f8e1871dfc7"
     page_range: [105, 105]
-    quote: "Traders use the hours before the open to collect and submit orders."
+    quote: "order-driven markets, and brokered markets."
     edge_type: "defines"
   - source_id: "mt_foucault_pagano_roell_2013"
     chunk_id: "mt_foucault_pagano_roell_2013:p027:0034"

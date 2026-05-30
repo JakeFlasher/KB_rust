@@ -65,6 +65,7 @@ SETS = (
 BIND_REPORT = REGISTRY / "migration_bind_report.json"
 QUOTE_AUDIT = REGISTRY / "migration_quote_audit.json"
 POLICY_PATH = REGISTRY / "migration_resolver_policy.json"
+OVERRIDES_PATH = REGISTRY / "migration_reviewed_quote_overrides.json"
 TRIM_RETAIN_MIN = 0.60   # >=60% of the quote retained -> trim; else re-anchor
 MIN_QUOTE_CHARS = 25
 MIN_AUTO_BIND_RATE = 0.95
@@ -87,6 +88,16 @@ REPAIR_REASON = {
 
 def load_policy() -> dict[str, Any]:
     return json.loads(POLICY_PATH.read_text(encoding="utf-8")) if POLICY_PATH.is_file() else {}
+
+
+def load_overrides() -> dict[tuple[str, str], dict[str, Any]]:
+    """Human-reviewed faithful re-anchors keyed by (source_id, original authored quote).
+    These supersede the heuristic repair for the specific citations the faithfulness
+    review flagged; the binding still verifies verbatim + is confirmed by real kb verify."""
+    if not OVERRIDES_PATH.is_file():
+        return {}
+    doc = json.loads(OVERRIDES_PATH.read_text(encoding="utf-8"))
+    return {(o["source_id"], o["original_quote"]): o for o in doc.get("overrides", [])}
 
 
 def is_overlap_set(chunks: list[dict[str, Any]]) -> bool:
@@ -251,7 +262,7 @@ def window_contains(chunk: dict[str, Any], lo: int, hi: int, needle_norm: str) -
 
 
 def bind_citation(cit: dict[str, Any], reading_id: str, by_src: dict[str, list],
-                  policy: dict[str, Any]) -> dict[str, Any]:
+                  policy: dict[str, Any], overrides: dict[tuple[str, str], dict[str, Any]] | None = None) -> dict[str, Any]:
     """PROPOSE a binding for one citation via parity-proven normalize_text containment.
     Pure (no subprocess); the proposal is confirmed by a later parallel kb-verify pass.
     Fail-closed: >1 candidate -> 'ambiguous' (unless the committed policy authorizes
@@ -305,6 +316,32 @@ def bind_citation(cit: dict[str, Any], reading_id: str, by_src: dict[str, list],
             return bound(c, quote, cpr, "auto", page_change(cpr, c), overlap_alternatives=candidate_ids)
         return {"status": "ambiguous", "authored_page_range": [lo, hi],
                 "candidate_chunk_ids": candidate_ids, "is_overlap_set": overlap}
+
+    # 1b. REVIEWED OVERRIDE — a human faithfulness review may supersede the heuristic repair
+    # for a specific citation with a curated clean verbatim run; it must still verify verbatim in the
+    # cited-page window (and is re-confirmed by the kb-verify pass). Fail loud if the curated run does not.
+    ov = (overrides or {}).get((sid, quote))
+    if ov:
+        fq = ov["final_quote"]
+        nfq = normalize_text(fq)
+        if not has_illegal_chars(fq):
+            for c in cand:
+                # Find the tightest page(s) within the candidate chunk that contain the curated
+                # run (the faithful sentence may sit on an adjacent page of the same chunk).
+                final_pr = next(([p, p] for p in range(c["start_page"], c["end_page"] + 1)
+                                 if window_contains(c, p, p, nfq)), None)
+                if final_pr is None and window_contains(c, c["start_page"], c["end_page"], nfq):
+                    final_pr = [c["start_page"], c["end_page"]]
+                if final_pr is not None:
+                    reason = ov["reason"] + (
+                        "" if final_pr == [lo, hi]
+                        else f" (page corrected {[lo, hi]} -> {final_pr} to the page holding the curated run)")
+                    return bound(c, fq, final_pr, "reanchor",
+                                 {"type": "reanchor", "cause": "reviewed_faithful_reanchor",
+                                  "original_quote": quote, "final_quote": fq,
+                                  "overlap": round(overlap_score(fq, nq), 3), "reason": reason})
+        raise SystemExit(
+            f"reviewed override for ({sid}) does not verify in any cited-page window: {fq!r}")
 
     # 2. REPAIR — only for MACHINE-PROVEN documented extraction conditions, tried in order; a citation
     # that satisfies NONE fails closed (zero_match) and is never silently bound. Each repair carries a
@@ -382,6 +419,7 @@ def bind_citation(cit: dict[str, Any], reading_id: str, by_src: dict[str, list],
 def resolve() -> dict[str, Any]:
     skeletons = load_skeletons()
     policy = load_policy()
+    overrides = load_overrides()
     manifest = json.loads(CHUNKS_MANIFEST.read_text(encoding="utf-8"))["chunks"]
     by_src: dict[str, list] = {}
     for c in manifest:
@@ -395,7 +433,7 @@ def resolve() -> dict[str, Any]:
     for card in skeletons:
         for cit in card["citations"]:
             idx += 1
-            rec = bind_citation(cit, card["reading_id"], by_src, policy)
+            rec = bind_citation(cit, card["reading_id"], by_src, policy, overrides)
             rec["card_id"] = card["card_id"]
             rec["_idx"] = idx
             items.append((card, cit, rec))
@@ -527,8 +565,11 @@ def emit(result: dict[str, Any]) -> dict[str, Any]:
     })
     write_json(QUOTE_AUDIT, {
         "schema_version": "cfa_legacy.migration_quote_audit.v1",
-        "note": "Every quote changed to bind (trim/re-anchor for U+FFFE hyphenation). Each final quote "
-                "verifies via kb verify against its bound chunk; faithfulness reviewed separately.",
+        "note": "Every quote changed to bind, each under a machine-proven or reviewed structured `cause` "
+                "(pdfium_ufffe_hyphenation, chunk_boundary_span, equation_extraction_mismatch, or a "
+                "human-reviewed reviewed_faithful_reanchor from migration_reviewed_quote_overrides.json). "
+                "Each final quote verifies via kb verify against its bound chunk; semantic faithfulness was "
+                "reviewed in migration_faithfulness_review.json.",
         "changed_quotes": sorted(result["audit"], key=lambda a: (a["card_id"], a["source_id"])),
     })
     summary = {p: dict(c) for p, c in result["counts"].items()}

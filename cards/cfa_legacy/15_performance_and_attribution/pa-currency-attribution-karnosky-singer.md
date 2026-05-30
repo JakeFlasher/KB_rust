@@ -9,8 +9,8 @@ citations:
   - source_id: "pa_bacon_2023_attribution"
     chunk_id: "pa_bacon_2023_attribution:p322:0388"
     chunk_hash: "b64612d9ed04ed43eb2998d41f02ce380d5bfe08ab0e1f56627e64bc6668ba18"
-    page_range: [323, 323]
-    quote: "Trim Size: 170mm x 244mm ❦ Bacon831945 c06.tex V1 - 12/10/2022 1:04 P.M."
+    page_range: [322, 322]
+    quote: "by using continuously compounded returns in their model and solve the forward premium concern"
     edge_type: "defines"
   - source_id: "pa_colin_2016"
     chunk_id: "pa_colin_2016:p086:0090"
