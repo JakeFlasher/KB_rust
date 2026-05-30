@@ -63,5 +63,14 @@
       "reading_id": "10_behavioral_finance",
       "backlinks": ["fa-shleifer-vishny-limits-to-arbitrage"]
     }
-  }
+  },
+  "skeleton_prose_rewrites": [
+    {
+      "card_id": "fa-shleifer-vishny-limits-to-arbitrage",
+      "find": "- `mt-funding-liquidity-fire-sales` and `mt-value-traders-arbitrageurs` (reading 14) derive the same performance-sensitive-capital limits-to-arbitrage mechanism from primary sources; this card applies it to the fund creation/redemption break.",
+      "replace": "- `mt-funding-liquidity-fire-sales` (reading 14) derives the performance-sensitive-capital limits-to-arbitrage mechanism from primary sources; this card applies it to the fund creation/redemption break.",
+      "forbidden_see_also_mentions": ["mt-value-traders-arbitrageurs"],
+      "reason": "faithfulness review: mt-value-traders-arbitrageurs is a Harris value-trader/law-of-one-price taxonomy and does not derive the performance-sensitive-capital limits-to-arbitrage mechanism; the skeleton over-claimed by bundling it with mt-funding-liquidity-fire-sales. The emitter reads the read-only skeleton body verbatim, so this stale prose is rewritten deterministically to attribute the mechanism only to mt-funding-liquidity-fire-sales and drop the withdrawn counterpart."
+    }
+  ]
 }

@@ -30,6 +30,7 @@ from cross_link_map import (
     derive_links,
     has_resolving_link,
     load_map,
+    prose_rewrites_by_card,
     reading_of,
     see_also_bounds,
 )
@@ -110,6 +111,17 @@ def run_checks(cross_links_path: Path, baseline: str) -> list[str]:
                 if not has_resolving_link(see_also_section(body), dst):
                     failures.append(f"{src}: missing resolving See Also link to {dst}")
 
+    # 2b. A withdrawn/over-claimed counterpart named in a committed prose rewrite must NOT
+    # survive in the migrated card's See Also as a bare code-span / stale prose (link
+    # injection only converts/appends links, so it cannot remove an over-claim sentence).
+    for cid, rewrites in prose_rewrites_by_card(doc).items():
+        section = see_also_section(split_card(card_path(cid))[1])
+        for rw in rewrites:
+            for forbidden in rw.get("forbidden_see_also_mentions", []):
+                if forbidden in section:
+                    failures.append(
+                        f"{cid}: withdrawn cross-link mention still present in See Also: {forbidden!r}")
+
     # 3 + 5. links resolve; no card_edges; over the migrated cards + allowlisted released cards.
     to_scan = migrated_card_paths() + [card_path(cid) for cid in sorted(allowlist)]
     for md in to_scan:
@@ -152,6 +164,13 @@ def _self_test() -> int:
     # reading_of_safe degrades on unknown prefix instead of raising.
     assert reading_of_safe("zz-foo") == "?"
     assert reading_of_safe("mt-foo") == "14_microstructure_and_trading"
+    # forbidden-mention grouping + detection logic.
+    rw = prose_rewrites_by_card({"skeleton_prose_rewrites": [
+        {"card_id": "c", "forbidden_see_also_mentions": ["x-withdrawn"]}]})
+    section = "- [`a`](./a.md) — n\n- x-withdrawn still named in prose\n"
+    hits = [f for f in rw["c"][0]["forbidden_see_also_mentions"] if f in section]
+    assert hits == ["x-withdrawn"], "forbidden-mention detection broken"
+    assert prose_rewrites_by_card({}) == {}
     print("check_migration_cross_links self-test: PASS")
     return 0
 

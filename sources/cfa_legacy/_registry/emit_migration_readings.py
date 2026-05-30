@@ -61,7 +61,14 @@ import unicodedata
 from pathlib import Path
 from typing import Any, NamedTuple
 
-from cross_link_map import DEFAULT_MAP, derive_links, inject_links, load_map
+from cross_link_map import (
+    DEFAULT_MAP,
+    apply_prose_rewrites,
+    derive_links,
+    inject_links,
+    load_map,
+    prose_rewrites_by_card,
+)
 
 ROOT = Path(__file__).resolve().parents[3]
 REGISTRY = ROOT / "sources/cfa_legacy/_registry"
@@ -335,8 +342,12 @@ def emit(skeleton_root: Path, *, force: bool, dry_run: bool, cross_links_path: P
     published_ids = {c["id"] for c in read_json(CARDS_MANIFEST)["cards"]}
     # Cross-reading See Also links for the documented overlap pairs are injected
     # into each new card's body from the committed map (the released-card side is
-    # applied separately, since those cards are not emitted from skeletons).
-    new_card_links = derive_links(load_map(cross_links_path))[0]
+    # applied separately, since those cards are not emitted from skeletons). The map
+    # also carries deterministic skeleton-prose rewrites (e.g. to drop a withdrawn
+    # counterpart's stale over-claiming prose that link injection cannot remove).
+    cross_doc = load_map(cross_links_path)
+    new_card_links = derive_links(cross_doc)[0]
+    rewrites_by_card = prose_rewrites_by_card(cross_doc)
 
     # Validate EVERYTHING before writing a single card (fail closed, no partial state).
     planned: list[tuple[Path, str]] = []
@@ -369,6 +380,7 @@ def emit(skeleton_root: Path, *, force: bool, dry_run: bool, cross_links_path: P
             body = split_skeleton(
                 skeleton_root / reading.set_dir / "_card_skeletons" / reading.reading_id / f"{cid}.md"
             )
+            body = apply_prose_rewrites(body, rewrites_by_card.get(cid, []))
             if cid in new_card_links:
                 body = inject_links(body, new_card_links[cid])
             fm = {
@@ -508,6 +520,16 @@ def _self_test() -> int:
     assert once_b.count("/mt-implementation-shortfall.md)") == 1, "no double-conversion"
     assert "## Escalate\nfoo" in once_b, "later section preserved"
     assert inject_links(once_b, links) == once_b, "injection not idempotent"
+
+    # prose rewrite: exact find->replace; fail-closed when the find text is absent.
+    rb = apply_prose_rewrites("a\n- A and B derive same thing\nz\n",
+                              [{"card_id": "c", "find": "- A and B derive same thing", "replace": "- A derives it"}])
+    assert "- A derives it" in rb and "and B" not in rb, "rewrite did not apply"
+    try:
+        apply_prose_rewrites("no match", [{"card_id": "c", "find": "absent line", "replace": "x"}])
+        raise AssertionError("missing find not caught")
+    except SystemExit:
+        pass
 
     print("emit_migration_readings self-test: PASS")
     return 0

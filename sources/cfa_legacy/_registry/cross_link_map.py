@@ -99,6 +99,31 @@ def derive_links(doc: dict[str, Any]) -> tuple[dict[str, list[dict]], dict[str, 
     return new_links, released
 
 
+def prose_rewrites_by_card(doc: dict[str, Any]) -> dict[str, list[dict[str, Any]]]:
+    """Committed, deterministic skeleton-prose rewrites, grouped by card id. Each
+    rewrite swaps an exact `find` string for a `replace` string in the card body
+    (used to remove a withdrawn cross-link counterpart's stale over-claiming prose,
+    which `inject_links` cannot touch since it only converts/appends links)."""
+    out: dict[str, list[dict[str, Any]]] = {}
+    for rw in doc.get("skeleton_prose_rewrites", []):
+        out.setdefault(rw["card_id"], []).append(rw)
+    return out
+
+
+def apply_prose_rewrites(body: str, rewrites: list[dict[str, Any]]) -> str:
+    """Apply each rewrite's exact `find`->`replace` to the (raw skeleton) body.
+    Fail-closed: a `find` absent from the body means the skeleton drifted from what
+    the rewrite was authored against, so abort rather than silently no-op."""
+    for rw in rewrites:
+        find, replace = rw["find"], rw["replace"]
+        if find not in body:
+            raise SystemExit(
+                f"prose rewrite for {rw['card_id']}: find text not present in skeleton body "
+                f"(skeleton drift?): {find[:80]!r}")
+        body = body.replace(find, replace)
+    return body
+
+
 def see_also_bounds(text: str) -> tuple[int, int] | None:
     """Return (start, end) byte offsets of the ``## See Also`` section body region
     (from just after the heading line to the next ``## `` heading or EOF), or None

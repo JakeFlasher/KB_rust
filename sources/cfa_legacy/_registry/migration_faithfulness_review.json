@@ -17,7 +17,7 @@
       "kind": "cross_link",
       "item": "fa-shleifer-vishny-limits-to-arbitrage -> mt-value-traders-arbitrageurs",
       "finding": "the See Also note claimed both cards 'derive the same performance-sensitive-capital limits-to-arbitrage mechanism', but mt-value-traders-arbitrageurs is a Harris value-trader/arbitrageur taxonomy (liquidity suppliers of last resort; arbitrageurs enforce the law of one price) and contains no performance-sensitive-capital / forced-liquidation model.",
-      "resolution": "dropped mt-value-traders-arbitrageurs from the pair in migration_cross_links.json; the pair keeps mt-funding-liquidity-fire-sales + be-limits-of-arbitrage (both confirmed faithful). Validator re-run PASS."
+      "resolution": "dropped mt-value-traders-arbitrageurs from the pair in migration_cross_links.json (pair keeps mt-funding-liquidity-fire-sales + be-limits-of-arbitrage, both confirmed faithful), AND added a committed deterministic skeleton-prose rewrite (migration_cross_links.json skeleton_prose_rewrites) applied by the emitter so the GENERATED fa-shleifer-vishny card no longer names mt-value-traders-arbitrageurs nor repeats the false 'both derive the same mechanism' claim — the mechanism is now attributed only to mt-funding-liquidity-fire-sales. The cross-link validator gained a forbidden-mention check that fails if the withdrawn counterpart survives in a migrated card's See Also. Validator re-run PASS; endpoints kb verify PASS."
     },
     {
       "kind": "quote_repair",
