@@ -32,11 +32,11 @@ mkdir -p "$BASE"
 export KB_FROZEN_CLOCK=1
 status=0
 
-echo "== [1/3] scope ledger + count reconciliation =="
+echo "== [1/4] scope ledger + count reconciliation =="
 python3 sources/cfa_legacy/_registry/build_scope_ledger.py || status=1
 
 echo
-echo "== [2/3] full-corpus Layer-1 lint (fresh journal) =="
+echo "== [2/4] full-corpus Layer-1 lint (fresh journal) =="
 rm -f "$LINT_JOURNAL"
 if "$KB" lint --all-readings --cards-dir "$CARDS_DIR" \
       --chunks-manifest "$CHUNKS" --source-matrix "$MATRIX" \
@@ -56,7 +56,7 @@ if [ "$journal_entries" != "$disk_cards" ]; then
 fi
 
 echo
-echo "== [3/3] per-card Layer-2 verify (parallel=$PAR) =="
+echo "== [3/4] per-card Layer-2 verify (parallel=$PAR) =="
 tmpdir="$(mktemp -d)"
 trap 'rm -rf "$tmpdir"' EXIT
 
@@ -101,6 +101,15 @@ if [ "$fails" -ne 0 ]; then
   status=1
 else
   echo "verify: all $passes cards passed"
+fi
+
+echo
+echo "== [4/4] notes-taint quarantine invariant (AC-7) =="
+if python3 sources/cfa_legacy/_registry/check_quarantine_invariant.py; then
+  echo "quarantine invariant: PASS"
+else
+  echo "quarantine invariant: FAIL" >&2
+  status=1
 fi
 
 echo

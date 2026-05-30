@@ -43,6 +43,7 @@ from __future__ import annotations
 import argparse
 import json
 import os
+import re
 import unicodedata
 from pathlib import Path
 from typing import Any
@@ -177,6 +178,71 @@ def render_card(frontmatter: dict[str, Any], body: str) -> str:
     return "\n".join(lines) + "\n" + body
 
 
+_OFFSET_RULE_RE = re.compile(r"pdf_page\s*=\s*legacy_page\s*([+-])\s*(\d+)\s*$")
+
+
+def parse_offset_rule(rule: Any, *, source_id: str) -> int:
+    """Parse a v1 single-offset rule 'pdf_page = legacy_page + N' (N may be negative)."""
+    if not isinstance(rule, str):
+        raise SystemExit(f"{source_id}: offset-map pdf_coordinate_rule is not a string: {rule!r}")
+    m = _OFFSET_RULE_RE.match(rule.strip())
+    if not m:
+        raise SystemExit(
+            f"{source_id}: unparseable pdf_coordinate_rule {rule!r} "
+            "(expected 'pdf_page = legacy_page + N')"
+        )
+    mag = int(m.group(2))
+    return mag if m.group(1) == "+" else -mag
+
+
+def validate_single_source_map(source_id: str) -> dict[str, Any]:
+    """Load + validate a v1 single-source offset map (AC-6 negative test, plan line 68).
+
+    Rejects the map (non-zero exit) unless: it has exactly one source entry whose
+    source_id matches; its `pdf_coordinate_rule` parses to `pdf_page = legacy_page + N`;
+    EVERY `verified_evidence` triple has integer pages and re-derives
+    `legacy_page + N == pdf_page` (ANY failing triple rejects the whole map); and at
+    least 3 such confirmed triples exist. Returns {offset, page_count_pdf,
+    confirmed_evidence}.
+    """
+    map_path = COORD_MAPS / f"{source_id}.json"
+    if not map_path.exists():
+        raise SystemExit(f"single-source offset map missing: {map_path}")
+    doc = read_json(map_path)
+    sources = doc.get("sources")
+    if not isinstance(sources, list) or len(sources) != 1:
+        raise SystemExit(f"{source_id}: single-source map must have exactly one `sources` entry")
+    src = sources[0]
+    if src.get("source_id") != source_id:
+        raise SystemExit(
+            f"{source_id}: map sources[0].source_id is {src.get('source_id')!r}, expected {source_id!r}"
+        )
+    offset = parse_offset_rule(src.get("pdf_coordinate_rule"), source_id=source_id)
+    evidence = src.get("verified_evidence")
+    if not isinstance(evidence, list):
+        raise SystemExit(f"{source_id}: verified_evidence is not a list")
+    confirmed = 0
+    for i, ev in enumerate(evidence):
+        lp, pp = ev.get("legacy_page"), ev.get("pdf_page")
+        if not (isinstance(lp, int) and not isinstance(lp, bool)
+                and isinstance(pp, int) and not isinstance(pp, bool)):
+            raise SystemExit(
+                f"{source_id}: verified_evidence[{i}] legacy_page/pdf_page not integers: {ev!r}"
+            )
+        if lp + offset != pp:
+            raise SystemExit(
+                f"{source_id}: verified_evidence[{i}] fails re-derivation: "
+                f"legacy_page {lp} + offset {offset} = {lp + offset} != pdf_page {pp}"
+            )
+        confirmed += 1
+    if confirmed < 3:
+        raise SystemExit(
+            f"{source_id}: only {confirmed} re-derived verified_evidence triples (need >=3)"
+        )
+    page_count = src.get("page_count_pdf")
+    return {"offset": offset, "page_count_pdf": page_count, "confirmed_evidence": confirmed}
+
+
 def validate_citation(
     cit: dict[str, Any],
     *,
@@ -185,6 +251,7 @@ def validate_citation(
     chunks_by_id: dict[str, dict],
     retracted_chunks: set[str],
     retracted_sources: set[str],
+    validated_maps: dict[str, dict[str, Any]],
 ) -> None:
     """Abort the run (non-zero exit) unless every trust check passes for `cit`.
 
@@ -192,8 +259,9 @@ def validate_citation(
     retracted; chunk exists, not retracted, with matching source_id; chunk_hash
     matches; page_range well-formed and within the chunk's [start_page, end_page]
     span; quote is an exact, artifact-free substring of the chunk text; and for
-    Pedersen/Cochrane the single-source offset map loads with >=3 verified_evidence
-    and the cited page is within the source's PDF page count.
+    Pedersen/Cochrane the single-source offset map was pre-validated (rule re-derives,
+    >=3 confirmed triples) and the cited page is within the source's PDF page count.
+    `validated_maps` is the output of validate_single_source_map per single-source id.
     """
     missing = [f for f in _REQUIRED_CITATION_FIELDS if f not in cit]
     if missing:
@@ -228,17 +296,10 @@ def validate_citation(
     if bad:
         raise SystemExit(f"{card_id}: quote contains illegal chars {bad} ({cit['chunk_id']})")
     if src in SINGLE_SOURCE_MAP_SOURCES:
-        map_path = COORD_MAPS / f"{src}.json"
-        if not map_path.exists():
-            raise SystemExit(f"{card_id}: single-source offset map missing: {map_path}")
-        map_doc = read_json(map_path)
-        map_source = map_doc["sources"][0]
-        evidence = map_source.get("verified_evidence", [])
-        if len(evidence) < 3:
-            raise SystemExit(
-                f"{card_id}: offset map {src} has only {len(evidence)} verified_evidence (need >=3)"
-            )
-        page_count = map_source.get("page_count_pdf")
+        vmap = validated_maps.get(src)
+        if vmap is None:
+            raise SystemExit(f"{card_id}: single-source offset map for {src} was not validated")
+        page_count = vmap.get("page_count_pdf")
         if isinstance(page_count, int) and not (1 <= pr[0] <= pr[1] <= page_count):
             raise SystemExit(
                 f"{card_id}: cited page_range {pr} outside {src} PDF page count "
@@ -267,6 +328,7 @@ def emit_registry_card(
     chunks_by_id: dict[str, dict],
     retracted_chunks: set[str],
     retracted_sources: set[str],
+    validated_maps: dict[str, dict[str, Any]],
     force: bool,
     plan_only: bool,
     emitted: list[Path],
@@ -285,6 +347,7 @@ def emit_registry_card(
         validate_citation(
             cit, card_id=card_id, allowed=allowed, chunks_by_id=chunks_by_id,
             retracted_chunks=retracted_chunks, retracted_sources=retracted_sources,
+            validated_maps=validated_maps,
         )
     plan[card_id] = {
         "title": card["title"],
@@ -337,6 +400,11 @@ def main() -> int:
     if set(ms_ids) != set(MULTI_SOURCE_CARD_IDS):
         raise SystemExit(f"multi-source registry card set drift: {set(ms_ids) ^ set(MULTI_SOURCE_CARD_IDS)}")
 
+    # AC-6 negative test (plan line 68): every single-source offset map must
+    # re-derive each verified_evidence triple and carry >=3 confirmed triples.
+    # Validated once up front for both --plan-only and emission.
+    validated_maps = {s: validate_single_source_map(s) for s in sorted(SINGLE_SOURCE_MAP_SOURCES)}
+
     emitted: list[Path] = []
     plan: dict[str, Any] = {}
     for card in cfa_reg["cards"] + ms_reg["cards"]:
@@ -347,6 +415,7 @@ def main() -> int:
             chunks_by_id=chunks_by_id,
             retracted_chunks=retracted_chunks,
             retracted_sources=retracted_sources,
+            validated_maps=validated_maps,
             force=args.force,
             plan_only=args.plan_only,
             emitted=emitted,
@@ -364,6 +433,10 @@ def main() -> int:
         "emitted": [str(p.relative_to(ROOT)) for p in emitted],
         "card_count": len(plan),
         "cfa_legacy_anchor_deviations": cfa_reg.get("legacy_anchor_deviation_count"),
+        "offset_maps_validated": {
+            s: {"offset": v["offset"], "confirmed_evidence": v["confirmed_evidence"]}
+            for s, v in validated_maps.items()
+        },
         "plan_only": args.plan_only,
     }, indent=2))
     return 0
