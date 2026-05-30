@@ -18,6 +18,7 @@ citations:
     page_range: [60, 61]
     quote: "Roll (1984) sets out an ingenious method for measuring the bid-ask spread based on transaction prices alone."
     edge_type: "supports"
+card_hash: "05eef12a3c33d3e17192329711903b88f7e402af5da54614172b71a0dccc2b15"
 ---
 # Roll's Implicit Bid-Ask Spread Estimator from Serial Covariance
 

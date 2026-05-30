@@ -18,6 +18,7 @@ citations:
     page_range: [227, 227]
     quote: "the ETF will trade like a closed-end fund with possibly wider premiums or discounts."
     edge_type: "supports"
+card_hash: "757bbea6df2661084fd57f9eae28ddbf9f217c153d1fb2620add43ef39abbe28"
 ---
 # When the Creation Channel Breaks: an Open-End Fund Trades Like a CEF
 

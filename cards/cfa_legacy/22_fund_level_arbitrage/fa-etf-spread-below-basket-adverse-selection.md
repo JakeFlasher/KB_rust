@@ -18,6 +18,7 @@ citations:
     page_range: [86, 86]
     quote: "Beyond visible liquidity is a hidden layer of non-displayed or reserve liquidity that lies in limit orders"
     edge_type: "supports"
+card_hash: "d6323688bafd003024cdab7e26f00bcb28ea35f0b4bd662096a351aa96d52e96"
 ---
 # Why the ETF Spread Sits Below the Basket Spread: Diversified Adverse Selection
 

@@ -18,6 +18,7 @@ citations:
     page_range: [15, 15]
     quote: "optimal execution strategies where the agent must liquidate or acquire a large position over a pre-specified window and trades continuously using only market orders."
     edge_type: "supports"
+card_hash: "c4e095cd37344a9669f96fd87d00d84425da2a0a83cc24ec96666dd6f9dd8062"
 ---
 # Buy-Side Traders and the Best-Execution Mandate
 

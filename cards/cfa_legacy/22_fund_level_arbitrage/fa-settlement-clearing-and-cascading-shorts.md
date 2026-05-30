@@ -30,6 +30,7 @@ citations:
     page_range: [46, 46]
     quote: "For this reason, market makers are given up to six days to settle their accounts."
     edge_type: "supports"
+card_hash: "68096e899a2e732ed7f5d77e3d29b0902fcda46c23e0a48e3d03d585361f1b09"
 ---
 # Settlement, Clearing & the Cascading-Shorts Daisy Chain
 

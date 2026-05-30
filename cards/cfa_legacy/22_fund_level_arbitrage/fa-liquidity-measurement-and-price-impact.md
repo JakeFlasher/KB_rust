@@ -24,6 +24,7 @@ citations:
     page_range: [90, 90]
     quote: "size in the secondary market. Define the price impact cost as the deviation of the average execution price from the prevailing price at the time of the order"
     edge_type: "supports"
+card_hash: "36fc95bb952fa6474f913d4d65ff97e9913f60f08974658d9836bee40103c969"
 ---
 # Measuring Liquidity & Price Impact: Roll, Kyle, Amihud
 

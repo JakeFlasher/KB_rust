@@ -18,6 +18,7 @@ citations:
     page_range: [81, 81]
     quote: "If the dealer is risk averse, his quotes should depend directly on his exposure to inventory"
     edge_type: "supports"
+card_hash: "1c7345049f2101c833e043d48ed533a4397303832ec57d8cdd31d85fcce870eb"
 ---
 # The Dealer's Inventory Problem: Bid-Ask Spread as Inventory-Risk Compensation
 

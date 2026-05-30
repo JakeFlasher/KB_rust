@@ -12,6 +12,7 @@ citations:
     page_range: [97, 97]
     quote: "decomposition of the random-walk variance provides a basis for measuring the importance of different sources of market"
     edge_type: "defines"
+card_hash: "fc779873a39f1aec1e7ab46464487a9676306585dad37c002afa0b5bcd48007d"
 ---
 # Hasbrouck VAR: Vector Autoregression of Trades and Quotes
 

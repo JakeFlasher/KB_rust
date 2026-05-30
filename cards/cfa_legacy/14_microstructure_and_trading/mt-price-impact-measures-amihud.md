@@ -18,6 +18,7 @@ citations:
     page_range: [104, 104]
     quote: "Amihud (2002) suggests the illiquidity"
     edge_type: "supports"
+card_hash: "9f54aece679bb8b92d373ecf24134874a62a1d686caaec52b7605679e552d0bf"
 ---
 # Price-Impact Liquidity Measures: Kyle-Lambda Regression and the Amihud Illiquidity Ratio
 

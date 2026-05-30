@@ -24,6 +24,7 @@ citations:
     page_range: [44, 44]
     quote: "A Comprehensive Guide to Exchange-Traded Funds (ETFs) 28 ©2015 The CFA Institute Research Foundation “stuck,” even as the ETF’s share price engages in price discovery."
     edge_type: "supports"
+card_hash: "829b510fcd6fe61f038904d88e2e272867a7efbbdb99d074af1149bd704a7bc1"
 ---
 # International ETFs: Price Discovery When the Underlying Market Is Closed
 

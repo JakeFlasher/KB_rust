@@ -12,6 +12,7 @@ citations:
     page_range: [158, 159]
     quote: "the shares must be liquidated at a constant rate and this strategy is the same as that of the time weighted average price"
     edge_type: "defines"
+card_hash: "7ed137222607d5754effbf8269e39d42dda57e1ab7cd5d98ac7f4181e0f3b00c"
 ---
 # Almgren-Chriss Optimal Execution: Temporary vs Permanent Impact and the Urgency Trade-off
 

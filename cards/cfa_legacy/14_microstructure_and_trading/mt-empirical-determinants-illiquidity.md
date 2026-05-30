@@ -18,6 +18,7 @@ citations:
     page_range: [42, 42]
     quote: "the present one adopts a more data-oriented statistical"
     edge_type: "supports"
+card_hash: "e0e64df4609a1f0b09a552537f236abf04b341f4181ef0de265b0151ead3d342"
 ---
 # Estimating the Determinants of Market Illiquidity: Structural vs Reduced-Form
 

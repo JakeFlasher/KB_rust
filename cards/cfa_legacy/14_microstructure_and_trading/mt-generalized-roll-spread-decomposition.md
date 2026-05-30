@@ -12,6 +12,7 @@ citations:
     page_range: [79, 79]
     quote: "Here, λqt reflects the information content of the time-t trade"
     edge_type: "defines"
+card_hash: "ea0ffd9e90e1ff2ef7a4bc5b3edf470dfea71ea5d42aa7c8af04a3076460f03e"
 ---
 # Generalized Roll Model: Decomposing the Spread into Adverse-Selection and Cost Components
 

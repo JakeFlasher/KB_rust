@@ -18,6 +18,7 @@ citations:
     page_range: [205, 205]
     quote: "Attempting to add returns over time leaves a residual."
     edge_type: "supports"
+card_hash: "a5c57c44affa129c5b7f9f5c3f81cfa9a879e14d8fc26a99dca35de403586aa0"
 ---
 # Multi-Period Linking: Smoothing vs Linking Algorithms
 

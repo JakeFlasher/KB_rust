@@ -18,6 +18,7 @@ citations:
     page_range: [353, 354]
     quote: "The changing shape of the yield curve can be decomposed into three different movements: shift, twist (or slope) and curvature (or butterfly)."
     edge_type: "supports"
+card_hash: "a5d0a955ef8a315aa4ea1c7180d5b33f14f3a5b78793492d7429ea7b27701a34"
 ---
 # Shift, Twist, Butterfly, and Key-Rate Duration
 

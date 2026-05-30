@@ -98,8 +98,17 @@ def parse_rows(text: str) -> list[tuple[str, str, str, str]]:
     return rows
 
 
+def active_card_count(repo: Path) -> int | None:
+    """Active-card count DERIVED from the published manifest (data-driven; 268 at v0,
+    402 at v1) so the definition-of-done assertion tracks the milestone bump."""
+    p = repo / "out/cfa_legacy/cards_manifest.json"
+    if not p.is_file():
+        return None
+    return len(json.loads(p.read_text(encoding="utf-8"))["cards"])
+
+
 def run_checks(text: str, *, repo: Path, evidence_must_exist: bool = True,
-               disk_facts: dict | None = None) -> list[str]:
+               disk_facts: dict | None = None, active_count: int | None = None) -> list[str]:
     failures: list[str] = []
     rows = parse_rows(text)
     by_id: dict[str, tuple[str, str, str, str]] = {}
@@ -150,9 +159,14 @@ def run_checks(text: str, *, repo: Path, evidence_must_exist: bool = True,
         if vp_fm != "false":
             failures.append(f"DEC-2 violation: volume_page_in_card_frontmatter={vp_fm!r} (must be false for v0)")
 
-    # (6) v0 DoD + FUT links present.
-    if not re.search(r"268\b.*\b6\b|6\b.*\b268\b", text) or "quarantin" not in text.lower():
-        failures.append("v0 definition-of-done (268 active + 6 quarantined) not stated")
+    # (6) DoD + FUT links present. The active count is DERIVED from the manifest (or
+    # injected for the hermetic self-test), so the assertion tracks v0->v1 (268->402).
+    active = active_count if active_count is not None else active_card_count(repo)
+    if active is None:
+        failures.append("cannot derive active-card count (cards_manifest.json missing)")
+    elif (not re.search(rf"\b{active}\b.*\b6\b|\b6\b.*\b{active}\b", text)
+          or "quarantin" not in text.lower()):
+        failures.append(f"definition-of-done ({active} active + 6 quarantined) not stated")
     for fut in ("FUT-1", "FUT-2", "FUT-4"):
         if fut not in text:
             failures.append(f"{fut} not linked in the ledger")
@@ -263,6 +277,7 @@ def _self_test() -> int:
         nonlocal failures
         kw.setdefault("evidence_must_exist", False)
         kw.setdefault("disk_facts", FACTS)
+        kw.setdefault("active_count", 268)  # the synthetic fixtures state "268 active"
         res = run_checks(text, repo=REPO, **kw)
         if res:
             failures += 1; print(f"  FAIL (clean flagged): {name} -> {res}")
@@ -273,6 +288,7 @@ def _self_test() -> int:
         nonlocal failures
         kw.setdefault("evidence_must_exist", False)
         kw.setdefault("disk_facts", FACTS)
+        kw.setdefault("active_count", 268)  # the synthetic fixtures state "268 active"
         res = run_checks(text, repo=REPO, **kw)
         if any(needle in f for f in res):
             print(f"  fires (caught): {name}")

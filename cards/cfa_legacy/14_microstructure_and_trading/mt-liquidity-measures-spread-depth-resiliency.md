@@ -12,6 +12,7 @@ citations:
     page_range: [52, 53]
     quote: "the price at which a market order executes and the midquote on the market the instant"
     edge_type: "defines"
+card_hash: "59ac5a1849db546ed0b734787a776fb8d2daca10f1c7910959b779afd70c3366"
 ---
 # Measuring Liquidity: Quoted, Effective, and Realized Spread; Depth; Resiliency
 

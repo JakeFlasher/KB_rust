@@ -18,6 +18,7 @@ citations:
     page_range: [333, 333]
     quote: "The three measures have an additive consistency property that their sum equals the excess return to the managed portfolio."
     edge_type: "supports"
+card_hash: "680469dc9dffc7340326566ec479055a1ef18a80fbfdbc54c7bea510cdb30250"
 ---
 # The DGTW Characteristic-Based Decomposition (CS/CT/AS)
 

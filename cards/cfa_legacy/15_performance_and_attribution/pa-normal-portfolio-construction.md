@@ -12,6 +12,7 @@ citations:
     page_range: [236, 237]
     quote: "It is not clear that there should be a unique or single normal portfolio for a manager."
     edge_type: "defines"
+card_hash: "3f2547c9a2e5d3ca5ca1488631e24b0ab2021a69a529fce476daaa81472b88a9"
 ---
 # Normal-Portfolio Construction
 

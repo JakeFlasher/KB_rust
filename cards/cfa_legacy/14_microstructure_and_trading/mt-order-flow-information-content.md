@@ -18,6 +18,7 @@ citations:
     page_range: [13, 13]
     quote: "avoid making a market in a situation where he might very easily lose money to informed"
     edge_type: "supports"
+card_hash: "06cf4d5b99b90048e4679dc4130662ffd34ed8a40c3d51e1de0f9cd0532ab8cc"
 ---
 # Adverse Selection and the Information Content of Trades
 

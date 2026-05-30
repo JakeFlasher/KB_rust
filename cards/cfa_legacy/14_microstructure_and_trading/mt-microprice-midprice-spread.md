@@ -12,6 +12,7 @@ citations:
     page_range: [63, 63]
     quote: "The microprice is similar to the midprice, but it incorporates information on order imbalance"
     edge_type: "defines"
+card_hash: "cbf75f9a104c49d1ed21d0499ccff48621d420951122c198ff7570ffef0d5e7f"
 ---
 # Midprice, Microprice, Quoted Spread and Market-Quality Measures
 

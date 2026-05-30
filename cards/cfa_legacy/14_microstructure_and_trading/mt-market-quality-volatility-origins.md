@@ -18,6 +18,7 @@ citations:
     page_range: [93, 93]
     quote: "the literature differentiates between fundamental volatility and microstructure noise"
     edge_type: "supports"
+card_hash: "1632fe7876e7b1139fd849d383e1bf99693173204f6566fbd585064deb2f2cb6"
 ---
 # The Origins of Volatility and Market Quality
 

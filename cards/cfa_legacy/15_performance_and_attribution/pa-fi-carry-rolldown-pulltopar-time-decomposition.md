@@ -12,6 +12,7 @@ citations:
     page_range: [175, 175]
     quote: "However, rolldown return is seldom substantial, and will be overwhelmed by even quite small changes in the level or shape of the curve."
     edge_type: "defines"
+card_hash: "133617ba2b4e18c309047d60dcb357bfc92267370a4bda6a608a46303d94e1c6"
 ---
 # Carry, Roll-Down, and Pull-to-Par Time Decomposition
 

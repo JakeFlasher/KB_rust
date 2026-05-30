@@ -18,6 +18,7 @@ citations:
     page_range: [384, 384]
     quote: "or linking algorithm must be employed; there is no economic justification other than presentational convenience."
     edge_type: "supports"
+card_hash: "6175d7e6750bdb85e567c3fb2775d3f3f92165de68a6564ae414ebf1d384f67f"
 ---
 # The Geometric-vs-Arithmetic Linking Choice
 

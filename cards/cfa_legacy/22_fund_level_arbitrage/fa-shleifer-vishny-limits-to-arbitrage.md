@@ -18,6 +18,7 @@ citations:
     page_range: [109, 109]
     quote: "In this version of the model, we assume that the arbitrageur is a fund"
     edge_type: "supports"
+card_hash: "59a6deb21603730e17798c15b390dddf6468c85555dac3770f198c5bbadc7ab2"
 ---
 # Shleifer-Vishny Limits to Arbitrage: Performance-Sensitive Capital
 

@@ -12,6 +12,7 @@ citations:
     page_range: [284, 284]
     quote: "asset returns contain an illiquidity premium in addition to a risk premium, as section 9.2 explains."
     edge_type: "defines"
+card_hash: "209b185e93367b85ead2ff5a97df58d3fad657280e5de19315553536edb1c2e4"
 ---
 # Liquidity and Asset Prices: The Illiquidity Premium and the Clientele Effect
 

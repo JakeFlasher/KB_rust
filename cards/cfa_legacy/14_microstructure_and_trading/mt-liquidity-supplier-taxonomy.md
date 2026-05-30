@@ -12,6 +12,7 @@ citations:
     page_range: [417, 418]
     quote: "therefore are not suppliers of liquidity but porters of"
     edge_type: "defines"
+card_hash: "9c307d4f06eb1e680f5119a33d4556c614505ade4b7a67f347e9acb22d5a7e14"
 ---
 # Liquidity-Supplier Taxonomy: Five Types of Liquidity Providers
 

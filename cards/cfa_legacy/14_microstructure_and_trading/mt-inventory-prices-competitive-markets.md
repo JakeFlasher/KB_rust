@@ -18,6 +18,7 @@ citations:
     page_range: [28, 28]
     quote: "the management of inventory risk is a major determinant of bid and ask prices"
     edge_type: "supports"
+card_hash: "b1a299c6f732b5d7f64a2fb3da702b5f7cb5e65679add37d649dff1771316140"
 ---
 # Prices and Inventories in Competitive Dealer Markets
 

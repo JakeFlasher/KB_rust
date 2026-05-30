@@ -12,6 +12,7 @@ citations:
     page_range: [27, 27]
     quote: "the process whereby an entering market order executes against standing LOs deeper in the LOB is called 'walking the book'."
     edge_type: "defines"
+card_hash: "fd29e7571b4dce43bccaf890f6cb90f78fbd4bc3ae9aac3fb1d261b976b9314f"
 ---
 # Limit Order Book Mechanics: Price-Time Priority, Walking the Book, and Maker-Taker Fees
 

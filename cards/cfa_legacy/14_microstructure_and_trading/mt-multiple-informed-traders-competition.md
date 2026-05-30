@@ -18,6 +18,7 @@ citations:
     page_range: [124, 124]
     quote: "an increase in the fraction of informed traders accelerates price discovery"
     edge_type: "supports"
+card_hash: "1db163056fd4fef971cdbe54e7dc26dde3657ba5e534de380aa27f7c48ee4b90"
 ---
 # Multiple Informed Traders and Competition Among the Informed
 

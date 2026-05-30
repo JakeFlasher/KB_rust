@@ -18,6 +18,7 @@ citations:
     page_range: [86, 87]
     quote: "currency attribution is that spot exchange rates are insufficient to decide"
     edge_type: "supports"
+card_hash: "6c2d8e2961524386e7f6a203f0145db6e5de22e93e53fa8b39f91c7b729f8c2d"
 ---
 # Currency Attribution: The Karnosky-Singer Framework
 

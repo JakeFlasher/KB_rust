@@ -30,6 +30,7 @@ citations:
     page_range: [87, 87]
     quote: "Paying financing charges on the money used to buy the ETF"
     edge_type: "supports"
+card_hash: "edb5edd768eb4b257b5023e0b491c024691e0633679b95a6f1d19eb45340909c"
 ---
 # The Portfolio Composition File, the Cash DOF & Fund Seeding
 

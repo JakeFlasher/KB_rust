@@ -18,6 +18,7 @@ citations:
     page_range: [406, 406]
     quote: "importantly, the order of the decision process, we can still employ the Brinson model."
     edge_type: "defines"
+card_hash: "0735e143364e892483997b920f8a3cc892d893e8bdff67c439044c44c444016c"
 ---
 # Multi-Level Attribution and Successive Notional Funds
 

@@ -12,6 +12,7 @@ citations:
     page_range: [17, 17]
     quote: "the ability to trade a security quickly at a price close to its consensus value, that is, in the sense of “market liquidity.”"
     edge_type: "defines"
+card_hash: "ebafbebb3d7fba7b9e750233ac3408e58e656b52410af664a03dcab921f3f518"
 ---
 # The Three Dimensions of Liquidity: Market, Funding, and Monetary
 

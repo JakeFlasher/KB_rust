@@ -18,6 +18,7 @@ citations:
     page_range: [42, 42]
     quote: "a large sell order may trigger a very sharp price drop, as it"
     edge_type: "supports"
+card_hash: "10d0b354febb42c3bea1e61d70a70b47d12a87142ed4cdbd772c1036b70d98a9"
 ---
 # Bubbles, Crashes, and Circuit Breakers: Volatility Interruptions
 

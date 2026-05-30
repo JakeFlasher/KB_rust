@@ -12,6 +12,7 @@ citations:
     page_range: [340, 340]
     quote: "the sensitivity of investment to stock prices is greater"
     edge_type: "supports"
+card_hash: "3b021cf95d9b9a9e62973b5572726b566dfdab549fd4012b6b0cd65eb5e54d58"
 ---
 # Feedback from Secondary-Market Liquidity to Real Investment and Corporate Policy
 

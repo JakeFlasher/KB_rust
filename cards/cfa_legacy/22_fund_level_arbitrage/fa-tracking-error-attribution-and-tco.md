@@ -24,6 +24,7 @@ citations:
     page_range: [81, 81]
     quote: "these reports overstate tracking error to the benchmark index because price changes around dividend ex dates show as volatility."
     edge_type: "supports"
+card_hash: "4fa25398cd100aca12f13067505657be364612a7c0002d6a279afb132643ca02"
 ---
 # Tracking Difference vs Error & Total Cost of Ownership
 

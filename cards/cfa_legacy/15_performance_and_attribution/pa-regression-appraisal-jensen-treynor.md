@@ -12,6 +12,7 @@ citations:
     page_range: [101, 101]
     quote: "Jensen’s alpha is the intercept of the regression equation in the CAPM and is in effect the excess return adjusted for systematic risk."
     edge_type: "defines"
+card_hash: "ccb4adf9f14697f21a78a17226ff62673a666ce0cbd88d61da43b158d73c1d63"
 ---
 # Regression Appraisal: Jensen's Alpha and the Treynor Ratio
 

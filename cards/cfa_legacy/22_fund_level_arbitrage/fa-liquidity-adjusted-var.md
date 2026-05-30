@@ -12,6 +12,7 @@ citations:
     page_range: [163, 163]
     quote: "The concept behind the liquidity-adjusted VaR is simple."
     edge_type: "defines"
+card_hash: "0bad3595d07fc6f5e6390d3f0246bf3c509156347f1eb917d3018e1970c050b8"
 ---
 # Liquidity-Adjusted VaR: Splitting Out the Liquidation Cost
 

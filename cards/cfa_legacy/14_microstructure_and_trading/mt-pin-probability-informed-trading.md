@@ -18,6 +18,7 @@ citations:
     page_range: [165, 165]
     quote: "PIN is the ratio between the rate of arrival of informed traders and the total rate of order arrival"
     edge_type: "supports"
+card_hash: "3fab8f9f0234e1523a206e91baabd861067be68df669edc933019e5058d69356"
 ---
 # PIN: The Probability of Informed Trading from Buy/Sell Order Counts
 

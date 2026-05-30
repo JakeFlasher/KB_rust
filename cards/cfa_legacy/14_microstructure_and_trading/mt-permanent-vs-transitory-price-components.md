@@ -12,6 +12,7 @@ citations:
     page_range: [83, 83]
     quote: "random-walk decompositions are usually called permanent/transitory"
     edge_type: "defines"
+card_hash: "b3e38707cba1637439a190782c2483abcfb7eb01525ddc4fdae0c51328976e50"
 ---
 # Permanent vs Transitory Price Components (Random-Walk + Pricing Error)
 

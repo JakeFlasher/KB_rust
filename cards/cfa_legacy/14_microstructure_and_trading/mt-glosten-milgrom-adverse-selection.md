@@ -18,6 +18,7 @@ citations:
     page_range: [84, 84]
     quote: "In this model the ask price exceeds the bid because the former is set in anticipation of receiving a buy order, the latter a sell order"
     edge_type: "supports"
+card_hash: "c7281fae7616310ea3cdb866717cf4e1544c5f79024206081f0d4702c588db47"
 ---
 # The Glosten-Milgrom Sequential-Trade Model: Spread from Adverse Selection
 

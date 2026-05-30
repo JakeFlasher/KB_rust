@@ -12,6 +12,7 @@ citations:
     page_range: [284, 284]
     quote: "traders who are better informed will pick-off the LOs posted by the less informed MM"
     edge_type: "defines"
+card_hash: "9a0a70aea83236a1900d2732bc670594642c89900ba67f6b4244f3c6a6282d5a"
 ---
 # Market Making with Adverse Selection and Short-Term Alpha
 

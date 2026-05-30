@@ -12,6 +12,7 @@ citations:
     page_range: [84, 84]
     quote: "A market order is an instruction to trade at the best price currently available"
     edge_type: "defines"
+card_hash: "6268a19df91272ff416350eb6058fdafa05fa28cc345807eb4e3068b2d6164e8"
 ---
 # Order Types: Market, Limit, and Stop Orders
 

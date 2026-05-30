@@ -18,6 +18,7 @@ citations:
     page_range: [317, 317]
     quote: "ETF cannot operate without exemptive relief. Applying for such relief can take several months or even years, and may cost a tremendous amount of money in legal bills and other administrative costs."
     edge_type: "supports"
+card_hash: "c4df8e620482c1d2320513127b59a08cc664bd01266e315355a835891c28d718"
 ---
 # ETP Taxonomy: ETF vs ETN vs ETV/ETC & Legal Wrappers
 

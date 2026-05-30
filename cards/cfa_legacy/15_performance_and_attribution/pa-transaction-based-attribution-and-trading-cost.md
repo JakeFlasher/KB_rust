@@ -18,6 +18,7 @@ citations:
     page_range: [193, 193]
     quote: "Cash Flows The framework by itself does not address cash flows between segments."
     edge_type: "supports"
+card_hash: "bfd3eb49ad438cf1f5db84189dca1035f1f9b73cd5bb6c996baf0142903924ae"
 ---
 # Transaction-Based Attribution and the Trading-Cost Bridge
 

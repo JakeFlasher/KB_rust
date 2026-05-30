@@ -18,6 +18,7 @@ citations:
     page_range: [108, 108]
     quote: "dealers learn not only from the order flow but also from trading volume"
     edge_type: "supports"
+card_hash: "280174db5caebdf884c124058801bf05185afd8367e5782cb29f7692a3adeaae"
 ---
 # The Volume Critique and the Role of Time in Price Adjustment
 

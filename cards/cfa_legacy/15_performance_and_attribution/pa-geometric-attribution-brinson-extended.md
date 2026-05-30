@@ -12,6 +12,7 @@ citations:
     page_range: [283, 284]
     quote: "The total stock selection and asset allocation effects compound together to produce the"
     edge_type: "defines"
+card_hash: "1e0b401b25317686c6709863a03a42953f8caf7a4c6472f682a6f9c3a5928395"
 ---
 # Geometric Attribution: The Compounding Brinson Extension
 

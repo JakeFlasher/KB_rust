@@ -18,6 +18,7 @@ citations:
     page_range: [91, 91]
     quote: "ETFs typically trade within a no arbitrage zone between the underlying bid and ask prices plus the explicit costs of creation and exchange fees."
     edge_type: "supports"
+card_hash: "0436255ac86cccd1ba36f70b1600ec14f9bf6edff40fe3d4fe904564bd62c226"
 ---
 # The ETF Creation-Redemption Arbitrage Band: Why Price Tracks NAV
 

@@ -12,6 +12,7 @@ citations:
     page_range: [103, 104]
     quote: "flow that has been signed as to buyer- or seller-initiated. The sign is usually"
     edge_type: "defines"
+card_hash: "2962023b5ef57637e5451f4da8ec383ae77b328b32f94568a0d1ec471d189ab1"
 ---
 # Signing Trades and the Trade-Direction Indicator (Lee-Ready)
 

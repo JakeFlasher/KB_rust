@@ -18,6 +18,7 @@ citations:
     page_range: [66, 66]
     quote: "trade-off we face is immediacy versus cost of execution"
     edge_type: "supports"
+card_hash: "94a700feed7ebc91e0ccf96f66e8d5891615322c820d0059044ea77345ef4dc1"
 ---
 # Prospective Execution: The Market-Order vs Limit-Order Cost/Opportunity Trade-off
 

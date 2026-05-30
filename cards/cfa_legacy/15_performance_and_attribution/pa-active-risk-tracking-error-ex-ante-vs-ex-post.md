@@ -18,6 +18,7 @@ citations:
     page_range: [44, 44]
     quote: "Each manager can restate the portfolio management problem from his perspective as active return–active risk optimization of his subportfolio."
     edge_type: "supports"
+card_hash: "bcde7320898e72da4a5bd8d4df29811447e758b2c769b366a501db5d118fc01d"
 ---
 # Active Risk: Ex-Ante vs Ex-Post Tracking Error
 

@@ -18,6 +18,7 @@ citations:
     page_range: [83, 83]
     quote: "transaction prices follow a martingale: price changes over a given interval are serially uncorrelated"
     edge_type: "supports"
+card_hash: "b862637316c21b738af18cdb841cb736f446be5954935f251f01cd4418636e17"
 ---
 # Prices as a Martingale and the Information-Impounding Price Process
 

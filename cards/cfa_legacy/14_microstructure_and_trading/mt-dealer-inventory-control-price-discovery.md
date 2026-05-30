@@ -12,6 +12,7 @@ citations:
     page_range: [297, 297]
     quote: "Dealers also may increase their bid sizes, and lower their ask sizes, to decrease their inventories."
     edge_type: "defines"
+card_hash: "8b4056a3513a61f0b459604f99cdfb43d50ca9b48e944d902768c46a1f566148"
 ---
 # Dealer Inventory Control and the Price-Discovery Process
 

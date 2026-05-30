@@ -12,6 +12,7 @@ citations:
     page_range: [127, 127]
     quote: "the optimal control can often be found in feedback control form in terms of the value function itself."
     edge_type: "defines"
+card_hash: "dc77561a6c33c182ea2c294fda0a689a2c137bdf0532fbbb75445d476c928c84"
 ---
 # Stochastic Optimal Control for Trading: The Dynamic Programming / HJB Equation
 

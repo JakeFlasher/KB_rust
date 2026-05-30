@@ -24,6 +24,7 @@ citations:
     page_range: [52, 52]
     quote: "3.2 Brinson attribution 3.2.1 Asset allocation The first type of return measured by Brinson attribution is value added by overweighting some sectors and underweighting others."
     edge_type: "supports"
+card_hash: "bf0e83181fbda4a9825fe6efd5e74e1918ccc786e89d392997b560659e9ec48b"
 ---
 # The Brinson Decomposition: Allocation, Selection, and Interaction
 

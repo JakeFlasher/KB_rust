@@ -12,6 +12,7 @@ citations:
     page_range: [258, 258]
     quote: "Order anticipators are parasitic traders. They profit only when they can"
     edge_type: "defines"
+card_hash: "bc098591d523e4a9b11ecf9c5bb320e410f49c5ecd7da7e292b5271e4b5b5853"
 ---
 # Order Anticipators: Front-Running and Parasitic Trading
 

@@ -12,6 +12,7 @@ citations:
     page_range: [341, 342]
     quote: "Good block traders must carefully set the prices at which they facilitate trades with their clients to ensure that they will be able to trade out of their positions at a profit."
     edge_type: "defines"
+card_hash: "53f40be09c06f5cc7bf4e34b95ffcab27710ecefb4753004377c54f5f0124e11"
 ---
 # Block Traders and Upstairs Markets: Supplying Depth to Large Orders
 

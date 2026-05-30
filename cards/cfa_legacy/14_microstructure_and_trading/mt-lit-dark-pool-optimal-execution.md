@@ -18,6 +18,7 @@ citations:
     page_range: [147, 147]
     quote: "Less than 10 percent of their order volume ever crosses."
     edge_type: "supports"
+card_hash: "96cc1e955573a21ab8334500f98986f52e2bad8625aa5481faa8767f3990e3b0"
 ---
 # Optimal Execution Across Lit and Dark Venues with Order-Flow Trends
 

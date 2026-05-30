@@ -18,6 +18,7 @@ citations:
     page_range: [28, 28]
     quote: "In dealer markets, the final investors do not trade directly with each other"
     edge_type: "supports"
+card_hash: "7d0fe359aae97091975cbb0334ab8186bc015691ae950f0ddfe546c152b59f2f"
 ---
 # Execution Systems: Quote-Driven vs Order-Driven vs Brokered Markets
 

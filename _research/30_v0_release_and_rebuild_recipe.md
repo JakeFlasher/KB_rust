@@ -1,6 +1,12 @@
 # _research/30 — CFA-legacy CACG v0 Release & Rebuild Recipe
 
-This document is the **AC-10 release record** for the CFA-legacy CACG **v0 release
+> **Superseded for the current milestone by `_research/31_v1_release_and_rebuild_recipe.md`.**
+> This document is the historical v0 record (268 active + 6 quarantined = 274 across 11 readings, 70
+> sources). The **v1** milestone (402 active + 6 quarantined = 408 across 14 readings, 87 sources — the
+> migration of readings 14/15/22) is recorded in `_research/31`, which is the active release recipe the
+> release-cleanliness gate consults. The counts below describe v0 and are kept as the v0 baseline.
+
+This document is the release record for the CFA-legacy CACG **v0 release
 candidate**. It states the v0 definition-of-done, enumerates the tracked release
 artifacts, gives the intentionally-untracked **disposition note**, documents the exact
 **rebuild recipe** for the excluded `chunks_manifest.json`, records the **fresh-root git

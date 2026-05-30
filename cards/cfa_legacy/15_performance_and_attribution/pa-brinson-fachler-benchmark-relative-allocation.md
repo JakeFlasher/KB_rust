@@ -12,6 +12,7 @@ citations:
     page_range: [277, 278]
     quote: "The Brinson and Fachler model solves this problem by modifying the asset allocation factor"
     edge_type: "defines"
+card_hash: "97849b46f0cd84122c1617d19fe8912e16f46df7a27638d523bd15ddbd71df84"
 ---
 # Brinson-Fachler: Benchmark-Relative Allocation
 

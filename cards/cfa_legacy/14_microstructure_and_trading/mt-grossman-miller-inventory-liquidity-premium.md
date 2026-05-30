@@ -12,6 +12,7 @@ citations:
     page_range: [38, 38]
     quote: "MMs obtain a liquidity premium from liquidity traders that exactly compensates"
     edge_type: "defines"
+card_hash: "6d1761e302f26ddf6b670e0bfc80c8710209d0b392060f4bf9b2441b7c66fc6d"
 ---
 # Grossman-Miller Market Making: Inventory Risk and the Liquidity Premium
 

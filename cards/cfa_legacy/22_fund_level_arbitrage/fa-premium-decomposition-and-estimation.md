@@ -18,6 +18,7 @@ citations:
     page_range: [69, 70]
     quote: "because it aligns with the model directly and lets us explicitly estimate the unobserved true premium,"
     edge_type: "supports"
+card_hash: "8897c257e2e085be6673a0ec30bf5f235a2362de441f6bb5672efa0bc8dab7b9"
 ---
 # Premium Decomposition: Price Discovery vs Transitory Liquidity
 

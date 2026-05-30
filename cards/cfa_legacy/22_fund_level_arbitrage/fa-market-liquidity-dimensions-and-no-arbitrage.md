@@ -18,6 +18,7 @@ citations:
     page_range: [24, 24]
     quote: "such as the cost of changing positions (tightness), the trade size or thickness of the order book-profile (order book refers to a data set which provides traders with bid-ask prices and volume offered per price) required for changing prices (market depth), and the required period of time to recover from price fluctuation caused by a sudden shock or to reach a new equilibrium (market resiliency)."
     edge_type: "supports"
+card_hash: "c0f2adfbe66b3c0438807b075d3288008584f1eb3d188751dc9a10ec56957db5"
 ---
 # Market-Liquidity Dimensions (Tightness, Depth, Resiliency) & the No-Arbitrage Baseline
 

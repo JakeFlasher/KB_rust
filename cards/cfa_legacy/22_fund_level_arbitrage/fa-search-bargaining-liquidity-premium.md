@@ -18,6 +18,7 @@ citations:
     page_range: [104, 104]
     quote: "The liquidity premium is proportional to the bid-ask spread S charged by market makers and increases in the"
     edge_type: "supports"
+card_hash: "99e56e777e247b677dca261b1959cd66332f59271f48186722bf7b839ba0476b"
 ---
 # Search & Bargaining in OTC Markets: Endogenous Liquidity Premia
 

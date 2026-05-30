@@ -12,6 +12,7 @@ citations:
     page_range: [261, 262]
     quote: "With other weighting methods, not all investors could hold the index."
     edge_type: "defines"
+card_hash: "89f601c6ac755cf57a527d16bfce5bc9b4771b4a03f38bb3f272a67c0fe6a95c"
 ---
 # Capitalization Weighting and Macroconsistency
 

@@ -36,6 +36,7 @@ citations:
     page_range: [118, 118]
     quote: "both of which suggest that bond ETF premiums really reflected price discovery, not dislocation."
     edge_type: "supports"
+card_hash: "95682e7c061f48c2ab619550afb32426e1b869d946217bc3f0a07e23b1037a42"
 ---
 # Market Impact, Best-Execution Tension & Turbulence Breakdown
 

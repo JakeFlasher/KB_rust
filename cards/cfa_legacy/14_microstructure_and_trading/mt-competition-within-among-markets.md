@@ -18,6 +18,7 @@ citations:
     page_range: [37, 38]
     quote: "The intensification of competition between trading platforms is the result of three forces:"
     edge_type: "supports"
+card_hash: "4a74afe432aa844e381c89e5aa87061eea98d8f91821a1688d0be03bfcd13d5f"
 ---
 # Competition Within and Among Markets: Floor vs Automated Trading Systems
 

@@ -24,6 +24,7 @@ citations:
     page_range: [25, 25]
     quote: "In general, the more work the issuer will need to do to true-up the portfolio because of cash in lieu of securities, the larger the creation and redemption fee will be"
     edge_type: "supports"
+card_hash: "87a13075842d7bb4d35477ec76d61cd4e3b2baaea257252e8a2b28f2ecd69e38"
 ---
 # In-Kind Basket Design, Custom Baskets & Creation Fees
 

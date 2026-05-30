@@ -18,6 +18,7 @@ citations:
     page_range: [252, 252]
     quote: "This characteristic can be called investability."
     edge_type: "supports"
+card_hash: "595066744df380da98df8cdb65e725596b612af0e00777dfc89c341f13fee1c8"
 ---
 # Properties of a Valid Benchmark
 

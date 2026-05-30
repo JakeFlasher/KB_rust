@@ -12,6 +12,7 @@ citations:
     page_range: [290, 291]
     quote: "pairs trading fall under the class of strategies sometimes labeled as"
     edge_type: "defines"
+card_hash: "218a37543f68e388aa4a6ffb52eeda343d9073741919ce8925f4244787f1595e"
 ---
 # Pairs Trading and Statistical Arbitrage via Cointegration with Optimal Bands
 

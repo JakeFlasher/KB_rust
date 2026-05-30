@@ -18,6 +18,7 @@ citations:
     page_range: [353, 353]
     quote: "There is an alternative vocabulary of yield changes rather than returns."
     edge_type: "supports"
+card_hash: "9be4e5edac8b9077932b029929170666a886598e115d38a72f48bb385dbf8ec3"
 ---
 # The Fixed-Income Perturbational Attribution Equation
 

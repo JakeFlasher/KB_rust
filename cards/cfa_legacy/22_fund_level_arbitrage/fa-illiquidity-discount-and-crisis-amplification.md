@@ -18,6 +18,7 @@ citations:
     page_range: [115, 115]
     quote: "This implies that the illiquidity discount is higher and the price of the asset is lower during the funding crisis at date 1."
     edge_type: "supports"
+card_hash: "ba55b7d5714b3cbd0837b18af89b3b51a6b88090f4f836eb204617326d800324"
 ---
 # The Illiquidity Discount & Crisis Amplification
 

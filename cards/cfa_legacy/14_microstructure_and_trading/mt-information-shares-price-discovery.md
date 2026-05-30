@@ -12,6 +12,7 @@ citations:
     page_range: [112, 112]
     quote: "One property developed earlier for the structural model, however, is general: The rows of θ(1) are identical."
     edge_type: "defines"
+card_hash: "4327df484128eeb74a171396d7e59b8eb589de49607d760ef4ca652d4c90b411"
 ---
 # Information Shares: Where Price Discovery Happens Across Venues
 

@@ -18,6 +18,7 @@ citations:
     page_range: [27, 27]
     quote: "markets prioritise MOs over LOs and then use a price-time priority"
     edge_type: "supports"
+card_hash: "0aa4cc78e8f346856d8e727b8fe2811cf484a6eedf86a217c30677c61da3817d"
 ---
 # Order Precedence Rules: Price Priority and Time Precedence
 

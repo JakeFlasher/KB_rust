@@ -18,6 +18,7 @@ citations:
     page_range: [21, 21]
     quote: "The order flow externality generally ensures that one market among a set of closely related markets will eventually dominate the others."
     edge_type: "supports"
+card_hash: "5d65a69d7572fca7b69144497b2b78ecc91fee26d16432bdcd3ec698fd0d815d"
 ---
 # Market Fragmentation vs Consolidation and Liquidity Externalities
 

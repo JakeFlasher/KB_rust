@@ -12,6 +12,7 @@ citations:
     page_range: [23, 24]
     quote: "Garman argued that an exchange market could be characterized by a flow of orders to buy and sell."
     edge_type: "defines"
+card_hash: "296e07f1ada69944010dc37300c4b47340c0ba102dee562a4f1a1790f2bd3df5"
 ---
 # Garman Order-Flow Foundation: Stochastic Arrival and Temporal Microstructure
 

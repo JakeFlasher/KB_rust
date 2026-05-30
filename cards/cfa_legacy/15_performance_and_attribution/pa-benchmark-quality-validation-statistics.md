@@ -18,6 +18,7 @@ citations:
     page_range: [320, 320]
     quote: "we would expect the beta of the average manager characteristic line regression relative to the style index to be closer to 1.0, the standard error closer to zero, and the R-squared closer to 1.00."
     edge_type: "supports"
+card_hash: "7c149dd64755fe7e6b7bb0b093550467aaf4c0b2821f81558a922a827ff1de34"
 ---
 # Benchmark-Quality Validation Statistics
 

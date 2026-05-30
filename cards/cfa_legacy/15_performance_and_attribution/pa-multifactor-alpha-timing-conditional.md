@@ -18,6 +18,7 @@ citations:
     page_range: [135, 136]
     quote: "Using a single coefficient a p in Equation (12.3) presumes that expected abnormal performance is constant over time."
     edge_type: "supports"
+card_hash: "1aa9970645aef2787734ab48e0999213e3dbe9eeda105e25cbd9c0eea038f0fa"
 ---
 # Multifactor Alpha, Market Timing, and Conditional Models
 

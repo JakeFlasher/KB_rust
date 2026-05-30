@@ -18,6 +18,7 @@ citations:
     page_range: [58, 58]
     quote: "can be seen as a measure of market depth (see Chapter 1) in that a lower"
     edge_type: "supports"
+card_hash: "d61eaaaad49bd8623c4cb8e18be85dfc24a15e1c17fa72a9e16e78c432f00fc5"
 ---
 # The Kyle (1985) Model: Strategic Informed Trader, Noise Traders, and Camouflage
 

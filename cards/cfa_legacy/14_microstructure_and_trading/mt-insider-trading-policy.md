@@ -12,6 +12,7 @@ citations:
     page_range: [604, 605]
     quote: "Insider trading—like all informed trading—hurts traders who supply"
     edge_type: "defines"
+card_hash: "0e0fde1decfc6f1e7e97871179b176d7662d40e8893c82fff5ca2628185aacad"
 ---
 # Insider Trading: Adverse Selection, Market Quality, and Policy
 

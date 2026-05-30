@@ -18,6 +18,7 @@ citations:
     page_range: [463, 464]
     quote: "These two principles provide a foundation for virtually all aspects"
     edge_type: "supports"
+card_hash: "d1db2310311cf61cc3475fc2eb64f3ef75e0a493b69e15e0ef3f0d89acb06819"
 ---
 # GIPS 2020: Composites and Calculation Mechanics
 

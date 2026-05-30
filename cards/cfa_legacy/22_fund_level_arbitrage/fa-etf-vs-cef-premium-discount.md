@@ -24,6 +24,7 @@ citations:
     page_range: [23, 23]
     quote: "This arbitrage opportunity not only creates an incentive for APs to provide liquidity but also keeps the ETF trading at or near fair value."
     edge_type: "supports"
+card_hash: "1538dcb85a8eb78145c7c14050836dbdb24fde7af0b101c3e40eee2dfda81338"
 ---
 # ETF vs Closed-End-Fund Premium/Discount: Transient vs Persistent
 

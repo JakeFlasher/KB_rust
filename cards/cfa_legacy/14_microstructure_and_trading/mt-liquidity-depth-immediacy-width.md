@@ -18,6 +18,7 @@ citations:
     page_range: [17, 17]
     quote: "the ability to trade a security quickly at a price close to its consensus value"
     edge_type: "supports"
+card_hash: "25d17951d943e89088ea65adb19a6c6e3982f305d49e3dab0c2baae9ace152e0"
 ---
 # Liquidity as a Bilateral Search Problem: Depth, Immediacy, Width
 

@@ -18,6 +18,7 @@ citations:
     page_range: [53, 53]
     quote: "the difference between the price at which a market order executes and the midquote on the market the instant before"
     edge_type: "supports"
+card_hash: "f4019b3aa458e8b4a8f26630e1a45f2d506a3c4ab97dc440e1cf802dd1f51ced"
 ---
 # The Bid-Ask Spread as the Price of Immediacy
 

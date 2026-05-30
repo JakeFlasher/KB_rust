@@ -18,6 +18,7 @@ citations:
     page_range: [53, 53]
     quote: "Because the time-weighted return controls for cash flows, it is a better measure to use when comparing the performance of different managers."
     edge_type: "supports"
+card_hash: "14f1f19594d3721389cdaacb04531d1bd246c5acb0c55292f2645d91a8b18c17"
 ---
 # Time-Weighted vs Money-Weighted Return: When Each Applies
 

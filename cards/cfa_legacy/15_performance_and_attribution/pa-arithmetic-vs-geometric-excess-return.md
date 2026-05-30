@@ -12,6 +12,7 @@ citations:
     page_range: [151, 151]
     quote: "in rising markets the arithmetic excess return is always greater than the geometric excess return and in falling markets the reverse is true"
     edge_type: "defines"
+card_hash: "d7571622df554996baba0dfd2f3a3f4e88ff5be8f47836e66e0d1324b7fcf6ce"
 ---
 # Arithmetic vs Geometric Excess Return
 

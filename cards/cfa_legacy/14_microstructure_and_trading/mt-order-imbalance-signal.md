@@ -12,6 +12,7 @@ citations:
     page_range: [314, 315]
     quote: "order imbalance is positively correlated with price changes"
     edge_type: "defines"
+card_hash: "8296886babc65162f2f7d533d91d2173410022d9c4608a661c8faea581389b8d"
 ---
 # Order Imbalance as a Short-Horizon Trading Signal
 

@@ -12,6 +12,7 @@ citations:
     page_range: [131, 131]
     quote: "Drawdown deviation calculates a standard deviation type statistic using"
     edge_type: "defines"
+card_hash: "9647b5ff944cb015cd1599551dc507938aa36a3ef763e2119db97fa5d2f86fec"
 ---
 # Drawdown Ratios: Calmar, Sterling, Burke, Ulcer
 

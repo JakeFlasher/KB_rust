@@ -18,6 +18,7 @@ citations:
     page_range: [110, 111]
     quote: "Therefore, MM is simply the portfolio return adjusted upward or downward to match the benchmark’s standard deviation."
     edge_type: "supports"
+card_hash: "ae5da804484cee621f80fe6add0fe909d7a4fbf54e6a20dbfc66173910c2e575"
 ---
 # M-Squared: The Risk-Adjusted Return Transform
 

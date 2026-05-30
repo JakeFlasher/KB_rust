@@ -1,17 +1,18 @@
 #!/usr/bin/env python3
-"""AC-10 gate: the v0 release is clean, tracked, and (optionally) tagged.
+"""Release-cleanliness gate: the v1 release is clean, tracked, and (optionally) tagged.
 
 Re-runnable, fail-closed. RE-DERIVES every release fact from git + disk (never trusts
-the prose of `_research/30`): the small published-index artifacts are tracked, the large
-chunks_manifest is excluded, the trust-chain sidecars + research docs are tracked, the
-rebuild-recipe scripts exist, the worktree is release-clean (NO uncommitted change to
-ANY tracked file — not merely no untracked files — and no non-ignored untracked file),
-and (with `--require-tag`) the annotated `v0-candidate` tag exists, references the
-evidence, AND points at the release commit (tag target == HEAD).
+the prose of `_research/31`): the small published-index artifacts are tracked, the large
+chunks_manifest is excluded, the trust-chain sidecars (one per active card, count derived
+from the published manifest) + research docs are tracked, the rebuild-recipe scripts
+exist, the worktree is release-clean (NO uncommitted change to ANY tracked file — not
+merely no untracked files — and no non-ignored untracked file), and (with `--require-tag`)
+the annotated `v1-candidate` tag exists, references the evidence, AND points at the
+release commit (tag target == HEAD).
 
 Usage:
   check_release_cleanliness.py              # all checks except the tag (run pre-tag)
-  check_release_cleanliness.py --require-tag # also require the annotated v0-candidate tag
+  check_release_cleanliness.py --require-tag # also require the annotated v1-candidate tag
   check_release_cleanliness.py --self-test   # synthetic negative probes
 """
 
@@ -19,14 +20,16 @@ from __future__ import annotations
 
 import argparse
 import glob
+import json
 import subprocess
 import sys
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[3]
-TAG = "v0-candidate"
+TAG = "v1-candidate"
+CARDS_MANIFEST = "out/cfa_legacy/cards_manifest.json"
 TRACKED_SMALL = [
-    "out/cfa_legacy/cards_manifest.json",
+    CARDS_MANIFEST,
     "out/cfa_legacy/summaries.json",
     "out/cfa_legacy/INDEX.md",
     "out/cfa_legacy/pdfium_provenance.json",
@@ -36,7 +39,7 @@ RECIPE_SCRIPTS = [
     "sources/cfa_legacy/_registry/run_ingest_per_source.py",
     "sources/cfa_legacy/_registry/merge_ingest_manifests.py",
 ]
-RELEASE_DOC = "_research/30_v0_release_and_rebuild_recipe.md"
+RELEASE_DOC = "_research/31_v1_release_and_rebuild_recipe.md"
 # Strings the tag message / release doc must reference (the release evidence pointers).
 TAG_MUST_REFERENCE = ["scope_ledger", "index_repro"]
 
@@ -70,17 +73,23 @@ def run_checks(*, require_tag: bool) -> list[str]:
         if not is_ignored(p):
             failures.append(f"large artifact must be .gitignore-excluded: {p}")
 
-    # (3) 268 trust-chain sidecars tracked (== on disk).
+    # (3) trust-chain sidecars: one per active card, tracked AND on disk. The active-card
+    # count is DERIVED from the published manifest (data-driven; 268 at v0, 402 at v1) so
+    # this stays correct across milestone bumps instead of hard-coding a stale literal.
+    manifest_path = REPO / CARDS_MANIFEST
+    active_cards = (len(json.loads(manifest_path.read_text(encoding="utf-8"))["cards"])
+                    if manifest_path.is_file() else -1)
     disk_sidecars = len(glob.glob(str(REPO / "cards/cfa_legacy/**/*.history.jsonl"), recursive=True))
     tracked_sidecars = len([l for l in git("ls-files", "cards/cfa_legacy/").splitlines()
                             if l.endswith(".history.jsonl")])
-    if disk_sidecars != 268:
-        failures.append(f"expected 268 .history.jsonl sidecars on disk, found {disk_sidecars}")
+    if disk_sidecars != active_cards:
+        failures.append(f".history.jsonl sidecars on disk ({disk_sidecars}) != active cards "
+                        f"in {CARDS_MANIFEST} ({active_cards})")
     if tracked_sidecars != disk_sidecars:
         failures.append(f"sidecars tracked ({tracked_sidecars}) != on disk ({disk_sidecars})")
 
-    # (4) research docs 23-26 + the decision ledger (29) + this release doc (30) tracked.
-    for n in (23, 24, 25, 26, 29, 30):
+    # (4) research docs 23-26 + the decision ledger (29) + both release recipes (30 v0, 31 v1) tracked.
+    for n in (23, 24, 25, 26, 29, 30, 31):
         if not git("ls-files", f"_research/{n}_*").strip():
             failures.append(f"_research/{n}_* not tracked")
 
@@ -244,9 +253,10 @@ def main() -> int:
             print(f"  - {f}", file=sys.stderr)
         return 1
     print("\nRELEASE CLEANLINESS: PASS (small index + provenance tracked; chunks_manifest "
-          "excluded; 268 sidecars + research docs tracked; recipe scripts present; worktree "
-          "release-clean" + ("; v0-candidate tag annotated, references evidence, on HEAD)"
-                             if args.require_tag else ")"))
+          "excluded; one sidecar per active card (manifest-derived) + research docs tracked; "
+          "recipe scripts present; worktree release-clean"
+          + ("; v1-candidate tag annotated, references evidence, on HEAD)"
+             if args.require_tag else ")"))
     return 0
 
 

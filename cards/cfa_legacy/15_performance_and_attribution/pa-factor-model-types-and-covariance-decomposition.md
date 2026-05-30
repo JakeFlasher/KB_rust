@@ -12,6 +12,7 @@ citations:
     page_range: [46, 47]
     quote: "As we explain below, the optimal portfolio weights do follow a linear equation, but are written in units of marginal risk."
     edge_type: "defines"
+card_hash: "4bfb0a0679ea51c140779ac618c8f5d70fb73dca87f3b1534e3cf5b998bc08a6"
 ---
 # Factor-Model Types and the Covariance Decomposition (Euler/MCR)
 

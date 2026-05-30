@@ -18,6 +18,7 @@ citations:
     page_range: [88, 88]
     quote: "this situation can lead to a market breakdown, where the spread is so wide that no trade occurs at all."
     edge_type: "supports"
+card_hash: "fb60731d941aa6c5ae5398f0d7b918ce875af713d5ff76f67544d11873d14d62"
 ---
 # Market Viability: When Adverse Selection Causes Market Breakdown
 

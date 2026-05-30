@@ -18,6 +18,7 @@ citations:
     page_range: [53, 53]
     quote: "values: (1) the ETF secondary market price, (2) NAV, and (3) the"
     edge_type: "supports"
+card_hash: "9a5c6da015af4d9941da14e92a8733fa2fe573e881f9dc9a242d6d68a1ea6356"
 ---
 # IIV / iNAV / IOPV: The Intraday Fair-Value Signal
 

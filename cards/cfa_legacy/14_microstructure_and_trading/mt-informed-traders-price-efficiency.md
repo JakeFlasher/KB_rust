@@ -12,6 +12,7 @@ citations:
     page_range: [236, 236]
     quote: "They consider instruments to be undervalued if prices are less than their estimates of fundamental value, and overvalued if prices are greater."
     edge_type: "defines"
+card_hash: "0bcc950137cfcbc197af4e37cbf8f5f7e0fda42ffec806aa3af538eb8e0b59fd"
 ---
 # Informed Traders, Fundamental Value, and Price Efficiency
 

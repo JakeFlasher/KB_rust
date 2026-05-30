@@ -18,6 +18,7 @@ citations:
     page_range: [49, 49]
     quote: "Dietz proposed a simpler calculation than the IRR, one that also assumes a constant rate of growth over a period between valuations."
     edge_type: "supports"
+card_hash: "16775f97bd910d808e7bfa7c94c688837d8473601f545a35733832613d530452"
 ---
 # Dietz Methods: Simple and Modified as IRR Approximations
 

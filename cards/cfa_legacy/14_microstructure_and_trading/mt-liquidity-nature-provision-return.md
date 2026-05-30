@@ -18,6 +18,7 @@ citations:
     page_range: [97, 97]
     quote: "one important function of liquidity suppliers is to serve as counterparty when the order flow is unbalanced."
     edge_type: "supports"
+card_hash: "134101b4b8ef8f301c02e8912f5e6f7666505a1c8bca7078e038e6fce7687cf1"
 ---
 # The Nature of Liquidity and the Return to Liquidity Provision
 

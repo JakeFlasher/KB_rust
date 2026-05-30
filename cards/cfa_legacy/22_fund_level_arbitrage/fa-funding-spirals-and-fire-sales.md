@@ -24,6 +24,7 @@ citations:
     page_range: [229, 229]
     quote: "Such a “fire sale” could create a chain reaction that spreads to related asset classes, possibly even creating the perception of risk at the asset manager level."
     edge_type: "supports"
+card_hash: "9a58c9e7ebb40a67e1e16b51ab0f984c4966f4b2938d30faae91348c14df0eaf"
 ---
 # Funding & Market-Liquidity Spirals and Fire Sales
 

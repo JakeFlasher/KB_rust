@@ -24,6 +24,7 @@ citations:
     page_range: [121, 121]
     quote: "is the least important component of the liquidity risk premium"
     edge_type: "supports"
+card_hash: "33dbb15cd5990426f925b703a828fcfb8d2cade802e53be83e39c7f849eee27b"
 ---
 # Amihud-Mendelson & Priced Liquidity Risk: Level Premium + the LCAPM
 

@@ -18,6 +18,7 @@ citations:
     page_range: [23, 23]
     quote: "The price those investors pay is based entirely on supply and demand for that ETF, as with a stock. When buyers outnumber sellers, the price of the ETF goes up."
     edge_type: "supports"
+card_hash: "0f15b116fab158d139e75c9db6c4677f1c916e899e86e3987eb9c489f9cd44f1"
 ---
 # Dual-Rail Pricing: NAV vs Market Price
 

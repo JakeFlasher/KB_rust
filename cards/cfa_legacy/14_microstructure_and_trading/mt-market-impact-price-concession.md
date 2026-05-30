@@ -18,6 +18,7 @@ citations:
     page_range: [98, 99]
     quote: "order will have an adverse price impact: increasing the price when buying"
     edge_type: "supports"
+card_hash: "30f65f49383e020ecefbd3ba30a0823254d56de266e71a3f916617b9e46a94d2"
 ---
 # Market Impact and Price Concession on Large Orders
 

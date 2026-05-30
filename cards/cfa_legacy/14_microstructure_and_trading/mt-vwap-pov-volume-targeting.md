@@ -18,6 +18,7 @@ citations:
     page_range: [437, 437]
     quote: "Traders like the VWAP benchmark because they would like to trade at least as well as the average"
     edge_type: "supports"
+card_hash: "d9f2909d2747824be98c3dcbdfac8d11f107c36b679d71c0b4a475dde5925e77"
 ---
 # Volume-Targeting Execution: VWAP, Percentage-of-Volume (POV) and Percentage-of-Cumulative-Volume
 

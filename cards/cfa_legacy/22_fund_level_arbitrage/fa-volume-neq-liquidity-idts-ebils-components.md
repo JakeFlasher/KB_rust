@@ -24,6 +24,7 @@ citations:
     page_range: [78, 78]
     quote: "Liquidity for an ETF with a lower percentage of assets trading daily can still be good if the underlying securities are liquid or if the ETF is similar to a very active ETF that can be used for hedging by market makers."
     edge_type: "supports"
+card_hash: "78b69b2fb08e1b984c1842d6bc138968007260cfe94d74b52fad27702d1c8d2a"
 ---
 # Volume != Liquidity: Implied Liquidity, IDTS & the EBILS Grid
 

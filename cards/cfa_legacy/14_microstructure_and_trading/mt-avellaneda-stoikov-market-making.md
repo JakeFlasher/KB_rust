@@ -12,6 +12,7 @@ citations:
     page_range: [265, 266]
     quote: "also induces mean reversion to an optimal inventory"
     edge_type: "defines"
+card_hash: "bb59a65b2ba9c4a18e1be5ac4296364559c5506164ac6870f6ca6ef20a1010e1"
 ---
 # Dynamic Market Making under Inventory Risk: Optimal Bid/Ask Depth Postings
 

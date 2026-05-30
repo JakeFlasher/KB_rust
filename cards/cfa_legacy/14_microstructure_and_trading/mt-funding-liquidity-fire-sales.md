@@ -12,6 +12,7 @@ citations:
     page_range: [305, 305]
     quote: "be forced to liquidate positions in financial assets to deal with an unexpected funding need"
     edge_type: "defines"
+card_hash: "9ea8b6ff0d9d875dbac3f001dfd410a61bb7ab921de180c700750b7f8dbb5c02"
 ---
 # Funding Liquidity, Fire Sales, and Limits to Arbitrage
 

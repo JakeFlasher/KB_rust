@@ -12,6 +12,7 @@ citations:
     page_range: [22, 22]
     quote: "Limit order or auction markets are centralized trading mechanisms in which potential"
     edge_type: "defines"
+card_hash: "7b82a06afabd34db2f2a9c3623a8a8f4cf9d3ec1b1f6151699aeec212b711c32"
 ---
 # The Institutional Setting: Limit-Order, Dealer, and Hybrid Markets
 

@@ -12,6 +12,7 @@ citations:
     page_range: [205, 205]
     quote: "submitting a sell limit order is similar to writing an American call option"
     edge_type: "defines"
+card_hash: "3fd23be9e00c8689ec8d4c90f49665134cfb78ae4542fba5aabb56be671f74d8"
 ---
 # Limit Order Book Markets: The Limit-vs-Market Order Choice as an Option
 

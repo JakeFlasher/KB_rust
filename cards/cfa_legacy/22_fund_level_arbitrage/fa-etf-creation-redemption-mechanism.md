@@ -18,6 +18,7 @@ citations:
     page_range: [21, 21]
     quote: "ETF shares can be created or redeemed only by a special group of institutional investors—APs— who are designated when the ETF is issued."
     edge_type: "supports"
+card_hash: "778194b100df0e8bd603c56380431dab38c9214f42fe4a33015de4ff7206f741"
 ---
 # The ETF Creation-Redemption Mechanism
 

@@ -30,6 +30,7 @@ citations:
     page_range: [230, 231]
     quote: "If he does internalize, he will refrain from bidding in the main market; otherwise, he would be competing against himself on the internalized portion."
     edge_type: "supports"
+card_hash: "8a2320aec86622e5bc555f2ff35dfd2e9c28b68953fe589ac30c6c69c79efd1b"
 ---
 # Internalization, Preferencing, and Crossing Networks
 

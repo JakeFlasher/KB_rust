@@ -12,6 +12,7 @@ citations:
     page_range: [139, 139]
     quote: "It also allows an analysis of the missing performance due"
     edge_type: "defines"
+card_hash: "f51d64a6fab8e3c62e8efce68d80d8d405e53c8f0f797f49f67ec7b7c3a46038"
 ---
 # The Return Gap
 

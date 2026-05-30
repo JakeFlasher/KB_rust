@@ -12,6 +12,7 @@ citations:
     page_range: [320, 320]
     quote: "limit order traders give a valuable timing option to market order traders when they do not continuously update their limit order prices"
     edge_type: "defines"
+card_hash: "65b8b25cdd02c167ba56d16d6cf6d80e95616ee0acfe5aaff88dc61b3f20b2a3"
 ---
 # Spread Anatomy: Limit-Order Timing Option and Adverse Selection
 

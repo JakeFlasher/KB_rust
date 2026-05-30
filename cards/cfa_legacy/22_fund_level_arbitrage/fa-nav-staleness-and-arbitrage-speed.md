@@ -18,6 +18,7 @@ citations:
     page_range: [56, 56]
     quote: "Here 0 ≤ φ ≤ 1 captures possible staleness and"
     edge_type: "defines"
+card_hash: "292aeb6a1c8d28f45d23b59ff3a67d9a386c0783cdaa88e917af2c667b8dfcb7"
 ---
 # NAV Staleness & Arbitrage Speed: phi, psi and the Mean-Reversion Half-Life
 

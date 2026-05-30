@@ -18,6 +18,7 @@ citations:
     page_range: [114, 114]
     quote: "Markets that quickly report quotes and orders are ex ante transparent."
     edge_type: "supports"
+card_hash: "2cf40436b5b25b501ae337c59db2b7ebd6ef15c516ebe0c8bf4ab1bf5624acaf"
 ---
 # Market Transparency, Dark Pools, and the Transparency-Liquidity Tradeoff
 

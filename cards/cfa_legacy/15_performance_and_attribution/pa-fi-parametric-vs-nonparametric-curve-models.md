@@ -12,6 +12,7 @@ citations:
     page_range: [297, 297]
     quote: "■ Virtually any curve observed in the marketplace can be fitted to a Nelson-Siegel function, using least-squares or similar techniques."
     edge_type: "defines"
+card_hash: "2e0213f8ed019faaf741da7f6be8ee97561711b20b77f0a4eac750a3a931a0a0"
 ---
 # Parametric vs Non-Parametric Yield-Curve Models
 

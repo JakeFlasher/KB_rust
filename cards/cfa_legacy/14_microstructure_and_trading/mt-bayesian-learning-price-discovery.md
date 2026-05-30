@@ -18,6 +18,7 @@ citations:
     page_range: [91, 91]
     quote: "the probability assigned to the high value by the dealers converges to 1 (they eventually discover the correct value)"
     edge_type: "supports"
+card_hash: "3931aa608a5b27cd4042e61f1cafaa581b739cac2a900ecce27d62e751c3402a"
 ---
 # Bayesian Learning and Price Discovery: Quotes Converge to Full-Information Value
 

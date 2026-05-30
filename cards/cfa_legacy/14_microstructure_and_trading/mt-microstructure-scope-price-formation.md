@@ -18,6 +18,7 @@ citations:
     page_range: [11, 11]
     quote: "The way securities are actually traded is far removed from the idealized picture of a frictionless and self-equilibrating market offered by the typical finance textbook."
     edge_type: "supports"
+card_hash: "a2f6af0d920a3822b2926ac110bb504408965e1e1512b36523c8efa7b3414969"
 ---
 # Market Microstructure: Studying How Prices Form Under Explicit Trading Rules
 

@@ -12,6 +12,7 @@ citations:
     page_range: [50, 50]
     quote: "IRR is an example of a money-weighted return methodology; each amount or dollar invested"
     edge_type: "defines"
+card_hash: "e995e6d097119c510237e3e850f653c06a58bda6a21f037c5395a6941c17ba83"
 ---
 # The Internal Rate of Return as the Money-Weighted Method
 

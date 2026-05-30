@@ -18,6 +18,7 @@ citations:
     page_range: [58, 58]
     quote: "reciprocal of λ can be seen as a measure of market depth"
     edge_type: "supports"
+card_hash: "9eab948ab3e4b7fbe11451377ccbb445669bb419eef57eab7e5e6e58d1484310"
 ---
 # Kyle's Lambda: Linear Price Impact and Market Depth (1/lambda)
 

@@ -12,6 +12,7 @@ citations:
     page_range: [95, 95]
     quote: "now has two different components: order-processing cost (2γ) and adverse-selection cost"
     edge_type: "defines"
+card_hash: "c27ea3353dda5c3513da84c6270100b0c99733d1f2434a04cce4e7f3e1cb9870"
 ---
 # Decomposing the Spread: Adverse-Selection vs Order-Processing (and Inventory) Components
 

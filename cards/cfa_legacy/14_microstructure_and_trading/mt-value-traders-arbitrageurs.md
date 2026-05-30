@@ -12,6 +12,7 @@ citations:
     page_range: [353, 354]
     quote: "Value traders make markets resilient by standing"
     edge_type: "defines"
+card_hash: "269f32b2ef5ce1788c9abb15a4915c067b61c0b247aa2fbde7fd382b90da59d8"
 ---
 # Value Traders and Arbitrageurs: Resilience and Cross-Market Liquidity Transfer
 

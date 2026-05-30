@@ -12,6 +12,7 @@ citations:
     page_range: [439, 439]
     quote: "methodology is necessary to obtain a set of coefficients"
     edge_type: "defines"
+card_hash: "098473121a01bc5589a95bf3a2959743c208d7da97af2e82ac54b446388c2a8d"
 ---
 # Returns-Based Style Analysis
 

@@ -12,6 +12,7 @@ citations:
     page_range: [45, 46]
     quote: "The trading industry has a buy side and a sell side. The buy side consists of traders who buy exchange services."
     edge_type: "defines"
+card_hash: "f5088c84928100c1ea275592d34ab539ce11b6eaf6110e59d42fc1f54b7448d9"
 ---
 # The Trading Industry: Who Trades, Brokers, and the Buy Side
 

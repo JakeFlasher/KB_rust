@@ -12,6 +12,7 @@ citations:
     page_range: [253, 253]
     quote: "precisely estimates the proportion of fund managers that are (1) unskilled, (2) zero-alpha, and (3) skilled, even with dependencies in cross-fund estimated alphas."
     edge_type: "defines"
+card_hash: "b270b2d1a09f90919c3b890874c9281db6085fa08816139b31fce25ba863e58d"
 ---
 # Skill vs Luck: False-Discovery Rate and the Bootstrap
 

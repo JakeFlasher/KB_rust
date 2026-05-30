@@ -18,6 +18,7 @@ citations:
     page_range: [444, 444]
     quote: "The gaming problem cannot arise when the benchmark price is firmly"
     edge_type: "supports"
+card_hash: "e846796a4992591e7483923a35f1bfad9da38764543cf809a9106e1038160c4d"
 ---
 # Effective Cost and Transaction-Cost Benchmark Taxonomy
 

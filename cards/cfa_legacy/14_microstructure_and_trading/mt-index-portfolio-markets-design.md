@@ -18,6 +18,7 @@ citations:
     page_range: [112, 112]
     quote: "The venue with the largest information share is in some ways"
     edge_type: "supports"
+card_hash: "194ee2c6941b31e463dcd6d0e4da53d82db80e24e5e92e038e96679df71e73da"
 ---
 # Index and Portfolio Markets: Index Construction and ETF/Index-Product Design
 

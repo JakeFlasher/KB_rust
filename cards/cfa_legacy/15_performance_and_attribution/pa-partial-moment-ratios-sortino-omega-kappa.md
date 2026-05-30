@@ -12,6 +12,7 @@ citations:
     page_range: [151, 151]
     quote: "For l = 1, K1 is the Omega–Sharpe ratio and for l = 2, K2 is the Sortino ratio."
     edge_type: "defines"
+card_hash: "efa3f65ecc2ee70055dc67b0b7c765ed99cf6bf5cda3179997d2a889d0176806"
 ---
 # Partial-Moment Ratios: Sortino, Omega, and Kappa
 

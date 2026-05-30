@@ -12,6 +12,7 @@ citations:
     page_range: [402, 402]
     quote: "simply breaks down the total return of the portfolio by individual instrument or instrument"
     edge_type: "defines"
+card_hash: "531f0ea9678ae90399809861bef65692a77bed62d074966eea993b035094c3d7"
 ---
 # Contribution Analysis: Benchmark-Free Absolute-Return Attribution
 

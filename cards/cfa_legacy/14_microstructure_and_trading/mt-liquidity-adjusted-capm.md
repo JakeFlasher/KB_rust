@@ -12,6 +12,7 @@ citations:
     page_range: [299, 299]
     quote: "they tend to remain liquid when the market is down: investors value such stocks more highly"
     edge_type: "defines"
+card_hash: "93700391e883fcca94febf0a36fd9ce2d83ca339aa684399a1444bd3cf446527"
 ---
 # Liquidity-Adjusted CAPM: Net Returns and the Three Liquidity Betas
 

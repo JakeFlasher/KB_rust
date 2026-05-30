@@ -18,6 +18,7 @@ citations:
     page_range: [54, 54]
     quote: "Here, ut is the “true premium” that arises from transitory liquidity pressure."
     edge_type: "supports"
+card_hash: "6d3d2809fd22373c90db0718cad20e6b021d5cd212b68100e33f8429ebddf769"
 ---
 # True vs Reported Premium & the Price-Discovery Share
 

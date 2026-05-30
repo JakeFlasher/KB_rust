@@ -12,6 +12,7 @@ citations:
     page_range: [269, 269]
     quote: "Market manipulators gun the market when they push prices up or down to activate stop orders."
     edge_type: "defines"
+card_hash: "96abf181d5b9dda41db1bab3f175cb2d55de8991e553b3e9515d538a3f43426e"
 ---
 # Market Manipulation: Bluffing, Rumormongering, and Painting the Tape
 

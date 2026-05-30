@@ -12,7 +12,7 @@ citations:
     page_range: [98, 99]
     quote: "arbitrageurs can become most constrained precisely when they have the best opportunities"
     edge_type: "supports"
-card_hash: "037b5535c52f6b940647a54135d0e3f2dbabb4f93c9b3964609b8e5e6d0b851f"
+card_hash: "67604c91df974d55e035e0bb05e7ec5426205a5abf202856be431238d450c470"
 ---
 # Limits of Arbitrage
 

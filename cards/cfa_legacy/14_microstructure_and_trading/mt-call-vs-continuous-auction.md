@@ -12,6 +12,7 @@ citations:
     page_range: [133, 133]
     quote: "In a single price auction, all trades take place at the same"
     edge_type: "defines"
+card_hash: "0bd6b21a69baeffbb32ca623462d4d041181aae8ef69be940e99d38717f39766"
 ---
 # Call (Single-Price) vs Continuous Auctions and Pricing Rules
 

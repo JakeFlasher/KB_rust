@@ -18,6 +18,7 @@ citations:
     page_range: [165, 165]
     quote: "it does not persist over time or cumulate"
     edge_type: "supports"
+card_hash: "72c08e52a5cddc68f661d6388c1684b4e040b25321cd1d75420ecdcefe630fe4"
 ---
 # Price Impact: Temporary vs Permanent and the Empirics of Walking the LOB
 

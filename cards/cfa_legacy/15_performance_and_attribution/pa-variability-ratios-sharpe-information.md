@@ -18,6 +18,7 @@ citations:
     page_range: [114, 114]
     quote: "The appraisal ratio, more commonly called the information ratio, is the ratio of alpha to residual risk."
     edge_type: "supports"
+card_hash: "9b7d5285be003f51d364d4ba041eb7d524fb257d912d285d28784c1a81e52410"
 ---
 # Variability Ratios: Sharpe and the Information Ratio
 

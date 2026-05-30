@@ -12,6 +12,7 @@ citations:
     page_range: [155, 156]
     quote: "it is the difference between the cash flows for an actual portfolio and those of a hypothetical paper portfolio for which purchases and sales occur at benchmark prices"
     edge_type: "defines"
+card_hash: "d5806e82da84873764a1d96acd5b087424d8c95910bcc7533a6ff267014beb4d"
 ---
 # Implementation Shortfall: The Master Measure of Trading Cost
 

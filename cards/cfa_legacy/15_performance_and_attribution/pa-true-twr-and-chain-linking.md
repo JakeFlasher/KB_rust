@@ -12,6 +12,7 @@ citations:
     page_range: [55, 56]
     quote: "sub-period between cash flows using simple wealth ratios. The sub-period returns are then"
     edge_type: "defines"
+card_hash: "13bb6f5ccda9e8b421ff8a5629ceb76684253cc7e36c3a8e2d0e08541eb95032"
 ---
 # True Time-Weighted Return and Geometric Chain-Linking
 

@@ -12,6 +12,7 @@ citations:
     page_range: [40, 40]
     quote: "we keep the random-walk assumption but now apply it to the (martingale) efficient price instead of the actual transaction price"
     edge_type: "defines"
+card_hash: "8062a92eaee95e4e4bcd5eb4ad3c6fb04dc58c211ad9dd0e0dc93c3984ba3d0f"
 ---
 # Random-Walk / Martingale Model of the Fundamental (Efficient) Price
 

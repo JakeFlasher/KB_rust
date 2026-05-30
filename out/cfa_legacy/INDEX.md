@@ -274,7 +274,7 @@ schema_version: cacg.v0
 
 | id | title | citations | card_hash |
 |----|-------|-----------|-----------|
-| be-limits-of-arbitrage | Limits of Arbitrage | 1 | 037b5535c52f… |
+| be-limits-of-arbitrage | Limits of Arbitrage | 1 | 67604c91df97… |
 | be-noise-trader-equilibrium | Noise-Trader Risk Equilibrium | 2 | 75902330346e… |
 | be-regret-matching-foundations | Regret-Matching Foundations | 2 | 50856b77ec71… |
 | be-sentiment-vs-fundamentals | Sentiment-Driven Mispricing vs Fundamental Anchor | 2 | 3ff930a81de0… |
@@ -304,6 +304,124 @@ schema_version: cacg.v0
 | rm-value-at-risk-notes | Value-at-Risk — L1 Notes Definition and Estimation Framework | 3 | a2bf076bf9eb… |
 | rm-var-and-es-taxonomy | VaR and Expected Shortfall — Side-by-Side Taxonomy | 3 | eb59028ad01d… |
 
+## 14_microstructure_and_trading
+
+| id | title | citations | card_hash |
+|----|-------|-----------|-----------|
+| mt-adverse-selection-short-term-alpha | Market Making with Adverse Selection and Short-Term Alpha | 1 | 9a0a70aea832… |
+| mt-almgren-chriss-optimal-execution | Almgren-Chriss Optimal Execution: Temporary vs Permanent Impact and the Urgency Trade-off | 1 | 7ed137222607… |
+| mt-avellaneda-stoikov-market-making | Dynamic Market Making under Inventory Risk: Optimal Bid/Ask Depth Postings | 1 | bb59a65b2ba9… |
+| mt-bayesian-learning-price-discovery | Bayesian Learning and Price Discovery: Quotes Converge to Full-Information Value | 2 | 3931aa608a5b… |
+| mt-bid-ask-spread-immediacy-price | The Bid-Ask Spread as the Price of Immediacy | 2 | f4019b3aa458… |
+| mt-block-trader-upstairs-depth | Block Traders and Upstairs Markets: Supplying Depth to Large Orders | 1 | 53f40be09c06… |
+| mt-bubbles-crashes-circuit-breakers | Bubbles, Crashes, and Circuit Breakers: Volatility Interruptions | 2 | 10d0b354febb… |
+| mt-buy-side-trader-best-execution | Buy-Side Traders and the Best-Execution Mandate | 2 | c4e095cd3734… |
+| mt-call-vs-continuous-auction | Call (Single-Price) vs Continuous Auctions and Pricing Rules | 1 | 0bd6b21a69ba… |
+| mt-competition-within-among-markets | Competition Within and Among Markets: Floor vs Automated Trading Systems | 2 | 4a74afe432aa… |
+| mt-dealer-inventory-control-price-discovery | Dealer Inventory Control and the Price-Discovery Process | 1 | 8b4056a3513a… |
+| mt-dealer-inventory-problem-spread | The Dealer's Inventory Problem: Bid-Ask Spread as Inventory-Risk Compensation | 2 | 1c7345049f21… |
+| mt-effective-cost-trade-benchmark | Effective Cost and Transaction-Cost Benchmark Taxonomy | 2 | e846796a4992… |
+| mt-empirical-determinants-illiquidity | Estimating the Determinants of Market Illiquidity: Structural vs Reduced-Form | 2 | e0e64df4609a… |
+| mt-execution-systems-quote-vs-order-driven | Execution Systems: Quote-Driven vs Order-Driven vs Brokered Markets | 2 | 7d0fe359aae9… |
+| mt-funding-liquidity-fire-sales | Funding Liquidity, Fire Sales, and Limits to Arbitrage | 1 | 9ea8b6ff0d9d… |
+| mt-garman-order-flow-temporal-microstructure | Garman Order-Flow Foundation: Stochastic Arrival and Temporal Microstructure | 1 | 296e07f1ada6… |
+| mt-generalized-roll-spread-decomposition | Generalized Roll Model: Decomposing the Spread into Adverse-Selection and Cost Components | 1 | ea0ffd9e90e1… |
+| mt-glosten-milgrom-adverse-selection | The Glosten-Milgrom Sequential-Trade Model: Spread from Adverse Selection | 2 | c7281fae7616… |
+| mt-grossman-miller-inventory-liquidity-premium | Grossman-Miller Market Making: Inventory Risk and the Liquidity Premium | 1 | 6d1761e302f2… |
+| mt-hasbrouck-var-trades-quotes | Hasbrouck VAR: Vector Autoregression of Trades and Quotes | 1 | fc779873a39f… |
+| mt-implementation-shortfall | Implementation Shortfall: The Master Measure of Trading Cost | 1 | d5806e82da84… |
+| mt-index-portfolio-markets-design | Index and Portfolio Markets: Index Construction and ETF/Index-Product Design | 2 | 194ee2c6941b… |
+| mt-information-shares-price-discovery | Information Shares: Where Price Discovery Happens Across Venues | 1 | 4327df484128… |
+| mt-informed-traders-price-efficiency | Informed Traders, Fundamental Value, and Price Efficiency | 1 | 0bcc950137cf… |
+| mt-insider-trading-policy | Insider Trading: Adverse Selection, Market Quality, and Policy | 1 | 0e0fde1decfc… |
+| mt-institutional-setting-market-types | The Institutional Setting: Limit-Order, Dealer, and Hybrid Markets | 1 | 7b82a06afabd… |
+| mt-internalization-preferencing-crossing | Internalization, Preferencing, and Crossing Networks | 4 | 8a2320aec866… |
+| mt-inventory-prices-competitive-markets | Prices and Inventories in Competitive Dealer Markets | 2 | b1a299c6f732… |
+| mt-kyle-lambda-market-depth-price-impact | Kyle's Lambda: Linear Price Impact and Market Depth (1/lambda) | 2 | 9eab948ab3e4… |
+| mt-kyle-strategic-informed-trader-lambda | The Kyle (1985) Model: Strategic Informed Trader, Noise Traders, and Camouflage | 2 | d61eaaaad49b… |
+| mt-limit-order-book-equilibrium | Limit Order Book Markets: The Limit-vs-Market Order Choice as an Option | 1 | 3fd23be9e00c… |
+| mt-limit-order-book-mechanics | Limit Order Book Mechanics: Price-Time Priority, Walking the Book, and Maker-Taker Fees | 1 | fd29e7571b4d… |
+| mt-liquidity-adjusted-capm | Liquidity-Adjusted CAPM: Net Returns and the Three Liquidity Betas | 1 | 93700391e883… |
+| mt-liquidity-depth-immediacy-width | Liquidity as a Bilateral Search Problem: Depth, Immediacy, Width | 2 | 25d17951d943… |
+| mt-liquidity-feedback-corporate-investment | Feedback from Secondary-Market Liquidity to Real Investment and Corporate Policy | 1 | 3b021cf95d9b… |
+| mt-liquidity-measures-spread-depth-resiliency | Measuring Liquidity: Quoted, Effective, and Realized Spread; Depth; Resiliency | 1 | 59ac5a1849db… |
+| mt-liquidity-nature-provision-return | The Nature of Liquidity and the Return to Liquidity Provision | 2 | 134101b4b8ef… |
+| mt-liquidity-premium-asset-pricing | Liquidity and Asset Prices: The Illiquidity Premium and the Clientele Effect | 1 | 209b185e9336… |
+| mt-liquidity-supplier-taxonomy | Liquidity-Supplier Taxonomy: Five Types of Liquidity Providers | 1 | 9c307d4f06eb… |
+| mt-lit-dark-pool-optimal-execution | Optimal Execution Across Lit and Dark Venues with Order-Flow Trends | 2 | 96cc1e955573… |
+| mt-market-fragmentation | Market Fragmentation vs Consolidation and Liquidity Externalities | 2 | 5d65a69d7572… |
+| mt-market-impact-price-concession | Market Impact and Price Concession on Large Orders | 2 | 30f65f49383e… |
+| mt-market-manipulation-bluffing | Market Manipulation: Bluffing, Rumormongering, and Painting the Tape | 1 | 96abf181d5b9… |
+| mt-market-quality-volatility-origins | The Origins of Volatility and Market Quality | 2 | 1632fe7876e7… |
+| mt-market-transparency-dark-pools | Market Transparency, Dark Pools, and the Transparency-Liquidity Tradeoff | 2 | 2cf40436b5b2… |
+| mt-market-viability-no-trade-breakdown | Market Viability: When Adverse Selection Causes Market Breakdown | 2 | fb60731d941a… |
+| mt-microprice-midprice-spread | Midprice, Microprice, Quoted Spread and Market-Quality Measures | 1 | cbf75f9a104c… |
+| mt-microstructure-scope-price-formation | Market Microstructure: Studying How Prices Form Under Explicit Trading Rules | 2 | a2f6af0d920a… |
+| mt-multiple-informed-traders-competition | Multiple Informed Traders and Competition Among the Informed | 2 | 1db163056fd4… |
+| mt-order-anticipators-front-running | Order Anticipators: Front-Running and Parasitic Trading | 1 | bc098591d523… |
+| mt-order-flow-information-content | Adverse Selection and the Information Content of Trades | 2 | 06cf4d5b99b9… |
+| mt-order-imbalance-signal | Order Imbalance as a Short-Horizon Trading Signal | 1 | 8296886babc6… |
+| mt-order-precedence-price-time | Order Precedence Rules: Price Priority and Time Precedence | 2 | 0aa4cc78e8f3… |
+| mt-order-types-market-limit-stop | Order Types: Market, Limit, and Stop Orders | 1 | 6268a19df912… |
+| mt-pairs-trading-cointegration-statarb | Pairs Trading and Statistical Arbitrage via Cointegration with Optimal Bands | 1 | 218a37543f68… |
+| mt-permanent-vs-transitory-price-components | Permanent vs Transitory Price Components (Random-Walk + Pricing Error) | 1 | b3e38707cba1… |
+| mt-pin-probability-informed-trading | PIN: The Probability of Informed Trading from Buy/Sell Order Counts | 2 | 3fab8f9f0234… |
+| mt-price-impact-measures-amihud | Price-Impact Liquidity Measures: Kyle-Lambda Regression and the Amihud Illiquidity Ratio | 2 | 9f54aece679b… |
+| mt-prices-martingale-information-process | Prices as a Martingale and the Information-Impounding Price Process | 2 | b862637316c2… |
+| mt-prospective-execution-cost-tradeoff | Prospective Execution: The Market-Order vs Limit-Order Cost/Opportunity Trade-off | 2 | 94a700feed7e… |
+| mt-random-walk-efficient-price | Random-Walk / Martingale Model of the Fundamental (Efficient) Price | 1 | 8062a92eaee9… |
+| mt-roll-implicit-spread-estimator | Roll's Implicit Bid-Ask Spread Estimator from Serial Covariance | 2 | 05eef12a3c33… |
+| mt-spread-decomposition-components | Decomposing the Spread: Adverse-Selection vs Order-Processing (and Inventory) Components | 1 | c27ea3353dda… |
+| mt-spread-equilibrium-timing-option | Spread Anatomy: Limit-Order Timing Option and Adverse Selection | 1 | 65b8b25cdd02… |
+| mt-stochastic-control-hjb-liquidation | Stochastic Optimal Control for Trading: The Dynamic Programming / HJB Equation | 1 | dc77561a6c33… |
+| mt-temporary-permanent-price-impact | Price Impact: Temporary vs Permanent and the Empirics of Walking the LOB | 2 | 72c08e52a5cd… |
+| mt-three-dimensions-liquidity | The Three Dimensions of Liquidity: Market, Funding, and Monetary | 1 | ebafbebb3d7f… |
+| mt-trade-direction-signing | Signing Trades and the Trade-Direction Indicator (Lee-Ready) | 1 | 2962023b5ef5… |
+| mt-trading-industry-participants | The Trading Industry: Who Trades, Brokers, and the Buy Side | 1 | f5088c849281… |
+| mt-value-traders-arbitrageurs | Value Traders and Arbitrageurs: Resilience and Cross-Market Liquidity Transfer | 1 | 269f32b2ef5c… |
+| mt-volume-critique-time-clock | The Volume Critique and the Role of Time in Price Adjustment | 2 | 280174db5cae… |
+| mt-vwap-pov-volume-targeting | Volume-Targeting Execution: VWAP, Percentage-of-Volume (POV) and Percentage-of-Cumulative-Volume | 2 | d9f2909d2747… |
+
+## 15_performance_and_attribution
+
+| id | title | citations | card_hash |
+|----|-------|-----------|-----------|
+| pa-active-risk-tracking-error-ex-ante-vs-ex-post | Active Risk: Ex-Ante vs Ex-Post Tracking Error | 2 | bcde7320898e… |
+| pa-arithmetic-vs-geometric-excess-return | Arithmetic vs Geometric Excess Return | 1 | d7571622df55… |
+| pa-benchmark-quality-validation-statistics | Benchmark-Quality Validation Statistics | 2 | 7c149dd64755… |
+| pa-brinson-bhb-allocation-selection-interaction | The Brinson Decomposition: Allocation, Selection, and Interaction | 3 | bf0e83181fbd… |
+| pa-brinson-fachler-benchmark-relative-allocation | Brinson-Fachler: Benchmark-Relative Allocation | 1 | 97849b46f0cd… |
+| pa-capitalization-weighting-macroconsistency | Capitalization Weighting and Macroconsistency | 1 | 89f601c6ac75… |
+| pa-contribution-analysis-benchmark-free | Contribution Analysis: Benchmark-Free Absolute-Return Attribution | 1 | 531f0ea9678a… |
+| pa-currency-attribution-karnosky-singer | Currency Attribution: The Karnosky-Singer Framework | 2 | 6c2d8e296152… |
+| pa-dgtw-cs-ct-as-decomposition | The DGTW Characteristic-Based Decomposition (CS/CT/AS) | 2 | 680469dc9dff… |
+| pa-dietz-methods-mwr-approximations | Dietz Methods: Simple and Modified as IRR Approximations | 2 | 16775f97bd91… |
+| pa-drawdown-ratios-calmar-sterling-ulcer | Drawdown Ratios: Calmar, Sterling, Burke, Ulcer | 1 | 9647b5ff944c… |
+| pa-factor-model-types-and-covariance-decomposition | Factor-Model Types and the Covariance Decomposition (Euler/MCR) | 1 | 4bfb0a0679ea… |
+| pa-fi-carry-rolldown-pulltopar-time-decomposition | Carry, Roll-Down, and Pull-to-Par Time Decomposition | 1 | 133617ba2b4e… |
+| pa-fi-parametric-vs-nonparametric-curve-models | Parametric vs Non-Parametric Yield-Curve Models | 1 | 2e0213f8ed01… |
+| pa-fi-perturbational-attribution-equation | The Fixed-Income Perturbational Attribution Equation | 2 | 9be4e5edac8b… |
+| pa-fi-shift-twist-butterfly-and-krd | Shift, Twist, Butterfly, and Key-Rate Duration | 2 | a5d0a955ef8a… |
+| pa-geometric-attribution-brinson-extended | Geometric Attribution: The Compounding Brinson Extension | 1 | 1e0b401b2531… |
+| pa-geometric-vs-arithmetic-linking-choice | The Geometric-vs-Arithmetic Linking Choice | 2 | 6175d7e6750b… |
+| pa-gips-2020-composites-and-mechanics | GIPS 2020: Composites and Calculation Mechanics | 2 | d1db2310311c… |
+| pa-irr-money-weighted-return | The Internal Rate of Return as the Money-Weighted Method | 1 | e995e6d09711… |
+| pa-luck-vs-skill-fdr-and-bootstrap | Skill vs Luck: False-Discovery Rate and the Bootstrap | 1 | b270b2d1a09f… |
+| pa-m2-risk-adjusted-return-transform | M-Squared: The Risk-Adjusted Return Transform | 2 | ae5da804484c… |
+| pa-multifactor-alpha-timing-conditional | Multifactor Alpha, Market Timing, and Conditional Models | 2 | 1aa9970645ae… |
+| pa-multilevel-attribution-successive-notional-funds | Multi-Level Attribution and Successive Notional Funds | 2 | 0735e143364e… |
+| pa-multiperiod-linking-smoothing-vs-linking | Multi-Period Linking: Smoothing vs Linking Algorithms | 2 | a5c57c44affa… |
+| pa-normal-portfolio-construction | Normal-Portfolio Construction | 1 | 3f2547c9a2e5… |
+| pa-partial-moment-ratios-sortino-omega-kappa | Partial-Moment Ratios: Sortino, Omega, and Kappa | 1 | efa3f65ecc2e… |
+| pa-regression-appraisal-jensen-treynor | Regression Appraisal: Jensen's Alpha and the Treynor Ratio | 1 | ccb4adf9f146… |
+| pa-return-gap-kacperczyk-sialm-zheng | The Return Gap | 1 | f51d64a6fab8… |
+| pa-returns-based-style-analysis | Returns-Based Style Analysis | 1 | 098473121a01… |
+| pa-transaction-based-attribution-and-trading-cost | Transaction-Based Attribution and the Trading-Cost Bridge | 2 | bfd3eb49ad43… |
+| pa-true-twr-and-chain-linking | True Time-Weighted Return and Geometric Chain-Linking | 1 | 13bb6f5ccda9… |
+| pa-twr-vs-mwr-when-each-applies | Time-Weighted vs Money-Weighted Return: When Each Applies | 2 | 14f1f19594d3… |
+| pa-valid-benchmark-properties | Properties of a Valid Benchmark | 2 | 595066744df3… |
+| pa-variability-ratios-sharpe-information | Variability Ratios: Sharpe and the Information Ratio | 2 | 9b7d5285be00… |
+
 ## 17_cross_cutting
 
 | id | title | citations | card_hash |
@@ -324,4 +442,35 @@ schema_version: cacg.v0
 | cc-standard-v-investment-analysis-diligence | Standard V(A) Diligence and Reasonable Basis + V(B) Communication + V(C) Record Retention | 1 | 3e7575b4b0c3… |
 | cc-standard-vi-conflicts-of-interest | Standard VI(A) Disclosure of Conflicts + VI(B) Priority of Transactions + VI(C) Referral Fees | 1 | 8d234c4fa20e… |
 | cc-standard-vii-responsibilities-as-cfa-institute-member-or-candidate | Standard VII Responsibilities as a CFA Institute Member or CFA Candidate | 1 | de43bc0deb82… |
+
+## 22_fund_level_arbitrage
+
+| id | title | citations | card_hash |
+|----|-------|-----------|-----------|
+| fa-amihud-mendelson-and-priced-liquidity-risk | Amihud-Mendelson & Priced Liquidity Risk: Level Premium + the LCAPM | 3 | 33dbb15cd599… |
+| fa-dual-rail-pricing-nav-vs-market | Dual-Rail Pricing: NAV vs Market Price | 2 | 0f15b116fab1… |
+| fa-etf-creation-redemption-arbitrage-band | The ETF Creation-Redemption Arbitrage Band: Why Price Tracks NAV | 2 | 0436255ac86c… |
+| fa-etf-creation-redemption-mechanism | The ETF Creation-Redemption Mechanism | 2 | 778194b100df… |
+| fa-etf-spread-below-basket-adverse-selection | Why the ETF Spread Sits Below the Basket Spread: Diversified Adverse Selection | 2 | d6323688bafd… |
+| fa-etf-vs-cef-premium-discount | ETF vs Closed-End-Fund Premium/Discount: Transient vs Persistent | 3 | 1538dcb85a8e… |
+| fa-etp-taxonomy-and-legal-structures | ETP Taxonomy: ETF vs ETN vs ETV/ETC & Legal Wrappers | 2 | c4df8e620482… |
+| fa-funding-spirals-and-fire-sales | Funding & Market-Liquidity Spirals and Fire Sales | 3 | 9a58c9e7ebb4… |
+| fa-iiv-iopv-intraday-fair-value | IIV / iNAV / IOPV: The Intraday Fair-Value Signal | 2 | 9a5c6da015af… |
+| fa-illiquidity-discount-and-crisis-amplification | The Illiquidity Discount & Crisis Amplification | 2 | ba55b7d5714b… |
+| fa-in-kind-basket-design-and-fees | In-Kind Basket Design, Custom Baskets & Creation Fees | 3 | 87a13075842d… |
+| fa-international-price-discovery-and-enav | International ETFs: Price Discovery When the Underlying Market Is Closed | 3 | 829b510fcd6f… |
+| fa-limits-to-arbitrage-when-creation-channel-breaks | When the Creation Channel Breaks: an Open-End Fund Trades Like a CEF | 2 | 757bbea6df26… |
+| fa-liquidity-adjusted-var | Liquidity-Adjusted VaR: Splitting Out the Liquidation Cost | 1 | 0bad3595d07f… |
+| fa-liquidity-measurement-and-price-impact | Measuring Liquidity & Price Impact: Roll, Kyle, Amihud | 3 | 36fc95bb952f… |
+| fa-market-impact-transaction-costs-and-turbulence-breakdown | Market Impact, Best-Execution Tension & Turbulence Breakdown | 5 | 95682e7c061f… |
+| fa-market-liquidity-dimensions-and-no-arbitrage | Market-Liquidity Dimensions (Tightness, Depth, Resiliency) & the No-Arbitrage Baseline | 2 | c0f2adfbe66b… |
+| fa-nav-staleness-and-arbitrage-speed | NAV Staleness & Arbitrage Speed: phi, psi and the Mean-Reversion Half-Life | 2 | 292aeb6a1c8d… |
+| fa-pcf-cash-and-fund-seeding | The Portfolio Composition File, the Cash DOF & Fund Seeding | 4 | edb5edd768eb… |
+| fa-premium-decomposition-and-estimation | Premium Decomposition: Price Discovery vs Transitory Liquidity | 2 | 8897c257e2e0… |
+| fa-search-bargaining-liquidity-premium | Search & Bargaining in OTC Markets: Endogenous Liquidity Premia | 2 | 99e56e777e24… |
+| fa-settlement-clearing-and-cascading-shorts | Settlement, Clearing & the Cascading-Shorts Daisy Chain | 4 | 68096e899a2e… |
+| fa-shleifer-vishny-limits-to-arbitrage | Shleifer-Vishny Limits to Arbitrage: Performance-Sensitive Capital | 2 | 59a6deb21603… |
+| fa-tracking-error-attribution-and-tco | Tracking Difference vs Error & Total Cost of Ownership | 3 | 4fa25398cd10… |
+| fa-true-vs-reported-premium-price-discovery-share | True vs Reported Premium & the Price-Discovery Share | 2 | 6d3d2809fd22… |
+| fa-volume-neq-liquidity-idts-ebils-components | Volume != Liquidity: Implied Liquidity, IDTS & the EBILS Grid | 3 | 78b69b2fb08e… |
 
