@@ -155,7 +155,9 @@ mispricing — the formal expression of "fire sales beget persistent mispricing.
 - [`mt-three-dimensions-liquidity`](./mt-three-dimensions-liquidity.md) -- market liquidity (depth/tightness/resiliency) is one leg of the funding/market feedback.
 - [`mt-liquidity-adjusted-capm`](./mt-liquidity-adjusted-capm.md) -- why illiquidity and liquidity risk command a premium that arbitrage cannot fully erode.
 - [`mt-bubbles-crashes-circuit-breakers`](./mt-bubbles-crashes-circuit-breakers.md) -- liquidity spirals as the engine of crashes and the policy response.
-
+- [`fa-shleifer-vishny-limits-to-arbitrage`](../22_fund_level_arbitrage/fa-shleifer-vishny-limits-to-arbitrage.md) — cross-set: performance-sensitive-capital limits-to-arbitrage (reading-14 primary derivation; reading-22 fund creation/redemption application; reading-10 behavioral owner).
+- [`fa-funding-spirals-and-fire-sales`](../22_fund_level_arbitrage/fa-funding-spirals-and-fire-sales.md) — cross-set: the Brunnermeier-Pedersen margin / liquidity spiral (reading-14 primary FPR model; reading-22 repo-haircut and ETF-redemption channels).
+- [`fa-liquidity-adjusted-var`](../22_fund_level_arbitrage/fa-liquidity-adjusted-var.md) — cross-set: funding-liquidity / fire-sale risk feeding liquidity-adjusted VaR (reading-14 primary mechanism; reading-22 LVaR application).
 ## Escalate to Raw When
 
 The card sketches the equilibrium as the intersection of the downward-sloping indifference

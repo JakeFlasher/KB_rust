@@ -118,7 +118,7 @@ independence assumptions fail.
 - [`mt-generalized-roll-spread-decomposition`](./mt-generalized-roll-spread-decomposition.md) -- relaxes independence to split the spread into adverse-selection vs noninformational parts
 - [`mt-effective-cost-trade-benchmark`](./mt-effective-cost-trade-benchmark.md) -- the realized effective half-spread that Roll's measure proxies when quotes are unavailable
 - [`mt-liquidity-measures-spread-depth-resiliency`](./mt-liquidity-measures-spread-depth-resiliency.md) -- situates Roll's covariance proxy among the broader spread/depth/resiliency liquidity measures
-
+- [`fa-liquidity-measurement-and-price-impact`](../22_fund_level_arbitrage/fa-liquidity-measurement-and-price-impact.md) — cross-set: Roll / Kyle / Amihud price-impact and implied-spread estimators (reading-14 primary derivations; reading-22 ETF liquidity-measurement application).
 ## Escalate to Raw When
 Hasbrouck §3.4 pp.40-41 derives `gamma_0` and `gamma_1` term-by-term from the
 cross-product expansion (this card states the surviving terms but does not write

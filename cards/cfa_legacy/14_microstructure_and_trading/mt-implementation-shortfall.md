@@ -147,7 +147,8 @@ the terms:
 - [`mt-prospective-execution-cost-tradeoff`](./mt-prospective-execution-cost-tradeoff.md) -- the expected execution-vs-opportunity-cost trade-off that this measure's decomposition motivates
 - [`mt-market-impact-price-concession`](./mt-market-impact-price-concession.md) -- the price-concession mechanism that produces the execution-cost term
 - [`mt-vwap-pov-volume-targeting`](./mt-vwap-pov-volume-targeting.md) -- contrasting volume-benchmark cost metrics that implementation shortfall subsumes
-
+- [`fa-market-impact-transaction-costs-and-turbulence-breakdown`](../22_fund_level_arbitrage/fa-market-impact-transaction-costs-and-turbulence-breakdown.md) — cross-set: market-impact / implementation-shortfall execution cost (reading-14 primary measures; reading-22 ETF best-execution application).
+- [`pa-transaction-based-attribution-and-trading-cost`](../15_performance_and_attribution/pa-transaction-based-attribution-and-trading-cost.md) — cross-set: implementation-shortfall / effective-cost trade benchmark (reading-14 execution-cost measures; reading-15 attribution absorption).
 ## Escalate to Raw When
 
 Re-read Hasbrouck §14.2 (pp.155-157) for the full self-financing / value-matching

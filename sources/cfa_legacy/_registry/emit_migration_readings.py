@@ -61,6 +61,8 @@ import unicodedata
 from pathlib import Path
 from typing import Any, NamedTuple
 
+from cross_link_map import DEFAULT_MAP, derive_links, inject_links, load_map
+
 ROOT = Path(__file__).resolve().parents[3]
 REGISTRY = ROOT / "sources/cfa_legacy/_registry"
 OUT = ROOT / "out/cfa_legacy"
@@ -324,13 +326,17 @@ def reconcile_queue(queue: dict[str, Any], new_records: list[dict[str, Any]]) ->
     return queue
 
 
-def emit(skeleton_root: Path, *, force: bool, dry_run: bool) -> dict[str, Any]:
+def emit(skeleton_root: Path, *, force: bool, dry_run: bool, cross_links_path: Path) -> dict[str, Any]:
     manifest = read_json(CHUNKS_MANIFEST)
     chunks_by_id = {c["chunk_id"]: c for c in manifest["chunks"]}
     retracted_chunks = set(manifest.get("retracted_chunk_ids", []))
     retracted_sources = set(manifest.get("retracted_source_ids", []))
     matrix_allowed = read_json(SOURCE_MATRIX)["allowed"]
     published_ids = {c["id"] for c in read_json(CARDS_MANIFEST)["cards"]}
+    # Cross-reading See Also links for the documented overlap pairs are injected
+    # into each new card's body from the committed map (the released-card side is
+    # applied separately, since those cards are not emitted from skeletons).
+    new_card_links = derive_links(load_map(cross_links_path))[0]
 
     # Validate EVERYTHING before writing a single card (fail closed, no partial state).
     planned: list[tuple[Path, str]] = []
@@ -363,6 +369,8 @@ def emit(skeleton_root: Path, *, force: bool, dry_run: bool) -> dict[str, Any]:
             body = split_skeleton(
                 skeleton_root / reading.set_dir / "_card_skeletons" / reading.reading_id / f"{cid}.md"
             )
+            if cid in new_card_links:
+                body = inject_links(body, new_card_links[cid])
             fm = {
                 "schema_version": SCHEMA_VERSION,
                 "id": cid,
@@ -487,6 +495,20 @@ def _self_test() -> int:
     assert mt_z["notes_taint"] is False and mt_z["source_ids"] == ["s1", "s2"]
     assert once["migration_additions"]["count"] == 1
 
+    # cross-link injection: convert an existing prose code-span to a resolving link,
+    # append a missing one, and stay idempotent on a second pass.
+    body = ("# T\n\n## See Also\n- [`mt-x`](./mt-x.md) — intra.\n"
+            "- `mt-implementation-shortfall` (reading 14) owns the measure.\n\n"
+            "## Escalate\nfoo\n")
+    links = [{"target_id": "mt-implementation-shortfall", "note": "n1"},
+             {"target_id": "fa-tracking-error-attribution-and-tco", "note": "n2"}]
+    once_b = inject_links(body, links)
+    assert "[`mt-implementation-shortfall`](../14_microstructure_and_trading/mt-implementation-shortfall.md)" in once_b
+    assert "[`fa-tracking-error-attribution-and-tco`](../22_fund_level_arbitrage/fa-tracking-error-attribution-and-tco.md) — n2" in once_b
+    assert once_b.count("/mt-implementation-shortfall.md)") == 1, "no double-conversion"
+    assert "## Escalate\nfoo" in once_b, "later section preserved"
+    assert inject_links(once_b, links) == once_b, "injection not idempotent"
+
     print("emit_migration_readings self-test: PASS")
     return 0
 
@@ -499,11 +521,15 @@ def main() -> int:
     ap.add_argument("--force", action="store_true",
                     help="overwrite an existing card whose bytes differ from the rendered output")
     ap.add_argument("--dry-run", action="store_true", help="validate everything, write nothing")
+    ap.add_argument("--cross-links", type=Path, default=DEFAULT_MAP,
+                    help="committed cross-link map injected into new-card See Also sections "
+                         "(default: migration_cross_links.json)")
     ap.add_argument("--self-test", action="store_true", help="run hermetic helper tests and exit")
     args = ap.parse_args()
     if args.self_test:
         return _self_test()
-    result = emit(args.skeleton_root, force=args.force, dry_run=args.dry_run)
+    result = emit(args.skeleton_root, force=args.force, dry_run=args.dry_run,
+                  cross_links_path=args.cross_links)
     print(json.dumps(result, indent=2))
     return 0
 

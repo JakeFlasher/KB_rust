@@ -70,7 +70,7 @@ The LVaR construction adopts explicit simplifying assumptions: zero-mean normal 
 - [`fa-funding-spirals-and-fire-sales`](./fa-funding-spirals-and-fire-sales.md) — the forced-liquidation downward spiral that the VaR multiplier feeds into when limits bind across many desks at once.
 - [`fa-market-impact-transaction-costs-and-turbulence-breakdown`](./fa-market-impact-transaction-costs-and-turbulence-breakdown.md) — the trade-size-vs-depth and turbulence mechanics underlying the endogenous liquidation cost.
 - [`fa-liquidity-measurement-and-price-impact`](./fa-liquidity-measurement-and-price-impact.md) — spread and Roll-measure inputs that supply `s` and `sigma_s`.
-- `mt-funding-liquidity-fire-sales` (reading 14) carries the fire-sale feedback this card's VaR-multiplier loop shares; reading 14 has no LVaR card, so this card is the sole owner of the liquidity-adjusted-VaR construction.
+- [`mt-funding-liquidity-fire-sales`](../14_microstructure_and_trading/mt-funding-liquidity-fire-sales.md) (reading 14) carries the fire-sale feedback this card's VaR-multiplier loop shares; reading 14 has no LVaR card, so this card is the sole owner of the liquidity-adjusted-VaR construction.
 
 Legacy cross-references (other tree, prose only): the value-at-risk notes card rm-value-at-risk-notes gives the baseline VaR mechanics and confidence-quantile convention this card extends, and the loss-distribution-anatomy card rm-loss-distribution-anatomy frames why the return distribution and the spread distribution must be modeled jointly under stress.
 

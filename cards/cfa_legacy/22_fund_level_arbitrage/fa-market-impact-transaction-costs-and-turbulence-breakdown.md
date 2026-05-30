@@ -94,8 +94,8 @@ splits into a *dislocation* term `(P - V_true)` and a *measurement-error / stale
 - [`fa-true-vs-reported-premium-price-discovery-share`](./fa-true-vs-reported-premium-price-discovery-share.md) — separating reported premium into a measurement gap versus genuine price-discovery signal.
 - [`fa-limits-to-arbitrage-when-creation-channel-breaks`](./fa-limits-to-arbitrage-when-creation-channel-breaks.md) — the complementary breakdown on the creation/redemption side in stress.
 - [`fa-tracking-error-attribution-and-tco`](./fa-tracking-error-attribution-and-tco.md) — transaction costs as a one-way contributor to tracking error.
-- `mt-market-impact-price-concession` (reading 14) derives the same dI/dQ>0, dI/dL<0 impact comparative statics from the limit-order book; this card states the result and applies it to ETF best-execution.
-- `mt-implementation-shortfall` (reading 14) is the master execution-cost measure whose impact term is the cost priced here (note its "tracking error" denotes a dollar opportunity-cost level, not the excess-return volatility meant in this card).
+- [`mt-market-impact-price-concession`](../14_microstructure_and_trading/mt-market-impact-price-concession.md) (reading 14) derives the same dI/dQ>0, dI/dL<0 impact comparative statics from the limit-order book; this card states the result and applies it to ETF best-execution.
+- [`mt-implementation-shortfall`](../14_microstructure_and_trading/mt-implementation-shortfall.md) (reading 14) is the master execution-cost measure whose impact term is the cost priced here (note its "tracking error" denotes a dollar opportunity-cost level, not the excess-return volatility meant in this card).
 - `mt-buy-side-trader-best-execution` (reading 14) owns the "best execution is relative, not best-price-in-the-abstract" fiduciary framing this card invokes.
 - `pa-transaction-based-attribution-and-trading-cost` (reading 15) is where the transaction cost this card minimizes is later absorbed into an active value-add attribution.
 

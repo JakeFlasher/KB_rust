@@ -87,6 +87,6 @@ The cure is structural: a benchmark "firmly determined before the broker receive
 - [`mt-implementation-shortfall`](./mt-implementation-shortfall.md) -- the superset measure that adds opportunity cost and cannot be gamed.
 - [`mt-generalized-roll-spread-decomposition`](./mt-generalized-roll-spread-decomposition.md) -- splits the effective cost into permanent vs transient components.
 - [`mt-vwap-pov-volume-targeting`](./mt-vwap-pov-volume-targeting.md) -- the execution strategy underlying VWAP-benchmark gaming.
-
+- [`pa-transaction-based-attribution-and-trading-cost`](../15_performance_and_attribution/pa-transaction-based-attribution-and-trading-cost.md) — cross-set: implementation-shortfall / effective-cost trade benchmark (reading-14 execution-cost measures; reading-15 attribution absorption).
 ## Escalate to Raw When
 Read Hasbrouck (2007) §14.2 for the full implementation-shortfall vector derivation (the `(v - n1)'π1` paper-vs-actual portfolio identity and the execution/opportunity-cost split) that this card only references; §14.3.3 for the trade-and-quote signing pitfalls (time-stamp lag, consolidation, hidden orders) that this card summarizes. For the gaming taxonomy by benchmark type and the detection/discipline dynamics, re-read Harris (2003) §21.3.

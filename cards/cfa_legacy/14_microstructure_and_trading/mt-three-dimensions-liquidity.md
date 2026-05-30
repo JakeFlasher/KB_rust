@@ -77,6 +77,6 @@ Because the funding<->market relation has *positive feedback in both directions*
 - [`mt-liquidity-depth-immediacy-width`](./mt-liquidity-depth-immediacy-width.md) -- refines the *market* dimension into depth, immediacy, and width.
 - [`mt-funding-liquidity-fire-sales`](./mt-funding-liquidity-fire-sales.md) -- formalizes the funding->market feedback into fire sales and limits to arbitrage.
 - [`mt-liquidity-premium-asset-pricing`](./mt-liquidity-premium-asset-pricing.md) -- prices the consequences of (il)liquidity into expected returns.
-
+- [`fa-market-liquidity-dimensions-and-no-arbitrage`](../22_fund_level_arbitrage/fa-market-liquidity-dimensions-and-no-arbitrage.md) — cross-set: the spread / depth / resiliency liquidity dimensions (reading-14 primary; reading-22 no-arbitrage framing).
 ## Escalate to Raw When
 You need the *formal* funding-market feedback model: this card only asserts the directional links and the liquidity-spiral label. The closed-form margin/inventory mechanism and the spiral's fixed-point conditions are developed in Chapter 9 (cited at p.598 / p.612 of the intro pointing to Brunnermeier-Pedersen 2009) — re-read FPR §0.4.2 pp.18 first, then Chapter 9 for the model.

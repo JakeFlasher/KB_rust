@@ -89,7 +89,7 @@ Contrast with sibling models. Unlike the **Glosten-Milgrom** sequential-trade mo
 - [`mt-temporary-permanent-price-impact`](./mt-temporary-permanent-price-impact.md) -- decomposes the price move lambda generates into permanent (information) vs transitory components.
 - [`mt-price-impact-measures-amihud`](./mt-price-impact-measures-amihud.md) -- empirical estimation of lambda (Amihud illiquidity, regression of price change on order imbalance).
 - [`mt-market-impact-price-concession`](./mt-market-impact-price-concession.md) -- practitioner-side execution view of the same depth/impact trade-off.
-
+- [`fa-liquidity-measurement-and-price-impact`](../22_fund_level_arbitrage/fa-liquidity-measurement-and-price-impact.md) — cross-set: Roll / Kyle / Amihud price-impact and implied-spread estimators (reading-14 primary derivations; reading-22 ETF liquidity-measurement application).
 ## Escalate to Raw When
 
 O'Hara derives lambda, beta, and the Sigma1 = Sigma0/2 variance result from the conditional-normal projection formula (eqs. 4.1-4.20); the OCR garbles every equation line and the Bayesian-update algebra. Re-read O'Hara (1995) pp.99-107 for the exact closed-form solution and the step-by-step projection derivation, and pp.108-112 for the Holden-Subrahmanyam multiple-informed-trader limit results (lambda and depth dynamics) that this card only sketches.

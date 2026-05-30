@@ -74,6 +74,6 @@ The Amihud ratio is a substitution under a correlation argument: trading volume 
 - [`mt-liquidity-measures-spread-depth-resiliency`](./mt-liquidity-measures-spread-depth-resiliency.md) -- spread/depth/resiliency taxonomy these price-impact measures sit within
 - [`mt-hasbrouck-var-trades-quotes`](./mt-hasbrouck-var-trades-quotes.md) -- VAR price-impact regression of quotes on signed trades (the Chapter 5 approach)
 - [`mt-liquidity-premium-asset-pricing`](./mt-liquidity-premium-asset-pricing.md) -- Amihud ratio as a priced illiquidity factor (Acharya-Pedersen)
-
+- [`fa-liquidity-measurement-and-price-impact`](../22_fund_level_arbitrage/fa-liquidity-measurement-and-price-impact.md) — cross-set: Roll / Kyle / Amihud price-impact and implied-spread estimators (reading-14 primary derivations; reading-22 ETF liquidity-measurement application).
 ## Escalate to Raw When
 The source asserts the lambda-regression and Amihud forms and reports Stoll's (2000) cross-sectional lambda magnitudes and Hasbrouck's correlation finding, but does not re-derive Kyle's lambda from first principles here — for the structural derivation see FPR Chapter 3 and the VAR price-impact regression in Chapter 5. For the bivariate half-normal distributional argument linking |r| and |Vol| to lambda, and the Amihud-vs-Amivest stability comparison, re-read Hasbrouck (2007) §9.7 pp.92-93. For asset-pricing use of the illiquidity ratio, see Acharya & Pedersen (2005) as cited there.

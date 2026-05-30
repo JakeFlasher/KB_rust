@@ -85,6 +85,6 @@ Empirically (Acharya-Pedersen on 1962-1999 CRSP NYSE/AMEX data, illiquidity prox
 - [`mt-liquidity-premium-asset-pricing`](./mt-liquidity-premium-asset-pricing.md) -- supplies the level-of-cost premium E(s_j) that this card decomposes alongside the risk betas.
 - [`mt-three-dimensions-liquidity`](./mt-three-dimensions-liquidity.md) -- defines spread / depth / resiliency, the liquidity primitives whose co-movement generates beta2-beta4.
 - [`mt-funding-liquidity-fire-sales`](./mt-funding-liquidity-fire-sales.md) -- endogenizes the commonality and return-illiquidity covariation that this card treats as exogenous.
-
+- [`fa-amihud-mendelson-and-priced-liquidity-risk`](../22_fund_level_arbitrage/fa-amihud-mendelson-and-priced-liquidity-risk.md) — cross-set: the Amihud-Mendelson / liquidity-adjusted-CAPM priced-liquidity result (reading-14 primary derivation; reading-22 fund-level application).
 ## Escalate to Raw When
 The source derives the four-beta decomposition and reports the Acharya-Pedersen empirical signs and the ~1.1% illiquid-minus-liquid annual return gap; this card only sketches those magnitudes. Re-read pp.298-300 (eqs. 9.16-9.18 and the three numbered beta interpretations) for the exact covariance algebra and the CRSP/Amihud estimation details, and §9.4 for why the liquidity covariances are not exogenous in practice.

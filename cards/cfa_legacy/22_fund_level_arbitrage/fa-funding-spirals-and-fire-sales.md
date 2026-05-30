@@ -107,7 +107,7 @@ absent any fundamental correlation — a pure funding channel.
 - [`fa-amihud-mendelson-and-priced-liquidity-risk`](./fa-amihud-mendelson-and-priced-liquidity-risk.md) — the steady-state liquidity premium that the spiral perturbs in stress.
 - [`fa-limits-to-arbitrage-when-creation-channel-breaks`](./fa-limits-to-arbitrage-when-creation-channel-breaks.md) — the ETF-specific analogue: redemption/creation gating as a funding-channel break.
 - Legacy (other tree, prose only): the risk-management loss-distribution material (`rm-loss-distribution-anatomy`) frames the fat-tailed second-round spillover losses that fire sales generate as a negative externality on top of direct losses.
-- `mt-funding-liquidity-fire-sales` and `mt-three-dimensions-liquidity` (reading 14) give the primary-source Brunnermeier-Pedersen derivation of the margin/liquidity spiral; this card adds the repo-haircut, CDS-basis, and ETF-redemption channels.
+- [`mt-funding-liquidity-fire-sales`](../14_microstructure_and_trading/mt-funding-liquidity-fire-sales.md) and `mt-three-dimensions-liquidity` (reading 14) give the primary-source Brunnermeier-Pedersen derivation of the margin/liquidity spiral; this card adds the repo-haircut, CDS-basis, and ETF-redemption channels.
 
 ## Escalate to Raw When
 Go to the raw source when you need the concrete crisis episodes and magnitudes the

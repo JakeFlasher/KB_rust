@@ -118,7 +118,7 @@ its indifference slope is tangent.
 - [`mt-three-dimensions-liquidity`](./mt-three-dimensions-liquidity.md) -- the spread `s` here is one of the tightness/depth/resiliency dimensions being capitalized.
 - [`mt-price-impact-measures-amihud`](./mt-price-impact-measures-amihud.md) -- supplies the broader trading-cost measure (price impact) that `s` proxies.
 - [`mt-liquidity-nature-provision-return`](./mt-liquidity-nature-provision-return.md) -- why liquidity provision is compensated, the supply side of this premium.
-
+- [`fa-amihud-mendelson-and-priced-liquidity-risk`](../22_fund_level_arbitrage/fa-amihud-mendelson-and-priced-liquidity-risk.md) — cross-set: the Amihud-Mendelson / liquidity-adjusted-CAPM priced-liquidity result (reading-14 primary derivation; reading-22 fund-level application).
 ## Escalate to Raw When
 The source proves the full pricing identity (eq. 9.4) and the exact return-spread relation
 (eqs. 9.5-9.9) plus the clientele inequality chain (eq. 9.10) and figures 9.1-9.3; this card

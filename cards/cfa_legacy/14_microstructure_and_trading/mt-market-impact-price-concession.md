@@ -149,7 +149,7 @@ the inequalities above are the mechanism.
 - [`mt-temporary-permanent-price-impact`](./mt-temporary-permanent-price-impact.md) -- decomposes the realized concession into a reverting liquidity premium and a persistent information component.
 - [`mt-implementation-shortfall`](./mt-implementation-shortfall.md) -- market impact is the dominant component of the shortfall between decision price and realized execution.
 - [`mt-kyle-lambda-market-depth-price-impact`](./mt-kyle-lambda-market-depth-price-impact.md) -- gives the equilibrium linear price-impact coefficient $\lambda$ underlying these schedules.
-
+- [`fa-market-impact-transaction-costs-and-turbulence-breakdown`](../22_fund_level_arbitrage/fa-market-impact-transaction-costs-and-turbulence-breakdown.md) — cross-set: market-impact / implementation-shortfall execution cost (reading-14 primary measures; reading-22 ETF best-execution application).
 ## Escalate to Raw When
 
 Harris (2003) §4.3.3 (pp.85-86) gives the institutional definition and the

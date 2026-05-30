@@ -84,7 +84,7 @@ The limits-of-arbitrage gate APPLIES across the Shleifer 2000 anomaly inventory:
 - [`be-sentiment-vs-fundamentals.md`](./be-sentiment-vs-fundamentals.md#intuition) — the divergence framing that visualises bounded-deviation equilibria.
 - [`be-two-model-mispricing.md`](./be-two-model-mispricing.md#definition) — the overreaction / underreaction taxonomy that classifies mispricing sources.
 - [`be-regret-matching-foundations.md`](./be-regret-matching-foundations.md#definition) — the Hart+Mas-Colell adaptive-strategies bridge that anchors clientele-weight dynamics under bounded-arbitrage equilibria.
-
+- [`fa-shleifer-vishny-limits-to-arbitrage`](../22_fund_level_arbitrage/fa-shleifer-vishny-limits-to-arbitrage.md) — cross-set: performance-sensitive-capital limits-to-arbitrage (reading-14 primary derivation; reading-22 fund creation/redemption application; reading-10 behavioral owner).
 ## Escalate to Raw When
 
 Open Shleifer 2000 *Inefficient Markets* Ch.4 + Ch.5 directly when any of the criteria below applies. **Source:** Shleifer (2000) Ch.4 pp.89-111 + Ch.5 pp.112-153.

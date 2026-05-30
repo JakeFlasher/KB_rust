@@ -151,7 +151,7 @@ exhausts the BBO and walks the book.
 - [`mt-effective-cost-trade-benchmark`](./mt-effective-cost-trade-benchmark.md) -- effective spread as a per-trade execution-quality benchmark
 - [`mt-roll-implicit-spread-estimator`](./mt-roll-implicit-spread-estimator.md) -- recovering the implied spread from transaction-price serial covariance when quotes are unavailable
 - [`mt-price-impact-measures-amihud`](./mt-price-impact-measures-amihud.md) -- the adverse-selection / price-impact term that drives realized below effective spread
-
+- [`fa-market-liquidity-dimensions-and-no-arbitrage`](../22_fund_level_arbitrage/fa-market-liquidity-dimensions-and-no-arbitrage.md) — cross-set: the spread / depth / resiliency liquidity dimensions (reading-14 primary; reading-22 no-arbitrage framing).
 ## Escalate to Raw When
 
 The card sketches the realized-vs-effective decomposition and the supplier

@@ -107,7 +107,7 @@ sales at a deep discount) tends to dominate the priced liquidity risk.
 - [`fa-amihud-mendelson-and-priced-liquidity-risk`](./fa-amihud-mendelson-and-priced-liquidity-risk.md) sits beside [`fa-funding-spirals-and-fire-sales`](./fa-funding-spirals-and-fire-sales.md) — the `beta4` fire-sale channel is realized when investors hit funding constraints and liquidate into a distressed market.
 - [`fa-illiquidity-discount-and-crisis-amplification`](./fa-illiquidity-discount-and-crisis-amplification.md) — the time-varying, crisis-peaking behavior of the liquidity risk premium.
 - Legacy cross-refs (other tree, prose only): the LCAPM is the liquidity-augmented sibling of the plain CAPM and SML covered by pm-capm-and-sml, and it extends the basic compensation-for-risk logic in pm-return-and-risk-fundamentals.
-- `mt-liquidity-adjusted-capm` and `mt-liquidity-premium-asset-pricing` (reading 14) derive the LCAPM four-beta model and the clientele level premium from primary sources; this card adds the level-vs-risk split and the fund-return-attribution frame.
+- [`mt-liquidity-adjusted-capm`](../14_microstructure_and_trading/mt-liquidity-adjusted-capm.md) and [`mt-liquidity-premium-asset-pricing`](../14_microstructure_and_trading/mt-liquidity-premium-asset-pricing.md) (reading 14) derive the LCAPM four-beta model and the clientele level premium from primary sources; this card adds the level-vs-risk split and the fund-return-attribution frame.
 
 ## Escalate to Raw When
 Go to the raw chapter when you need the worked numeric magnitudes — e.g. the

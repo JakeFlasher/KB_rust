@@ -81,7 +81,7 @@ The convergence result |P - V| -> 0 is not unconditional. It holds only on the c
 - [`fa-liquidity-measurement-and-price-impact`](./fa-liquidity-measurement-and-price-impact.md) — operationalizes the tightness/depth facets into measurable price-impact and spread quantities.
 - [`fa-nav-staleness-and-arbitrage-speed`](./fa-nav-staleness-and-arbitrage-speed.md) — resiliency/immediacy applied to fund NAV convergence speed.
 - [`fa-dual-rail-pricing-nav-vs-market`](./fa-dual-rail-pricing-nav-vs-market.md) — the law-of-one-price wedge made concrete as the fund's market-price-vs-NAV gap.
-- `mt-three-dimensions-liquidity` and `mt-liquidity-measures-spread-depth-resiliency` (reading 14) define tightness/depth/resiliency from primary microstructure sources; this card adds the no-arbitrage / law-of-one-price baseline and its two hidden assumptions.
+- [`mt-three-dimensions-liquidity`](../14_microstructure_and_trading/mt-three-dimensions-liquidity.md) and [`mt-liquidity-measures-spread-depth-resiliency`](../14_microstructure_and_trading/mt-liquidity-measures-spread-depth-resiliency.md) (reading 14) define tightness/depth/resiliency from primary microstructure sources; this card adds the no-arbitrage / law-of-one-price baseline and its two hidden assumptions.
 
 Legacy cross-refs (other tree, prose only): the behavioral-finance limits-of-arbitrage card and noise-trader-equilibrium card extend the same "mispricing persists when arbitrage is bounded" theme, and the convertible-bond arbitrage-strategy card is a concrete relative-value application of the law of one price.
 

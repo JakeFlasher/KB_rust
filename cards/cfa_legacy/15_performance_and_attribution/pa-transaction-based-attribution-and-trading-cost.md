@@ -66,8 +66,9 @@ This card owns the *attribution-side* treatment of trading cost — how cost ent
 - [`pa-true-twr-and-chain-linking.md`](pa-true-twr-and-chain-linking.md) — why intraperiod cash flows and revaluation force time-weighting, the same data problem that separates holdings- from transaction-based attribution.
 - [`pa-fi-carry-rolldown-pulltopar-time-decomposition.md`](pa-fi-carry-rolldown-pulltopar-time-decomposition.md) — a fixed-income time-decomposition that, like transaction-based attribution, aims to reconcile every component of realized return.
 
-Cross-vertical: the trading-cost component absorbed here is measured as execution quality by topic-14 microstructure's `mt-implementation-shortfall`; GIPS composite-return reconciliation (topic-17 ethics) relies on the same exact-reconciliation discipline.
-
+Cross-vertical: the trading-cost component absorbed here is measured as execution quality by topic-14 microstructure's [`mt-implementation-shortfall`](../14_microstructure_and_trading/mt-implementation-shortfall.md); GIPS composite-return reconciliation (topic-17 ethics) relies on the same exact-reconciliation discipline.
+- [`mt-effective-cost-trade-benchmark`](../14_microstructure_and_trading/mt-effective-cost-trade-benchmark.md) — cross-set: implementation-shortfall / effective-cost trade benchmark (reading-14 execution-cost measures; reading-15 attribution absorption).
+- [`fa-tracking-error-attribution-and-tco`](../22_fund_level_arbitrage/fa-tracking-error-attribution-and-tco.md) — cross-set: trading-cost / tracking-error attribution (reading-22 ETF total-cost-of-ownership; reading-15 transaction-based attribution).
 ## Escalate to Raw When
 
 - You need the worked numeric example showing a transaction-based attribution reconciling exactly to the published return while a parallel holdings-based run leaves a quantified residual.
