@@ -51,13 +51,13 @@ QUARANTINE_IDS = frozenset({
 })
 
 # Key clauses of Critical Rule 9 that must remain present (unrelaxed) in legacy CLAUDE.md.
-RULE9_KEY_CLAUSES = ("User-volatile folders hard-block", "notes/", "hard-block")
+RULE9_KEY_CLAUSES = ("User-volatile folders hard-block", "notes/", "scripts/", "hard-block")
 
 # Rule 9 forbids CITING a notes/ or scripts/ path as a source reference. The lookbehind
 # excludes only WORD chars so `notes`/`scripts` as a word SUFFIX (endnotes/, transcripts/)
 # is not matched, but a path SEGMENT preceded by `/`, `.`, space, etc. (e.g. ../notes/foo,
 # /abs/scripts/x, notes/foo) IS matched. Scoped to source-reference lines so prose is safe.
-_NOTES_SCRIPTS_PATH = re.compile(r"(?<![A-Za-z0-9_])(notes|scripts)/")
+_NOTES_SCRIPTS_PATH = re.compile(r"(?<![\w-])(notes|scripts)/")
 _SOURCE_REF_LINE = re.compile(
     r"(Primary raw source|Supporting sources|\*\*Source:\*\*|(?<![\w])Source:|source_id)",
     re.IGNORECASE,

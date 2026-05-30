@@ -24,6 +24,7 @@ import json
 import sys
 import tempfile
 from pathlib import Path
+from typing import Any
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import emit_09_pm_slice as E  # noqa: E402
@@ -103,8 +104,8 @@ def main() -> int:
     # ---- validate_citation guards ----
     print("validate_citation guards:")
     vmaps = {s: E.validate_single_source_map(s) for s in sorted(E.SINGLE_SOURCE_MAP_SOURCES)}
-    base_kw = dict(card_id="PROBE", allowed=allowed, chunks_by_id=chunks,
-                   retracted_chunks=set(), retracted_sources=set(), validated_maps=vmaps)
+    base_kw: dict[str, Any] = dict(card_id="PROBE", allowed=allowed, chunks_by_id=chunks,
+                                   retracted_chunks=set(), retracted_sources=set(), validated_maps=vmaps)
 
     def check(cit, **over):
         kw = dict(base_kw); kw.update(over)
