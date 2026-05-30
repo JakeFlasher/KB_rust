@@ -62,8 +62,9 @@ _SOURCE_REF_LINE = re.compile(
     r"(Primary raw source|Supporting sources|\*\*Source:\*\*|(?<![\w])Source:|source_id)",
     re.IGNORECASE,
 )
-# A notes_provenance key at any frontmatter nesting depth (top-level or indented).
-_NOTES_PROVENANCE_KEY = re.compile(r"(?m)^\s*notes_provenance\s*:")
+# A notes_provenance key at any frontmatter nesting depth: leading whitespace and/or
+# YAML list dashes (`- `) may precede it (top-level, indented map key, or list-item key).
+_NOTES_PROVENANCE_KEY = re.compile(r"(?m)^[ \t-]*notes_provenance[ \t]*:")
 
 
 def find_active_card_files(cards_dir: Path) -> list[Path]:
@@ -181,7 +182,7 @@ def _self_test() -> int:
         index_text="| pm-capm-and-sml | CAPM | 1 | abc |",
         on_disk_ids={"pm-capm-and-sml"},
         active_cards=[{"id": "pm-capm-and-sml", "rel": "x.md", "frontmatter": "id: x\ncitations:", "text": "ok"}],
-        rule9_text="User-volatile folders hard-block ... notes/ ... hard-block",
+        rule9_text="User-volatile folders hard-block ... notes/ ... scripts/ ... hard-block",
         allow_missing_rule9=False,
     )
     failures = 0
@@ -226,6 +227,8 @@ def _self_test() -> int:
                  active_cards=[{"id": "c", "rel": "c.md", "frontmatter": "id: c", "text": "**Source:** Smith, endnotes/appendix discussion"}])
     expect_caught("Rule 9 weakened", "Critical Rule 9 weakened",
                   rule9_text="(rule removed)")
+    expect_caught("Rule 9 dropped scripts/ clause", "Critical Rule 9 weakened",
+                  rule9_text="User-volatile folders hard-block ... notes/ ... hard-block")
     expect_caught("Rule 9 source unreachable + not allowed", "unreachable",
                   rule9_text=None, allow_missing_rule9=False)
     expect_clean("Rule 9 source unreachable but explicitly allowed",
