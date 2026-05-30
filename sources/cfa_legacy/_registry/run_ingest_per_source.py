@@ -3,12 +3,17 @@
 
 This wrapper keeps the generated ingest process resumable: complete per-source
 outputs are skipped, while partial outputs stop the run for manual inspection.
+
+Before ingesting it refuses to run unless the libpdfium identity is
+reproducibility-ready under the SAME proof-aware gate the reproducibility lock
+uses (``check_ingest_reproducibility_lock.run_check``): the host build must match
+the pin, or be a proven-equivalent build recorded in the committed equivalence
+proof. Sharing that one policy avoids a second, drift-prone SHA-only check.
 """
 
 from __future__ import annotations
 
 import argparse
-import hashlib
 import json
 import os
 import subprocess
@@ -17,9 +22,14 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[3]
-PLAN_PATH = ROOT / "sources/cfa_legacy/_registry/ingest_plan.json"
-SNAPSHOT_PATH = ROOT / "sources/cfa_legacy/_registry/snapshot.json"
-DEFAULT_PDFIUM_LIBRARY = Path("/usr/lib/libpdfium.so")
+REGISTRY = ROOT / "sources/cfa_legacy/_registry"
+PLAN_PATH = REGISTRY / "ingest_plan.json"
+
+# Reuse the ONE proof-aware reproducibility gate rather than maintaining a second
+# SHA-only policy here (so the wrapper accepts a proven-equivalent host libpdfium
+# exactly as the lock does, and still rejects a drifted/unproven one).
+sys.path.insert(0, str(REGISTRY))
+from check_ingest_reproducibility_lock import run_check  # noqa: E402
 
 
 def load_plan() -> list[dict[str, object]]:
@@ -30,44 +40,29 @@ def load_plan() -> list[dict[str, object]]:
     return plan
 
 
-def sha256_file(path: Path) -> str:
-    h = hashlib.sha256()
-    with path.open("rb") as f:
-        for chunk in iter(lambda: f.read(1024 * 1024), b""):
-            h.update(chunk)
-    return h.hexdigest()
-
-
-def expected_pdfium_sha256() -> str | None:
-    if not SNAPSHOT_PATH.is_file():
-        return None
-    with SNAPSHOT_PATH.open("r", encoding="utf-8") as f:
-        snapshot = json.load(f)
-    value = snapshot.get("pdfium_library_sha256")
-    return str(value) if value else None
-
-
 def verify_pdfium_library() -> None:
-    if os.environ.get("KB_SKIP_PDFIUM_HASH_CHECK") == "1":
-        print("warning: skipping Pdfium hash check because KB_SKIP_PDFIUM_HASH_CHECK=1")
+    """Refuse to ingest unless the libpdfium identity is reproducibility-ready.
+
+    Routes through the shared reproducibility-lock gate in
+    ``--require-ingest-ready`` mode: the host build must match the pin OR be a
+    proven-equivalent build recorded in the committed equivalence proof (a blind
+    ``KB_SKIP_PDFIUM_HASH_CHECK=1`` is honored by that gate as an explicitly
+    recorded deviation). A drifted, unproven parser aborts before any chunk is
+    written.
+    """
+    status, ok = run_check(require_ingest_ready=True, write_status=False)
+    if ok:
         return
-
-    expected = expected_pdfium_sha256()
-    if expected is None:
-        return
-
-    library = Path(os.environ.get("KB_PDFIUM_LIBRARY", str(DEFAULT_PDFIUM_LIBRARY)))
-    if not library.is_file():
-        raise SystemExit(f"Pdfium library not found for hash check: {library}")
-
-    actual = sha256_file(library)
-    if actual != expected:
-        raise SystemExit(
-            "Pdfium library hash mismatch; refusing to re-ingest with a drifted parser. "
-            f"library={library} expected={expected} actual={actual}. "
-            "Update the snapshot after an intentional parser upgrade, or set "
-            "KB_SKIP_PDFIUM_HASH_CHECK=1 for an explicitly non-reproducible run."
-        )
+    lib = status["libpdfium"]
+    repro = status["chunk_hash_reproduction"]
+    raise SystemExit(
+        "refusing to ingest: libpdfium is not reproducibility-ready. "
+        f"libpdfium={lib['status']} (observed={lib['observed_sha256']} pin={lib['pinned_sha256']}); "
+        f"kb={status['kb_binary']['status']}; chunk_hash_repro={repro['status']}. "
+        "Provision the pinned or a proven-equivalent libpdfium (see "
+        "check_ingest_reproducibility_lock.py --require-ingest-ready), or set "
+        "KB_SKIP_PDFIUM_HASH_CHECK=1 to record an explicit non-reproducible deviation."
+    )
 
 
 def kb_prefix() -> list[str]:

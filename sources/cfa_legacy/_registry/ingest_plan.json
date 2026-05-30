@@ -1398,5 +1398,325 @@
     ],
     "out_dir": "out/cfa_legacy/ingest_per_source/tpa_brooks_2012_trading_ranges",
     "source_id": "tpa_brooks_2012_trading_ranges"
+  },
+  {
+    "canonical_path": "sources/cfa_legacy/pdfs/22_fund_level_arbitrage/fa_abner_2016_etf_handbook.pdf",
+    "command": [
+      "cargo",
+      "run",
+      "-p",
+      "cacg-cli",
+      "--bin",
+      "kb",
+      "--",
+      "ingest",
+      "sources/cfa_legacy/pdfs/22_fund_level_arbitrage/fa_abner_2016_etf_handbook.pdf",
+      "--source-id",
+      "fa_abner_2016_etf_handbook",
+      "--out",
+      "out/cfa_legacy/ingest_per_source/fa_abner_2016_etf_handbook"
+    ],
+    "out_dir": "out/cfa_legacy/ingest_per_source/fa_abner_2016_etf_handbook",
+    "source_id": "fa_abner_2016_etf_handbook"
+  },
+  {
+    "canonical_path": "sources/cfa_legacy/pdfs/22_fund_level_arbitrage/fa_hill_2015_cfa_rf_etfs_1e.pdf",
+    "command": [
+      "cargo",
+      "run",
+      "-p",
+      "cacg-cli",
+      "--bin",
+      "kb",
+      "--",
+      "ingest",
+      "sources/cfa_legacy/pdfs/22_fund_level_arbitrage/fa_hill_2015_cfa_rf_etfs_1e.pdf",
+      "--source-id",
+      "fa_hill_2015_cfa_rf_etfs_1e",
+      "--out",
+      "out/cfa_legacy/ingest_per_source/fa_hill_2015_cfa_rf_etfs_1e"
+    ],
+    "out_dir": "out/cfa_legacy/ingest_per_source/fa_hill_2015_cfa_rf_etfs_1e",
+    "source_id": "fa_hill_2015_cfa_rf_etfs_1e"
+  },
+  {
+    "canonical_path": "sources/cfa_legacy/pdfs/22_fund_level_arbitrage/fa_hill_2025_cfa_rf_etfs_2e.pdf",
+    "command": [
+      "cargo",
+      "run",
+      "-p",
+      "cacg-cli",
+      "--bin",
+      "kb",
+      "--",
+      "ingest",
+      "sources/cfa_legacy/pdfs/22_fund_level_arbitrage/fa_hill_2025_cfa_rf_etfs_2e.pdf",
+      "--source-id",
+      "fa_hill_2025_cfa_rf_etfs_2e",
+      "--out",
+      "out/cfa_legacy/ingest_per_source/fa_hill_2025_cfa_rf_etfs_2e"
+    ],
+    "out_dir": "out/cfa_legacy/ingest_per_source/fa_hill_2025_cfa_rf_etfs_2e",
+    "source_id": "fa_hill_2025_cfa_rf_etfs_2e"
+  },
+  {
+    "canonical_path": "sources/cfa_legacy/pdfs/22_fund_level_arbitrage/fa_madhavan_2016_etfs_new_dynamics.pdf",
+    "command": [
+      "cargo",
+      "run",
+      "-p",
+      "cacg-cli",
+      "--bin",
+      "kb",
+      "--",
+      "ingest",
+      "sources/cfa_legacy/pdfs/22_fund_level_arbitrage/fa_madhavan_2016_etfs_new_dynamics.pdf",
+      "--source-id",
+      "fa_madhavan_2016_etfs_new_dynamics",
+      "--out",
+      "out/cfa_legacy/ingest_per_source/fa_madhavan_2016_etfs_new_dynamics"
+    ],
+    "out_dir": "out/cfa_legacy/ingest_per_source/fa_madhavan_2016_etfs_new_dynamics",
+    "source_id": "fa_madhavan_2016_etfs_new_dynamics"
+  },
+  {
+    "canonical_path": "sources/cfa_legacy/pdfs/22_fund_level_arbitrage/fa_vandermerwe_2015_market_liquidity_risk.pdf",
+    "command": [
+      "cargo",
+      "run",
+      "-p",
+      "cacg-cli",
+      "--bin",
+      "kb",
+      "--",
+      "ingest",
+      "sources/cfa_legacy/pdfs/22_fund_level_arbitrage/fa_vandermerwe_2015_market_liquidity_risk.pdf",
+      "--source-id",
+      "fa_vandermerwe_2015_market_liquidity_risk",
+      "--out",
+      "out/cfa_legacy/ingest_per_source/fa_vandermerwe_2015_market_liquidity_risk"
+    ],
+    "out_dir": "out/cfa_legacy/ingest_per_source/fa_vandermerwe_2015_market_liquidity_risk",
+    "source_id": "fa_vandermerwe_2015_market_liquidity_risk"
+  },
+  {
+    "canonical_path": "sources/cfa_legacy/pdfs/22_fund_level_arbitrage/fa_weiner_2021_etf_portfolio.pdf",
+    "command": [
+      "cargo",
+      "run",
+      "-p",
+      "cacg-cli",
+      "--bin",
+      "kb",
+      "--",
+      "ingest",
+      "sources/cfa_legacy/pdfs/22_fund_level_arbitrage/fa_weiner_2021_etf_portfolio.pdf",
+      "--source-id",
+      "fa_weiner_2021_etf_portfolio",
+      "--out",
+      "out/cfa_legacy/ingest_per_source/fa_weiner_2021_etf_portfolio"
+    ],
+    "out_dir": "out/cfa_legacy/ingest_per_source/fa_weiner_2021_etf_portfolio",
+    "source_id": "fa_weiner_2021_etf_portfolio"
+  },
+  {
+    "canonical_path": "sources/cfa_legacy/pdfs/14_microstructure_and_trading/mt_cartea_jaimungal_penalva_2015_algorithmic_hf_trading.pdf",
+    "command": [
+      "cargo",
+      "run",
+      "-p",
+      "cacg-cli",
+      "--bin",
+      "kb",
+      "--",
+      "ingest",
+      "sources/cfa_legacy/pdfs/14_microstructure_and_trading/mt_cartea_jaimungal_penalva_2015_algorithmic_hf_trading.pdf",
+      "--source-id",
+      "mt_cartea_jaimungal_penalva_2015_algorithmic_hf_trading",
+      "--out",
+      "out/cfa_legacy/ingest_per_source/mt_cartea_jaimungal_penalva_2015_algorithmic_hf_trading"
+    ],
+    "out_dir": "out/cfa_legacy/ingest_per_source/mt_cartea_jaimungal_penalva_2015_algorithmic_hf_trading",
+    "source_id": "mt_cartea_jaimungal_penalva_2015_algorithmic_hf_trading"
+  },
+  {
+    "canonical_path": "sources/cfa_legacy/pdfs/14_microstructure_and_trading/mt_foucault_pagano_roell_2013.pdf",
+    "command": [
+      "cargo",
+      "run",
+      "-p",
+      "cacg-cli",
+      "--bin",
+      "kb",
+      "--",
+      "ingest",
+      "sources/cfa_legacy/pdfs/14_microstructure_and_trading/mt_foucault_pagano_roell_2013.pdf",
+      "--source-id",
+      "mt_foucault_pagano_roell_2013",
+      "--out",
+      "out/cfa_legacy/ingest_per_source/mt_foucault_pagano_roell_2013"
+    ],
+    "out_dir": "out/cfa_legacy/ingest_per_source/mt_foucault_pagano_roell_2013",
+    "source_id": "mt_foucault_pagano_roell_2013"
+  },
+  {
+    "canonical_path": "sources/cfa_legacy/pdfs/14_microstructure_and_trading/mt_harris_2003_trading_and_exchanges.pdf",
+    "command": [
+      "cargo",
+      "run",
+      "-p",
+      "cacg-cli",
+      "--bin",
+      "kb",
+      "--",
+      "ingest",
+      "sources/cfa_legacy/pdfs/14_microstructure_and_trading/mt_harris_2003_trading_and_exchanges.pdf",
+      "--source-id",
+      "mt_harris_2003_trading_and_exchanges",
+      "--out",
+      "out/cfa_legacy/ingest_per_source/mt_harris_2003_trading_and_exchanges"
+    ],
+    "out_dir": "out/cfa_legacy/ingest_per_source/mt_harris_2003_trading_and_exchanges",
+    "source_id": "mt_harris_2003_trading_and_exchanges"
+  },
+  {
+    "canonical_path": "sources/cfa_legacy/pdfs/14_microstructure_and_trading/mt_hasbrouck_2007_empirical_market_microstructure.pdf",
+    "command": [
+      "cargo",
+      "run",
+      "-p",
+      "cacg-cli",
+      "--bin",
+      "kb",
+      "--",
+      "ingest",
+      "sources/cfa_legacy/pdfs/14_microstructure_and_trading/mt_hasbrouck_2007_empirical_market_microstructure.pdf",
+      "--source-id",
+      "mt_hasbrouck_2007_empirical_market_microstructure",
+      "--out",
+      "out/cfa_legacy/ingest_per_source/mt_hasbrouck_2007_empirical_market_microstructure"
+    ],
+    "out_dir": "out/cfa_legacy/ingest_per_source/mt_hasbrouck_2007_empirical_market_microstructure",
+    "source_id": "mt_hasbrouck_2007_empirical_market_microstructure"
+  },
+  {
+    "canonical_path": "sources/cfa_legacy/pdfs/15_performance_and_attribution/pa_bacon_2022_rapm.pdf",
+    "command": [
+      "cargo",
+      "run",
+      "-p",
+      "cacg-cli",
+      "--bin",
+      "kb",
+      "--",
+      "ingest",
+      "sources/cfa_legacy/pdfs/15_performance_and_attribution/pa_bacon_2022_rapm.pdf",
+      "--source-id",
+      "pa_bacon_2022_rapm",
+      "--out",
+      "out/cfa_legacy/ingest_per_source/pa_bacon_2022_rapm"
+    ],
+    "out_dir": "out/cfa_legacy/ingest_per_source/pa_bacon_2022_rapm",
+    "source_id": "pa_bacon_2022_rapm"
+  },
+  {
+    "canonical_path": "sources/cfa_legacy/pdfs/15_performance_and_attribution/pa_bacon_2023_attribution.pdf",
+    "command": [
+      "cargo",
+      "run",
+      "-p",
+      "cacg-cli",
+      "--bin",
+      "kb",
+      "--",
+      "ingest",
+      "sources/cfa_legacy/pdfs/15_performance_and_attribution/pa_bacon_2023_attribution.pdf",
+      "--source-id",
+      "pa_bacon_2023_attribution",
+      "--out",
+      "out/cfa_legacy/ingest_per_source/pa_bacon_2023_attribution"
+    ],
+    "out_dir": "out/cfa_legacy/ingest_per_source/pa_bacon_2023_attribution",
+    "source_id": "pa_bacon_2023_attribution"
+  },
+  {
+    "canonical_path": "sources/cfa_legacy/pdfs/15_performance_and_attribution/pa_christopherson_carino_ferson_2009.pdf",
+    "command": [
+      "cargo",
+      "run",
+      "-p",
+      "cacg-cli",
+      "--bin",
+      "kb",
+      "--",
+      "ingest",
+      "sources/cfa_legacy/pdfs/15_performance_and_attribution/pa_christopherson_carino_ferson_2009.pdf",
+      "--source-id",
+      "pa_christopherson_carino_ferson_2009",
+      "--out",
+      "out/cfa_legacy/ingest_per_source/pa_christopherson_carino_ferson_2009"
+    ],
+    "out_dir": "out/cfa_legacy/ingest_per_source/pa_christopherson_carino_ferson_2009",
+    "source_id": "pa_christopherson_carino_ferson_2009"
+  },
+  {
+    "canonical_path": "sources/cfa_legacy/pdfs/15_performance_and_attribution/pa_colin_2016.pdf",
+    "command": [
+      "cargo",
+      "run",
+      "-p",
+      "cacg-cli",
+      "--bin",
+      "kb",
+      "--",
+      "ingest",
+      "sources/cfa_legacy/pdfs/15_performance_and_attribution/pa_colin_2016.pdf",
+      "--source-id",
+      "pa_colin_2016",
+      "--out",
+      "out/cfa_legacy/ingest_per_source/pa_colin_2016"
+    ],
+    "out_dir": "out/cfa_legacy/ingest_per_source/pa_colin_2016",
+    "source_id": "pa_colin_2016"
+  },
+  {
+    "canonical_path": "sources/cfa_legacy/pdfs/15_performance_and_attribution/pa_connor_goldberg_korajczyk_2010.pdf",
+    "command": [
+      "cargo",
+      "run",
+      "-p",
+      "cacg-cli",
+      "--bin",
+      "kb",
+      "--",
+      "ingest",
+      "sources/cfa_legacy/pdfs/15_performance_and_attribution/pa_connor_goldberg_korajczyk_2010.pdf",
+      "--source-id",
+      "pa_connor_goldberg_korajczyk_2010",
+      "--out",
+      "out/cfa_legacy/ingest_per_source/pa_connor_goldberg_korajczyk_2010"
+    ],
+    "out_dir": "out/cfa_legacy/ingest_per_source/pa_connor_goldberg_korajczyk_2010",
+    "source_id": "pa_connor_goldberg_korajczyk_2010"
+  },
+  {
+    "canonical_path": "sources/cfa_legacy/pdfs/15_performance_and_attribution/pa_fischer_wermers_2013.pdf",
+    "command": [
+      "cargo",
+      "run",
+      "-p",
+      "cacg-cli",
+      "--bin",
+      "kb",
+      "--",
+      "ingest",
+      "sources/cfa_legacy/pdfs/15_performance_and_attribution/pa_fischer_wermers_2013.pdf",
+      "--source-id",
+      "pa_fischer_wermers_2013",
+      "--out",
+      "out/cfa_legacy/ingest_per_source/pa_fischer_wermers_2013"
+    ],
+    "out_dir": "out/cfa_legacy/ingest_per_source/pa_fischer_wermers_2013",
+    "source_id": "pa_fischer_wermers_2013"
   }
 ]

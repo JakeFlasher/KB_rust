@@ -62,10 +62,16 @@ trap 'rm -rf "$tmpdir"' EXIT
 
 verify_one() {
   local p="$1"
+  # Each verify writes to its OWN throwaway journal: the parallel loop must not
+  # share (and race on) the default audit journal, and a re-run must not depend
+  # on the state of any persistent journal. verify is a read-only check here.
+  local j; j="$(mktemp -u)"
   env KB_FROZEN_CLOCK=1 ./target/debug/kb verify "$p" \
       --chunks-manifest "out/cfa_legacy/chunks_manifest.json" \
-      --source-matrix "out/cfa_legacy/source_matrix.json" >/dev/null 2>&1
+      --source-matrix "out/cfa_legacy/source_matrix.json" \
+      --journal "$j" >/dev/null 2>&1
   local rc=$?
+  rm -f "$j"
   if [ "$rc" -eq 0 ]; then
     printf 'PASS\t%s\n' "$p"
   else
@@ -104,7 +110,7 @@ else
 fi
 
 echo
-echo "== [4/4] notes-taint quarantine invariant (AC-7) =="
+echo "== [4/4] notes-taint quarantine invariant =="
 if python3 sources/cfa_legacy/_registry/check_quarantine_invariant.py; then
   echo "quarantine invariant: PASS"
 else

@@ -125,9 +125,21 @@
       "cfa_2022_l3_combined",
       "cfa_2023_l2_combined"
     ],
+    "14_microstructure_and_trading": [
+      "mt_cartea_jaimungal_penalva_2015_algorithmic_hf_trading",
+      "mt_foucault_pagano_roell_2013",
+      "mt_harris_2003_trading_and_exchanges",
+      "mt_hasbrouck_2007_empirical_market_microstructure"
+    ],
     "15_performance_and_attribution": [
       "cfa_2022_l3_combined",
-      "cfa_2023_l2_combined"
+      "cfa_2023_l2_combined",
+      "pa_bacon_2022_rapm",
+      "pa_bacon_2023_attribution",
+      "pa_christopherson_carino_ferson_2009",
+      "pa_colin_2016",
+      "pa_connor_goldberg_korajczyk_2010",
+      "pa_fischer_wermers_2013"
     ],
     "16_esg": [
       "cfa_2022_l3_combined",
@@ -135,6 +147,14 @@
     ],
     "17_cross_cutting": [
       "cfa_2022_l1_combined"
+    ],
+    "22_fund_level_arbitrage": [
+      "fa_abner_2016_etf_handbook",
+      "fa_hill_2015_cfa_rf_etfs_1e",
+      "fa_hill_2025_cfa_rf_etfs_2e",
+      "fa_madhavan_2016_etfs_new_dynamics",
+      "fa_vandermerwe_2015_market_liquidity_risk",
+      "fa_weiner_2021_etf_portfolio"
     ]
   },
   "schema_version": "cacg.v0"
