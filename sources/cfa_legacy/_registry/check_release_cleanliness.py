@@ -4,8 +4,10 @@
 Re-runnable, fail-closed. RE-DERIVES every release fact from git + disk (never trusts
 the prose of `_research/30`): the small published-index artifacts are tracked, the large
 chunks_manifest is excluded, the trust-chain sidecars + research docs are tracked, the
-rebuild-recipe scripts exist, the worktree is release-clean, and (with `--require-tag`)
-the annotated `v0-candidate` tag exists and references the evidence.
+rebuild-recipe scripts exist, the worktree is release-clean (NO uncommitted change to
+ANY tracked file — not merely no untracked files — and no non-ignored untracked file),
+and (with `--require-tag`) the annotated `v0-candidate` tag exists, references the
+evidence, AND points at the release commit (tag target == HEAD).
 
 Usage:
   check_release_cleanliness.py              # all checks except the tag (run pre-tag)
@@ -17,7 +19,6 @@ from __future__ import annotations
 
 import argparse
 import glob
-import os
 import subprocess
 import sys
 from pathlib import Path
@@ -98,33 +99,71 @@ def run_checks(*, require_tag: bool) -> list[str]:
         if "chunks_manifest.json" not in doc:
             failures.append("release doc does not mention chunks_manifest.json (rebuild recipe)")
 
-    # (6) worktree is release-clean: nothing untracked that is not gitignored.
-    # (`--untracked-files=all` lists only NON-ignored untracked paths.)
-    untracked = [l[3:] for l in git("status", "--porcelain", "--untracked-files=all").splitlines()
-                 if l.startswith("?? ")]
-    if untracked:
-        failures.append(f"worktree has untracked, non-ignored files: {untracked[:10]}")
+    # (6) worktree is release-clean: a RELEASE certifier must reject ANY uncommitted
+    # change to a tracked file (` M `, `A `, `D `, `R `, `MM`, …) AND any non-ignored
+    # untracked file (`?? `) — not just untracked. Otherwise it could certify bytes that
+    # differ from what is committed. `--untracked-files=all` already excludes
+    # .gitignore-covered paths; we additionally drop loop-local `.humanize/` defensively.
+    dirty = release_dirty_entries(git("status", "--porcelain", "--untracked-files=all").splitlines())
+    if dirty:
+        failures.append(f"worktree is not release-clean (uncommitted changes): {dirty[:10]}")
 
-    # (7) (optional) annotated v0-candidate tag exists + references the evidence.
+    # (7) (optional) annotated v0-candidate tag exists, is annotated, references the
+    # evidence, AND points AT THE RELEASE COMMIT (its target == HEAD). A tag left
+    # pointing at an earlier commit must not certify the current worktree.
     if require_tag:
-        if TAG not in git("tag", "--list", TAG).split():
-            failures.append(f"annotated tag {TAG!r} does not exist")
-        else:
-            # annotated tag: `cat-file -t` is 'tag' (not 'commit')
-            kind = git("cat-file", "-t", TAG).strip()
-            if kind != "tag":
-                failures.append(f"tag {TAG!r} is not annotated (cat-file type={kind!r})")
-            msg = git("for-each-ref", "--format=%(contents)", f"refs/tags/{TAG}")
-            for ref in TAG_MUST_REFERENCE:
-                if ref not in msg:
-                    failures.append(f"tag {TAG!r} message does not reference {ref!r}")
+        exists = TAG in git("tag", "--list", TAG).split()
+        kind = git("cat-file", "-t", TAG).strip() if exists else ""
+        msg = git("for-each-ref", "--format=%(contents)", f"refs/tags/{TAG}") if exists else ""
+        tag_target = git("rev-list", "-n", "1", TAG).strip() if exists else ""
+        head = git("rev-parse", "HEAD").strip()
+        failures.extend(tag_failures(exists=exists, kind=kind, msg=msg,
+                                     tag_target=tag_target, head=head))
 
     return failures
 
 
+def release_dirty_entries(status_porcelain_lines: list[str]) -> list[str]:
+    """Pure: return the `git status --porcelain` lines that make the worktree NOT
+    release-clean — any non-blank entry (staged/modified/deleted/renamed/untracked)
+    whose path is not loop-local `.humanize/`. The whole tree should be committed at a
+    release tag; `.humanize/` is gitignored loop state and is excluded defensively."""
+    dirty: list[str] = []
+    for line in status_porcelain_lines:
+        if not line.strip():
+            continue
+        path = line[3:]
+        if " -> " in path:  # rename: "old -> new"
+            path = path.split(" -> ", 1)[1]
+        path = path.strip().strip('"')
+        if path == ".humanize" or path.startswith(".humanize/"):
+            continue
+        dirty.append(line)
+    return dirty
+
+
+def tag_failures(*, exists: bool, kind: str, msg: str, tag_target: str, head: str) -> list[str]:
+    """Pure: validate the release tag. Fails if it is missing, not annotated, does not
+    reference the required evidence strings, OR does not point at HEAD (the release
+    commit). The tag-target==HEAD check is the load-bearing fix: a stale tag left on an
+    earlier commit must not certify the current (clean) worktree."""
+    out: list[str] = []
+    if not exists:
+        out.append(f"annotated tag {TAG!r} does not exist")
+        return out
+    if kind != "tag":  # annotated tags are objects of type 'tag' (lightweight = 'commit')
+        out.append(f"tag {TAG!r} is not annotated (cat-file type={kind!r})")
+    for ref in TAG_MUST_REFERENCE:
+        if ref not in msg:
+            out.append(f"tag {TAG!r} message does not reference {ref!r}")
+    if not tag_target or not head or tag_target != head:
+        out.append(f"tag {TAG!r} target {tag_target[:12]!r} != HEAD {head[:12]!r} "
+                   "(re-point the tag to the release commit)")
+    return out
+
+
 def _self_test() -> int:
     """Synthetic negative probes (do not touch the real tree)."""
-    import tempfile
     failures = 0
 
     def expect(name, cond):
@@ -149,6 +188,36 @@ def _self_test() -> int:
         expect("require_tag passes when tag exists", rt == [] or all("does not exist" not in f for f in rt))
     else:
         expect("require_tag fails when tag absent", any("does not exist" in f for f in rt))
+
+    # (R14) negative probes for the two hardened guards, via the pure helpers.
+    # check (6): a modified/staged/untracked tracked path is dirty; .humanize/ is not.
+    expect("modified tracked file is dirty",
+           release_dirty_entries([" M out/cfa_legacy/cards_manifest.json"]) != [])
+    expect("staged tracked file is dirty",
+           release_dirty_entries(["A  _research/30_v0_release_and_rebuild_recipe.md"]) != [])
+    expect("untracked non-ignored file is dirty",
+           release_dirty_entries(["?? stray.txt"]) != [])
+    expect("renamed file is dirty",
+           release_dirty_entries(["R  old.py -> new.py"]) != [])
+    expect("clean tree is not dirty", release_dirty_entries([]) == [])
+    expect(".humanize loop state is NOT dirty",
+           release_dirty_entries([" M .humanize/rlcr/x/round-14-summary.md"]) == [])
+    # check (7): a stale tag (target != head) fails; the well-formed on-head tag passes.
+    GOOD_MSG = "references scope_ledger and index_repro"
+    expect("stale tag (target != head) fails",
+           any("!= HEAD" in f for f in tag_failures(
+               exists=True, kind="tag", msg=GOOD_MSG, tag_target="aaaaaaa", head="bbbbbbb")))
+    expect("lightweight (non-annotated) tag fails",
+           any("not annotated" in f for f in tag_failures(
+               exists=True, kind="commit", msg=GOOD_MSG, tag_target="abc", head="abc")))
+    expect("tag missing an evidence reference fails",
+           any("does not reference" in f for f in tag_failures(
+               exists=True, kind="tag", msg="references index_repro only", tag_target="abc", head="abc")))
+    expect("absent tag fails",
+           any("does not exist" in f for f in tag_failures(
+               exists=False, kind="", msg="", tag_target="", head="abc")))
+    expect("well-formed on-head annotated tag passes",
+           tag_failures(exists=True, kind="tag", msg=GOOD_MSG, tag_target="abc123", head="abc123") == [])
     print()
     if failures:
         print(f"RELEASE CLEANLINESS SELF-TEST: FAIL ({failures})", file=sys.stderr)
@@ -176,7 +245,8 @@ def main() -> int:
         return 1
     print("\nRELEASE CLEANLINESS: PASS (small index + provenance tracked; chunks_manifest "
           "excluded; 268 sidecars + research docs tracked; recipe scripts present; worktree "
-          "clean" + ("; v0-candidate tag present + references evidence)" if args.require_tag else ")"))
+          "release-clean" + ("; v0-candidate tag annotated, references evidence, on HEAD)"
+                             if args.require_tag else ")"))
     return 0
 
 
