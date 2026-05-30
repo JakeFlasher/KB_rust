@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # CFA-legacy v0 corpus gate (re-runnable, deterministic under
-# KB_FROZEN_CLOCK=1). Three checks, fail-closed:
+# KB_FROZEN_CLOCK=1). Four checks, fail-closed:
 #
 #   1. Scope ledger + count reconciliation (build_scope_ledger.py).
 #   2. Full-corpus Layer-1 lint into a FRESH journal; assert exit 0 and
