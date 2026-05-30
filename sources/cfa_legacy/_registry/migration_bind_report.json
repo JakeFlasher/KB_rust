@@ -8,9 +8,9 @@
     "fa_22": {
       "auto": 49,
       "page_corrections": 0,
-      "reanchor": 9,
+      "reanchor": 7,
       "total": 66,
-      "trim": 8,
+      "trim": 10,
       "unbound": 0
     },
     "mt_14": {
@@ -31,14 +31,24 @@
     }
   },
   "policy": {
+    "authorized_repair_causes": [
+      "chunk_boundary_span",
+      "equation_extraction_mismatch",
+      "pdfium_ufffe_hyphenation"
+    ],
     "auto_bind_min_rate": 0.95,
+    "auto_bind_override_applied": true,
     "low_auto_bind_sets": [
       "fa_22",
       "mt_14",
       "pa_15"
     ],
-    "overlap_disambiguation_enabled": true,
-    "ufffe_auto_bind_override_applied": true
+    "overlap_disambiguation_enabled": true
+  },
+  "repair_cause_counts": {
+    "chunk_boundary_span": 5,
+    "equation_extraction_mismatch": 1,
+    "pdfium_ufffe_hyphenation": 48
   },
   "report": [
     {
@@ -49,10 +59,11 @@
       "candidate_chunk_ids": null,
       "card_id": "fa-amihud-mendelson-and-priced-liquidity-risk",
       "change": {
+        "cause": "pdfium_ufffe_hyphenation",
         "final_quote": "These investors’ longer holding periods mitigate the compensation that they would have required for higher transaction costs on less liquid securities.",
         "original_quote": "in equilibrium, less liquid securities are allocated to investors with longer holding periods",
         "overlap": 0.259,
-        "reason": "authored quote spans a U+FFFE hyphenation marker and trimming would retain <60%; re-anchored to the best-overlap clean verbatim sentence on the cited page",
+        "reason": "authored quote spans a Pdfium STX->U+FFFE hyphenation marker the kernel preserves; trimmed to the longest clean verbatim run, else re-anchored to the best-overlap clean on-page sentence",
         "type": "reanchor"
       },
       "chunk_id": "fa_vandermerwe_2015_market_liquidity_risk:p093:0096",
@@ -341,10 +352,11 @@
       "candidate_chunk_ids": null,
       "card_id": "fa-iiv-iopv-intraday-fair-value",
       "change": {
+        "cause": "pdfium_ufffe_hyphenation",
         "final_quote": "The change (or innovation) in expected values conditional upon public information over the interval from t − 1 to t is denoted by =− − r .",
         "original_quote": "I need to model three distinct values: (1) the ETF secondary market price, (2) NAV, and (3) the (unobserved) expected value of the ETF.",
         "overlap": 0.135,
-        "reason": "authored quote spans a U+FFFE hyphenation marker and trimming would retain <60%; re-anchored to the best-overlap clean verbatim sentence on the cited page",
+        "reason": "authored quote spans a Pdfium STX->U+FFFE hyphenation marker the kernel preserves; trimmed to the longest clean verbatim run, else re-anchored to the best-overlap clean on-page sentence",
         "type": "reanchor"
       },
       "chunk_id": "fa_madhavan_2016_etfs_new_dynamics:p052:0055",
@@ -392,9 +404,10 @@
       "candidate_chunk_ids": null,
       "card_id": "fa-in-kind-basket-design-and-fees",
       "change": {
+        "cause": "pdfium_ufffe_hyphenation",
         "final_quote": "amount of shares that can be submitted by an AP for either a creation or a redemption order.",
         "original_quote": "Creation unit size is typically a minimum amount of shares that can be submitted by an AP for either a creation or a redemption order.",
-        "reason": "authored quote spans a U+FFFE hyphenation marker; trimmed to the longest clean verbatim run (>=60% retained)",
+        "reason": "authored quote spans a Pdfium STX->U+FFFE hyphenation marker the kernel preserves; trimmed to the longest clean verbatim run, else re-anchored to the best-overlap clean on-page sentence",
         "retained_fraction": 0.687,
         "type": "trim"
       },
@@ -454,9 +467,10 @@
       "candidate_chunk_ids": null,
       "card_id": "fa-international-price-discovery-and-enav",
       "change": {
+        "cause": "pdfium_ufffe_hyphenation",
         "final_quote": "net asset value (eNAV). Estimated NAVs have been used to value closed-end funds (CEFs) for many years prior to the invention of the ETF.",
         "original_quote": "I call this the calculation of estimated net asset value (eNAV). Estimated NAVs have been used to value closed-end funds (CEFs) for many years prior to the invention of the ETF.",
-        "reason": "authored quote spans a U+FFFE hyphenation marker; trimmed to the longest clean verbatim run (>=60% retained)",
+        "reason": "authored quote spans a Pdfium STX->U+FFFE hyphenation marker the kernel preserves; trimmed to the longest clean verbatim run, else re-anchored to the best-overlap clean on-page sentence",
         "retained_fraction": 0.768,
         "type": "trim"
       },
@@ -474,10 +488,11 @@
       "candidate_chunk_ids": null,
       "card_id": "fa-international-price-discovery-and-enav",
       "change": {
+        "cause": "pdfium_ufffe_hyphenation",
         "final_quote": "A Comprehensive Guide to Exchange-Traded Funds (ETFs) 28 ©2015 The CFA Institute Research Foundation “stuck,” even as the ETF’s share price engages in price discovery.",
         "original_quote": "“stuck,” even as the ETF’s share price engages in price discovery. In this situation, the INAV is no help in assessing fair value; in fact, it is misleading.",
         "overlap": 0.297,
-        "reason": "authored quote spans a U+FFFE hyphenation marker and trimming would retain <60%; re-anchored to the best-overlap clean verbatim sentence on the cited page",
+        "reason": "authored quote spans a Pdfium STX->U+FFFE hyphenation marker the kernel preserves; trimmed to the longest clean verbatim run, else re-anchored to the best-overlap clean on-page sentence",
         "type": "reanchor"
       },
       "chunk_id": "fa_hill_2015_cfa_rf_etfs_1e:p043:0049",
@@ -522,10 +537,11 @@
       "candidate_chunk_ids": null,
       "card_id": "fa-liquidity-adjusted-var",
       "change": {
+        "cause": "pdfium_ufffe_hyphenation",
         "final_quote": "The concept behind the liquidity-adjusted VaR is simple.",
         "original_quote": "liquidity-adjusted VaR is simple. Market risk is split into two components: the return risk, which can be thought of as a pure market risk",
         "overlap": 0.261,
-        "reason": "authored quote spans a U+FFFE hyphenation marker and trimming would retain <60%; re-anchored to the best-overlap clean verbatim sentence on the cited page",
+        "reason": "authored quote spans a Pdfium STX->U+FFFE hyphenation marker the kernel preserves; trimmed to the longest clean verbatim run, else re-anchored to the best-overlap clean on-page sentence",
         "type": "reanchor"
       },
       "chunk_id": "fa_vandermerwe_2015_market_liquidity_risk:p163:0177",
@@ -654,10 +670,11 @@
       "candidate_chunk_ids": null,
       "card_id": "fa-market-liquidity-dimensions-and-no-arbitrage",
       "change": {
+        "cause": "pdfium_ufffe_hyphenation",
         "final_quote": "the theory rests on the critical assumptions of",
         "low_retention": true,
         "original_quote": "the theory rests on the critical assumptions of “unlimited access to capital” and “no risk.”",
-        "reason": "authored quote spans a U+FFFE hyphenation marker; the clean run retains <60% and no clean full sentence was available on the cited page to re-anchor, so the longest clean verbatim run is kept (flagged for review)",
+        "reason": "authored quote spans a Pdfium STX->U+FFFE hyphenation marker the kernel preserves; trimmed to the longest clean verbatim run, else re-anchored to the best-overlap clean on-page sentence (low-retention; no clean on-page sentence)",
         "retained_fraction": 0.511,
         "type": "trim"
       },
@@ -689,17 +706,18 @@
       "candidate_chunk_ids": null,
       "card_id": "fa-nav-staleness-and-arbitrage-speed",
       "change": {
-        "final_quote": "t t The arbitrager sells short the ETF and buys the underlying basket locking in a gross profit of ut per share.",
+        "cause": "chunk_boundary_span",
+        "final_quote": "is a liquidity shock and ψ is the autocorrelation coefficient.",
         "original_quote": "where εt ~ (μ , σ ε2) is a liquidity shock and ψ is the autocorrelation coefficient.",
-        "overlap": 0.154,
-        "reason": "authored quote spans a U+FFFE hyphenation marker and trimming would retain <60%; re-anchored to the best-overlap clean verbatim sentence on the cited page",
-        "type": "reanchor"
+        "reason": "authored quote is verbatim within the cited page(s) but spans a chunk/page boundary (not a substring of any single chunk); trimmed to the longest clean verbatim run within one chunk's cited-page window",
+        "retained_fraction": 0.738,
+        "type": "trim"
       },
-      "chunk_id": "fa_madhavan_2016_etfs_new_dynamics:p054:0057",
+      "chunk_id": "fa_madhavan_2016_etfs_new_dynamics:p054:0058",
       "is_overlap_set": null,
       "overlap_alternatives": null,
       "source_id": "fa_madhavan_2016_etfs_new_dynamics",
-      "status": "reanchor"
+      "status": "trim"
     },
     {
       "authored_page_range": [
@@ -709,17 +727,18 @@
       "candidate_chunk_ids": null,
       "card_id": "fa-nav-staleness-and-arbitrage-speed",
       "change": {
-        "final_quote": "tt =− ++ tt −1 (3.6) Here 0 ≤ φ ≤ 1 captures possible staleness and wμ ~( , σ ) t w w 2 is an error term that reflects microstructure effects.1 Any pricing noise will be reflected in w.",
+        "cause": "chunk_boundary_span",
+        "final_quote": "Here 0 ≤ φ ≤ 1 captures possible staleness and",
         "original_quote": "Here 0 ≤ φ ≤ 1 captures possible staleness and wt ~ (μ , σ w2 ) is an error term that",
-        "overlap": 0.4,
-        "reason": "authored quote spans a U+FFFE hyphenation marker and trimming would retain <60%; re-anchored to the best-overlap clean verbatim sentence on the cited page",
-        "type": "reanchor"
+        "reason": "authored quote is verbatim within the cited page(s) but spans a chunk/page boundary (not a substring of any single chunk); trimmed to the longest clean verbatim run within one chunk's cited-page window",
+        "retained_fraction": 0.541,
+        "type": "trim"
       },
       "chunk_id": "fa_madhavan_2016_etfs_new_dynamics:p056:0061",
       "is_overlap_set": null,
       "overlap_alternatives": null,
       "source_id": "fa_madhavan_2016_etfs_new_dynamics",
-      "status": "reanchor"
+      "status": "trim"
     },
     {
       "authored_page_range": [
@@ -788,10 +807,11 @@
       "candidate_chunk_ids": null,
       "card_id": "fa-premium-decomposition-and-estimation",
       "change": {
+        "cause": "pdfium_ufffe_hyphenation",
         "final_quote": "We can use the general framework to analyze questions concerning price discovery, the dynamics of premiums and discounts, return autocorrelations, performance and tracking relative to benchmark, transaction costs, and liquidity sourcing in underlying and secondary markets.",
         "original_quote": "By explicitly modeling the temporal dynamics of price and NAV, we can statistically decompose the ETF’s price premium to its NAV into components corresponding to price discovery and transitory liquidity.",
         "overlap": 0.217,
-        "reason": "authored quote spans a U+FFFE hyphenation marker and trimming would retain <60%; re-anchored to the best-overlap clean verbatim sentence on the cited page",
+        "reason": "authored quote spans a Pdfium STX->U+FFFE hyphenation marker the kernel preserves; trimmed to the longest clean verbatim run, else re-anchored to the best-overlap clean on-page sentence",
         "type": "reanchor"
       },
       "chunk_id": "fa_madhavan_2016_etfs_new_dynamics:p050:0054",
@@ -808,9 +828,10 @@
       "candidate_chunk_ids": null,
       "card_id": "fa-premium-decomposition-and-estimation",
       "change": {
+        "cause": "chunk_boundary_span",
         "final_quote": "because it aligns with the model directly and lets us explicitly estimate the unobserved true premium,",
         "original_quote": "I adopt the state-space representation because it aligns with the model directly and lets us explicitly estimate the unobserved true premium, ut .",
-        "reason": "authored quote spans a U+FFFE hyphenation marker; trimmed to the longest clean verbatim run (>=60% retained)",
+        "reason": "authored quote is verbatim within the cited page(s) but spans a chunk/page boundary (not a substring of any single chunk); trimmed to the longest clean verbatim run within one chunk's cited-page window",
         "retained_fraction": 0.699,
         "type": "trim"
       },
@@ -828,9 +849,10 @@
       "candidate_chunk_ids": null,
       "card_id": "fa-search-bargaining-liquidity-premium",
       "change": {
+        "cause": "pdfium_ufffe_hyphenation",
         "final_quote": "access to market makers receive tighter bid-ask spreads",
         "original_quote": "sophisticated investors with better access to market makers receive tighter bid-ask spreads",
-        "reason": "authored quote spans a U+FFFE hyphenation marker; trimmed to the longest clean verbatim run (>=60% retained)",
+        "reason": "authored quote spans a Pdfium STX->U+FFFE hyphenation marker the kernel preserves; trimmed to the longest clean verbatim run, else re-anchored to the best-overlap clean on-page sentence",
         "retained_fraction": 0.604,
         "type": "trim"
       },
@@ -848,9 +870,10 @@
       "candidate_chunk_ids": null,
       "card_id": "fa-search-bargaining-liquidity-premium",
       "change": {
+        "cause": "pdfium_ufffe_hyphenation",
         "final_quote": "The liquidity premium is proportional to the bid-ask spread S charged by market makers and increases in the",
         "original_quote": "The liquidity premium is proportional to the bid-ask spread S charged by market makers and increases in the bargaining power of the market maker.",
-        "reason": "authored quote spans a U+FFFE hyphenation marker; trimmed to the longest clean verbatim run (>=60% retained)",
+        "reason": "authored quote spans a Pdfium STX->U+FFFE hyphenation marker the kernel preserves; trimmed to the longest clean verbatim run, else re-anchored to the best-overlap clean on-page sentence",
         "retained_fraction": 0.738,
         "type": "trim"
       },
@@ -924,10 +947,11 @@
       "candidate_chunk_ids": null,
       "card_id": "fa-shleifer-vishny-limits-to-arbitrage",
       "change": {
+        "cause": "pdfium_ufffe_hyphenation",
         "final_quote": "This dynamic could significantly limit arbitrageurs’ effectiveness in achieving market efficiency because they do not have the capital resources to eliminate mispricing.",
         "original_quote": "arbitrageurs can become capital constrained exactly when the best opportunities are available. This dynamic could significantly limit arbitrageurs",
         "overlap": 0.258,
-        "reason": "authored quote spans a U+FFFE hyphenation marker and trimming would retain <60%; re-anchored to the best-overlap clean verbatim sentence on the cited page",
+        "reason": "authored quote spans a Pdfium STX->U+FFFE hyphenation marker the kernel preserves; trimmed to the longest clean verbatim run, else re-anchored to the best-overlap clean on-page sentence",
         "type": "reanchor"
       },
       "chunk_id": "fa_vandermerwe_2015_market_liquidity_risk:p108:0113",
@@ -944,10 +968,11 @@
       "candidate_chunk_ids": null,
       "card_id": "fa-shleifer-vishny-limits-to-arbitrage",
       "change": {
+        "cause": "pdfium_ufffe_hyphenation",
         "final_quote": "In this version of the model, we assume that the arbitrageur is a fund",
         "low_retention": true,
         "original_quote": "In this version of the model, we assume that the arbitrageur is a fund manager and that their allocated capital depends on their past performance.",
-        "reason": "authored quote spans a U+FFFE hyphenation marker; the clean run retains <60% and no clean full sentence was available on the cited page to re-anchor, so the longest clean verbatim run is kept (flagged for review)",
+        "reason": "authored quote spans a Pdfium STX->U+FFFE hyphenation marker the kernel preserves; trimmed to the longest clean verbatim run, else re-anchored to the best-overlap clean on-page sentence (low-retention; no clean on-page sentence)",
         "retained_fraction": 0.479,
         "type": "trim"
       },
@@ -1007,10 +1032,11 @@
       "candidate_chunk_ids": null,
       "card_id": "fa-true-vs-reported-premium-price-discovery-share",
       "change": {
+        "cause": "pdfium_ufffe_hyphenation",
         "final_quote": "Alternatively, if there is no NAV staleness and/or noise, then n v tt = and the premium entirely reflects the shock ut to the ETF price through the secondary market.",
         "original_quote": "I define the price discovery component of the premium as the portion of total variance that is not attributable to transitory noise shocks",
         "overlap": 0.15,
-        "reason": "authored quote spans a U+FFFE hyphenation marker and trimming would retain <60%; re-anchored to the best-overlap clean verbatim sentence on the cited page",
+        "reason": "authored quote spans a Pdfium STX->U+FFFE hyphenation marker the kernel preserves; trimmed to the longest clean verbatim run, else re-anchored to the best-overlap clean on-page sentence",
         "type": "reanchor"
       },
       "chunk_id": "fa_madhavan_2016_etfs_new_dynamics:p074:0087",
@@ -1055,9 +1081,10 @@
       "candidate_chunk_ids": null,
       "card_id": "fa-volume-neq-liquidity-idts-ebils-components",
       "change": {
+        "cause": "pdfium_ufffe_hyphenation",
         "final_quote": "of how many shares of an ETF are available to trade.",
         "original_quote": "ETF liquidity is a measure of how many shares of an ETF are available to trade.",
-        "reason": "authored quote spans a U+FFFE hyphenation marker; trimmed to the longest clean verbatim run (>=60% retained)",
+        "reason": "authored quote spans a Pdfium STX->U+FFFE hyphenation marker the kernel preserves; trimmed to the longest clean verbatim run, else re-anchored to the best-overlap clean on-page sentence",
         "retained_fraction": 0.658,
         "type": "trim"
       },
@@ -1128,9 +1155,10 @@
       "candidate_chunk_ids": null,
       "card_id": "mt-avellaneda-stoikov-market-making",
       "change": {
+        "cause": "chunk_boundary_span",
         "final_quote": "also induces mean reversion to an optimal inventory",
         "original_quote": "the function h(t,q) also induces mean reversion to an optimal inventory level",
-        "reason": "authored quote spans a U+FFFE hyphenation marker; trimmed to the longest clean verbatim run (>=60% retained)",
+        "reason": "authored quote is verbatim within the cited page(s) but spans a chunk/page boundary (not a substring of any single chunk); trimmed to the longest clean verbatim run within one chunk's cited-page window",
         "retained_fraction": 0.662,
         "type": "trim"
       },
@@ -1193,10 +1221,11 @@
       "candidate_chunk_ids": null,
       "card_id": "mt-bid-ask-spread-immediacy-price",
       "change": {
+        "cause": "pdfium_ufffe_hyphenation",
         "final_quote": "The difference of 1—which is half the bid/ask spread—is what she paid for liquidity.",
         "original_quote": "her transaction cost per trade (exclusive of commissions) is half of the spread",
         "overlap": 0.227,
-        "reason": "authored quote spans a U+FFFE hyphenation marker and trimming would retain <60%; re-anchored to the best-overlap clean verbatim sentence on the cited page",
+        "reason": "authored quote spans a Pdfium STX->U+FFFE hyphenation marker the kernel preserves; trimmed to the longest clean verbatim run, else re-anchored to the best-overlap clean on-page sentence",
         "type": "reanchor"
       },
       "chunk_id": "mt_harris_2003_trading_and_exchanges:p084:0126",
@@ -1213,10 +1242,11 @@
       "candidate_chunk_ids": null,
       "card_id": "mt-block-trader-upstairs-depth",
       "change": {
+        "cause": "pdfium_ufffe_hyphenation",
         "final_quote": "Good block traders must carefully set the prices at which they facilitate trades with their clients to ensure that they will be able to trade out of their positions at a profit.",
         "original_quote": "The upstairs market serves large traders who cannot convey credible information about their trading motives and intentions",
         "overlap": 0.071,
-        "reason": "authored quote spans a U+FFFE hyphenation marker and trimming would retain <60%; re-anchored to the best-overlap clean verbatim sentence on the cited page",
+        "reason": "authored quote spans a Pdfium STX->U+FFFE hyphenation marker the kernel preserves; trimmed to the longest clean verbatim run, else re-anchored to the best-overlap clean on-page sentence",
         "type": "reanchor"
       },
       "chunk_id": "mt_harris_2003_trading_and_exchanges:p341:0568",
@@ -1286,9 +1316,10 @@
       "candidate_chunk_ids": null,
       "card_id": "mt-buy-side-trader-best-execution",
       "change": {
+        "cause": "pdfium_ufffe_hyphenation",
         "final_quote": "Buy-side traders must pay close attention to their order submission",
         "original_quote": "Buy-side traders must pay close attention to their order submission strategies in order to trade effectively.",
-        "reason": "authored quote spans a U+FFFE hyphenation marker; trimmed to the longest clean verbatim run (>=60% retained)",
+        "reason": "authored quote spans a Pdfium STX->U+FFFE hyphenation marker the kernel preserves; trimmed to the longest clean verbatim run, else re-anchored to the best-overlap clean on-page sentence",
         "retained_fraction": 0.615,
         "type": "trim"
       },
@@ -1306,9 +1337,10 @@
       "candidate_chunk_ids": null,
       "card_id": "mt-call-vs-continuous-auction",
       "change": {
+        "cause": "pdfium_ufffe_hyphenation",
         "final_quote": "In a single price auction, all trades take place at the same",
         "original_quote": "In a single price auction, all trades take place at the same marketclearing price.",
-        "reason": "authored quote spans a U+FFFE hyphenation marker; trimmed to the longest clean verbatim run (>=60% retained)",
+        "reason": "authored quote spans a Pdfium STX->U+FFFE hyphenation marker the kernel preserves; trimmed to the longest clean verbatim run, else re-anchored to the best-overlap clean on-page sentence",
         "retained_fraction": 0.732,
         "type": "trim"
       },
@@ -1354,10 +1386,11 @@
       "candidate_chunk_ids": null,
       "card_id": "mt-dealer-inventory-control-price-discovery",
       "change": {
+        "cause": "pdfium_ufffe_hyphenation",
         "final_quote": "Dealers also may increase their bid sizes, and lower their ask sizes, to decrease their inventories.",
         "original_quote": "When dealers want to decrease their inventories, they lower their bid and ask prices.",
         "overlap": 0.529,
-        "reason": "authored quote spans a U+FFFE hyphenation marker and trimming would retain <60%; re-anchored to the best-overlap clean verbatim sentence on the cited page",
+        "reason": "authored quote spans a Pdfium STX->U+FFFE hyphenation marker the kernel preserves; trimmed to the longest clean verbatim run, else re-anchored to the best-overlap clean on-page sentence",
         "type": "reanchor"
       },
       "chunk_id": "mt_harris_2003_trading_and_exchanges:p296:0489",
@@ -1430,9 +1463,10 @@
       "candidate_chunk_ids": null,
       "card_id": "mt-effective-cost-trade-benchmark",
       "change": {
+        "cause": "pdfium_ufffe_hyphenation",
         "final_quote": "called the effective cost, and corresponds to c in the basic Roll",
         "original_quote": "This is generally called the effective cost, and corresponds to c in the basic Roll",
-        "reason": "authored quote spans a U+FFFE hyphenation marker; trimmed to the longest clean verbatim run (>=60% retained)",
+        "reason": "authored quote spans a Pdfium STX->U+FFFE hyphenation marker the kernel preserves; trimmed to the longest clean verbatim run, else re-anchored to the best-overlap clean on-page sentence",
         "retained_fraction": 0.783,
         "type": "trim"
       },
@@ -1506,10 +1540,11 @@
       "candidate_chunk_ids": null,
       "card_id": "mt-execution-systems-quote-vs-order-driven",
       "change": {
+        "cause": "pdfium_ufffe_hyphenation",
         "final_quote": "Traders use the hours before the open to collect and submit orders.",
         "original_quote": "The three main types of markets are quotedriven markets, order-driven markets, and brokered markets. Hybrid markets use some combination of these three systems.",
         "overlap": 0.115,
-        "reason": "authored quote spans a U+FFFE hyphenation marker and trimming would retain <60%; re-anchored to the best-overlap clean verbatim sentence on the cited page",
+        "reason": "authored quote spans a Pdfium STX->U+FFFE hyphenation marker the kernel preserves; trimmed to the longest clean verbatim run, else re-anchored to the best-overlap clean on-page sentence",
         "type": "reanchor"
       },
       "chunk_id": "mt_harris_2003_trading_and_exchanges:p105:0164",
@@ -1657,9 +1692,10 @@
       "candidate_chunk_ids": null,
       "card_id": "mt-hasbrouck-var-trades-quotes",
       "change": {
+        "cause": "pdfium_ufffe_hyphenation",
         "final_quote": "decomposition of the random-walk variance provides a basis for measuring the importance of different sources of market",
         "original_quote": "decomposition of the random-walk variance provides a basis for measuring the importance of different sources of market information",
-        "reason": "authored quote spans a U+FFFE hyphenation marker; trimmed to the longest clean verbatim run (>=60% retained)",
+        "reason": "authored quote spans a Pdfium STX->U+FFFE hyphenation marker the kernel preserves; trimmed to the longest clean verbatim run, else re-anchored to the best-overlap clean on-page sentence",
         "retained_fraction": 0.908,
         "type": "trim"
       },
@@ -1691,10 +1727,11 @@
       "candidate_chunk_ids": null,
       "card_id": "mt-index-portfolio-markets-design",
       "change": {
+        "cause": "pdfium_ufffe_hyphenation",
         "final_quote": "Index markets are far more liquid than the underlying cash markets upon which their products are based.",
         "original_quote": "Price changes in index products generally lead changes in the cash index",
         "overlap": 0.2,
-        "reason": "authored quote spans a U+FFFE hyphenation marker and trimming would retain <60%; re-anchored to the best-overlap clean verbatim sentence on the cited page",
+        "reason": "authored quote spans a Pdfium STX->U+FFFE hyphenation marker the kernel preserves; trimmed to the longest clean verbatim run, else re-anchored to the best-overlap clean on-page sentence",
         "type": "reanchor"
       },
       "chunk_id": "mt_harris_2003_trading_and_exchanges:p496:0833",
@@ -1750,10 +1787,11 @@
       "candidate_chunk_ids": null,
       "card_id": "mt-informed-traders-price-efficiency",
       "change": {
+        "cause": "pdfium_ufffe_hyphenation",
         "final_quote": "They consider instruments to be undervalued if prices are less than their estimates of fundamental value, and overvalued if prices are greater.",
         "original_quote": "Informed traders buy instruments that they believe are significantly undervalued and sell instruments that they believe are significantly overvalued",
         "overlap": 0.231,
-        "reason": "authored quote spans a U+FFFE hyphenation marker and trimming would retain <60%; re-anchored to the best-overlap clean verbatim sentence on the cited page",
+        "reason": "authored quote spans a Pdfium STX->U+FFFE hyphenation marker the kernel preserves; trimmed to the longest clean verbatim run, else re-anchored to the best-overlap clean on-page sentence",
         "type": "reanchor"
       },
       "chunk_id": "mt_harris_2003_trading_and_exchanges:p236:0384",
@@ -1770,9 +1808,10 @@
       "candidate_chunk_ids": null,
       "card_id": "mt-insider-trading-policy",
       "change": {
+        "cause": "pdfium_ufffe_hyphenation",
         "final_quote": "Insider trading—like all informed trading—hurts traders who supply",
         "original_quote": "Insider trading—like all informed trading—hurts traders who supply liquidity.",
-        "reason": "authored quote spans a U+FFFE hyphenation marker; trimmed to the longest clean verbatim run (>=60% retained)",
+        "reason": "authored quote spans a Pdfium STX->U+FFFE hyphenation marker the kernel preserves; trimmed to the longest clean verbatim run, else re-anchored to the best-overlap clean on-page sentence",
         "retained_fraction": 0.857,
         "type": "trim"
       },
@@ -1857,10 +1896,11 @@
       "candidate_chunk_ids": null,
       "card_id": "mt-internalization-preferencing-crossing",
       "change": {
+        "cause": "pdfium_ufffe_hyphenation",
         "final_quote": "Dealers expose themselves to well-informed traders and to large traders when they offer firm quotes that any trader can take.",
         "original_quote": "Dealers who offer firm quotes do not want to receive orders from wellinformed traders, or from large traders, many of whom are well informed.",
         "overlap": 0.281,
-        "reason": "authored quote spans a U+FFFE hyphenation marker and trimming would retain <60%; re-anchored to the best-overlap clean verbatim sentence on the cited page",
+        "reason": "authored quote spans a Pdfium STX->U+FFFE hyphenation marker the kernel preserves; trimmed to the longest clean verbatim run, else re-anchored to the best-overlap clean on-page sentence",
         "type": "reanchor"
       },
       "chunk_id": "mt_harris_2003_trading_and_exchanges:p532:0895",
@@ -2201,9 +2241,10 @@
       "candidate_chunk_ids": null,
       "card_id": "mt-liquidity-supplier-taxonomy",
       "change": {
+        "cause": "pdfium_ufffe_hyphenation",
         "final_quote": "therefore are not suppliers of liquidity but porters of",
         "original_quote": "Arbitrageurs therefore are not suppliers of liquidity but porters of liquidity",
-        "reason": "authored quote spans a U+FFFE hyphenation marker; trimmed to the longest clean verbatim run (>=60% retained)",
+        "reason": "authored quote spans a Pdfium STX->U+FFFE hyphenation marker the kernel preserves; trimmed to the longest clean verbatim run, else re-anchored to the best-overlap clean on-page sentence",
         "retained_fraction": 0.705,
         "type": "trim"
       },
@@ -2299,9 +2340,10 @@
       "candidate_chunk_ids": null,
       "card_id": "mt-market-impact-price-concession",
       "change": {
+        "cause": "pdfium_ufffe_hyphenation",
         "final_quote": "order will have an adverse price impact: increasing the price when buying",
         "original_quote": "order will have an adverse price impact: increasing the price when buying aggressively and lowering it when selling",
-        "reason": "authored quote spans a U+FFFE hyphenation marker; trimmed to the longest clean verbatim run (>=60% retained)",
+        "reason": "authored quote spans a Pdfium STX->U+FFFE hyphenation marker the kernel preserves; trimmed to the longest clean verbatim run, else re-anchored to the best-overlap clean on-page sentence",
         "retained_fraction": 0.635,
         "type": "trim"
       },
@@ -2319,10 +2361,11 @@
       "candidate_chunk_ids": null,
       "card_id": "mt-market-impact-price-concession",
       "change": {
+        "cause": "pdfium_ufffe_hyphenation",
         "final_quote": "Large sellers offer prices down to encourage buyers to buy from them.",
         "original_quote": "The premiums that large buyers pay, and the discounts that large sellers offer, are price concessions. When traders move prices to fill their orders, they have market impact.",
         "overlap": 0.2,
-        "reason": "authored quote spans a U+FFFE hyphenation marker and trimming would retain <60%; re-anchored to the best-overlap clean verbatim sentence on the cited page",
+        "reason": "authored quote spans a Pdfium STX->U+FFFE hyphenation marker the kernel preserves; trimmed to the longest clean verbatim run, else re-anchored to the best-overlap clean on-page sentence",
         "type": "reanchor"
       },
       "chunk_id": "mt_harris_2003_trading_and_exchanges:p084:0127",
@@ -2339,13 +2382,14 @@
       "candidate_chunk_ids": null,
       "card_id": "mt-market-manipulation-bluffing",
       "change": {
-        "final_quote": "What is the relation between information-oriented technical traders and sentiment-oriented technical traders?",
+        "cause": "equation_extraction_mismatch",
+        "final_quote": "Market manipulators gun the market when they push prices up or down to activate stop orders.",
         "original_quote": "Market manipulation occurs when bluffers or their victims cause prices to change from what they would be if the bluffers did not pursue their bluffing strategies.",
-        "overlap": 0.061,
-        "reason": "authored quote spans a U+FFFE hyphenation marker and trimming would retain <60%; re-anchored to the best-overlap clean verbatim sentence on the cited page",
+        "overlap": 0.219,
+        "reason": "authored quote transcribes math notation Pdfium extracts differently (its content words are present on the cited page but it is not verbatim); re-anchored to the best-overlap clean prose sentence on the cited page, per the sources' authoring guidance",
         "type": "reanchor"
       },
-      "chunk_id": "mt_harris_2003_trading_and_exchanges:p271:0449",
+      "chunk_id": "mt_harris_2003_trading_and_exchanges:p269:0445",
       "is_overlap_set": null,
       "overlap_alternatives": null,
       "source_id": "mt_harris_2003_trading_and_exchanges",
@@ -2641,9 +2685,10 @@
       "candidate_chunk_ids": null,
       "card_id": "mt-order-precedence-price-time",
       "change": {
+        "cause": "pdfium_ufffe_hyphenation",
         "final_quote": "All order-matching markets use price priority as their primary order",
         "original_quote": "All order-matching markets use price priority as their primary order precedence rule",
-        "reason": "authored quote spans a U+FFFE hyphenation marker; trimmed to the longest clean verbatim run (>=60% retained)",
+        "reason": "authored quote spans a Pdfium STX->U+FFFE hyphenation marker the kernel preserves; trimmed to the longest clean verbatim run, else re-anchored to the best-overlap clean on-page sentence",
         "retained_fraction": 0.81,
         "type": "trim"
       },
@@ -2686,9 +2731,10 @@
       "candidate_chunk_ids": null,
       "card_id": "mt-pairs-trading-cointegration-statarb",
       "change": {
+        "cause": "pdfium_ufffe_hyphenation",
         "final_quote": "pairs trading fall under the class of strategies sometimes labeled as",
         "original_quote": "pairs trading fall under the class of strategies sometimes labeled as statistical arbitrage",
-        "reason": "authored quote spans a U+FFFE hyphenation marker; trimmed to the longest clean verbatim run (>=60% retained)",
+        "reason": "authored quote spans a Pdfium STX->U+FFFE hyphenation marker the kernel preserves; trimmed to the longest clean verbatim run, else re-anchored to the best-overlap clean on-page sentence",
         "retained_fraction": 0.758,
         "type": "trim"
       },
@@ -2877,9 +2923,10 @@
       "candidate_chunk_ids": null,
       "card_id": "mt-roll-implicit-spread-estimator",
       "change": {
+        "cause": "pdfium_ufffe_hyphenation",
         "final_quote": "estimated from the variance and first-order autocovariance of the price",
         "original_quote": "These are most conveniently estimated from the variance and first-order autocovariance of the price changes",
-        "reason": "authored quote spans a U+FFFE hyphenation marker; trimmed to the longest clean verbatim run (>=60% retained)",
+        "reason": "authored quote spans a Pdfium STX->U+FFFE hyphenation marker the kernel preserves; trimmed to the longest clean verbatim run, else re-anchored to the best-overlap clean on-page sentence",
         "retained_fraction": 0.664,
         "type": "trim"
       },
@@ -3176,10 +3223,11 @@
       "candidate_chunk_ids": null,
       "card_id": "pa-active-risk-tracking-error-ex-ante-vs-ex-post",
       "change": {
+        "cause": "pdfium_ufffe_hyphenation",
         "final_quote": "Each manager can restate the portfolio management problem from his perspective as active return–active risk optimization of his subportfolio.",
         "original_quote": "Active risk refers to the uncertainty of demeaned active return.",
         "overlap": 0.227,
-        "reason": "authored quote spans a U+FFFE hyphenation marker and trimming would retain <60%; re-anchored to the best-overlap clean verbatim sentence on the cited page",
+        "reason": "authored quote spans a Pdfium STX->U+FFFE hyphenation marker the kernel preserves; trimmed to the longest clean verbatim run, else re-anchored to the best-overlap clean on-page sentence",
         "type": "reanchor"
       },
       "chunk_id": "pa_connor_goldberg_korajczyk_2010:p043:0041",
@@ -3277,10 +3325,11 @@
       "candidate_chunk_ids": null,
       "card_id": "pa-brinson-bhb-allocation-selection-interaction",
       "change": {
+        "cause": "pdfium_ufffe_hyphenation",
         "final_quote": "3.2 Brinson attribution 3.2.1 Asset allocation The first type of return measured by Brinson attribution is value added by overweighting some sectors and underweighting others.",
         "original_quote": "decomposed into returns generated by asset allocation and stock selection decisions.",
         "overlap": 0.133,
-        "reason": "authored quote spans a U+FFFE hyphenation marker and trimming would retain <60%; re-anchored to the best-overlap clean verbatim sentence on the cited page",
+        "reason": "authored quote spans a Pdfium STX->U+FFFE hyphenation marker the kernel preserves; trimmed to the longest clean verbatim run, else re-anchored to the best-overlap clean on-page sentence",
         "type": "reanchor"
       },
       "chunk_id": "pa_colin_2016:p051:0049",
@@ -3311,10 +3360,11 @@
       "candidate_chunk_ids": null,
       "card_id": "pa-capitalization-weighting-macroconsistency",
       "change": {
+        "cause": "pdfium_ufffe_hyphenation",
         "final_quote": "With other weighting methods, not all investors could hold the index.",
         "original_quote": "held cap-weighted index funds, and if there were no active investors, then all shares would be held with none left over.",
         "overlap": 0.143,
-        "reason": "authored quote spans a U+FFFE hyphenation marker and trimming would retain <60%; re-anchored to the best-overlap clean verbatim sentence on the cited page",
+        "reason": "authored quote spans a Pdfium STX->U+FFFE hyphenation marker the kernel preserves; trimmed to the longest clean verbatim run, else re-anchored to the best-overlap clean on-page sentence",
         "type": "reanchor"
       },
       "chunk_id": "pa_christopherson_carino_ferson_2009:p261:0261",
@@ -3331,9 +3381,10 @@
       "candidate_chunk_ids": null,
       "card_id": "pa-contribution-analysis-benchmark-free",
       "change": {
+        "cause": "pdfium_ufffe_hyphenation",
         "final_quote": "simply breaks down the total return of the portfolio by individual instrument or instrument",
         "original_quote": "Contribution analysis simply breaks down the total return of the portfolio by individual instrument or instrument",
-        "reason": "authored quote spans a U+FFFE hyphenation marker; trimmed to the longest clean verbatim run (>=60% retained)",
+        "reason": "authored quote spans a Pdfium STX->U+FFFE hyphenation marker the kernel preserves; trimmed to the longest clean verbatim run, else re-anchored to the best-overlap clean on-page sentence",
         "retained_fraction": 0.805,
         "type": "trim"
       },
@@ -3351,10 +3402,11 @@
       "candidate_chunk_ids": null,
       "card_id": "pa-currency-attribution-karnosky-singer",
       "change": {
+        "cause": "pdfium_ufffe_hyphenation",
         "final_quote": "Trim Size: 170mm x 244mm ❦ Bacon831945 c06.tex V1 - 12/10/2022 1:04 P.M.",
         "original_quote": "Karnosky and Singer have neatly sidestepped compounding issues and greatly simplified the mathematics by using continuously compounded or log returns.",
         "overlap": 0.0,
-        "reason": "authored quote spans a U+FFFE hyphenation marker and trimming would retain <60%; re-anchored to the best-overlap clean verbatim sentence on the cited page",
+        "reason": "authored quote spans a Pdfium STX->U+FFFE hyphenation marker the kernel preserves; trimmed to the longest clean verbatim run, else re-anchored to the best-overlap clean on-page sentence",
         "type": "reanchor"
       },
       "chunk_id": "pa_bacon_2023_attribution:p322:0388",
@@ -3413,10 +3465,11 @@
       "candidate_chunk_ids": null,
       "card_id": "pa-dgtw-cs-ct-as-decomposition",
       "change": {
+        "cause": "pdfium_ufffe_hyphenation",
         "final_quote": "Recent research has shown that mutual funds show a distinct preference for other stock characteristics that are related to average returns— for example, stocks with greater liquidity (see Chen et al., 2000 and Wermers, 2000).19 For example, one might argue that our CS measure underestimates the stock-picking talents of funds since we do not control for the lower average returns that accrue to stocks with greater liquidity.",
         "original_quote": "ranking procedure results in 125 fractile portfolios, each having a distinct combination of size, book-to-market, and momentum characteristics.",
         "overlap": 0.092,
-        "reason": "authored quote spans a U+FFFE hyphenation marker and trimming would retain <60%; re-anchored to the best-overlap clean verbatim sentence on the cited page",
+        "reason": "authored quote spans a Pdfium STX->U+FFFE hyphenation marker the kernel preserves; trimmed to the longest clean verbatim run, else re-anchored to the best-overlap clean on-page sentence",
         "type": "reanchor"
       },
       "chunk_id": "pa_fischer_wermers_2013:p114:0141",
@@ -3486,9 +3539,10 @@
       "candidate_chunk_ids": null,
       "card_id": "pa-drawdown-ratios-calmar-sterling-ulcer",
       "change": {
+        "cause": "pdfium_ufffe_hyphenation",
         "final_quote": "Drawdown deviation calculates a standard deviation type statistic using",
         "original_quote": "Drawdown deviation calculates a standard deviation type statistic using individual drawdowns",
-        "reason": "authored quote spans a U+FFFE hyphenation marker; trimmed to the longest clean verbatim run (>=60% retained)",
+        "reason": "authored quote spans a Pdfium STX->U+FFFE hyphenation marker the kernel preserves; trimmed to the longest clean verbatim run, else re-anchored to the best-overlap clean on-page sentence",
         "retained_fraction": 0.772,
         "type": "trim"
       },
@@ -3506,10 +3560,11 @@
       "candidate_chunk_ids": null,
       "card_id": "pa-factor-model-types-and-covariance-decomposition",
       "change": {
+        "cause": "pdfium_ufffe_hyphenation",
         "final_quote": "As we explain below, the optimal portfolio weights do follow a linear equation, but are written in units of marginal risk.",
         "original_quote": "Although the risk budgeting problem is not linear, the marginal contributions to portfolio risk are linear in the allocations to budget",
         "overlap": 0.233,
-        "reason": "authored quote spans a U+FFFE hyphenation marker and trimming would retain <60%; re-anchored to the best-overlap clean verbatim sentence on the cited page",
+        "reason": "authored quote spans a Pdfium STX->U+FFFE hyphenation marker the kernel preserves; trimmed to the longest clean verbatim run, else re-anchored to the best-overlap clean on-page sentence",
         "type": "reanchor"
       },
       "chunk_id": "pa_connor_goldberg_korajczyk_2010:p046:0045",
@@ -3526,10 +3581,11 @@
       "candidate_chunk_ids": null,
       "card_id": "pa-fi-carry-rolldown-pulltopar-time-decomposition",
       "change": {
+        "cause": "pdfium_ufffe_hyphenation",
         "final_quote": "However, rolldown return is seldom substantial, and will be overwhelmed by even quite small changes in the level or shape of the curve.",
         "original_quote": "Rolldown is distinct from either source of return, and should be measured separately.",
         "overlap": 0.207,
-        "reason": "authored quote spans a U+FFFE hyphenation marker and trimming would retain <60%; re-anchored to the best-overlap clean verbatim sentence on the cited page",
+        "reason": "authored quote spans a Pdfium STX->U+FFFE hyphenation marker the kernel preserves; trimmed to the longest clean verbatim run, else re-anchored to the best-overlap clean on-page sentence",
         "type": "reanchor"
       },
       "chunk_id": "pa_colin_2016:p175:0184",
@@ -3546,10 +3602,11 @@
       "candidate_chunk_ids": null,
       "card_id": "pa-fi-parametric-vs-nonparametric-curve-models",
       "change": {
+        "cause": "pdfium_ufffe_hyphenation",
         "final_quote": "■ Virtually any curve observed in the marketplace can be fitted to a Nelson-Siegel function, using least-squares or similar techniques.",
         "original_quote": "In this case the form of a yield curve is assumed to follow a particular pattern that can be modelled by a mathematical function with a small number",
         "overlap": 0.211,
-        "reason": "authored quote spans a U+FFFE hyphenation marker and trimming would retain <60%; re-anchored to the best-overlap clean verbatim sentence on the cited page",
+        "reason": "authored quote spans a Pdfium STX->U+FFFE hyphenation marker the kernel preserves; trimmed to the longest clean verbatim run, else re-anchored to the best-overlap clean on-page sentence",
         "type": "reanchor"
       },
       "chunk_id": "pa_colin_2016:p296:0307",
@@ -3644,9 +3701,10 @@
       "candidate_chunk_ids": null,
       "card_id": "pa-geometric-attribution-brinson-extended",
       "change": {
+        "cause": "pdfium_ufffe_hyphenation",
         "final_quote": "The total stock selection and asset allocation effects compound together to produce the",
         "original_quote": "The total stock selection and asset allocation effects compound together to produce the geometric excess return",
-        "reason": "authored quote spans a U+FFFE hyphenation marker; trimmed to the longest clean verbatim run (>=60% retained)",
+        "reason": "authored quote spans a Pdfium STX->U+FFFE hyphenation marker the kernel preserves; trimmed to the longest clean verbatim run, else re-anchored to the best-overlap clean on-page sentence",
         "retained_fraction": 0.784,
         "type": "trim"
       },
@@ -3692,10 +3750,11 @@
       "candidate_chunk_ids": null,
       "card_id": "pa-gips-2020-composites-and-mechanics",
       "change": {
+        "cause": "pdfium_ufffe_hyphenation",
         "final_quote": "Clearly, it’s very inefficient for individual portfolio managers to be wasting their time ensuring returns are calculated correctly.",
         "original_quote": "GIPS are ethical standards for investment performance presentation to ensure fair representation and full disclosure of a firm’s performance track record.",
         "overlap": 0.111,
-        "reason": "authored quote spans a U+FFFE hyphenation marker and trimming would retain <60%; re-anchored to the best-overlap clean verbatim sentence on the cited page",
+        "reason": "authored quote spans a Pdfium STX->U+FFFE hyphenation marker the kernel preserves; trimmed to the longest clean verbatim run, else re-anchored to the best-overlap clean on-page sentence",
         "type": "reanchor"
       },
       "chunk_id": "pa_bacon_2023_attribution:p427:0503",
@@ -3751,9 +3810,10 @@
       "candidate_chunk_ids": null,
       "card_id": "pa-luck-vs-skill-fdr-and-bootstrap",
       "change": {
+        "cause": "pdfium_ufffe_hyphenation",
         "final_quote": "precisely estimates the proportion of fund managers that are (1) unskilled, (2) zero-alpha, and (3) skilled, even with dependencies in cross-fund estimated alphas.",
         "original_quote": "The approach presented precisely estimates the proportion of fund managers that are (1) unskilled, (2) zero-alpha, and (3) skilled, even with dependencies in cross-fund estimated alphas.",
-        "reason": "authored quote spans a U+FFFE hyphenation marker; trimmed to the longest clean verbatim run (>=60% retained)",
+        "reason": "authored quote spans a Pdfium STX->U+FFFE hyphenation marker the kernel preserves; trimmed to the longest clean verbatim run, else re-anchored to the best-overlap clean on-page sentence",
         "retained_fraction": 0.876,
         "type": "trim"
       },
@@ -3771,9 +3831,10 @@
       "candidate_chunk_ids": null,
       "card_id": "pa-m2-risk-adjusted-return-transform",
       "change": {
+        "cause": "chunk_boundary_span",
         "final_quote": "a genuinely risk-adjusted return, extremely useful for comparing portfolios with different levels of risk.",
         "original_quote": "M2 , a genuinely risk-adjusted return, extremely useful for comparing portfolios with different levels of risk.",
-        "reason": "authored quote spans a U+FFFE hyphenation marker; trimmed to the longest clean verbatim run (>=60% retained)",
+        "reason": "authored quote is verbatim within the cited page(s) but spans a chunk/page boundary (not a substring of any single chunk); trimmed to the longest clean verbatim run within one chunk's cited-page window",
         "retained_fraction": 0.955,
         "type": "trim"
       },
@@ -3805,10 +3866,11 @@
       "candidate_chunk_ids": null,
       "card_id": "pa-multifactor-alpha-timing-conditional",
       "change": {
+        "cause": "pdfium_ufffe_hyphenation",
         "final_quote": "Using a single coefficient a p in Equation (12.3) presumes that expected abnormal performance is constant over time.",
         "original_quote": "find that this covariance is a major source of measurement error in unconditional alphas of mutual funds.",
         "overlap": 0.133,
-        "reason": "authored quote spans a U+FFFE hyphenation marker and trimming would retain <60%; re-anchored to the best-overlap clean verbatim sentence on the cited page",
+        "reason": "authored quote spans a Pdfium STX->U+FFFE hyphenation marker the kernel preserves; trimmed to the longest clean verbatim run, else re-anchored to the best-overlap clean on-page sentence",
         "type": "reanchor"
       },
       "chunk_id": "pa_christopherson_carino_ferson_2009:p135:0135",
@@ -3898,10 +3960,11 @@
       "candidate_chunk_ids": null,
       "card_id": "pa-normal-portfolio-construction",
       "change": {
+        "cause": "pdfium_ufffe_hyphenation",
         "final_quote": "It is not clear that there should be a unique or single normal portfolio for a manager.",
         "original_quote": "A normal portfolio is a set of securities that contains all of the securities from which a manager normally chooses, weighted as the manager would normally weight them in a portfolio.",
         "overlap": 0.188,
-        "reason": "authored quote spans a U+FFFE hyphenation marker and trimming would retain <60%; re-anchored to the best-overlap clean verbatim sentence on the cited page",
+        "reason": "authored quote spans a Pdfium STX->U+FFFE hyphenation marker the kernel preserves; trimmed to the longest clean verbatim run, else re-anchored to the best-overlap clean on-page sentence",
         "type": "reanchor"
       },
       "chunk_id": "pa_christopherson_carino_ferson_2009:p236:0232",
@@ -3971,9 +4034,10 @@
       "candidate_chunk_ids": null,
       "card_id": "pa-returns-based-style-analysis",
       "change": {
+        "cause": "pdfium_ufffe_hyphenation",
         "final_quote": "methodology is necessary to obtain a set of coefficients",
         "original_quote": "Quadratic optimization methodology is necessary to obtain a set of coefficients",
-        "reason": "authored quote spans a U+FFFE hyphenation marker; trimmed to the longest clean verbatim run (>=60% retained)",
+        "reason": "authored quote spans a Pdfium STX->U+FFFE hyphenation marker the kernel preserves; trimmed to the longest clean verbatim run, else re-anchored to the best-overlap clean on-page sentence",
         "retained_fraction": 0.709,
         "type": "trim"
       },

@@ -1346,14 +1346,14 @@
       "card_id": "mt-market-manipulation-bluffing",
       "citations": [
         {
-          "chunk_hash": "b3ae1e90fc36e6e92c980184fd40b7d2a52a5fc4904a63c012cfcf8f536b06e9",
-          "chunk_id": "mt_harris_2003_trading_and_exchanges:p271:0449",
+          "chunk_hash": "bc182c36b7617537a3f32f037fbddff89796c65ed181311a481ba61bde9a7d05",
+          "chunk_id": "mt_harris_2003_trading_and_exchanges:p269:0445",
           "edge_type": "defines",
           "page_range": [
-            271,
-            271
+            269,
+            269
           ],
-          "quote": "What is the relation between information-oriented technical traders and sentiment-oriented technical traders?",
+          "quote": "Market manipulators gun the market when they push prices up or down to activate stop orders.",
           "source_id": "mt_harris_2003_trading_and_exchanges"
         }
       ],
@@ -2272,7 +2272,7 @@
     }
   ],
   "generated_by": "resolve_migration_citations.py",
-  "note": "Resolved chunk_id/chunk_hash bound from incoming skeleton citations against the frozen merged chunks_manifest; confirmed by kb verify. Quote repairs (trim/re-anchor for U+FFFE hyphenation) are recorded in migration_quote_audit.json.",
+  "note": "Resolved chunk_id/chunk_hash bound from incoming skeleton citations against the frozen merged chunks_manifest; confirmed by kb verify. Quote repairs (each with a machine-proven structured cause) are recorded in migration_quote_audit.json.",
   "reading_id": "14_microstructure_and_trading",
   "schema_version": "cfa_legacy.migration_curated_citations.v1"
 }

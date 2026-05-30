@@ -670,14 +670,14 @@
       "card_id": "fa-nav-staleness-and-arbitrage-speed",
       "citations": [
         {
-          "chunk_hash": "be9c50fa1ea60a06bc77b8443df8f6715b7292e0afc9f2558b5db00eb7a75037",
-          "chunk_id": "fa_madhavan_2016_etfs_new_dynamics:p054:0057",
+          "chunk_hash": "f2de641ac054244314597bb46b75b95924258b3d64fe4cd6259bc872faea3a7d",
+          "chunk_id": "fa_madhavan_2016_etfs_new_dynamics:p054:0058",
           "edge_type": "defines",
           "page_range": [
             54,
             54
           ],
-          "quote": "t t The arbitrager sells short the ETF and buys the underlying basket locking in a gross profit of ut per share.",
+          "quote": "is a liquidity shock and ψ is the autocorrelation coefficient.",
           "source_id": "fa_madhavan_2016_etfs_new_dynamics"
         },
         {
@@ -688,7 +688,7 @@
             56,
             56
           ],
-          "quote": "tt =− ++ tt −1 (3.6) Here 0 ≤ φ ≤ 1 captures possible staleness and wμ ~( , σ ) t w w 2 is an error term that reflects microstructure effects.1 Any pricing noise will be reflected in w.",
+          "quote": "Here 0 ≤ φ ≤ 1 captures possible staleness and",
           "source_id": "fa_madhavan_2016_etfs_new_dynamics"
         }
       ],
@@ -1040,7 +1040,7 @@
     }
   ],
   "generated_by": "resolve_migration_citations.py",
-  "note": "Resolved chunk_id/chunk_hash bound from incoming skeleton citations against the frozen merged chunks_manifest; confirmed by kb verify. Quote repairs (trim/re-anchor for U+FFFE hyphenation) are recorded in migration_quote_audit.json.",
+  "note": "Resolved chunk_id/chunk_hash bound from incoming skeleton citations against the frozen merged chunks_manifest; confirmed by kb verify. Quote repairs (each with a machine-proven structured cause) are recorded in migration_quote_audit.json.",
   "reading_id": "22_fund_level_arbitrage",
   "schema_version": "cfa_legacy.migration_curated_citations.v1"
 }

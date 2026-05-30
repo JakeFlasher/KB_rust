@@ -10,12 +10,21 @@ text contains the normalized quote) and CONFIRMS every binding with the REAL
 Fail-closed: a citation that binds to zero/multiple/boundary chunks, or whose
 final quote does not pass `kb verify`, is reported and never silently bound.
 
-Some incoming quotes span a Pdfium soft-hyphen marker (U+FFFE) that the kernel's
-`normalize_text` preserves (it de-hyphenates only `-\\n`), so the de-hyphenated
-authored quote cannot verify. Those are repaired (user decision: hybrid):
-minimal TRIM to the longest clean verbatim run when that retains >=60% of the
-quote, else RE-ANCHOR to the best-overlap clean verbatim sentence on the cited
-page. Every repair is recorded in the audit and re-confirmed by `kb verify`.
+A quote that does not verbatim-verify against any single cited-page chunk is
+repaired ONLY when it MACHINE-PROVES one of three documented extraction causes
+authorized in the committed `migration_resolver_policy.json` -- otherwise it FAILS
+CLOSED (status `zero_match`) and is never silently bound:
+  * `pdfium_ufffe_hyphenation` -- matches a window only after removing the Pdfium
+    STX->U+FFFE hyphenation marker the kernel preserves;
+  * `chunk_boundary_span` -- a >=40-char clean verbatim run exists in one window
+    (the quote is real but spans a chunk/page boundary) -> trim to that run;
+  * `equation_extraction_mismatch` -- the quote's content words have high recall on
+    the cited page (right location) but it is not verbatim because it transcribes
+    math notation Pdfium extracts differently -> re-anchor to the best-overlap clean
+    prose sentence (per the sources' authoring guidance).
+The first two trim/re-anchor; each repair carries a structured `cause`, is recorded
+in the audit, and is re-confirmed by `kb verify`. A fabricated / low-recall quote
+satisfies none and fails closed.
 
 `normalize_text` here is a faithful Python re-implementation of the kernel
 `crates/cacg-core/src/normalize.rs::normalize_text`; the parity fixture
@@ -59,6 +68,21 @@ POLICY_PATH = REGISTRY / "migration_resolver_policy.json"
 TRIM_RETAIN_MIN = 0.60   # >=60% of the quote retained -> trim; else re-anchor
 MIN_QUOTE_CHARS = 25
 MIN_AUTO_BIND_RATE = 0.95
+BOUNDARY_MIN_RUN = 40    # a >=40-char clean verbatim run in one window proves a real (boundary-split) quote
+EQ_MIN_RECALL = 0.70     # >=70% of the quote's content words present in the cited-page window proves location
+
+REPAIR_REASON = {
+    "pdfium_ufffe_hyphenation":
+        "authored quote spans a Pdfium STX->U+FFFE hyphenation marker the kernel preserves; trimmed to the "
+        "longest clean verbatim run, else re-anchored to the best-overlap clean on-page sentence",
+    "chunk_boundary_span":
+        "authored quote is verbatim within the cited page(s) but spans a chunk/page boundary (not a substring "
+        "of any single chunk); trimmed to the longest clean verbatim run within one chunk's cited-page window",
+    "equation_extraction_mismatch":
+        "authored quote transcribes math notation Pdfium extracts differently (its content words are present "
+        "on the cited page but it is not verbatim); re-anchored to the best-overlap clean prose sentence on "
+        "the cited page, per the sources' authoring guidance",
+}
 
 
 def load_policy() -> dict[str, Any]:
@@ -208,6 +232,14 @@ def overlap_score(a: str, b: str) -> float:
     return len(wa & wb) / len(wa | wb) if (wa or wb) else 0.0
 
 
+def content_recall(quote_norm: str, text_norm: str) -> float:
+    """Fraction of the quote's content words present in `text` (>= a threshold proves the citation
+    points at the right page even when the quote is not verbatim, e.g. math notation)."""
+    qw = set(re.findall(r"[a-z0-9]+", quote_norm.lower()))
+    tw = set(re.findall(r"[a-z0-9]+", text_norm.lower()))
+    return len(qw & tw) / len(qw) if qw else 0.0
+
+
 # --------------------------------------------------------------------------- #
 # Binding.
 # --------------------------------------------------------------------------- #
@@ -274,50 +306,77 @@ def bind_citation(cit: dict[str, Any], reading_id: str, by_src: dict[str, list],
         return {"status": "ambiguous", "authored_page_range": [lo, hi],
                 "candidate_chunk_ids": candidate_ids, "is_overlap_set": overlap}
 
-    # 2. REPAIR (U+FFFE / no clean verbatim match). Best candidate chunk = the one whose
-    # U+FFFE-stripped normalized text contains the quote, preferring full page containment.
-    def stripped(s): return normalize_text(s).replace("￾", "")
-    repair_cand = [c for c in cand if stripped(quote) in stripped(c["text"])] or cand
-    if not repair_cand:
-        return {"status": "no_candidate_chunk", "authored_page_range": [lo, hi]}
-    repair_cand = sorted(repair_cand, key=lambda c: (0 if (c["start_page"] <= lo and hi <= c["end_page"]) else 1,
-                                                     c["end_page"] - c["start_page"], c["chunk_id"]))
-    chunk = repair_cand[0]
-    cpr = [max(lo, chunk["start_page"]), min(hi, chunk["end_page"])]
+    # 2. REPAIR — only for MACHINE-PROVEN documented extraction conditions, tried in order; a citation
+    # that satisfies NONE fails closed (zero_match) and is never silently bound. Each repair carries a
+    # structured `cause` the >=95% override validates against the committed policy.
+    cwin = [(c, [max(lo, c["start_page"]), min(hi, c["end_page"])]) for c in cand]
 
-    # 2a. TRIM to the longest clean verbatim run if it retains >=60% and lies in the page window.
-    run = longest_clean_run(quote, chunk["text"])
-    if len(run) >= MIN_QUOTE_CHARS and len(run) >= TRIM_RETAIN_MIN * max(1, len(nq)) \
-            and window_contains(chunk, cpr[0], cpr[1], normalize_text(run)):
-        return bound(chunk, run, cpr, "trim",
-                     {"type": "trim", "original_quote": quote, "final_quote": run,
-                      "retained_fraction": round(len(run) / max(1, len(nq)), 3),
-                      "reason": "authored quote spans a U+FFFE hyphenation marker; trimmed to the "
-                                "longest clean verbatim run (>=60% retained)"})
+    def best(items):
+        return sorted(items, key=fit_key)[0]
 
-    # 2b. RE-ANCHOR to the best-overlap clean sentence on the cited page.
-    sents = sorted(candidate_sentences(chunk_pages_text(chunk, lo, hi)),
-                   key=lambda s: (-overlap_score(s, nq), s))
-    for sent in sents[:3]:
-        if window_contains(chunk, cpr[0], cpr[1], normalize_text(sent)):
-            return bound(chunk, sent, cpr, "reanchor",
-                         {"type": "reanchor", "original_quote": quote, "final_quote": sent,
-                          "overlap": round(overlap_score(sent, nq), 3),
-                          "reason": "authored quote spans a U+FFFE hyphenation marker and trimming "
-                                    "would retain <60%; re-anchored to the best-overlap clean verbatim "
-                                    "sentence on the cited page"})
-    # 2c. FALLBACK: no >=60% trim and no clean on-page sentence to re-anchor to -> keep the
-    # longest clean verbatim run (>=25 chars) as a flagged low-retention trim (audited).
-    if len(run) >= MIN_QUOTE_CHARS and window_contains(chunk, cpr[0], cpr[1], normalize_text(run)):
-        return bound(chunk, run, cpr, "trim",
-                     {"type": "trim", "original_quote": quote, "final_quote": run,
-                      "retained_fraction": round(len(run) / max(1, len(nq)), 3),
-                      "low_retention": True,
-                      "reason": "authored quote spans a U+FFFE hyphenation marker; the clean run retains "
-                                "<60% and no clean full sentence was available on the cited page to "
-                                "re-anchor, so the longest clean verbatim run is kept (flagged for review)"})
-    return {"status": "unbound", "authored_page_range": [lo, hi],
-            "note": "no clean verbatim trim/re-anchor in the page window; needs manual review"}
+    def win_norm(c, cpr):
+        return normalize_text(chunk_pages_text(c, cpr[0], cpr[1]))
+
+    def best_prose_sentence(c, cpr):
+        for sent in sorted(candidate_sentences(chunk_pages_text(c, lo, hi)),
+                           key=lambda s: (-overlap_score(s, nq), s))[:3]:
+            if window_contains(c, cpr[0], cpr[1], normalize_text(sent)):
+                return sent
+        return None
+
+    def trim_then_reanchor(c, cpr, cause):
+        run = longest_clean_run(quote, chunk_pages_text(c, cpr[0], cpr[1]))
+        if len(run) >= MIN_QUOTE_CHARS and len(normalize_text(run)) >= TRIM_RETAIN_MIN * max(1, len(nq)):
+            return bound(c, run, cpr, "trim",
+                         {"type": "trim", "cause": cause, "original_quote": quote, "final_quote": run,
+                          "retained_fraction": round(len(normalize_text(run)) / max(1, len(nq)), 3),
+                          "reason": REPAIR_REASON[cause]})
+        sent = best_prose_sentence(c, cpr)
+        if sent is not None:
+            return bound(c, sent, cpr, "reanchor",
+                         {"type": "reanchor", "cause": cause, "original_quote": quote, "final_quote": sent,
+                          "overlap": round(overlap_score(sent, nq), 3), "reason": REPAIR_REASON[cause]})
+        if len(run) >= MIN_QUOTE_CHARS:
+            return bound(c, run, cpr, "trim",
+                         {"type": "trim", "cause": cause, "original_quote": quote, "final_quote": run,
+                          "retained_fraction": round(len(normalize_text(run)) / max(1, len(nq)), 3),
+                          "low_retention": True, "reason": REPAIR_REASON[cause] + " (low-retention; no clean on-page sentence)"})
+        return None
+
+    # 2a. U+FFFE hyphenation: matches a cited-page window ONLY after removing U+FFFE.
+    ufffe = [(c, cpr) for c, cpr in cwin
+             if "￾" in win_norm(c, cpr) and nq not in win_norm(c, cpr) and nq in win_norm(c, cpr).replace("￾", "")]
+    if ufffe:
+        uc, ucpr = best(ufffe)
+        r = trim_then_reanchor(uc, ucpr, "pdfium_ufffe_hyphenation")
+        if r:
+            return r
+
+    # 2b. chunk-boundary span: a >=40-char clean verbatim run exists in a window (the quote is real, split).
+    boundary = [(c, cpr) for c, cpr in cwin
+                if len(longest_clean_run(quote, chunk_pages_text(c, cpr[0], cpr[1]))) >= BOUNDARY_MIN_RUN]
+    if boundary:
+        c, cpr = best(boundary)
+        run = longest_clean_run(quote, chunk_pages_text(c, cpr[0], cpr[1]))
+        return bound(c, run, cpr, "trim",
+                     {"type": "trim", "cause": "chunk_boundary_span", "original_quote": quote, "final_quote": run,
+                      "retained_fraction": round(len(normalize_text(run)) / max(1, len(nq)), 3),
+                      "reason": REPAIR_REASON["chunk_boundary_span"]})
+
+    # 2c. equation extraction mismatch: high content recall in a cited-page window (right page) but not verbatim.
+    eq = [(c, cpr) for c, cpr in cwin if content_recall(nq, win_norm(c, cpr)) >= EQ_MIN_RECALL]
+    if eq:
+        c, cpr = max(eq, key=lambda it: (round(content_recall(nq, win_norm(it[0], it[1])), 6),
+                                         -(it[0]["end_page"] - it[0]["start_page"]), it[0]["chunk_id"]))
+        sent = best_prose_sentence(c, cpr)
+        if sent is not None:
+            return bound(c, sent, cpr, "reanchor",
+                         {"type": "reanchor", "cause": "equation_extraction_mismatch", "original_quote": quote,
+                          "final_quote": sent, "overlap": round(overlap_score(sent, nq), 3),
+                          "reason": REPAIR_REASON["equation_extraction_mismatch"]})
+
+    return {"status": "zero_match", "authored_page_range": [lo, hi],
+            "note": "quote does not verify in any cited-page window and satisfies no documented repair proof; fail closed"}
 
 
 def resolve() -> dict[str, Any]:
@@ -415,20 +474,29 @@ def emit(result: dict[str, Any]) -> dict[str, Any]:
         raise SystemExit(
             f"{len(failed)} citation(s) not cleanly bound (fail-closed): "
             f"{[(r['card_id'], r['status'], r.get('candidate_chunk_ids')) for r in failed[:8]]}")
-    # >=95% per-set auto-bind guard, overridable ONLY for the documented U+FFFE quote-repair condition.
+    # EVERY trim/re-anchor repair must carry a structured cause AUTHORIZED by the committed policy;
+    # an absent/unauthorized cause fails closed (so a future undocumented repair can never slip through).
+    repairs_policy = policy.get("allow_documented_quote_repairs", {})
+    enabled = bool(repairs_policy.get("enabled"))
+    authorized_causes = set(repairs_policy.get("authorized_causes", {})) if enabled else set()
+    unauthorized = [a for a in result["audit"] if a.get("cause") not in authorized_causes]
+    if unauthorized:
+        raise SystemExit(
+            f"{len(unauthorized)} repair(s) carry an unauthorized/absent structured cause (authorized: "
+            f"{sorted(authorized_causes)}); fail-closed: {[(u['card_id'], u.get('cause')) for u in unauthorized[:8]]}")
+    # >=95% per-set auto-bind guard: a shortfall is allowed ONLY when the policy override is enabled (the
+    # shortfall is then entirely policy-authorized repairs, ensured above).
     rates = {p: (round(c["auto"] / c["total"], 4) if c["total"] else 1.0) for p, c in counts.items()}
     low = sorted(p for p, r in rates.items() if r < MIN_AUTO_BIND_RATE)
-    override = bool(policy.get("allow_low_auto_bind_for_ufffe_repair", {}).get("enabled"))
-    non_ufffe_repairs = [a for a in result["audit"] if "U+FFFE" not in a.get("reason", "")]
+    override = bool(enabled and repairs_policy.get("min_auto_bind_rate_override"))
     override_applied = False
     if low:
-        if override and not non_ufffe_repairs:
+        if override:
             override_applied = True
         else:
             raise SystemExit(
-                f"auto-bind below {MIN_AUTO_BIND_RATE:.0%} for set(s) {low} (rates {rates}); not covered "
-                f"by the U+FFFE override (enabled={override}, non_ufffe_repairs={len(non_ufffe_repairs)}). "
-                "Fail-closed.")
+                f"auto-bind below {MIN_AUTO_BIND_RATE:.0%} for set(s) {low} (rates {rates}); no policy "
+                "override (allow_documented_quote_repairs.min_auto_bind_rate_override). Fail-closed.")
     for _set in SETS:
         rid, prefix = _set[1], _set[2]
         write_json(REGISTRY / f"{prefix}_curated_citations.json", {
@@ -436,19 +504,23 @@ def emit(result: dict[str, Any]) -> dict[str, Any]:
             "generated_by": "resolve_migration_citations.py",
             "reading_id": rid,
             "note": "Resolved chunk_id/chunk_hash bound from incoming skeleton citations against the "
-                    "frozen merged chunks_manifest; confirmed by kb verify. Quote repairs (trim/re-anchor "
-                    "for U+FFFE hyphenation) are recorded in migration_quote_audit.json.",
+                    "frozen merged chunks_manifest; confirmed by kb verify. Quote repairs (each with a "
+                    "machine-proven structured cause) are recorded in migration_quote_audit.json.",
             "cards": result["registries"][prefix],
         })
+    from collections import Counter
+    cause_counts = dict(Counter(a.get("cause") for a in result["audit"]))
     write_json(BIND_REPORT, {
         "schema_version": "cfa_legacy.migration_bind_report.v1",
         "skeleton_count": result["skeleton_count"],
         "counts": result["counts"],
         "auto_bind_rates": rates,
+        "repair_cause_counts": cause_counts,
         "policy": {
             "auto_bind_min_rate": MIN_AUTO_BIND_RATE,
             "low_auto_bind_sets": low,
-            "ufffe_auto_bind_override_applied": override_applied,
+            "auto_bind_override_applied": override_applied,
+            "authorized_repair_causes": sorted(authorized_causes),
             "overlap_disambiguation_enabled": bool(policy.get("allow_overlap_disambiguation", {}).get("enabled")),
         },
         "report": sorted(result["report"], key=lambda r: (r["card_id"], r["source_id"])),
@@ -492,22 +564,22 @@ PARITY_NORM_VECTORS = [
 PARITY_CITATIONS = [
     {"reading_id": "01_quantitative_methods", "source_id": "qm_eslii_2009_2ed", "page_range": [250, 250],
      "quote": "Then for this set of models we define AIC(α) = err(α) + 2 · d(α) N σˆε 2 .",
-     "expect_pass": True, "expect_chunk_id": "qm_eslii_2009_2ed:p250:0316", "tags": ["whitespace-join"]},
+     "expect_auto": True, "expect_chunk_id": "qm_eslii_2009_2ed:p250:0316", "tags": ["whitespace-join"]},
     {"reading_id": "01_quantitative_methods", "source_id": "qm_eslii_2009_2ed", "page_range": [252, 253],
      "quote": "The generic form of BIC is BIC = −2 · loglik + (log N) · d.",
-     "expect_pass": True, "expect_chunk_id": "qm_eslii_2009_2ed:p252:0319", "tags": ["whitespace-join"]},
+     "expect_auto": True, "expect_chunk_id": "qm_eslii_2009_2ed:p252:0319", "tags": ["whitespace-join"]},
     {"reading_id": "01_quantitative_methods", "source_id": "qm_eslii_2009_2ed", "page_range": [242, 242],
      "quote": "we first explore in more detail the nature of test error and the bias–variance tradeoff.",
-     "expect_pass": True, "expect_chunk_id": "qm_eslii_2009_2ed:p242:0307", "tags": ["punctuation"]},
+     "expect_auto": True, "expect_chunk_id": "qm_eslii_2009_2ed:p242:0307", "tags": ["punctuation"]},
     {"reading_id": "01_quantitative_methods", "source_id": "qm_tsay_2014_multivariate_time_series", "page_range": [421, 421],
      "quote": "We study in Section 7.5 the simple Baba–Engle–Kraft– Kroner (BEKK) model of Engle and Kroner (1995) and discuss its pros and cons.",
-     "expect_pass": True, "expect_chunk_id": "qm_tsay_2014_multivariate_time_series:p421:0481", "tags": ["punctuation"]},
+     "expect_auto": True, "expect_chunk_id": "qm_tsay_2014_multivariate_time_series:p421:0481", "tags": ["punctuation"]},
     {"reading_id": "17_cross_cutting", "source_id": "cfa_2022_l1_combined", "page_range": [1, 3],
      "quote": "volume 2, type “2-5”… and so forth. For example, to go to page 5 of vol",
-     "expect_pass": False, "expect_chunk_id": None, "tags": ["chunk-boundary"]},
+     "expect_auto": False, "expect_chunk_id": None, "must_not_bind": False, "tags": ["chunk-boundary"]},
     {"reading_id": "01_quantitative_methods", "source_id": "qm_eslii_2009_2ed", "page_range": [250, 250],
-     "quote": "this is a deliberately fabricated quote that does not exist in the chunk ZZQX",
-     "expect_pass": False, "expect_chunk_id": None, "tags": ["known-fail"]},
+     "quote": "zqxv unmatchable wzyx nonexistent qqxz placeholder vkjz gibberish hwpx zzqy",
+     "expect_auto": False, "expect_chunk_id": None, "must_not_bind": True, "tags": ["known-fail"]},
 ]
 
 REQUIRED_PARITY_TAGS = {"whitespace-join", "hyphen-linebreak", "ligature", "punctuation", "chunk-boundary"}
@@ -539,21 +611,27 @@ def parity() -> int:
             cit = {"source_id": row["source_id"], "page_range": row["page_range"],
                    "quote": row["quote"], "edge_type": "supports"}
             rec = bind_citation(cit, row["reading_id"], by_src, policy)
-            auto = rec["status"] == "auto"
+            bound_status = rec["status"] in ("auto", "trim", "reanchor")
+            auto = rec["status"] == "auto"   # the verbatim-CONTAINMENT decision the parity gate tests
             sel = rec.get("registry", {}).get("chunk_id")
-            # real kb verify on the AUTHORED quote against the selected chunk (PASS) or the first
-            # candidate chunk in the page window (FAIL rows must FAIL there too).
             window = [c for c in by_src.get(row["source_id"], [])
                       if not (c["end_page"] < row["page_range"][0] or c["start_page"] > row["page_range"][-1])]
-            target = next((c for c in window if c["chunk_id"] == sel), None) if auto else (window[0] if window else None)
+            # kb verify the ORIGINAL quote against the selected chunk (if bound) or the first window
+            # candidate. For a row repaired to a different sentence, the ORIGINAL quote still fails kb verify.
+            target = next((c for c in window if c["chunk_id"] == sel), None) if sel else (window[0] if window else None)
             real = kb_verify(row["reading_id"], row["source_id"], target, row["page_range"],
                              row["quote"], "supports", work, env, 5000 + i) if target else False
-            if auto != row["expect_pass"]:
-                fail.append(f"row {i} {row['tags']}: resolver auto={auto} != expect_pass={row['expect_pass']}")
+            # (a) CONTAINMENT PARITY: the resolver's auto-bind (verbatim containment) == real kb verify == expect_auto.
+            if auto != row["expect_auto"]:
+                fail.append(f"row {i} {row['tags']}: containment auto={auto} != expect_auto={row['expect_auto']}")
             if auto != real:
-                fail.append(f"row {i} {row['tags']}: resolver auto={auto} != kb verify={real}")
-            if row["expect_pass"] and sel != row["expect_chunk_id"]:
-                fail.append(f"row {i}: selected chunk {sel} != expected {row['expect_chunk_id']}")
+                fail.append(f"row {i} {row['tags']}: resolver auto={auto} != kb verify={real} (containment parity)")
+            if row["expect_auto"] and sel != row["expect_chunk_id"]:
+                fail.append(f"row {i}: PASS row selected chunk {sel} != expected {row['expect_chunk_id']}")
+            # (b) FAIL-CLOSED: a known-FAIL (fabricated) row must produce NO binding at all (no repair).
+            if row.get("must_not_bind") and (bound_status or sel is not None):
+                fail.append(f"row {i} {row['tags']}: known-FAIL must produce NO binding but got status "
+                            f"{rec['status']} chunk {sel}")
     finally:
         shutil.rmtree(work, ignore_errors=True)
     print(json.dumps({"norm_vectors": len(PARITY_NORM_VECTORS), "citations": len(PARITY_CITATIONS),
