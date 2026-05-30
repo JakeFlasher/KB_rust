@@ -19,8 +19,12 @@ This module does two separable things:
     version and the chunk-hash recipe are reproducible anywhere and are always
     asserted; the ``libpdfium`` binary is an external, machine-local artifact, so
     its absence is reported as "not provisioned" (a NOTE, not a failure) while a
-    PRESENT-but-mismatched library is a hard, fail-closed abort. ``--require-ingest-ready``
-    promotes "not provisioned" to a hard failure for the pre-ingest gate.
+    PRESENT-but-mismatched library is a hard, fail-closed abort -- UNLESS a
+    committed equivalence proof (``v1_libpdfium_equivalence_proof.json``) attests
+    this exact host build extracts byte-identical text (a proven-equivalent build
+    of the same Pdfium source version), in which case it is accepted on the merit
+    of that proof rather than disabled. ``--require-ingest-ready`` promotes "not
+    provisioned" to a hard failure for the pre-ingest gate.
 
 The chunk-hash recipe is proven binary-independently: the recorded hashes in the
 merged manifest are recomputed from their canonical-JSON envelope and asserted
@@ -55,7 +59,15 @@ CARGO_LOCK = ROOT / "Cargo.lock"
 CHUNKS_MANIFEST = OUT / "chunks_manifest.json"
 KB_BINARY = ROOT / "target/debug/kb"
 LOCK_PATH = REGISTRY / "v1_reproducibility_lock.json"
+EQUIVALENCE_PROOF = REGISTRY / "v1_libpdfium_equivalence_proof.json"
 STATUS_PATH = OUT / "v1_reproducibility_status.json"  # gitignored: machine capture
+
+# Single source of truth for the proven-equivalent acceptance gate: a host
+# libpdfium whose SHA differs from the pin is accepted only when a committed
+# proof attests this exact build extracts byte-identical text (see
+# prove_libpdfium_equivalence.py).
+sys.path.insert(0, str(REGISTRY))
+from prove_libpdfium_equivalence import proof_accepts  # noqa: E402
 
 DEFAULT_PDFIUM_LIBRARY = Path("/usr/lib/libpdfium.so")
 FROZEN_TIMESTAMP = "1970-01-01T00:00:00Z"
@@ -135,19 +147,26 @@ def pdfium_render_version_from_lock(lock_text: str) -> str | None:
     return match.group(1) if match else None
 
 
-def library_lock_status(actual_sha: str | None, pinned_sha: str, skip_check: bool) -> str:
+def library_lock_status(
+    actual_sha: str | None, pinned_sha: str, skip_check: bool, accepted_via_proof: bool = False
+) -> str:
     """Classify the libpdfium identity against the pin.
 
-    ``satisfied``        present and matches the pin.
-    ``mismatch_abort``   present but a different SHA (a re-ingest would diverge
-                         every chunk_hash) and the deviation flag is NOT set.
+    ``satisfied``          present and matches the pin.
+    ``satisfied_via_proof`` present, a DIFFERENT SHA, but a committed equivalence
+                           proof attests this exact build extracts byte-identical
+                           text (a proven-equivalent parser, not a blind skip).
+    ``mismatch_abort``     present, a different SHA, no equivalence proof, and the
+                           deviation flag is NOT set (a re-ingest would diverge).
     ``deviation_recorded`` a mismatch the operator explicitly opted into.
-    ``not_provisioned``  absent on this host (an external, machine-local file).
+    ``not_provisioned``    absent on this host (an external, machine-local file).
     """
     if actual_sha is None:
         return "not_provisioned"
     if actual_sha == pinned_sha:
         return "satisfied"
+    if accepted_via_proof:
+        return "satisfied_via_proof"
     return "deviation_recorded" if skip_check else "mismatch_abort"
 
 
@@ -222,6 +241,16 @@ def resolve_libpdfium_path() -> Path:
     return Path(os.environ.get("KB_PDFIUM_LIBRARY", str(DEFAULT_PDFIUM_LIBRARY)))
 
 
+def load_equivalence_proof() -> dict[str, Any] | None:
+    """The committed proof (if any) that a different-SHA host build is byte-identical."""
+    if not EQUIVALENCE_PROOF.is_file():
+        return None
+    try:
+        return json.loads(EQUIVALENCE_PROOF.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return None
+
+
 def reproduce_chunk_hashes() -> dict[str, Any]:
     """Recompute EVERY recorded chunk hash from its canonical envelope.
 
@@ -277,10 +306,14 @@ def run_check(require_ingest_ready: bool, write_status: bool) -> tuple[dict[str,
         kb_status = "version_drift"
     kb_version_ok = kb_status != "version_drift"
 
-    # 3. libpdfium identity vs pin.
+    # 3. libpdfium identity vs pin. A different SHA is accepted only when a
+    # committed equivalence proof attests this exact host build extracts
+    # byte-identical text (a proven-equivalent parser), never by a blind skip.
     lib_path = resolve_libpdfium_path()
     lib_sha = sha256_file(lib_path) if lib_path.is_file() else None
-    lib_status = library_lock_status(lib_sha, pins["libpdfium_sha256"], skip_check)
+    proof = load_equivalence_proof()
+    accepted_via_proof = proof_accepts(lib_sha, pins["libpdfium_sha256"], proof)
+    lib_status = library_lock_status(lib_sha, pins["libpdfium_sha256"], skip_check, accepted_via_proof)
 
     # Binary-independent recipe proof over EVERY recorded chunk hash.
     repro = reproduce_chunk_hashes()
@@ -288,7 +321,7 @@ def run_check(require_ingest_ready: bool, write_status: bool) -> tuple[dict[str,
     # The pre-ingest readiness conjunction: every identity fact must be
     # provisioned and consistent.
     ingest_ready = (
-        lib_status in {"satisfied", "deviation_recorded"}
+        lib_status in {"satisfied", "satisfied_via_proof", "deviation_recorded"}
         and kb_status == "satisfied"
         and repro["status"] == "byte_identical"
     )
@@ -322,6 +355,11 @@ def run_check(require_ingest_ready: bool, write_status: bool) -> tuple[dict[str,
             "pinned_sha256": pins["libpdfium_sha256"],
             "status": lib_status,
             "deviation_flag": skip_check,
+            "accepted_via_proof": accepted_via_proof,
+            "equivalence_proof": (
+                {"verdict": proof.get("verdict"), "total_chunks_compared": proof.get("total_chunks_compared")}
+                if proof else None
+            ),
         },
         "chunk_hash_reproduction": repro,
         "ingest_ready": ingest_ready,
@@ -377,6 +415,9 @@ def self_test() -> int:
         "deviation_recorded": (library_lock_status("0" * 64, pin, True), "deviation_recorded"),
         "not_provisioned": (library_lock_status(None, pin, False), "not_provisioned"),
         "match_ignores_skip": (library_lock_status(pin, pin, True), "satisfied"),
+        "satisfied_via_proof": (library_lock_status("0" * 64, pin, False, True), "satisfied_via_proof"),
+        "mismatch_without_proof": (library_lock_status("0" * 64, pin, False, False), "mismatch_abort"),
+        "proof_beats_skip": (library_lock_status("0" * 64, pin, True, True), "satisfied_via_proof"),
     }
     for name, (got, want) in cases.items():
         if got != want:
@@ -394,7 +435,7 @@ def self_test() -> int:
         for f in failures:
             print(f"  - {f}")
         return 1
-    print("SELF-TEST PASSED (recipe + determinism + tamper + lock-status + version-parse)")
+    print("SELF-TEST PASSED (recipe + determinism + tamper + lock-status + proof-accept + version-parse)")
     return 0
 
 
