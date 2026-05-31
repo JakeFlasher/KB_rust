@@ -21,7 +21,6 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[3]
 REGISTRY = ROOT / "sources/cfa_legacy/_registry"
-CARDS = ROOT / "cards/cfa_legacy"
 CHUNKS = ROOT / "out/cfa_legacy/chunks_manifest.json"
 AUDIT = REGISTRY / "migration_quote_audit.json"
 CROSS = REGISTRY / "migration_cross_links.json"
