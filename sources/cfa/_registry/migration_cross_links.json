@@ -5,55 +5,80 @@
   "documented_pairs": [
     {
       "primary": "fa-amihud-mendelson-and-priced-liquidity-risk",
-      "counterparts": ["mt-liquidity-adjusted-capm", "mt-liquidity-premium-asset-pricing"],
+      "counterparts": [
+        "mt-liquidity-adjusted-capm",
+        "mt-liquidity-premium-asset-pricing"
+      ],
       "relation": "duplicate",
       "note": "cross-set: the Amihud-Mendelson / liquidity-adjusted-CAPM priced-liquidity result (reading-14 primary derivation; reading-22 fund-level application)."
     },
     {
       "primary": "fa-shleifer-vishny-limits-to-arbitrage",
-      "counterparts": ["mt-funding-liquidity-fire-sales", "be-limits-of-arbitrage"],
+      "counterparts": [
+        "mt-funding-liquidity-fire-sales",
+        "be-limits-of-arbitrage"
+      ],
       "relation": "duplicate",
       "note": "cross-set: performance-sensitive-capital limits-to-arbitrage (reading-14 primary derivation; reading-22 fund creation/redemption application; reading-10 behavioral owner)."
     },
     {
       "primary": "fa-liquidity-measurement-and-price-impact",
-      "counterparts": ["mt-roll-implicit-spread-estimator", "mt-kyle-lambda-market-depth-price-impact", "mt-price-impact-measures-amihud"],
+      "counterparts": [
+        "mt-roll-implicit-spread-estimator",
+        "mt-kyle-lambda-market-depth-price-impact",
+        "mt-price-impact-measures-amihud"
+      ],
       "relation": "strong-overlap",
       "note": "cross-set: Roll / Kyle / Amihud price-impact and implied-spread estimators (reading-14 primary derivations; reading-22 ETF liquidity-measurement application)."
     },
     {
       "primary": "fa-market-impact-transaction-costs-and-turbulence-breakdown",
-      "counterparts": ["mt-market-impact-price-concession", "mt-implementation-shortfall"],
+      "counterparts": [
+        "mt-market-impact-price-concession",
+        "mt-implementation-shortfall"
+      ],
       "relation": "strong-overlap",
       "note": "cross-set: market-impact / implementation-shortfall execution cost (reading-14 primary measures; reading-22 ETF best-execution application)."
     },
     {
       "primary": "fa-funding-spirals-and-fire-sales",
-      "counterparts": ["mt-funding-liquidity-fire-sales"],
+      "counterparts": [
+        "mt-funding-liquidity-fire-sales"
+      ],
       "relation": "strong-overlap",
       "note": "cross-set: the Brunnermeier-Pedersen margin / liquidity spiral (reading-14 primary FPR model; reading-22 repo-haircut and ETF-redemption channels)."
     },
     {
       "primary": "fa-market-liquidity-dimensions-and-no-arbitrage",
-      "counterparts": ["mt-three-dimensions-liquidity", "mt-liquidity-measures-spread-depth-resiliency"],
+      "counterparts": [
+        "mt-three-dimensions-liquidity",
+        "mt-liquidity-measures-spread-depth-resiliency"
+      ],
       "relation": "strong-overlap",
       "note": "cross-set: market-liquidity dimensions and measures (reading-14 owns the liquidity trichotomy and the spread/depth/resiliency measures; reading-22 puts them in a no-arbitrage framing)."
     },
     {
       "primary": "fa-liquidity-adjusted-var",
-      "counterparts": ["mt-funding-liquidity-fire-sales"],
+      "counterparts": [
+        "mt-funding-liquidity-fire-sales"
+      ],
       "relation": "complementary",
       "note": "cross-set: funding-liquidity / fire-sale risk feeding liquidity-adjusted VaR (reading-14 primary mechanism; reading-22 LVaR application)."
     },
     {
       "primary": "pa-transaction-based-attribution-and-trading-cost",
-      "counterparts": ["mt-implementation-shortfall", "mt-effective-cost-trade-benchmark"],
+      "counterparts": [
+        "mt-implementation-shortfall",
+        "mt-effective-cost-trade-benchmark"
+      ],
       "relation": "complementary",
       "note": "cross-set: implementation-shortfall / effective-cost trade benchmark (reading-14 execution-cost measures; reading-15 attribution absorption)."
     },
     {
       "primary": "fa-tracking-error-attribution-and-tco",
-      "counterparts": ["pa-transaction-based-attribution-and-trading-cost"],
+      "counterparts": [
+        "pa-transaction-based-attribution-and-trading-cost"
+      ],
       "relation": "complementary",
       "note": "cross-set: trading-cost / tracking-error attribution (reading-22 ETF total-cost-of-ownership; reading-15 transaction-based attribution)."
     }
@@ -61,7 +86,9 @@
   "released_card_allowlist": {
     "be-limits-of-arbitrage": {
       "reading_id": "10_behavioral_finance",
-      "backlinks": ["fa-shleifer-vishny-limits-to-arbitrage"]
+      "backlinks": [
+        "fa-shleifer-vishny-limits-to-arbitrage"
+      ]
     }
   },
   "skeleton_prose_rewrites": [
@@ -69,8 +96,520 @@
       "card_id": "fa-shleifer-vishny-limits-to-arbitrage",
       "find": "- `mt-funding-liquidity-fire-sales` and `mt-value-traders-arbitrageurs` (reading 14) derive the same performance-sensitive-capital limits-to-arbitrage mechanism from primary sources; this card applies it to the fund creation/redemption break.",
       "replace": "- `mt-funding-liquidity-fire-sales` (reading 14) derives the performance-sensitive-capital limits-to-arbitrage mechanism from primary sources; this card applies it to the fund creation/redemption break.",
-      "forbidden_see_also_mentions": ["mt-value-traders-arbitrageurs"],
+      "forbidden_see_also_mentions": [
+        "mt-value-traders-arbitrageurs"
+      ],
       "reason": "faithfulness review: mt-value-traders-arbitrageurs is a Harris value-trader/law-of-one-price taxonomy and does not derive the performance-sensitive-capital limits-to-arbitrage mechanism; the skeleton over-claimed by bundling it with mt-funding-liquidity-fire-sales. The emitter reads the read-only skeleton body verbatim, so this stale prose is rewritten deterministically to attribute the mechanism only to mt-funding-liquidity-fire-sales and drop the withdrawn counterpart."
     }
-  ]
+  ],
+  "deepening_allowlist": {
+    "rm-backtesting-investment-strategies": {
+      "reading_id": "11_risk_management",
+      "deepenings": [
+        {
+          "distilled_as": "rm-var-coverage-backtesting",
+          "source_id": "rm_christoffersen_2012_elements",
+          "kind": "extends",
+          "page_range": [
+            303,
+            303
+          ]
+        },
+        {
+          "distilled_as": "rm-density-forecast-backtesting-pit",
+          "source_id": "rm_christoffersen_2012_elements",
+          "kind": "extends",
+          "page_range": [
+            310,
+            310
+          ]
+        }
+      ]
+    },
+    "rm-credit-var-portfolio": {
+      "reading_id": "11_risk_management",
+      "deepenings": [
+        {
+          "distilled_as": "rm-basel-irb-asrf-derivation",
+          "source_id": "rm_mcneil_frey_embrechts_2015_qrm",
+          "kind": "extends",
+          "page_range": [
+            476,
+            476
+          ]
+        },
+        {
+          "distilled_as": "rm-credit-var-vasicek-asrf-irb",
+          "source_id": "rm_hull_2023_rmfi",
+          "kind": "extends",
+          "page_range": [
+            444,
+            444
+          ]
+        }
+      ]
+    },
+    "rm-delta-gamma-vega-pl-decomposition": {
+      "reading_id": "11_risk_management",
+      "deepenings": [
+        {
+          "distilled_as": "rm-nonlinear-portfolio-var-worst-case",
+          "source_id": "rm_bouchaud_potters_2003_theory_financial_risk",
+          "kind": "extends",
+          "page_range": [
+            242,
+            242
+          ]
+        }
+      ]
+    },
+    "rm-expected-shortfall-mechanics": {
+      "reading_id": "11_risk_management",
+      "deepenings": [
+        {
+          "distilled_as": "rm-conditional-evt-garch-tail",
+          "source_id": "rm_christoffersen_2012_elements",
+          "kind": "supporting-cite",
+          "page_range": [
+            148,
+            148
+          ]
+        },
+        {
+          "distilled_as": "rm-expected-shortfall-var-subadditivity-physics",
+          "source_id": "rm_bouchaud_potters_2003_theory_financial_risk",
+          "kind": "extends",
+          "page_range": [
+            197,
+            197
+          ]
+        },
+        {
+          "distilled_as": "rm-avar-smallest-coherent-dominating-var",
+          "source_id": "rm_follmer_schied_2025_stochastic_finance",
+          "kind": "extends",
+          "page_range": [
+            245,
+            245
+          ]
+        }
+      ]
+    },
+    "rm-integrated-firm-wide-risk-aggregation": {
+      "reading_id": "11_risk_management",
+      "deepenings": [
+        {
+          "distilled_as": "rm-euler-capital-allocation",
+          "source_id": "rm_mcneil_frey_embrechts_2015_qrm",
+          "kind": "extends",
+          "page_range": [
+            338,
+            338
+          ]
+        },
+        {
+          "distilled_as": "rm-risk-aggregation-frechet-bounds",
+          "source_id": "rm_mcneil_frey_embrechts_2015_qrm",
+          "kind": "extends",
+          "page_range": [
+            324,
+            324
+          ]
+        },
+        {
+          "distilled_as": "rm-component-var-euler-risk-budgeting",
+          "source_id": "rm_hull_2023_rmfi",
+          "kind": "supporting-cite",
+          "page_range": [
+            276,
+            276
+          ]
+        },
+        {
+          "distilled_as": "rm-tail-dependence-extreme-correlations",
+          "source_id": "rm_bouchaud_potters_2003_theory_financial_risk",
+          "kind": "supporting-cite",
+          "page_range": [
+            213,
+            213
+          ]
+        },
+        {
+          "distilled_as": "rm-sample-covariance-distortion-highdim",
+          "source_id": "rm_potters_bouchaud_2020_random_matrix_theory",
+          "kind": "extends",
+          "page_range": [
+            290,
+            290
+          ]
+        },
+        {
+          "distilled_as": "rm-rie-minimizes-out-of-sample-risk",
+          "source_id": "rm_potters_bouchaud_2020_random_matrix_theory",
+          "kind": "supporting-cite",
+          "page_range": [
+            349,
+            349
+          ]
+        }
+      ]
+    },
+    "rm-loss-distribution-anatomy": {
+      "reading_id": "11_risk_management",
+      "deepenings": [
+        {
+          "distilled_as": "rm-loss-distribution-shapes-by-risk-type",
+          "source_id": "rm_hull_2023_rmfi",
+          "kind": "extends",
+          "page_range": [
+            632,
+            632
+          ]
+        },
+        {
+          "distilled_as": "rm-heavy-tail-class-hierarchy",
+          "source_id": "rm_embrechts_kluppelberg_mikosch_1997_modelling_extremal_events",
+          "kind": "extends",
+          "page_range": [
+            61,
+            61
+          ]
+        },
+        {
+          "distilled_as": "rm-cumulant-expansion-nongaussian-correction",
+          "source_id": "rm_bouchaud_potters_2003_theory_financial_risk",
+          "kind": "extends",
+          "page_range": [
+            29,
+            29
+          ]
+        },
+        {
+          "distilled_as": "rm-crashes-as-outliers-drawdowns",
+          "source_id": "rm_sornette_2017_why_stock_markets_crash",
+          "kind": "extends",
+          "page_range": [
+            77,
+            77
+          ]
+        }
+      ]
+    },
+    "rm-operational-risk-quantification": {
+      "reading_id": "11_risk_management",
+      "deepenings": [
+        {
+          "distilled_as": "rm-compound-loss-panjer-recursion",
+          "source_id": "rm_mcneil_frey_embrechts_2015_qrm",
+          "kind": "extends",
+          "page_range": [
+            542,
+            542
+          ]
+        },
+        {
+          "distilled_as": "rm-operational-risk-sma-severity-frequency",
+          "source_id": "rm_hull_2023_rmfi",
+          "kind": "supporting-cite",
+          "page_range": [
+            463,
+            463
+          ]
+        },
+        {
+          "distilled_as": "rm-subexponential-single-big-jump",
+          "source_id": "rm_embrechts_kluppelberg_mikosch_1997_modelling_extremal_events",
+          "kind": "supporting-cite",
+          "page_range": [
+            49,
+            49
+          ]
+        },
+        {
+          "distilled_as": "rm-subexponential-aggregate-loss",
+          "source_id": "rm_embrechts_kluppelberg_mikosch_1997_modelling_extremal_events",
+          "kind": "supporting-cite",
+          "page_range": [
+            56,
+            56
+          ]
+        }
+      ]
+    },
+    "rm-portfolio-xva-aggregation": {
+      "reading_id": "11_risk_management",
+      "deepenings": [
+        {
+          "distilled_as": "rm-cva-exposure-hazard-rate-workflow",
+          "source_id": "rm_hull_2023_rmfi",
+          "kind": "supporting-cite",
+          "page_range": [
+            422,
+            423
+          ]
+        },
+        {
+          "distilled_as": "rm-credit-exposure-metrics",
+          "source_id": "rm_gregory_2020_xva_challenge",
+          "kind": "extends",
+          "page_range": [
+            304,
+            304
+          ]
+        },
+        {
+          "distilled_as": "rm-dva-bilateral-cva-price-symmetry",
+          "source_id": "rm_gregory_2020_xva_challenge",
+          "kind": "extends",
+          "page_range": [
+            509,
+            509
+          ]
+        },
+        {
+          "distilled_as": "rm-xva-taxonomy-colva-mva",
+          "source_id": "rm_gregory_2020_xva_challenge",
+          "kind": "extends",
+          "page_range": [
+            492,
+            492
+          ]
+        },
+        {
+          "distilled_as": "rm-kva-mva-funding-of-capital-and-margin",
+          "source_id": "rm_gregory_2020_xva_challenge",
+          "kind": "extends",
+          "page_range": [
+            572,
+            572
+          ]
+        },
+        {
+          "distilled_as": "rm-cva-as-spread-decomposition",
+          "source_id": "rm_gregory_2020_xva_challenge",
+          "kind": "supporting-cite",
+          "page_range": [
+            498,
+            498
+          ]
+        },
+        {
+          "distilled_as": "rm-fva-funding-cost-benefit",
+          "source_id": "rm_gregory_2020_xva_challenge",
+          "kind": "supporting-cite",
+          "page_range": [
+            545,
+            545
+          ]
+        },
+        {
+          "distilled_as": "rm-netting-collateral-risk-reduction",
+          "source_id": "rm_gregory_2020_xva_challenge",
+          "kind": "supporting-cite",
+          "page_range": [
+            147,
+            147
+          ]
+        }
+      ]
+    },
+    "rm-risk-measure-axioms": {
+      "reading_id": "11_risk_management",
+      "deepenings": [
+        {
+          "distilled_as": "rm-convex-risk-measures-dual-representation",
+          "source_id": "rm_mcneil_frey_embrechts_2015_qrm",
+          "kind": "extends",
+          "page_range": [
+            300,
+            300
+          ]
+        },
+        {
+          "distilled_as": "rm-coherent-risk-measure-axioms-practitioner",
+          "source_id": "rm_hull_2023_rmfi",
+          "kind": "supporting-cite",
+          "page_range": [
+            268,
+            268
+          ]
+        },
+        {
+          "distilled_as": "rm-volatility-inadequate-fat-tail-risk",
+          "source_id": "rm_bouchaud_potters_2003_theory_financial_risk",
+          "kind": "extends",
+          "page_range": [
+            193,
+            193
+          ]
+        },
+        {
+          "distilled_as": "rm-convex-risk-measure-axioms",
+          "source_id": "rm_follmer_schied_2025_stochastic_finance",
+          "kind": "extends",
+          "page_range": [
+            206,
+            206
+          ]
+        },
+        {
+          "distilled_as": "rm-acceptance-set-duality",
+          "source_id": "rm_follmer_schied_2025_stochastic_finance",
+          "kind": "extends",
+          "page_range": [
+            210,
+            210
+          ]
+        },
+        {
+          "distilled_as": "rm-robust-dual-representation",
+          "source_id": "rm_follmer_schied_2025_stochastic_finance",
+          "kind": "extends",
+          "page_range": [
+            219,
+            219
+          ]
+        }
+      ]
+    },
+    "rm-risk-type-taxonomy": {
+      "reading_id": "11_risk_management",
+      "deepenings": [
+        {
+          "distilled_as": "rm-counterparty-vs-lending-risk",
+          "source_id": "rm_gregory_2020_xva_challenge",
+          "kind": "supporting-cite",
+          "page_range": [
+            61,
+            61
+          ]
+        }
+      ]
+    },
+    "rm-scenario-analysis": {
+      "reading_id": "11_risk_management",
+      "deepenings": [
+        {
+          "distilled_as": "rm-bubble-prediction-discipline-contested",
+          "source_id": "rm_sornette_2017_why_stock_markets_crash",
+          "kind": "supporting-cite",
+          "page_range": [
+            372,
+            372
+          ]
+        }
+      ]
+    },
+    "rm-stress-testing": {
+      "reading_id": "11_risk_management",
+      "deepenings": [
+        {
+          "distilled_as": "rm-coherent-probability-weighted-stress-testing",
+          "source_id": "rm_christoffersen_2012_elements",
+          "kind": "extends",
+          "page_range": [
+            314,
+            314
+          ]
+        }
+      ]
+    },
+    "rm-value-added-active-return": {
+      "reading_id": "11_risk_management",
+      "deepenings": [
+        {
+          "distilled_as": "rm-in-sample-out-of-sample-risk-gap",
+          "source_id": "rm_potters_bouchaud_2020_random_matrix_theory",
+          "kind": "extends",
+          "page_range": [
+            348,
+            348
+          ]
+        }
+      ]
+    },
+    "rm-value-at-risk-notes": {
+      "reading_id": "11_risk_management",
+      "deepenings": [
+        {
+          "distilled_as": "rm-practitioner-evt-pot-historical-simulation",
+          "source_id": "rm_hull_2023_rmfi",
+          "kind": "supporting-cite",
+          "page_range": [
+            299,
+            299
+          ]
+        },
+        {
+          "distilled_as": "rm-dynamic-vs-static-var-hs-critique",
+          "source_id": "rm_christoffersen_2012_elements",
+          "kind": "extends",
+          "page_range": [
+            36,
+            37
+          ]
+        },
+        {
+          "distilled_as": "rm-nongaussian-var-first-principles",
+          "source_id": "rm_bouchaud_potters_2003_theory_financial_risk",
+          "kind": "extends",
+          "page_range": [
+            196,
+            196
+          ]
+        }
+      ]
+    },
+    "rm-var-and-es-taxonomy": {
+      "reading_id": "11_risk_management",
+      "deepenings": [
+        {
+          "distilled_as": "rm-mda-regular-variation-frechet",
+          "source_id": "rm_embrechts_kluppelberg_mikosch_1997_modelling_extremal_events",
+          "kind": "extends",
+          "page_range": [
+            142,
+            142
+          ]
+        },
+        {
+          "distilled_as": "rm-gpd-pot-threshold",
+          "source_id": "rm_embrechts_kluppelberg_mikosch_1997_modelling_extremal_events",
+          "kind": "extends",
+          "page_range": [
+            365,
+            365
+          ]
+        },
+        {
+          "distilled_as": "rm-initial-margin-var-es-simm",
+          "source_id": "rm_gregory_2020_xva_challenge",
+          "kind": "extends",
+          "page_range": [
+            243,
+            243
+          ]
+        },
+        {
+          "distilled_as": "rm-extreme-value-gumbel-frechet-var",
+          "source_id": "rm_bouchaud_potters_2003_theory_financial_risk",
+          "kind": "extends",
+          "page_range": [
+            194,
+            194
+          ]
+        },
+        {
+          "distilled_as": "rm-var-non-coherence-diversification",
+          "source_id": "rm_follmer_schied_2025_stochastic_finance",
+          "kind": "supporting-cite",
+          "page_range": [
+            241,
+            241
+          ]
+        }
+      ]
+    }
+  },
+  "deepening_note": "Released live rm-* cards enriched by the 48-row _deepenings.md pass (each adds a supporting/extends source citation + a ## See Also prose note for the distilled-as relationship; no card_edges). Separate from released_card_allowlist (the 14/15/22 cross-link backlinks derived from documented_pairs). check_v1_card_hash_invariance + check_migration_cross_links #4 take the UNION as the set of released cards permitted to change vs the v0 baseline."
 }

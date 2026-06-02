@@ -18,7 +18,13 @@ citations:
     page_range: [156, 157]
     quote: "We focus on two main kinds of model for extreme values."
     edge_type: "supports"
-card_hash: "84c7d55a483ebbd59317b013b27b35343142fe6a9649936fc5f5caf37b0b5fe6"
+  - source_id: "rm_christoffersen_2012_elements"
+    chunk_id: "rm_christoffersen_2012_elements:p314:0435"
+    chunk_hash: "7b0f31afeb9e10614749d90e702b258f97df171f638e55639d97d46745d8fa55"
+    page_range: [314, 314]
+    quote: "does not tell the portfolio manager anything about the probability of the scenario"
+    edge_type: "supports"
+card_hash: "36ee00ba8629f1f3a3e20a7789d4807ba41a9e09ada683303d0a6a97edd91ba0"
 ---
 # Stress Testing — Coherent-Risk-Measure Duals and Reverse Stress
 
@@ -97,6 +103,7 @@ A subtle point on **plausibility**: the reverse-stress plausibility constraint i
 - [rm-scenario-analysis](./rm-scenario-analysis.md) — Batch-2 sibling card on deterministic scenario construction (the operational practice that stress testing generalises).
 - [rm-expected-shortfall-mechanics](./rm-expected-shortfall-mechanics.md) — Batch-2 sibling card on ES + its dual representation (the canonical example of a coherent measure with stress-test interpretation).
 - [rm-risk-measure-axioms](./rm-risk-measure-axioms.md) — Batch-0 card on the coherence axioms that underpin the dual-representation framework.
+- `rm-coherent-probability-weighted-stress-testing` (Christoffersen (2012) Elements of FRM, pp.314) — deepening that extends this card.
 
 ## Escalate to Raw When
 

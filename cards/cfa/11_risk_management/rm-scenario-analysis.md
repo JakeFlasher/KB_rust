@@ -18,7 +18,13 @@ citations:
     page_range: [323, 323]
     quote: "Aggregation Based on Stressing Risk Factors"
     edge_type: "supports"
-card_hash: "8ab02a799ea93e9d90bba649ed6f7e103338e6b9f38118f96d6714c3b751e742"
+  - source_id: "rm_sornette_2017_why_stock_markets_crash"
+    chunk_id: "rm_sornette_2017_why_stock_markets_crash:p371:0451"
+    chunk_hash: "689bb72218df0d213caaa0dbc39faca3affc90a02380d4c2f614971bd5aab869"
+    page_range: [372, 372]
+    quote: "there is always a ﬁnite probability that the bubble will deﬂate smoothly without a crash"
+    edge_type: "supports"
+card_hash: "c9f93e27d887ef57fce434d25344cb5d2860a1aa0e942debf0f6f946bdec08ca"
 ---
 # Scenario Analysis — Forward-Looking Loss Aggregation under Designed Scenarios
 
@@ -96,6 +102,7 @@ A subtle structural point: scenario analysis **does not require a calibrated fac
 - [rm-loss-distribution-anatomy](./rm-loss-distribution-anatomy.md) — Batch-0 loss-distribution machinery that scenario analysis complements.
 - [rm-risk-type-taxonomy](./rm-risk-type-taxonomy.md) — Batch-0 card framing the risk types that scenarios probe.
 - [rm-stress-testing](./rm-stress-testing.md) — Batch-2 sibling card on stress-testing as a generalisation of scenario analysis (coherent-risk-measure dual + EVT tail framing).
+- `rm-bubble-prediction-discipline-contested` (Sornette (2017) Why Stock Markets Crash, pp.372) — deepening that adds a supporting source to this card.
 
 ## Escalate to Raw When
 

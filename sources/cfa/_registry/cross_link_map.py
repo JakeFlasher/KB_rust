@@ -27,6 +27,7 @@ READING_OF_PREFIX = {
     "mt-": "14_microstructure_and_trading",
     "pa-": "15_performance_and_attribution",
     "be-": "10_behavioral_finance",
+    "rm-": "11_risk_management",
 }
 # The three readings emitted by emit_migration_readings.py (their cards are
 # rendered from skeletons, so their cross-links are injected at emit time). Any

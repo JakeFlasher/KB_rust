@@ -12,7 +12,31 @@ citations:
     page_range: [535, 535]
     quote: "We further assume that the rvs N and (Xk) are independent; in that case we refer to (13.9) as a compound sum."
     edge_type: "defines"
-card_hash: "6d60c54d50c360390931b04da72573f32309a8d6be83324c8cb775ebc7d0c389"
+  - source_id: "rm_mcneil_frey_embrechts_2015_qrm"
+    chunk_id: "rm_mcneil_frey_embrechts_2015_qrm:p542:0789"
+    chunk_hash: "64b9043e250f41b7d78c3507fb56c6ecb36ab0882a004f7f88188679e1a592a8"
+    page_range: [542, 542]
+    quote: "can be reduced to a simple recursion. For this we introduce the"
+    edge_type: "supports"
+  - source_id: "rm_hull_2023_rmfi"
+    chunk_id: "rm_hull_2023_rmfi:p462:0628"
+    chunk_hash: "f4c8aceade241ed30539a6e2857460c223ea248d2f0d6b0377f091848c08819f"
+    page_range: [463, 463]
+    quote: "For loss frequency, the natural probability distribution to use is a Poisson distribution."
+    edge_type: "supports"
+  - source_id: "rm_embrechts_kluppelberg_mikosch_1997_modelling_extremal_events"
+    chunk_id: "rm_embrechts_kluppelberg_mikosch_1997_modelling_extremal_events:p049:0045"
+    chunk_hash: "9a045d2a662a363c6c1df9a26dc52b2c9fd7956ba9e30f1dfa2c9406565d0f05"
+    page_range: [49, 49]
+    quote: "the tail of the df of the sum Sn is mainly determined by the tail of the df of the maximum Mn"
+    edge_type: "supports"
+  - source_id: "rm_embrechts_kluppelberg_mikosch_1997_modelling_extremal_events"
+    chunk_id: "rm_embrechts_kluppelberg_mikosch_1997_modelling_extremal_events:p056:0052"
+    chunk_hash: "aeec16933302f3c0fd0151dfd40ef68a7348a67e331a01ef77338c1e491f46c4"
+    page_range: [56, 56]
+    quote: "yield an estimate of the total claim amount distribution for large claims"
+    edge_type: "supports"
+card_hash: "c25c626f964da2675b656e23401b9b083d9c2b0ab06ace668a31b0483b349c93"
 ---
 # Operational Risk Quantification — McNeil Ch.13 §13.2
 
@@ -109,6 +133,10 @@ Within v11 Risk Management:
 - [rm-operational-risk-basics](./rm-operational-risk-basics.md) — Batch-3 sibling card defining the AMA / SA / BIA tier structure and event-type × business-line cell taxonomy.
 - [rm-loss-distribution-anatomy](./rm-loss-distribution-anatomy.md) — Batch-0 card on the loss-distribution machinery that the compound sum feeds.
 - [rm-integrated-firm-wide-risk-aggregation](./rm-integrated-firm-wide-risk-aggregation.md) — Batch-3 sibling card on firm-wide aggregation; operational risk is one silo in the firm-wide tree.
+- `rm-compound-loss-panjer-recursion` (McNeil-Frey-Embrechts (2015) QRM, pp.542) — deepening that extends this card.
+- `rm-operational-risk-sma-severity-frequency` (Hull (2023) RMFI, pp.463) — deepening that adds a supporting source to this card.
+- `rm-subexponential-single-big-jump` (Embrechts-Klueppelberg-Mikosch (1997) Modelling Extremal Events, pp.49) — deepening that adds a supporting source to this card.
+- `rm-subexponential-aggregate-loss` (Embrechts-Klueppelberg-Mikosch (1997) Modelling Extremal Events, pp.56) — deepening that adds a supporting source to this card.
 
 ## Escalate to Raw When
 

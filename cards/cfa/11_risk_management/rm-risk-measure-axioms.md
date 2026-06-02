@@ -24,7 +24,43 @@ citations:
     page_range: [296, 297]
     quote: "Definition 8.1. A risk measure that satisfies the monotonicity, translation invariance and convexity axioms is called a convex measure of risk"
     edge_type: "supports"
-card_hash: "dc5bf63c0f68996bd0be38d9ffc722ed81dba825c10c371d2f364f9ebafabc6a"
+  - source_id: "rm_mcneil_frey_embrechts_2015_qrm"
+    chunk_id: "rm_mcneil_frey_embrechts_2015_qrm:p300:0429"
+    chunk_hash: "63a412467d72b5d0b939a2e9d59a8c0e2eb2de24675514a3547f324a9fd5fd66"
+    page_range: [300, 300]
+    quote: "risk measures of the form (8.6) are frequently"
+    edge_type: "supports"
+  - source_id: "rm_hull_2023_rmfi"
+    chunk_id: "rm_hull_2023_rmfi:p268:0359"
+    chunk_hash: "1f6cd2558f83c7d6760b26c6da5315d10f534ebb22e0914c67da70b5e48e4d5a"
+    page_range: [268, 268]
+    quote: "Risk measures satisfying all four conditions given above are referred to as coherent."
+    edge_type: "supports"
+  - source_id: "rm_bouchaud_potters_2003_theory_financial_risk"
+    chunk_id: "rm_bouchaud_potters_2003_theory_financial_risk:p193:0253"
+    chunk_hash: "dcc635d71c7be0b13e36be67fe7fde4e9d6d75b0359d46970d65e8f71dc9eb53"
+    page_range: [193, 193]
+    quote: "a Gaussian model for the price fluctuations is never justified for the extreme events"
+    edge_type: "supports"
+  - source_id: "rm_follmer_schied_2025_stochastic_finance"
+    chunk_id: "rm_follmer_schied_2025_stochastic_finance:p206:0244"
+    chunk_hash: "bc99d4bd78ad883b3f402ea197e89bc1fe5795675319ef9fde3998e4368dbd06"
+    page_range: [206, 206]
+    quote: "Together with convexity and monotonicity, it singles out the class of convex risk measures"
+    edge_type: "supports"
+  - source_id: "rm_follmer_schied_2025_stochastic_finance"
+    chunk_id: "rm_follmer_schied_2025_stochastic_finance:p210:0249"
+    chunk_hash: "ac7e27fd0724a39ab9a6e5372e76417a294a1dffe83635f9474071c90c38fb12"
+    page_range: [210, 210]
+    quote: "we can then define the capital requirement"
+    edge_type: "supports"
+  - source_id: "rm_follmer_schied_2025_stochastic_finance"
+    chunk_id: "rm_follmer_schied_2025_stochastic_finance:p218:0260"
+    chunk_hash: "a93807d9eea35753eed5acf7877864f30c7ae117e94f1d7f90657e0c08bd6bcb"
+    page_range: [219, 219]
+    quote: "Any convex risk measure ρ on X is of the form"
+    edge_type: "supports"
+card_hash: "0089afa465fe7c78bccff70fae3e55da890a73758540913bc68cb6dadd50e9c3"
 ---
 # Coherent and Convex Risk-Measure Axioms
 
@@ -120,6 +156,12 @@ The Artzner-Delbaen-Eber-Heath theorem establishes a **dual representation**: ev
 - [rm-var-and-es-taxonomy](./rm-var-and-es-taxonomy.md) — applies the coherence axioms side-by-side to VaR and ES; subadditivity contrast.
 - [rm-expected-shortfall-mechanics](./rm-expected-shortfall-mechanics.md) — derives ES as the canonical coherent measure with the dual integral representation.
 - [rm-integrated-firm-wide-risk-aggregation](./rm-integrated-firm-wide-risk-aggregation.md) — uses subadditivity for the aggregation bound (`ρ(L_total) ≤ Σ ρ(L_silo)`) and the Euler-principle capital allocation.
+- `rm-convex-risk-measures-dual-representation` (McNeil-Frey-Embrechts (2015) QRM, pp.300) — deepening that extends this card.
+- `rm-coherent-risk-measure-axioms-practitioner` (Hull (2023) RMFI, pp.268) — deepening that adds a supporting source to this card.
+- `rm-volatility-inadequate-fat-tail-risk` (Bouchaud-Potters (2003) Theory of Financial Risk, pp.193) — deepening that extends this card.
+- `rm-convex-risk-measure-axioms` (Foellmer-Schied (2025) Stochastic Finance, pp.206) — deepening that extends this card.
+- `rm-acceptance-set-duality` (Foellmer-Schied (2025) Stochastic Finance, pp.210) — deepening that extends this card.
+- `rm-robust-dual-representation` (Foellmer-Schied (2025) Stochastic Finance, pp.219) — deepening that extends this card.
 
 ## Escalate to Raw When
 

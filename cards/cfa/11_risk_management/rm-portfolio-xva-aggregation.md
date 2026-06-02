@@ -30,7 +30,55 @@ citations:
     page_range: [498, 499]
     quote: "A CDO is a financial instrument for the securitization of a portfolio of credit products such as bonds, loans or mortgages."
     edge_type: "supports"
-card_hash: "0b3449e6f7d2a153b704448d89eabb6952da4e8df8ba5a70d0d88d7f8a3985bb"
+  - source_id: "rm_hull_2023_rmfi"
+    chunk_id: "rm_hull_2023_rmfi:p422:0572"
+    chunk_hash: "de5f8cd54203e8a275dcbaf59822f84687a5ea9bfc4fbd88aa5bbe89addeddf2"
+    page_range: [422, 423]
+    quote: "This is an estimate of its expected loss from a default by the counterparty."
+    edge_type: "supports"
+  - source_id: "rm_gregory_2020_xva_challenge"
+    chunk_id: "rm_gregory_2020_xva_challenge:p304:0460"
+    chunk_hash: "7b23d0afd2444a5f25c5935b53654376c511c79d6bb48a3b3417807c35bd9e89"
+    page_range: [304, 304]
+    quote: "This single average EPE number is often called a ‘loan equivalent’, as the average amount effectively lent to the counterparty in question."
+    edge_type: "supports"
+  - source_id: "rm_gregory_2020_xva_challenge"
+    chunk_id: "rm_gregory_2020_xva_challenge:p509:0756"
+    chunk_hash: "69c16484fdd5e3cc1cdd8e6f131b96981006a865fb95841d341a351d0c72cb0a"
+    page_range: [509, 509]
+    quote: "The DVA term above is the mirror image of CVA based on the ENE, the party’s own"
+    edge_type: "supports"
+  - source_id: "rm_gregory_2020_xva_challenge"
+    chunk_id: "rm_gregory_2020_xva_challenge:p491:0731"
+    chunk_hash: "78f583fe6e6e0b4818e7108d5d73c88a6f1e3f9bf13089b4cb8fb58cd2e26821"
+    page_range: [492, 492]
+    quote: "KVA (capital value adjustment). Defines the cost of holding capital (typically"
+    edge_type: "supports"
+  - source_id: "rm_gregory_2020_xva_challenge"
+    chunk_id: "rm_gregory_2020_xva_challenge:p572:0850"
+    chunk_hash: "7cab0555e76612db051f137d953b14ae76b61dff9f784c85db786840e6e7bd3d"
+    page_range: [572, 572]
+    quote: "Capital value adjustment (KVA) is commonly used to define such costs."
+    edge_type: "supports"
+  - source_id: "rm_gregory_2020_xva_challenge"
+    chunk_id: "rm_gregory_2020_xva_challenge:p498:0740"
+    chunk_hash: "8a06877eb6e2ca3898dc5bbd94e497059a9cf04c8a008840f7139483732dbfd1"
+    page_range: [498, 498]
+    quote: "it represents CVA as a product of the EPE"
+    edge_type: "supports"
+  - source_id: "rm_gregory_2020_xva_challenge"
+    chunk_id: "rm_gregory_2020_xva_challenge:p544:0810"
+    chunk_hash: "424ff06f81649516b77dece0e5df6b788bed062cc9f313ca35ac43f913e9fafc"
+    page_range: [545, 545]
+    quote: "FVA can be either positive or negative depending on the relative size of the FCA and FBA terms above."
+    edge_type: "supports"
+  - source_id: "rm_gregory_2020_xva_challenge"
+    chunk_id: "rm_gregory_2020_xva_challenge:p147:0218"
+    chunk_hash: "899dc30fefca094ff4d196fc09e22604de3184cd633867603bb9c0239633df69"
+    page_range: [147, 147]
+    quote: "Close-out netting is the single biggest risk mitigant for counterparty risk and has been critical for the growth of the OTC derivatives market."
+    edge_type: "supports"
+card_hash: "d03cc6569926315e24b47ad5ad0ea0c86f6a7fe3591ad4cde87f1652a69abeb1"
 ---
 # Portfolio XVA Aggregation — McNeil Ch.17 §17.2-§17.3 + Crepey-Bielecki-Brigo Ch.1-2
 
@@ -145,6 +193,14 @@ Within v11 Risk Management:
 - [rm-credit-risk-metrics-restatement](./rm-credit-risk-metrics-restatement.md) — Batch-3 sibling card on PD / LGD / EAD inputs.
 - [rm-credit-var-portfolio](./rm-credit-var-portfolio.md) — Batch-3 sibling card on portfolio credit-VaR (the loss-distribution layer).
 - [rm-integrated-firm-wide-risk-aggregation](./rm-integrated-firm-wide-risk-aggregation.md) — Batch-3 sibling card on firm-wide aggregation that XVA capital sits inside.
+- `rm-cva-exposure-hazard-rate-workflow` (Hull (2023) RMFI, pp.422-423) — deepening that adds a supporting source to this card.
+- `rm-credit-exposure-metrics` (Gregory (2020) The xVA Challenge, pp.304) — deepening that extends this card.
+- `rm-dva-bilateral-cva-price-symmetry` (Gregory (2020) The xVA Challenge, pp.509) — deepening that extends this card.
+- `rm-xva-taxonomy-colva-mva` (Gregory (2020) The xVA Challenge, pp.492) — deepening that extends this card.
+- `rm-kva-mva-funding-of-capital-and-margin` (Gregory (2020) The xVA Challenge, pp.572) — deepening that extends this card.
+- `rm-cva-as-spread-decomposition` (Gregory (2020) The xVA Challenge, pp.498) — deepening that adds a supporting source to this card.
+- `rm-fva-funding-cost-benefit` (Gregory (2020) The xVA Challenge, pp.545) — deepening that adds a supporting source to this card.
+- `rm-netting-collateral-risk-reduction` (Gregory (2020) The xVA Challenge, pp.147) — deepening that adds a supporting source to this card.
 
 ## Escalate to Raw When
 

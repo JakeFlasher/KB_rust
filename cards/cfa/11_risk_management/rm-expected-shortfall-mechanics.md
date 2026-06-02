@@ -18,7 +18,25 @@ citations:
     page_range: [308, 308]
     quote: "(8.24) A risk measure of the form (8.24) is also known as a spectral risk measure, and the function φ is called the spectrum."
     edge_type: "supports"
-card_hash: "1f14dbc7a9d3539cac6bb7a1f2efe47b593513bcb7e4bbc3e4ad5596774e6228"
+  - source_id: "rm_christoffersen_2012_elements"
+    chunk_id: "rm_christoffersen_2012_elements:p147:0196"
+    chunk_hash: "3fa3b5c854b35793558fd198565cebcd0d9406f7209a90e9d1772151cb9112d2"
+    page_range: [148, 148]
+    quote: "we will proceed to apply EVT to the standardized returns and then combine EVT with the variance models estimated in Chapters 4 and 5 in order to calculate VaRs"
+    edge_type: "supports"
+  - source_id: "rm_bouchaud_potters_2003_theory_financial_risk"
+    chunk_id: "rm_bouchaud_potters_2003_theory_financial_risk:p196:0258"
+    chunk_hash: "1c47b06b3a30c902c121c40fa9615e2dffa3316abf5b2abb8ca91863a4ccf7d4"
+    page_range: [197, 197]
+    quote: "value-at-risk is not subadditive in general"
+    edge_type: "supports"
+  - source_id: "rm_follmer_schied_2025_stochastic_finance"
+    chunk_id: "rm_follmer_schied_2025_stochastic_finance:p245:0291"
+    chunk_hash: "4fe5b5ad1600cb99b59bb722157fbcef7dd8026aa327f917a31297a68b1ef85c"
+    page_range: [245, 245]
+    quote: "AV@Rλ is a coherent risk measure that is continuous from below"
+    edge_type: "supports"
+card_hash: "9e7c4fdb180f4eaae8fbc0710a654ebd350e59f555b0e325ba1e8e0773cea312"
 ---
 # Expected Shortfall Mechanics — McNeil Ch.2 §2.3.4 + Ch.8 §8.2
 
@@ -109,6 +127,9 @@ Estimator-side, ES inherits the estimator pipeline from VaR (parametric / histor
 - [rm-var-and-es-taxonomy](./rm-var-and-es-taxonomy.md) — Batch-0 side-by-side VaR vs ES with the coherence contrast.
 - [rm-loss-distribution-anatomy](./rm-loss-distribution-anatomy.md) — Batch-0 loss-distribution conventions ES reads.
 - [rm-parametric-var](./rm-parametric-var.md), [rm-historical-simulation-var](./rm-historical-simulation-var.md), [rm-monte-carlo-var](./rm-monte-carlo-var.md) — Batch-2 estimator cards whose pipelines extend to ES with extra variance.
+- `rm-conditional-evt-garch-tail` (Christoffersen (2012) Elements of FRM, pp.148) — deepening that adds a supporting source to this card.
+- `rm-expected-shortfall-var-subadditivity-physics` (Bouchaud-Potters (2003) Theory of Financial Risk, pp.197) — deepening that extends this card.
+- `rm-avar-smallest-coherent-dominating-var` (Foellmer-Schied (2025) Stochastic Finance, pp.245) — deepening that extends this card.
 
 ## Escalate to Raw When
 

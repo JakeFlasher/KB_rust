@@ -18,7 +18,13 @@ citations:
     page_range: [26, 26]
     quote: "The best-known type of risk is probably market risk: the risk of a change in the value of a financial position or portfolio due to changes in the value of the underlying components"
     edge_type: "defines"
-card_hash: "7583f0da898f64ddde8ccefa9065362239e4abc1497525e882556575785ab56b"
+  - source_id: "rm_gregory_2020_xva_challenge"
+    chunk_id: "rm_gregory_2020_xva_challenge:p060:0080"
+    chunk_hash: "0081e33b86dbe88d343f118f8cd82aaf55b8349397714d275a942a953c305af0"
+    page_range: [61, 61]
+    quote: "Only one party takes lending risk. A bondholder takes considerable credit risk, but an issuer of a bond does not face a loss if the buyer of the bond defaults."
+    edge_type: "supports"
+card_hash: "73b9b7157ce9fe319f0c06bea0576c26cd2a338acd2c245d701e1899eb898fa3"
 ---
 # Risk-Type Taxonomy — Market / Credit / Liquidity / Operational / Business / Regulatory
 
@@ -102,6 +108,7 @@ Boundary discipline matters: liquidity-risk depth past the bid-ask / funding-cos
 - [rm-loss-distribution-anatomy](./rm-loss-distribution-anatomy.md) — the loss-variable convention `L = −ΔV` applied uniformly across types.
 - [rm-integrated-firm-wide-risk-aggregation](./rm-integrated-firm-wide-risk-aggregation.md) — Batch-3 card developing the modular-vs-integrated aggregation contrast and the copula-based diversification quantification.
 - [rm-operational-risk-basics](./rm-operational-risk-basics.md) — Batch-3 card developing the operational-risk loss-distribution approach (LDA frequency × severity model).
+- `rm-counterparty-vs-lending-risk` (Gregory (2020) The xVA Challenge, pp.61) — deepening that adds a supporting source to this card.
 
 ## Escalate to Raw When
 

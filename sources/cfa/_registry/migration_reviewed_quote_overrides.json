@@ -128,6 +128,20 @@
       "original_quote": "This can be seen as a built-in",
       "final_quote": "the process (αmin t (Q))t=0,1,...,T is a Q-supermartingale for any such Q",
       "reason": "review (BF/RM faithfulness, RLCR R2): authored fragment omits the supermartingale criterion; re-anchored to the clean prose stating the minimal-penalty Q-supermartingale property the card cites"
+    },
+    {
+      "card_id": "rm-integrated-firm-wide-risk-aggregation",
+      "source_id": "rm_mcneil_frey_embrechts_2015_qrm",
+      "original_quote": "The Euler principle is sometimes called allocation by the gradient, and it obviously gives a full allocation of the risk capital",
+      "final_quote": "We now look at a number of specific examples of Euler allocations",
+      "reason": "review (RM deepening, RLCR R2): authored quote U+FFFE-broken at 'obviously'; the auto re-anchor hit a 'Capital Allocation 317 Definition 8.41' header fragment; re-anchored to the clean on-page (338) prose introducing the specific Euler capital-allocation examples."
+    },
+    {
+      "card_id": "rm-var-and-es-taxonomy",
+      "source_id": "rm_embrechts_kluppelberg_mikosch_1997_modelling_extremal_events",
+      "original_quote": "for u large, the following approximation suggests itself",
+      "final_quote": "then suggests a method for estimating the far end tail of F by estimating F u",
+      "reason": "review (RM deepening, RLCR R2): EKM p365 is a math-mangled POT/GPD page; the bare approximation phrase did not bind to a libpdfium chunk (zero_match); re-anchored to the clean on-page run stating the Peaks-Over-Threshold tail-estimation approximation (the GPD-POT-threshold subject of the deepening)."
     }
   ]
 }

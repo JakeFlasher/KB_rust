@@ -18,7 +18,31 @@ citations:
     page_range: [296, 297]
     quote: "Consider a probability space (Ω, F ,P) and a linear space M ⊂ L0(Ω, F ,P), where L0(Ω, F ,P) denotes the set of all random variables on (Ω, F ,P) that are almost surely (a.s.) finite."
     edge_type: "supports"
-card_hash: "df09ada25441db0555869ba17515a7a4837fe7f846cb015521efb1006b6077ec"
+  - source_id: "rm_hull_2023_rmfi"
+    chunk_id: "rm_hull_2023_rmfi:p631:0874"
+    chunk_hash: "cddcc51bff72a09eea6e9eab085bfb3e17e09dfb03624fe28a535a37242ecf1d"
+    page_range: [632, 632]
+    quote: "The loss probability distributions for market, credit, and operational risk are very"
+    edge_type: "supports"
+  - source_id: "rm_embrechts_kluppelberg_mikosch_1997_modelling_extremal_events"
+    chunk_id: "rm_embrechts_kluppelberg_mikosch_1997_modelling_extremal_events:p061:0057"
+    chunk_hash: "e247008845b1033eae828f8984bf6b4fa7e18a560e8cfe8e6752ccd773d637a5"
+    page_range: [61, 61]
+    quote: "We have already encountered members of the following three"
+    edge_type: "supports"
+  - source_id: "rm_bouchaud_potters_2003_theory_financial_risk"
+    chunk_id: "rm_bouchaud_potters_2003_theory_financial_risk:p028:0029"
+    chunk_hash: "3f9fd2cce34c0ac31c079446bff23802fcc779b59229bdca640bdf6db7e86bf3"
+    page_range: [29, 29]
+    quote: "the cumulants simply add when one sums independent random variables"
+    edge_type: "supports"
+  - source_id: "rm_sornette_2017_why_stock_markets_crash"
+    chunk_id: "rm_sornette_2017_why_stock_markets_crash:p077:0083"
+    chunk_hash: "1d0fd7ff8f1b198167b079e38cf7bc3ed1734d7035d6a8d68e3095f507f19819"
+    page_range: [77, 77]
+    quote: "is defined as a persistent decrease in the price over consecutive"
+    edge_type: "supports"
+card_hash: "917e99f0212445b5827512604bd91242442bae984afefe395a4eb3e481b2de67"
 ---
 # Loss-Distribution Anatomy — P&L Convention, Horizons, and Mapping
 
@@ -98,6 +122,10 @@ The **acceptance-set framing** provides the formal bridge between the loss distr
 - [rm-risk-measure-axioms](./rm-risk-measure-axioms.md) — the four coherence axioms applied to functionals of `F_L`.
 - [rm-var-and-es-taxonomy](./rm-var-and-es-taxonomy.md) — `VaR_α` and `ES_α` as the two canonical functionals read off `F_L`.
 - [rm-sensitivity-versus-simulation](./rm-sensitivity-versus-simulation.md) — the two ways to construct `F_L` from the factor mapping `V(X)`.
+- `rm-loss-distribution-shapes-by-risk-type` (Hull (2023) RMFI, pp.632) — deepening that extends this card.
+- `rm-heavy-tail-class-hierarchy` (Embrechts-Klueppelberg-Mikosch (1997) Modelling Extremal Events, pp.61) — deepening that extends this card.
+- `rm-cumulant-expansion-nongaussian-correction` (Bouchaud-Potters (2003) Theory of Financial Risk, pp.29) — deepening that extends this card.
+- `rm-crashes-as-outliers-drawdowns` (Sornette (2017) Why Stock Markets Crash, pp.77) — deepening that extends this card.
 
 ## Escalate to Raw When
 

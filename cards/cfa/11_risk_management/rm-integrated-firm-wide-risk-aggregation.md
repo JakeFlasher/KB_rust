@@ -18,7 +18,43 @@ citations:
     page_range: [525, 526]
     quote: "An essential difference between operational risk, on the one hand, and market and credit risk, on the other, is that operational risk has no upside for a bank."
     edge_type: "supports"
-card_hash: "ce591a981bb58e1b1d8507dc21b3d705715b6189175e9c35246de9474946f0bc"
+  - source_id: "rm_mcneil_frey_embrechts_2015_qrm"
+    chunk_id: "rm_mcneil_frey_embrechts_2015_qrm:p337:0483"
+    chunk_hash: "ad23c10d1547caae252db45c2ee1e9e89aa31ce2281e181853c8746b0d14d3b5"
+    page_range: [338, 338]
+    quote: "We now look at a number of specific examples of Euler allocations"
+    edge_type: "supports"
+  - source_id: "rm_mcneil_frey_embrechts_2015_qrm"
+    chunk_id: "rm_mcneil_frey_embrechts_2015_qrm:p324:0463"
+    chunk_hash: "4567799654940c7860d51566b611f7580fea4ed56bb9d24f44bed2f7e6a4527f"
+    page_range: [324, 324]
+    quote: "there can be complex interactions between risk factors that would require even higher capital than indicated by the sum of losses due to single-risk-factor stresses"
+    edge_type: "supports"
+  - source_id: "rm_hull_2023_rmfi"
+    chunk_id: "rm_hull_2023_rmfi:p276:0370"
+    chunk_hash: "fe563221dda08fc17f51c47f72f554e0e5e280ee93c5e2ea60069e02a2740a5f"
+    page_range: [276, 276]
+    quote: "the total VaR for a portfolio is the sum of the component VaRs for the subportfolios."
+    edge_type: "supports"
+  - source_id: "rm_bouchaud_potters_2003_theory_financial_risk"
+    chunk_id: "rm_bouchaud_potters_2003_theory_financial_risk:p213:0280"
+    chunk_hash: "e2bacebff7785139dd107c05052c721482e9f7c9a602f910695387a9a77e9ff6"
+    page_range: [213, 213]
+    quote: "are correlated Gaussian variables with a correlation coefficient ρ"
+    edge_type: "supports"
+  - source_id: "rm_potters_bouchaud_2020_random_matrix_theory"
+    chunk_id: "rm_potters_bouchaud_2020_random_matrix_theory:p289:0346"
+    chunk_hash: "a3a1db38fe30a52eaee04441c5a1b6261f3f792f70fcf36ad155fdeba5918915"
+    page_range: [290, 290]
+    quote: "the spectrum of the sample covariance matrix E is always wider (for"
+    edge_type: "supports"
+  - source_id: "rm_potters_bouchaud_2020_random_matrix_theory"
+    chunk_id: "rm_potters_bouchaud_2020_random_matrix_theory:p349:0421"
+    chunk_hash: "d7d4fe743e3c9abacd498c48ffd5aebd222ca1683205cf2e390f19f696a78730"
+    page_range: [349, 349]
+    quote: "the optimal rie (19.26) actually minimizes the out-of-sample risk within the class of rotationally invariant estimators"
+    edge_type: "supports"
+card_hash: "1da6b23eaf3bae89dcade5eb17144ee2dc15547d7d545d7f21865ec2e0ccd1f2"
 ---
 # Integrated Firm-Wide Risk Aggregation — McNeil Ch.8 §8.4-§8.5
 
@@ -113,6 +149,12 @@ Within v11 Risk Management:
 - [rm-operational-risk-basics](./rm-operational-risk-basics.md) — Batch-3 sibling card on the operational-risk silo whose loss distribution feeds this aggregation.
 - [rm-credit-var-portfolio](./rm-credit-var-portfolio.md) — Batch-3 sibling card on the credit-risk silo.
 - [rm-portfolio-xva-aggregation](./rm-portfolio-xva-aggregation.md) — Batch-3 sibling card; the Euler allocation introduced here is reused for per-trade XVA attribution.
+- `rm-euler-capital-allocation` (McNeil-Frey-Embrechts (2015) QRM, pp.338) — deepening that extends this card.
+- `rm-risk-aggregation-frechet-bounds` (McNeil-Frey-Embrechts (2015) QRM, pp.324) — deepening that extends this card.
+- `rm-component-var-euler-risk-budgeting` (Hull (2023) RMFI, pp.276) — deepening that adds a supporting source to this card.
+- `rm-tail-dependence-extreme-correlations` (Bouchaud-Potters (2003) Theory of Financial Risk, pp.213) — deepening that adds a supporting source to this card.
+- `rm-sample-covariance-distortion-highdim` (Potters-Bouchaud (2020) A First Course in RMT, pp.290) — deepening that extends this card.
+- `rm-rie-minimizes-out-of-sample-risk` (Potters-Bouchaud (2020) A First Course in RMT, pp.349) — deepening that adds a supporting source to this card.
 
 ## Escalate to Raw When
 

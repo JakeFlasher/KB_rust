@@ -18,7 +18,19 @@ citations:
     page_range: [373, 374]
     quote: "Moreover, the following lemma shows that the sequence of VaR violation indicators (It) forms a Bernoulli trials process, i.e."
     edge_type: "supports"
-card_hash: "c696f4d4d3286628a4e17869c7ddc3440e2eb835c8a314b02d37d4b0196a8903"
+  - source_id: "rm_christoffersen_2012_elements"
+    chunk_id: "rm_christoffersen_2012_elements:p303:0418"
+    chunk_hash: "faf425fead956d2a265962bd70fd974c8b79b65ba30275deab9461367ef5c5d4"
+    page_range: [303, 303]
+    quote: "distributed independently over time as a Bernoulli variable that takes the value 1 with probability p and the value 0 with probability (1 − p)"
+    edge_type: "supports"
+  - source_id: "rm_christoffersen_2012_elements"
+    chunk_id: "rm_christoffersen_2012_elements:p310:0429"
+    chunk_hash: "433b4708fbf6091ef9559e674d307bfd50dabdd9b70c7b56f43c5e1ce037c3c3"
+    page_range: [310, 310]
+    quote: "the time series of observed probabilities"
+    edge_type: "supports"
+card_hash: "45853b70800063a0eb171fed84837c185eaa0be47ca2ac574fc99f910d67a224"
 ---
 # Backtesting Investment Strategies — L1 Notes Exceedance-Counting Framework
 
@@ -93,6 +105,8 @@ The **ES-specific gap** matters going forward: under the elicitability framework
 
 - [rm-value-at-risk-notes](./rm-value-at-risk-notes.md) — Batch-1 sibling card defining the VaR statistic that backtesting evaluates.
 - [rm-var-and-es-taxonomy](./rm-var-and-es-taxonomy.md) — Batch-0 card with the VaR-vs-ES coherence contrast that motivates the ES-backtesting gap.
+- `rm-var-coverage-backtesting` (Christoffersen (2012) Elements of FRM, pp.303) — deepening that extends this card.
+- `rm-density-forecast-backtesting-pit` (Christoffersen (2012) Elements of FRM, pp.310) — deepening that extends this card.
 
 ## Escalate to Raw When
 

@@ -24,7 +24,13 @@ citations:
     page_range: [3190, 3191]
     quote: "Because the Sharpe ratio is defined as ERpf R p , the equation shows that M2 can be thought of as a rescaling of the Sharpe ratio that allows for easier comparisons among different portfolios."
     edge_type: "supports"
-card_hash: "98170abf7995f406c1c9893d3b856a5c383ef7cad04bcccf963f29468217ea24"
+  - source_id: "rm_potters_bouchaud_2020_random_matrix_theory"
+    chunk_id: "rm_potters_bouchaud_2020_random_matrix_theory:p347:0419"
+    chunk_hash: "3dda4d636ae9926fafd77a89715b9630fb0cd50ea6903656a2f7c72bd396b47e"
+    page_range: [348, 348]
+    quote: "the predicted risk Rin underestimates the realized risk Rout by a factor (1 − q), and in the extreme case N = T"
+    edge_type: "supports"
+card_hash: "9fd6787cc1caf60220cba91a3439a4b21f18078b8615b0df33ecb164a8629a97"
 ---
 # Value-Added and Active Return — L1 Notes Risk-Budget-Consumption Framing
 
@@ -119,6 +125,7 @@ The **realized vs expected active return** distinction is the standard ex-post /
 - [../09_portfolio_management_and_asset_pricing/pm-active-management-and-alpha](../09_portfolio_management_and_asset_pricing/pm-active-management-and-alpha.md) — 09 vertical's manager-skill / alpha-capacity / alpha-decay framing under the Pedersen extension.
 - [../09_portfolio_management_and_asset_pricing/pm-tracking-error-and-active-risk](../09_portfolio_management_and_asset_pricing/pm-tracking-error-and-active-risk.md) — 09 vertical's portfolio-construction framing of tracking error as an active-management constraint.
 - [rm-risk-objectives-and-tolerance](./rm-risk-objectives-and-tolerance.md) — Batch-0 card defining the IPS tracking-error bound that the active-return decomposition consumes.
+- `rm-in-sample-out-of-sample-risk-gap` (Potters-Bouchaud (2020) A First Course in RMT, pp.348) — deepening that extends this card.
 
 ## Escalate to Raw When
 

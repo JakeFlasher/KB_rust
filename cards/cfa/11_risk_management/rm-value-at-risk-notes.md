@@ -24,7 +24,25 @@ citations:
     page_range: [86, 87]
     quote: "This result is routinely used in the variance–covariance approach (also known as the delta-normal approach) to computing risk measures."
     edge_type: "supports"
-card_hash: "a2bf076bf9eb2d9e5fbe3e4769b2b7253ff97a9a4047c0a201d60c520c9533bd"
+  - source_id: "rm_hull_2023_rmfi"
+    chunk_id: "rm_hull_2023_rmfi:p298:0402"
+    chunk_hash: "64f2a9a89badb31306ddf416c4384dd7a58c2b137a3bc273c6abb1c836b05b4f"
+    page_range: [299, 299]
+    quote: "Extreme value theory (EVT) is the term used to describe the science of estimating the tails of a distribution."
+    edge_type: "supports"
+  - source_id: "rm_christoffersen_2012_elements"
+    chunk_id: "rm_christoffersen_2012_elements:p036:0039"
+    chunk_hash: "815a6c806dc2349e25db0756447cfe7ff1edda8832c1749502fa49729baae25f"
+    page_range: [36, 36]
+    quote: "ignore well-established stylized facts on return dependence, most importantly variance"
+    edge_type: "supports"
+  - source_id: "rm_bouchaud_potters_2003_theory_financial_risk"
+    chunk_id: "rm_bouchaud_potters_2003_theory_financial_risk:p195:0257"
+    chunk_hash: "6f950a971fd171914de47083d9019411c773a75ef7be6f338887f04d5e248e4f"
+    page_range: [196, 196]
+    quote: "the measure of risk as a loss probability keeps its meaning even if the variance is infinite"
+    edge_type: "supports"
+card_hash: "0d6cfd62adc74cacb5f7321790a3ddc699e861e43804dd3ff8da0379ad362045"
 ---
 # Value-at-Risk — L1 Notes Definition and Estimation Framework
 
@@ -107,6 +125,9 @@ The L1 source draw a boundary against **backtesting**: VaR estimation gives a fo
 - [rm-parametric-var](./rm-parametric-var.md) — Batch-2 depth treatment of the parametric estimator route.
 - [rm-historical-simulation-var](./rm-historical-simulation-var.md) — Batch-2 depth treatment of the historical-simulation estimator route.
 - [rm-monte-carlo-var](./rm-monte-carlo-var.md) — Batch-2 depth treatment of the Monte Carlo estimator route.
+- `rm-practitioner-evt-pot-historical-simulation` (Hull (2023) RMFI, pp.299) — deepening that adds a supporting source to this card.
+- `rm-dynamic-vs-static-var-hs-critique` (Christoffersen (2012) Elements of FRM, pp.36) — deepening that extends this card.
+- `rm-nongaussian-var-first-principles` (Bouchaud-Potters (2003) Theory of Financial Risk, pp.196) — deepening that extends this card.
 
 ## Escalate to Raw When
 

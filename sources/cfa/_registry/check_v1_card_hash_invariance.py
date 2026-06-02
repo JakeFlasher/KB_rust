@@ -46,8 +46,11 @@ def hashes(text: str) -> dict[str, str]:
 
 
 def allowlist() -> set[str]:
+    """Released cards permitted to change vs the v0 baseline: the cross-link
+    back-link allowlist (14/15/22 migration) UNION the deepening allowlist (the 15
+    live rm-* cards enriched by the BF/RM `_deepenings.md` pass)."""
     doc = json.loads(CROSS_LINKS.read_text(encoding="utf-8"))
-    return set(doc.get("released_card_allowlist", {}))
+    return set(doc.get("released_card_allowlist", {})) | set(doc.get("deepening_allowlist", {}))
 
 
 def quarantine_ids() -> set[str]:

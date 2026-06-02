@@ -24,7 +24,37 @@ citations:
     page_range: [307, 308]
     quote: "examples of law-invariant risk measures areVaR and expected shortfall. On the other hand, the stress-test risk measures of Example 8.9 are typically not law invariant."
     edge_type: "supports"
-card_hash: "eb59028ad01da7b6ced5bf3823d512e967600d44586e407d3457e60c93d992b1"
+  - source_id: "rm_embrechts_kluppelberg_mikosch_1997_modelling_extremal_events"
+    chunk_id: "rm_embrechts_kluppelberg_mikosch_1997_modelling_extremal_events:p142:0134"
+    chunk_hash: "20ff0a127f06f26ff768e0c42789425af234aea99747c4de643c5000ab0b045d"
+    page_range: [142, 142]
+    quote: "consists of dfs F whose right tail is regularly varying with index"
+    edge_type: "supports"
+  - source_id: "rm_embrechts_kluppelberg_mikosch_1997_modelling_extremal_events"
+    chunk_id: "rm_embrechts_kluppelberg_mikosch_1997_modelling_extremal_events:p365:0348"
+    chunk_hash: "c759ab919a82971c50f37bb42a360a94dc16ea589a1cfec03d53c270fc2bef1d"
+    page_range: [365, 365]
+    quote: "then suggests a method for estimating the far end tail of F by estimating F u"
+    edge_type: "supports"
+  - source_id: "rm_gregory_2020_xva_challenge"
+    chunk_id: "rm_gregory_2020_xva_challenge:p242:0364"
+    chunk_hash: "037fe7fc555d907bf927c7ca6db2e036687b298e40ddcf2c201bf09bc128ffcf"
+    page_range: [243, 243]
+    quote: "has a natural application for defining initial margin requirements for given MPoRs and confidence levels."
+    edge_type: "supports"
+  - source_id: "rm_bouchaud_potters_2003_theory_financial_risk"
+    chunk_id: "rm_bouchaud_potters_2003_theory_financial_risk:p194:0255"
+    chunk_hash: "bb8026a84f1a88fac983e8b1a8999ec8611bc529194333fa296b4f3e4fbfeb35"
+    page_range: [194, 194]
+    quote: "For N large, this distribution takes a universal shape that only depends on the asymptotic"
+    edge_type: "supports"
+  - source_id: "rm_follmer_schied_2025_stochastic_finance"
+    chunk_id: "rm_follmer_schied_2025_stochastic_finance:p241:0287"
+    chunk_hash: "7207c4c39936c6826bd33f22c992d6e530cfa718153d8bfbcc7a03ce79ba61a6"
+    page_range: [241, 241]
+    quote: "risk measure. Thus, V@Rλ may penalize diversification instead of encouraging"
+    edge_type: "supports"
+card_hash: "54234af5d6ffea150904bca735157d10c8fa5c3f19b5abb9ca5380f2710a8f4d"
 ---
 # VaR and Expected Shortfall — Side-by-Side Taxonomy
 
@@ -98,6 +128,11 @@ For the standalone case where `L ∼ N(μ, σ²)`, both measures admit closed fo
 - [rm-risk-measure-axioms](./rm-risk-measure-axioms.md) — the four coherence axioms (M/T/H/S) with the subadditivity failure of VaR.
 - [rm-loss-distribution-anatomy](./rm-loss-distribution-anatomy.md) — the loss-variable convention `L = −ΔV` that both VaR and ES read.
 - [rm-expected-shortfall-mechanics](./rm-expected-shortfall-mechanics.md) — Batch-2 derivation of the closed-form ES expressions and the ES/VaR ratio for Student-t tails.
+- `rm-mda-regular-variation-frechet` (Embrechts-Klueppelberg-Mikosch (1997) Modelling Extremal Events, pp.142) — deepening that extends this card.
+- `rm-gpd-pot-threshold` (Embrechts-Klueppelberg-Mikosch (1997) Modelling Extremal Events, pp.365) — deepening that extends this card.
+- `rm-initial-margin-var-es-simm` (Gregory (2020) The xVA Challenge, pp.243) — deepening that extends this card.
+- `rm-extreme-value-gumbel-frechet-var` (Bouchaud-Potters (2003) Theory of Financial Risk, pp.194) — deepening that extends this card.
+- `rm-var-non-coherence-diversification` (Foellmer-Schied (2025) Stochastic Finance, pp.241) — deepening that adds a supporting source to this card.
 
 ## Escalate to Raw When
 

@@ -349,7 +349,7 @@ schema_version: cacg.v0
 
 | id | title | citations | card_hash |
 |----|-------|-----------|-----------|
-| rm-backtesting-investment-strategies | Backtesting Investment Strategies — L1 Notes Exceedance-Counting Framework | 2 | c696f4d4d328… |
+| rm-backtesting-investment-strategies | Backtesting Investment Strategies — L1 Notes Exceedance-Counting Framework | 4 | 45853b708000… |
 | rm-basel-capital-accord-evolution | Basel Capital Accords I → II → II.5 → III: The Regulatory-Capital Workflow | 1 | b0529336cc5f… |
 | rm-bernoulli-poisson-mixture-credit | Bernoulli and Poisson Mixture Credit Models (incl. CreditRisk+) | 1 | 1b1b60ff30c8… |
 | rm-chinese-cb-default-cohort-attribution | Chinese CB Default-Cohort Attribution Under McNeil Portfolio Credit-Risk Framework | 7 | e4bb4e3fb7f6… |
@@ -358,48 +358,48 @@ schema_version: cacg.v0
 | rm-cramer-lundberg-heavy-tail-ruin | Cramér-Lundberg Ruin Theory for Heavy-Tailed (Subexponential) Claims | 1 | 19dde75c27f6… |
 | rm-crash-as-critical-point | Crashes as Endogenous Critical Points: Imitation, Herding, and the Order-Disorder Transition | 1 | 2e9e8578dce2… |
 | rm-credit-risk-metrics-restatement | Credit Risk Metrics Restatement — McNeil Ch.10 §10.1 + §10.1.5 | 2 | d9dd2bbd2571… |
-| rm-credit-var-portfolio | Portfolio Credit-VaR — McNeil Ch.11 §11.1-§11.3 | 2 | c9f7e3dc2ed4… |
-| rm-delta-gamma-vega-pl-decomposition | Delta-Gamma-Vega P&L Decomposition — L1 Notes Portfolio-Risk-Reporting Framing | 2 | 52fc3d8fde0d… |
+| rm-credit-var-portfolio | Portfolio Credit-VaR — McNeil Ch.11 §11.1-§11.3 | 4 | 4bbf4b764059… |
+| rm-delta-gamma-vega-pl-decomposition | Delta-Gamma-Vega P&L Decomposition — L1 Notes Portfolio-Risk-Reporting Framing | 3 | e17a6d4b8673… |
 | rm-dynamic-conditional-correlation-dcc | Dynamic Conditional Correlation (DCC) | 2 | 07a8b1bd8851… |
 | rm-economic-capital-vs-regulatory-capital | Economic Capital: Unexpected Loss and the Rating-Linked Confidence Level | 1 | 035ca8df54d6… |
 | rm-elliptical-spherical-distributions | Spherical and Elliptical Distributions: When VaR Behaves and Markowitz Holds | 1 | 015d958b9955… |
 | rm-evt-gpd-pot-hill | Applied EVT: GPD, Peaks-Over-Threshold, and the Hill Estimator | 1 | cc64f596bc81… |
-| rm-expected-shortfall-mechanics | Expected Shortfall Mechanics — McNeil Ch.2 §2.3.4 + Ch.8 §8.2 | 2 | 1f14dbc7a9d3… |
+| rm-expected-shortfall-mechanics | Expected Shortfall Mechanics — McNeil Ch.2 §2.3.4 + Ch.8 §8.2 | 5 | 9e7c4fdb180f… |
 | rm-exposure-profile-shapes | Exposure-Profile Shapes: Square-Root-of-Time and (T−t)√t Rules | 1 | 1f70b0eb741c… |
 | rm-filtered-historical-simulation | Filtered Historical Simulation (FHS) | 1 | e961b4bb49ac… |
 | rm-fisher-tippett-ev-types | Fisher-Tippett-Gnedenko Theorem and the Three Extreme-Value Types | 1 | ab94617faf14… |
 | rm-frtb-stressed-es-market-risk-capital | FRTB: Stressed Expected Shortfall as the Market-Risk Capital Engine | 1 | c397d8eea6b4… |
 | rm-garch-conditional-variance | The GARCH(1,1) Conditional-Variance Engine | 2 | e57b9f51cdf6… |
 | rm-historical-simulation-var | Historical-Simulation VaR — McNeil Ch.9 §9.2.3-§9.2.4 | 1 | d0083ac9890a… |
-| rm-integrated-firm-wide-risk-aggregation | Integrated Firm-Wide Risk Aggregation — McNeil Ch.8 §8.4-§8.5 | 2 | ce591a981bb5… |
+| rm-integrated-firm-wide-risk-aggregation | Integrated Firm-Wide Risk Aggregation — McNeil Ch.8 §8.4-§8.5 | 8 | 1da6b23eaf3b… |
 | rm-kusuoka-law-invariant-representation | Kusuoka Representation: Every Law-Invariant Coherent Measure Is a Mixture of AV@R | 3 | 02b1ea42b305… |
 | rm-levy-stable-paretian-tails | Lévy-Stable Laws and Paretian Tails: The Physics Origin of Fat Tails | 1 | 2cb3ea84d8c5… |
-| rm-loss-distribution-anatomy | Loss-Distribution Anatomy — P&L Convention, Horizons, and Mapping | 2 | df09ada25441… |
+| rm-loss-distribution-anatomy | Loss-Distribution Anatomy — P&L Convention, Horizons, and Mapping | 6 | 917e99f02124… |
 | rm-lppl-precursor-formula-contested | The Log-Periodic Power-Law (LPPL/LPPLS) Crash Precursor — A Contested Stance | 1 | 8c2f694fb16a… |
 | rm-marchenko-pastur-law | Marchenko-Pastur Law: The Null Spectrum of a Sample Covariance Matrix | 2 | 2e7817c2d10b… |
 | rm-monte-carlo-var | Monte Carlo VaR — McNeil Ch.9 §9.2.5-§9.2.7 | 1 | a41742a86f98… |
 | rm-operational-risk-basics | Operational Risk Basics — McNeil Ch.13 §13.1 | 1 | d672956c9ee5… |
-| rm-operational-risk-quantification | Operational Risk Quantification — McNeil Ch.13 §13.2 | 1 | 6d60c54d50c3… |
+| rm-operational-risk-quantification | Operational Risk Quantification — McNeil Ch.13 §13.2 | 5 | c25c626f964d… |
 | rm-optimal-nongaussian-portfolios | Optimal Non-Gaussian / Minimum-VaR Portfolios | 1 | b9846543e609… |
 | rm-parametric-var | Parametric (Variance-Covariance) VaR — McNeil Ch.9 §9.2.2 | 2 | 61a2bc8ed155… |
-| rm-portfolio-xva-aggregation | Portfolio XVA Aggregation — McNeil Ch.17 §17.2-§17.3 + Crepey-Bielecki-Brigo Ch.1-2 | 4 | 0b3449e6f7d2… |
+| rm-portfolio-xva-aggregation | Portfolio XVA Aggregation — McNeil Ch.17 §17.2-§17.3 + Crepey-Bielecki-Brigo Ch.1-2 | 12 | d03cc6569926… |
 | rm-raroc-risk-adjusted-return-on-capital | RAROC / RORAC: Risk-Adjusted Performance on Economic Capital | 1 | c0df236bff5e… |
 | rm-real-rate-policy-rate-notes | Real Rate vs Policy Rate — L1 Notes Risk-Input Decomposition | 2 | 863c3e9ab26a… |
-| rm-risk-measure-axioms | Coherent and Convex Risk-Measure Axioms | 3 | dc5bf63c0f68… |
+| rm-risk-measure-axioms | Coherent and Convex Risk-Measure Axioms | 9 | 0089afa465fe… |
 | rm-risk-objectives-and-tolerance | Risk Objectives and Risk Tolerance — Risk-Management Entry Point | 1 | 16f637624330… |
-| rm-risk-type-taxonomy | Risk-Type Taxonomy — Market / Credit / Liquidity / Operational / Business / Regulatory | 2 | 7583f0da898f… |
+| rm-risk-type-taxonomy | Risk-Type Taxonomy — Market / Credit / Liquidity / Operational / Business / Regulatory | 3 | 73b9b7157ce9… |
 | rm-rotationally-invariant-estimator | Rotationally-Invariant Estimator (RIE) and the Oracle Shrinkage Function | 2 | 33df4383fff9… |
 | rm-sa-ccr-counterparty-capital | Regulatory Counterparty Capital: SA-CCR, EAD = α×EEPE, and the CVA Capital Ladder | 2 | fdf3f6880d50… |
-| rm-scenario-analysis | Scenario Analysis — Forward-Looking Loss Aggregation under Designed Scenarios | 2 | 8ab02a799ea9… |
+| rm-scenario-analysis | Scenario Analysis — Forward-Looking Loss Aggregation under Designed Scenarios | 3 | c9f93e27d887… |
 | rm-sensitivity-versus-simulation | Sensitivity-Based vs Simulation-Based Risk Measurement | 2 | 253ea2de816e… |
-| rm-stress-testing | Stress Testing — Coherent-Risk-Measure Duals and Reverse Stress | 2 | 84c7d55a483e… |
+| rm-stress-testing | Stress Testing — Coherent-Risk-Measure Duals and Reverse Stress | 3 | 36ee00ba8629… |
 | rm-tail-dependence-coefficients | Coefficients of Tail Dependence | 1 | aae24644ca50… |
 | rm-threshold-credit-models | Threshold (Latent-Variable) Credit Models and Their Copula Structure | 1 | 4d4578bff1a9… |
 | rm-time-consistency-recursiveness | Time Consistency, Recursiveness and the Supermartingale Criterion | 4 | da6c8df26342… |
 | rm-truncated-levy-clt-crossover | Truncated Lévy Flights and the Lévy→Gaussian Convergence Crossover | 1 | 177bccbe9d80… |
-| rm-value-added-active-return | Value-Added and Active Return — L1 Notes Risk-Budget-Consumption Framing | 3 | 98170abf7995… |
-| rm-value-at-risk-notes | Value-at-Risk — L1 Notes Definition and Estimation Framework | 3 | a2bf076bf9eb… |
-| rm-var-and-es-taxonomy | VaR and Expected Shortfall — Side-by-Side Taxonomy | 3 | eb59028ad01d… |
+| rm-value-added-active-return | Value-Added and Active Return — L1 Notes Risk-Budget-Consumption Framing | 4 | 9fd6787cc1ca… |
+| rm-value-at-risk-notes | Value-at-Risk — L1 Notes Definition and Estimation Framework | 6 | 0d6cfd62adc7… |
+| rm-var-and-es-taxonomy | VaR and Expected Shortfall — Side-by-Side Taxonomy | 8 | 54234af5d6ff… |
 | rm-wrong-way-risk-taxonomy | Wrong-Way and Right-Way Risk in CVA | 2 | 0ef63842241a… |
 
 ## 14_microstructure_and_trading

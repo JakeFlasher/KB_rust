@@ -10,21 +10,21 @@
   "frozen_appended_event_timestamp": "1970-01-01T00:00:00Z",
   "frozen_byte_identical": true,
   "frozen_run_a_hashes": {
-    "INDEX.md": "304a4328173605171bc25cf2c802e6c2cf782126c24ec1270fce804eb169b829",
-    "cards_manifest.json": "c14db25baae017b7b321e4363c0fc6533c0cdfbe7d3850dc60c2515e51316363",
-    "summaries.json": "d5cdf294772663dfe399af6bc4e388f50fbb8b711d456dda8e4d86b37295aa41"
+    "INDEX.md": "bd213a17410f1726e9122764a0b495e66d38d57b524098273e86e64d741fe114",
+    "cards_manifest.json": "78eeae90a36184b80afc77e8da9071efd90f3fb13aba15760fc646a3b2231e6d",
+    "summaries.json": "c190eda4f28dbecf5c284209fa69e89ee6e95baa8235792c02deea70a4b6f368"
   },
   "frozen_run_b_hashes": {
-    "INDEX.md": "304a4328173605171bc25cf2c802e6c2cf782126c24ec1270fce804eb169b829",
-    "cards_manifest.json": "c14db25baae017b7b321e4363c0fc6533c0cdfbe7d3850dc60c2515e51316363",
-    "summaries.json": "d5cdf294772663dfe399af6bc4e388f50fbb8b711d456dda8e4d86b37295aa41"
+    "INDEX.md": "bd213a17410f1726e9122764a0b495e66d38d57b524098273e86e64d741fe114",
+    "cards_manifest.json": "78eeae90a36184b80afc77e8da9071efd90f3fb13aba15760fc646a3b2231e6d",
+    "summaries.json": "c190eda4f28dbecf5c284209fa69e89ee6e95baa8235792c02deea70a4b6f368"
   },
   "kb_binary": "target/debug/kb",
   "method": "GATE 1 determinism: KB_FROZEN_CLOCK=1 kb index <one cards copy> into two --out dirs, byte-compare the 3 published artifacts. GATE 2 clock-invariance: a non-frozen run over the SAME input is byte-compared to the frozen run. GATE 3 supplementary: modify a card, index frozen vs non-frozen, compare the appended history-event timestamp.",
   "nonfrozen_run_hashes": {
-    "INDEX.md": "304a4328173605171bc25cf2c802e6c2cf782126c24ec1270fce804eb169b829",
-    "cards_manifest.json": "c14db25baae017b7b321e4363c0fc6533c0cdfbe7d3850dc60c2515e51316363",
-    "summaries.json": "d5cdf294772663dfe399af6bc4e388f50fbb8b711d456dda8e4d86b37295aa41"
+    "INDEX.md": "bd213a17410f1726e9122764a0b495e66d38d57b524098273e86e64d741fe114",
+    "cards_manifest.json": "78eeae90a36184b80afc77e8da9071efd90f3fb13aba15760fc646a3b2231e6d",
+    "summaries.json": "c190eda4f28dbecf5c284209fa69e89ee6e95baa8235792c02deea70a4b6f368"
   },
   "passed": true,
   "plan_negative_reconciliation": "Plan AC-9's negative assumes a non-frozen index injects a wall-clock timestamp into the published artifacts. The production kb index does not: the 3 published artifacts are clock-invariant (GATE 2), a stronger property. The frozen clock's observable effect is the audit sidecar (GATE 3). This harness therefore asserts clock-invariance of the published index and load-bearingness on the sidecar, instead of a published-artifact difference that cannot occur.",

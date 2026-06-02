@@ -18,7 +18,13 @@ citations:
     page_range: [349, 350]
     quote: "In Example 9.1 below we give an application of the delta–gamma approximation (9.9)."
     edge_type: "supports"
-card_hash: "52fc3d8fde0dc8b381124ec8ab10ad98e0540ab675a5cdaccc710e3b674a5481"
+  - source_id: "rm_bouchaud_potters_2003_theory_financial_risk"
+    chunk_id: "rm_bouchaud_potters_2003_theory_financial_risk:p242:0321"
+    chunk_hash: "394fb9ef6a5543f85b1291475d5df86e1d8bf5c4663624b4cd2a4e5e00beee42"
+    page_range: [242, 242]
+    quote: "We will surmise that this is due to a particularly large fluctuation of one explicative factor, say a = 1, that we will call the dominant factor"
+    edge_type: "supports"
+card_hash: "e17a6d4b867361c108582f91a41753e50f976a4951ec8ecf1159a0b39d61d9d3"
 ---
 # Delta-Gamma-Vega P&L Decomposition — L1 Notes Portfolio-Risk-Reporting Framing
 
@@ -96,6 +102,7 @@ The cross-Greeks **vanna `∂²V/∂S∂σ`** and **volga `∂²V/∂σ²`** typ
 - [rm-parametric-var](./rm-parametric-var.md) — Batch-2 card developing the second-order quadratic-form VaR from the Greek aggregation.
 - [../07_derivatives_and_volatility/deriv-greeks-overview](../07_derivatives_and_volatility/deriv-greeks-overview.md) — instrument-level Greek derivations (07 territory).
 - [../07_derivatives_and_volatility/deriv-delta-and-hedging](../07_derivatives_and_volatility/deriv-delta-and-hedging.md) — delta-hedging mechanics at instrument level (07 territory).
+- `rm-nonlinear-portfolio-var-worst-case` (Bouchaud-Potters (2003) Theory of Financial Risk, pp.242) — deepening that extends this card.
 
 ## Escalate to Raw When
 

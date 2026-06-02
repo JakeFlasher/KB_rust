@@ -18,7 +18,19 @@ citations:
     page_range: [465, 465]
     quote: "We now give a formal definition of a Poisson mixture model for counting variables that parallels the definition of a Bernoulli mixture model in Section 11.2.1."
     edge_type: "supports"
-card_hash: "c9f7e3dc2ed4c8129063e5bef34d584232decf65ba4003c7dea7ba73d07fb0d3"
+  - source_id: "rm_mcneil_frey_embrechts_2015_qrm"
+    chunk_id: "rm_mcneil_frey_embrechts_2015_qrm:p476:0690"
+    chunk_hash: "08405f7c5b322baa0e328d5a98f6a97d66e5b4c320ed96ad4f4e721d6a6a4057"
+    page_range: [476, 476]
+    quote: "The interesting part of equation (11.37) is, of course, the expression involving the standard normal df, and we now give a derivation"
+    edge_type: "supports"
+  - source_id: "rm_hull_2023_rmfi"
+    chunk_id: "rm_hull_2023_rmfi:p443:0602"
+    chunk_hash: "e6d4350b3ff4e96400e61ba4c4b78851dacceecbfc319b23f49217f7c0b19d14"
+    page_range: [444, 444]
+    quote: "as the Xth percentile of the default rate distribution during a period of length T."
+    edge_type: "supports"
+card_hash: "4bbf4b764059fe13f26c370982746bd1cd8c0becff4328df21edf9194e01209d"
 ---
 # Portfolio Credit-VaR — McNeil Ch.11 §11.1-§11.3
 
@@ -124,6 +136,8 @@ Within v11 Risk Management:
 - [rm-credit-risk-metrics-restatement](./rm-credit-risk-metrics-restatement.md) — Batch-3 sibling card defining PD / LGD / EAD inputs.
 - [rm-var-and-es-taxonomy](./rm-var-and-es-taxonomy.md) — Batch-0 card on VaR / ES definitions reused for credit VaR.
 - [rm-portfolio-xva-aggregation](./rm-portfolio-xva-aggregation.md) — Batch-3 sibling card on portfolio-XVA aggregation (CVA / DVA / FVA layer).
+- `rm-basel-irb-asrf-derivation` (McNeil-Frey-Embrechts (2015) QRM, pp.476) — deepening that extends this card.
+- `rm-credit-var-vasicek-asrf-irb` (Hull (2023) RMFI, pp.444) — deepening that extends this card.
 
 ## Escalate to Raw When
 

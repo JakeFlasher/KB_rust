@@ -116,10 +116,16 @@ def run_checks(cross_links_path: Path, baseline: str) -> list[str]:
     doc = load_map(cross_links_path)
     released = derive_links(doc)[1]
 
-    # 1. explicit allowlist == derived released set.
+    # 1. explicit cross-link allowlist == derived released set (from documented_pairs).
     allowlist = set(doc.get("released_card_allowlist", {}))
     if allowlist != set(released):
         failures.append(f"released allowlist {sorted(allowlist)} != derived {sorted(released)}")
+
+    # The deepening pass (BF/RM migration) enriches live rm-* cards via _deepenings.md; those
+    # edits are recorded in a SEPARATE deepening_allowlist (not derived from documented_pairs).
+    # The FULL set of released cards permitted to change vs the baseline is the union.
+    deepening_allowlist = set(doc.get("deepening_allowlist", {}))
+    full_allowlist = allowlist | deepening_allowlist
 
     # 2. every documented pair linked both ways (primary <-> each counterpart).
     for pair in doc["documented_pairs"]:
@@ -140,8 +146,9 @@ def run_checks(cross_links_path: Path, baseline: str) -> list[str]:
                     failures.append(
                         f"{cid}: withdrawn cross-link mention still present in See Also: {forbidden!r}")
 
-    # 3 + 5. links resolve; no card_edges; over the migrated cards + allowlisted released cards.
-    to_scan = migrated_card_paths() + [card_path(cid) for cid in sorted(allowlist)]
+    # 3 + 5. links resolve; no card_edges; over the migrated cards + ALL allowlisted released
+    # cards (cross-link back-links + deepening-enriched live cards).
+    to_scan = migrated_card_paths() + [card_path(cid) for cid in sorted(full_allowlist)]
     for md in to_scan:
         fm, body = split_card(md)
         if re.search(r"(?m)^card_edges:", fm):
@@ -153,13 +160,14 @@ def run_checks(cross_links_path: Path, baseline: str) -> list[str]:
             if not (md.parent / target).resolve().is_file():
                 failures.append(f"{md.stem}: See Also link does not resolve: {dest}")
 
-    # 4. only allowlisted released (non-migrated-reading) cards changed vs baseline.
+    # 4. only allowlisted released (non-migrated-reading) cards changed vs baseline —
+    #    against the FULL allowlist (cross-link back-links + deepening-enriched live cards).
     changed_released = {
         cid for cid in changed_card_ids(baseline) if reading_of_safe(cid) not in NEW_READINGS
     }
-    if changed_released != allowlist:
+    if changed_released != full_allowlist:
         failures.append(
-            f"changed released cards {sorted(changed_released)} != allowlist {sorted(allowlist)}"
+            f"changed released cards {sorted(changed_released)} != full allowlist {sorted(full_allowlist)}"
         )
     return failures
 
