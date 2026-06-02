@@ -1,0 +1,1099 @@
+{
+  "schema_version": "cfa.rm_11_curated.v1",
+  "generated_by": "11_RM card audit subagent swarm (2 batches: 10 + 9)",
+  "generated_at_utc": "1970-01-01T00:00:00Z",
+  "audit_summary": {
+    "total_ready_cards": 24,
+    "audit_ok": 17,
+    "audit_wrong_volume_corrected": 2,
+    "wrong_volume_cards": [
+      "rm-real-rate-policy-rate-notes (CFA Vol.6 -> Vol.2 Reading 12 Monetary Policy / Fisher effect)",
+      "rm-value-added-active-return (CFA Vol.6 -> Vol.5 Reading 50 §11 Performance Appraisal Measures)"
+    ],
+    "notes": "All 17 McNeil cards passed (audit_flag=ok). 2 CFA L1 cards had the same Vol.6 transcription error observed in 09_PM (13 of 18 PM cards). Both corrected to the actual content's volume. Quarantined cards (5): rm-historical-simulation-var, rm-monte-carlo-var, rm-parametric-var, rm-risk-objectives-and-tolerance, rm-sensitivity-versus-simulation (notes-taint per Critical Rule 9). [Fix-pass-2 applied: M1 quote refinement, M2 role swap, M3 supporting-range tightening + dedupe.]",
+    "absorbed_2026_06": [
+      "rm-parametric-var",
+      "rm-historical-simulation-var",
+      "rm-monte-carlo-var",
+      "rm-risk-objectives-and-tolerance",
+      "rm-sensitivity-versus-simulation"
+    ]
+  },
+  "_": "Merged from /tmp/11_rm_curated_batch_a.json + /tmp/11_rm_curated_batch_b.json by emit script",
+  "cards": [
+    {
+      "card_id": "rm-backtesting-investment-strategies",
+      "title": "Backtesting Investment Strategies — L1 Notes Exceedance-Counting Framework",
+      "summary_curated": "Backtesting in the McNeil Ch.9 §9.3 sense compares out-of-sample VaR estimates against realized losses via exceedance counting: under correct calibration the violation indicators form an iid Bernoulli(1−α) process whose count is binomial(T, 1−α).",
+      "source_stance": "primary-mcneil",
+      "audit_flag": "ok",
+      "audit_notes": "",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "rm_mcneil_frey_embrechts_2015_qrm",
+          "legacy_pages": [
+            351,
+            365
+          ],
+          "pdf_pages": [
+            372,
+            386
+          ],
+          "chunk_id": "rm_mcneil_frey_embrechts_2015_qrm:p372:0532",
+          "chunk_hash": "1a65a6be3b11053e68bffca5543ed3d49005c0b545271cca0dbfda08baaa3ac5",
+          "quote": "Backtesting is the practice of evaluating risk measurement procedures by comparing out-of-sample estimates of risk measures with actual realized losses and gains."
+        },
+        {
+          "role": "supporting",
+          "source_id": "rm_mcneil_frey_embrechts_2015_qrm",
+          "legacy_pages": [
+            351,
+            365
+          ],
+          "pdf_pages": [
+            372,
+            386
+          ],
+          "chunk_id": "rm_mcneil_frey_embrechts_2015_qrm:p373:0533",
+          "chunk_hash": "dd0ec426b41e36714cd8bb616af0792935d4eabac5afae5ee48736c10aba7e14",
+          "quote": "Moreover, the following lemma shows that the sequence of VaR violation indicators (It) forms a Bernoulli trials process, i.e."
+        }
+      ]
+    },
+    {
+      "card_id": "rm-chinese-cb-default-cohort-attribution",
+      "title": "Chinese CB Default-Cohort Attribution Under McNeil Portfolio Credit-Risk Framework",
+      "summary_curated": "Reframes the post-2014 Chinese convertible-bond default cohort under McNeil's Ch.11 threshold + mixture-model portfolio-credit-risk framework: defaults attributed to issuer credit-quality drift, sector concentration, and macro-cycle dependence rather than purely idiosyncratic events.",
+      "source_stance": "primary-mcneil",
+      "audit_flag": "ok",
+      "audit_notes": "",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "rm_mcneil_frey_embrechts_2015_qrm",
+          "legacy_pages": [
+            425,
+            470
+          ],
+          "pdf_pages": [
+            446,
+            491
+          ],
+          "chunk_id": "rm_mcneil_frey_embrechts_2015_qrm:p446:0645",
+          "chunk_hash": "b84ba0083c486660fe9e53c82783f633726c63632b9f91aaace10bd081bb16a0",
+          "quote": "Since different firms are affected by common macroeconomic factors, this creates dependence between their defaults."
+        },
+        {
+          "role": "supporting",
+          "source_id": "china_cb_dajia_credit_risk_immune_2024",
+          "legacy_pages": [
+            1,
+            9
+          ],
+          "pdf_pages": [
+            1,
+            9
+          ],
+          "chunk_id": "china_cb_dajia_credit_risk_immune_2024:p003:0001",
+          "chunk_hash": "9b5d9a29fc02e78a31d0c38abe45083141ab04494b31047b5e03f44e4119429d",
+          "quote": "目前，公募可转债尚未出现 公开违约，但考虑到存量 6042 只可转债中 尚有 493 只可转债的未转股比例大于 90%， 整体未转股比例较高，叠加宏观经济下行、 信用风险加剧的背景，发行主体信用资质 较弱的可转债未来存在出现违约的可能性。"
+        },
+        {
+          "role": "supporting",
+          "source_id": "china_cb_lianhe_risk_reconstruction_2025",
+          "legacy_pages": [
+            1,
+            15
+          ],
+          "pdf_pages": [
+            1,
+            15
+          ],
+          "chunk_id": "china_cb_lianhe_risk_reconstruction_2025:p001:0000",
+          "chunk_hash": "5cdfc043bc31f662c359fa75245feae1cbab0ed39ea9f200921714640444d435",
+          "quote": "2024 年成为可转债市场的重要转折点，长期以来的零违约格局被打破，2024－ 2025 年，5 只转债相继发生实质性违约，多行业评级下调事件频发，5 只转债随正股 同步退市"
+        },
+        {
+          "role": "supporting",
+          "source_id": "china_cb_lianhe_h1_default_review_2025",
+          "legacy_pages": [
+            1,
+            15
+          ],
+          "pdf_pages": [
+            1,
+            15
+          ],
+          "chunk_id": "china_cb_lianhe_h1_default_review_2025:p001:0000",
+          "chunk_hash": "8f45e9d9a7c3448996f95f07f67a8894671e3ae0fad088a837de4b0dec58ef49",
+          "quote": "2025 年上半年，我国债券市场新增 7 家违约发行人，共涉及到期违约债券 15 期，到期违约金额合计约 140.20 亿元"
+        },
+        {
+          "role": "supporting",
+          "source_id": "china_cb_lianhe_annual_bond_market_2025",
+          "legacy_pages": [
+            1,
+            14
+          ],
+          "pdf_pages": [
+            1,
+            14
+          ],
+          "chunk_id": "china_cb_lianhe_annual_bond_market_2025:p001:0000",
+          "chunk_hash": "9508b0fe8ea0123e3e4c9620113ee313ebac27c619bdda0d0a7c0780e43d66d5",
+          "quote": "信用风险呈现收敛态势。展望 2026 年，债市收益率有望维持低位波动，信 用利差或结构性分化；债券市场发行规模有望稳步增长；债券市场信用风险将持续收 敛，违约率或处于历史低位。"
+        },
+        {
+          "role": "supporting",
+          "source_id": "china_cb_spc_bond_disputes_2020",
+          "legacy_pages": [
+            1,
+            10
+          ],
+          "pdf_pages": [
+            1,
+            10
+          ],
+          "chunk_id": "china_cb_spc_bond_disputes_2020:p001:0000",
+          "chunk_hash": "235c5b5c6a6940077f81fa446cd0d12c8179e922ec899801f9edca81174ed70b",
+          "quote": "为正确审理因公司债券、企业债券、非金融企业债务融资工具的发行和交易所引发 的合同、侵权和破产民商事案件，统一法律适用，保护债券投资人的合法权益"
+        },
+        {
+          "role": "supporting",
+          "source_id": "rm_mcneil_frey_embrechts_2015_qrm",
+          "legacy_pages": [
+            367,
+            374
+          ],
+          "pdf_pages": [
+            388,
+            395
+          ],
+          "chunk_id": "rm_mcneil_frey_embrechts_2015_qrm:p393:0563",
+          "chunk_hash": "4c7786ff6cd0d657a0de2144cea63016980fabe51e035d9f5beecb0a2502f08a",
+          "quote": "In practice, the concept that is used to describe exposure is exposure at default or EAD, which recognizes that the exposure for many instruments will depend on the exact default time."
+        }
+      ]
+    },
+    {
+      "card_id": "rm-credit-risk-metrics-restatement",
+      "title": "Credit Risk Metrics Restatement — McNeil Ch.10 §10.1 + §10.1.5",
+      "summary_curated": "Restates the EAD / PD / LGD credit-risk metrics at the portfolio-aggregation level: each metric is one of the three dependent inputs to the IRB-formula and to the portfolio loss distribution L_portfolio = Σ_i EAD_i · LGD_i · 1_{default_i}.",
+      "source_stance": "primary-mcneil",
+      "audit_flag": "ok",
+      "audit_notes": "",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "rm_mcneil_frey_embrechts_2015_qrm",
+          "legacy_pages": [
+            372,
+            374
+          ],
+          "pdf_pages": [
+            393,
+            395
+          ],
+          "chunk_id": "rm_mcneil_frey_embrechts_2015_qrm:p393:0562",
+          "chunk_hash": "0368720885427c89b930c2a22ba181c85eb507a9978860e7bf38358cf5c285cd",
+          "quote": "They are key inputs to the Basel formula in the internal-ratings-based (IRB) approach to determining capital requirements for credit-risky portfolios, so it is important to consider them."
+        },
+        {
+          "role": "supporting",
+          "source_id": "rm_mcneil_frey_embrechts_2015_qrm",
+          "legacy_pages": [
+            367,
+            372
+          ],
+          "pdf_pages": [
+            388,
+            393
+          ],
+          "chunk_id": "rm_mcneil_frey_embrechts_2015_qrm:p388:0554",
+          "chunk_hash": "096068a32cafde7758253a71bcca61aa7531726028093b8ef9abe148d1f71e6f",
+          "quote": "10.1 Credit-Risky Instruments In this section we give an overview of the universe of credit-risky instruments, starting with the simplest examples of loans and bonds."
+        }
+      ]
+    },
+    {
+      "card_id": "rm-credit-var-portfolio",
+      "title": "Portfolio Credit-VaR — McNeil Ch.11 §11.1-§11.3",
+      "summary_curated": "Portfolio credit-VaR is the high quantile of L_portfolio = Σ_i EAD_i · LGD_i · 1_{default_i} computed under threshold models (Merton-style with correlated latent variables) or Bernoulli/Poisson mixture models (CreditRisk+) that capture default correlation explicitly.",
+      "source_stance": "primary-mcneil",
+      "audit_flag": "ok",
+      "audit_notes": "",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "rm_mcneil_frey_embrechts_2015_qrm",
+          "legacy_pages": [
+            425,
+            456
+          ],
+          "pdf_pages": [
+            446,
+            477
+          ],
+          "chunk_id": "rm_mcneil_frey_embrechts_2015_qrm:p447:0646",
+          "chunk_hash": "40db207ff25ba40ee124e5c6588ff231e2039c662ef16214a66aa27daa60b031",
+          "quote": "Their defining attribute is the idea that default occurs for a company i over the period [0,T ] if some critical rv Xi lies below some deterministic threshold di."
+        },
+        {
+          "role": "supporting",
+          "source_id": "rm_mcneil_frey_embrechts_2015_qrm",
+          "legacy_pages": [
+            444,
+            456
+          ],
+          "pdf_pages": [
+            465,
+            477
+          ],
+          "chunk_id": "rm_mcneil_frey_embrechts_2015_qrm:p465:0674",
+          "chunk_hash": "c6c947401cbfae5d8e0bbe8fffd4f36c480e0ce372b10a733570d9c9ffb8f1c8",
+          "quote": "We now give a formal definition of a Poisson mixture model for counting variables that parallels the definition of a Bernoulli mixture model in Section 11.2.1."
+        }
+      ]
+    },
+    {
+      "card_id": "rm-delta-gamma-vega-pl-decomposition",
+      "title": "Delta-Gamma-Vega P&L Decomposition — L1 Notes Portfolio-Risk-Reporting Framing",
+      "summary_curated": "Decomposes portfolio P&L into delta + gamma + vega Greek contributions plus a residual via the second-order Taylor expansion of the loss operator l_{[t]}, the same Taylor calculus that drives delta-gamma sensitivity-based VaR and risk reporting.",
+      "source_stance": "primary-mcneil",
+      "audit_flag": "ok",
+      "audit_notes": "",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "rm_mcneil_frey_embrechts_2015_qrm",
+          "legacy_pages": [
+            327,
+            329
+          ],
+          "pdf_pages": [
+            348,
+            350
+          ],
+          "chunk_id": "rm_mcneil_frey_embrechts_2015_qrm:p348:0496",
+          "chunk_hash": "9bb049e3a48ec5bce84097dcbe277bf3e2d0b3d184710401a82df71dc35c9f7e",
+          "quote": "We can also develop a second-order Taylor series, or so-called delta–gamma, approximation."
+        },
+        {
+          "role": "supporting",
+          "source_id": "rm_mcneil_frey_embrechts_2015_qrm",
+          "legacy_pages": [
+            327,
+            329
+          ],
+          "pdf_pages": [
+            348,
+            350
+          ],
+          "chunk_id": "rm_mcneil_frey_embrechts_2015_qrm:p349:0497",
+          "chunk_hash": "c9fb854409f037fc7c1adec65529adcfe24bc0e880c7974caf73fd60a03e25a8",
+          "quote": "In Example 9.1 below we give an application of the delta–gamma approximation (9.9)."
+        }
+      ]
+    },
+    {
+      "card_id": "rm-expected-shortfall-mechanics",
+      "title": "Expected Shortfall Mechanics — McNeil Ch.2 §2.3.4 + Ch.8 §8.2",
+      "summary_curated": "Expected shortfall at level α is the average of VaR_u over u ∈ [α, 1] (quantile-average form), which equals E[L | L ≥ q_α(L)] for continuous loss distributions; ES is coherent (satisfies subadditivity) and is the canonical law-invariant coherent / distortion risk measure in McNeil Ch.8 §8.2.",
+      "source_stance": "primary-mcneil",
+      "audit_flag": "ok",
+      "audit_notes": "",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "rm_mcneil_frey_embrechts_2015_qrm",
+          "legacy_pages": [
+            69,
+            72
+          ],
+          "pdf_pages": [
+            90,
+            93
+          ],
+          "chunk_id": "rm_mcneil_frey_embrechts_2015_qrm:p090:0129",
+          "chunk_hash": "bfaf33fc2e40351464f557cbaa0106b1b65b5313d8e128dafd376817dc2f7a23",
+          "quote": "ES is closely related to VaR and there is an ongoing debate in the risk-management community on the strengths and weaknesses of both risk measures."
+        },
+        {
+          "role": "supporting",
+          "source_id": "rm_mcneil_frey_embrechts_2015_qrm",
+          "legacy_pages": [
+            286,
+            292
+          ],
+          "pdf_pages": [
+            307,
+            313
+          ],
+          "chunk_id": "rm_mcneil_frey_embrechts_2015_qrm:p308:0439",
+          "chunk_hash": "4120e233a578654ca6043831435061b432758bcb2a59c6b46b6dfa79777df6e7",
+          "quote": "(8.24) A risk measure of the form (8.24) is also known as a spectral risk measure, and the function φ is called the spectrum."
+        }
+      ]
+    },
+    {
+      "card_id": "rm-integrated-firm-wide-risk-aggregation",
+      "title": "Integrated Firm-Wide Risk Aggregation — McNeil Ch.8 §8.4-§8.5",
+      "summary_curated": "Aggregates firm-wide risk across market / credit / operational silos via modular summation versus fully-integrated copula-based loss aggregation, with the Euler-principle capital allocation distributing the aggregate risk-measure back to silos as marginal capital contributions.",
+      "source_stance": "primary-mcneil",
+      "audit_flag": "ok",
+      "audit_notes": "",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "rm_mcneil_frey_embrechts_2015_qrm",
+          "legacy_pages": [
+            299,
+            322
+          ],
+          "pdf_pages": [
+            320,
+            343
+          ],
+          "chunk_id": "rm_mcneil_frey_embrechts_2015_qrm:p320:0457",
+          "chunk_hash": "a2473e4edae59d3d09a48a7d3c8967b35a6705e78ad4d9ddeefa01fd4ef477b1",
+          "quote": "8.4 Risk Aggregation The need to aggregate risk can arise in a number of situations."
+        },
+        {
+          "role": "supporting",
+          "source_id": "rm_mcneil_frey_embrechts_2015_qrm",
+          "legacy_pages": [
+            503,
+            512
+          ],
+          "pdf_pages": [
+            524,
+            533
+          ],
+          "chunk_id": "rm_mcneil_frey_embrechts_2015_qrm:p525:0766",
+          "chunk_hash": "3b278bbf3e5ed8178596b26b7e5e5041fed1ed8ca251c3bf990b01ff392bccba",
+          "quote": "An essential difference between operational risk, on the one hand, and market and credit risk, on the other, is that operational risk has no upside for a bank."
+        }
+      ]
+    },
+    {
+      "card_id": "rm-loss-distribution-anatomy",
+      "title": "Loss-Distribution Anatomy — P&L Convention, Horizons, and Mapping",
+      "summary_curated": "Loss-distribution anatomy at McNeil's Ch.2 entry-point depth: the loss convention L_{t+1} = −ΔV, the factor mapping V(t,Z_t), the choice of horizon Δt, and the acceptance-set framing that connects the loss distribution to required capital via translation-invariance.",
+      "source_stance": "primary-mcneil",
+      "audit_flag": "ok",
+      "audit_notes": "",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "rm_mcneil_frey_embrechts_2015_qrm",
+          "legacy_pages": [
+            58,
+            61
+          ],
+          "pdf_pages": [
+            79,
+            82
+          ],
+          "chunk_id": "rm_mcneil_frey_embrechts_2015_qrm:p079:0110",
+          "chunk_hash": "dc598d5343cf28a8152e1d0a325b674c4d9d667d3bc869fc8ede354527ff4180",
+          "quote": "In an analytical method we attempt to choose a model for Xt+1 and a mapping function f in such a way that the distribution of Lt+1 can be determined analytically."
+        },
+        {
+          "role": "supporting",
+          "source_id": "rm_mcneil_frey_embrechts_2015_qrm",
+          "legacy_pages": [
+            275,
+            280
+          ],
+          "pdf_pages": [
+            296,
+            301
+          ],
+          "chunk_id": "rm_mcneil_frey_embrechts_2015_qrm:p296:0424",
+          "chunk_hash": "763c816c0294ae7f1b894657552fb8969e0f5112e1c079ff5de5eca34bdc662b",
+          "quote": "Consider a probability space (Ω, F ,P) and a linear space M ⊂ L0(Ω, F ,P), where L0(Ω, F ,P) denotes the set of all random variables on (Ω, F ,P) that are almost surely (a.s.) finite."
+        }
+      ]
+    },
+    {
+      "card_id": "rm-operational-risk-basics",
+      "title": "Operational Risk Basics — McNeil Ch.13 §13.1",
+      "summary_curated": "Operational risk is the loss class from inadequate / failed internal processes, people, systems, or external events; McNeil Ch.13 §13.1 introduces the Basel BIA / SA / AM tiered measurement approaches with the seven event-type × eight business-line cell taxonomy.",
+      "source_stance": "primary-mcneil",
+      "audit_flag": "ok",
+      "audit_notes": "",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "rm_mcneil_frey_embrechts_2015_qrm",
+          "legacy_pages": [
+            503,
+            509
+          ],
+          "pdf_pages": [
+            524,
+            530
+          ],
+          "chunk_id": "rm_mcneil_frey_embrechts_2015_qrm:p525:0766",
+          "chunk_hash": "3b278bbf3e5ed8178596b26b7e5e5041fed1ed8ca251c3bf990b01ff392bccba",
+          "quote": "An essential difference between operational risk, on the one hand, and market and credit risk, on the other, is that operational risk has no upside for a bank."
+        }
+      ]
+    },
+    {
+      "card_id": "rm-operational-risk-quantification",
+      "title": "Operational Risk Quantification — McNeil Ch.13 §13.2",
+      "summary_curated": "Operational-risk quantification builds a compound aggregate-loss random variable S_N = X_1 + ··· + X_N from a frequency distribution (typically Poisson, in the Panjer (a,b)-class) and a heavy-tailed severity distribution; the aggregate distribution is computed via Panjer recursion, convolution-FFT, or Monte Carlo and tail-dominated by the one-large-loss principle.",
+      "source_stance": "primary-mcneil",
+      "audit_flag": "ok",
+      "audit_notes": "",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "rm_mcneil_frey_embrechts_2015_qrm",
+          "legacy_pages": [
+            512,
+            525
+          ],
+          "pdf_pages": [
+            533,
+            546
+          ],
+          "chunk_id": "rm_mcneil_frey_embrechts_2015_qrm:p535:0780",
+          "chunk_hash": "d8577dfefbf14d4e30ce9e591a7de3550a71dacc18a00ee218ee88cf19670f2d",
+          "quote": "We further assume that the rvs N and (Xk) are independent; in that case we refer to (13.9) as a compound sum."
+        }
+      ]
+    },
+    {
+      "card_id": "rm-portfolio-xva-aggregation",
+      "title": "Portfolio XVA Aggregation — McNeil Ch.17 §17.2-§17.3 + Crepey-Bielecki-Brigo Ch.1-2",
+      "summary_curated": "Portfolio-level aggregation of CVA / DVA / FVA / KVA via netting-set exposures and Euler-principle capital allocation; legacy section anchors are McNeil Ch.17 §17.2-§17.3 (counterparty risk management + dynamic portfolio credit models) supported by Crepey-Bielecki-Brigo's TVA-and-funding framing and McNeil Ch.12 portfolio credit derivatives context.",
+      "source_stance": "primary-mcneil",
+      "audit_flag": "ok",
+      "audit_notes": "All three references verified. McNeil pp.603-624 (PDF 624-645) lands in Ch.17 §17.1-§17.3 'Dynamic Portfolio Credit Risk Models and Counterparty Risk' — confirmed BCVA/CVA/DVA decomposition + collateralised value adjustment content. Crepey pp.1-50 spans front-matter + Ch.1 Galilean Dialogue, and the preface (PDF 18) contains the canonical TVA definition. McNeil pp.476-487 (PDF 497-508) opens Ch.12 Portfolio Credit Derivatives (CDOs + tranching) — supports the portfolio-aggregation framing.",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "rm_mcneil_frey_embrechts_2015_qrm",
+          "legacy_pages": [
+            603,
+            624
+          ],
+          "volume": null,
+          "pdf_pages": [
+            624,
+            645
+          ],
+          "chunk_id": "rm_mcneil_frey_embrechts_2015_qrm:p624:0908",
+          "chunk_hash": "d1d14a9330aa18c54366db55120f6fd4d2c4ae238f54fb017aa642e767f613f3",
+          "quote": "A substantial proportion of all derivative transactions are carried out OTC, so that counterparty credit risk is a key issue for financial institutions."
+        },
+        {
+          "role": "primary",
+          "source_id": "rm_mcneil_frey_embrechts_2015_qrm",
+          "legacy_pages": [
+            603,
+            624
+          ],
+          "volume": null,
+          "pdf_pages": [
+            624,
+            645
+          ],
+          "chunk_id": "rm_mcneil_frey_embrechts_2015_qrm:p627:0912",
+          "chunk_hash": "3a799a60098230e04b4fcf77ba2525298fd1813cf56e710f3f3fcc0c2a8f248d",
+          "quote": "The CVA in (17.7) reflects the potential loss incurred by B due to a premature default of S; the debt value adjustment, or DVA, in (17.8) reflects the potential loss"
+        },
+        {
+          "role": "supporting",
+          "source_id": "fi_crepey_bielecki_brigo_2014_counterparty_risk_funding",
+          "legacy_pages": [
+            1,
+            50
+          ],
+          "volume": null,
+          "pdf_pages": [
+            1,
+            50
+          ],
+          "chunk_id": "fi_crepey_bielecki_brigo_2014_counterparty_risk_funding:p018:0015",
+          "chunk_hash": "647cf5d8726e26fb36f353288f363651e6dc6346c6c29118a6bf8b33440e57aa",
+          "quote": "We will call total valuation adjustment (TVA) the aggregate value of all the adjustments which are required in order to account for bilateral counterparty risk under funding constraints."
+        },
+        {
+          "role": "supporting",
+          "source_id": "rm_mcneil_frey_embrechts_2015_qrm",
+          "legacy_pages": [
+            476,
+            487
+          ],
+          "volume": null,
+          "pdf_pages": [
+            497,
+            508
+          ],
+          "chunk_id": "rm_mcneil_frey_embrechts_2015_qrm:p498:0723",
+          "chunk_hash": "4021c5404eec12d378781039b87159cfd7f46ecf22b96063b0f74ddf924f44d4",
+          "quote": "A CDO is a financial instrument for the securitization of a portfolio of credit products such as bonds, loans or mortgages."
+        }
+      ]
+    },
+    {
+      "card_id": "rm-real-rate-policy-rate-notes",
+      "title": "Real Rate vs Policy Rate — L1 Notes Risk-Input Decomposition",
+      "summary_curated": "Fisher-effect decomposition of nominal rates into real-rate + inflation-expectation components plus the neutral-policy-rate framing, treated as a risk-input for the loss-distribution discount-rate channel; the topic is anchored in CFA L1 2022 Reading 12 'Monetary and Fiscal Policy' (CORRECTED to Vol.2, not Vol.6).",
+      "source_stance": "primary-cfa",
+      "audit_flag": "wrong_volume_corrected",
+      "audit_notes": "WRONG VOLUME in legacy citation. Vol.6 pp.442-475 (PDF 3711-3744) covers Reading 58 'Guidance for Standards I-VII' (Standard V Records-Retention + Standard VI Conflicts of Interest) — zero real-rate / policy-rate content. The actual Fisher effect / real-rate / neutral-policy-rate content lives in Vol.2 Reading 12 'Monetary and Fiscal Policy', specifically §3.3 'The Fisher Effect' at Vol.2 p.282 (PDF 859) and 'Monetary Policies: Contractionary, Expansionary, Limitations' at Vol.2 pp.305+ (PDF 882+). Corrected citations point to Vol.2.",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "cfa_2022_l1_combined",
+          "legacy_pages": [
+            278,
+            283
+          ],
+          "volume": 2,
+          "pdf_pages": [
+            855,
+            860
+          ],
+          "chunk_id": "cfa_2022_l1_combined:p859:1198",
+          "chunk_hash": "d9e56c0c54e6826545e31b79057bf49c53863062e1a4c4a0e9cf19f7f0120b24",
+          "quote": "the Fisher effect states that the real rate of interest in an economy is stable over time so that changes in nominal interest rates are the result of changes in expected inflation."
+        },
+        {
+          "role": "supporting",
+          "source_id": "cfa_2022_l1_combined",
+          "legacy_pages": [
+            305,
+            310
+          ],
+          "volume": 2,
+          "pdf_pages": [
+            882,
+            887
+          ],
+          "chunk_id": "cfa_2022_l1_combined:p882:1237",
+          "chunk_hash": "a5f1659c23aa21922992d976049771f8d508321ca695632591fe98f4484b33a4",
+          "quote": "the neutral policy rate for any economy comprises two components"
+        }
+      ]
+    },
+    {
+      "card_id": "rm-risk-measure-axioms",
+      "title": "Coherent and Convex Risk-Measure Axioms",
+      "summary_curated": "The four Artzner-Delbaen-Eber-Heath coherence axioms (monotonicity, translation-invariance, positive-homogeneity, subadditivity) with VaR's documented failure of subadditivity and ES's coherence; convex / law-invariant extensions per McNeil Ch.2 §2.3.5 + Ch.8 §8.1.",
+      "source_stance": "primary-mcneil",
+      "audit_flag": "ok",
+      "audit_notes": "Both ranges verified. McNeil pp.72-78 (PDF 93-99) is Ch.2 §2.3.5 'Axioms for risk measures' with Axioms 2.18-2.21 and the Example 2.25 VaR-counterexample (defaultable bonds). McNeil pp.275-285 (PDF 296-306) is Ch.8 §8.1 'Coherent and Convex Risk Measures' with the formal axiom list, Definition 8.1, acceptance sets, and dual representation Theorem 8.11.",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "rm_mcneil_frey_embrechts_2015_qrm",
+          "legacy_pages": [
+            72,
+            78
+          ],
+          "volume": null,
+          "pdf_pages": [
+            93,
+            99
+          ],
+          "chunk_id": "rm_mcneil_frey_embrechts_2015_qrm:p094:0135",
+          "chunk_hash": "9794eb566c6ca5dbe47b9ce590a247d4faf4aca6d6645e733bdd6d850baf8c9e",
+          "quote": "subadditivity reflects the idea that risk can be reduced by diversification, a time-honoured principle in finance and economics."
+        },
+        {
+          "role": "primary",
+          "source_id": "rm_mcneil_frey_embrechts_2015_qrm",
+          "legacy_pages": [
+            72,
+            78
+          ],
+          "volume": null,
+          "pdf_pages": [
+            93,
+            99
+          ],
+          "chunk_id": "rm_mcneil_frey_embrechts_2015_qrm:p095:0137",
+          "chunk_hash": "56db9085e37a17a1ede4db0b0679a2f218253651cc69be7a0b8743f61f37f1e0",
+          "quote": "However, the following example shows that VaR is in general not subadditive, and hence, in general, neither is it a convex nor a coherent measure of risk."
+        },
+        {
+          "role": "supporting",
+          "source_id": "rm_mcneil_frey_embrechts_2015_qrm",
+          "legacy_pages": [
+            275,
+            285
+          ],
+          "volume": null,
+          "pdf_pages": [
+            296,
+            306
+          ],
+          "chunk_id": "rm_mcneil_frey_embrechts_2015_qrm:p296:0424",
+          "chunk_hash": "763c816c0294ae7f1b894657552fb8969e0f5112e1c079ff5de5eca34bdc662b",
+          "quote": "Definition 8.1. A risk measure that satisfies the monotonicity, translation invariance and convexity axioms is called a convex measure of risk"
+        }
+      ]
+    },
+    {
+      "card_id": "rm-risk-type-taxonomy",
+      "title": "Risk-Type Taxonomy — Market / Credit / Liquidity / Operational / Business / Regulatory",
+      "summary_curated": "Six-class taxonomy of financial risk (market / credit / liquidity / operational / business / regulatory) with the loss-distribution mapping framework per McNeil Ch.1 §1.1.2 + Ch.2 §2.1.2; quantifiable types feed coherent risk measures while judgmental types feed scenario analysis.",
+      "source_stance": "primary-mcneil",
+      "audit_flag": "ok",
+      "audit_notes": "Both ranges verified. McNeil pp.5-7 (PDF 26-28) is Ch.1 §1.1.2 'Financial Risk' with the canonical risk-type definitions (market, credit, operational, liquidity, model risk, underwriting). McNeil pp.44-46 (PDF 65-67) is Ch.2 §2.1.2 'Risks Faced by a Financial Firm' applying those types to bank and insurer balance sheets. NOTE: the legacy card flips the primary/supporting role — the actual risk-type taxonomy is in pp.5-7 (Ch.1) while pp.44-46 is the balance-sheet-application supplement. The slice could swap primary/supporting roles to match content depth, but page ranges are correct.",
+      "citations": [
+        {
+          "role": "supporting",
+          "source_id": "rm_mcneil_frey_embrechts_2015_qrm",
+          "legacy_pages": [
+            44,
+            46
+          ],
+          "volume": null,
+          "pdf_pages": [
+            65,
+            67
+          ],
+          "chunk_id": "rm_mcneil_frey_embrechts_2015_qrm:p065:0087",
+          "chunk_hash": "1f32243e191e47b1520d192ba70648cb1768478f3490e56a1f5a923d184c4b5a",
+          "quote": "An obvious source of risk for a bank is a decrease in the value of its investments on the asset side of the balance sheet."
+        },
+        {
+          "role": "primary",
+          "source_id": "rm_mcneil_frey_embrechts_2015_qrm",
+          "legacy_pages": [
+            5,
+            7
+          ],
+          "volume": null,
+          "pdf_pages": [
+            26,
+            28
+          ],
+          "chunk_id": "rm_mcneil_frey_embrechts_2015_qrm:p025:0021",
+          "chunk_hash": "0330f7f634eb6339c2af8c123daf297cc465ab5e288a50ae9cb57f7f0bf8f33e",
+          "quote": "The best-known type of risk is probably market risk: the risk of a change in the value of a financial position or portfolio due to changes in the value of the underlying components"
+        }
+      ]
+    },
+    {
+      "card_id": "rm-scenario-analysis",
+      "title": "Scenario Analysis — Forward-Looking Loss Aggregation under Designed Scenarios",
+      "summary_curated": "Scenario-based risk measures as deterministic complement to law-determined VaR/ES: designed scenarios L(x), generalized-scenario representation, and aggregation of stress losses; per McNeil Ch.2 §2.3.1 + Ch.8 §8.4.2 (stressing risk factors).",
+      "source_stance": "primary-mcneil",
+      "audit_flag": "ok",
+      "audit_notes": "Both ranges verified. McNeil pp.61-64 (PDF 82-85) is Ch.2 §2.3.1 'Approaches to Risk Measurement' with the scenario-based risk measure psi[X,w] = max{wi L(xi)} (eq. 2.15) plus the generalized-scenario representation (eq. 2.16). McNeil pp.302-305 (PDF 323-326) is Ch.8 §8.4.2 'Aggregation Based on Stressing Risk Factors' which derives Proposition 8.30 (aggregation rule for single-factor stresses under elliptical risk factors).",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "rm_mcneil_frey_embrechts_2015_qrm",
+          "legacy_pages": [
+            61,
+            64
+          ],
+          "volume": null,
+          "pdf_pages": [
+            82,
+            85
+          ],
+          "chunk_id": "rm_mcneil_frey_embrechts_2015_qrm:p084:0119",
+          "chunk_hash": "ac9bbb217978a42fc448d1856dedf06d4120e4f40eccc23b918161ae461be894",
+          "quote": "A risk measure of the form (2.16), where P[X,w] is replaced by some arbitrary subset P of the set of all probability measures on the space of risk-factor changes, is termed a generalized scenario."
+        },
+        {
+          "role": "supporting",
+          "source_id": "rm_mcneil_frey_embrechts_2015_qrm",
+          "legacy_pages": [
+            302,
+            305
+          ],
+          "volume": null,
+          "pdf_pages": [
+            323,
+            326
+          ],
+          "chunk_id": "rm_mcneil_frey_embrechts_2015_qrm:p323:0461",
+          "chunk_hash": "b2b4b17ec49ab76b42c964462ccb09055cd9b4bf21b5de54d6d81a0099d6886a",
+          "quote": "Aggregation Based on Stressing Risk Factors"
+        }
+      ]
+    },
+    {
+      "card_id": "rm-stress-testing",
+      "title": "Stress Testing — Coherent-Risk-Measure Duals and Reverse Stress",
+      "summary_curated": "Stress testing as the dual of a coherent risk measure (rho(L) = sup_{Q in Q} E_Q[L]); the McNeil-Smith linear-portfolio result that every coherent measure on linear portfolios IS a stress test, with EVT-tail (generalized Pareto / Pickands-Balkema-de Haan) consistency framing per McNeil Ch.5 + Ch.8 §8.3.",
+      "source_stance": "primary-mcneil",
+      "audit_flag": "ok",
+      "audit_notes": "Both ranges verified. McNeil pp.293-298 (PDF 314-319) is Ch.8 §8.3 'Risk Measures for Linear Portfolios' with Proposition 8.27 (coherent risk measure = stress test on linear portfolios) and Theorem 8.28 (elliptical risk-factor case). McNeil pp.135-172 (PDF 156-193) is Ch.5 'Extreme Value Theory' covering block-maxima (GEV / Fisher-Tippett-Gnedenko) and threshold-exceedance (peaks-over-threshold) models — the EVT extension referenced in the card.",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "rm_mcneil_frey_embrechts_2015_qrm",
+          "legacy_pages": [
+            293,
+            298
+          ],
+          "volume": null,
+          "pdf_pages": [
+            314,
+            319
+          ],
+          "chunk_id": "rm_mcneil_frey_embrechts_2015_qrm:p314:0448",
+          "chunk_hash": "68d289dfb73fcf91e893bc989486c7ec1c2ebf9d44e9afc32aa918da2a5e16cd",
+          "quote": "every coherent risk measure on the set M in (8.34) can be viewed as a stress test"
+        },
+        {
+          "role": "supporting",
+          "source_id": "rm_mcneil_frey_embrechts_2015_qrm",
+          "legacy_pages": [
+            135,
+            150
+          ],
+          "volume": null,
+          "pdf_pages": [
+            156,
+            171
+          ],
+          "chunk_id": "rm_mcneil_frey_embrechts_2015_qrm:p156:0219",
+          "chunk_hash": "826bd34c917a098b21142cb40d19e6f67ebe8523ebd9b6dee057b5d261fe9aaf",
+          "quote": "We focus on two main kinds of model for extreme values."
+        }
+      ]
+    },
+    {
+      "card_id": "rm-value-added-active-return",
+      "title": "Value-Added and Active Return — L1 Notes Risk-Budget-Consumption Framing",
+      "summary_curated": "Sharpe / Treynor / M2 / Jensen's-alpha performance-appraisal triple plus the information ratio framed as risk-budget consumption per CFA L1 2022 Reading 50 'Portfolio Risk and Return: Part II' (CORRECTED to Vol.5, not Vol.6).",
+      "source_stance": "primary-cfa",
+      "audit_flag": "wrong_volume_corrected",
+      "audit_notes": "WRONG VOLUME in legacy citation. Vol.6 pp.555-572 (PDF 3824-3841) is the Vol.6 backmatter glossary (alphabetical glossary terms from 'Market discount rate' through 'Money'). The actual active-return / information-ratio / Sharpe-Treynor-M2-Jensen performance appraisal content is in Vol.5 pp.551-572 (PDF 3188-3209) covering Reading 50 §11 'Portfolio Performance Appraisal Measures' and §12 'Security Selection / Implications for Portfolio Construction'. Note the page-number coincidence (V5/551-572 vs V6/555-572) suggests a Vol.5→Vol.6 transcription error in the legacy card. Corrected citations point to Vol.5.",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "cfa_2022_l1_combined",
+          "legacy_pages": [
+            551,
+            551
+          ],
+          "volume": 5,
+          "pdf_pages": [
+            3188,
+            3188
+          ],
+          "chunk_id": "cfa_2022_l1_combined:p3188:4756",
+          "chunk_hash": "a0b96d424a4abc9183c7e61dd279455f9a4fdcf824e613d01998ff24602fbb92",
+          "quote": "Four ratios are commonly used in performance appraisal."
+        },
+        {
+          "role": "primary",
+          "source_id": "cfa_2022_l1_combined",
+          "legacy_pages": [
+            562,
+            563
+          ],
+          "volume": 5,
+          "pdf_pages": [
+            3199,
+            3200
+          ],
+          "chunk_id": "cfa_2022_l1_combined:p3199:4770",
+          "chunk_hash": "94a609bfccce9993e0241aaf66b04679cf4e0d618854a6dfe078d1f0b20f234a",
+          "quote": "The larger the information ratio is, the more valuable the security."
+        },
+        {
+          "role": "supporting",
+          "source_id": "cfa_2022_l1_combined",
+          "legacy_pages": [
+            553,
+            554
+          ],
+          "volume": 5,
+          "pdf_pages": [
+            3190,
+            3191
+          ],
+          "chunk_id": "cfa_2022_l1_combined:p3190:4759",
+          "chunk_hash": "f182e877d0d709b3b188a1724bb06e76923b962fccb2811eef3ed71182ae9bbb",
+          "quote": "Because the Sharpe ratio is defined as ERpf R p , the equation shows that M2 can be thought of as a rescaling of the Sharpe ratio that allows for easier comparisons among different portfolios."
+        }
+      ]
+    },
+    {
+      "card_id": "rm-value-at-risk-notes",
+      "title": "Value-at-Risk — L1 Notes Definition and Estimation Framework",
+      "summary_curated": "Quantile-of-loss definition of VaR (alpha-quantile of L) with the three canonical estimator routes (parametric / historical-simulation / Monte Carlo), the (alpha, horizon, estimator) triplet, and McNeil's surfaced limitations (subadditivity failure + tail-shape blindness); McNeil Ch.2 §2.3.2 entry point.",
+      "source_stance": "primary-mcneil",
+      "audit_flag": "ok",
+      "audit_notes": "Range verified. McNeil pp.64-67 (PDF 85-88) is Ch.2 §2.3.2 'Value-at-Risk' with Definition 2.8 (VaR as alpha-quantile of loss), Example 2.11 (Gaussian + Student-t closed forms), discussion of confidence-level + horizon choice, and the VaR-in-Basel-regulatory-capital framing.",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "rm_mcneil_frey_embrechts_2015_qrm",
+          "legacy_pages": [
+            64,
+            67
+          ],
+          "volume": null,
+          "pdf_pages": [
+            85,
+            88
+          ],
+          "chunk_id": "rm_mcneil_frey_embrechts_2015_qrm:p085:0120",
+          "chunk_hash": "1b1b814b9d97e9ea983ab9f4115c4ada656f01b6a77947b8c053674d902d5ff0",
+          "quote": "the VaR of a portfolio with loss L at the confidence level α is given by the smallest number l such that the probability that the loss L exceeds l is no larger than 1 − α."
+        },
+        {
+          "role": "primary",
+          "source_id": "rm_mcneil_frey_embrechts_2015_qrm",
+          "legacy_pages": [
+            64,
+            67
+          ],
+          "volume": null,
+          "pdf_pages": [
+            85,
+            88
+          ],
+          "chunk_id": "rm_mcneil_frey_embrechts_2015_qrm:p085:0121",
+          "chunk_hash": "a27636dee6a4ad4ecb60856e1a572fec433faa4f7faa28578ee5841b241a0d08",
+          "quote": "The 95% VaR value is approximately 2.2, indicating that there is a 5% chance that we lose at least this amount."
+        },
+        {
+          "role": "supporting",
+          "source_id": "rm_mcneil_frey_embrechts_2015_qrm",
+          "legacy_pages": [
+            64,
+            67
+          ],
+          "volume": null,
+          "pdf_pages": [
+            85,
+            88
+          ],
+          "chunk_id": "rm_mcneil_frey_embrechts_2015_qrm:p086:0122",
+          "chunk_hash": "357988f0d10dcba21a64fe3b3f051481674fd16a0d80d7e50513ab94b163e1b5",
+          "quote": "This result is routinely used in the variance–covariance approach (also known as the delta-normal approach) to computing risk measures."
+        }
+      ]
+    },
+    {
+      "card_id": "rm-var-and-es-taxonomy",
+      "title": "VaR and Expected Shortfall — Side-by-Side Taxonomy",
+      "summary_curated": "Side-by-side comparison of VaR (alpha-quantile of L) and ES (tail-conditional expectation past quantile) with the coherence contrast (ES coherent, VaR fails subadditivity), Gaussian/Student-t closed-form contrasts, and elicitability framing per McNeil Ch.2 §2.3.4 + Ch.8 §8.2.",
+      "source_stance": "primary-mcneil",
+      "audit_flag": "ok",
+      "audit_notes": "Both ranges verified. McNeil pp.64-72 (PDF 85-93) spans Ch.2 §2.3.2-§2.3.5 with VaR definition (2.8), ES definition (2.12), Gaussian + Student-t closed forms (Examples 2.11, 2.14, 2.15), and the coherence axioms (2.18-2.21) including Example 2.25 VaR non-subadditivity. McNeil pp.286-292 (PDF 307-313) is Ch.8 §8.2 'Law-Invariant Coherent Risk Measures' covering distortion / spectral risk measures and the expectile risk measure as a coherent generalisation.",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "rm_mcneil_frey_embrechts_2015_qrm",
+          "legacy_pages": [
+            64,
+            72
+          ],
+          "volume": null,
+          "pdf_pages": [
+            85,
+            93
+          ],
+          "chunk_id": "rm_mcneil_frey_embrechts_2015_qrm:p090:0129",
+          "chunk_hash": "bfaf33fc2e40351464f557cbaa0106b1b65b5313d8e128dafd376817dc2f7a23",
+          "quote": "the ES at confidence level α ∈ (0, 1) is defined as ESα = 1 1 − α 1 α qu(FL) du, (2.22) where qu(FL) = F ← L (u) is the quantile function of FL."
+        },
+        {
+          "role": "primary",
+          "source_id": "rm_mcneil_frey_embrechts_2015_qrm",
+          "legacy_pages": [
+            64,
+            72
+          ],
+          "volume": null,
+          "pdf_pages": [
+            85,
+            93
+          ],
+          "chunk_id": "rm_mcneil_frey_embrechts_2015_qrm:p092:0132",
+          "chunk_hash": "3485b06e4b641b428bc867fdc6b47243baa76f654b339ef0afe2d26e93de7880",
+          "quote": "if we use ES, the risk in the tails of the t model is reflected in our risk measurement for lower values of α."
+        },
+        {
+          "role": "supporting",
+          "source_id": "rm_mcneil_frey_embrechts_2015_qrm",
+          "legacy_pages": [
+            286,
+            292
+          ],
+          "volume": null,
+          "pdf_pages": [
+            307,
+            313
+          ],
+          "chunk_id": "rm_mcneil_frey_embrechts_2015_qrm:p307:0438",
+          "chunk_hash": "8d4b0a823fcb3b05f4a397323b14bde7dffcb2d143b8fa3e3ee11f47f66b75e4",
+          "quote": "examples of law-invariant risk measures areVaR and expected shortfall. On the other hand, the stress-test risk measures of Example 8.9 are typically not law invariant."
+        }
+      ]
+    },
+    {
+      "card_id": "rm-parametric-var",
+      "title": "Parametric (Variance-Covariance) VaR — McNeil Ch.9 §9.2.2",
+      "summary_curated": "Parametric (variance–covariance / delta-normal) VaR assumes the risk-factor changes are multivariate normal so the linearised portfolio loss is itself normal and VaR reads off as a closed-form quantile; McNeil flags its two crude simplifications — linearisation error and an unrealistic normality assumption for heavy-tailed financial returns.",
+      "source_stance": "primary-mcneil",
+      "audit_flag": "ok",
+      "audit_notes": "Re-authored from a non-notes McNeil primary in the 2026-06 quarantine-absorption (was notes-taint quarantined).",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "rm_mcneil_frey_embrechts_2015_qrm",
+          "legacy_pages": [
+            79,
+            79
+          ],
+          "pdf_pages": [
+            79,
+            79
+          ],
+          "chunk_id": "rm_mcneil_frey_embrechts_2015_qrm:p079:0110",
+          "chunk_hash": "dc598d5343cf28a8152e1d0a325b674c4d9d667d3bc869fc8ede354527ff4180",
+          "quote": "In the variance–covariance method the risk-factor changes Xt+1 are assumed to follow a multivariate normal distribution"
+        },
+        {
+          "role": "supporting",
+          "source_id": "rm_mcneil_frey_embrechts_2015_qrm",
+          "legacy_pages": [
+            79,
+            80
+          ],
+          "pdf_pages": [
+            79,
+            80
+          ],
+          "chunk_id": "rm_mcneil_frey_embrechts_2015_qrm:p079:0111",
+          "chunk_hash": "84360624107881a0619d3082e68079dbb39c9e8498a49b128230f9408e5b1685",
+          "quote": "The variance–covariance method offers a simple solution to the risk-measurement problem, but this convenience is achieved at the cost of two crude simplifying assumptions."
+        }
+      ]
+    },
+    {
+      "card_id": "rm-historical-simulation-var",
+      "title": "Historical-Simulation VaR — McNeil Ch.9 §9.2.3-§9.2.4",
+      "summary_curated": "Historical-simulation VaR estimates the loss distribution non-parametrically from the empirical distribution of past risk-factor changes applied to the current portfolio, reading the alpha-quantile directly with no explicit distributional assumption; McNeil Ch.9 §9.2.3–§9.2.4.",
+      "source_stance": "primary-mcneil",
+      "audit_flag": "ok",
+      "audit_notes": "Re-authored from a non-notes McNeil primary in the 2026-06 quarantine-absorption (was notes-taint quarantined).",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "rm_mcneil_frey_embrechts_2015_qrm",
+          "legacy_pages": [
+            79,
+            80
+          ],
+          "pdf_pages": [
+            79,
+            80
+          ],
+          "chunk_id": "rm_mcneil_frey_embrechts_2015_qrm:p079:0111",
+          "chunk_hash": "84360624107881a0619d3082e68079dbb39c9e8498a49b128230f9408e5b1685",
+          "quote": "the historical-simulation method can be thought of as estimating the distribution of the loss using the empirical distribution of past risk-factor changes"
+        }
+      ]
+    },
+    {
+      "card_id": "rm-monte-carlo-var",
+      "title": "Monte Carlo VaR — McNeil Ch.9 §9.2.5-§9.2.7",
+      "summary_curated": "Monte Carlo VaR is the general simulation route: draw many risk-factor scenarios from an explicit calibrated parametric model, full-revalue the portfolio per scenario, and read the alpha-quantile from the simulated loss sample; McNeil Ch.9 §9.2.5 emphasises the cost of per-scenario revaluation.",
+      "source_stance": "primary-mcneil",
+      "audit_flag": "ok",
+      "audit_notes": "Re-authored from a non-notes McNeil primary in the 2026-06 quarantine-absorption (was notes-taint quarantined).",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "rm_mcneil_frey_embrechts_2015_qrm",
+          "legacy_pages": [
+            367,
+            367
+          ],
+          "pdf_pages": [
+            367,
+            367
+          ],
+          "chunk_id": "rm_mcneil_frey_embrechts_2015_qrm:p367:0523",
+          "chunk_hash": "7be9a5b5d7c55435f7515af053e85714f8ab30dc1a9d3ba98d5aefd9bf605ca5",
+          "quote": "that involves the simulation of an explicit parametric model for risk-factor changes"
+        }
+      ]
+    },
+    {
+      "card_id": "rm-risk-objectives-and-tolerance",
+      "title": "Risk Objectives and Risk Tolerance — Risk-Management Entry Point",
+      "summary_curated": "Risk objectives and risk tolerance frame the risk-management entry point: risk tolerance is the amount of risk an investor can accept to pursue a goal — higher tolerance means greater willingness to take risk and is inversely related to risk aversion (CFA L1).",
+      "source_stance": "primary-cfa",
+      "audit_flag": "ok",
+      "audit_notes": "Re-authored from a non-notes CFA L1 primary in the 2026-06 quarantine-absorption (was notes-taint quarantined).",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "cfa_2022_l1_combined",
+          "legacy_pages": [
+            3105,
+            3105
+          ],
+          "pdf_pages": [
+            3105,
+            3105
+          ],
+          "chunk_id": "cfa_2022_l1_combined:p3105:4640",
+          "chunk_hash": "6a5005fe10dac9af2574f274d61aa7393c8f883fed4a7f08cc612359cc82e207",
+          "quote": "The higher the risk tolerance, the greater is the willingness to take risk. Thus, risk tolerance is negatively related to risk aversion."
+        }
+      ]
+    },
+    {
+      "card_id": "rm-sensitivity-versus-simulation",
+      "title": "Sensitivity-Based vs Simulation-Based Risk Measurement",
+      "summary_curated": "Sensitivity-based risk measurement approximates portfolio loss through delta and delta–gamma derivative exposures, while simulation/scenario-based measurement evaluates the portfolio under a set of postulated future risk-factor changes; McNeil Ch.2/Ch.9 contrast the two routes.",
+      "source_stance": "primary-mcneil",
+      "audit_flag": "ok",
+      "audit_notes": "Re-authored from a non-notes McNeil primary in the 2026-06 quarantine-absorption (was notes-taint quarantined).",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "rm_mcneil_frey_embrechts_2015_qrm",
+          "legacy_pages": [
+            71,
+            72
+          ],
+          "pdf_pages": [
+            71,
+            72
+          ],
+          "chunk_id": "rm_mcneil_frey_embrechts_2015_qrm:p071:0097",
+          "chunk_hash": "6ac21a175471c5f8834f1ce9d0866ca007cb7f6e823f3d014c55578ba5ff935b",
+          "quote": "the delta–gamma approximation, where first- and second-order derivatives are used"
+        },
+        {
+          "role": "supporting",
+          "source_id": "rm_mcneil_frey_embrechts_2015_qrm",
+          "legacy_pages": [
+            83,
+            84
+          ],
+          "pdf_pages": [
+            83,
+            84
+          ],
+          "chunk_id": "rm_mcneil_frey_embrechts_2015_qrm:p083:0117",
+          "chunk_hash": "5a1a8bb55aee5f7e972f31ce644bd89038b26a2bdc7cac31ccac5bdb49f35105",
+          "quote": "In the scenario-based approach to measuring the risk of a portfolio, one considers a number of possible future risk-factor changes"
+        }
+      ]
+    }
+  ]
+}

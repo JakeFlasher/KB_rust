@@ -154,8 +154,7 @@ the cache's verdict semantics permissive but discriminating":**
 5. `0.5` is a clean integer multiple of `0.01` that round-trips
    through `serde_json` without precision drift (the sweep tests
    assert this), so the locked value can safely be cross-checked
-   by string equality across the Python builder and the Rust
-   audit.
+   by the Rust audit.
 
 The choice is conservative: under-fitting toward "permissive"
 rather than over-fitting to a hand-picked knee. The cache's role
@@ -179,24 +178,22 @@ In particular:
 - A future revision may relax or tighten the locked value if
   empirical evidence accumulates (e.g., per-card retract events
   flag systematic under- or over-firing). Such a revision is a
-  three-surface maintenance event (see §5) accompanied by a new
-  iteration of this document.
+  maintenance event (see §5) accompanied by a new iteration of
+  this document.
 
 ## 5. Where the locked value lives
 
-The locked value `0.5` is mirrored at three surfaces. Drift at
-any one surface fails a static check at workspace build time —
-no rebuild is required to detect the divergence.
+The locked value `0.5` is mirrored at two active surfaces. Drift fails either
+the provenance audit or the threshold-sweep tests.
 
 | Surface | Symbol | Drift detector |
 |---------|--------|----------------|
-| `scripts/build_semantic_cache.py` | `DEFAULT_THRESHOLD = 0.5` | `xtask/src/threshold_sweep.rs::builder_default_threshold_matches_expected` (xtask unit test) parses the Python source via `include_str!`, extracts the literal, and asserts `parsed == EXPECTED_THRESHOLD`. `cargo test -p xtask` fails on any drift even if nobody re-ran the builder. |
-| `xtask/src/semantic_cache_provenance.rs` | `pub const EXPECTED_THRESHOLD: f64 = 0.5;` | `cargo xtask audit-semantic-cache-provenance` fails if `provenance.threshold != EXPECTED_THRESHOLD`. The unit test `wrong_threshold_fails_with_documented_locked_value` covers the fail mode. |
+| `xtask/src/semantic_cache_provenance.rs` | `pub const EXPECTED_THRESHOLD: f64 = 0.5;` | `cargo run -p xtask -- audit-semantic-cache-provenance` fails if `provenance.threshold != EXPECTED_THRESHOLD`. The unit test `wrong_threshold_fails_with_documented_locked_value` covers the fail mode. |
 | `xtask/src/threshold_sweep.rs` (test only) | `locked_threshold_lies_in_default_sweep_range` | Compile-time + test assertion that `EXPECTED_THRESHOLD ∈ [DEFAULT_FROM, DEFAULT_TO]` and lands on a clean step boundary. |
 
 ### 5.1 Additional drift detectors enforced by the sweep preflight
 
-`cargo xtask threshold-sweep --vertical qm` now reads the
+`cargo run -p xtask -- threshold-sweep --vertical qm` now reads the
 committed provenance sidecar (default
 `out/semantic_cache.provenance.json`) before emitting any rows
 and asserts the frozen-count contract. A cache whose committed
@@ -211,43 +208,35 @@ with no sweep output.
 | `provenance.entry_count == paraphrase_count + negative_fixture_count` | "provenance.entry_count must equal paraphrase_count + negative_fixture_count = E; got N" |
 | `cache.entries.len() == provenance.entry_count` | "cache.entries.len() = M does not match provenance.entry_count = N" |
 
-## 6. Rebuild ceremony pointer
+## 6. Regeneration pointer
 
 To relock at a different threshold value:
 
-1. Update all three surfaces in one commit:
-   - `scripts/build_semantic_cache.py::DEFAULT_THRESHOLD`
+1. Update the active threshold surfaces in one commit:
    - `xtask/src/semantic_cache_provenance.rs::EXPECTED_THRESHOLD`
    - The §4.1 / §4.2 rationale paragraphs in this document.
-2. Re-run the rebuild ceremony documented at
-   `_research/20_b1_cache_provisioning.md`:
-
-   ```bash
-   UV_CACHE_DIR=/tmp/uv-cache uv run --extra cache-build \
-       python scripts/build_semantic_cache.py
-   ```
-
+2. Regenerate the cache through a maintained builder path. The old Python
+   builder has been retired; `_research/20_b1_cache_provisioning.md` records
+   the current frozen-cache policy.
 3. Commit the regenerated `out/semantic_cache.json` and
-   `out/semantic_cache.provenance.json` alongside the three
-   surface edits.
+   `out/semantic_cache.provenance.json` alongside the threshold edits.
 4. Re-run the sweep + regenerate the §3 table in this document:
 
    ```bash
-   cargo xtask threshold-sweep --vertical qm
+   cargo run -p xtask -- threshold-sweep --vertical qm
    ```
 
 5. Verify the audit + integration tests:
 
    ```bash
-   cargo xtask audit-semantic-cache-provenance
+   cargo run -p xtask -- audit-semantic-cache-provenance
    cargo test -p cacg-semantic --test committed_cache
    ```
 
 ## 7. Reproducibility evidence
 
-Empirical byte-equal idempotence of the cache rebuild at the
-locked threshold was verified across three consecutive runs of
-`scripts/build_semantic_cache.py`:
+Empirical byte-equal idempotence of the cache rebuild at the locked threshold
+was verified before the builder was retired:
 
 | Run | Output cache SHA-256 |
 |-----|----------------------|
@@ -256,13 +245,9 @@ locked threshold was verified across three consecutive runs of
 | Rebuild #2 (temp-out) | `a905e42224046ae2e4f617902c110986bb62488cad9c85fa521b832f448ee09c` |
 | Rebuild #3 (in-place at `out/`) | `a905e42224046ae2e4f617902c110986bb62488cad9c85fa521b832f448ee09c` |
 
-The provenance JSON byte-content depends on the resolved
-`cache_path` field (relative-vs-absolute, depending on the
-output flag). Two rebuilds to the same output path produce
-byte-identical provenance JSON. Direct rebuild in place at the
-committed `out/` location produces byte-identical bytes to the
-committed `out/semantic_cache.provenance.json` (verified via
-`git status`).
+The provenance JSON byte-content depends on the resolved `cache_path` field.
+The committed files are now treated as frozen fixtures unless a deliberate
+regeneration task replaces the retired builder.
 
 The audit reports the verified count contract
 (`227 entries clean (222 paraphrase + 5 negative)`) and matching

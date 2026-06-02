@@ -1,6 +1,10 @@
 # M5b Semantic Python Oracle Specification (Python → Rust Port)
 
 **Date:** 2026-05-24
+**Status:** archival porting specification. The live Python oracle and builder
+have been retired; keep this document only as historical design evidence for
+the Rust semantic-cache implementation.
+
 **Source oracles:**
 - `src/cacg/verify/semantic.py` (244 lines) — `SemanticCache`, `SemanticVerdict`, `claim_window_hash`, `load_semantic_cache`, `dump_semantic_cache`, `_cache_lookup`, `_judge_via_claude`, `run_semantic_check`.
 - `src/cacg/cli.py` lines 837–1000 — `_build_semantic_spec`, `_SEMANTIC_LOAD_FAILED` sentinel, semantic-arg handling in `_cmd_verify` and `_cmd_verify_round_summary`.

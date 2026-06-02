@@ -1,0 +1,35 @@
+{
+  "artifacts": [
+    "cards_manifest.json",
+    "summaries.json",
+    "INDEX.md"
+  ],
+  "cards_dir": "cards/cfa",
+  "clock_sensitive_surface": "history sidecar (audit events), not the 3 published artifacts",
+  "cross_copy_difference_cause": "the serialized per-card `path` field (staging-relative; records the as-invoked path). kb index sorts paths and emits cards in (reading_id, id) order, so two physical copies have the same card set + order and differ only by the path prefix \u2014 NOT filesystem walk order.",
+  "frozen_appended_event_timestamp": "1970-01-01T00:00:00Z",
+  "frozen_byte_identical": true,
+  "frozen_run_a_hashes": {
+    "INDEX.md": "926e230a321812ff9c596035aa4e2c94fe56418b5f2c556b0342bec7a3a33ea4",
+    "cards_manifest.json": "dd0bd1464c0e802d8cbf622ad839b65bd39c54cbef6873e259fee58ca489479a",
+    "summaries.json": "2236990dd8dbdc9fc8f086c9a31f1f54594907fc0f1c9b37e9b6d3ce82d65aa2"
+  },
+  "frozen_run_b_hashes": {
+    "INDEX.md": "926e230a321812ff9c596035aa4e2c94fe56418b5f2c556b0342bec7a3a33ea4",
+    "cards_manifest.json": "dd0bd1464c0e802d8cbf622ad839b65bd39c54cbef6873e259fee58ca489479a",
+    "summaries.json": "2236990dd8dbdc9fc8f086c9a31f1f54594907fc0f1c9b37e9b6d3ce82d65aa2"
+  },
+  "kb_binary": "target/debug/kb",
+  "method": "GATE 1 determinism: KB_FROZEN_CLOCK=1 kb index <one cards copy> into two --out dirs, byte-compare the 3 published artifacts. GATE 2 clock-invariance: a non-frozen run over the SAME input is byte-compared to the frozen run. GATE 3 supplementary: modify a card, index frozen vs non-frozen, compare the appended history-event timestamp.",
+  "nonfrozen_run_hashes": {
+    "INDEX.md": "926e230a321812ff9c596035aa4e2c94fe56418b5f2c556b0342bec7a3a33ea4",
+    "cards_manifest.json": "dd0bd1464c0e802d8cbf622ad839b65bd39c54cbef6873e259fee58ca489479a",
+    "summaries.json": "2236990dd8dbdc9fc8f086c9a31f1f54594907fc0f1c9b37e9b6d3ce82d65aa2"
+  },
+  "passed": true,
+  "plan_negative_reconciliation": "Plan AC-9's negative assumes a non-frozen index injects a wall-clock timestamp into the published artifacts. The production kb index does not: the 3 published artifacts are clock-invariant (GATE 2), a stronger property. The frozen clock's observable effect is the audit sidecar (GATE 3). This harness therefore asserts clock-invariance of the published index and load-bearingness on the sidecar, instead of a published-artifact difference that cannot occur.",
+  "published_artifacts_carry_no_wall_clock": true,
+  "published_artifacts_clock_invariant": true,
+  "schema_version": "cfa_index_repro/v2",
+  "sidecar_clock_load_bearing": true
+}

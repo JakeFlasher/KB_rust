@@ -1,7 +1,8 @@
 //! Library face of the `kb` CLI.
 //!
 //! Holds the clap parser definitions for the 14 subcommands and the
-//! shared `unimplemented_subcommand(verb)` helper. Integration tests
+//! shared `unimplemented_subcommand(verb)` helper for reserved verbs
+//! whose Rust runtime is still pending. Integration tests
 //! introspect the parser tree directly via [`Cli::command`]. The
 //! binary's `main.rs` is a thin dispatcher that calls into this
 //! library.
@@ -50,15 +51,15 @@ pub struct Cli {
     pub cmd: Cmd,
 }
 
-/// The complete `kb` subcommand surface. Mirrors Python `cacg.cli`'s
-/// argparse subparsers 1:1. `Index`, `Lint`, `Verify`, and `Search`
-/// have native Rust implementations today; the remaining subcommands
-/// dispatch to [`unimplemented_subcommand`] which exits 1.
+/// The complete `kb` subcommand surface. Mirrors the historical CLI's
+/// argparse subparsers 1:1. Implemented verbs dispatch to Rust
+/// modules; reserved verbs dispatch to [`unimplemented_subcommand`]
+/// which exits 1.
 #[derive(Subcommand, Debug)]
 pub enum Cmd {
-    /// Parse a PDF into a hash-pinned chunk manifest (unimplemented in Rust).
+    /// Parse a PDF into a hash-pinned chunk manifest.
     Ingest(IngestArgs),
-    /// Scaffold a new card from the canonical template (unimplemented).
+    /// Scaffold a new card from the canonical template.
     New(NewArgs),
     /// Run layer-1 mechanical lint on cards. Mandatory
     /// `--source-matrix` per the trust kernel.
@@ -79,7 +80,7 @@ pub enum Cmd {
     /// Retract a source: add source_id to retracted_sources (unimplemented).
     #[command(name = "retract-source")]
     RetractSource(RetractSourceArgs),
-    /// Retract a single chunk: add chunk_id to retracted_chunks (unimplemented).
+    /// Retract a single chunk: add chunk_id to retracted_chunks.
     #[command(name = "retract-chunk")]
     RetractChunk(RetractChunkArgs),
     /// Generate a permissive source_matrix.json (unimplemented).
@@ -91,8 +92,8 @@ pub enum Cmd {
     /// In-memory BM25 search over summaries.json. Mandatory
     /// `--source-matrix`.
     Search(SearchArgs),
-    /// Show a single card's frontmatter + summary + citations
-    /// (unimplemented). Mandatory `--source-matrix`.
+    /// Show a single card's frontmatter + summary + citations.
+    /// Mandatory `--source-matrix`.
     Show(ShowArgs),
     /// Populate empty card summaries via retrieval-surface migration
     /// (unimplemented).

@@ -1,0 +1,157 @@
+{
+  "generated_by": "emit_06_fi_slice.py",
+  "reading_id": "06_fixed_income_and_credit",
+  "schema_version": "cfa.page_coordinate_map.v1",
+  "sources": [
+    {
+      "legacy_coordinate": "printed_book_page",
+      "pdf_coordinate_rule": "pdf_page = legacy_page + 11",
+      "source_id": "fi_davidson_levin_2014_mortgage_valuation_models",
+      "note": "Davidson/Levin Mortgage Valuation Models (Oxford 2014). Verified offset +11 across 5 evidence points via running headers like '40 Fundamentals of MBS Risk and Valuation' on PDF 51.",
+      "verified_evidence": [
+        {
+          "evidence": "Ch.2 running header '40 Fundamentals of MBS Risk' at PDF 51",
+          "legacy_page": 40,
+          "pdf_page": 51
+        },
+        {
+          "evidence": "Ch.5 running header '140 Modeling and Valuation of Agency MBS' at PDF 151",
+          "legacy_page": 140,
+          "pdf_page": 151
+        },
+        {
+          "evidence": "Ch.6 running header '190 Modeling and Valuation of Agency MBS' at PDF 201",
+          "legacy_page": 190,
+          "pdf_page": 201
+        },
+        {
+          "evidence": "Ch.9 running header '290 Modeling and Valuation of Non-Agency MBS' at PDF 301",
+          "legacy_page": 290,
+          "pdf_page": 301
+        },
+        {
+          "evidence": "Ch.12 running header '390 Analysis of the 2008-2009 Financial Crisis' at PDF 401",
+          "legacy_page": 390,
+          "pdf_page": 401
+        }
+      ],
+      "page_count_pdf": 465
+    },
+    {
+      "legacy_coordinate": "printed_book_page",
+      "pdf_coordinate_rule": "pdf_page = legacy_page + 19",
+      "source_id": "cb_lando_2004_credit_risk_modeling",
+      "note": "Lando Credit Risk Modeling (Princeton 2004). Princeton series uses standard ~19-page Roman front matter. Verified offset +19 via running chapter headers (5 evidence points).",
+      "verified_evidence": [
+        {
+          "evidence": "Ch.2 running header '12 2. Corporate Liabilities as Contingent Claims' at PDF 31",
+          "legacy_page": 12,
+          "pdf_page": 31
+        },
+        {
+          "evidence": "Ch.2 running header '32 2. Corporate Liabilities as Contingent Claims' at PDF 51",
+          "legacy_page": 32,
+          "pdf_page": 51
+        },
+        {
+          "evidence": "Ch.4 running header '82 4. Statistical Techniques for Analyzing Defaults' at PDF 101",
+          "legacy_page": 82,
+          "pdf_page": 101
+        },
+        {
+          "evidence": "Ch.7 running header '182 7. Credit Risk and Interest-Rate Swaps' at PDF 201",
+          "legacy_page": 182,
+          "pdf_page": 201
+        },
+        {
+          "evidence": "Appendix D running header '282 Appendix D. Stochastic Calculus for Jump-Diffusions' at PDF 301",
+          "legacy_page": 282,
+          "pdf_page": 301
+        }
+      ],
+      "page_count_pdf": 329
+    },
+    {
+      "legacy_coordinate": "printed_book_page",
+      "pdf_coordinate_rule": "pdf_page = legacy_page + 23",
+      "source_id": "fi_crepey_bielecki_brigo_2014_counterparty_risk_funding",
+      "note": "Crepey/Bielecki/Brigo Counterparty Risk and Funding (Wiley 2014). Verified offset +23 via running headers like '8 Counterparty Risk and Funding: A Tale of Two Puzzles' (4 evidence points).",
+      "verified_evidence": [
+        {
+          "evidence": "Ch.1 running header '8 Counterparty Risk and Funding' at PDF 31",
+          "legacy_page": 8,
+          "pdf_page": 31
+        },
+        {
+          "evidence": "Ch.2 running header '28 Counterparty Risk and Funding' at PDF 51",
+          "legacy_page": 28,
+          "pdf_page": 51
+        },
+        {
+          "evidence": "Ch.4 running header '78 Counterparty Risk and Funding' at PDF 101",
+          "legacy_page": 78,
+          "pdf_page": 101
+        },
+        {
+          "evidence": "Ch.6 running header '128 Counterparty Risk and Funding' at PDF 151",
+          "legacy_page": 128,
+          "pdf_page": 151
+        }
+      ],
+      "page_count_pdf": 380
+    },
+    {
+      "legacy_coordinate": "printed_book_page",
+      "pdf_coordinate_rule": "pdf_page = legacy_page + 47",
+      "source_id": "fi_brigo_mercurio_2006_interest_rate_models_2ed",
+      "note": "Brigo/Mercurio Interest Rate Models 2e (Springer 2006). Heavy front matter (~47 pages: preface, contents, list of figures/tables, notation) shifts body. Offset varies +45 to +52 due to chapter inserts; the body-stable value is around +47. Sampled body running headers: '404 8. Monte Carlo Tests' at PDF 451 (offset +47), '506 11. Stochastic-Volatility Models' at PDF 551 (offset +45). Auditor should verify topical match via chunks_manifest.",
+      "verified_evidence": [
+        {
+          "evidence": "Section 2.3 with embedded printed page '29' at PDF 81 (offset +52, early body)",
+          "legacy_page": 29,
+          "pdf_page": 81
+        },
+        {
+          "evidence": "Ch.8 running header '404 8. Monte Carlo Tests for LFM Analytical Approximations' at PDF 451",
+          "legacy_page": 404,
+          "pdf_page": 451
+        },
+        {
+          "evidence": "Ch.11 running header '506 11. Stochastic-Volatility Models' at PDF 551",
+          "legacy_page": 506,
+          "pdf_page": 551
+        }
+      ],
+      "page_count_pdf": 1014
+    },
+    {
+      "legacy_coordinate": "printed_book_page",
+      "pdf_coordinate_rule": "pdf_page = legacy_page + 16",
+      "source_id": "fi_tuckman_serrat_2011_fixed_income_securities_3ed",
+      "note": "Tuckman/Serrat Fixed Income Securities 3e (Wiley 2011). Verified offset +16 via JWBT539 typesetter metadata: e.g. PDF 33 'JWBT539-Tuckman ... Printer: Courier Westford 17 AN OVERVIEW OF GLOBAL FIXED INCOME MARKETS' (printed page 17 = PDF 33, +16). Confirmed by 3 fresh PDF samples in the 06_FI review-swarm phase-2 audit. (Two prior values — +24 from naive Wiley front-matter inference, and +15 from a mid-audit re-correction — were both off by 1 from the true +16.)",
+      "verified_evidence": [
+        {
+          "evidence": "JWBT539 typesetter line shows printed 17 at PDF 33",
+          "legacy_page": 17,
+          "pdf_page": 33
+        },
+        {
+          "evidence": "JWBT539 typesetter line shows printed 34 at PDF 50 (Ch.2 §2)",
+          "legacy_page": 34,
+          "pdf_page": 50
+        },
+        {
+          "evidence": "JWBT539 typesetter line shows printed 234 at PDF 250 (Ch.8)",
+          "legacy_page": 234,
+          "pdf_page": 250
+        },
+        {
+          "evidence": "JWBT539 typesetter line shows printed 384 at PDF 400 (Ch.14)",
+          "legacy_page": 384,
+          "pdf_page": 400
+        }
+      ],
+      "page_count_pdf": 650
+    }
+  ]
+}

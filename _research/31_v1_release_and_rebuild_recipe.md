@@ -2,7 +2,7 @@
 
 Successor to `_research/30` (the v0 recipe). This records the **v1 milestone**: the migration of
 three pre-authored `cacg.v0` card-skeleton sets from the read-only sibling repo
-`~/CFA_reading/deferred_books/` into the released `cfa_legacy` corpus as three new readings.
+`~/CFA_reading/deferred_books/` into the released `cfa` corpus as three new readings.
 
 ## v1 Definition of Done
 
@@ -13,6 +13,15 @@ three pre-authored `cacg.v0` card-skeleton sets from the read-only sibling repo
 only; no kernel change). The `v0-candidate` tag is left immutable; a new annotated `v1-candidate` tag
 marks this milestone.
 
+> **Superseded by the 2026-06 quarantine absorption → 408 active + 0 quarantined (408 total).**
+> The 6 notes-taint cards deferred under FUT-2 (`_research/29`) were re-authored from non-notes
+> primary sources (5 RM from McNeil QRM 2015; `rm-risk-objectives-and-tolerance` +
+> `pm-tracking-error-and-active-risk` from CFA L1) and admitted, so the active corpus is now **408**
+> with **0 quarantined** (`QUARANTINE_IDS` empty). The same rename consolidated `cfa_legacy → cfa`
+> across `sources/`, `cards/`, and `out/`. Read every `402`/`6 quarantined` count below as
+> **408 / 0** post-absorption; the gates (`check_v1_constants.py`, `check_v1_card_hash_invariance.py`,
+> `run_corpus_gate.sh`) are green at **408/0/408**.
+
 | v0 | v1 | what |
 |----|----|------|
 | 268 | **402** | active emitted cards |
@@ -22,7 +31,7 @@ marks this milestone.
 
 ## Sources & ingest (87 sources)
 
-The 16 text-layer migration PDFs were copied to `sources/cfa_legacy/pdfs/<reading>/<source_id>.pdf`
+The 16 text-layer migration PDFs were copied to `sources/cfa/pdfs/<reading>/<source_id>.pdf`
 (SHA-256-verified against each set's `_sources.json`) and the 17th source, O'Hara 1995 (image-only), was
 resolved via a reproducibly-generated text-layer **sandwich** PDF (`build_ohara_sandwich.py`; pinned
 fpdf2 + DejaVuSans; determinism inputs recorded in `v1_ohara_resolution.json`). `register_migration_sources.py`
@@ -32,13 +41,13 @@ proven byte-equivalent — `v1_libpdfium_equivalence_proof.json`):
 
 ```
 # per-source ingest under the pin, then merge at the final source count:
-python3 sources/cfa_legacy/_registry/run_ingest_per_source.py
-python3 sources/cfa_legacy/_registry/merge_ingest_manifests.py --force --require-count 87 --out out/cfa_legacy
+python3 sources/cfa/_registry/run_ingest_per_source.py
+python3 sources/cfa/_registry/merge_ingest_manifests.py --force --require-count 87 --out out/cfa
 ```
 
-This regenerates `out/cfa_legacy/chunks_manifest.json` (gitignored, never committed) and
+This regenerates `out/cfa/chunks_manifest.json` (gitignored, never committed) and
 `sources_manifest.json`; every original-70 `chunk_id`/`ordinal`/`chunk_hash` is byte-identical pre/post
-merge. `chunks_manifest.json` and the regenerated `out/cfa_legacy/source_matrix.json` are intentionally
+merge. `chunks_manifest.json` and the regenerated `out/cfa/source_matrix.json` are intentionally
 NOT committed (large/derived); they are rebuilt from the recipe.
 
 ## Resolve → emit → cross-link
@@ -52,7 +61,7 @@ NOT committed (large/derived); they are rebuilt from the recipe.
    frontmatter from the registry, no `card_hash`; cross-reading See-Also links + prose rewrites injected
    from `migration_cross_links.json`); `apply_released_card_backlinks.py` adds the reciprocal back-link to
    the one allowlisted released card (`be-limits-of-arbitrage`).
-3. `KB_FROZEN_CLOCK=1 kb index cards/cfa_legacy --out out/cfa_legacy` stamps `card_hash` on all 402 cards,
+3. `KB_FROZEN_CLOCK=1 kb index cards/cfa --out out/cfa` stamps `card_hash` on all 402 cards,
    regenerates `cards_manifest.json` / `summaries.json` / `INDEX.md` / `pdfium_provenance.json`, and
    appends the 134 new `.history.jsonl` sidecars (402 total).
 
@@ -78,5 +87,5 @@ NOT committed (large/derived); they are rebuilt from the recipe.
 Committed: the 402 card bodies + `.history.jsonl` sidecars; the 4 small published-index artifacts
 (`cards_manifest.json`, `summaries.json`, `INDEX.md`, `pdfium_provenance.json`); the registry scripts +
 curated registries + decision ledgers (`_research/29`, this doc). Rebuilt from the recipe (NOT committed):
-`chunks_manifest.json`, `out/cfa_legacy/source_matrix.json`, `summaries.sqlite`. The `v0-candidate` tag and
+`chunks_manifest.json`, `out/cfa/source_matrix.json`, `summaries.sqlite`. The `v0-candidate` tag and
 all v0 card hashes are untouched.

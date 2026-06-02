@@ -4,8 +4,8 @@
 //! `--source-matrix` enforcement on the trust-kernel four
 //! (`lint`, `verify`, `search`, `show`) producing clap's exit-2
 //! usage error, and the shared `CACG-CLI-NOT-IMPLEMENTED-<verb>`
-//! diagnostic + exit 1 from `unimplemented_subcommand` for the 13
-//! subcommands without a native Rust implementation today.
+//! diagnostic + exit 1 from `unimplemented_subcommand` for the
+//! reserved subcommands without a native Rust implementation today.
 
 use std::process::Command;
 

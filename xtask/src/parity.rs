@@ -238,12 +238,11 @@ fn workspace_root_for_runtime() -> PathBuf {
 }
 
 fn python_exe(workspace_root: &Path) -> PathBuf {
-    // Post-quarantine resolver: the legacy Python oracle venv is expected at
-    // `legacy_python_oracle/.venv/bin/python`. Create it via
-    // `python3 -m venv legacy_python_oracle/.venv && legacy_python_oracle/.venv/bin/pip install -e ./legacy_python_oracle[dev]`.
-    // No silent fallback to system `python3` — if the venv is missing,
-    // `Command::new` will surface a clear spawn error and the parity row
-    // will fail visibly rather than running against an unprovisioned interpreter.
+    // Historical live-oracle resolver retained for non-default parity rows.
+    // The committed-fixture gate does not require this path to exist. If a
+    // live row reaches this resolver in a workspace without the retired oracle,
+    // `Command::new` surfaces a clear spawn error instead of falling back to a
+    // system interpreter.
     workspace_root.join("legacy_python_oracle/.venv/bin/python")
 }
 
@@ -1531,11 +1530,8 @@ struct LintBinaries {
 impl LintBinaries {
     fn production(workspace_root: &Path) -> Self {
         Self {
-            // Post-quarantine: route every live parity invocation through the
-            // legacy oracle venv at `legacy_python_oracle/.venv/bin/python`.
-            // Calling plain `python` (or `python3`) would resolve to the
-            // system interpreter, which does not have `cacg.cli` installed
-            // and surfaces as a `ModuleNotFoundError` mid-parity-row.
+            // Historical live-oracle path. The default gate uses committed
+            // fixtures; live rows fail clearly if the retired oracle is absent.
             python_executable: python_exe(workspace_root),
             rust_executable: workspace_root.join("target/debug/kb"),
         }
@@ -3821,19 +3817,16 @@ mod tests {
     }
 
     #[test]
-    fn lint_binaries_production_routes_through_legacy_oracle_venv() {
-        // The production parity binaries must invoke the legacy oracle
-        // venv interpreter, never plain `python` or system `python3`.
-        // A bare `python` resolves to the system interpreter, which
-        // does not have `cacg.cli` installed post-quarantine and would
-        // surface as `ModuleNotFoundError: No module named 'cacg'` for
-        // every live parity row.
+    fn lint_binaries_production_routes_through_historical_oracle_path() {
+        // Live parity rows must never fall back to plain `python` or system
+        // `python3`; the default committed-fixture gate does not spawn this
+        // interpreter.
         let ws = PathBuf::from("/workspace");
         let binaries = LintBinaries::production(&ws);
         assert_eq!(
             binaries.python_executable,
             PathBuf::from("/workspace/legacy_python_oracle/.venv/bin/python"),
-            "production parity python executable must be the legacy oracle venv interpreter",
+            "production parity python executable must be the historical oracle path",
         );
     }
 

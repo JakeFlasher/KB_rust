@@ -1,0 +1,76 @@
+{
+  "compared_fields": [
+    "chunk_id",
+    "ordinal",
+    "chunk_hash",
+    "start_page",
+    "end_page",
+    "text",
+    "page_spans"
+  ],
+  "generated_at_utc": "1970-01-01T00:00:00Z",
+  "host_library_path": "/usr/lib/libpdfium.so",
+  "host_sha256": "816f5e74f78cd759faaf11d6c02df8cca27351311748631828f292e9d26cd591",
+  "notes": "Re-ingesting the probe set with the host libpdfium reproduces every recorded chunk_hash byte-for-byte, so this host build is text-equivalent to the original pin despite a different binary SHA (same Pdfium source version). Re-derivable: re-run this script with the host libpdfium present to regenerate the verdict.",
+  "pin_sha256": "c110f5240692b1915ad090d4f7e9bc6afa429db41341f2339d866d48402edbe5",
+  "pinned_package": "libpdfium-nojs 7778.r8.72ea487e43-1",
+  "probe_sources": [
+    "china_cb_hkex_ch16_convertible_equity",
+    "china_cb_hkex_ch28_convertible_debt",
+    "cfa_2022_l3_combined",
+    "cfa_2023_l2_combined",
+    "cfa_2022_l1_combined"
+  ],
+  "probes": [
+    {
+      "byte_identical": true,
+      "chunk_hash_diffs": 0,
+      "examples": [],
+      "field_diffs": 0,
+      "new_chunk_count": 1,
+      "reference_chunk_count": 1,
+      "source_id": "china_cb_hkex_ch16_convertible_equity"
+    },
+    {
+      "byte_identical": true,
+      "chunk_hash_diffs": 0,
+      "examples": [],
+      "field_diffs": 0,
+      "new_chunk_count": 2,
+      "reference_chunk_count": 2,
+      "source_id": "china_cb_hkex_ch28_convertible_debt"
+    },
+    {
+      "byte_identical": true,
+      "chunk_hash_diffs": 0,
+      "examples": [],
+      "field_diffs": 0,
+      "new_chunk_count": 4245,
+      "reference_chunk_count": 4245,
+      "source_id": "cfa_2022_l3_combined"
+    },
+    {
+      "byte_identical": true,
+      "chunk_hash_diffs": 0,
+      "examples": [],
+      "field_diffs": 0,
+      "new_chunk_count": 4841,
+      "reference_chunk_count": 4841,
+      "source_id": "cfa_2023_l2_combined"
+    },
+    {
+      "byte_identical": true,
+      "chunk_hash_diffs": 0,
+      "examples": [],
+      "field_diffs": 0,
+      "new_chunk_count": 6410,
+      "reference_chunk_count": 6410,
+      "source_id": "cfa_2022_l1_combined"
+    }
+  ],
+  "reference": "out/cfa/chunks_manifest.json (filtered by source_id)",
+  "schema_version": "cfa.v1_libpdfium_equivalence_proof.v1",
+  "total_chunks_compared": 15499,
+  "total_field_diffs": 0,
+  "verdict": "byte_identical"
+}

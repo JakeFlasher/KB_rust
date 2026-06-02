@@ -1,0 +1,906 @@
+{
+  "schema_version": "cfa.qm_01_curated.v1",
+  "generated_by": "01_QM card audit subagent swarm (2 batches: 9 + 8)",
+  "generated_at_utc": "1970-01-01T00:00:00Z",
+  "audit_summary": {
+    "total_cards": 17,
+    "audit_ok": 4,
+    "audit_wrong_pages_corrected": 6,
+    "audit_wrong_volume_corrected": 1,
+    "audit_content_mismatch_noted": 6,
+    "notes": "Slice-wide CFA L1 mis-attribution: 13 of 13 CFA-L1-only cards had legacy citations pointing to Vol.1 pp.300-360 (Probability Distributions + Sampling) when actual quant-regression content lives in R7 Linear Regression at Vol.1 pp.431-479 (PDF 447-495). Of those 13: 6 had pages corrected to the real R7 location; 6 had topics that do NOT exist in CFA L1 2022 Quant scope (AIC/BIC, ARCH, decision trees, influence/leverage, LASSO/penalized regression, PCA, time series foundations) — citations point to nearest-related R7 content as placeholder anchors; 1 had wrong-volume correction (qm-structured-data-ml from Vol.1 to Vol.6 R55 Fintech). The 4 multi-source econometrics cards (cb-arb-factor-construction, panel-cb-factor-inference, signal-validation-oos-discipline, volatility-model-garch-multivariate) all passed clean — Damodaran-style topical issues did not recur because econometrics textbook citations land in correct chapters. CFA L1 2022 Quant scope: R1 TVM, R2 Organizing Data, R3 Probability, R4 Probability Distributions, R5 Sampling, R6 Hypothesis Testing, R7 Simple Linear Regression. ML/CART/LASSO/PCA/Time-Series are L2/L3/raw-econometrics scope."
+  },
+  "_": "Merged from /tmp/01_qm_curated_batch_a.json + /tmp/01_qm_curated_batch_b.json",
+  "cards": [
+    {
+      "card_id": "qm-aic-bic-model-selection",
+      "title": "AIC and BIC for Regression Model Selection",
+      "summary_curated": "Information criteria AIC and BIC compare regression models by trading off in-sample residual fit against a parameter-count penalty; AIC's 2(k+1) penalty is constant in n while BIC's ln(n)(k+1) penalty grows with n, so BIC favours more parsimonious models. AIC/BIC are not in CFA L1 2022 Quantitative Methods.",
+      "source_stance": "primary-cfa",
+      "audit_flag": "re_anchored",
+      "audit_notes": "AIC and BIC information criteria are not covered in CFA L1 2022 Volume 1 Quantitative Methods (R1-R7). The closest CFA L1 2022 anchor is R7 Section 4.2 'Measures of Goodness of Fit' (Vol.1 pp.451-452, PDF 467-468), which lists R-squared, F-statistic, and standard error of estimate as the only fit measures discussed. AIC/BIC topic is post-2022 curriculum addition (CFA 2024 ML reading) or L2 quant material. Legacy citation Vol.1 pp.300-360 (PDF 316-376) lands in R4 Common Probability Distributions / R5 Sampling and Estimation, which is unrelated to model selection. | R4 re-anchored cites [0, 1] to ['qm_eslii_2009_2ed'] (adversarial support-verification).",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "qm_eslii_2009_2ed",
+          "volume": null,
+          "legacy_pages": [
+            250,
+            250
+          ],
+          "pdf_pages": [
+            250,
+            250
+          ],
+          "chunk_id": "qm_eslii_2009_2ed:p250:0316",
+          "chunk_hash": "7f5bab74d3658fdff0b4f8a5fa46551274426f659d75aa5b9300f79d8256eb73",
+          "quote": "Then for this set of models we define AIC(α) = err(α) + 2 · d(α) N σˆε 2 ."
+        },
+        {
+          "role": "supporting",
+          "source_id": "qm_eslii_2009_2ed",
+          "volume": null,
+          "legacy_pages": [
+            252,
+            253
+          ],
+          "pdf_pages": [
+            252,
+            253
+          ],
+          "chunk_id": "qm_eslii_2009_2ed:p252:0319",
+          "chunk_hash": "3fed3ac7de6210187e8bab5fd3f95cd43fc0200af74d83136de272fe73eecf62",
+          "quote": "The generic form of BIC is BIC = −2 · loglik + (log N) · d."
+        }
+      ]
+    },
+    {
+      "card_id": "qm-anova-table",
+      "title": "ANOVA Table for a Fitted Regression",
+      "summary_curated": "The ANOVA decomposition for a fitted regression partitions total variation SST into the regression sum of squares SSR plus the error sum of squares SSE; mean squares MSR and MSE are formed by dividing each component by its degrees of freedom, and their ratio F = MSR / MSE is the joint-significance test statistic for the slope coefficients.",
+      "source_stance": "primary-cfa",
+      "audit_flag": "wrong_pages_corrected",
+      "audit_notes": "Legacy citation Vol.1 pp.300-360 (PDF 316-376) lands in R4 Common Probability Distributions / R5 Sampling and Estimation — not regression. The actual CFA L1 2022 ANOVA partition for a fitted regression lives in R7 'Introduction to Linear Regression' Section 4 (Vol.1 pp.450-453, PDF 466-469). Pages corrected to point at the R7 ANOVA decomposition (SST=SSR+SSE) and the ANOVA-table presentation. CFA L1 2022 R7 covers SIMPLE linear regression only, so the multi-regressor F(k, n-k-1) statement in the card is broader than the source's H0:b1=0 form, but the underlying partition is identical.",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "cfa_2022_l1_combined",
+          "volume": 1,
+          "legacy_pages": [
+            450,
+            451
+          ],
+          "pdf_pages": [
+            466,
+            467
+          ],
+          "chunk_id": "cfa_2022_l1_combined:p466:0590",
+          "chunk_hash": "e13883fc1bd038a146b6164a92314332031530db31c5c89ddb29e411d215c66b",
+          "quote": "SST = SSR + SSE, meaning total variation in Y equals explained variation in Y plus unexplained variation in Y."
+        },
+        {
+          "role": "supporting",
+          "source_id": "cfa_2022_l1_combined",
+          "volume": 1,
+          "legacy_pages": [
+            452,
+            453
+          ],
+          "pdf_pages": [
+            468,
+            469
+          ],
+          "chunk_id": "cfa_2022_l1_combined:p468:0593",
+          "chunk_hash": "84514b961acad885fcdfa5536135782a7ad15e3a99672f9c6d4d57426a9909fe",
+          "quote": "We often represent the sums of squares from a regression model in an analysis of variance (ANOVA) table"
+        }
+      ]
+    },
+    {
+      "card_id": "qm-arch-conditional-heteroskedasticity",
+      "title": "ARCH(1) Conditional Heteroskedasticity",
+      "summary_curated": "ARCH(1) models the squared regression residual at time t as a linear function of its own lag, e_t^2 = a_0 + a_1 e_{t-1}^2 + u_t; significance of a_1 is the conditional-heteroskedasticity verdict and the prescribed estimator response is to switch from OLS to GLS. ARCH is not in CFA L1 2022 Quantitative Methods.",
+      "source_stance": "primary-cfa",
+      "audit_flag": "re_anchored",
+      "audit_notes": "ARCH and time-series-volatility models are not in CFA L1 2022 Vol.1 Quantitative Methods (R1-R7); the curriculum's only direct heteroskedasticity treatment is R7's homoskedasticity-assumption description and residual-plot diagnostic at Vol.1 pp.443-447 (PDF 459-463). ARCH-family models belong to L2 or to Tsay/Greene raw econometric references. Legacy citation Vol.1 pp.300-360 (PDF 316-376) lands in R4/R5 probability and sampling, not relevant. Anchors used here are R7 closest-topical residual-variance content. | R4 re-anchored cites [0, 1] to ['qm_tsay_2005_afts_2e'] (adversarial support-verification).",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "qm_tsay_2005_afts_2e",
+          "volume": null,
+          "legacy_pages": [
+            127,
+            128
+          ],
+          "pdf_pages": [
+            127,
+            128
+          ],
+          "chunk_id": "qm_tsay_2005_afts_2e:p127:0142",
+          "chunk_hash": "f7fc09f89e666cdc0981e3c823e732be2de414e9ade08c54a7b30c3da4b665d6",
+          "quote": "Specifically, an ARCH(m) model assumes that at = σt t,σ 2 t = α0 + α1a2 t−1 +···+ αma2 t−m, (3.5)"
+        },
+        {
+          "role": "supporting",
+          "source_id": "qm_tsay_2005_afts_2e",
+          "volume": null,
+          "legacy_pages": [
+            127,
+            128
+          ],
+          "pdf_pages": [
+            127,
+            128
+          ],
+          "chunk_id": "qm_tsay_2005_afts_2e:p127:0142",
+          "chunk_hash": "f7fc09f89e666cdc0981e3c823e732be2de414e9ade08c54a7b30c3da4b665d6",
+          "quote": "This feature is similar to the volatility clusterings observed in asset returns."
+        }
+      ]
+    },
+    {
+      "card_id": "qm-cb-arb-factor-construction",
+      "title": "CB-Arb Factor Construction",
+      "summary_curated": "CB-arb cross-sectional factor scoring uses linear regression (OLS), ridge / lasso shrinkage for high-dimensional feature spaces, and boosting (AdaBoost / gradient boosting) for non-linear loadings. ESL Ch.3 supplies linear methods; ESL Ch.10 supplies boosting; Greene Ch.4 supplies the OLS foundation; Wooldridge Ch.7 supplies categorical dummies.",
+      "source_stance": "primary-eslii",
+      "audit_flag": "ok",
+      "audit_notes": "",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "qm_eslii_2009_2ed",
+          "volume": null,
+          "legacy_pages": [
+            43,
+            99
+          ],
+          "pdf_pages": [
+            62,
+            118
+          ],
+          "chunk_id": "qm_eslii_2009_2ed:p062:0076",
+          "chunk_hash": "2f0a8f3eab3b538b8cd8ea3f9a0b63f831fdab18194e3c51bdfc5742c04b6aa5",
+          "quote": "The linear model either assumes that the regression function E(Y |X) is linear, or that the linear model is a reasonable approximation."
+        },
+        {
+          "role": "primary",
+          "source_id": "qm_eslii_2009_2ed",
+          "volume": null,
+          "legacy_pages": [
+            43,
+            99
+          ],
+          "pdf_pages": [
+            62,
+            118
+          ],
+          "chunk_id": "qm_eslii_2009_2ed:p063:0077",
+          "chunk_hash": "fd2ef7cd3789673981b08c85ca5627b1ad31021b1f314d29c5053db087fb26c2",
+          "quote": "The most popular estimation method is least squares, in which we pick the coefficients β"
+        },
+        {
+          "role": "supporting",
+          "source_id": "qm_eslii_2009_2ed",
+          "volume": null,
+          "legacy_pages": [
+            337,
+            384
+          ],
+          "pdf_pages": [
+            356,
+            403
+          ],
+          "chunk_id": "qm_eslii_2009_2ed:p356:0450",
+          "chunk_hash": "e39f0a3a81ac8475188e5d95accd81c4e6def31e0e67e2174b186728787fd8ab",
+          "quote": "The purpose of boosting is to sequentially apply the weak classification algorithm to repeatedly modified versions of the data, thereby producing a sequence of weak classifiers"
+        },
+        {
+          "role": "supporting",
+          "source_id": "qm_greene_2019_econometric_analysis_8ed",
+          "volume": null,
+          "legacy_pages": [
+            143,
+            180
+          ],
+          "pdf_pages": [
+            144,
+            181
+          ],
+          "chunk_id": "qm_greene_2019_econometric_analysis_8ed:p144:0205",
+          "chunk_hash": "19fb0306d69b907475b4d54430885d103309f48c4859f518559703a2e5c413cb",
+          "quote": "CHAPTER 4 ✦ Estimating the Regression Model by Least Squares"
+        }
+      ]
+    },
+    {
+      "card_id": "qm-decision-trees-and-roots",
+      "title": "Classification and Regression Trees (CART)",
+      "summary_curated": "CART is a non-parametric supervised learning algorithm that partitions the feature space by recursive binary splits at decision nodes; terminal nodes predict the majority class for classification problems or the terminal-node mean for regression problems. CART is not in CFA L1 2022 Quantitative Methods; the parametric counterpart in R7 is simple linear regression.",
+      "source_stance": "primary-cfa",
+      "audit_flag": "re_anchored",
+      "audit_notes": "Classification and Regression Trees (CART) are not in CFA L1 2022 Vol.1 Quantitative Methods (R1-R7), which ends at simple linear regression in R7. CART and supervised-learning algorithms belong to the CFA L2 Quant ML reading or to ESL II / ISLP references. Legacy citation Vol.1 pp.300-360 (PDF 316-376) lands in R4 Common Probability Distributions / R5 Sampling and Estimation. The anchors here are the closest topical R7 paragraphs on the parametric linear-regression model (CART's parametric counterpart in the curriculum). | R4 re-anchored cites [0, 1] to ['qm_eslii_2009_2ed'] (adversarial support-verification).",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "qm_eslii_2009_2ed",
+          "volume": null,
+          "legacy_pages": [
+            324,
+            324
+          ],
+          "pdf_pages": [
+            324,
+            324
+          ],
+          "chunk_id": "qm_eslii_2009_2ed:p324:0408",
+          "chunk_hash": "2bed9a519a346acccdeed17875c45f2886e6273f4ff30cd806df7af03aa201a6",
+          "quote": "To simplify matters, we restrict attention to recursive binary partitions like that in the top right panel of Figure 9.2. We first split the space into two regions, and model the response by the mean of Y in each region. We choose the variable and split-point to achieve the best fit."
+        },
+        {
+          "role": "supporting",
+          "source_id": "qm_eslii_2009_2ed",
+          "volume": null,
+          "legacy_pages": [
+            327,
+            328
+          ],
+          "pdf_pages": [
+            327,
+            328
+          ],
+          "chunk_id": "qm_eslii_2009_2ed:p327:0413",
+          "chunk_hash": "528098361f5c483657edf748f2a5f20563750faed1b0880d465bab6c8098830e",
+          "quote": "If the target is a classification outcome taking values 1, 2, . . . , K, the only changes needed in the tree algorithm pertain to the criteria for splitting nodes and pruning the tree."
+        }
+      ]
+    },
+    {
+      "card_id": "qm-goodness-of-fit-r2-adj-r2",
+      "title": "Goodness of Fit: R-squared and Adjusted R-squared",
+      "summary_curated": "The coefficient of determination R-squared = SSR / SST is the fraction of dependent-variable variation explained by the regression. Adjusted R-squared adds a (n-1)/(n-k-1) penalty that lets it fall when a junk regressor enters. CFA L1 2022 R7 covers R-squared and the F-statistic for fit; the multi-regressor adjusted form is post-2022.",
+      "source_stance": "primary-cfa",
+      "audit_flag": "wrong_pages_corrected",
+      "audit_notes": "Legacy citation Vol.1 pp.300-360 (PDF 316-376) is R4/R5 probability/sampling — not regression. Corrected to R7 'Introduction to Linear Regression' Section 4.2 'Measures of Goodness of Fit' at Vol.1 pp.451-452 (PDF 467-468). Adjusted R-squared (k>=2 correction) is not present in CFA L1 2022 R7 because R7 only treats simple linear regression with k=1; adjusted-R-squared as a multi-regressor correction is post-2022 / L2 material. The R-squared definition and the goodness-of-fit framing are sourced cleanly from R7.",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "cfa_2022_l1_combined",
+          "volume": 1,
+          "legacy_pages": [
+            451,
+            452
+          ],
+          "pdf_pages": [
+            467,
+            468
+          ],
+          "chunk_id": "cfa_2022_l1_combined:p467:0591",
+          "chunk_hash": "249999c640c37b2adc76943c754b24467d1468b271b6167a45cf8961437590ce",
+          "quote": "By construction, the coefficient of determination ranges from 0% to 100%."
+        },
+        {
+          "role": "supporting",
+          "source_id": "cfa_2022_l1_combined",
+          "volume": 1,
+          "legacy_pages": [
+            451,
+            452
+          ],
+          "pdf_pages": [
+            467,
+            468
+          ],
+          "chunk_id": "cfa_2022_l1_combined:p467:0591",
+          "chunk_hash": "249999c640c37b2adc76943c754b24467d1468b271b6167a45cf8961437590ce",
+          "quote": "we can use an F-distributed test statistic to test whether the slopes in a regression are equal to zero"
+        }
+      ]
+    },
+    {
+      "card_id": "qm-influence-analysis-leverage",
+      "title": "Influence Analysis: Leverage, Studentised Residuals, Cook's Distance",
+      "summary_curated": "Per-observation regression diagnostics: leverage h_ii flags unusual predictor profiles, studentised residuals flag aggregate outliers, and Cook's distance combines both to identify observations whose deletion would materially move the fitted coefficients. These quantitative diagnostics are not in CFA L1 2022; R7 only mentions outliers descriptively.",
+      "source_stance": "primary-cfa",
+      "audit_flag": "re_anchored",
+      "audit_notes": "Leverage h_ii, studentised residuals, and Cook's distance are not in CFA L1 2022 Vol.1 Quantitative Methods (R1-R7). The closest content in R7 is a single descriptive sentence about outliers influencing the fitted line at Vol.1 p.448 (PDF 464), and the residual-pattern diagnostic at Vol.1 p.447 (PDF 463). Quantitative influence diagnostics belong to L2 or raw econometric references (Greene / Wooldridge). Legacy citation Vol.1 pp.300-360 (PDF 316-376) is R4/R5 probability/sampling — not relevant. | R4 re-anchored cites [0, 1] to ['qm_greene_2019_econometric_analysis_8ed'] (adversarial support-verification).",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "qm_greene_2019_econometric_analysis_8ed",
+          "volume": null,
+          "legacy_pages": [
+            146,
+            147
+          ],
+          "pdf_pages": [
+            146,
+            147
+          ],
+          "chunk_id": "qm_greene_2019_econometric_analysis_8ed:p146:0209",
+          "chunk_hash": "1660dc3d50cf276387b2252ed6de4fddb834ccf4ebb7eaf0dfc2e0f40281449a",
+          "quote": "The influence measure, hii = xi = (X(i) = X(i))-1 xi = 1 n + a K - 1 j = 1 a K - 1 k = 1 (xi,j - xn, j )(xi,k - xk)(Z(i) = M0 Z(i)) jk, (4-68) has been used to flag influential observations."
+        },
+        {
+          "role": "supporting",
+          "source_id": "qm_greene_2019_econometric_analysis_8ed",
+          "volume": null,
+          "legacy_pages": [
+            147,
+            147
+          ],
+          "pdf_pages": [
+            147,
+            147
+          ],
+          "chunk_id": "qm_greene_2019_econometric_analysis_8ed:p147:0210",
+          "chunk_hash": "2392bb75515b481f7fe4359af299d0e167f3d3bf4a83c2cde56ad4a86d283a42",
+          "quote": "Studentized residuals are constructed with this in mind by computing the regression coefficients and the residual variance without observation i for each observation in the sample and then standardizing the modified residuals."
+        }
+      ]
+    },
+    {
+      "card_id": "qm-multiple-linear-regression-foundations",
+      "title": "Multiple Linear Regression Foundations",
+      "summary_curated": "Multiple linear regression posits Y_i = b_0 + sum_j b_j x_{ji} + e_i with linear-in-parameters specification and the four classical assumptions (linearity, homoskedasticity, independence, normality) making OLS the best linear unbiased estimator. CFA L1 2022 R7 covers the simple-LR case (k=1) only; the multi-regressor extension is named in the F-test null.",
+      "source_stance": "primary-cfa",
+      "audit_flag": "wrong_pages_corrected",
+      "audit_notes": "Legacy citation Vol.1 pp.300-360 (PDF 316-376) lands in R4 Common Probability Distributions / R5 Sampling and Estimation — not regression. Corrected to R7 'Introduction to Linear Regression' core, Vol.1 pp.434-444 (PDF 450-460). R7 covers SIMPLE linear regression (k=1) only; the card's full multi-regressor treatment exceeds R7 scope (R7 only names the H0:b1=b2=...=bk=0 form in the F-test discussion). True multiple-regression treatment with Gauss-Markov, (X^T X)^-1, and multicollinearity is L2 / raw econometric reference material.",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "cfa_2022_l1_combined",
+          "volume": 1,
+          "legacy_pages": [
+            434,
+            435
+          ],
+          "pdf_pages": [
+            450,
+            451
+          ],
+          "chunk_id": "cfa_2022_l1_combined:p450:0573",
+          "chunk_hash": "12e3fa714563ce4f5073990ecbc51c753c7aab623ecf7f87953d6e198bc18d4c",
+          "quote": "As the name implies, linear regression assumes a linear relationship between the dependent and the independent variables."
+        },
+        {
+          "role": "supporting",
+          "source_id": "cfa_2022_l1_combined",
+          "volume": 1,
+          "legacy_pages": [
+            443,
+            444
+          ],
+          "pdf_pages": [
+            459,
+            460
+          ],
+          "chunk_id": "cfa_2022_l1_combined:p459:0583",
+          "chunk_hash": "d1861ed647fb04131013ea49936e275d653994f4bd336d765db641da4d156b63",
+          "quote": "We need to make the following four key assumptions to be able to draw valid conclusions from a simple linear regression model"
+        }
+      ]
+    },
+    {
+      "card_id": "qm-panel-cb-factor-inference",
+      "title": "Panel-Data CB-Arb Factor Inference",
+      "summary_curated": "Panel-data CB-arb factor inference adjudicates pooled OLS vs fixed-effects (within) vs random-effects (GLS) estimators of the slope on (x_{it}, y_{it}). Greene Ch.11 derives the within transformation and the Hausman specification test; Wooldridge Ch.13–14 cross-presents the same machinery at undergraduate depth plus clustered standard errors for within-unit serial correlation.",
+      "source_stance": "primary-greene",
+      "audit_flag": "ok",
+      "audit_notes": "",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "qm_greene_2019_econometric_analysis_8ed",
+          "volume": null,
+          "legacy_pages": [
+            413,
+            470
+          ],
+          "pdf_pages": [
+            414,
+            471
+          ],
+          "chunk_id": "qm_greene_2019_econometric_analysis_8ed:p413:0633",
+          "chunk_hash": "dc4a2d92d0ce811e2291d7796cc18a4b614cafcaf999271452c022274c9529c4",
+          "quote": "The analysis of panel data allows the model builder to learn about economic processes while accounting for both heterogeneity"
+        },
+        {
+          "role": "primary",
+          "source_id": "qm_greene_2019_econometric_analysis_8ed",
+          "volume": null,
+          "legacy_pages": [
+            413,
+            470
+          ],
+          "pdf_pages": [
+            414,
+            471
+          ],
+          "chunk_id": "qm_greene_2019_econometric_analysis_8ed:p455:0703",
+          "chunk_hash": "de5e7975456de619c55caee5ca65fc4aaa7fe1693422816b29fd6ac169f56cf3",
+          "quote": "The Hausman test is a useful device for determining the preferred specification of the common effects model."
+        },
+        {
+          "role": "supporting",
+          "source_id": "qm_wooldridge_intro_econometrics_8ed",
+          "volume": null,
+          "legacy_pages": [
+            421,
+            485
+          ],
+          "pdf_pages": [
+            445,
+            509
+          ],
+          "chunk_id": "qm_wooldridge_intro_econometrics_8ed:p482:1050",
+          "chunk_hash": "5bf19c5699520f6935d75b337c4eb54bd131a7739ad29abe0c0c64dca1de28ba",
+          "quote": "Because i denotes different cities, we call ai an unobserved city effect or a city fixed effect"
+        },
+        {
+          "role": "supporting",
+          "source_id": "qm_wooldridge_intro_econometrics_8ed",
+          "volume": null,
+          "legacy_pages": [
+            421,
+            485
+          ],
+          "pdf_pages": [
+            445,
+            509
+          ],
+          "chunk_id": "qm_wooldridge_intro_econometrics_8ed:p506:1107",
+          "chunk_hash": "cd9b0ea7cedfcb0d87ad0619336013664f86f172c5ee5bcf010b48abb442d7fe",
+          "quote": "A pooled OLS estimator that is based on the time-demeaned variables is called the fixed effects estimator or the within estimator."
+        }
+      ]
+    },
+    {
+      "card_id": "qm-penalized-regression-lasso",
+      "title": "LASSO Penalised Regression",
+      "summary_curated": "LASSO augments the OLS sum-of-squared-residuals with an L1 penalty lambda * sum |b_j|; for large lambda some coefficients are shrunk exactly to zero, giving simultaneous regularisation and automatic feature selection. LASSO is not in CFA L1 2022 Quantitative Methods; R7 covers the unpenalised OLS criterion only.",
+      "source_stance": "primary-cfa",
+      "audit_flag": "re_anchored",
+      "audit_notes": "LASSO and L1-penalised regression are not in CFA L1 2022 Vol.1 Quantitative Methods (R1-R7). R7 covers the unpenalised least-squares criterion in 'Estimating the Parameters of a Simple Linear Regression' (Vol.1 pp.434-435, PDF 450-451). LASSO belongs to CFA L2 ML reading or to ESL II / ISLP references. Legacy citation Vol.1 pp.300-360 (PDF 316-376) is R4/R5 probability/sampling — not relevant. Anchors here are R7's unpenalised OLS criterion as the baseline LASSO augments. | R4 re-anchored cites [0, 1] to ['qm_eslii_2009_2ed'] (adversarial support-verification).",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "qm_eslii_2009_2ed",
+          "volume": null,
+          "legacy_pages": [
+            87,
+            88
+          ],
+          "pdf_pages": [
+            87,
+            88
+          ],
+          "chunk_id": "qm_eslii_2009_2ed:p087:0108",
+          "chunk_hash": "35d833a81343e91541e9be749fc404601230b56ff3b4d0e22bc5281372d63d2f",
+          "quote": "Notice the similarity to the ridge regression problem (3.42) or (3.41): the L2 ridge penalty Pp 1 β 2 j is replaced by the L1 lasso penalty Pp 1 |βj |."
+        },
+        {
+          "role": "supporting",
+          "source_id": "qm_eslii_2009_2ed",
+          "volume": null,
+          "legacy_pages": [
+            88,
+            88
+          ],
+          "pdf_pages": [
+            88,
+            88
+          ],
+          "chunk_id": "qm_eslii_2009_2ed:p088:0109",
+          "chunk_hash": "ea948a05da4c3a8cbb7675c22d5b45fa1ceb6085ed2611ffefc372d911760e5f",
+          "quote": "Because of the nature of the constraint, making t sufficiently small will cause some of the coefficients to be exactly zero. Thus the lasso does a kind of continuous subset selection."
+        }
+      ]
+    },
+    {
+      "card_id": "qm-projection-and-dimensionality-reduction",
+      "title": "Principal Components / Dimensionality Reduction",
+      "summary_curated": "Principal components analysis (PCA) rotates a standardised feature matrix onto orthogonal axes ranked by explained variance; the analyst keeps enough leading components to cover a chosen cumulative-variance threshold and discards the rest. PCA is not in CFA L1 2022 Quantitative Methods; R7 only covers simple linear regression with its scalar predictor.",
+      "source_stance": "primary-cfa",
+      "audit_flag": "re_anchored",
+      "audit_notes": "Principal components analysis and dimensionality reduction are not in CFA L1 2022 Vol.1 Quantitative Methods (R1-R7). The curriculum's last QM reading is R7 'Introduction to Linear Regression' which covers a SCALAR independent variable only, so the multi-predictor near-collinearity / PCA-remedy framing is outside the curriculum entirely. PCA belongs to CFA L2 ML reading or to ESL II / ISLP references. Legacy citation Vol.1 pp.300-360 (PDF 316-376) is R4/R5 probability/sampling — not relevant. Anchors here are R7's regression-analysis framing. | R4 re-anchored cites [0, 1] to ['qm_eslii_2009_2ed'] (adversarial support-verification).",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "qm_eslii_2009_2ed",
+          "volume": null,
+          "legacy_pages": [
+            552,
+            553
+          ],
+          "pdf_pages": [
+            552,
+            553
+          ],
+          "chunk_id": "qm_eslii_2009_2ed:p552:0693",
+          "chunk_hash": "adbcaf2487d3629533f56a2906d3564683a9295cdfecf94f0252e2924086aa39",
+          "quote": "Principal components are a sequence of projections of the data, mutually uncorrelated and ordered in variance."
+        },
+        {
+          "role": "supporting",
+          "source_id": "qm_eslii_2009_2ed",
+          "volume": null,
+          "legacy_pages": [
+            555,
+            556
+          ],
+          "pdf_pages": [
+            555,
+            556
+          ],
+          "chunk_id": "qm_eslii_2009_2ed:p555:0696",
+          "chunk_hash": "1ff00b8b03dbb07611c8d88f8dba2561874283a1c62f67ab953bfe7c508e108f",
+          "quote": "Xv2 has the highest variance among all linear combinations satisfying v2 orthogonal to v1, and so on."
+        }
+      ]
+    },
+    {
+      "card_id": "qm-regression-assumption-violations",
+      "title": "Regression Assumption Violations",
+      "summary_curated": "CFA L1 Reading 7 (Simple Linear Regression) names the four classical assumptions — linearity, homoskedasticity, independence, normality — and pairs each with a residual-plot diagnostic. The deeper Breusch–Pagan / Durbin–Watson / VIF treatment the legacy card claims is NOT in CFA L1 2022; it is L2 / raw-econometric content.",
+      "source_stance": "primary-cfa",
+      "audit_flag": "wrong_pages_corrected",
+      "audit_notes": "Legacy KB cites Vol.1/pp.300-360 (Common Probability Distributions / Sampling / start of Hypothesis Testing). Actual content lives at Vol.1 printed pp.442-450 (PDF 458-466) in Reading 7 Section 3 \"Assumptions of the Simple Linear Regression Model\". Coverage at L1 is shallow: four named assumptions with residual-plot diagnostics, no Breusch–Pagan / Durbin–Watson / VIF as the legacy card asserts. Page range corrected; content scope partial mismatch noted.",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "cfa_2022_l1_combined",
+          "volume": 1,
+          "legacy_pages": [
+            442,
+            450
+          ],
+          "pdf_pages": [
+            458,
+            466
+          ],
+          "chunk_id": "cfa_2022_l1_combined:p460:0584",
+          "chunk_hash": "e5723f733bf1581ecff71e13310ca87e4987e64d72ccef236f2e8b23ec7798f9",
+          "quote": "is known as the homoskedasticity assumption."
+        },
+        {
+          "role": "primary",
+          "source_id": "cfa_2022_l1_combined",
+          "volume": 1,
+          "legacy_pages": [
+            442,
+            450
+          ],
+          "pdf_pages": [
+            458,
+            466
+          ],
+          "chunk_id": "cfa_2022_l1_combined:p460:0584",
+          "chunk_hash": "e5723f733bf1581ecff71e13310ca87e4987e64d72ccef236f2e8b23ec7798f9",
+          "quote": "variance of residuals differs across observations, then we refer to this as heteroskedasticity."
+        },
+        {
+          "role": "supporting",
+          "source_id": "cfa_2022_l1_combined",
+          "volume": 1,
+          "legacy_pages": [
+            442,
+            450
+          ],
+          "pdf_pages": [
+            458,
+            466
+          ],
+          "chunk_id": "cfa_2022_l1_combined:p465:0589",
+          "chunk_hash": "12527b62294e0ab72dd20955c92eb9d3ad4799c2d0cbb30d99d20a96d9378d52",
+          "quote": "the curved pattern of residuals in Exhibit 18 indicates potential heteroskedasticity (residuals have unequal variances)"
+        }
+      ]
+    },
+    {
+      "card_id": "qm-regression-hypothesis-tests",
+      "title": "Hypothesis Tests on a Fitted Regression",
+      "summary_curated": "CFA L1 Reading 7 introduces the F-distributed test for the joint significance of regression slopes and the t-test on an individual slope coefficient (with `n − k − 1` df). At the L1 level, partial (nested) F-tests on multi-coefficient restrictions are not developed; the legacy card overreaches to multiple-regression machinery that is L2 / raw-econometric content.",
+      "source_stance": "primary-cfa",
+      "audit_flag": "wrong_pages_corrected",
+      "audit_notes": "Legacy KB cites Vol.1/pp.300-360. Reading 7 hypothesis-test content is at Vol.1 printed pp.451-458 (PDF 467-474). L1 covers only the simple-linear F-test (overall slope significance) and the simple-linear t-test on a single slope coefficient; the partial (nested) F-test that the legacy card claims is L2 / raw econometric content.",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "cfa_2022_l1_combined",
+          "volume": 1,
+          "legacy_pages": [
+            451,
+            454
+          ],
+          "pdf_pages": [
+            467,
+            470
+          ],
+          "chunk_id": "cfa_2022_l1_combined:p467:0591",
+          "chunk_hash": "249999c640c37b2adc76943c754b24467d1468b271b6167a45cf8961437590ce",
+          "quote": "In general, we use an F-distributed test statistic to compare two variances."
+        },
+        {
+          "role": "primary",
+          "source_id": "cfa_2022_l1_combined",
+          "volume": 1,
+          "legacy_pages": [
+            455,
+            458
+          ],
+          "pdf_pages": [
+            471,
+            474
+          ],
+          "chunk_id": "cfa_2022_l1_combined:p471:0597",
+          "chunk_hash": "3c03c0235957c7c17abe947e5b8f605d9a488840ae05113b5a908fcb964d5ce7",
+          "quote": "To test a hypothesis about a slope, we calculate the test statistic by subtracting the hypothesized population slope"
+        },
+        {
+          "role": "supporting",
+          "source_id": "cfa_2022_l1_combined",
+          "volume": 1,
+          "legacy_pages": [
+            455,
+            458
+          ],
+          "pdf_pages": [
+            471,
+            474
+          ],
+          "chunk_id": "cfa_2022_l1_combined:p471:0597",
+          "chunk_hash": "3c03c0235957c7c17abe947e5b8f605d9a488840ae05113b5a908fcb964d5ce7",
+          "quote": "If the calculated t-statistic is outside the bounds of the critical t-values, we reject the null hypothesis"
+        }
+      ]
+    },
+    {
+      "card_id": "qm-signal-validation-oos-discipline",
+      "title": "Out-of-Sample Signal Validation Discipline",
+      "summary_curated": "OOS signal validation for CB-arb factor models partitions data into train / validation / test, rotates K-fold cross-validation to estimate generalization error, and uses the bias-variance decomposition (noise + squared bias + variance) to diagnose under- vs over-fitting. ESL Ch.7 supplies the algebra and K-fold; ISLP Ch.5 reframes at undergraduate depth.",
+      "source_stance": "primary-eslii",
+      "audit_flag": "ok",
+      "audit_notes": "",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "qm_eslii_2009_2ed",
+          "volume": null,
+          "legacy_pages": [
+            219,
+            260
+          ],
+          "pdf_pages": [
+            238,
+            279
+          ],
+          "chunk_id": "qm_eslii_2009_2ed:p242:0307",
+          "chunk_hash": "1b252e5a412cea287d46ba9c4d555b6bfcc4bf37eb8e9ada085c15d265fcba06",
+          "quote": "we first explore in more detail the nature of test error and the bias–variance tradeoff."
+        },
+        {
+          "role": "primary",
+          "source_id": "qm_eslii_2009_2ed",
+          "volume": null,
+          "legacy_pages": [
+            219,
+            260
+          ],
+          "pdf_pages": [
+            238,
+            279
+          ],
+          "chunk_id": "qm_eslii_2009_2ed:p261:0330",
+          "chunk_hash": "b4ac22255a89bf0d01700ab913cd3439556ffda2393de383193cb7fe01121368",
+          "quote": "Typical choices of K are 5 or 10 (see below). The case K = N is known as leave-one-out cross-validation."
+        },
+        {
+          "role": "supporting",
+          "source_id": "qm_islp_2023_python",
+          "volume": null,
+          "legacy_pages": [
+            197,
+            228
+          ],
+          "pdf_pages": [
+            206,
+            237
+          ],
+          "chunk_id": "qm_islp_2023_python:p214:0287",
+          "chunk_hash": "a44c55341904be7ca0a1f0aa17363a199cf6a6d94a24d081d60193275face4b7",
+          "quote": "This approach involves randomly k-fold CV dividing the set of observations into k groups, or folds, of approximately equ"
+        },
+        {
+          "role": "supporting",
+          "source_id": "qm_islp_2023_python",
+          "volume": null,
+          "legacy_pages": [
+            197,
+            228
+          ],
+          "pdf_pages": [
+            206,
+            237
+          ],
+          "chunk_id": "qm_islp_2023_python:p213:0285",
+          "chunk_hash": "9943b631d21a746eb0261eb08b9ae46f52eeb1c6662ad56b89fd0e0c44661655",
+          "quote": "A schematic display of LOOCV. A set of n data points is repeat"
+        }
+      ]
+    },
+    {
+      "card_id": "qm-structured-data-ml",
+      "title": "Supervised ML Pipeline and Bias-Variance",
+      "summary_curated": "CFA L1 2022 only touches supervised-ML at the introductory level in Vol.6 Reading 55 \"Fintech in Investment Management\": train / validation / test split, over- and under-fitting, the supervised / unsupervised / deep-learning typology. K-fold CV, formal bias-variance decomposition, LASSO/CART tuning, and PCA as the legacy card asserts are CFA L2 / raw-statistical-learning content, not L1.",
+      "source_stance": "primary-cfa",
+      "audit_flag": "wrong_volume_corrected",
+      "audit_notes": "Legacy KB cites Vol.1/pp.300-360 but CFA L1 2022 ML coverage lives ONLY in Vol.6 Reading 55 \"Fintech in Investment Management\" (printed pp.231-248 / PDF 3500-3517). Coverage is shallow: three-way split, over/under-fitting, supervised vs unsupervised. K-fold CV, bias-variance decomposition algebra, LASSO/CART/PCA are L2 / raw-statistical-learning content per CFA L1 2022 curriculum. Volume corrected Vol.1 → Vol.6; content scope still partial.",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "cfa_2022_l1_combined",
+          "volume": 6,
+          "legacy_pages": [
+            231,
+            232
+          ],
+          "pdf_pages": [
+            3500,
+            3501
+          ],
+          "chunk_id": "cfa_2022_l1_combined:p3500:5260",
+          "chunk_hash": "902f6226d880561e69d2011effdaa1844083835662c335fc00970bae4302873a",
+          "quote": "ML involves splitting the dataset into three distinct subsets: a training dataset, a validation dataset, and a test dataset."
+        },
+        {
+          "role": "primary",
+          "source_id": "cfa_2022_l1_combined",
+          "volume": 6,
+          "legacy_pages": [
+            231,
+            232
+          ],
+          "pdf_pages": [
+            3500,
+            3501
+          ],
+          "chunk_id": "cfa_2022_l1_combined:p3500:5260",
+          "chunk_hash": "902f6226d880561e69d2011effdaa1844083835662c335fc00970bae4302873a",
+          "quote": "Overfitting occurs when the ML model learns the input and target dataset too precisely."
+        },
+        {
+          "role": "supporting",
+          "source_id": "cfa_2022_l1_combined",
+          "volume": 6,
+          "legacy_pages": [
+            232,
+            233
+          ],
+          "pdf_pages": [
+            3501,
+            3502
+          ],
+          "chunk_id": "cfa_2022_l1_combined:p3501:5261",
+          "chunk_hash": "f1bcea068f71dae4350a761b52fe7e06dd73694b37e8854f20477d93682209db",
+          "quote": "In supervised learning, computers learn to model relationships based on labeled training data."
+        }
+      ]
+    },
+    {
+      "card_id": "qm-time-series-foundations",
+      "title": "Time-Series Foundations: Trend, AR(p), Stationarity, Unit Root",
+      "summary_curated": "AR(p) recursion, covariance stationarity, the Dickey–Fuller unit-root test, and log-linear trend models are NOT covered in CFA L1 2022. Reading 7 only distinguishes cross-sectional vs time-series regression data; AR(p) / unit-root / Dickey–Fuller machinery is CFA L2 / raw time-series-textbook content.",
+      "source_stance": "primary-cfa",
+      "audit_flag": "re_anchored",
+      "audit_notes": "Legacy KB cites Vol.1/pp.300-360. Searched CFA L1 2022 entire PDF for \"AR(p)\", \"AR(1)\", \"Dickey\", \"unit root\", \"autoregressive\", \"stationarity\" — zero hits anywhere in Vol.1 Quantitative Methods readings. The claimed topical content (AR(p) / unit root / covariance stationarity / Dickey–Fuller) is CFA L2 Quantitative Methods territory, not L1. The only L1 mention of time-series is Reading 7's passing distinction between cross-sectional and time-series regression data (printed pp.440-446 / PDF 456-462); cited here as a weak placeholder. Card needs re-anchoring against a raw time-series reference for the claimed AR(p) / unit-root machinery. | R4 re-anchored cites [0, 1] to ['qm_tsay_2005_afts_2e'] (adversarial support-verification).",
+      "citations": [
+        {
+          "role": "supporting",
+          "source_id": "qm_tsay_2005_afts_2e",
+          "volume": null,
+          "legacy_pages": [
+            49,
+            50
+          ],
+          "pdf_pages": [
+            49,
+            50
+          ],
+          "chunk_id": "qm_tsay_2005_afts_2e:p049:0044",
+          "chunk_hash": "eec1cca92206e6fee29cc29ba8562f8616110331120205e41aaa1967b2654374",
+          "quote": "From the definitions, if rt is strictly stationary and its first two moments are finite, then rt is also weakly stationary."
+        },
+        {
+          "role": "supporting",
+          "source_id": "qm_tsay_2005_afts_2e",
+          "volume": null,
+          "legacy_pages": [
+            93,
+            93
+          ],
+          "pdf_pages": [
+            93,
+            93
+          ],
+          "chunk_id": "qm_tsay_2005_afts_2e:p093:0100",
+          "chunk_hash": "2d8577e77959793a7dd6bc18844d65ff92b1eb6c21a645e6811d8f22d9a8f2d7",
+          "quote": "This is the well-known unit-root testing problem; see Dickey and Fuller (1979)."
+        }
+      ]
+    },
+    {
+      "card_id": "qm-volatility-model-garch-multivariate",
+      "title": "Volatility-Model Estimation (ARCH / GARCH + Multivariate)",
+      "summary_curated": "Tsay AFTS 2e Ch.3 defines ARCH(m) and GARCH(m, s) recursive conditional-variance models on a financial-return innovation series; GARCH(1, 1) with persistence α_1 + β_1 is the practitioner default. Tsay MTSA 2014 Ch.7 extends σ_t² to a multivariate volatility matrix Σ_t with BEKK and DCC parameterizations.",
+      "source_stance": "primary-tsay",
+      "audit_flag": "ok",
+      "audit_notes": "Tsay MTSA cited range pp.359-410 (PDF 379-430) covers the tail of Ch.6 (factor models) and the start of Ch.7 Multivariate Volatility (printed pp.399-410 / PDF 419-430). The DCC machinery proper sits in Section 7.7 at printed pp.428-432; only the chapter-intro framing is in cited range. Topical match preserved at the \"multivariate volatility models\" level.",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "qm_tsay_2005_afts_2e",
+          "volume": null,
+          "legacy_pages": [
+            97,
+            200
+          ],
+          "pdf_pages": [
+            122,
+            225
+          ],
+          "chunk_id": "qm_tsay_2005_afts_2e:p127:0142",
+          "chunk_hash": "f7fc09f89e666cdc0981e3c823e732be2de414e9ade08c54a7b30c3da4b665d6",
+          "quote": "The basic idea of ARCH models is that (a) the shock at of an asset return is serially uncorrelated, but dependent"
+        },
+        {
+          "role": "primary",
+          "source_id": "qm_tsay_2005_afts_2e",
+          "volume": null,
+          "legacy_pages": [
+            97,
+            200
+          ],
+          "pdf_pages": [
+            122,
+            225
+          ],
+          "chunk_id": "qm_tsay_2005_afts_2e:p138:0154",
+          "chunk_hash": "86c11c801431672d4d14c7b0be317a4790f67a2f4af6426d5d09b19045de68bc",
+          "quote": "Bollerslev (1986) proposes a useful extension known as the generalized ARCH (GARCH) model."
+        },
+        {
+          "role": "supporting",
+          "source_id": "qm_tsay_2014_multivariate_time_series",
+          "volume": null,
+          "legacy_pages": [
+            359,
+            410
+          ],
+          "pdf_pages": [
+            379,
+            430
+          ],
+          "chunk_id": "qm_tsay_2014_multivariate_time_series:p419:0479",
+          "chunk_hash": "4937f83e616ba7cfc60e9c9cee47cbe3d28f6494d872c9faed4119770b171ac8",
+          "quote": "Many multivariate volatility models have been proposed in the literature, includ"
+        },
+        {
+          "role": "supporting",
+          "source_id": "qm_tsay_2014_multivariate_time_series",
+          "volume": null,
+          "legacy_pages": [
+            359,
+            410
+          ],
+          "pdf_pages": [
+            379,
+            430
+          ],
+          "chunk_id": "qm_tsay_2014_multivariate_time_series:p421:0481",
+          "chunk_hash": "a9c648ba5ea6d0033864e7f1330408043b469eccec02c4c2e00ad371e24d7daf",
+          "quote": "We study in Section 7.5 the simple Baba–Engle–Kraft– Kroner (BEKK) model of Engle and Kroner (1995) and discuss its pros and cons."
+        }
+      ]
+    }
+  ]
+}

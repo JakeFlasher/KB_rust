@@ -8,8 +8,9 @@ This document is an **independent** re-research of the legacy CFA KB and a fresh
 bootstrap plan for migrating PDF sources into the new Rust CACG framework. It was
 produced from 13 read-only subagent audits that were explicitly forbidden from
 reading prior research (`_research/23-26`), the existing staged copies
-(`sources/cfa_legacy/`, `cards/cfa_legacy/`, `out/cfa_legacy/`), or the legacy
-Python port at `tools/python_legacy/`. The purpose is to cross-check the prior
+(`sources/cfa/`, `cards/cfa/`, `out/cfa/`), or the
+now-retired Python-port archive that formerly lived at `tools/python_legacy/`.
+The purpose is to cross-check the prior
 bootstrap by deriving the plan from raw legacy state.
 
 ## 1. Executive Summary
@@ -276,7 +277,7 @@ Canonical copies in the new workspace; no in-place renames in the legacy tree.
 
 ```
 sources/
-  cfa_legacy/
+  cfa/
     _registry/
       snapshot.json
       source_inventory.json
@@ -312,11 +313,11 @@ sources/
       legacy_notes_taint_manifest.json
 
 cards/
-  cfa_legacy/
+  cfa/
     <reading_id>/
 
 out/
-  cfa_legacy/
+  cfa/
     ingest_per_source/<source_id>/
       sources_manifest.json
       chunks_manifest.json
@@ -354,7 +355,7 @@ Naming conventions:
 
 ### Phase 1 — Snapshot and inventory
 
-Generate `sources/cfa_legacy/_registry/snapshot.json` recording:
+Generate `sources/cfa/_registry/snapshot.json` recording:
 
 - legacy absolute path, git HEAD (`856c4f3`), unpushed-commit count (30),
   dirty/untracked summary, tool versions, snapshot UTC timestamp;
@@ -376,7 +377,7 @@ Generate `legacy_path_map.json` with one row per active source:
 ```json
 {
   "legacy_path": "03_Financial_Reporting_Analysis/Penman_Financial_Statement_Analysis_and_Security_Valuation_5ed.pdf",
-  "canonical_path": "sources/cfa_legacy/pdfs/03_financial_reporting_analysis/Penman_2013_FSA_and_Security_Valuation_5e.pdf",
+  "canonical_path": "sources/cfa/pdfs/03_financial_reporting_analysis/Penman_2013_FSA_and_Security_Valuation_5e.pdf",
   "source_id": "fra_penman_2013_fsa_security_valuation_5e",
   "quotable": true,
   "source_sha256": "...",
@@ -417,7 +418,7 @@ Transform legacy `subcorpora` into CACG `reading_id`s:
 17 -> 17_cross_cutting
 ```
 
-Emit `out/cfa_legacy/source_matrix.json`:
+Emit `out/cfa/source_matrix.json`:
 
 ```json
 {"schema_version":"cacg.v0","allowed":{"01_quantitative_methods":["..."]}}
@@ -434,7 +435,7 @@ Run `kb ingest` once per active PDF into a per-source directory because the
 framework refuses to write into a non-empty `out/`:
 
 ```
-out/cfa_legacy/ingest_per_source/<source_id>/
+out/cfa/ingest_per_source/<source_id>/
   sources_manifest.json
   chunks_manifest.json
 ```
@@ -452,8 +453,8 @@ A merger (`merge_ingest_manifests.py`) deterministically combines per-source
 manifests into:
 
 ```
-out/cfa_legacy/sources_manifest.json
-out/cfa_legacy/chunks_manifest.json
+out/cfa/sources_manifest.json
+out/cfa/chunks_manifest.json
 ```
 
 with re-verified source SHA-256 and per-chunk hashes. Manifest writes use
@@ -643,6 +644,6 @@ verbatim quote selection (or notes-taint quarantine queue)
 ---
 
 Independent re-research complete. The next step (Phase B) is to compare this
-plan against the existing bootstrap artifacts in `sources/cfa_legacy/`,
-`out/cfa_legacy/`, `cards/cfa_legacy/`, and `_research/23-26` and produce a
+plan against the existing bootstrap artifacts in `sources/cfa/`,
+`out/cfa/`, `cards/cfa/`, and `_research/23-26` and produce a
 refined plan for the remaining migration work.

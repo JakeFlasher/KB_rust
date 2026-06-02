@@ -92,9 +92,9 @@ enum Cmd {
         #[arg(long)]
         report: bool,
     },
-    /// Run the Python ↔ Rust byte-diff parity harness against the
-    /// staged matrix. Returns non-zero on missing artifacts, command
-    /// failures, or byte differences in any gating (M2) entry.
+    /// Run the byte-diff parity harness against the committed fixture
+    /// matrix. Returns non-zero on missing artifacts, command failures,
+    /// or byte differences in any gating entry.
     Parity {
         /// Corpus directory to run the parity harness against.
         #[arg(long, default_value = "tests/parity_corpus/")]
@@ -209,9 +209,8 @@ enum Cmd {
     },
     /// Regenerate the generated_pydantic_errors fixture suite (AC-C4).
     ///
-    /// Invokes `legacy_python_oracle/scripts/build_parity_corpus.py` so the Python generator
-    /// is the single source of fixture definitions. Mirrors the
-    /// AC-C4-required `cargo xtask gen-schema-fixtures` command.
+    /// Regenerates the generated_pydantic_errors manifest using the
+    /// Rust-native fixture definitions.
     GenSchemaFixtures,
     /// Reject heavy or boundary-crossing dependencies in cacg-core's
     /// resolved dependency graph. Walks the full transitive non-dev

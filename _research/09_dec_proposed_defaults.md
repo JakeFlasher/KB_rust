@@ -34,7 +34,7 @@ This file is the durable, citable decision record. The goal-tracker's Blocking/Q
 
 **PROPOSED-DEFAULT:** `BYTE-EQUAL` preferred; `HASH-STABLE` acceptable as fallback.
 
-**Claude position:** BYTE-EQUAL preferred for existing corpora preservation; HASH-STABLE acceptable with explicit Phase-4 chunk-hash regeneration ceremony documented in `_research/10_pdfium_parity_report.md` (to be authored when M4 lands).
+**Claude position:** BYTE-EQUAL preferred for existing corpora preservation; HASH-STABLE acceptable with explicit Phase-4 chunk-hash regeneration ceremony now enforced via committed byte-equal fixtures under `tests/parity_corpus/` (see `docs/diagnostic-parity.md`).
 
 **Codex position:** BYTE-EQUAL is unlikely across bindings/versions/platforms/rendering flags; HASH-STABLE may be the realistic target.
 
@@ -68,8 +68,7 @@ This file is the durable, citable decision record. The goal-tracker's Blocking/Q
   See `crates/cacg-ingest/src/pdf.rs` for the call sites and
   Round-9 commit `61e863b` for the full diagnosis.
 
-  The HASH-STABLE fallback artifact (`_research/19_pdfium_parity_report.md`)
-  is intentionally NOT produced under this outcome; AC-5's negative
+  The HASH-STABLE fallback artifact is intentionally NOT produced under this outcome; AC-5's negative
   test for HASH-STABLE only fires when BYTE-EQUAL fails.
 
 ---
@@ -118,7 +117,7 @@ This file is the durable, citable decision record. The goal-tracker's Blocking/Q
 
 **Question:** Which specific PDFs from `/home/jakeshea/CFA_reading/` are part of the M4 byte-equal (or hash-stable) Pdfium parity gate?
 
-**PROPOSED-DEFAULT:** Include both `notes/CFA_note_2.ocr.pdf` (OCR-extracted, hard case) AND `CFA_Program_Curriculum/CFA_2022_Level_I_Volumes_1-6.pdf` Vol.1 only (cleaner extraction). Document known-drift for the OCR PDF in `_research/10_pdfium_parity_report.md`.
+**PROPOSED-DEFAULT:** Include both `notes/CFA_note_2.ocr.pdf` (OCR-extracted, hard case) AND `CFA_Program_Curriculum/CFA_2022_Level_I_Volumes_1-6.pdf` Vol.1 only (cleaner extraction). Document known-drift for the OCR PDF in `docs/diagnostic-parity.md`.
 
 **Claude position:** Both for representative coverage; document known-drift for OCR PDF.
 

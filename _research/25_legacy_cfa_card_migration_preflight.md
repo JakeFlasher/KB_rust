@@ -12,11 +12,11 @@ material.
 
 ## Generated Artifacts
 
-- `sources/cfa_legacy/_registry/build_card_migration_preflight.py`
-- `sources/cfa_legacy/_registry/card_migration_queue.json`
-- `sources/cfa_legacy/_registry/legacy_source_ref_map.json`
-- `sources/cfa_legacy/_registry/page_offset_worklist.json`
-- `sources/cfa_legacy/_registry/card_migration_preflight_summary.md`
+- `sources/cfa/_registry/build_card_migration_preflight.py`
+- `sources/cfa/_registry/card_migration_queue.json`
+- `sources/cfa/_registry/legacy_source_ref_map.json`
+- `sources/cfa/_registry/page_offset_worklist.json`
+- `sources/cfa/_registry/card_migration_preflight_summary.md`
 
 The preflight generator now follows the project determinism convention:
 `KB_FROZEN_CLOCK=1` writes `1970-01-01T00:00:00Z` into generated metadata.

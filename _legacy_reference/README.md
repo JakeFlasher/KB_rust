@@ -10,7 +10,7 @@ modified by this workspace.
 
 ```
 _legacy_reference/
-  cfa_legacy/
+  cfa/
     cards/
       17_cross_cutting/
         cc-material-info-and-dissemination-delay.md   # scrubbed (7 alias citations removed)
@@ -49,12 +49,12 @@ being a load-bearing citation:
 
 The bootstrap adds two more layers:
 
-3. `sources/cfa_legacy/excluded/legacy_notes_taint_manifest.json` uses the
+3. `sources/cfa/excluded/legacy_notes_taint_manifest.json` uses the
    substring marker `CFA_note` to quarantine all 8 alias-bearing legacy cards
    from the migration queue.
-4. `sources/cfa_legacy/_registry/validate_no_alias_residue.py` is a
+4. `sources/cfa/_registry/validate_no_alias_residue.py` is a
    pipeline-level pre-emit check that scans `_legacy_reference/`,
-   `cards/cfa_legacy/`, and `sources/cfa_legacy/_registry/page_coordinate_maps/`
+   `cards/cfa/`, and `sources/cfa/_registry/page_coordinate_maps/`
    for the regex `\bCFA_note_\d+\s*\(`. Exit non-zero on any hit.
 
 A CFA-specific lint rule is NOT added to `crates/cacg-core/src/lint/`. That

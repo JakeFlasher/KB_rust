@@ -11,7 +11,7 @@ source dependencies, and only two source-coordinate questions.
 
 ## Emitted Cards
 
-Cards emitted under `cards/cfa_legacy/10_behavioral_finance/`:
+Cards emitted under `cards/cfa/10_behavioral_finance/`:
 
 - `be-limits-of-arbitrage`
 - `be-noise-trader-equilibrium`
@@ -27,7 +27,7 @@ The batch has 8 total citations:
 ## Coordinate Verification
 
 The source-coordinate map is stored at
-`sources/cfa_legacy/_registry/page_coordinate_maps/10_behavioral_finance.json`.
+`sources/cfa/_registry/page_coordinate_maps/10_behavioral_finance.json`.
 
 For `bf_shleifer_2000_inefficient_markets`, legacy card pages are printed book
 pages. The verified rule for this first slice is:
@@ -62,25 +62,25 @@ Evidence points:
 
 ## Generated Artifacts
 
-- `sources/cfa_legacy/_registry/emit_behavioral_finance_first_slice.py`
-- `sources/cfa_legacy/_registry/page_coordinate_maps/10_behavioral_finance.json`
-- `sources/cfa_legacy/_registry/behavioral_finance_first_slice_citation_plan.json`
-- `sources/cfa_legacy/_registry/behavioral_finance_first_slice_migration_report.json`
-- `out/cfa_legacy/cards_manifest.json`
-- `out/cfa_legacy/summaries.json`
-- `out/cfa_legacy/INDEX.md`
+- `sources/cfa/_registry/emit_behavioral_finance_first_slice.py`
+- `sources/cfa/_registry/page_coordinate_maps/10_behavioral_finance.json`
+- `sources/cfa/_registry/behavioral_finance_first_slice_citation_plan.json`
+- `sources/cfa/_registry/behavioral_finance_first_slice_migration_report.json`
+- `out/cfa/cards_manifest.json`
+- `out/cfa/summaries.json`
+- `out/cfa/INDEX.md`
 
 ## Validation
 
 Commands run:
 
 ```bash
-python3 -m py_compile sources/cfa_legacy/_registry/emit_behavioral_finance_first_slice.py
-python3 sources/cfa_legacy/_registry/emit_behavioral_finance_first_slice.py --plan-only
-python3 sources/cfa_legacy/_registry/emit_behavioral_finance_first_slice.py
-env KB_FROZEN_CLOCK=1 target/debug/kb index cards --out out/cfa_legacy
-env KB_FROZEN_CLOCK=1 target/debug/kb lint --all-readings --cards-dir cards --chunks-manifest out/cfa_legacy/chunks_manifest.json --source-matrix out/cfa_legacy/source_matrix.json
-env KB_FROZEN_CLOCK=1 target/debug/kb verify <each emitted card> --chunks-manifest out/cfa_legacy/chunks_manifest.json --source-matrix out/cfa_legacy/source_matrix.json
+python3 -m py_compile sources/cfa/_registry/emit_behavioral_finance_first_slice.py
+python3 sources/cfa/_registry/emit_behavioral_finance_first_slice.py --plan-only
+python3 sources/cfa/_registry/emit_behavioral_finance_first_slice.py
+env KB_FROZEN_CLOCK=1 target/debug/kb index cards --out out/cfa
+env KB_FROZEN_CLOCK=1 target/debug/kb lint --all-readings --cards-dir cards --chunks-manifest out/cfa/chunks_manifest.json --source-matrix out/cfa/source_matrix.json
+env KB_FROZEN_CLOCK=1 target/debug/kb verify <each emitted card> --chunks-manifest out/cfa/chunks_manifest.json --source-matrix out/cfa/source_matrix.json
 ```
 
 Results:

@@ -1,0 +1,85 @@
+{
+  "generated_by": "emit_07_deriv_slice.py",
+  "reading_id": "07_derivatives_and_volatility",
+  "schema_version": "cfa.page_coordinate_map.v1",
+  "sources": [
+    {
+      "legacy_coordinate": "physical_pdf_page",
+      "pdf_coordinate_rule": "pdf_page = legacy_page",
+      "source_id": "cb_hull_2022_options_futures_derivatives_11ed",
+      "note": "Hull 11ed Global Edition (Pearson 2022). PDF includes running printed-page headers at body pages (e.g., 'CHAPTER 8 ... 201' on PDF 201; 'Futures Options and Black's Model' header '401' on PDF 401). The running headers show printed-page numbers identical to PDF-page indices, confirming offset 0. Front matter (~36 Roman-numeral pages) does not need conversion since legacy citations reference body pages only.",
+      "verified_evidence": [
+        {
+          "evidence": "Chapter 8 running header '201 Derivatives such as forwards, futures, swaps' at PDF 201",
+          "legacy_page": 201,
+          "pdf_page": 201
+        },
+        {
+          "evidence": "Futures Options chapter running header '401 Futures Options and Black's Model' at PDF 401",
+          "legacy_page": 401,
+          "pdf_page": 401
+        }
+      ],
+      "page_count_pdf": 880
+    },
+    {
+      "legacy_coordinate": "printed_book_page",
+      "pdf_coordinate_rule": "pdf_page = legacy_page + 14",
+      "source_id": "cb_glasserman_2003_monte_carlo_methods",
+      "note": "Glasserman Monte Carlo Methods in Financial Engineering (Springer 2003). Standard Springer front matter (xiv-page preface + 14 PDF pages) shifts printed pages by +14. Verified across 10 evidence points throughout the body via running section headers (e.g., '1.1 Principles of Monte Carlo 7' on PDF 21, '7.2 Pathwise Derivative Estimates 387' on PDF 401).",
+      "verified_evidence": [
+        {
+          "evidence": "Chapter 1.1 'Principles of Monte Carlo' running header 7 at PDF 21",
+          "legacy_page": 7,
+          "pdf_page": 21
+        },
+        {
+          "evidence": "Chapter 1.1 running header 17 at PDF 31",
+          "legacy_page": 17,
+          "pdf_page": 31
+        },
+        {
+          "evidence": "Chapter 1.2 'Principles of Derivatives Pricing' running header 37 at PDF 51",
+          "legacy_page": 37,
+          "pdf_page": 51
+        },
+        {
+          "evidence": "Chapter 2.3 'Normal Random Variables and Vectors' running header 67 at PDF 81",
+          "legacy_page": 67,
+          "pdf_page": 81
+        },
+        {
+          "evidence": "Chapter 3.1 'Brownian Motion' running header 87 at PDF 101",
+          "legacy_page": 87,
+          "pdf_page": 101
+        },
+        {
+          "evidence": "Chapter 3.5 'Processes with Jumps' running header 137 at PDF 151",
+          "legacy_page": 137,
+          "pdf_page": 151
+        },
+        {
+          "evidence": "Chapter 4.1 'Control Variates' running header 187 at PDF 201",
+          "legacy_page": 187,
+          "pdf_page": 201
+        },
+        {
+          "evidence": "Chapter 5.1 'General Principles' running header 287 at PDF 301",
+          "legacy_page": 287,
+          "pdf_page": 301
+        },
+        {
+          "evidence": "Chapter 7.2 'Pathwise Derivative Estimates' running header 387 at PDF 401",
+          "legacy_page": 387,
+          "pdf_page": 401
+        },
+        {
+          "evidence": "Chapter 9.1 'Loss Probabilities and Value-at-Risk' running header 487 at PDF 501",
+          "legacy_page": 487,
+          "pdf_page": 501
+        }
+      ],
+      "page_count_pdf": 610
+    }
+  ]
+}

@@ -32,7 +32,7 @@ gh api repos/:owner/:repo/branches/main/protection \
   "required_status_checks": [
     "Committed-fixture byte-equal parity",
     "Workflow integrity (parity gate cannot be silently disabled)",
-    "pytest + ruff + pyright + demo"
+    "Rust workspace tests"
   ],
   "require_review": 1,
   "dismiss_stale_reviews": true,
@@ -43,7 +43,7 @@ gh api repos/:owner/:repo/branches/main/protection \
 If any of the following is missing, the release is BLOCKED and the audit FAILS:
 
 - `enforce_admins: true` — without this, repository admins can bypass the parity gate. Per the AC-D5 contract, the parity gate is CI-BLOCKING with NO admin override.
-- `required_status_checks` MUST include both `"Committed-fixture byte-equal parity"` (the parity job name from `.github/workflows/parity.yml`) AND `"Workflow integrity (parity gate cannot be silently disabled)"` (the meta-test job name from `.github/workflows/_validate-workflows.yml`).
+- `required_status_checks` MUST include `"Rust workspace tests"` (the Rust CI job name from `.github/workflows/ci.yml`), `"Committed-fixture byte-equal parity"` (the parity job name from `.github/workflows/parity.yml`), and `"Workflow integrity (parity gate cannot be silently disabled)"` (the meta-test job name from `.github/workflows/_validate-workflows.yml`).
 - `require_review >= 1` — at minimum one approving review is required. This is a defense-in-depth measure on top of the parity gate; a parity-green build with no human review is not mergeable.
 
 ## Manual evidence collection
@@ -69,7 +69,7 @@ gh api -X PUT repos/:owner/:repo/branches/main/protection \
   -F 'required_status_checks[strict]=true' \
   -F 'required_status_checks[checks][][context]=Committed-fixture byte-equal parity' \
   -F 'required_status_checks[checks][][context]=Workflow integrity (parity gate cannot be silently disabled)' \
-  -F 'required_status_checks[checks][][context]=pytest + ruff + pyright + demo' \
+  -F 'required_status_checks[checks][][context]=Rust workspace tests' \
   -F 'required_pull_request_reviews[required_approving_review_count]=1' \
   -F 'required_pull_request_reviews[dismiss_stale_reviews]=true' \
   -F 'allow_force_pushes=false' \

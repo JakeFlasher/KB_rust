@@ -2,7 +2,7 @@
 
 Date: 2026-05-28
 Verification baseline: `_research/27_independent_legacy_cfa_audit_and_bootstrap_plan.md` (commit `ff90c01`)
-Bootstrap-of-record: `_research/{23,24,25,26}_*.md` + on-disk artifacts under `sources/cfa_legacy/`, `out/cfa_legacy/`, `cards/cfa_legacy/`
+Bootstrap-of-record: `_research/{23,24,25,26}_*.md` + on-disk artifacts under `sources/cfa/`, `out/cfa/`, `cards/cfa/`
 
 This document is Phase B of a two-phase cross-check. Phase A (doc 27) produced
 an independent plan from 13 read-only audits explicitly forbidden from reading
@@ -14,7 +14,7 @@ actual disk state. Their findings drive the refined plan below.
 
 The existing bootstrap is **substantially correct and operationally sound**.
 All 70 active PDFs are staged with SHA256-verified copies, ingested into 70
-per-source directories, deterministically merged into `out/cfa_legacy/{sources,chunks}_manifest.json`
+per-source directories, deterministically merged into `out/cfa/{sources,chunks}_manifest.json`
 (70 sources, 57,603 chunks, byte-stable on rerun), authorized through a
 cacg.v0-compliant `source_matrix.json` (16 reading_ids, 116 mappings), and
 the first migration slice (`10_behavioral_finance`, 5 cards) is fully emitted
@@ -50,7 +50,7 @@ multi-volume CFA L1 offset map.
 ### 2.1 PDF staging — PARTIAL-PASS
 
 **Confirmed (Agent A)**:
-- 70/70 PDFs present under `sources/cfa_legacy/pdfs/` across 12 subdirs.
+- 70/70 PDFs present under `sources/cfa/pdfs/` across 12 subdirs.
 - 5/5 spot-checked SHA256 values match across disk ↔ legacy_path_map ↔ matrix.
 - 0/70 `source_id` violations of `^[a-z0-9][a-z0-9_]*$`; 0 duplicates.
 - All 70 staged filenames are ASCII-only snake_case.
@@ -70,8 +70,8 @@ multi-volume CFA L1 offset map.
 ### 2.2 Registry and source matrix — PASS (3 minor deviations)
 
 **Confirmed (Agent B)**:
-- All 11 doc-27-required registry files present in `sources/cfa_legacy/_registry/`.
-- `out/cfa_legacy/source_matrix.json` is byte-identical to the registry copy and
+- All 11 doc-27-required registry files present in `sources/cfa/_registry/`.
+- `out/cfa/source_matrix.json` is byte-identical to the registry copy and
   fully satisfies the cacg.v0 `SourceMatrix` schema in
   `crates/cacg-core/src/schema.rs:758-799`: literal `schema_version: "cacg.v0"`,
   non-empty reading_id keys, non-empty unique source_id lists, zero regex
@@ -209,7 +209,7 @@ wrong (likely a partial-pivot count from an earlier corpus state).
 ### 2.7 Page-coordinate offset maps — INCOMPLETE
 
 **Confirmed (Agent H)**:
-- `sources/cfa_legacy/_registry/page_coordinate_maps/` contains exactly **one
+- `sources/cfa/_registry/page_coordinate_maps/` contains exactly **one
   file**: `10_behavioral_finance.json` with 2 source entries.
 - `page_offset_worklist.json` has 63 sources across 4 buckets:
 
@@ -227,7 +227,7 @@ CFA L2 (3,369 pp) and CFA L3 (3,863 pp) are ingested but cited by **zero
 active legacy cards** — their offset tables are NOT required to unblock
 current card migration. Build only on demand if L2/L3 cards are ever authored.
 
-The existing offset-map schema (`cfa_legacy.page_coordinate_map.v1`) carries
+The existing offset-map schema (`cfa.page_coordinate_map.v1`) carries
 `pdf_coordinate_rule: "pdf_page = legacy_page + N"` as a single global affine
 transform per source. For CFA L1 this needs extension to a **per-volume table**
 because the volume boundaries reset the printed page number. Either (a) array
@@ -316,9 +316,9 @@ Each item below has a concrete artifact + acceptance criterion.
 
 ### 4.1 Build the CFA L1 combined-volume offset table — HIGHEST LEVERAGE
 
-Artifact: `sources/cfa_legacy/_registry/page_coordinate_maps/cfa_2022_l1_combined.json`
+Artifact: `sources/cfa/_registry/page_coordinate_maps/cfa_2022_l1_combined.json`
 
-Schema extension to `cfa_legacy.page_coordinate_map.v2`:
+Schema extension to `cfa.page_coordinate_map.v2`:
 
 ```json
 {
@@ -396,7 +396,7 @@ exactly one of: active-cards, aux-files (`_*`), or docs (`README.md` /
 
 ### 4.4 Stage `shared_anchors/` for cross-vertical PDFs
 
-Artifact: `sources/cfa_legacy/pdfs/shared_anchors/` containing canonical copies
+Artifact: `sources/cfa/pdfs/shared_anchors/` containing canonical copies
 (or symlinks) of:
 - `cb_hull_2022_options_futures_derivatives_11ed.pdf`
 - `cb_glasserman_2003_monte_carlo_methods.pdf`
@@ -404,7 +404,7 @@ Artifact: `sources/cfa_legacy/pdfs/shared_anchors/` containing canonical copies
 - `cb_koziol_2004_valuation_strategic_investors.pdf` (also used by 06)
 
 Update `legacy_path_map.json` to redirect their canonical paths from
-`convertible_bonds/` to `shared_anchors/`. Update `out/cfa_legacy/source_matrix.json`
+`convertible_bonds/` to `shared_anchors/`. Update `out/cfa/source_matrix.json`
 to authorize each `cb_hull_...` source for both `07_derivatives_and_volatility`
 and `08_convertible_bonds`. Per-source ingest dirs and chunks need no change
 (source_ids stay the same).
@@ -448,7 +448,7 @@ notes inventory.
 
 ### 4.7 Clarify Pdfium runtime constraint
 
-Artifact: add `re_ingest_blockers` field to `out/cfa_legacy/sources_manifest.json`
+Artifact: add `re_ingest_blockers` field to `out/cfa/sources_manifest.json`
 (or a sibling `provenance.json`) stating:
 
 ```json
@@ -472,7 +472,7 @@ different host can see the constraint.
 
 ### 4.8 Snapshot completeness
 
-Update `sources/cfa_legacy/_registry/snapshot.json` to add:
+Update `sources/cfa/_registry/snapshot.json` to add:
 - `legacy_git_unpushed_count: 30` (verifiable via `git -C ... log
   origin/master..HEAD | wc -l`)
 - `legacy_content_merkle_root` over the recursive SHA256 of all
@@ -555,7 +555,7 @@ once the highest-priority fixes are landed:
   Penman (21 cards) or McNeil (22 cards), the front-loaded offset table will
   amortize verification cost.
 - **Treat `_legacy_reference/` as a real sibling tree** per doc 27:330-334
-  instead of folding it under `sources/cfa_legacy/`. The current bootstrap
+  instead of folding it under `sources/cfa/`. The current bootstrap
   conflates "sources to migrate" with "legacy governance docs to consult";
   separating them clarifies data flow.
 - **Update doc 27** to fix the stale "28 + 1 HTML" deferred count to "36 + 1

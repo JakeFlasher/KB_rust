@@ -1,27 +1,21 @@
 //! `xtask audit-semantic-cache-provenance`: audit the committed B1
 //! semantic cache + its provenance sidecar.
 //!
-//! Negative audit gates required by the semantic-cache
-//! provenance contract:
+//! Negative audit gates required by the semantic-cache provenance contract:
 //!
 //! 1. Modifying any cache entry changes Hash C → audit fails.
-//! 2. Modifying `uv.lock` changes Hash B (and the
-//!    `uv_lock_sha256` cross-check) → audit fails.
-//! 3. The frozen 222-paraphrase + 5-negative count contract is
+//! 2. The frozen 222-paraphrase + 5-negative count contract is
 //!    enforced byte-for-byte against the committed provenance.
-//! 4. The pinned model identity
+//! 3. The pinned model identity
 //!    (`sentence-transformers/all-MiniLM-L6-v2` @ revision
 //!    `c9745ed1d9f207416be6d2e6f8de32d1f16199bf`) is checked.
 //!
 //! The audit deliberately does NOT re-run the embedding model
 //! and does NOT need Python or `sentence-transformers`
 //! installed: it reads only the committed cache JSON bytes, the
-//! committed provenance JSON bytes, and the committed `uv.lock`
-//! bytes, recomputing Hash B from the `hash_b_components`
-//! values that the builder pinned at rebuild time. The
-//! rebuild ceremony at `_research/20_b1_cache_provisioning.md`
-//! is the dual side of this audit: it produces the artifacts;
-//! the audit verifies they have not drifted apart since.
+//! committed provenance JSON bytes, and the historical build
+//! metadata stored in that provenance. Hash B is retained as
+//! historical metadata and is no longer recomputed.
 
 use std::collections::BTreeSet;
 use std::path::Path;
@@ -39,21 +33,17 @@ pub(crate) const NEGATIVE_FIXTURE_COUNT_MAX: usize = 10;
 
 /// Locked decision threshold the committed cache was built with.
 ///
-/// The locked value is mirrored across three surfaces:
-///   1. `legacy_python_oracle/scripts/build_semantic_cache.py::DEFAULT_THRESHOLD` — the
-///      Python builder's default, which produced the committed
-///      `out/semantic_cache.json` bytes.
-///   2. `EXPECTED_THRESHOLD` (this constant) — the audit's pinned
+/// The locked value is mirrored across two active surfaces:
+///   1. `EXPECTED_THRESHOLD` (this constant) — the audit's pinned
 ///      check; the audit fails if `provenance.threshold` drifts.
-///   3. The `xtask threshold_sweep` default range — the locked
+///   2. The `xtask threshold_sweep` default range — the locked
 ///      value MUST lie inside `[DEFAULT_FROM, DEFAULT_TO]` at a
 ///      clean step boundary so the canonical sweep visits a row
 ///      at exactly the locked threshold (cross-checked in the
 ///      sweep module's tests).
 ///
-/// Bumping this constant is a deliberate three-surface
-/// maintenance event followed by a rebuild ceremony. See the
-/// threshold calibration sweep document at
+/// Bumping this constant is a deliberate maintenance event followed by
+/// a cache-regeneration decision. See the threshold calibration sweep document at
 /// `_research/qm_layer3_threshold_sweep.md` for the choice
 /// rationale.
 pub const EXPECTED_THRESHOLD: f64 = 0.5;
@@ -194,11 +184,9 @@ pub fn audit(cache_path: &Path, provenance_path: &Path, _uv_lock_path: &Path) ->
     if provenance.threshold != EXPECTED_THRESHOLD {
         bail!(
             "provenance threshold mismatch: expected {} (the locked decision \
-             threshold mirrored in `legacy_python_oracle/scripts/build_semantic_cache.py::DEFAULT_THRESHOLD` \
-             and `EXPECTED_THRESHOLD`); got {}. Either re-run the rebuild \
-             ceremony with the locked threshold, or update both the Python \
-             builder constant and `EXPECTED_THRESHOLD` together (deliberate \
-             three-surface change).",
+             threshold mirrored by `EXPECTED_THRESHOLD`); got {}. Either keep \
+             the frozen cache threshold or deliberately update the threshold \
+             sweep document, provenance audit, and regenerated cache together.",
             EXPECTED_THRESHOLD,
             provenance.threshold
         );

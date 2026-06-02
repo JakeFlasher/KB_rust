@@ -166,7 +166,7 @@ Every round summary must include:
 ```markdown
 ## Knowledge Consulted
 - `.claude/knowledge/base.md` — why opened
-- `docs/architecture.md` — why opened
+- `docs/schema.md` — why opened
 # or
 N/A -- task not KB-relevant this round
 ```

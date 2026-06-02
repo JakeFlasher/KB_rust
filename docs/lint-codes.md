@@ -222,7 +222,7 @@ Layer-3 fires ONLY when Layer-2 exact-match fails AND `--fuzzy` rejects (or is a
 
 ## Adversarial coverage map
 
-Every adversarial fixture under `tests/adversarial/` corresponds to exactly one expected diagnostic code. The meta-test `legacy_python_oracle/tests/test_meta_adversarial_coverage.py::test_every_adversarial_fixture_has_an_expected_code` enforces 1:1 coverage.
+Every adversarial fixture under `tests/adversarial/` corresponds to exactly one expected diagnostic code. Rust integration tests and committed parity fixtures enforce the one-code coverage contract.
 
 | Fixture | Expected code |
 |---------|---------------|
@@ -239,4 +239,4 @@ Every adversarial fixture under `tests/adversarial/` corresponds to exactly one 
 | `11-retracted-source-cited.md` | `CACG-RETR-002` (fires when the cited `source_id` is in `chunks_manifest.retracted_source_ids`) |
 | `12-retracted-chunk-cited.md` | `CACG-RETR-003` (fires when the cited `chunk_id` is in `chunks_manifest.retracted_chunk_ids`) |
 
-The retraction fixtures are structurally valid cards; `legacy_python_oracle/tests/test_retraction.py::test_adversarial_retracted_fixture_emits_retr_001` and `legacy_python_oracle/tests/test_source_chunk_retraction.py` exercise them by placing the target id on the corresponding retracted set and running verify. RETR-001 coverage includes both severity modes (`error` and `warning` under `--allow-retracted`); RETR-002/003 coverage spans both layer-1 (normal verify) and layer-2 (`--unsafe-skip-lint`) enforcement plus `verify_round_summary` batch integration.
+The retraction fixtures are structurally valid cards. Rust tests cover RETR-001 severity modes (`error` and `warning` under `--allow-retracted`), RETR-002/003 layer-1 and layer-2 enforcement, `retract-chunk` manifest mutation, and round-summary batch integration.

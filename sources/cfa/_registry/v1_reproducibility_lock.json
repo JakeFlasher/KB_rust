@@ -1,0 +1,27 @@
+{
+  "chunk_hash_recipe": {
+    "canonical_json": "json.dumps(value, sort_keys=True, ensure_ascii=False, separators=(',',':'))",
+    "digest": "sha256-hex of the UTF-8 canonical payload",
+    "envelope_keys_sorted": [
+      "end_page",
+      "page_spans",
+      "start_page",
+      "text"
+    ],
+    "kernel_source": "crates/cacg-core/src/hash.rs::chunk_hash",
+    "page_span_keys_sorted": [
+      "byte_offset_in_chunk",
+      "page"
+    ]
+  },
+  "generated_at_utc": "1970-01-01T00:00:00Z",
+  "notes": "libpdfium is an external, machine-local binary; its absence is reported as not_provisioned (a note), while a present-but-mismatched library aborts. The kb binary is a build artifact with no committed byte pin; its version string is asserted and its observed sha256 is captured to the gitignored status sidecar.",
+  "pins": {
+    "kb_binary_path": "target/debug/kb",
+    "kb_binary_version": "kb 0.1.0",
+    "libpdfium_package": "libpdfium-nojs 7778.r8.72ea487e43-1",
+    "libpdfium_sha256": "c110f5240692b1915ad090d4f7e9bc6afa429db41341f2339d866d48402edbe5",
+    "pdfium_render_version": "0.9.1"
+  },
+  "schema_version": "cfa.v1_reproducibility_lock.v1"
+}

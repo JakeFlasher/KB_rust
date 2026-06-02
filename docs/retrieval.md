@@ -144,7 +144,9 @@ forces a full rebuild on schema bumps and after `kb migrate-summaries`
   target at 725ms; documented in the closure report with a proposed
   Phase-4.x optimization (content-hashed Phase-D2 skip).
 
-All gates pinned by `legacy_python_oracle/tests/perf/test_phase3_retrieval_budgets.py` and
-`legacy_python_oracle/tests/perf/test_phase4_*_budget.py`. The 10k-card local-only stress
-fixture (see `docs/stress-10k.md`) is not in the CI gate but is documented
-for operators.
+Current retrieval correctness is pinned by the Rust test suite and the
+committed parity/eval fixtures: `tests/parity_corpus/kb_search*`,
+`tests/retrieval_eval/eval_cases.json`, and `cargo run -p xtask -- retrieval-eval`.
+The old local 10k-card Python stress harness has been
+retired; scale testing should be reintroduced as a Rust-native benchmark if it
+becomes release-blocking again.

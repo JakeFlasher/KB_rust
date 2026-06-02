@@ -191,7 +191,7 @@ Use canonical copies in the new workspace, not in-place renames in the legacy tr
 
 ```text
 sources/
-  cfa_legacy/
+  cfa/
     _registry/
       source_inventory.json
       legacy_path_map.json
@@ -221,11 +221,11 @@ sources/
       legacy_notes_taint_manifest.json
 
 cards/
-  cfa_legacy/
+  cfa/
     <reading_id>/
 
 out/
-  cfa_legacy/
+  cfa/
     ingest_per_source/<source_id>/
     sources_manifest.json
     chunks_manifest.json
@@ -268,7 +268,7 @@ Create a read-only snapshot record:
 
 Acceptance criteria:
 
-- `sources/cfa_legacy/_registry/source_inventory.json` contains all 73 matrix rows.
+- `sources/cfa/_registry/source_inventory.json` contains all 73 matrix rows.
 - `excluded_sources.json` explains each excluded source: `deferred`, `notes`,
   `epub_blacklist`, `scan_nonquotable`, or `unregistered_pdf`.
 - The inventory proves the active ingest set is exactly 70 PDFs.
@@ -282,7 +282,7 @@ which is the hash authority for excluded files.
 ```json
 {
   "legacy_path": "03_Financial_Reporting_Analysis/Penman_Financial_Statement_Analysis_and_Security_Valuation_5ed.pdf",
-  "canonical_path": "sources/cfa_legacy/pdfs/03_financial_reporting_analysis/Penman_2013_FSA_and_Security_Valuation_5ed.pdf",
+  "canonical_path": "sources/cfa/pdfs/03_financial_reporting_analysis/Penman_2013_FSA_and_Security_Valuation_5ed.pdf",
   "source_id": "fra_penman_5ed",
   "quotable": true,
   "source_sha256": "...",
@@ -341,7 +341,7 @@ there are 11 active card subcorpora and 16 source-authorization namespaces.
 Run `kb ingest` once per active PDF into a fresh per-source directory:
 
 ```text
-out/cfa_legacy/ingest_per_source/<source_id>/
+out/cfa/ingest_per_source/<source_id>/
   sources_manifest.json
   chunks_manifest.json
 ```
@@ -349,8 +349,8 @@ out/cfa_legacy/ingest_per_source/<source_id>/
 Then merge all per-source manifests into:
 
 ```text
-out/cfa_legacy/sources_manifest.json
-out/cfa_legacy/chunks_manifest.json
+out/cfa/sources_manifest.json
+out/cfa/chunks_manifest.json
 ```
 
 Acceptance criteria:

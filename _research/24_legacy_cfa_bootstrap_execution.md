@@ -10,26 +10,26 @@ ingestion and deterministic manifest merge remain pending.
 
 ## What Was Created
 
-- `sources/cfa_legacy/_registry/snapshot.json`
-- `sources/cfa_legacy/_registry/source_inventory.json`
-- `sources/cfa_legacy/_registry/legacy_path_map.json`
-- `sources/cfa_legacy/_registry/excluded_sources.json`
-- `sources/cfa_legacy/_registry/source_matrix.json`
-- `sources/cfa_legacy/_registry/source_matrix.pretty.json`
-- `sources/cfa_legacy/_registry/ingest_plan.json`
-- `sources/cfa_legacy/_registry/run_ingest_per_source.sh`
-- `sources/cfa_legacy/_registry/run_ingest_per_source.py`
-- `sources/cfa_legacy/_registry/merge_ingest_manifests.py`
-- `sources/cfa_legacy/_registry/ingest_merge_report.json`
-- `sources/cfa_legacy/_registry/rename_decisions.md`
-- `sources/cfa_legacy/_registry/legacy_content_manifest.json`
-- `sources/cfa_legacy/excluded/deferred_books_inventory.json`
-- `sources/cfa_legacy/excluded/notes_inventory.json`
-- `sources/cfa_legacy/excluded/epub_blacklist.json`
-- `sources/cfa_legacy/excluded/dynamic_tree_quarantine_manifest.json`
-- `sources/cfa_legacy/excluded/legacy_notes_taint_manifest.json`
-- `sources/cfa_legacy/pdfs/**`: 70 canonical PDF copies
-- `out/cfa_legacy/source_matrix.json`
+- `sources/cfa/_registry/snapshot.json`
+- `sources/cfa/_registry/source_inventory.json`
+- `sources/cfa/_registry/legacy_path_map.json`
+- `sources/cfa/_registry/excluded_sources.json`
+- `sources/cfa/_registry/source_matrix.json`
+- `sources/cfa/_registry/source_matrix.pretty.json`
+- `sources/cfa/_registry/ingest_plan.json`
+- `sources/cfa/_registry/run_ingest_per_source.sh`
+- `sources/cfa/_registry/run_ingest_per_source.py`
+- `sources/cfa/_registry/merge_ingest_manifests.py`
+- `sources/cfa/_registry/ingest_merge_report.json`
+- `sources/cfa/_registry/rename_decisions.md`
+- `sources/cfa/_registry/legacy_content_manifest.json`
+- `sources/cfa/excluded/deferred_books_inventory.json`
+- `sources/cfa/excluded/notes_inventory.json`
+- `sources/cfa/excluded/epub_blacklist.json`
+- `sources/cfa/excluded/dynamic_tree_quarantine_manifest.json`
+- `sources/cfa/excluded/legacy_notes_taint_manifest.json`
+- `sources/cfa/pdfs/**`: 70 canonical PDF copies
+- `out/cfa/source_matrix.json`
 
 No files in the legacy KB were edited.
 
@@ -63,7 +63,7 @@ The generated bootstrap was validated for:
 - Unique, Rust-compatible snake_case `source_id` values.
 - Copied file SHA256 values matching both the original legacy files and the matrix
   hashes.
-- `out/cfa_legacy/source_matrix.json` containing only known source IDs.
+- `out/cfa/source_matrix.json` containing only known source IDs.
 - All generated matrix reading IDs matching the planned CACG reading namespaces.
 
 Independent sub-agent review then found the active PDF source boundary sound and confirmed
@@ -75,17 +75,17 @@ fixes are now reflected in the registry scripts and metadata artifacts.
 ## Ingest Status
 
 The per-source ingest runner is prepared at
-`sources/cfa_legacy/_registry/run_ingest_per_source.sh`. It now sets
+`sources/cfa/_registry/run_ingest_per_source.sh`. It now sets
 `KB_FROZEN_CLOCK=1` by default, ensures `/usr/lib` is visible in `LD_LIBRARY_PATH`, skips
 already complete per-source outputs, and fails closed on partial output directories.
 
 The deterministic merge utility is prepared at
-`sources/cfa_legacy/_registry/merge_ingest_manifests.py`.
+`sources/cfa/_registry/merge_ingest_manifests.py`.
 
 Probe command attempted:
 
 ```bash
-cargo run -p cacg-cli --bin kb -- ingest sources/cfa_legacy/pdfs/china_convertible_bonds/china_cb_hkex_ch16_convertible_equity.pdf --source-id china_cb_hkex_ch16_convertible_equity --out out/cfa_legacy/ingest_probe
+cargo run -p cacg-cli --bin kb -- ingest sources/cfa/pdfs/china_convertible_bonds/china_cb_hkex_ch16_convertible_equity.pdf --source-id china_cb_hkex_ch16_convertible_equity --out out/cfa/ingest_probe
 ```
 
 Initial observed blocker before `libpdfium-nojs` was installed:
@@ -97,8 +97,8 @@ CACG-INGEST-001: pdfium bind failed: LoadLibraryError(DlOpen { desc: "libpdfium.
 After `libpdfium-nojs` was installed, a single-source probe succeeded, then the full
 70-source ingest completed. The deterministic merge produced:
 
-- `out/cfa_legacy/sources_manifest.json`: 70 sources.
-- `out/cfa_legacy/chunks_manifest.json`: 57,603 chunks.
+- `out/cfa/sources_manifest.json`: 70 sources.
+- `out/cfa/chunks_manifest.json`: 57,603 chunks.
 
 Validation passed:
 

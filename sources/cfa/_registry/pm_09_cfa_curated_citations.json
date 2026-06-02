@@ -1,0 +1,612 @@
+{
+  "schema_version": "cfa.pm_09_cfa_curated.v1",
+  "generated_by": "build (R6): curated from on-disk R5 cards; consumed by emit_09_pm_slice.py",
+  "note": "Curated single-source citations for the 18 CFA-only PM cards (cite cfa_2022_l1_combined). These reproduce the hand-curated on-disk anchors, which the naive offset-map heuristic does NOT reproduce: 14/18 curated anchors deviate from the legacy Vol.N/pp page reference (the legacy refs map, via the v2 combined offset map, to a different — often wrong — chunk; curation re-anchored each to the correct content). legacy_provenance records the legacy ref, its offset-map pdf range, and whether the curated chunk overlaps it. emit_09_pm_slice.py validates every citation before writing.",
+  "legacy_anchor_deviation_count": 15,
+  "cards": [
+    {
+      "card_id": "pm-active-vs-passive-decision",
+      "title": "Active vs Passive Decision",
+      "summary": "Active vs Passive Decision: walking through the L1-framed decision between active and passive management — when each is rational, what costs and benefits enter the comparison, and how market efficiency interacts with the choice",
+      "tags": [
+        "portfolio-management",
+        "active-vs-passive",
+        "fees"
+      ],
+      "legacy_provenance": {
+        "legacy_primary": "Vol.6/pp.420-441",
+        "pdf_range": [
+          3689,
+          3710
+        ],
+        "overlaps_cited_chunk": false,
+        "note": "curated anchor deviates from legacy page reference (legacy ref re-anchored to correct content by curation; verified on-topic + lint/verify-clean)"
+      },
+      "citations": [
+        {
+          "source_id": "cfa_2022_l1_combined",
+          "chunk_id": "cfa_2022_l1_combined:p3065:4578",
+          "chunk_hash": "3eeb41d6e312a7e8b8be14a0cca0f4377e367bb122697da557c2ffadc3c50871",
+          "page_range": [
+            3065,
+            3065
+          ],
+          "quote": "management fees for index (or other passive) funds are often a fraction of those for active strategies. Another catalyst is the challenge that many active asset managers face in generating ex ante alpha",
+          "edge_type": "supports"
+        }
+      ]
+    },
+    {
+      "card_id": "pm-allocation-process",
+      "title": "Asset Allocation Process",
+      "summary": "Asset Allocation Process: distinguishing strategic asset allocation (long-run target weights derived from the IPS and the efficient frontier) from tactical asset allocation (short-run deviations responding to market views), and locating allocation in the portfolio-management process",
+      "tags": [
+        "portfolio-management",
+        "asset-allocation",
+        "ips"
+      ],
+      "legacy_provenance": {
+        "legacy_primary": "Vol.6/pp.20-40",
+        "pdf_range": [
+          3289,
+          3309
+        ],
+        "overlaps_cited_chunk": true,
+        "note": "curated anchor matches legacy page reference"
+      },
+      "citations": [
+        {
+          "source_id": "cfa_2022_l1_combined",
+          "chunk_id": "cfa_2022_l1_combined:p3292:4957",
+          "chunk_hash": "3f4ebac1951945cbbb1ec57db74b7f78efdb84f8c08db973be265487777b9403",
+          "page_range": [
+            3292,
+            3292
+          ],
+          "quote": "The strategic asset allocation (SAA) is the set of exposures to IPS-permissible asset classes that is expected to achieve the client’s long-term objectives given the client’s risk profile and investment constraints.",
+          "edge_type": "defines"
+        }
+      ]
+    },
+    {
+      "card_id": "pm-beta-and-factor-exposure",
+      "title": "Beta and Factor Exposure",
+      "summary": "Beta and Factor Exposure: framing beta as the single-factor exposure measure; systematic vs idiosyncratic risk decomposition; the natural bridge from CAPM to multifactor framing",
+      "tags": [
+        "portfolio-management",
+        "beta",
+        "systematic-risk"
+      ],
+      "legacy_provenance": {
+        "legacy_primary": "Vol.6/pp.536-572",
+        "pdf_range": [
+          3805,
+          3841
+        ],
+        "overlaps_cited_chunk": false,
+        "note": "curated anchor deviates from legacy page reference (legacy ref re-anchored to correct content by curation; verified on-topic + lint/verify-clean)"
+      },
+      "citations": [
+        {
+          "source_id": "cfa_2022_l1_combined",
+          "chunk_id": "cfa_2022_l1_combined:p3175:4735",
+          "chunk_hash": "fcd8a87a4e7b173bf76680fdee99b7086b4cc7ff25f22ea4515aa41f31a6d9d2",
+          "page_range": [
+            3175,
+            3175
+          ],
+          "quote": "beta captures an asset’s systematic risk, or the portion of an asset’s risk that cannot be eliminated by diversification.",
+          "edge_type": "defines"
+        }
+      ]
+    },
+    {
+      "card_id": "pm-capital-market-line",
+      "title": "Capital Market Line",
+      "summary": "Capital Market Line: framing the capital market line geometry — the risk-free asset, the market portfolio, lending / borrowing portfolios, and the CML slope",
+      "tags": [
+        "portfolio-management",
+        "cml",
+        "market-price-of-risk"
+      ],
+      "legacy_provenance": {
+        "legacy_primary": "Vol.6/pp.520-545",
+        "pdf_range": [
+          3789,
+          3814
+        ],
+        "overlaps_cited_chunk": false,
+        "note": "curated anchor deviates from legacy page reference (legacy ref re-anchored to correct content by curation; verified on-topic + lint/verify-clean)"
+      },
+      "citations": [
+        {
+          "source_id": "cfa_2022_l1_combined",
+          "chunk_id": "cfa_2022_l1_combined:p3164:4718",
+          "chunk_hash": "3c7f42e67ff7dbb0e806085622090dd4707604743f3b908044b172dc934b871a",
+          "page_range": [
+            3164,
+            3164
+          ],
+          "quote": "The y-intercept is the risk-free rate, and the slope of the line referred to as the market price of risk is [E(Rm) – Rf ]/σm.",
+          "edge_type": "defines"
+        }
+      ]
+    },
+    {
+      "card_id": "pm-capm-and-sml",
+      "title": "CAPM and the Security Market Line",
+      "summary": "CAPM and the Security Market Line: framing the CAPM single-factor pricing equation and the security market line as its geometric expression",
+      "tags": [
+        "portfolio-management",
+        "capm",
+        "sml"
+      ],
+      "legacy_provenance": {
+        "legacy_primary": "Vol.6/pp.540-565",
+        "pdf_range": [
+          3809,
+          3834
+        ],
+        "overlaps_cited_chunk": false,
+        "note": "curated anchor deviates from legacy page reference (legacy ref re-anchored to correct content by curation; verified on-topic + lint/verify-clean)"
+      },
+      "citations": [
+        {
+          "source_id": "cfa_2022_l1_combined",
+          "chunk_id": "cfa_2022_l1_combined:p3180:4744",
+          "chunk_hash": "b2edaa29233287111ac22275536466555f019c65379d8d16ac84fee6a8a2eec8",
+          "page_range": [
+            3180,
+            3181
+          ],
+          "quote": "The security market line (SML) is a graphical representation of the capital asset pricing model with beta, reflecting systematic risk, on the x-axis and expected return on the y-axis.",
+          "edge_type": "defines"
+        }
+      ]
+    },
+    {
+      "card_id": "pm-diversification-and-correlation",
+      "title": "Diversification and Correlation",
+      "summary": "Diversification and Correlation: framing covariance, correlation, and naive vs Markowitz diversification as the geometric basis for the efficient frontier",
+      "tags": [
+        "portfolio-management",
+        "diversification",
+        "correlation"
+      ],
+      "legacy_provenance": {
+        "legacy_primary": "Vol.6/pp.460-500",
+        "pdf_range": [
+          3729,
+          3769
+        ],
+        "overlaps_cited_chunk": false,
+        "note": "curated anchor deviates from legacy page reference (legacy ref re-anchored to correct content by curation; verified on-topic + lint/verify-clean)"
+      },
+      "citations": [
+        {
+          "source_id": "cfa_2022_l1_combined",
+          "chunk_id": "cfa_2022_l1_combined:p3115:4655",
+          "chunk_hash": "68277a1919303ebc33b03b3c5e4e9b10a06bc65b1b9d7c0af2335e3be017ba44",
+          "page_range": [
+            3115,
+            3116
+          ],
+          "quote": "The correlation coefficient between two assets determines the effect on portfolio risk when the two assets are combined.",
+          "edge_type": "defines"
+        }
+      ]
+    },
+    {
+      "card_id": "pm-efficient-frontier",
+      "title": "Efficient Frontier",
+      "summary": "Efficient Frontier: framing mean-variance optimization and the efficient frontier as the geometric locus of optimal risk-return tradeoffs",
+      "tags": [
+        "portfolio-management",
+        "efficient-frontier",
+        "markowitz"
+      ],
+      "legacy_provenance": {
+        "legacy_primary": "Vol.6/pp.490-519",
+        "pdf_range": [
+          3759,
+          3788
+        ],
+        "overlaps_cited_chunk": false,
+        "note": "curated anchor deviates from legacy page reference (legacy ref re-anchored to correct content by curation; verified on-topic + lint/verify-clean)"
+      },
+      "citations": [
+        {
+          "source_id": "cfa_2022_l1_combined",
+          "chunk_id": "cfa_2022_l1_combined:p3130:4675",
+          "chunk_hash": "228b2e1be10ba23352d4e81bcdae0bccf51f8f261f23bb62f75fe646f04e7b3c",
+          "page_range": [
+            3130,
+            3131
+          ],
+          "quote": "The curve that lies above and to the right of the global minimum-variance portfolio is referred to as the Markowitz efficient frontier",
+          "edge_type": "defines"
+        }
+      ]
+    },
+    {
+      "card_id": "pm-factor-models-intuition",
+      "title": "Factor Models — Intuition",
+      "summary": "Factor Models — Intuition: extending the single-factor CAPM into a multifactor return-decomposition intuition — what a factor is, why a single factor is restrictive, and how additional factors enter as siblings of the market factor in the expected-return generator",
+      "tags": [
+        "portfolio-management",
+        "factor-models",
+        "multifactor"
+      ],
+      "legacy_provenance": {
+        "legacy_primary": "Vol.6/pp.560-572",
+        "pdf_range": [
+          3829,
+          3841
+        ],
+        "overlaps_cited_chunk": false,
+        "note": "curated anchor deviates from legacy page reference (legacy ref re-anchored to correct content by curation; verified on-topic + lint/verify-clean)"
+      },
+      "citations": [
+        {
+          "source_id": "cfa_2022_l1_combined",
+          "chunk_id": "cfa_2022_l1_combined:p3171:4729",
+          "chunk_hash": "7c38514023177ca2176eb8888c1d5313ad1bfe8461e42c7e55c3c4d5e63e8bff",
+          "page_range": [
+            3171,
+            3172
+          ],
+          "quote": "A multi-factor model allows more than one variable to be considered in estimating returns and can be built using different kinds of factors",
+          "edge_type": "supports"
+        }
+      ]
+    },
+    {
+      "card_id": "pm-investment-policy-statement",
+      "title": "Investment Policy Statement",
+      "summary": "Investment Policy Statement: framing the Investment Policy Statement (IPS) as the governing document for a portfolio — its purpose, structural sections, and the role it plays in disciplining downstream allocation and rebalancing decisions",
+      "tags": [
+        "portfolio-management",
+        "ips",
+        "objectives"
+      ],
+      "legacy_provenance": {
+        "legacy_primary": "Vol.6/pp.5-25",
+        "pdf_range": [
+          3274,
+          3294
+        ],
+        "overlaps_cited_chunk": true,
+        "note": "curated anchor matches legacy page reference"
+      },
+      "citations": [
+        {
+          "source_id": "cfa_2022_l1_combined",
+          "chunk_id": "cfa_2022_l1_combined:p3275:4932",
+          "chunk_hash": "1b3a1d947a74b2cf4932dbe1671930ad5d68061ba1ecca9bb177f271d9f37644",
+          "page_range": [
+            3275,
+            3276
+          ],
+          "quote": "The IPS is the starting point of the portfolio management process. Without a full understanding of the client’s situation and requirements, it is unlikely that successful results will be achieved.",
+          "edge_type": "defines"
+        }
+      ]
+    },
+    {
+      "card_id": "pm-investor-types",
+      "title": "Investor Types",
+      "summary": "Investor Types: surveying the retail-vs-institutional investor spectrum at L1 depth — what each category looks like, how each typifies the IPS objective and constraint profile, and where deeper investor-type taxonomy lives",
+      "tags": [
+        "portfolio-management",
+        "investor-types",
+        "institutional"
+      ],
+      "legacy_provenance": {
+        "legacy_primary": "Vol.6/pp.420-441",
+        "pdf_range": [
+          3689,
+          3710
+        ],
+        "overlaps_cited_chunk": false,
+        "note": "curated anchor deviates from legacy page reference (legacy ref re-anchored to correct content by curation; verified on-topic + lint/verify-clean)"
+      },
+      "citations": [
+        {
+          "source_id": "cfa_2022_l1_combined",
+          "chunk_id": "cfa_2022_l1_combined:p3055:4566",
+          "chunk_hash": "7e477d9c6bc3f894c73d49c94e7ee7e0e2ca0c92a0e1f4c998f149befb51d7a6",
+          "page_range": [
+            3055,
+            3056
+          ],
+          "quote": "Each of these segments has distinctive characteristics and needs, as discussed in the following sub-sections.",
+          "edge_type": "supports"
+        }
+      ]
+    },
+    {
+      "card_id": "pm-market-efficiency-core",
+      "title": "Market Efficiency — Three Forms",
+      "summary": "Market Efficiency — Three Forms: defining the three CFA-framing forms of market efficiency (weak, semi-strong, strong) — what each form claims about the price-information relationship, what tests are used to falsify each, and what each implies for the active-management decision",
+      "tags": [
+        "market-efficiency",
+        "fama",
+        "equity-investments"
+      ],
+      "legacy_provenance": {
+        "legacy_primary": "Vol.6/pp.420-441",
+        "pdf_range": [
+          3689,
+          3710
+        ],
+        "overlaps_cited_chunk": false,
+        "note": "curated anchor deviates from legacy page reference (legacy ref re-anchored to correct content by curation; verified on-topic + lint/verify-clean)"
+      },
+      "citations": [
+        {
+          "source_id": "cfa_2022_l1_combined",
+          "chunk_id": "cfa_2022_l1_combined:p2181:3200",
+          "chunk_hash": "61b3817021443ba8577da0e245825189d7e8a8d6d7eb8359a6bfb7a4f880de01",
+          "page_range": [
+            2181,
+            2182
+          ],
+          "quote": "In his framework, Fama defines three forms of efficiency: weak, semi-strong, and strong. Each form is defined with respect to the available information that is reflected in prices.",
+          "edge_type": "defines"
+        }
+      ]
+    },
+    {
+      "card_id": "pm-performance-ratios-definitions",
+      "title": "Performance Ratios — Sharpe, Treynor, Information",
+      "summary": "Performance Ratios — Sharpe, Treynor, Information: defining the symbolic forms of the Sharpe ratio, Treynor ratio, and Information Ratio at L1 depth — what each measures, which denominator-risk concept each uses, and how the choice of risk measure determines which ratio is the right tool",
+      "tags": [
+        "portfolio-management",
+        "sharpe-ratio",
+        "risk-adjusted-return"
+      ],
+      "legacy_provenance": {
+        "legacy_primary": "Vol.6/pp.555-572",
+        "pdf_range": [
+          3824,
+          3841
+        ],
+        "overlaps_cited_chunk": false,
+        "note": "curated anchor deviates from legacy page reference (legacy ref re-anchored to correct content by curation; verified on-topic + lint/verify-clean)"
+      },
+      "citations": [
+        {
+          "source_id": "cfa_2022_l1_combined",
+          "chunk_id": "cfa_2022_l1_combined:p3188:4756",
+          "chunk_hash": "a0b96d424a4abc9183c7e61dd279455f9a4fdcf824e613d01998ff24602fbb92",
+          "page_range": [
+            3188,
+            3189
+          ],
+          "quote": "A commonly used measure of performance is the Sharpe ratio, which is defined as the portfolio’s risk premium divided by its risk.",
+          "edge_type": "defines"
+        }
+      ]
+    },
+    {
+      "card_id": "pm-portfolio-constraints",
+      "title": "Portfolio Constraints — The LLTTU Families",
+      "summary": "Portfolio Constraints — The LLTTU Families: enumerating the five constraint families recorded in an IPS — liquidity, time horizon, taxes, legal / regulatory, unique circumstances (LLTTU) — and showing how each family bounds the feasible portfolio in a different dimension",
+      "tags": [
+        "portfolio-management",
+        "ips-constraints",
+        "llttu"
+      ],
+      "legacy_provenance": {
+        "legacy_primary": "Vol.6/pp.10-35",
+        "pdf_range": [
+          3279,
+          3304
+        ],
+        "overlaps_cited_chunk": true,
+        "note": "curated anchor matches legacy page reference"
+      },
+      "citations": [
+        {
+          "source_id": "cfa_2022_l1_combined",
+          "chunk_id": "cfa_2022_l1_combined:p3284:4947",
+          "chunk_hash": "c2d77dcd1f1ba1ac25cf7547cff780ef2d1f6672fc480f9e24253432943a9405",
+          "page_range": [
+            3284,
+            3285
+          ],
+          "quote": "we analyze five major types of constraints on portfolio selection: liquidity, time horizon, tax concerns, legal and regulatory factors, and unique circumstances.",
+          "edge_type": "defines"
+        }
+      ]
+    },
+    {
+      "card_id": "pm-portfolio-perspective",
+      "title": "Portfolio Perspective",
+      "summary": "Portfolio Perspective: framing what a portfolio is from the investor perspective — the rationale for evaluating holdings together rather than security by security, and the steps in a portfolio-management process",
+      "tags": [
+        "portfolio-management",
+        "portfolio-perspective",
+        "diversification"
+      ],
+      "legacy_provenance": {
+        "legacy_primary": "Vol.6/pp.405-441",
+        "pdf_range": [
+          3674,
+          3710
+        ],
+        "overlaps_cited_chunk": false,
+        "note": "curated anchor deviates from legacy page reference (legacy ref re-anchored to correct content by curation; verified on-topic + lint/verify-clean)"
+      },
+      "citations": [
+        {
+          "source_id": "cfa_2022_l1_combined",
+          "chunk_id": "cfa_2022_l1_combined:p3042:4550",
+          "chunk_hash": "0fd3bd67e777e66912203c5079aeec621048c9f5fdfebf87defe69ddda914376",
+          "page_range": [
+            3042,
+            3043
+          ],
+          "quote": "Should we invest in individual securities, evaluating each in isolation, or should we take a portfolio approach?",
+          "edge_type": "defines"
+        }
+      ]
+    },
+    {
+      "card_id": "pm-rebalancing-mechanics",
+      "title": "Rebalancing Mechanics",
+      "summary": "Rebalancing Mechanics: framing rebalancing as the discipline that returns drifted weights to strategic targets, contrasting calendar and threshold rules, and analyzing the transaction-cost / tracking-risk tradeoff",
+      "tags": [
+        "portfolio-management",
+        "rebalancing",
+        "asset-allocation"
+      ],
+      "legacy_provenance": {
+        "legacy_primary": "Vol.6/pp.35-48",
+        "pdf_range": [
+          3304,
+          3317
+        ],
+        "overlaps_cited_chunk": false,
+        "note": "curated anchor deviates from legacy page reference (legacy ref re-anchored to correct content by curation; verified on-topic + lint/verify-clean)"
+      },
+      "citations": [
+        {
+          "source_id": "cfa_2022_l1_combined",
+          "chunk_id": "cfa_2022_l1_combined:p3302:4972",
+          "chunk_hash": "5569c66ae1e4da0cf78252198a430b4d5d00edaf415cb98d146e2619e62eddbb",
+          "page_range": [
+            3302,
+            3303
+          ],
+          "quote": "Periodically, or when a certain threshold deviation from the policy weight (the bandwidth) has been breached, the portfolio should be rebalanced back to the policy weights.",
+          "edge_type": "defines"
+        }
+      ]
+    },
+    {
+      "card_id": "pm-return-and-risk-fundamentals",
+      "title": "Return and Risk Fundamentals",
+      "summary": "Return and Risk Fundamentals: framing return measures (holding period return, arithmetic mean, geometric mean) and risk measures (variance, semi-variance, downside) at the holding and portfolio level",
+      "tags": [
+        "portfolio-management",
+        "return-measures",
+        "holding-period-return"
+      ],
+      "legacy_provenance": {
+        "legacy_primary": "Vol.6/pp.442-475",
+        "pdf_range": [
+          3711,
+          3744
+        ],
+        "overlaps_cited_chunk": false,
+        "note": "curated anchor deviates from legacy page reference (legacy ref re-anchored to correct content by curation; verified on-topic + lint/verify-clean)"
+      },
+      "citations": [
+        {
+          "source_id": "cfa_2022_l1_combined",
+          "chunk_id": "cfa_2022_l1_combined:p3079:4599",
+          "chunk_hash": "b88d02e1073088a7d13a01bd0917a6c48f073044376c6f677296d030c0a7a7f9",
+          "page_range": [
+            3079,
+            3080
+          ],
+          "quote": "A holding period return is the return earned from holding an asset for a single specified period of time.",
+          "edge_type": "defines"
+        }
+      ]
+    },
+    {
+      "card_id": "pm-risk-tolerance-and-objectives",
+      "title": "Risk Tolerance and Objectives",
+      "summary": "Risk Tolerance and Objectives: framing the IPS return-and-risk objectives at L1 depth — distinguishing return objective formulation, risk objective formulation, and the ability-vs-willingness decomposition of risk tolerance",
+      "tags": [
+        "portfolio-management",
+        "risk-tolerance",
+        "ability-vs-willingness"
+      ],
+      "legacy_provenance": {
+        "legacy_primary": "Vol.6/pp.5-25",
+        "pdf_range": [
+          3274,
+          3294
+        ],
+        "overlaps_cited_chunk": true,
+        "note": "curated anchor matches legacy page reference"
+      },
+      "citations": [
+        {
+          "source_id": "cfa_2022_l1_combined",
+          "chunk_id": "cfa_2022_l1_combined:p3278:4938",
+          "chunk_hash": "44499ae35c821428f8f7bebfb9bb6c80c9199c7191ebf80e0dd2586a0ca13e79",
+          "page_range": [
+            3278,
+            3279
+          ],
+          "quote": "A client’s overall risk tolerance is a function of the client’s ability to bear (accept) risk and her “risk attitude,” which might be considered as the client’s willingness to take risk.",
+          "edge_type": "defines"
+        }
+      ]
+    },
+    {
+      "card_id": "pm-systematic-vs-idiosyncratic-risk",
+      "title": "Systematic vs Idiosyncratic Risk",
+      "summary": "Systematic vs Idiosyncratic Risk: decomposing total return variance into a systematic component (priced by a factor model) and an idiosyncratic component (diversifiable in a broad portfolio), and showing the asymptotic limit of diversification benefit",
+      "tags": [
+        "portfolio-management",
+        "systematic-risk",
+        "diversification"
+      ],
+      "legacy_provenance": {
+        "legacy_primary": "Vol.6/pp.500-540",
+        "pdf_range": [
+          3769,
+          3809
+        ],
+        "overlaps_cited_chunk": false,
+        "note": "curated anchor deviates from legacy page reference (legacy ref re-anchored to correct content by curation; verified on-topic + lint/verify-clean)"
+      },
+      "citations": [
+        {
+          "source_id": "cfa_2022_l1_combined",
+          "chunk_id": "cfa_2022_l1_combined:p3169:4725",
+          "chunk_hash": "042cfd4583cfbdbe3d534430fd5db43dfb8936dd215c704aef496744efb844be",
+          "page_range": [
+            3169,
+            3169
+          ],
+          "quote": "Systematic risk, also known as non-diversifiable or market risk, is the risk that affects the entire market or economy.",
+          "edge_type": "defines"
+        }
+      ]
+    },
+    {
+      "card_id": "pm-tracking-error-and-active-risk",
+      "title": "Tracking Error and Active Risk",
+      "summary": "Tracking error (a synonym of active risk) is the standard deviation of the differences between a portfolio's returns and its benchmark's returns; it measures how tightly an active or index portfolio follows its benchmark and is the denominator of the information ratio (CFA L1).",
+      "tags": [
+        "portfolio-management",
+        "tracking-error",
+        "active-risk"
+      ],
+      "legacy_provenance": {
+        "legacy_primary": "Vol.6/pp.560-572",
+        "overlaps_cited_chunk": false,
+        "note": "Re-authored from a non-notes CFA L1 primary in the 2026-06 quarantine-absorption (was notes-taint quarantined); anchored on the CFA L1 glossary definition of tracking error / active risk."
+      },
+      "citations": [
+        {
+          "source_id": "cfa_2022_l1_combined",
+          "chunk_id": "cfa_2022_l1_combined:p555:0770",
+          "chunk_hash": "1f2309173150fd5ee105b2cb7e685b77d9a3d53e2e666e3c2b966fcb437c4b71",
+          "page_range": [
+            555,
+            555
+          ],
+          "quote": "Tracking error The standard deviation of the differences between a portfolio’s returns and its benchmark’s returns; a synonym of active risk.",
+          "edge_type": "defines"
+        }
+      ]
+    }
+  ]
+}

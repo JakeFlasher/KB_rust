@@ -37,12 +37,12 @@ crates/cacg-cli/out/
 # for the rebuild recipe + intentionally-untracked disposition. Git cannot un-ignore a
 # file whose parent dir is excluded, so re-include the dir, re-ignore its contents, then
 # re-include the four files.
-!/out/cfa_legacy/
-/out/cfa_legacy/*
-!/out/cfa_legacy/cards_manifest.json
-!/out/cfa_legacy/summaries.json
-!/out/cfa_legacy/INDEX.md
-!/out/cfa_legacy/pdfium_provenance.json
+!/out/cfa/
+/out/cfa/*
+!/out/cfa/cards_manifest.json
+!/out/cfa/summaries.json
+!/out/cfa/INDEX.md
+!/out/cfa/pdfium_provenance.json
 
 # Avoid committing huge intermediate scratch files
 *.tmp
@@ -60,7 +60,7 @@ crates/cacg-cli/out/
 # (they need to capture the Python oracle's exact lock-file behavior).
 /cards/**/*.history.jsonl.lock
 /out/**/*.lint_journal.jsonl.lock
-/sources/cfa_legacy/_registry/release_baseline/*.lock
+/sources/cfa/_registry/release_baseline/*.lock
 
 # Cargo build artifacts (Rust port workspace)
 target/

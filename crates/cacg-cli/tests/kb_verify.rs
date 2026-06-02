@@ -213,8 +213,11 @@ fn kb_verify_missing_card_short_command_is_cacg_cli_001_not_man_001() {
     fs::create_dir_all(&out_dir).expect("create out/ dir");
     // A malformed sibling cards_manifest.json that WOULD fail-close with
     // CACG-MAN-001 if it were ever loaded for this invocation.
-    fs::write(out_dir.join("cards_manifest.json"), "{ this is not valid json")
-        .expect("write malformed cards_manifest.json");
+    fs::write(
+        out_dir.join("cards_manifest.json"),
+        "{ this is not valid json",
+    )
+    .expect("write malformed cards_manifest.json");
 
     let output = Command::new(kb_bin())
         .current_dir(tmp.path())

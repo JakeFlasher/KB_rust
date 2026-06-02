@@ -1,0 +1,59 @@
+{
+  "schema_version": "cfa.migration_faithfulness_review.v1",
+  "scope": "Independent SEMANTIC-faithfulness review of the two migration artifacts kb verify cannot judge: the cross-link mapping (migration_cross_links.json, 9 documented pairs / 15 directed links) and the 54 quote repairs (migration_quote_audit.json). kb verify proves only verbatim containment, not that a quote backs the card's claim.",
+  "method": "Four independent skeptical review subagents — one over the cross-link pairs, one per reading (14/15/22) over the quote repairs — each read the cards plus a source-context bundle (build_faithfulness_bundle.py) and returned per-item verdicts faithful/questionable/unfaithful (unfaithful = blocking). Substitutes the analyze/Codex lane under the loop's --privacy posture; the loop's own review provides the external check on this integration.",
+  "totals": {
+    "cross_link_directed_links": 15,
+    "cross_link_faithful": 13,
+    "cross_link_questionable_resolved": 1,
+    "cross_link_blocking_resolved": 1,
+    "quote_repairs": 54,
+    "quote_faithful": 42,
+    "quote_questionable_recorded": 8,
+    "quote_blocking_resolved": 3
+  },
+  "blocking_findings_resolved": [
+    {
+      "kind": "cross_link",
+      "item": "fa-shleifer-vishny-limits-to-arbitrage -> mt-value-traders-arbitrageurs",
+      "finding": "the See Also note claimed both cards 'derive the same performance-sensitive-capital limits-to-arbitrage mechanism', but mt-value-traders-arbitrageurs is a Harris value-trader/arbitrageur taxonomy (liquidity suppliers of last resort; arbitrageurs enforce the law of one price) and contains no performance-sensitive-capital / forced-liquidation model.",
+      "resolution": "dropped mt-value-traders-arbitrageurs from the pair in migration_cross_links.json (pair keeps mt-funding-liquidity-fire-sales + be-limits-of-arbitrage, both confirmed faithful), AND added a committed deterministic skeleton-prose rewrite (migration_cross_links.json skeleton_prose_rewrites) applied by the emitter so the GENERATED fa-shleifer-vishny card no longer names mt-value-traders-arbitrageurs nor repeats the false 'both derive the same mechanism' claim — the mechanism is now attributed only to mt-funding-liquidity-fire-sales. The cross-link validator gained a forbidden-mention check that fails if the withdrawn counterpart survives in a migrated card's See Also. Validator re-run PASS; endpoints kb verify PASS."
+    },
+    {
+      "kind": "quote_repair",
+      "card_id": "pa-currency-attribution-karnosky-singer",
+      "finding": "the heuristic re-anchored to a PDF typesetting running-header ('Trim Size: 170mm x 244mm ... c06.tex ...') with zero semantic content.",
+      "resolution": "reviewed_faithful_reanchor override -> 'by using continuously compounded returns in their model and solve the forward premium concern' (page corrected 323->322 to the page holding the run); kb verify PASS."
+    },
+    {
+      "kind": "quote_repair",
+      "card_id": "mt-execution-systems-quote-vs-order-driven",
+      "finding": "the heuristic re-anchored to an unrelated market-hours sentence ('Traders use the hours before the open to collect and submit orders'); the cited execution-system taxonomy sentence on the same page is U+FFFE-broken at 'quote-driven'.",
+      "resolution": "reviewed_faithful_reanchor override -> 'order-driven markets, and brokered markets.' (clean on-page run naming the execution systems the card defines); kb verify PASS."
+    },
+    {
+      "kind": "quote_repair",
+      "card_id": "fa-iiv-iopv-intraday-fair-value",
+      "finding": "the heuristic re-anchored to an adjacent return-innovation equation sentence unrelated to the card's 'three distinct values' claim.",
+      "resolution": "reviewed_faithful_reanchor override -> 'values: (1) the ETF secondary market price, (2) NAV, and (3) the' (the on-page enumeration of the three values); kb verify PASS."
+    }
+  ],
+  "questionable_non_blocking": [
+    {"kind": "cross_link", "item": "fa-market-liquidity-dimensions-and-no-arbitrage -> mt-three-dimensions-liquidity", "note": "the pair note over-claimed a shared spread/depth/resiliency triad (mt-three-dimensions-liquidity is a market/funding/monetary trichotomy). RESOLVED this round by rewording the note to be accurate for both counterparts; the See Also link stands (both are liquidity-dimension cards)."},
+    {"kind": "quote_repair", "card_id": "mt-block-trader-upstairs-depth", "note": "re-anchor (overlap 0.071) shifts to a narrower 'dealers trade out at a profit' point vs the original screening claim."},
+    {"kind": "quote_repair", "card_id": "mt-market-manipulation-bluffing", "note": "re-anchor to a specific stop-gunning tactic vs the general manipulation definition the card defines."},
+    {"kind": "quote_repair", "card_id": "pa-dgtw-cs-ct-as-decomposition", "note": "re-anchor supports the card's Boundary-Notes liquidity caveat, not the bound 125-fractile grid definition."},
+    {"kind": "quote_repair", "card_id": "pa-gips-2020-composites-and-mechanics", "note": "re-anchor to a tangential business-efficiency aside vs the GIPS definition the citation anchors."},
+    {"kind": "quote_repair", "card_id": "pa-fi-carry-rolldown-pulltopar-time-decomposition", "note": "re-anchor to a 'rolldown seldom substantial' magnitude claim the card does not itself make."},
+    {"kind": "quote_repair", "card_id": "fa-liquidity-adjusted-var", "note": "final trim asserts only that the LVaR concept 'is simple'; the return/liquidity two-component split it leans on is in context but not in the quote."},
+    {"kind": "quote_repair", "card_id": "fa-search-bargaining-liquidity-premium", "note": "a trim ends before the 'bargaining power of the market maker' clause the card quotes; restored only by context."},
+    {"kind": "quote_repair", "card_id": "fa-shleifer-vishny-limits-to-arbitrage", "note": "a trim stops before the 'allocated capital depends on past performance' clause (the performance-sensitive-capital point); restored by context."}
+  ],
+  "follow_up": "The questionable (non-blocking) items are conservative trims/re-anchors whose final quote is a verbatim substring that supports an adjacent or context-restored point; they are filed for the post-v1 anchor-truth quality pass, not fixed here, to avoid over-editing faithful-enough quotes.",
+  "reviewer_summaries": {
+    "cross_links": "13/15 links faithful; the complementary links are not over-claimed as duplicates; one blocking mislink (mt-value-traders-arbitrageurs) and one over-claimed note (mt-three-dimensions-liquidity) both resolved.",
+    "reading_14": "20 repairs (11 trim / 9 reanchor): 17 faithful, 2 questionable, 1 blocking (mt-execution-systems re-anchored off the taxonomy onto market hours) resolved; all trims preserve the load-bearing proposition.",
+    "reading_15": "17 repairs (6 trim / 11 reanchor): 13 faithful, 3 questionable, 1 blocking (pa-currency-attribution re-anchored to a PDF header) resolved.",
+    "reading_22": "17 repairs (10 trim / 7 reanchor): 12 faithful, several questionable, 1 blocking (fa-iiv-iopv re-anchored to an off-topic equation) resolved."
+  }
+}

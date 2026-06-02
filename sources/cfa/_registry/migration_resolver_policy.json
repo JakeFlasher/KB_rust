@@ -1,0 +1,26 @@
+{
+  "schema_version": "cfa.migration_resolver_policy.v2",
+  "note": "Explicit, user-authorized overrides for resolve_migration_citations.py. The resolver fails closed on any condition NOT covered here; each exception was authorized by the user during the RLCR loop and is recorded for audit. Every repair is gated on a MACHINE proof and carries a structured `cause`; a citation that does not satisfy a documented proof fails closed (status zero_match) and is never silently bound.",
+  "authorized_by": "user (RLCR loop, 2026-05-31)",
+  "allow_overlap_disambiguation": {
+    "enabled": true,
+    "rule": "best-fit: prefer a chunk whose page span fully contains the cited page_range, then the tightest span, then the lowest chunk_id",
+    "scope": "ONLY a multi-candidate whose matching chunks form a single overlapping page-span chain (kb's chunker emits overlapping chunks, so a quote verbatim-verifies against more than one adjacent chunk). A multi-candidate that is NOT a pure overlap chain (genuine duplicate text in distant chunks) still fails closed.",
+    "audit": "the chosen chunk_id and ALL candidate chunk_ids are recorded on the bind-report row.",
+    "rationale": "binding to the best-fit overlapping chunk is safe (the quote is a verbatim substring of the chosen chunk and its chunk_hash is correct); overlap is a structural chunker property, not content ambiguity."
+  },
+  "allow_documented_quote_repairs": {
+    "enabled": true,
+    "min_auto_bind_rate": 0.95,
+    "min_auto_bind_rate_override": true,
+    "authorized_causes": {
+      "pdfium_ufffe_hyphenation": "the authored quote matches a candidate's cited-page window ONLY after removing the Pdfium STX->U+FFFE hyphenation marker the kernel preserves; trim to the longest clean verbatim run (>=60%) else re-anchor to the best-overlap clean on-page sentence.",
+      "chunk_boundary_span": "the authored quote is verbatim within the cited-page window but spans a chunk/page boundary so it is not a substring of any single chunk; trim to the longest clean (>= MIN run) verbatim run within one chunk's cited-page window. No content change beyond trimming.",
+      "equation_extraction_mismatch": "the authored quote's CONTENT words have high recall (>= threshold) in a cited-page window (proving the citation points at the right page) but the quote is not verbatim because it transcribes math notation Pdfium extracts differently; re-anchor to the best-overlap clean PROSE sentence on the cited page, per the sources' own authoring guidance ('capture prose/definitions only; never transcribe garbled OCR math').",
+      "reviewed_faithful_reanchor": "a HUMAN-reviewed faithful re-anchor (committed migration_reviewed_quote_overrides.json) that SUPERSEDES the heuristic repair for a specific citation the independent faithfulness review flagged as semantically unfaithful (the heuristic landed on typesetting noise or an adjacent equation because the cited sentence is densely U+FFFE-broken); the override is a clean, word-bounded verbatim run within the cited-page window, verified verbatim + confirmed by real kb verify, and recorded with its review rationale."
+    },
+    "scope": "the >=95% per-set auto-bind guard is overridden because some authored quotes cannot bind verbatim for the documented extraction reasons above; the override covers ONLY repairs whose structured `cause` is one of authorized_causes. Any unbound, zero-match (no documented proof), fabricated, or low-recall citation still fails closed; a repair carrying an unauthorized/absent cause fails the run.",
+    "audit": "every repair is recorded in migration_quote_audit.json with its structured cause; the bind report records the per-set auto-bind rates and that the override was applied. The full set of repairs was covered by the independent faithfulness review recorded in migration_faithfulness_review.json.",
+    "rationale": "user decision (RLCR loop): hybrid U+FFFE repair (trim>=60% / re-anchor) extended, after the Codex Round-4 review surfaced 6 mis-bound non-U+FFFE citations, with two further NARROW machine-proven causes (boundary-span trim + equation-mismatch prose re-anchor) consistent with the corpus's own authoring guidance."
+  }
+}

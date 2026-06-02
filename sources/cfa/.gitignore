@@ -1,0 +1,16 @@
+# Navigation-only binaries under deferred/ and excluded/ are NOT tracked (large; ~1.5 GB).
+# The CITED corpus lives in pdfs/ and IS git-tracked. Provenance for the untracked archive
+# is in _registry/library_catalog.json + excluded/*.json (deferred_books_inventory.json,
+# epub_blacklist.json, notes_inventory.json, dynamic_tree_quarantine_manifest.json).
+/deferred/**/*.pdf
+/deferred/**/*.epub
+/deferred/**/*.mobi
+/deferred/**/*.azw*
+/deferred/**/*.djvu
+/deferred/**/*.html
+/excluded/**/*.pdf
+/excluded/**/*.epub
+/excluded/**/*.mobi
+/excluded/**/*.azw*
+/excluded/**/*.djvu
+/excluded/**/*.html

@@ -1,7 +1,7 @@
-//! AC-C4 schema-fixture commands: `gen-schema-fixtures` regenerates
-//! the generated_pydantic_errors manifest via Python; `audit-schema-fixtures`
-//! validates the committed manifest's invariants against an explicit
-//! 80-row required matrix.
+//! Schema-fixture commands: `gen-schema-fixtures` regenerates the
+//! generated_pydantic_errors manifest from Rust-native fixture definitions;
+//! `audit-schema-fixtures` validates the committed manifest's invariants
+//! against an explicit 80-row required matrix.
 
 use std::io;
 use std::path::{Path, PathBuf};
@@ -1413,7 +1413,7 @@ pub fn audit(manifest_path: &Path) -> io::Result<AuditReport> {
         if actual_code != expected_code {
             return Err(io::Error::other(format!(
                 "fixture {name}: actual_code {actual_code} differs from expected_code {expected_code}; \
-                 the Python generator's runtime classification drifted from the documented expectation"
+                 the generated fixture classification drifted from the documented expectation"
             )));
         }
         match oracle_layer {

@@ -1,0 +1,232 @@
+{
+  "schema_version": "cfa_anchor_truth_swarm/v1",
+  "generated_by": "ac5-anchor-truth-swarm (6 per-slice Claude review subagents; privacy-mode Codex-budget substitution)",
+  "slices": [
+    {
+      "slice": "01_quantitative_methods",
+      "cards_reviewed": 17,
+      "content_mismatch_verdicts": [
+        {
+          "card_id": "qm-aic-bic-model-selection",
+          "verdict": "confirm",
+          "proposed_resolution": "re-anchor",
+          "target_source_id": "qm_eslii_2009_2ed",
+          "target_hint": "ESL Ch.7 'Model Assessment and Selection', Sec 7.5 'Estimates of In-Sample Prediction Error' / 7.7 (AIC and BIC definitions, log-likelihood penalty, BIC's ln(n) parsimony bias). Note: ESL p242 (already cited by qm-signal-validation) explicitly names 'AIC, BIC, MDL, SRM'.",
+          "rationale": "Genuine placeholder. The card is entirely about AIC = n*ln(SSE/n)+2(k+1) and BIC = n*ln(SSE/n)+ln(n)(k+1) information criteria, which the card's own summary admits are 'not in CFA L1 2022'. The cited chunk (cfa p467) is a generic goodness-of-fit paragraph listing R-squared, the F-statistic, and the standard error of the regression -- it never mentions AIC, BIC, information criteria, or a log-likelihood penalty. The card body even falsely attributes the AIC/BIC formulas to the CFA PDF ('the source uses the explicit k+1 form', 'source ASSERTS'). The chunk does not support the stated concept."
+        },
+        {
+          "card_id": "qm-arch-conditional-heteroskedasticity",
+          "verdict": "confirm",
+          "proposed_resolution": "re-anchor",
+          "target_source_id": "qm_tsay_2005_afts_2e",
+          "target_hint": "Tsay AFTS 2e Ch.3 'Conditional Heteroscedastic Models', Sec 3.4 'The ARCH Model' (ARCH(m): sigma_t^2 = a0 + a1*a_{t-1}^2 + ... ; volatility clustering, Lagrange-multiplier test for ARCH effects). Tsay p127 (already cited by qm-volatility-model-garch-multivariate) is the exact ARCH definition.",
+          "rationale": "Genuine placeholder. The card defines an ARCH(1) regression e_t^2 = a0 + a1*e_{t-1}^2 + u_t volatility-clustering test and OLS->GLS response; the summary admits ARCH 'is not in CFA L1 2022'. Cited chunk 0 (cfa p459) merely states the homoskedasticity assumption of simple linear regression; chunk 1 (cfa p462) discusses cross-sectional regime clustering of residual variance, not a time-series autoregression of squared residuals. Neither chunk introduces a lagged-squared-residual model, the term ARCH, or conditional variance dynamics. Wrong concept."
+        },
+        {
+          "card_id": "qm-decision-trees-and-roots",
+          "verdict": "confirm",
+          "proposed_resolution": "re-anchor",
+          "target_source_id": "qm_eslii_2009_2ed",
+          "target_hint": "ESL Ch.9 'Additive Models, Trees, and Related Methods', Sec 9.2 'Tree-Based Methods / CART' (recursive binary splitting, terminal-node majority class for classification and node mean for regression). ISLP Ch.8 is an equivalent undergraduate-depth alternative.",
+          "rationale": "Genuine placeholder. The card describes CART -- a non-parametric recursive-binary-split tree learner -- which the summary admits 'is not in CFA L1 2022'. Both cited chunks (cfa p450 'linear regression assumes a linear relationship'; cfa p447 R7 learning-outcome statement for simple linear regression) are about parametric simple linear regression. Nothing in either chunk mentions trees, recursive partitioning, decision nodes, or majority-class/terminal-node prediction. The chunk is the parametric opposite of the card's concept, not support for it."
+        },
+        {
+          "card_id": "qm-influence-analysis-leverage",
+          "verdict": "confirm",
+          "proposed_resolution": "re-anchor",
+          "target_source_id": "qm_greene_2019_econometric_analysis_8ed",
+          "target_hint": "Greene 'Econometric Analysis' 8e -- influential-observation / data-problems treatment: hat-matrix leverage h_ii, studentized (externally studentized) residuals, and Cook's distance / DFBETA for coefficient sensitivity. (ESL/ISLP also touch leverage but Greene gives the full h_ii / Cook's-D battery.)",
+          "rationale": "Genuine placeholder. The card defines per-observation diagnostics leverage h_ii, studentized residuals, and Cook's distance; summary admits these 'are not in CFA L1 2022'. Cited chunk 0 (cfa p464) is a single descriptive sentence that an outlier can influence the fitted line; chunk 1 (cfa p463) is the residual-pattern-plot diagnostic for autocorrelation. Neither chunk defines a leverage statistic, a studentized residual, or Cook's distance, nor any per-observation deletion-influence quantity. Descriptive outlier mention does not support the quantitative influence-diagnostic battery the card teaches."
+        },
+        {
+          "card_id": "qm-penalized-regression-lasso",
+          "verdict": "confirm",
+          "proposed_resolution": "re-anchor",
+          "target_source_id": "qm_eslii_2009_2ed",
+          "target_hint": "ESL Ch.3 'Linear Methods for Regression', Sec 3.4.2 'The Lasso' / 3.4.3 (L1 penalty SSE + lambda*sum|b_j|, exact-zero coefficients, regularization-plus-feature-selection). ISLP Ch.6 'Linear Model Selection and Regularization' is the equivalent alternative.",
+          "rationale": "Genuine placeholder. The card defines the LASSO L1-penalized objective SSE + lambda*sum|b_j| with exact-zero sparsity / feature selection, and the summary admits LASSO 'is not in CFA L1 2022'. Both cited chunks point to the same cfa p450 paragraph describing the unpenalized least-squares criterion and the OLS label. There is no penalty term, no L1/lambda, no shrinkage or feature-selection content in the chunk. The body falsely sources the LASSO objective to the CFA PDF. Chunk supports plain OLS, not the penalized variant."
+        },
+        {
+          "card_id": "qm-projection-and-dimensionality-reduction",
+          "verdict": "confirm",
+          "proposed_resolution": "re-anchor",
+          "target_source_id": "qm_eslii_2009_2ed",
+          "target_hint": "ESL Ch.14 'Unsupervised Learning', Sec 14.5 'Principal Components, Curves and Surfaces' (PCA: orthogonal directions of maximum variance, ranking by explained variance, cumulative-variance retention). ISLP Ch.12 'Unsupervised Learning' (PCA) is the equivalent alternative.",
+          "rationale": "Genuine placeholder. The card teaches PCA -- rotating a standardized feature matrix onto orthogonal variance-ranked axes and retaining a cumulative-variance threshold -- and the summary admits PCA 'is not in CFA L1 2022'. Cited chunk 0 (cfa p450 'linear regression assumes a linear relationship') and chunk 1 (cfa p447 'Regression analysis is a tool for examining this type of issue', the R7 reading intro) are about univariate simple linear regression with a scalar predictor. Neither chunk mentions principal components, eigen-decomposition, orthogonal axes, variance ranking, or dimensionality reduction. Wrong concept."
+        },
+        {
+          "card_id": "qm-time-series-foundations",
+          "verdict": "confirm",
+          "proposed_resolution": "re-anchor",
+          "target_source_id": "qm_tsay_2005_afts_2e",
+          "target_hint": "Tsay AFTS 2e Ch.2 'Linear Time Series Analysis and Its Applications' -- Sec 2.4 AR(p) models, Sec 2.1 weak/covariance stationarity, and Sec 2.7 'Unit-Root Nonstationarity' / Dickey-Fuller test; plus the deterministic-trend model. (Greene/Wooldridge unit-root chapters are secondary alternatives.)",
+          "rationale": "Genuine placeholder, as the prior audit's own note concedes. The card teaches AR(p) recursion, covariance stationarity, the Dickey-Fuller unit-root test, and log-linear trend models; the summary admits these are 'NOT covered in CFA L1 2022'. Both cited chunks point to cfa p456, which only distinguishes cross-sectional vs time-series regression data types. The body falsely claims 'the two basic time-series models the source covers' are deterministic trend and AR(p) -- the chunk covers neither. No lag structure, stationarity condition, unit root, or Dickey-Fuller content in the chunk."
+        }
+      ],
+      "new_findings": [
+        {
+          "card_id": "qm-cb-arb-factor-construction",
+          "citation_index": null,
+          "severity": "W",
+          "issue": "Summary references two sources/methods that are not actually anchored by any citation on the card.",
+          "rationale": "The summary asserts 'ridge / lasso shrinkage' and 'Wooldridge Ch.7 supplies categorical dummies', but the card's four citations are ESL p62 (linear model E(Y|X)), ESL p63 (least squares), ESL p356 (boosting), and Greene p144 (Ch.4 OLS) -- there is NO Wooldridge citation at all, and the two ESL p62/p63 chunks are the ESL Sec 3.2 plain linear-model/least-squares intro, not the Sec 3.4 shrinkage (ridge/lasso) section. The four present chunks each correctly support their OLS/linear/boosting sub-claim (no mis-anchor among them), so this is a minor traceability/over-claim gap rather than a content mismatch on an existing anchor: either drop the ridge/lasso and Wooldridge-dummies claims from the summary or add the supporting citations (ESL Sec 3.4 for shrinkage, Wooldridge Ch.7 for dummies)."
+        }
+      ],
+      "notes": "TASK A: all 7 content_mismatch_noted cards (aic-bic, arch, decision-trees/CART, influence-analysis, lasso, PCA/projection, time-series-foundations) are CONFIRMED genuine mis-anchors. They follow an identical placeholder template: the card teaches an advanced topic that its own summary admits is 'not in CFA L1 2022', yet cites a generic CFA L1 R7 simple-linear-regression chunk (cfa p447/p450/p456/p459/p462/p463/p464/p467) as a 'closest topical' placeholder, and several card bodies falsely source the advanced formula to the CFA PDF ('source ASSERTS', '**Source:** CFA ... Vol.1/pp.300-360'). Each re-anchors cleanly to an authorized textbook that genuinely covers the topic: ESL for AIC/BIC, LASSO, CART, PCA; Tsay AFTS for ARCH and AR(p)/unit-root; Greene for leverage/Cook's-distance influence diagnostics. These textbook targets are corroborated by sibling cards in this same slice that already cite the same books for the same topics (ESL p242 names AIC/BIC; Tsay p127 defines ARCH; ESL p356 covers boosting/trees). Mechanical checks (verbatim, authorized, hash-fresh) were taken as given and not re-checked.\n\nTASK B: scanned all 10 non-content-mismatch cards (anova-table, cb-arb-factor-construction, goodness-of-fit, multiple-linear-regression, panel-cb-factor-inference, regression-assumption-violations, regression-hypothesis-tests, signal-validation-oos, structured-data-ml, volatility-garch). 9 are clean: their cited chunks precisely support their stated claims and are correctly volume-anchored (Vol.1 R7 for the regression cards; Vol.6 R55 Fintech for structured-data-ml after the wrong_volume correction; Greene/Wooldridge for panel; ESL/ISLP for OOS validation; Tsay AFTS+MTSA for volatility). The single finding is qm-cb-arb-factor-construction (W): its summary over-claims a Wooldridge-dummies source and a ridge/lasso ESL-shrinkage source that are not present in its citation list -- minor traceability gap, present anchors are all on-topic."
+    },
+    {
+      "slice": "02_economics",
+      "cards_reviewed": 29,
+      "content_mismatch_verdicts": [
+        {
+          "card_id": "ec-risk-aversion-utility-derivation",
+          "verdict": "confirm",
+          "proposed_resolution": "de-claim",
+          "rationale": "The card's substantive content (Arrow-Pratt coefficient A(w)=-u''/u', concavity<->risk aversion via Jensen, small-gamble risk premium pi~=(1/2)sigma^2 A(w), CRRA/CARA) is wholly derived from MWG Ch.6 and is correctly anchored to the two MWG 'defines' citations (p204:0334 risk-averter definition; p206:0337 Bernoulli-utility/concavity equivalence). The third citation cfa_2022_l1_combined:p3364:5066 is a Vol.6 chunk from R53 'Introduction to Risk Management' about risk governance and risk tolerance; its quote ('the individual focuses on maximizing unobservable utility') is a one-line generic gesture that does NOT support, derive, or even mention Arrow-Pratt coefficients, concavity, or the risk-premium approximation. CFA L1 contains no Arrow-Pratt derivation. The body invokes CFA for zero technical claims and makes no 'not in CFA L1' exclusion text, so there is nothing to soften textually. No authorized source other than MWG covers this material, and MWG already anchors it, so re-anchoring is not viable; the spurious CFA 'supports' edge should be dropped (de-claim).",
+          "target_source_id": null,
+          "target_hint": "Drop the cfa_2022_l1_combined:p3364:5066 'supports' edge; the Arrow-Pratt / risk-premium content is fully and correctly anchored to MWG Ch.6 (pp.183-202). No CFA L1 anchor exists for this concept."
+        },
+        {
+          "card_id": "ec-utility-and-choice-under-uncertainty",
+          "verdict": "confirm",
+          "proposed_resolution": "de-claim",
+          "rationale": "The vNM expected-utility theorem (continuity + independence axioms => U(L)=sum p_i u(x_i), u unique up to positive affine transform) is entirely MWG-sourced and correctly anchored to the two MWG 'defines' citations (p190:0310 independence axiom; p194:0316 expected-utility theorem as 'the most important result in the theory of choice under uncertainty'). The third citation cfa_2022_l1_combined:p3364:5066 is the same Vol.6 R53 'Introduction to Risk Management' chunk (risk governance/risk tolerance) whose quote does not state, derive, or support the vNM theorem, the independence axiom, or expected-utility representation. CFA L1 does not derive vNM expected utility. The CFA edge is a tertiary 'supports' link only and the body cites it for no claim; resolution is to drop the off-topic CFA 'supports' edge (de-claim). Re-anchoring is not viable because MWG is the only authorized source covering vNM and it is already cited.",
+          "target_source_id": null,
+          "target_hint": "Drop the cfa_2022_l1_combined:p3364:5066 'supports' edge; vNM expected-utility content is fully anchored to MWG Ch.6 (pp.167-194). No CFA L1 anchor exists for this concept."
+        }
+      ],
+      "new_findings": [
+        {
+          "card_id": "ec-rental-rate-of-capital-microeconomic-foundation",
+          "severity": "W",
+          "issue": "Tertiary CFA 'supports' anchor cfa_2022_l1_combined:p644:0888 (Vol.2 p67) is a market-structure comparison TABLE ('Perfect competition Many Homogeneous/Standardized ... Monopolistic competition Many Differentiated ...'), which is off-topic for a factor-pricing / rental-rate-of-capital card.",
+          "rationale": "The card concept is the firm's static factor-market FOC (p*MPK = R; net rental r = MPK - delta; Romer user-cost extension). The cited CFA chunk is the R9 market-structure characteristics table (number of firms, product differentiation, pricing power) and has nothing to do with the rental price of capital or factor demand. The primary derivation is correctly anchored (MWG p159:0258 cost-min/EMP duality + Romer p440:0628 explicit rental-rate FOC 'firm rents capital up to the point where its marginal revenue product equals its rental price'), so the anchoring of the actual claim is intact; only the tertiary CFA topical-bridge edge fails to support the summary. Minor.",
+          "citation_index": 2
+        },
+        {
+          "card_id": "ec-externalities-and-public-goods",
+          "severity": "W",
+          "issue": "Tertiary CFA 'supports' anchor cfa_2022_l1_combined:p640:0881 (Vol.2 p63) is R9 firm/market-structures content ('different market structures result in different sets of choices facing a firm's decision makers'), which does not cover externalities, public goods, Pigovian taxes, the Samuelson condition, or the Coase theorem.",
+          "rationale": "The card concept is the market-failure classes (externalities; public goods; Coase bargaining) where the First Welfare Theorem breaks down. The cited CFA chunk is about market structure / competition and is silent on externalities and public goods (CFA L1 does not teach this material). The substantive claims are correctly anchored to MWG Ch.11 (p369:0621, both 'two types of market failure' and 'private provision of public goods generates a special type of externality'), so the real anchoring holds; only the off-topic tertiary CFA bridge edge fails to support the summary. Minor.",
+          "citation_index": 2
+        }
+      ],
+      "notes": "TASK A: Both content_mismatch_noted cards (ec-risk-aversion-utility-derivation, ec-utility-and-choice-under-uncertainty) confirmed mis-anchored on their tertiary CFA citation. Both share the identical CFA chunk cfa_2022_l1_combined:p3364:5066 = Vol.6 R53 'Introduction to Risk Management' (risk governance/tolerance), which does not support the Arrow-Pratt or vNM derivations. Resolution = de-claim for both: drop the spurious CFA 'supports' edge; substantive content remains fully and correctly anchored to MWG Ch.6 via the two 'defines' edges. Re-anchoring is impossible because MWG is the only authorized source covering these concepts and it is already cited. Neither card body makes any 'not in CFA L1' textual exclusion claim to soften.\n\nTASK B: Scanned all 27 other cards. The slice uses a consistent bridge-card design: advanced-theory content anchored to MWG/Romer/Cochrane/Hart-Mas-Colell via 'defines' edges, plus a tertiary CFA-L1 'supports' edge as a topical bridge. All primary (defines) anchors genuinely support their cards and are on the correct volume (all CFA econ chunks derive to Vol.2; macro/micro theory to the right textbook). Two tertiary CFA bridge edges are genuinely off-topic and flagged at W (rental-rate card -> market-structure table; externalities/public-goods card -> market-structure intro). The remaining CFA bridges (consumer-preference->'consumers and firms', firm-profit-max->perfect-competition intro, perfect-competition->perfect-competition, production-functions->firm intro, RBC/Solow/endogenous-growth->AS-AD/LRAS, monetary/NK->transmission channel) are topically defensible. The ec-currency-exchange-rates-and-parity anchors hit the Mundell-Fleming/impossible-trinity ('gives up the ability to conduct its own monetary policy') and currency-regime sub-claims of its multi-topic summary, consistent with its documented audit rationale; not flagged. No wrong-volume defects found among the non-mismatch cards."
+    },
+    {
+      "slice": "03_financial_reporting_analysis",
+      "cards_reviewed": 29,
+      "content_mismatch_verdicts": [
+        {
+          "card_id": "fra-double-entry-mechanics",
+          "verdict": "confirm",
+          "proposed_resolution": "re-anchor",
+          "target_source_id": "fra_kieso_weygandt_warfield_2020_ifrs_4ed",
+          "target_hint": "Accounting cycle / recording process chapter (debits and credits, the double-entry system, journalizing, posting to T-accounts, and the trial balance) — Kieso Ch.3 'The Accounting Information System'. This is the only authorized source that actually teaches debit/credit mechanics, journal entries, T-accounts, and the trial-balance condition.",
+          "rationale": "Confirmed. The card's load-bearing concept is double-entry bookkeeping mechanics: debits/credits, T-accounts, normal balances by account type, journal/closing entries, and the trial-balance condition. The CFA citation (cfa_2022_l1_combined:p1085, Vol.2 R15 'Introduction to Financial Statement Analysis') only supplies the accounting identity 'Assets = Liabilities + Owners' equity' from the R15 summary — it does NOT cover debits, credits, T-accounts, or journal entries. The card body itself repeatedly cites Vol.2/pp.475-514 (R15) and Vol.3/pp.5-62 (R17 Income Statements) for the debit/credit account-type rules and the closing-entry sequence, neither of which teaches double-entry mechanics; this is exactly the prior flag's point that the mechanics live in a prerequisite 'Financial Reporting Mechanics' resource outside the main curriculum volume. The Penman supporting cite (articulation) is also tangential to debit/credit mechanics. Kieso (Intermediate Accounting, IFRS 4ed) is authorized for this slice and covers the recording process / accounting cycle in full, so re-anchoring the mechanics claims there resolves the mismatch; the CFA accounting-equation quote may be retained only for the narrow identity-preservation statement."
+        }
+      ],
+      "new_findings": [
+        {
+          "card_id": "fra-cash-vs-accrual-accounting",
+          "citation_index": 1,
+          "severity": "M",
+          "issue": "Defining citation quote is about the dividend discount model / bond valuation, not cash-vs-accrual accounting.",
+          "rationale": "Citation_index 1 (fra_penman_fsa_security_valuation_5ed:p138:0230) is tagged edge_type 'defines' but its verbatim quote is 'The dividend discount model is a straight application of the bond valuation model in the last chapter to valuing equity.' That sentence defines the DDM as a DCF method; it does not support the card's stated concept (why net income and operating cash flow disagree, accrual vs cash recognition timing). The chunk is from the correct chapter (Penman Ch.4 'Cash Accounting, Accrual Accounting, and DCF Valuation') and the card is independently well-anchored by citation_index 0 ('The cash flow statement tracks operating and investment activities with cash accounting'), so this is a mis-targeted quote-selection defect on a 'defines' edge rather than a wrong-source/wrong-volume error. Recommend re-quoting the same Ch.4 region to a sentence that actually states the cash-vs-accrual distinction, or downgrading the edge to 'supports' / dropping it. Not escalated to E/H because source and chapter are correct."
+        }
+      ],
+      "notes": "TASK A: 1 content_mismatch_noted card (fra-double-entry-mechanics) reviewed and confirmed; re-anchor to Kieso (authorized, covers the accounting cycle/debits-credits/T-accounts/trial-balance). TASK B: scanned all 28 other cards. Volume/reading derivations all match the card topics (R15-R26 CFA readings, HKAS 32 / HKFRS 7 / HKFRS 9 paragraph anchors, Penman chapter watermarks). One genuine quote-content defect found (cash-vs-accrual citation_index 1, DDM quote on a 'defines' edge). Other CFA 'supports'-edge intro-sentence quotes (e.g., earnings-based-valuation cit 2 R38 generic intro; ifrs-vs-us-gaap cit 2 segment-reporting R20; earnings-quality cit 1 R20 'analyst converts data into metrics') are generic but anchored to the correct readings and tagged 'supports', already rated W by the prior mechanical pass; not escalated. The fra-double-entry-mechanics card .md was read directly to confirm the body's reliance on R15/R17 for debit/credit mechanics."
+    },
+    {
+      "slice": "07_derivatives_and_volatility",
+      "cards_reviewed": 20,
+      "content_mismatch_verdicts": [
+        {
+          "card_id": "deriv-delta-and-hedging",
+          "verdict": "confirm",
+          "proposed_resolution": "de-claim",
+          "rationale": "Prior flag is correct: CFA L1 R46 (Basics of Derivative Pricing) treats replication/no-arbitrage only and does NOT develop delta hedging, dynamic re-hedging, or the gamma-theta tradeoff. No R46 page genuinely supports this card, so dropping the CFA supporting cite was right. The remaining Hull p431 (Ch.19 Greek Letters) chunk on delta-neutral protection and gamma sensitivity DOES support the card and stands alone. De-claim any residual implication that CFA L1 covers delta hedging.",
+          "target_source_id": null,
+          "target_hint": "Card is correctly anchored to Hull Ch.19 (Greek Letters, delta hedging / dynamic hedging / gamma); no re-anchor needed. CFA L1 has no delta-hedging content."
+        },
+        {
+          "card_id": "deriv-greeks-overview",
+          "verdict": "confirm",
+          "proposed_resolution": "de-claim",
+          "rationale": "Prior flag is correct: CFA L1 R45/R46 do not present the partial-derivative (delta/gamma/vega/theta/rho) Greeks taxonomy, so the dropped CFA supporting cite genuinely failed to support the card. The remaining Hull cite (Ch.19 Greek Letters) is the right chapter. Minor note: the verbatim quote 'once delta neutral, the next stage is often to look at its gamma' is on-topic for the Greeks taxonomy, though the snippet window happens to surround a 1987-crash/portfolio-insurance anecdote; the quote anchor itself is acceptable.",
+          "target_source_id": null,
+          "target_hint": "Hull Ch.19 (Greek Letters) section defining delta, gamma, vega, theta, rho; consider anchoring to the page that enumerates all five partials rather than the gamma-management page for a cleaner topical match."
+        },
+        {
+          "card_id": "deriv-implied-volatility",
+          "verdict": "confirm",
+          "proposed_resolution": "de-claim",
+          "rationale": "Prior flag is correct: CFA L1 R45/R46 do not develop implied volatility as the BSM-inverse (no Newton-Raphson-on-vega inversion, no variance-risk-premium framing), so dropping the CFA cite was right. The remaining Hull cite is in the correct chapter (Ch.20 Volatility Smiles and Surfaces). Caveat: the chosen p460 quote concerns Greeks assuming implied vol constant / minimum-variance delta rather than the inversion definition itself; the anchor is acceptable but a tighter quote on the implied-vol-as-BSM-inverse definition would be preferable.",
+          "target_source_id": "cb_hull_2022_options_futures_derivatives_11ed",
+          "target_hint": "Hull Ch.20 passage defining implied volatility as the volatility that, when input into BSM, recovers the observed market price (the inversion definition), rather than the minimum-variance-delta paragraph at p460."
+        },
+        {
+          "card_id": "deriv-stochastic-vol-models",
+          "verdict": "confirm",
+          "proposed_resolution": "de-claim",
+          "rationale": "Prior flag is correct: CFA L1 2022 derivatives readings (R45-R47) contain no Heston/SABR/stochastic-volatility material, so the dropped CFA supporting cite genuinely failed to support the card. The three remaining Hull Ch.27 cites strongly support the card: p646 introduces an explicit stochastic-volatility process, p647 gives the Hull-White mean-reverting variance result (BSM integrated over the variance distribution), and p648 is the SABR Hagan implied-vol formula. Hull §27 stands alone correctly.",
+          "target_source_id": null,
+          "target_hint": "Card is correctly anchored to Hull Ch.27 (More on Models: stochastic-volatility process, mean-reverting variance, SABR/Hagan); no re-anchor needed."
+        },
+        {
+          "card_id": "deriv-vol-surface-anatomy",
+          "verdict": "confirm",
+          "proposed_resolution": "de-claim",
+          "rationale": "Prior flag is correct: CFA L1 has no volatility-smile/skew/surface coverage, so the dropped CFA supporting cite genuinely failed to support the card. The three remaining Hull Ch.20 cites precisely match the card: p451 defines the volatility surface as a 3-D implied-vol-vs-strike-vs-tenor plot, p456 documents the post-1987 equity smile/skew, and p463 gives the equity downward-sloping skew and FX heavier-both-tails characterization. Hull §20 stands alone correctly.",
+          "target_source_id": null,
+          "target_hint": "Card is correctly anchored to Hull Ch.20 (Volatility Smiles and Volatility Surfaces); no re-anchor needed."
+        }
+      ],
+      "new_findings": [],
+      "notes": "Task A: All 5 content_mismatch_noted cards (delta-and-hedging, greeks-overview, implied-volatility, stochastic-vol-models, vol-surface-anatomy) had their CFA L1 supporting citation correctly dropped because CFA L1 derivatives readings (R45 Derivative Markets and Instruments, R46 Basics of Derivative Pricing and Valuation) genuinely do not develop these advanced topics — Greeks as partial derivatives, delta hedging, implied vol as the BSM-inverse, Heston/SABR stochastic vol, or the implied-vol surface. The +2637 offset mis-attribution would have landed the legacy CFA cites in Portfolio Management readings (R47-R49) anyway. In every case the remaining Hull citation(s) are in the correct chapter and genuinely support the card, so verdict=confirm, resolution=de-claim for all five. Two minor quote-tightening observations (greeks-overview anchors on a gamma-management page near a 1987-crash anecdote; implied-volatility anchors on a minimum-variance-delta passage rather than the inversion definition) — both quotes are acceptable, not defects.\n\nTask B: Adversarially scanned all 15 remaining cards (ok / wrong_pages_corrected). All quotes genuinely support their card concepts and are anchored to the correct volume/source. Investigated deriv-forward-and-futures-payoff most closely because its Hull p64 chunk_text_snippet window shows tax (60/40 rule) text; however the verbatim quote 'A forward contract is traded in the over-the-counter market and there is no standard contract size or standard delivery arrangements' is a genuine forward-contract definition on Hull Ch.2 p64 and correctly supports the forward/futures contrast — clean. CFA supporting cites for the wrong_pages_corrected cards (binomial p2900, bsm p2885, no-arbitrage-bounds p2892, option-payoff p2886, put-call-parity p2896/2897, swap p2883/2918, forward p2795) all correctly map to R46 Basics of Derivative Pricing (Vol.5) which DOES cover those L1-appropriate topics. Glasserman MC cards (discretization, mc-greek, monte-carlo-pricing, variance-reduction, risk-neutral) all topically aligned. No new findings."
+    },
+    {
+      "slice": "08_convertible_bonds",
+      "cards_reviewed": 50,
+      "content_mismatch_verdicts": [],
+      "new_findings": [
+        {
+          "card_id": "cb-arbitrage-strategy",
+          "citation_index": 2,
+          "severity": "M",
+          "issue": "Cited DeSpiegeleer chunk p128:0165 is a Contingent-Convertible (CoCo) passage, not convertible-arbitrage hedging material.",
+          "rationale": "Verified the full chunk text: p128 sits in the CoCo chapter (bank regulatory capital ratios, Dodd-Frank FSOC, CoCo 'death spiral', capital-ratio triggers, CoCo parity convergence). The quote 'The probability of such a conversion will increase when the share price reaches depressed levels, even if the trigger is linked to, for example, a capital ratio' is purely about CoCo mandatory-conversion triggers. The card is about plain-vanilla convertible-arbitrage P&L decomposition (delta/gamma/vega/theta/coupon/borrow) with a credit/vega hedge overlay. A CoCo capital-ratio-trigger sentence does not support a convertible-arb credit/vega-hedge claim. The card's own audit_notes concede this is 'CoCos chapter, topically adjacent not the CB-arb credit-hedge section.' Better in-corpus anchor: Calamos (the convertible-arbitrage book) chapters on vega/credit hedging, or DeSpiegeleer's CB-risk/Greeks section near p62."
+        },
+        {
+          "card_id": "cb-binomial-tree-valuation",
+          "citation_index": 2,
+          "severity": "M",
+          "issue": "Cited DeSpiegeleer chunk p128:0165 is the same CoCo death-spiral passage, not credit-aware binomial-tree material for plain convertibles.",
+          "rationale": "The pinned chunk (verified full text) is CoCo-specific: 'Death Spiral... Encountering a trigger will indeed happen at depressed share prices... The CoCo converges to parity.' The card is about a credit-aware CRR binomial tree (up/down/default branches, recovery PV, stock-price-conditioned credit spreads) for ordinary convertibles. The CoCo capital-ratio-trigger / death-spiral paragraph does not support binomial-tree construction or the stock-price-conditioned credit-spread mechanic. Audit_notes already flags it 'CoCos chapter, topically loose.' Note: the Hull cites [0] p287 (binomial-tree intro) and [1] p650:0966 (which I verified spans 650-651 and genuinely contains Hull 27.4 'Credit risk plays an important role in the valuation of convertibles') DO support the card; only the DeSpiegeleer cite is mis-anchored. Better anchor would be Hull p651:0968 (default-branch tree math) or a genuine credit-tree section."
+        },
+        {
+          "card_id": "cb-brooks-trend-range-regime-map",
+          "citation_index": 0,
+          "severity": "M",
+          "issue": "Cited An Daoquan 2023 chunk p088:0051 is a quantitative multi-factor / option-pricing strategy passage, not the 安全—弹性 tape-regime-classification content the card claims to anchor.",
+          "rationale": "Verified full chunk: p088 is in Chapter 2 (登堂) describing quant CB strategies -- factor models (隐含波动率因子, 净利润同比增速因子, 估值因子, 市值因子, 动量因子) and tree/Monte-Carlo option-pricing arbitrage. The pinned quote is the 动量因子 (momentum factor, 10-day return continuation) definition. The chunk contains NO mention of 安全/弹性, 单边市/震荡市, 建仓线, or trend-vs-range regime classification (confirmed by keyword scan). The card states 'An Daoquan's 安全—弹性 framework derives the regime label from the prospectus + credit + parity read' as the load-bearing source, but the anchored chunk is a quant-factor definition that does not support that claim. The genuine 安全—弹性双原则 section is elsewhere (the p114 '三线何来' / 安全—弹性 chunk used by other cards in this slice would be the correct re-anchor)."
+        },
+        {
+          "card_id": "cb-china-basket-diversification-strategy",
+          "citation_index": 1,
+          "severity": "W",
+          "issue": "Supporting cite An Daoquan p114:0067 ('3.6 三线何来？如何设置三线') is the 三线—复式 strategy section, a different named strategy than the card's 摊大饼 (basket-diversification) topic.",
+          "rationale": "The primary cite [0] (Gongshou p083:0077) is exact and load-bearing -- it is the verbatim 摊大饼 '三个尽可能' section. The flagged supporting cite [1] anchors the 三线 (建仓线/加仓线/重仓线) setting passage, which is the distinct 三线—复式 strategy, not 摊大饼. It is topically adjacent (per-CB safety-elasticity analysis feeds the basket screens) but does not directly support the 摊大饼 '三个尽可能 / 筛选分散、不做预测、低频轮动、小步调仓' claim. Minor because the load-bearing anchor is correct; the 三线 cite is at best loose supporting context."
+        }
+      ],
+      "notes": "Slice has NO content_mismatch_noted cards, so Task A is empty. Of 50 cards: 36 ok, 14 wrong_pages_corrected. Task B adversarial scan surfaced 4 findings. The dominant defect pattern is reuse of the DeSpiegeleer CoCo (contingent-convertible) chapter chunk p128:0165 to support plain-convertible topics (arbitrage hedging and credit-aware binomial trees) -- I read the full chunk from out/cfa/ingest_per_source/cb_despiegeleer_schoutens_vanhulle_2014_hybrid_securities/chunks_manifest.json and confirmed it is unambiguously CoCo bank-capital / death-spiral material; both cards' own audit_notes already concede it is topically loose. A third Moderate finding: cb-brooks-trend-range-regime-map anchors a quant-factor-model passage (An Daoquan p088) that lacks the 安全—弹性 regime content it claims. I verified Hull p650:0966 actually spans pages 650-651 and DOES contain the 27.4 convertibles credit-risk text (so the binomial-tree card's Hull credit cite is sound -- the truncated 500-char snippet was misleading). All 16 placeholder-summary cards have quotes that genuinely match their topical titles (Greeks, parity, recovery, vol surface, etc.) -- no mismatch. China regulatory/strategy cards (offset-0 sources) check out against their summaries. Chunk text verified from local manifests under out/cfa/ingest_per_source/."
+    },
+    {
+      "slice": "17_cross_cutting",
+      "cards_reviewed": 16,
+      "content_mismatch_verdicts": [],
+      "new_findings": [],
+      "notes": "Slice is entirely CFA L1 Code of Ethics & Standards of Professional Conduct (Readings 57-59), single authorized source cfa_2022_l1_combined, all 16 cards anchored to Vol.6 (the correct Ethics volume). TASK A: zero cards carry audit_flag==\"content_mismatch_noted\" (all 16 are \"ok\"), so no content_mismatch_verdicts to render.\n\nTASK B adversarial scan: every quote genuinely supports its card's stated concept, and every anchor is volume/source-correct. Verified the discordant cases where the displayed ~600-char snippet window does not center on the quote:\n - cc-standard-ii-b-market-manipulation: quote IS the canonical Standard II(B) market-manipulation definition (p355); snippet window happens to show an adjacent II(A) Watson example, but the quote itself is on-topic. Clean.\n - cc-standard-iv-a-loyalty-to-employer: quote IS the Standard IV(A) loyalty text (p396); snippet window straddles into a III(E) Moody social-media example across the 3665-3666 page boundary, but the quote anchors IV(A) correctly. Clean.\n - cc-standard-i-c-misrepresentation: both quotes (I.C prohibition + \"Trust is the foundation\" rationale) anchor p328 in the I.C guidance. Clean.\n - cc-standard-iii-c-d-e: single quote \"c Judge the suitability... total portfolio\" is the III.C LOS item (p379), supporting the lead sub-standard; snippet window shows an adjacent III.B Example 10. Clean.\nobserved_volume_page values are monotonic and match the Standards-of-Practice-Handbook ordering (Code 286/296, then I.A 305 -> VII.A 461), confirming no wrong-page/wrong-volume issues.\n\nNon-defect observation (below W threshold, not flagged): several multi-sub-standard cards (III.C+D+E, III.A+B, IV.B+C, V.A+B+C, VI.A+B+C) carry only ONE citation anchoring the lead sub-standard; the secondary sub-standards rely on inline prose page ranges rather than pinned chunks. This is citation-coverage thinness, not a content-mismatch or wrong-anchor defect — each pinned quote genuinely supports the claim it is attached to — so no finding is raised. Could be considered for a future coverage-completeness pass if the corpus standard requires one pinned chunk per binding sub-standard."
+    }
+  ]
+}

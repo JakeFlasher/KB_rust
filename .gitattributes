@@ -37,6 +37,5 @@ tests/parity_corpus/**/*.pdf binary
 *.sqlite binary
 *.sqlite3 binary
 
-# Lock files for deterministic Python/Cargo builds.
-uv.lock text eol=lf
+# Lock file for deterministic Cargo builds.
 Cargo.lock text eol=lf

@@ -14,12 +14,11 @@ use cacg_cli::ShowArgs;
 use crate::dispatch_lint::emit_lint_diagnostics;
 
 // Unicode non-printable codepoint ranges (`static NONPRINTABLE_RANGES`),
-// generated from CPython `str.isprintable()` by
-// `legacy_python_oracle/scripts/build_nonprintable_table.py`.
+// generated from CPython `str.isprintable()` data.
 include!("nonprintable_table.rs");
 
-/// `kb show <card_id>` dispatcher. Mirrors Python
-/// `legacy_python_oracle/src/cacg/cli.py::_cmd_show`: resolve `card_id` against
+/// `kb show <card_id>` dispatcher. Mirrors the historical `_cmd_show`
+/// behavior: resolve `card_id` against
 /// `cards_manifest.json`, load the card (honoring the optional
 /// `--path` override), cross-check a `--path` override's on-disk
 /// `id`/`card_hash` against the manifest, run the authorization gate

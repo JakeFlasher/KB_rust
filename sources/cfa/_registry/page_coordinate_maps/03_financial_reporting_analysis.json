@@ -1,0 +1,107 @@
+{
+  "generated_by": "emit_03_fra_slice.py",
+  "reading_id": "03_financial_reporting_analysis",
+  "schema_version": "cfa.page_coordinate_map.v1",
+  "sources": [
+    {
+      "legacy_coordinate": "printed_book_page",
+      "pdf_coordinate_rule": "pdf_page = legacy_page + 20",
+      "source_id": "fra_schilit_perler_2018_shenanigans_4ed",
+      "note": "Schilit/Perler Financial Shenanigans 4e (McGraw-Hill 2018). Offset +20 verified via running header '56 Financial Shenanigans' on PDF 76. Body offset stable.",
+      "verified_evidence": [
+        {
+          "evidence": "Running header '56 Financial Shenanigans' at PDF 76",
+          "legacy_page": 56,
+          "pdf_page": 76
+        }
+      ],
+      "page_count_pdf": 344
+    },
+    {
+      "legacy_coordinate": "printed_book_page",
+      "pdf_coordinate_rule": "pdf_page = legacy_page + 27",
+      "source_id": "fra_penman_fsa_security_valuation_5ed",
+      "note": "Penman Financial Statement Analysis and Security Valuation 5e (McGraw-Hill 2013). Offset +27 verified via embedded chapter-file watermarks of the form 'pen25311_chXX_NNN-NNN.qxd ... Page MMM' (e.g. PDF p.617 marker shows 'pen25311_ch18_590-639.qxd Page 590' confirming legacy 590 = PDF 617). 799 of 820 chunked pages match +27 exactly; remaining 21 are off-by-one at chapter boundaries. Verified across Ch.2/4/5/8/9/10/11/12/13/18 in batches A+B.",
+      "verified_evidence": [
+        {
+          "evidence": "pen25311_ch5 watermark 'Page 140' at PDF 167",
+          "legacy_page": 140,
+          "pdf_page": 167
+        },
+        {
+          "evidence": "pen25311_ch18 watermark 'Page 590' at PDF 617",
+          "legacy_page": 590,
+          "pdf_page": 617
+        },
+        {
+          "evidence": "799 of 820 chunked pages match +27 exactly",
+          "legacy_page": 1,
+          "pdf_page": 28
+        }
+      ],
+      "page_count_pdf": 769
+    },
+    {
+      "legacy_coordinate": "printed_book_page",
+      "pdf_coordinate_rule": "pdf_page = legacy_page",
+      "source_id": "fra_kieso_weygandt_warfield_2020_ifrs_4ed",
+      "note": "Kieso/Weygandt/Warfield Intermediate Accounting IFRS Edition 4e (Wiley 2020). Offset 0 (NOT +40 as initially estimated). The digital PDF uses absolute page numbering matching the printed book's pages directly. Verified via Ch.16 Convertible Debt content at PDF p.1253-1255 = legacy book pp.1253-1255 (exact match).",
+      "verified_evidence": [
+        {
+          "evidence": "Ch.16 Convertible Debt content at PDF 1253-1255 = legacy 1253-1255",
+          "legacy_page": 1253,
+          "pdf_page": 1253
+        }
+      ],
+      "page_count_pdf": 2581
+    },
+    {
+      "legacy_coordinate": "printed_book_page",
+      "pdf_coordinate_rule": "pdf_page = legacy_page + 30",
+      "source_id": "fra_robinson_henry_pirie_broihahn_2020_ifsa_4ed",
+      "note": "Robinson/Henry/Pirie/Broihahn International Financial Statement Analysis 4e (Wiley/CFA Institute 2020). Offset +30 estimate (CFA Institute textbooks have ~30-page front matter). TOC at PDF 7-10 shows 'Introduction 37' for Ch.1 — auditor should verify topical match.",
+      "verified_evidence": [],
+      "page_count_pdf": 1003
+    },
+    {
+      "legacy_coordinate": "printed_book_page",
+      "pdf_coordinate_rule": "pdf_page = legacy_page + 30",
+      "source_id": "fra_wahlen_baginski_bradshaw_2023_fsa_valuation_10ed",
+      "note": "Wahlen/Baginski/Bradshaw Financial Reporting, Financial Statement Analysis, and Valuation 10e (Cengage 2023). Offset +30 estimate. Auditor verify topically.",
+      "verified_evidence": [],
+      "page_count_pdf": 948
+    },
+    {
+      "legacy_coordinate": "printed_book_page",
+      "pdf_coordinate_rule": "pdf_page = legacy_page + 30",
+      "source_id": "fra_white_sondhi_fried_2003_analysis_financial_statements_3ed",
+      "note": "White/Sondhi/Fried Analysis and Use of Financial Statements 3e (Wiley 2003). Offset +30 estimate. Auditor verify topically.",
+      "verified_evidence": [],
+      "page_count_pdf": 784
+    },
+    {
+      "legacy_coordinate": "physical_pdf_page",
+      "pdf_coordinate_rule": "pdf_page = legacy_page",
+      "source_id": "fra_hkicpa_hkfrs_9_2024",
+      "note": "HKICPA Hong Kong Financial Reporting Standard 9 (Financial Instruments, 2024 version). Standards documents are paragraph-numbered; legacy 'pp.X-Y' references correspond to PDF pages directly (no front matter to offset). Offset 0.",
+      "verified_evidence": [],
+      "page_count_pdf": 555
+    },
+    {
+      "legacy_coordinate": "physical_pdf_page",
+      "pdf_coordinate_rule": "pdf_page = legacy_page",
+      "source_id": "fra_hkicpa_hkas_32_2022",
+      "note": "HKICPA Hong Kong Accounting Standard 32 (Financial Instruments: Presentation, 2022 version). Offset 0.",
+      "verified_evidence": [],
+      "page_count_pdf": 91
+    },
+    {
+      "legacy_coordinate": "physical_pdf_page",
+      "pdf_coordinate_rule": "pdf_page = legacy_page",
+      "source_id": "fra_hkicpa_hkfrs_7_2018",
+      "note": "HKICPA Hong Kong Financial Reporting Standard 7 (Financial Instruments: Disclosures, 2018 version). Offset 0.",
+      "verified_evidence": [],
+      "page_count_pdf": 136
+    }
+  ]
+}

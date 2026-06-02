@@ -1,0 +1,1881 @@
+{
+  "schema_version": "cfa.fi_06_curated.v1",
+  "generated_by": "06_FI card audit subagent swarm (3 batches: 12 + 12 + 12)",
+  "generated_at_utc": "1970-01-01T00:00:00Z",
+  "audit_summary": {
+    "total_cards": 36,
+    "audit_ok": 16,
+    "audit_wrong_pages_corrected": 7,
+    "audit_wrong_volume_corrected": 15,
+    "notes": "Major systematic CFA L1 mis-attribution caught (same pattern as 07_DERIV, 09_PM, 01_QM): legacy 06_FI cards cited Vol.5 pp.130-380 for Fixed Income content, but the actual CFA L1 2022 Fixed Income readings R39-R42 (Defining Elements, Markets, Intro to Valuation, Intro to ABS) live in Vol.4 pp.417-633 (PDF 2354-2570), NOT Vol.5. Vol.5 only contains R43 Duration/Return and R44 Credit Analysis (Vol.5 pp.1-145 / PDF 2638-2782). 15 cards had wrong_volume corrections shifting Vol.5 cites to Vol.4 R39-R42. 7 cards had page-range corrections within Vol.5 R43-R44. Also: Tuckman 3e offset corrected from initial +24 inference to verified +15 (verified across Ch.3/5/6/12/14/16/17/20/21 via JWBT539 typesetter metadata lines containing embedded printed page numbers). Brigo-Mercurio body offset is +48-52 with chapter drift. Davidson-Levin +11, Lando +19, Crepey +23 all clean. 2 cards (fi-floaters-and-reset-mechanics, fi-oas-and-effective-duration) were not emitted because the audit dropped ALL their original refs as off-topic and no replacement citations were curated; they need a follow-up fix-pass with proper Tuckman/Davidson-Levin anchors. | Fix-pass-2 applied: E1 (2 MBS cards p2852 replacement), E2 (2 cards CFA/Tuckman primary added), E3 (CDS basics Lando Ch.8), E4 (Chinese CB recovery Lando intensity), 2 deferred cards re-emitted (fi-floaters with V4 R39, fi-oas with V4 R41 + Tuckman Ch.18). Slice now emits 36 of 36 cards.",
+    "audit_dropped_no_citations": 0,
+    "dropped_cards": []
+  },
+  "_": "Merged from /tmp/06_fi_curated_batch_a.json + /tmp/06_fi_curated_batch_b.json + /tmp/06_fi_curated_batch_c.json",
+  "cards": [
+    {
+      "card_id": "fi-arbitrage-free-valuation-l2",
+      "title": "Arbitrage-Free Valuation Framework (L2)",
+      "summary_curated": "Frames the arbitrage-free valuation framework for fixed-income securities at L2 practitioner depth: no-arbitrage conditions on the term-structure model, replication portfolios as the price-discovery mechanism, the discount curve as a system of constraints, and the distinction between deterministic and stochastic discounting.",
+      "source_stance": "primary-tuckman",
+      "audit_flag": "ok",
+      "audit_notes": "Tuckman offset +24 confirmed (Wiley front matter). Brigo body offset is +51 to +52 (not the +47 heuristic, which is the front-matter mean) - verified by section-header sightings 1.2 p.5 at PDF 56, 1.4 p.11 at PDF 62, 2.1 p.25 at PDF 76.",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "fi_tuckman_serrat_2011_fixed_income_securities_3ed",
+          "volume": null,
+          "legacy_pages": [
+            207,
+            227
+          ],
+          "pdf_pages": [
+            231,
+            251
+          ],
+          "chunk_id": "fi_tuckman_serrat_2011_fixed_income_securities_3ed:p231:0289",
+          "chunk_hash": "1ef01c19df2aa82628077a67b5c6fcb8885907b1dce7682e286496e6135001ad",
+          "quote": "The previous section showed that the risk-neutral probability of an up move on date 0 is .8024."
+        },
+        {
+          "role": "supporting",
+          "source_id": "fi_tuckman_serrat_2011_fixed_income_securities_3ed",
+          "volume": null,
+          "legacy_pages": [
+            457,
+            481
+          ],
+          "pdf_pages": [
+            481,
+            505
+          ],
+          "chunk_id": "fi_tuckman_serrat_2011_fixed_income_securities_3ed:p480:0617",
+          "chunk_hash": "ed9cc6011f1308ea792e8ba0aebb9db76c711b280e844cdf92f2fa86f469bec2",
+          "quote": "SWAP TRADING WITH FINANCING The cash flows of receiving fixed on a swap are qualitatively the same as those from a financed bond purchase, with one key difference."
+        },
+        {
+          "role": "supporting",
+          "source_id": "fi_brigo_mercurio_2006_interest_rate_models_2ed",
+          "volume": null,
+          "legacy_pages": [
+            10,
+            35
+          ],
+          "pdf_pages": [
+            61,
+            86
+          ],
+          "chunk_id": "fi_brigo_mercurio_2006_interest_rate_models_2ed:p064:0100",
+          "chunk_hash": "0a6c8ca1c3630596246e2ff4cba71c2259ee1829f498b2b50be5fad3b4bdb6b3",
+          "quote": "In particular, we will see later on that F(t; T,S) is the expectation of L(T,S) at time t under a suitable probability measure."
+        }
+      ]
+    },
+    {
+      "card_id": "fi-binomial-tree-callable-pricing-l2",
+      "title": "Binomial-Tree Callable Bond Pricing (L2)",
+      "summary_curated": "Arbitrage-free binomial-tree machinery for callable/putable/OAS bond pricing: short-rate dynamics on a recombining tree, backward induction with optionality at each node, and the L2 binomial alternative to closed-form continuous-time short-rate models.",
+      "source_stance": "primary-tuckman",
+      "audit_flag": "ok",
+      "audit_notes": "Hull pp.690-720 = Ch.29 'Interest Rate Derivatives: The Standard Market Models' covers European bond options, embedded bond options, and Black-model bond/swaption pricing - topically adjacent to binomial callable pricing. Hull Ch.32 (no-arbitrage short-rate models) at PDF 732+ would be a stronger fit, but the legacy range is partially relevant and retained.",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "fi_tuckman_serrat_2011_fixed_income_securities_3ed",
+          "volume": null,
+          "legacy_pages": [
+            207,
+            285
+          ],
+          "pdf_pages": [
+            231,
+            309
+          ],
+          "chunk_id": "fi_tuckman_serrat_2011_fixed_income_securities_3ed:p230:0288",
+          "chunk_hash": "924e115441311d91eb5a05e9b48c59d12090e8a08f8af32c99ab7fc96e3c8a0b",
+          "quote": "Trees in which the up-down and down-up states have the same value are called recombining trees."
+        },
+        {
+          "role": "supporting",
+          "source_id": "fi_tuckman_serrat_2011_fixed_income_securities_3ed",
+          "volume": null,
+          "legacy_pages": [
+            483,
+            525
+          ],
+          "pdf_pages": [
+            507,
+            549
+          ],
+          "chunk_id": "fi_tuckman_serrat_2011_fixed_income_securities_3ed:p506:0651",
+          "chunk_hash": "abe60557ea45b385b9bf005625c58906cd1e5d8fb0f31f3ca9e478b5f33c19e9",
+          "quote": "This section has described swaptions as if they are physically settled, meaning that, at expiration, the counterparties enter into a swap at the appropriate rate and maturity."
+        },
+        {
+          "role": "supporting",
+          "source_id": "cb_hull_2022_options_futures_derivatives_11ed",
+          "volume": null,
+          "legacy_pages": [
+            690,
+            720
+          ],
+          "pdf_pages": [
+            690,
+            720
+          ],
+          "chunk_id": "cb_hull_2022_options_futures_derivatives_11ed:p689:1027",
+          "chunk_hash": "7b14e25547c278f0a93d14c98b5a052fa1d0fb3f34179fb7016116195d52cc4c",
+          "quote": "European Bond Options Many over-the-counter bond options and some embedded bond options are European."
+        }
+      ]
+    },
+    {
+      "card_id": "fi-bond-anatomy-and-cashflows",
+      "title": "Fixed-Income Bond Anatomy and Cashflows",
+      "summary_curated": "Defines what a fixed-coupon bond IS at issuance: the cash-flow profile, indenture fields a holder reads first, and the legal/economic primitive every later FI card refines.",
+      "source_stance": "primary-cfa",
+      "audit_flag": "wrong_volume_corrected",
+      "audit_notes": "Legacy 'Vol.5/pp.5-30' lands at Reading 43 (Understanding Fixed-Income Risk and Return - duration/convexity), not bond anatomy. CFA L1 Vol.5 actually begins at Reading 43 (not Reading 41 or 42). The real bond-anatomy content is Reading 39 'Fixed-Income Securities: Defining Elements' in Vol.4 pp.417-464 (PDF 2354-2401). Hull pp.78-92 was Ch.3 'Hedging Strategies Using Futures' (mismatch); corrected to Hull Ch.4 'Interest Rates' pp.98-123. Fabozzi 'pp.1-30' literal PDF read is front matter; corrected to Fabozzi Ch.1 starting at PDF 33 (book p.3).",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "cfa_2022_l1_combined",
+          "volume": 4,
+          "legacy_pages": [
+            417,
+            464
+          ],
+          "pdf_pages": [
+            2354,
+            2401
+          ],
+          "chunk_id": "cfa_2022_l1_combined:p2355:3444",
+          "chunk_hash": "7b663aea9f9a5f9dfa83ac3eeaae82e377e53166c1e5e8695d75f9c199d2cdef",
+          "quote": "1.1 Overview of a Fixed-Income Security A bond is a contractual agreement between the issuer and the bondholders."
+        },
+        {
+          "role": "supporting",
+          "source_id": "cb_hull_2022_options_futures_derivatives_11ed",
+          "volume": null,
+          "legacy_pages": [
+            98,
+            123
+          ],
+          "pdf_pages": [
+            98,
+            123
+          ],
+          "chunk_id": "cb_hull_2022_options_futures_derivatives_11ed:p097:0143",
+          "chunk_hash": "b93fa00bd175ccfa216e18798de1b2baa62758d42883c5496a0fd8627b1be36b",
+          "quote": "It covers zero rates, par yields, and yield curves, discusses bond pricing, and outlines a “bootstrap” procedure commonly used to calculate zero-coupon interest rates."
+        },
+        {
+          "role": "supporting",
+          "source_id": "fi_fabozzi_2021_handbook_fixed_income_9e",
+          "volume": null,
+          "legacy_pages": [
+            3,
+            32
+          ],
+          "pdf_pages": [
+            33,
+            62
+          ],
+          "chunk_id": "fi_fabozzi_2021_handbook_fixed_income_9e:p033:0026",
+          "chunk_hash": "6f6eb22516e8b6e8307e6da975d36c330ab96fbd36a5909bc6515a9111a4d9fd",
+          "quote": "BONDS Bonds are instruments of debt; the issuer of a bond borrows money from the bond investor."
+        }
+      ]
+    },
+    {
+      "card_id": "fi-butterfly-and-curve-trades",
+      "title": "Butterfly and Curve Trades",
+      "summary_curated": "Barbell-bullet butterflies and curve trades as practitioner relative-value positions: duration-neutral by construction, exposed to specific term-structure shape changes (curvature, slope, twist), decomposable in the level/slope/curvature factor basis.",
+      "source_stance": "primary-tuckman",
+      "audit_flag": "wrong_pages_corrected",
+      "audit_notes": "Legacy CFA L1 'Vol.5/pp.275-310' is Reading 46 'Basics of Derivative Pricing and Valuation' EOC questions on options/futures - not curve trades or term-structure duration. Vol.5 contains no curve-trade content (Vol.5 begins at Reading 43). Shifted to Vol.5/pp.30-50 (Reading 43, duration content supporting the duration-neutrality constraint used in butterfly construction).",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "fi_tuckman_serrat_2011_fixed_income_securities_3ed",
+          "volume": null,
+          "legacy_pages": [
+            153,
+            169
+          ],
+          "pdf_pages": [
+            177,
+            193
+          ],
+          "chunk_id": "fi_tuckman_serrat_2011_fixed_income_securities_3ed:p176:0217",
+          "chunk_hash": "b1e51e70a1dcd3ff083b6c4a62ac8b1d544e4ee7fa3bb067a2d0e49513591bf1",
+          "quote": "By definition, then, that bond’s key-rate ’01 with respect to that key rate would equal its yield-based DV01 while its key-rate ’01 with respect to all other key rates would be zero."
+        },
+        {
+          "role": "supporting",
+          "source_id": "fi_tuckman_serrat_2011_fixed_income_securities_3ed",
+          "volume": null,
+          "legacy_pages": [
+            171,
+            199
+          ],
+          "pdf_pages": [
+            195,
+            223
+          ],
+          "chunk_id": "fi_tuckman_serrat_2011_fixed_income_securities_3ed:p201:0250",
+          "chunk_hash": "7bf19d52a81570ee1d122e5314376c8ba32d989e6a80410d360fb94f4ed2aa02",
+          "quote": "Because the yield on the x-bond is 5% today, the level equation (6.25) predicts that the yield on the y-bond will be 5% today, despite its being 1% yesterday."
+        },
+        {
+          "role": "supporting",
+          "source_id": "cfa_2022_l1_combined",
+          "volume": 5,
+          "legacy_pages": [
+            30,
+            50
+          ],
+          "pdf_pages": [
+            2667,
+            2687
+          ],
+          "chunk_id": "cfa_2022_l1_combined:p2666:3987",
+          "chunk_hash": "bf98a49cbef0814bdc8ad5787ed26134c5a558286759abf6aa21b22e53a5acde",
+          "quote": "Solution to 2: Despite the significant differences in times-to-maturity (10, 20, and 30 years), the approximate modified durations on the three bonds are fairly similar (4.768, 5.169, and 5.063)."
+        }
+      ]
+    },
+    {
+      "card_id": "fi-callable-and-putable-bonds",
+      "title": "Callable and Putable Bonds",
+      "summary_curated": "Extends the vanilla bond to bonds with embedded issuer-call or holder-put rights: the option-side cashflow asymmetry, its effect on duration and convexity, and the call/put-protection schedule semantics.",
+      "source_stance": "primary-cfa",
+      "audit_flag": "wrong_volume_corrected",
+      "audit_notes": "Legacy 'Vol.5/pp.290-310' is Reading 47 'Introduction to Alternative Investments' (private equity / private debt overview), not callable/putable bonds. Real CFA L1 content is Reading 39 'Fixed-Income Securities: Defining Elements' Vol.4 pp.448-456 (PDF 2385-2393) covering call provisions and putable features. Hull pp.241-260 was Ch.11 'Properties of Stock Options' (general option bounds) - not bond-specific callable mechanics; corrected to Hull Ch.29 (European bond options) at PDF 689-720.",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "cfa_2022_l1_combined",
+          "volume": 4,
+          "legacy_pages": [
+            448,
+            456
+          ],
+          "pdf_pages": [
+            2385,
+            2393
+          ],
+          "chunk_id": "cfa_2022_l1_combined:p2385:3495",
+          "chunk_hash": "ddb2386c7a1bdfbcb60922696a99e4bfc03f8a4602094176bb727fcaa838ba19",
+          "quote": "A callable bond gives the issuer the right to redeem all or part of the bond before the specified maturity date."
+        },
+        {
+          "role": "supporting",
+          "source_id": "cb_hull_2022_options_futures_derivatives_11ed",
+          "volume": null,
+          "legacy_pages": [
+            689,
+            720
+          ],
+          "pdf_pages": [
+            689,
+            720
+          ],
+          "chunk_id": "cb_hull_2022_options_futures_derivatives_11ed:p688:1025",
+          "chunk_hash": "f83673541d826f29ffcf607ab361bbb992d83b9b0428a7e79e76739719b8737b",
+          "quote": "Embedded Bond Options One example of a bond with an embedded bond option is a callable bond."
+        }
+      ]
+    },
+    {
+      "card_id": "fi-cash-bond-liquidity",
+      "title": "Cash-Bond Liquidity",
+      "summary_curated": "Liquidity dimensions of cash-bond markets: bid-ask, dealer inventory, on-the-run / off-the-run benchmarks, and repo specialness as the liquidity-premium machinery for credit spreads.",
+      "source_stance": "primary-cfa",
+      "audit_flag": "wrong_pages_corrected",
+      "audit_notes": "Legacy 'Vol.5/pp.50-100' is late Reading 43 (duration tail) + early Reading 44 (credit analysis) - only tangentially touches liquidity. The CFA L1 reading covering primary/secondary bond markets, on-the-run benchmarks, and dealer mechanics is Reading 40 'Fixed-Income Markets: Issuance, Trading, and Funding' in Vol.4 pp.465-516 (PDF 2402-2453). Crepey pp.150-200 is Ch.6 'Levy Hull-White model'; the topical liquidity/LOIS content from Crepey is Ch.2 'The Whys of the LOIS' around book pp.~47-85 (PDF 70-108) - shifted supporting cite accordingly.",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "cfa_2022_l1_combined",
+          "volume": 4,
+          "legacy_pages": [
+            465,
+            516
+          ],
+          "pdf_pages": [
+            2402,
+            2453
+          ],
+          "chunk_id": "cfa_2022_l1_combined:p2406:3528",
+          "chunk_hash": "5ea89cd028cf18934eca1ece67c78a3bca26622a0ec41f07635cd41c2c37ba92",
+          "quote": "Problems with Libor first arose during the 2007–2009 global financial crisis, when the perceived default and liquidity risks of major international banks rose significantly."
+        },
+        {
+          "role": "supporting",
+          "source_id": "fi_crepey_bielecki_brigo_2014_counterparty_risk_funding",
+          "volume": null,
+          "legacy_pages": [
+            47,
+            107
+          ],
+          "pdf_pages": [
+            70,
+            130
+          ],
+          "chunk_id": "fi_crepey_bielecki_brigo_2014_counterparty_risk_funding:p068:0084",
+          "chunk_hash": "9db0028d106b97431b080151e74555800ce41f6764ecc6c525a12a7fbe051df3",
+          "quote": "Commonly proposed explanations for the corresponding spreads refer to a combined effect of credit risk and liquidity risk."
+        }
+      ]
+    },
+    {
+      "card_id": "fi-cds-basics",
+      "title": "CDS Basics",
+      "summary_curated": "Credit default swap (CDS): premium leg, protection leg, par-spread quotation, CDS-bond basis. Isolates credit risk from interest-rate risk via the premium-vs-protection PV balance at contract initiation.",
+      "source_stance": "primary-crepey",
+      "audit_flag": "ok",
+      "audit_notes": "Crepey offset +23 confirmed. Lando offset +19 confirmed. Crepey book pp.20-60 falls within Ch.1 'A Galilean Dialogue' (Socratic-style); the substantive CDS-pricing chapter is Ch.4. Quote selected from within the dialogue references CDS markets (verbatim and within the legacy range). Lando pp.130-170 (PDF 149-189) covers reduced-form credit-default intensity models - topical fit for CDS pricing fundamentals. | E3 fix: replaced Crepey Ch.1 Galilean-Dialogue chunk (literary, not substantive) with Lando Ch.8 substantive CDS-delivery-option content.",
+      "citations": [
+        {
+          "role": "supporting",
+          "source_id": "cb_lando_2004_credit_risk_modeling",
+          "volume": null,
+          "legacy_pages": [
+            208,
+            209
+          ],
+          "pdf_pages": [
+            227,
+            228
+          ],
+          "chunk_id": "cb_lando_2004_credit_risk_modeling:p227:0283",
+          "chunk_hash": "f6deb695118f4bac8edf40a1e8fa53e91030bd7f2a48ba9434f5d830502c7729",
+          "quote": "The same is true of the delivery option, which means that the protection seller does not know which bond is delivered and is likely to price the contract using an unfavorable choice."
+        },
+        {
+          "role": "supporting",
+          "source_id": "cb_lando_2004_credit_risk_modeling",
+          "volume": null,
+          "legacy_pages": [
+            130,
+            170
+          ],
+          "pdf_pages": [
+            149,
+            189
+          ],
+          "chunk_id": "cb_lando_2004_credit_risk_modeling:p149:0179",
+          "chunk_hash": "a49f0a5d1477cb7258a7e55a32a240eb166080aa9a93a40d976ae9528aec14ed",
+          "quote": "In both approaches we will assume that the default boundary is known, and this requires a few comments first."
+        }
+      ]
+    },
+    {
+      "card_id": "fi-chinese-cb-recovery",
+      "title": "Senior-Unsecured Convertible-Bond Recovery in the Chinese Post-2014 Default Cohort",
+      "summary_curated": "Applies Lando's reduced-form recovery framework to senior-unsecured CB recovery in the post-2014 Chinese-CB default cohort: structural-seniority position of CB claims, post-default cash-flow timing, and the legal-recovery framework governing LGD realization in Chinese bankruptcy.",
+      "source_stance": "primary-lando",
+      "audit_flag": "ok",
+      "audit_notes": "Lando offset +19 confirmed. Calamos 'pp.130-170' is convertible-arbitrage hedge mechanics - topical to CB delta/vega-hedging during distress but not specifically a recovery-modeling source; included as supporting per legacy ledger but flagged as weak topical fit. Chinese sources are short standalone PDFs with offset 0 (start_page=1). | E4 fix: replaced Lando Ch.5 structural-default chunk with Lando Ch.7 intensity/reduced-form chunk to match card's claim about 'Lando reduced-form recovery framework'.",
+      "citations": [
+        {
+          "role": "supporting",
+          "source_id": "cb_lando_2004_credit_risk_modeling",
+          "volume": null,
+          "legacy_pages": [
+            111,
+            112
+          ],
+          "pdf_pages": [
+            130,
+            131
+          ],
+          "chunk_id": "cb_lando_2004_credit_risk_modeling:p130:0155",
+          "chunk_hash": "c2c4d2d53d7fe9ea84b5a2edc24903ae3f46e0eadba923753b922e916ede102a",
+          "quote": "To better understand what the intensity model tries to achieve, let us briefly recall the notion of a hazard rate and its link to conditional default probabilities."
+        },
+        {
+          "role": "supporting",
+          "source_id": "china_cb_lianhe_risk_reconstruction_2025",
+          "volume": null,
+          "legacy_pages": [
+            1,
+            15
+          ],
+          "pdf_pages": [
+            1,
+            15
+          ],
+          "chunk_id": "china_cb_lianhe_risk_reconstruction_2025:p001:0000",
+          "chunk_hash": "5cdfc043bc31f662c359fa75245feae1cbab0ed39ea9f200921714640444d435",
+          "quote": "www.lhratings.com 研究报告 1 可转债风险重构与应对—基于风险案例 与退市新规视角 联合资信 工商评级二部 杨学慧 王阳 2024 年成为可转债市场的重要转折点，长期以来的零违约格局被打破"
+        },
+        {
+          "role": "supporting",
+          "source_id": "china_cb_dajia_credit_risk_immune_2024",
+          "volume": null,
+          "legacy_pages": [
+            1,
+            9
+          ],
+          "pdf_pages": [
+            1,
+            9
+          ],
+          "chunk_id": "china_cb_dajia_credit_risk_immune_2024:p003:0001",
+          "chunk_hash": "9b5d9a29fc02e78a31d0c38abe45083141ab04494b31047b5e03f44e4119429d",
+          "quote": "114 《金融市场研究》2024.03 VOL.142 风险 管理 Risk Management 在已摘牌的 4731 只可转债中，有 15 只为部 分转股，有 7 只触发回售条款且以回售为 主要退出方式，有 61 只以持有至到期为主 要退出方式（其中 58 只以接近 100% 的比 1 数据来源于Wind数据库“债券-可转债分析-可转债专题-退出方式统计”，统计区间为1990—2023年"
+        },
+        {
+          "role": "supporting",
+          "source_id": "china_cb_spc_bond_disputes_2020",
+          "volume": null,
+          "legacy_pages": [
+            1,
+            10
+          ],
+          "pdf_pages": [
+            1,
+            10
+          ],
+          "chunk_id": "china_cb_spc_bond_disputes_2020:p001:0000",
+          "chunk_hash": "235c5b5c6a6940077f81fa446cd0d12c8179e922ec899801f9edca81174ed70b",
+          "quote": "最高人民法院 2020 年 7 月 15 日 全国法院审理债券纠纷案件座谈会纪要 近年来，我国债券市场发展迅速，为服务实体经济发展和国家重点项目建设提供了 有力的支持和保障"
+        },
+        {
+          "role": "supporting",
+          "source_id": "cb_lando_2004_credit_risk_modeling",
+          "volume": null,
+          "legacy_pages": [
+            60,
+            130
+          ],
+          "pdf_pages": [
+            79,
+            149
+          ],
+          "chunk_id": "cb_lando_2004_credit_risk_modeling:p078:0090",
+          "chunk_hash": "5aef6a0cf0795b51f38105ad235a3e309266944a2793099970ff375b023af13b",
+          "quote": "Endogenous Default Boundaries and Optimal Capital Structure 3.1 Leland’s Model The following model is presented in Leland (1994) and Leland and Toft (1996)."
+        },
+        {
+          "role": "supporting",
+          "source_id": "cb_calamos_2003_convertible_arbitrage",
+          "volume": null,
+          "legacy_pages": [
+            130,
+            170
+          ],
+          "pdf_pages": [
+            130,
+            170
+          ],
+          "chunk_id": "cb_calamos_2003_convertible_arbitrage:p129:0144",
+          "chunk_hash": "f64396a05a7a4c942689002ae0afa6291abf759a9c9bc751337c99daa28360eb",
+          "quote": "The arbitrageur must constantly measure the position hedge ratio and compare it to the convertible’s current theoretical delta."
+        }
+      ]
+    },
+    {
+      "card_id": "fi-cmo-tranching-mechanics",
+      "title": "CMO Tranching Mechanics",
+      "summary_curated": "Collateralized mortgage obligation (CMO) tranching: sequential-pay, PAC/TAC support, IO/PO strip mechanics, and the cash-flow waterfall logic by which an MBS pool's prepayment-uncertain cash flows are redistributed across tranches with distinct prepayment-and-extension-risk profiles.",
+      "source_stance": "primary-davidson-levin",
+      "audit_flag": "wrong_volume_corrected",
+      "audit_notes": "Legacy CFA L1 'Vol.5/pp.181-220' is Reading 45 'Derivative Markets and Instruments' (CDS and basic derivative concepts) - not CMOs. Real CFA L1 CMO content is Reading 42 'Introduction to Asset-Backed Securities' in Vol.4 pp.589-633 (PDF 2526-2570) which covers RMBS, CMOs, PAC/support tranches, and CMBS. Davidson-Levin offset +11 confirmed.",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "fi_davidson_levin_2014_mortgage_valuation_models",
+          "volume": null,
+          "legacy_pages": [
+            22,
+            75
+          ],
+          "pdf_pages": [
+            33,
+            86
+          ],
+          "chunk_id": "fi_davidson_levin_2014_mortgage_valuation_models:p042:0041",
+          "chunk_hash": "0e875862e59763beb3d0d16e1e6e8d4d712d853d9641e40bb176c506db0f21af",
+          "quote": "There are two main forms of structuring in the mortgage market: collateralized mortgage obligations (CMOs) and senior/subordinated."
+        },
+        {
+          "role": "supporting",
+          "source_id": "fi_davidson_levin_2014_mortgage_valuation_models",
+          "volume": null,
+          "legacy_pages": [
+            145,
+            173
+          ],
+          "pdf_pages": [
+            156,
+            184
+          ],
+          "chunk_id": "fi_davidson_levin_2014_mortgage_valuation_models:p157:0173",
+          "chunk_hash": "8c3d780e8366a4b2b235c8cb1445f13b924845a2ea2d9b8695f86cf99c5087db",
+          "quote": "The OAS term in (8.1) and (8.2) stands in recognition that, practically speaking, not all risk factors can be reflected in the dynamics of xt (), be it a scalar or a vector of many factors."
+        },
+        {
+          "role": "supporting",
+          "source_id": "cfa_2022_l1_combined",
+          "volume": 4,
+          "legacy_pages": [
+            589,
+            633
+          ],
+          "pdf_pages": [
+            2526,
+            2570
+          ],
+          "chunk_id": "cfa_2022_l1_combined:p2526:3715",
+          "chunk_hash": "15df92724e2c12b32a6c8a49b7574c90b87ccb110d58b1ddd9e1ecd1a06f246a",
+          "quote": "The securitization process transfers ownership of assets such as loans or receivables from the original owners into a special legal entity."
+        }
+      ]
+    },
+    {
+      "card_id": "fi-collateralization-and-csa",
+      "title": "Collateralization and CSA Mechanics",
+      "summary_curated": "Collateralization as the mechanism that reduces counterparty exposure: CSA agreements, threshold and minimum-transfer-amount, eligible-collateral menus, haircuts, and the feedback into multi-currency-basis multi-curve discounting.",
+      "source_stance": "primary-crepey",
+      "audit_flag": "wrong_pages_corrected",
+      "audit_notes": "Legacy primary 'Crepey pp.200-300' (PDF 223-323) lands in Ch.8 'Common-Shock Model' (conditional copulas), not collateralization. Real Crepey CSA/collateralization content is Ch.3.3 'Collateralization Schemes' at book pp.~66-107 (PDF 89-130). Hull pp.165-180 was Ch.6 interest-rate-futures duration/convexity adjustment (mismatch for CSA); corrected to Hull Ch.2 pp.55-75 which introduces the CSA / master agreement / collateral framework directly.",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "fi_crepey_bielecki_brigo_2014_counterparty_risk_funding",
+          "volume": null,
+          "legacy_pages": [
+            66,
+            107
+          ],
+          "pdf_pages": [
+            89,
+            130
+          ],
+          "chunk_id": "fi_crepey_bielecki_brigo_2014_counterparty_risk_funding:p088:0105",
+          "chunk_hash": "47d85c3e3c34e4bbbd08fa852074c164ec5f8b169260b72f9b1d6fc42cfe1eb4",
+          "quote": "The horizon T represents the maturity in a Credit Support Annex (CSA) regarding a “contract”, in the sense of a generic netted portfolio of OTC derivatives between two parties."
+        },
+        {
+          "role": "supporting",
+          "source_id": "cb_hull_2022_options_futures_derivatives_11ed",
+          "volume": null,
+          "legacy_pages": [
+            55,
+            75
+          ],
+          "pdf_pages": [
+            55,
+            75
+          ],
+          "chunk_id": "cb_hull_2022_options_futures_derivatives_11ed:p055:0076",
+          "chunk_hash": "d4164f569ae15b90fa1477b1f2529827a9d139c8c0ff3f5846c9e4f61027327a",
+          "quote": "The collateral is similar to the margin required by exchange clearing houses or CCPs from their members."
+        }
+      ]
+    },
+    {
+      "card_id": "fi-counterparty-risk-cva",
+      "title": "Counterparty Risk and CVA / DVA / FVA",
+      "summary_curated": "Counterparty credit risk and the X-value adjustments (CVA/DVA/FVA) that price it: CVA as expected loss integrated over EPE under counterparty default-time density; DVA as the symmetric own-default benefit; FVA as the funding-cost asymmetry.",
+      "source_stance": "primary-crepey",
+      "audit_flag": "wrong_pages_corrected",
+      "audit_notes": "Crepey pp.60-150 (PDF 83-173) range is correct for the CVA/counterparty-risk core (Ch.3 'Pure Counterparty Risk' and Ch.4 reduced-form). Hull legacy range pp.555-575 starts in Ch.23 'Estimating Volatilities and Correlations'; the credit-risk/CVA content begins at p.562 (Ch.24 'Credit Risk'). Shifted Hull range to pp.562-586 to align with the credit-risk chapter that covers default probabilities, recovery rates, and CVA.",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "fi_crepey_bielecki_brigo_2014_counterparty_risk_funding",
+          "volume": null,
+          "legacy_pages": [
+            60,
+            150
+          ],
+          "pdf_pages": [
+            83,
+            173
+          ],
+          "chunk_id": "fi_crepey_bielecki_brigo_2014_counterparty_risk_funding:p086:0104",
+          "chunk_hash": "f2d8028fe8cd4514022e19f8b3cff8e14fb783f410648b135ffb9d297431fb6e",
+          "quote": "This issue (in the case of bilateral counterparty risk in particular) will be added to the discussion in the next chapter."
+        },
+        {
+          "role": "supporting",
+          "source_id": "cb_hull_2022_options_futures_derivatives_11ed",
+          "volume": null,
+          "legacy_pages": [
+            562,
+            586
+          ],
+          "pdf_pages": [
+            562,
+            586
+          ],
+          "chunk_id": "cb_hull_2022_options_futures_derivatives_11ed:p561:0822",
+          "chunk_hash": "a826b5db2a7dff1a40ec14cf1d543804cb087db3a486b86b22182a885396c943",
+          "quote": "In this chapter we consider another important risk for financial institutions: credit risk."
+        }
+      ]
+    },
+    {
+      "card_id": "fi-credit-risk-fundamentals",
+      "title": "Credit Risk Fundamentals",
+      "summary_curated": "Building blocks of credit risk: rating, default probability, recovery, credit spread - without yet entering reduced-form pricing. Decomposes the credit-spread risk premium into expected loss (PD x LGD) plus a risk premium for spread variation.",
+      "source_stance": "primary-cfa",
+      "audit_flag": "wrong_pages_corrected",
+      "audit_notes": "Legacy 'Vol.5/pp.330-370' is Reading 47 'Introduction to Alternative Investments' (private debt, hedge funds, alt-inv categories) - not credit-risk fundamentals. Real CFA L1 credit-risk content is Reading 44 'Fundamentals of Credit Analysis' at Vol.5 pp.69-148 (PDF 2706-2785). Lando offset +19 confirmed. Duffie-Singleton chunks present at pp.5-80 PDF range; offset is near 0 (front matter takes only ~10 pages).",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "cfa_2022_l1_combined",
+          "volume": 5,
+          "legacy_pages": [
+            69,
+            148
+          ],
+          "pdf_pages": [
+            2706,
+            2785
+          ],
+          "chunk_id": "cfa_2022_l1_combined:p2705:4043",
+          "chunk_hash": "19e46db7f56e3858f915a5e849bbefa9823403a5767430515f12a7d9a596f6e4",
+          "quote": "The ratings upgrade most likely reflects a lower expected probability of default and/or a greater level of recovery of assets if default occurs."
+        },
+        {
+          "role": "supporting",
+          "source_id": "cb_lando_2004_credit_risk_modeling",
+          "volume": null,
+          "legacy_pages": [
+            5,
+            30
+          ],
+          "pdf_pages": [
+            24,
+            49
+          ],
+          "chunk_id": "cb_lando_2004_credit_risk_modeling:p023:0021",
+          "chunk_hash": "a2594bc265885b1ea58f27fcb0c47e0ae0a952accf1842d9b0a4d2bb2351a501",
+          "quote": "We also present a model with stochastically varying spreads for different rating classes, which will become useful later in the chapter on interest-rate swaps."
+        },
+        {
+          "role": "supporting",
+          "source_id": "fi_duffie_singleton_2003_credit_risk",
+          "volume": null,
+          "legacy_pages": [
+            5,
+            50
+          ],
+          "pdf_pages": [
+            19,
+            20
+          ],
+          "chunk_id": "fi_duffie_singleton_2003_credit_risk:p019:0017",
+          "chunk_hash": "a8280768f39e99293742991c9a37992972f1868a78065528db844d25dd2edd28",
+          "quote": "In particular, the aggregate credit risk of a diverse portfolio of instruments is often not measured effectively."
+        }
+      ]
+    },
+    {
+      "card_id": "fi-credit-spread-machinery",
+      "title": "Credit-Spread Machinery",
+      "summary_curated": "Credit-Spread Machinery — CFA Vol.5/pp.350-380 (PDF 2987-3017) falls in alternative investments/real estate; FI lives in Vol.5 pp.1-145 (PDF 2638-2782).",
+      "source_stance": "primary-lando",
+      "audit_flag": "wrong_volume_corrected",
+      "audit_notes": "CFA Vol.5/pp.350-380 (PDF 2987-3017) falls in alternative investments/real estate; FI lives in Vol.5 pp.1-145 (PDF 2638-2782).",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "cb_lando_2004_credit_risk_modeling",
+          "volume": null,
+          "legacy_pages": [
+            20,
+            60
+          ],
+          "pdf_pages": [
+            39,
+            79
+          ],
+          "chunk_id": "cb_lando_2004_credit_risk_modeling:p075:0087",
+          "chunk_hash": "78f1ed2e0da3e69dba615b54b207f4c50b2089b8c25eea7a6de77460dc62d985",
+          "quote": "They find, however, that correcting for endogeneous defaults along the lines of Geske (1977) produces more realistic credit spreads."
+        }
+      ]
+    },
+    {
+      "card_id": "fi-default-models-and-recovery",
+      "title": "Default Models and Recovery",
+      "summary_curated": "Default Models and Recovery — CFA Vol.5/pp.350-380 (PDF 2987-3017) falls in alternative investments/real estate; outside FI range Vol.5 pp.1-145.",
+      "source_stance": "primary-lando",
+      "audit_flag": "wrong_volume_corrected",
+      "audit_notes": "CFA Vol.5/pp.350-380 (PDF 2987-3017) falls in alternative investments/real estate; outside FI range Vol.5 pp.1-145.",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "cb_lando_2004_credit_risk_modeling",
+          "volume": null,
+          "legacy_pages": [
+            60,
+            130
+          ],
+          "pdf_pages": [
+            79,
+            149
+          ],
+          "chunk_id": "cb_lando_2004_credit_risk_modeling:p129:0154",
+          "chunk_hash": "f258aaf50ca4973d22cd39843efbbc867bc1793982ee090aabab73d49deafea8",
+          "quote": "To better understand what the intensity model tries to achieve, let us briefly recall the notion of a hazard rate and its link to conditional default probabilities."
+        }
+      ]
+    },
+    {
+      "card_id": "fi-duration-and-convexity",
+      "title": "Duration and Convexity",
+      "summary_curated": "Duration and Convexity — CFA Vol.5/pp.250-300 (PDF 2887-2937) is in derivatives readings (R47+); FI duration content lives in Vol.5/R43 (~pp.5-50).",
+      "source_stance": "primary-cfa",
+      "audit_flag": "wrong_volume_corrected",
+      "audit_notes": "CFA Vol.5/pp.250-300 (PDF 2887-2937) is in derivatives readings (R47+); FI duration content lives in Vol.5/R43 (~pp.5-50). | E2 fix: added CFA Vol.5 R43 Duration primary (audit had dropped the wrong-volume Vol.5/250-300 cite but left card without a CFA primary).",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "cfa_2022_l1_combined",
+          "volume": 5,
+          "legacy_pages": [
+            33,
+            34
+          ],
+          "pdf_pages": [
+            2670,
+            2671
+          ],
+          "chunk_id": "cfa_2022_l1_combined:p2670:3993",
+          "chunk_hash": "8c420ac6454efbc11f1b708cfb3b3f2ccce698f5ccabda75d07d457621d22078",
+          "quote": "An advantage of the second approach is that callable bonds, putable bonds, and floating-rate notes can be included in the weighted average using the effective durations for these securities."
+        },
+        {
+          "role": "supporting",
+          "source_id": "cb_hull_2022_options_futures_derivatives_11ed",
+          "volume": null,
+          "legacy_pages": [
+            92,
+            105
+          ],
+          "pdf_pages": [
+            92,
+            105
+          ],
+          "chunk_id": "cb_hull_2022_options_futures_derivatives_11ed:p097:0143",
+          "chunk_hash": "b93fa00bd175ccfa216e18798de1b2baa62758d42883c5496a0fd8627b1be36b",
+          "quote": "Finally, it explains the use of duration and convexity measures to determine the sensitivity of bond prices to interest rate changes."
+        }
+      ]
+    },
+    {
+      "card_id": "fi-floaters-and-reset-mechanics",
+      "title": "Floaters and Reset Mechanics",
+      "summary_curated": "Floaters and Reset Mechanics — CFA Vol.5/pp.130-150 (PDF 2767-2787) is R44 Fundamentals of Credit Analysis content (still in FI volume); no FRN/floater material — floater content actually lives in R43 (~PDF 2659+, Vol.5 pp.~22-55).; Hull pp.140-160 (PDF 140-160) is Ch.5 Foreign Currency Futures / Ch.6 Interest",
+      "source_stance": "primary-cfa",
+      "audit_flag": "ok_after_fixpass2",
+      "audit_notes": "Fix-pass-2: card was originally deferred (audit dropped all refs as off-topic). Now re-anchored with proper Vol.4 R39/R41 + Tuckman Ch.18 OAS citations per review #5 guidance.",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "cfa_2022_l1_combined",
+          "volume": 4,
+          "legacy_pages": [
+            498,
+            499
+          ],
+          "pdf_pages": [
+            2435,
+            2436
+          ],
+          "chunk_id": "cfa_2022_l1_combined:p2435:3579",
+          "chunk_hash": "5196001aeb447d6b9be0b18f59841d4ecaa68c83641314b8f376993d438466b5",
+          "quote": "investors who hold these floaters participate partially in movements of the 10-year constant maturity swap rate."
+        }
+      ]
+    },
+    {
+      "card_id": "fi-hjm-forward-rate-framework",
+      "title": "HJM Forward-Rate Framework",
+      "summary_curated": "HJM Forward-Rate Framework — auto-generated placeholder summary; revise in fix-pass if needed; full audit notes available in audit_notes.",
+      "source_stance": "primary-brigo",
+      "audit_flag": "ok",
+      "audit_notes": null,
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "fi_brigo_mercurio_2006_interest_rate_models_2ed",
+          "volume": null,
+          "legacy_pages": [
+            155,
+            190
+          ],
+          "pdf_pages": [
+            202,
+            237
+          ],
+          "chunk_id": "fi_brigo_mercurio_2006_interest_rate_models_2ed:p232:0301",
+          "chunk_hash": "61b13947189302dbb81be3016ca79aac47e1f382328098d80eb8092aa5c0c048",
+          "quote": "The Heath-Jarrow-Morton (HJM) Framework and the instantaneous forward rate f(t, T)= −∂ ln P(t, T) ∂T = −σ2 2 (T − t) 2 + θ(T − t)+ rt."
+        },
+        {
+          "role": "supporting",
+          "source_id": "cb_hull_2022_options_futures_derivatives_11ed",
+          "volume": null,
+          "legacy_pages": [
+            720,
+            740
+          ],
+          "pdf_pages": [
+            720,
+            740
+          ],
+          "chunk_id": "cb_hull_2022_options_futures_derivatives_11ed:p737:1097",
+          "chunk_hash": "776c945f2ba7bb081dba2f85f9e2d4d10c195c1eff959d4e94cd5237255f4aab",
+          "quote": "In the Hull–White two-factor model when parameters are chosen appropriately, the volatility of the 3-month forward rate has a “humped” look."
+        }
+      ]
+    },
+    {
+      "card_id": "fi-key-rate-and-partial-duration",
+      "title": "Key-Rate and Partial Duration",
+      "summary_curated": "Key-Rate and Partial Duration — CFA Vol.5/pp.275-310 (PDF 2912-2947) is in derivatives readings (R47-R49); key-rate/partial-duration content not found there. CFA L1 FI duration treatment lives in Vol.5/R43 (~pp.5-50).",
+      "source_stance": "primary-cfa",
+      "audit_flag": "wrong_volume_corrected",
+      "audit_notes": "CFA Vol.5/pp.275-310 (PDF 2912-2947) is in derivatives readings (R47-R49); key-rate/partial-duration content not found there. CFA L1 FI duration treatment lives in Vol.5/R43 (~pp.5-50). | E2 fix: added Tuckman Ch.5 'Key-Rate Exposures' primary (audit had only a Hull supporting cite; key-rate duration is L2 content not in CFA L1).",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "fi_tuckman_serrat_2011_fixed_income_securities_3ed",
+          "volume": null,
+          "legacy_pages": [
+            153,
+            154
+          ],
+          "pdf_pages": [
+            169,
+            170
+          ],
+          "chunk_id": "fi_tuckman_serrat_2011_fixed_income_securities_3ed:p169:0208",
+          "chunk_hash": "14356156a0954d1d49c01f9fd6e1f7080bfdfdfc9d8dbe0eccfc46df43276b6d",
+          "quote": "Key-rate exposures are used for measuring and hedging the risk of bond portfolios in terms of a relatively small number of the most liquid bonds available, usually the most recently issued, near-par,"
+        },
+        {
+          "role": "supporting",
+          "source_id": "cb_hull_2022_options_futures_derivatives_11ed",
+          "volume": null,
+          "legacy_pages": [
+            92,
+            110
+          ],
+          "pdf_pages": [
+            92,
+            110
+          ],
+          "chunk_id": "cb_hull_2022_options_futures_derivatives_11ed:p097:0143",
+          "chunk_hash": "b93fa00bd175ccfa216e18798de1b2baa62758d42883c5496a0fd8627b1be36b",
+          "quote": "Finally, it explains the use of duration and convexity measures to determine the sensitivity of bond prices to interest rate changes."
+        }
+      ]
+    },
+    {
+      "card_id": "fi-mbs-burnout-and-seasoning",
+      "title": "MBS Burnout and Seasoning",
+      "summary_curated": "MBS Burnout and Seasoning — auto-generated placeholder summary; revise in fix-pass if needed; full audit notes available in audit_notes.",
+      "source_stance": "primary-davidson",
+      "audit_flag": "ok",
+      "audit_notes": " | E1 fix: replaced cfa_2022_l1_combined:p2852:4265 (Vol.5 R45 EOC SOLUTIONS — bogus) with Vol.4 R42 MBS prepayment-modeling chunk.",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "fi_davidson_levin_2014_mortgage_valuation_models",
+          "volume": null,
+          "legacy_pages": [
+            121,
+            144
+          ],
+          "pdf_pages": [
+            132,
+            155
+          ],
+          "chunk_id": "fi_davidson_levin_2014_mortgage_valuation_models:p144:0160",
+          "chunk_hash": "f0bdbdc93f6390f60b01f9d3c04cec9b2e8cdfd5989cda845c05684923430120",
+          "quote": "(We know that prepayment rates for large cohorts of pools rarely exceed 15% in any one month.) The refinancing incentive has been modeled in a variety of ways."
+        },
+        {
+          "role": "supporting",
+          "source_id": "fi_davidson_levin_2014_mortgage_valuation_models",
+          "volume": null,
+          "legacy_pages": [
+            174,
+            220
+          ],
+          "pdf_pages": [
+            185,
+            231
+          ],
+          "chunk_id": "fi_davidson_levin_2014_mortgage_valuation_models:p187:0213",
+          "chunk_hash": "a77987a7432309198f5cf8849396d4426ae3ce48b1f823fdc69e38e06c6e47f2",
+          "quote": "MONTE CARLO BASICS FOR THE OPTION-ADJUSTED SPREAD FRAMEWORK Simulating Random Factors Let us consider how one might run simulations of interest rates."
+        },
+        {
+          "role": "supporting",
+          "source_id": "cfa_2022_l1_combined",
+          "volume": 4,
+          "legacy_pages": [
+            607,
+            608
+          ],
+          "pdf_pages": [
+            2544,
+            2545
+          ],
+          "chunk_id": "cfa_2022_l1_combined:p2544:3746",
+          "chunk_hash": "a7218b917fcc305cdd0012c1e46c9c547951337cad64ac68986584bb9354e025",
+          "quote": "Prepayment modeling uses characteristics of the mortgage pool and other factors to develop a statistical model for forecasting future prepayments."
+        }
+      ]
+    },
+    {
+      "card_id": "fi-mbs-key-rate-and-effective-duration",
+      "title": "MBS Effective and Key-Rate Duration",
+      "summary_curated": "MBS Effective and Key-Rate Duration — CFA Vol.5/pp.275-310 (PDF 2912-2947) is in derivatives R47-R49; MBS duration content not present here.",
+      "source_stance": "primary-davidson",
+      "audit_flag": "wrong_volume_corrected",
+      "audit_notes": "CFA Vol.5/pp.275-310 (PDF 2912-2947) is in derivatives R47-R49; MBS duration content not present here.",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "fi_davidson_levin_2014_mortgage_valuation_models",
+          "volume": null,
+          "legacy_pages": [
+            174,
+            220
+          ],
+          "pdf_pages": [
+            185,
+            231
+          ],
+          "chunk_id": "fi_davidson_levin_2014_mortgage_valuation_models:p226:0261",
+          "chunk_hash": "7baebd927a238242e5dcf06cf6b6baaf8cad9106cbf82c8e8303af107d06d31e",
+          "quote": "In contrast, Effective Duration assumes hypothetical changes in interest rates only, that is, it intends to measure a conditional dependence."
+        },
+        {
+          "role": "supporting",
+          "source_id": "fi_davidson_levin_2014_mortgage_valuation_models",
+          "volume": null,
+          "legacy_pages": [
+            121,
+            144
+          ],
+          "pdf_pages": [
+            132,
+            155
+          ],
+          "chunk_id": "fi_davidson_levin_2014_mortgage_valuation_models:p138:0154",
+          "chunk_hash": "d8050a6e9a846027254b007e334e50377b3b3c91b4c51d3de420e64af5cb552c",
+          "quote": "Discount mortgages generally have prepayment speeds under 10% CPR, while premium mortgages can exhibit prepayments speeds well above 50% CPR."
+        }
+      ]
+    },
+    {
+      "card_id": "fi-mbs-oas-calculation-depth",
+      "title": "MBS OAS Calculation Depth (Monte Carlo)",
+      "summary_curated": "MBS OAS Calculation Depth (Monte Carlo) — auto-generated placeholder summary; revise in fix-pass if needed; full audit notes available in audit_notes.",
+      "source_stance": "primary-davidson",
+      "audit_flag": "ok",
+      "audit_notes": null,
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "fi_davidson_levin_2014_mortgage_valuation_models",
+          "volume": null,
+          "legacy_pages": [
+            174,
+            220
+          ],
+          "pdf_pages": [
+            185,
+            231
+          ],
+          "chunk_id": "fi_davidson_levin_2014_mortgage_valuation_models:p187:0213",
+          "chunk_hash": "a77987a7432309198f5cf8849396d4426ae3ce48b1f823fdc69e38e06c6e47f2",
+          "quote": "MONTE CARLO BASICS FOR THE OPTION-ADJUSTED SPREAD FRAMEWORK Simulating Random Factors Let us consider how one might run simulations of interest rates."
+        },
+        {
+          "role": "supporting",
+          "source_id": "fi_davidson_levin_2014_mortgage_valuation_models",
+          "volume": null,
+          "legacy_pages": [
+            76,
+            105
+          ],
+          "pdf_pages": [
+            87,
+            116
+          ],
+          "chunk_id": "fi_davidson_levin_2014_mortgage_valuation_models:p106:0120",
+          "chunk_hash": "e190e73aac1c2899717d18d15516f01f4ad9a3379e1dad2c44281f4b8e2b4fb6",
+          "quote": "Adding a Second Factor to Short-Rate Models Let us consider a fixed-income instrument that pays floating coupon indexed to some short rate (such as 3-month LIBOR)."
+        },
+        {
+          "role": "supporting",
+          "source_id": "fi_davidson_levin_2014_mortgage_valuation_models",
+          "volume": null,
+          "legacy_pages": [
+            121,
+            144
+          ],
+          "pdf_pages": [
+            132,
+            155
+          ],
+          "chunk_id": "fi_davidson_levin_2014_mortgage_valuation_models:p138:0154",
+          "chunk_hash": "d8050a6e9a846027254b007e334e50377b3b3c91b4c51d3de420e64af5cb552c",
+          "quote": "Discount mortgages generally have prepayment speeds under 10% CPR, while premium mortgages can exhibit prepayments speeds well above 50% CPR."
+        }
+      ]
+    },
+    {
+      "card_id": "fi-mbs-prepayment-models",
+      "title": "Agency MBS Prepayment Models",
+      "summary_curated": "Agency MBS Prepayment Models — auto-generated placeholder summary; revise in fix-pass if needed; full audit notes available in audit_notes.",
+      "source_stance": "primary-davidson",
+      "audit_flag": "ok",
+      "audit_notes": " | E1 fix: replaced cfa_2022_l1_combined:p2852:4265 (Vol.5 R45 EOC SOLUTIONS — bogus) with Vol.4 R42 MBS prepayment-modeling chunk.",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "fi_davidson_levin_2014_mortgage_valuation_models",
+          "volume": null,
+          "legacy_pages": [
+            121,
+            144
+          ],
+          "pdf_pages": [
+            132,
+            155
+          ],
+          "chunk_id": "fi_davidson_levin_2014_mortgage_valuation_models:p144:0160",
+          "chunk_hash": "f0bdbdc93f6390f60b01f9d3c04cec9b2e8cdfd5989cda845c05684923430120",
+          "quote": "(We know that prepayment rates for large cohorts of pools rarely exceed 15% in any one month.) The refinancing incentive has been modeled in a variety of ways."
+        },
+        {
+          "role": "supporting",
+          "source_id": "fi_davidson_levin_2014_mortgage_valuation_models",
+          "volume": null,
+          "legacy_pages": [
+            247,
+            266
+          ],
+          "pdf_pages": [
+            258,
+            277
+          ],
+          "chunk_id": "fi_davidson_levin_2014_mortgage_valuation_models:p277:0317",
+          "chunk_hash": "d6cbc1b7e71b26b10c6f381cbb9c2b479fdf616427b7eb9e453d665c13d48660",
+          "quote": "Furthermore, modeling defaults and losses in pools of homeowners demands more data than modeling prepayments and is most accurately predicted at the loan-level."
+        },
+        {
+          "role": "supporting",
+          "source_id": "cfa_2022_l1_combined",
+          "volume": 4,
+          "legacy_pages": [
+            607,
+            608
+          ],
+          "pdf_pages": [
+            2544,
+            2545
+          ],
+          "chunk_id": "cfa_2022_l1_combined:p2544:3746",
+          "chunk_hash": "a7218b917fcc305cdd0012c1e46c9c547951337cad64ac68986584bb9354e025",
+          "quote": "Prepayment modeling uses characteristics of the mortgage pool and other factors to develop a statistical model for forecasting future prepayments."
+        }
+      ]
+    },
+    {
+      "card_id": "fi-oas-and-effective-duration",
+      "title": "OAS and Effective Duration",
+      "summary_curated": "OAS and Effective Duration — CFA Vol.5/pp.290-310 (PDF 2927-2947) is at end of derivatives readings / start of alt inv; OAS/effective-duration treatment in CFA L1 lives in Vol.5/R43 (Vol.5 ~pp.6-50).; Hull pp.241-260 (PDF 241-260) is Ch.11 Trading Strategies / Tax in 11ed; no OAS / callable-bond / embedded-o",
+      "source_stance": "primary-cfa",
+      "audit_flag": "ok_after_fixpass2",
+      "audit_notes": "Fix-pass-2: card was originally deferred (audit dropped all refs as off-topic). Now re-anchored with proper Vol.4 R39/R41 + Tuckman Ch.18 OAS citations per review #5 guidance.",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "cfa_2022_l1_combined",
+          "volume": 4,
+          "legacy_pages": [
+            574,
+            575
+          ],
+          "pdf_pages": [
+            2511,
+            2512
+          ],
+          "chunk_id": "cfa_2022_l1_combined:p2511:3694",
+          "chunk_hash": "3a8007f9c2eaa9b892e0070a085a07e50007d146d5f420161acc8296501910e4",
+          "quote": "An option-adjusted spread (OAS) on a callable bond is the Z-spread:"
+        },
+        {
+          "role": "supporting",
+          "source_id": "fi_tuckman_serrat_2011_fixed_income_securities_3ed",
+          "volume": null,
+          "legacy_pages": [
+            492,
+            493
+          ],
+          "pdf_pages": [
+            508,
+            509
+          ],
+          "chunk_id": "fi_tuckman_serrat_2011_fixed_income_securities_3ed:p508:0654",
+          "chunk_hash": "7f4f83e288ce78bc3208cd08ebcd48a93b7b97bb878134d59ef5edc66b3ae480",
+          "quote": "a bond-specific spread or option adjusted spread (OAS) would be added to the rates for valuation."
+        }
+      ]
+    },
+    {
+      "card_id": "fi-on-the-run-off-the-run-mechanics",
+      "title": "On-the-Run vs Off-the-Run Treasury Mechanics",
+      "summary_curated": "On-the-Run vs Off-the-Run Treasury Mechanics — auto-generated placeholder summary; revise in fix-pass if needed; full audit notes available in audit_notes.",
+      "source_stance": "primary-tuckman",
+      "audit_flag": "ok",
+      "audit_notes": null,
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "fi_tuckman_serrat_2011_fixed_income_securities_3ed",
+          "volume": null,
+          "legacy_pages": [
+            327,
+            349
+          ],
+          "pdf_pages": [
+            351,
+            373
+          ],
+          "chunk_id": "fi_tuckman_serrat_2011_fixed_income_securities_3ed:p362:0451",
+          "chunk_hash": "ae7b1b57f274193c3aafaefcba0f0e6ede3cd57ef13a2d091d05dd8aa9b20de4",
+          "quote": "In other words, by the time the then-current 10-year has been around for a month, the specialness of the 31 2 s is projected to have dissipated."
+        },
+        {
+          "role": "supporting",
+          "source_id": "fi_tuckman_serrat_2011_fixed_income_securities_3ed",
+          "volume": null,
+          "legacy_pages": [
+            1,
+            46
+          ],
+          "pdf_pages": [
+            25,
+            70
+          ],
+          "chunk_id": "fi_tuckman_serrat_2011_fixed_income_securities_3ed:p065:0079",
+          "chunk_hash": "2433e328c9b0829c6bd229ebd6eb43d842aecb07dcfbe36d17893e50f3afbb13",
+          "quote": "Treasury market, strategists assess relative value using spreads of individual Treasury issues against the USD swap curve."
+        },
+        {
+          "role": "supporting",
+          "source_id": "cfa_2022_l1_combined",
+          "volume": 5,
+          "legacy_pages": [
+            50,
+            100
+          ],
+          "pdf_pages": [
+            2687,
+            2737
+          ],
+          "chunk_id": "cfa_2022_l1_combined:p2689:4021",
+          "chunk_hash": "72f02cfa469156bce1b7e5d81fcd6ea9cf83bbef4670c35576266e9bf4a60727",
+          "quote": "Importantly, analysts must consider the correlation between benchmark yields and credit spreads when deciding whether to use empirical or analytical duration estimates."
+        }
+      ]
+    },
+    {
+      "card_id": "fi-prepayment-risk-intuition",
+      "title": "Prepayment Risk Intuition (Mortgage Securitization)",
+      "summary_curated": "MBS holders are effectively short a prepayment option: when rates fall, borrowers refinance and principal arrives early to be reinvested at lower rates (contraction risk); when rates rise, prepayments slow and effective maturity extends (extension risk). The PSA convention parameterises the CPR ramp; pass-through and CMO tranches reshape the prepayment exposure asymmetrically.",
+      "source_stance": "primary-cfa",
+      "audit_flag": "wrong_volume_corrected",
+      "audit_notes": "Legacy cite 'CFA Vol.5 pp.190-220' maps via the +2637 offset to PDF 2827-2857 = R45 Derivative Markets and Instruments (NOT MBS). The intended R42 'Introduction to Asset-Backed Securities' content lives in Vol.4 at PDF 2526-2584 (Vol.4 pp.589-647 via +1937 offset). Corrected primary cite to Vol.4 R42 pp.606-618 (PDF 2543-2555) covering extension/contraction risk, PSA convention, CPR/SMM and pass-through cashflow tables. Also corrected legacy Hull pp.183-200 (Ch.7 Swaps) to pp.201-216 (Ch.8 Securitization and the Financial Crisis of 2007-8).",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "cfa_2022_l1_combined",
+          "legacy_pages": [
+            606,
+            607
+          ],
+          "pdf_pages": [
+            2543,
+            2544
+          ],
+          "chunk_id": "cfa_2022_l1_combined:p2543:3744",
+          "chunk_hash": "19259a48edc3300e0697213b245ca7856b8af9206062797596ca2d96b4908be0",
+          "quote": "extension risk is the risk that when interest rates rise, prepayments will be lower than forecasted because homeowners are reluctant to give up the ben",
+          "volume": 4
+        },
+        {
+          "role": "supporting",
+          "source_id": "cfa_2022_l1_combined",
+          "legacy_pages": [
+            607,
+            608
+          ],
+          "pdf_pages": [
+            2544,
+            2545
+          ],
+          "chunk_id": "cfa_2022_l1_combined:p2544:3746",
+          "chunk_hash": "a7218b917fcc305cdd0012c1e46c9c547951337cad64ac68986584bb9354e025",
+          "quote": "Public Securities Association (PSA) prepayment benchmark, which is produced by the Securities Industry",
+          "volume": 4
+        },
+        {
+          "role": "supporting",
+          "source_id": "cb_hull_2022_options_futures_derivatives_11ed",
+          "legacy_pages": [
+            202,
+            203
+          ],
+          "pdf_pages": [
+            202,
+            203
+          ],
+          "chunk_id": "cb_hull_2022_options_futures_derivatives_11ed:p202:0305",
+          "chunk_hash": "adf0f1300780a0ebd49fd939d0f911629838ab842ac66026514d60a304dd077e",
+          "quote": "MBS investors did face uncertainty about mortgage prepayments. Prepayments tend to be greatest when interest rates are low",
+          "volume": null
+        }
+      ]
+    },
+    {
+      "card_id": "fi-relative-value-screens",
+      "title": "Relative-Value Screens for Bond Portfolios",
+      "summary_curated": "Relative-value screens compare a bond's spread vector (Z-spread, OAS, asset-swap spread) against a tightly-defined peer cohort and flag cheap (z < -1) and rich (z > +1) outliers. The OAS-vs-Z-spread comparison decomposes credit richness from embedded-option richness; the bond-CDS basis surfaces persistent cash-vs-derivative mispricing.",
+      "source_stance": "primary-cfa",
+      "audit_flag": "wrong_pages_corrected",
+      "audit_notes": "Legacy 'CFA Vol.5 pp.350-380' maps via +2637 to PDF 2987-3017 = R47 Alternative Investments (real estate / infrastructure / hedge funds) — NOT credit. The intended R44 'Fundamentals of Credit Analysis' is at Vol.5 PDF 2706-2780 (pp.69-141). Corrected primary cite to R44 pp.106-109 (PDF 2743-2745), the Credit-Risk-vs-Return: Yields and Spreads section that anchors the OAS / spread-volatility framing. Lando supporting pp.150-180 -> PDF 169-199 (Ch.7 Credit Risk and Interest-Rate Swaps) is topically thin but provides the asset-swap-market reference. Note: CFA L1 R44 contains the OAS / Z-spread component decomposition but does not provide the explicit 'z-score peer-group screen' formalism in the card's summary — that screen language is practitioner overlay.",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "cfa_2022_l1_combined",
+          "legacy_pages": [
+            108,
+            108
+          ],
+          "pdf_pages": [
+            2744,
+            2744
+          ],
+          "chunk_id": "cfa_2022_l1_combined:p2744:4100",
+          "chunk_hash": "50486c3114e2d11d2c83029b737aed44950bcbc642062d7a1eaa79c45b9c73c0",
+          "quote": "OAS is option-adjusted spread, which incorporates the value of the embedded call option in certain corporate bonds that issuers have the right to exercise before maturity",
+          "volume": 5
+        },
+        {
+          "role": "supporting",
+          "source_id": "cfa_2022_l1_combined",
+          "legacy_pages": [
+            107,
+            107
+          ],
+          "pdf_pages": [
+            2744,
+            2744
+          ],
+          "chunk_id": "cfa_2022_l1_combined:p2744:4099",
+          "chunk_hash": "ac88ae32486256359bc6594f560190c434e79acc4373dc1be28c6e76cd2a36ec",
+          "quote": "investors anticipate credit measures will improve due to rising corporate cash flow, thus reducing the risk of default",
+          "volume": 5
+        },
+        {
+          "role": "supporting",
+          "source_id": "cb_lando_2004_credit_risk_modeling",
+          "legacy_pages": [
+            172,
+            172
+          ],
+          "pdf_pages": [
+            191,
+            191
+          ],
+          "chunk_id": "cb_lando_2004_credit_risk_modeling:p191:0233",
+          "chunk_hash": "f0a9da9f2ddd7e28ef270b945b9f3a10a73cf8d5c2e4f79d29a0657ae8f45629",
+          "quote": "quotes on the floating spread are sometimes available in the market, for example, through the asset swap market",
+          "volume": null
+        }
+      ]
+    },
+    {
+      "card_id": "fi-repo-and-specials-mechanics",
+      "title": "Repo Market and Specials Mechanics",
+      "summary_curated": "A repurchase agreement is a short-term collateralised loan: the borrower sells the bond and agrees to repurchase it at a slightly higher price, paying the repo rate. The market clears at a general-collateral (GC) rate for any acceptable Treasury and a lower special rate for bonds in unusually high demand; specialness benefits the long holder via funding subsidy and is bounded by the fails-charge.",
+      "source_stance": "primary-tuckman",
+      "audit_flag": "ok",
+      "audit_notes": "Tuckman Ch.12 'Repurchase Agreements and Financing' verified at PDF 342-364 (legacy pp.327-349 with +15 offset; the +24 offset given in the audit brief is INCORRECT — verified across Ch.5/6/12/14/16/17/20/21). Crepey supporting pp.150-200 (PDF 173-223) is topically weaker — those pages are CSA-exposure / TVA technical numerical examples — but the CSA closeout-valuation quote anchors the funding/collateral linkage that the card references. Legacy CFA Vol.5 pp.50-100 supporting cite DROPPED: PDF 2687-2737 = end of R43 Risk-and-Return + start of R44 Credit; neither covers repo mechanics.",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "fi_tuckman_serrat_2011_fixed_income_securities_3ed",
+          "legacy_pages": [
+            327,
+            327
+          ],
+          "pdf_pages": [
+            342,
+            342
+          ],
+          "chunk_id": "fi_tuckman_serrat_2011_fixed_income_securities_3ed:p342:0423",
+          "chunk_hash": "17ecd9575cb85004b927a77007f5d563a3a28d616becd3c8a2659fe6efa475e8",
+          "quote": "Repos are short-term contracts that are used to lend money on the security of usually high-grade collateral, to finance the purchase of bonds, and to borrow bonds to be sold short",
+          "volume": null
+        },
+        {
+          "role": "supporting",
+          "source_id": "fi_tuckman_serrat_2011_fixed_income_securities_3ed",
+          "legacy_pages": [
+            333,
+            333
+          ],
+          "pdf_pages": [
+            348,
+            348
+          ],
+          "chunk_id": "fi_tuckman_serrat_2011_fixed_income_securities_3ed:p348:0431",
+          "chunk_hash": "21a5ca651efee2f963016c13f5fc0a27af8aa85468b529a4c6bd6021c4316072",
+          "quote": "So while repo investors are willing to accept general collateral, reverses require the delivery of a particular bond",
+          "volume": null
+        },
+        {
+          "role": "supporting",
+          "source_id": "fi_crepey_bielecki_brigo_2014_counterparty_risk_funding",
+          "legacy_pages": [
+            186,
+            186
+          ],
+          "pdf_pages": [
+            209,
+            209
+          ],
+          "chunk_id": "fi_crepey_bielecki_brigo_2014_counterparty_risk_funding:p209:0273",
+          "chunk_hash": "f57432bb1e257c713d40971f9e7383df1026920b64cb8d289cb09bb170c8164f",
+          "quote": "We still assume r = 0, except in the numerics, and we work with the clean CSA closeout valuation scheme Q = P",
+          "volume": null
+        }
+      ]
+    },
+    {
+      "card_id": "fi-securitization-fundamentals",
+      "title": "Securitisation Fundamentals (RMBS / CMBS / ABS)",
+      "summary_curated": "Securitisation pools cashflow-generating assets (mortgages, auto loans, credit-card receivables) into a special-purpose entity that issues tranched claims. Senior tranches absorb losses last and earn a low coupon; equity tranches absorb losses first. RMBS specialise in residential mortgages, CMBS in commercial real estate, ABS in non-mortgage receivables.",
+      "source_stance": "primary-cfa",
+      "audit_flag": "wrong_volume_corrected",
+      "audit_notes": "Legacy cite 'CFA Vol.5 pp.181-220' maps via +2637 to PDF 2818-2857 = R45 Derivative Markets — NOT securitisation. The intended R42 'Introduction to Asset-Backed Securities' content lives in Vol.4 at PDF 2526-2584 (Vol.4 pp.589-647 via +1937 offset). Corrected primary cite to Vol.4 R42 pp.590-592 (PDF 2527-2529) covering Benefits of Securitisation and SPV structure. Also corrected Hull supporting cite from pp.183-200 (= Ch.7 Swaps) to pp.201-216 (= Ch.8 Securitization and the Financial Crisis of 2007-8).",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "cfa_2022_l1_combined",
+          "legacy_pages": [
+            590,
+            591
+          ],
+          "pdf_pages": [
+            2527,
+            2528
+          ],
+          "chunk_id": "cfa_2022_l1_combined:p2527:3717",
+          "chunk_hash": "8c4443133027b4c2ffe2993419fbdc7d9dab7dba46825a72bb5c0bb99efd5d4b",
+          "quote": "Securitization allows for the creation of tradable securities with better liquidity than that of the original loans on the bank",
+          "volume": 4
+        },
+        {
+          "role": "supporting",
+          "source_id": "cfa_2022_l1_combined",
+          "legacy_pages": [
+            592,
+            592
+          ],
+          "pdf_pages": [
+            2529,
+            2529
+          ],
+          "chunk_id": "cfa_2022_l1_combined:p2529:3720",
+          "chunk_hash": "62d18565447f783c984d80b486a7904b747f7bab551879ba5765152b1c034e41",
+          "quote": "Such a legal entity is referred to as a special purpose entity (SPE) and sometimes also called a special purpose vehicle (SPV) or a special purpose company",
+          "volume": 4
+        },
+        {
+          "role": "supporting",
+          "source_id": "cb_hull_2022_options_futures_derivatives_11ed",
+          "legacy_pages": [
+            202,
+            202
+          ],
+          "pdf_pages": [
+            202,
+            202
+          ],
+          "chunk_id": "cb_hull_2022_options_futures_derivatives_11ed:p202:0305",
+          "chunk_hash": "adf0f1300780a0ebd49fd939d0f911629838ab842ac66026514d60a304dd077e",
+          "quote": "A portfolio of income-producing assets such as loans is sold by the originating banks to a special purpose vehicle (SPV) and the cash flows from the assets are then allocated to tranches",
+          "volume": null
+        }
+      ]
+    },
+    {
+      "card_id": "fi-short-rate-models",
+      "title": "Short-Rate Models (Vasicek, CIR, Hull-White)",
+      "summary_curated": "Short-rate models parameterise the term structure with one stochastic state variable r(t). Vasicek (mean-reverting Gaussian) and CIR (square-root diffusion, non-negative) admit affine bond-price closed forms. Hull-White extends Vasicek with a time-dependent drift theta(t) calibrated to today's curve exactly, making it the practitioner default for path-dependent rate derivatives.",
+      "source_stance": "primary-brigo",
+      "audit_flag": "wrong_pages_corrected",
+      "audit_notes": "Brigo Ch.3 'One-factor short-rate models' verified at PDF 105-180 (legacy pp.55-130; +50 offset confirmed within the brief's +47±5 band). Hull supporting pp.690-720 maps to Ch.29 'Interest Rate Derivatives: Standard Market Models' + start of Ch.30 — NOT short-rate models. Corrected to Hull pp.719-731 (= Ch.31 'Equilibrium Models of the Short Rate' covering Vasicek/CIR/mean reversion); Hull Ch.32 (no-arbitrage Hull-White) at pp.732-753 also applies.",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "fi_brigo_mercurio_2006_interest_rate_models_2ed",
+          "legacy_pages": [
+            56,
+            56
+          ],
+          "pdf_pages": [
+            106,
+            106
+          ],
+          "chunk_id": "fi_brigo_mercurio_2006_interest_rate_models_2ed:p106:0151",
+          "chunk_hash": "296714b43f84e4c0c57b731c1fcd21fa3f7f9d6648fc698b53d88180d1f3623a",
+          "quote": "The success of models like that of Vasicek (1977) and that of Cox, Ingersoll and Ross (1985) was mainly due to their possibility of pricing analytically bonds",
+          "volume": null
+        },
+        {
+          "role": "supporting",
+          "source_id": "fi_brigo_mercurio_2006_interest_rate_models_2ed",
+          "legacy_pages": [
+            58,
+            58
+          ],
+          "pdf_pages": [
+            108,
+            108
+          ],
+          "chunk_id": "fi_brigo_mercurio_2006_interest_rate_models_2ed:p108:0152",
+          "chunk_hash": "1fb9068c26b190b5528d092eec2972f9500a59712f570b2ceec01209ad030d0b",
+          "quote": "Vasicek (1977) assumed that the instantaneous spot rate under the real-world measure evolves as an Ornstein-Uhlenbeck process",
+          "volume": null
+        },
+        {
+          "role": "supporting",
+          "source_id": "cb_hull_2022_options_futures_derivatives_11ed",
+          "legacy_pages": [
+            721,
+            721
+          ],
+          "pdf_pages": [
+            721,
+            721
+          ],
+          "chunk_id": "cb_hull_2022_options_futures_derivatives_11ed:p721:1075",
+          "chunk_hash": "4b3839a1aaa6fc4d69c1c771a0998c95bbb662d094f108ea7032dacfc8f9005a",
+          "quote": "When r is high, mean reversion tends to cause it to have a negative drift; when r is low, mean reversion tends to cause it to have a positive drift",
+          "volume": null
+        }
+      ]
+    },
+    {
+      "card_id": "fi-spot-par-forward-curves",
+      "title": "Spot, Par and Forward Curves",
+      "summary_curated": "Three rate curves describe the same term-structure surface: the spot (zero) rate z(t) discounts a single cashflow at horizon t; the par rate c(T) is the coupon rate that makes a fixed-coupon bond of maturity T price at par; the forward rate f(t1,t2) is the no-arbitrage rate implied between two future horizons. All three are equivalent representations of the discount-factor function D(t).",
+      "source_stance": "primary-cfa",
+      "audit_flag": "wrong_volume_corrected",
+      "audit_notes": "Legacy 'CFA Vol.5 pp.130-160' maps via +2637 to PDF 2767-2797 = end of R44 Credit Analysis + start of R45 Derivative Markets — NOT spot/par/forward curves. The intended R41 'Introduction to Fixed-Income Valuation' is in Vol.4 at PDF 2454-2524 (Vol.4 pp.517-587 via +1937 offset). Corrected primary cite to Vol.4 R41 p.554 (PDF 2491), the Maturity Structure of Interest Rates section that defines forward / spot / par rates explicitly. Hull supporting pp.84-110 was legacy-cited as Ch.4 LIBOR; verified topical for zero / forward rates. Brigo supporting pp.10-35 -> PDF 60-85 verified topical (Ch.1 §1.4 Forward Rates).",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "cfa_2022_l1_combined",
+          "legacy_pages": [
+            554,
+            554
+          ],
+          "pdf_pages": [
+            2491,
+            2491
+          ],
+          "chunk_id": "cfa_2022_l1_combined:p2491:3668",
+          "chunk_hash": "207efbf69f2844f0c3bbc1ed71b2e2b9d50c7eb5cc693e0dfff7a323b8686535",
+          "quote": "A forward rate is the interest rate on a bond or money market instrument traded in a forward market",
+          "volume": 4
+        },
+        {
+          "role": "supporting",
+          "source_id": "cb_hull_2022_options_futures_derivatives_11ed",
+          "legacy_pages": [
+            104,
+            104
+          ],
+          "pdf_pages": [
+            104,
+            104
+          ],
+          "chunk_id": "cb_hull_2022_options_futures_derivatives_11ed:p104:0153",
+          "chunk_hash": "0685db0df6f9513e50c2de4210f23e8b5cc11e1e0970498aa147a5049753462f",
+          "quote": "The n-year zero-coupon interest rate is the rate of interest earned on an investment that starts today and lasts for n years",
+          "volume": null
+        },
+        {
+          "role": "supporting",
+          "source_id": "fi_brigo_mercurio_2006_interest_rate_models_2ed",
+          "legacy_pages": [
+            12,
+            12
+          ],
+          "pdf_pages": [
+            62,
+            62
+          ],
+          "chunk_id": "fi_brigo_mercurio_2006_interest_rate_models_2ed:p062:0097",
+          "chunk_hash": "4fa23726dc19daac0b1316cf7af329bd708771702838f4d29a5fd93e745bb82b",
+          "quote": "Forward rates are interest rates that can be locked in today for an investment in a future time period, and are set consistently with the current term structure of discount factors",
+          "volume": null
+        }
+      ]
+    },
+    {
+      "card_id": "fi-swap-spreads-and-libor-curve",
+      "title": "Swap Spreads and the LIBOR / OIS Swap Curve",
+      "summary_curated": "An interest-rate swap exchanges a fixed coupon for a floating coupon indexed to LIBOR / SOFR; the swap-fixed rate at each tenor defines the swap curve. The swap spread = swap-fixed minus Treasury par yield embeds bank-credit, dealer-funding, and Treasury-convenience components. Post-2008 two-curve practice splits projection (LIBOR/SOFR) from collateralised discounting (OIS / GC repo).",
+      "source_stance": "primary-tuckman",
+      "audit_flag": "ok",
+      "audit_notes": "Tuckman Ch.16 (Swaps) at pp.435-455 -> PDF 450-470 verified topical; Ch.17 (Arbitrage with Financing and Two-Curve Discounting) at pp.457-481 -> PDF 472-496 verified topical (OIS discounting / two-curve framework). Hull supporting pp.155-170 = Ch.7 Swaps verified topical. Tuckman supporting pp.536-585 -> PDF 551-600 covers Ch.19 Corporate Bonds + Ch.20 MBS (less central to swap-spread framing but referenced for the Z-spread / asset-swap-spread comparison). Brigo supporting pp.10-35 verified topical (Ch.1 No-Arbitrage Pricing, swap-rate algebra).",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "fi_tuckman_serrat_2011_fixed_income_securities_3ed",
+          "legacy_pages": [
+            443,
+            443
+          ],
+          "pdf_pages": [
+            458,
+            458
+          ],
+          "chunk_id": "fi_tuckman_serrat_2011_fixed_income_securities_3ed:p458:0584",
+          "chunk_hash": "7bbb8f045b23213190eafeca4946e5ccb8f922a718741a43cf414f44223765bc",
+          "quote": "Furthermore, since an interest rate swap exchanges a fixed rate for future LIBOR rates, expectations and risk premia with respect to future LIBOR rates will have an impact on observed swap rates",
+          "volume": null
+        },
+        {
+          "role": "supporting",
+          "source_id": "fi_tuckman_serrat_2011_fixed_income_securities_3ed",
+          "legacy_pages": [
+            459,
+            459
+          ],
+          "pdf_pages": [
+            474,
+            474
+          ],
+          "chunk_id": "fi_tuckman_serrat_2011_fixed_income_securities_3ed:p474:0607",
+          "chunk_hash": "2478cf4b1f6c9517ce524764809e06494939d49c16886a01c92794b70454d389",
+          "quote": "In any case, attitudes changed completely through the 2007–2009 crisis as the LIBOR-OIS spread rose to hundreds of basis points (see Chapter 15)",
+          "volume": null
+        },
+        {
+          "role": "supporting",
+          "source_id": "cb_hull_2022_options_futures_derivatives_11ed",
+          "legacy_pages": [
+            174,
+            174
+          ],
+          "pdf_pages": [
+            174,
+            174
+          ],
+          "chunk_id": "cb_hull_2022_options_futures_derivatives_11ed:p174:0263",
+          "chunk_hash": "8b6a84ab31562c3e512d791826241e2e71df5602b5a558884a0b486042e2923e",
+          "quote": "The table shows that the swap is equivalent to the exchange of a floating rate bond (cash flows in the third column) for a fixed rate bond (cash flows in the fourth column)",
+          "volume": null
+        }
+      ]
+    },
+    {
+      "card_id": "fi-term-structure-factor-models",
+      "title": "Term-Structure Factor Models (PCA Level / Slope / Curvature)",
+      "summary_curated": "Principal Component Analysis on the historical covariance of cross-tenor yield changes extracts three orthogonal factors — level, slope, curvature — that explain the bulk of curve variance. The factor-mimicking-portfolio basis is the natural coordinate system for curve trades and a more parsimonious hedge target than the full key-rate vector.",
+      "source_stance": "primary-tuckman",
+      "audit_flag": "ok",
+      "audit_notes": "Tuckman Ch.6 'Empirical Approaches to Risk Metrics and Hedging' verified at pp.171-199 -> PDF 186-214 (+15 offset). Tuckman supporting Ch.5 'Multi-Factor Risk Metrics and Hedges' pp.153-169 -> PDF 168-184 verified topical. Brigo supporting Ch.5 HJM pp.155-190 -> PDF 205-240 verified topical for the continuous-time multi-factor forward-rate generalisation.",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "fi_tuckman_serrat_2011_fixed_income_securities_3ed",
+          "legacy_pages": [
+            172,
+            172
+          ],
+          "pdf_pages": [
+            187,
+            187
+          ],
+          "chunk_id": "fi_tuckman_serrat_2011_fixed_income_securities_3ed:p187:0232",
+          "chunk_hash": "6867b6cbe721a0e39840e3e22ee1b594848df99556900f19afb99a61153421c0",
+          "quote": "The final section of the chapter introduces principal component analysis, which is an empirical description of how rates move together across the curve",
+          "volume": null
+        },
+        {
+          "role": "supporting",
+          "source_id": "fi_tuckman_serrat_2011_fixed_income_securities_3ed",
+          "legacy_pages": [
+            154,
+            154
+          ],
+          "pdf_pages": [
+            169,
+            169
+          ],
+          "chunk_id": "fi_tuckman_serrat_2011_fixed_income_securities_3ed:p169:0207",
+          "chunk_hash": "69b5156567502fd736f9052245a71fb53212097df66434b7d6daf4189d17802f",
+          "quote": "The risk that rates along the term structure move by different amounts is known as curve risk",
+          "volume": null
+        },
+        {
+          "role": "supporting",
+          "source_id": "fi_brigo_mercurio_2006_interest_rate_models_2ed",
+          "legacy_pages": [
+            184,
+            184
+          ],
+          "pdf_pages": [
+            232,
+            232
+          ],
+          "chunk_id": "fi_brigo_mercurio_2006_interest_rate_models_2ed:p232:0301",
+          "chunk_hash": "61b13947189302dbb81be3016ca79aac47e1f382328098d80eb8092aa5c0c048",
+          "quote": "Clearly, if one wishes to directly model this instantaneous forward rate, there is no liberty in selecting the drift of its process, as it is completely determined by the chosen volatility coefficient",
+          "volume": null
+        }
+      ]
+    },
+    {
+      "card_id": "fi-term-structure-theories",
+      "title": "Term-Structure Theories",
+      "summary_curated": "Three classical theories interpret the yield curve: pure expectations says forwards equal expected future spots; liquidity preference adds a positive term premium that grows with horizon; segmented-markets / preferred-habitat says tenor-specific supply / demand anchor the curve locally. Modern arbitrage-free models recast the premium as a risk-neutral / physical drift difference.",
+      "source_stance": "primary-hull",
+      "audit_flag": "wrong_volume_corrected",
+      "audit_notes": "Hull primary pp.95-110 = Ch.4 LIBOR / Interest Rates is topically thin for term-structure theories — the actual three-theory exposition is at Hull pp.116-121 (still Ch.4 §4.11). Brigo supporting pp.10-190 is broad — Ch.1 No-Arbitrage Pricing through Ch.5 HJM — verified topical for the arbitrage-free reinterpretation. Legacy CFA supporting cite 'Vol.5 pp.150-180' maps via +2637 to PDF 2787-2817 = R45 Derivative Markets — NOT term-structure theories. Corrected to Vol.4 R41 pp.551-558 (PDF 2488-2495), the Maturity Structure of Interest Rates section that frames forward-rate / spot-rate algebra the theories interpret.",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "cb_hull_2022_options_futures_derivatives_11ed",
+          "legacy_pages": [
+            116,
+            116
+          ],
+          "pdf_pages": [
+            116,
+            116
+          ],
+          "chunk_id": "cb_hull_2022_options_futures_derivatives_11ed:p116:0170",
+          "chunk_hash": "e8dd841e7e600a4da03aba94c5bed828ecf362359130238030c01444853e40b8",
+          "quote": "The simplest is expectations theory, which conjectures that long-term interest rates should reflect expected future short-term interest rates",
+          "volume": null
+        },
+        {
+          "role": "supporting",
+          "source_id": "fi_brigo_mercurio_2006_interest_rate_models_2ed",
+          "legacy_pages": [
+            14,
+            14
+          ],
+          "pdf_pages": [
+            64,
+            64
+          ],
+          "chunk_id": "fi_brigo_mercurio_2006_interest_rate_models_2ed:p064:0100",
+          "chunk_hash": "0a6c8ca1c3630596246e2ff4cba71c2259ee1829f498b2b50be5fad3b4bdb6b3",
+          "quote": "Instantaneous forward rates are fundamental quantities in the theory of interest rates",
+          "volume": null
+        },
+        {
+          "role": "supporting",
+          "source_id": "cfa_2022_l1_combined",
+          "legacy_pages": [
+            551,
+            551
+          ],
+          "pdf_pages": [
+            2488,
+            2488
+          ],
+          "chunk_id": "cfa_2022_l1_combined:p2488:3664",
+          "chunk_hash": "96363d2837dd8d0e1f62a6906ea4b63771ad920f1f38182475aff8e9af7949ff",
+          "quote": "Sometimes, a spot curve is downward sloping in that shorter-term yields are higher than longer-term yields",
+          "volume": 4
+        }
+      ]
+    },
+    {
+      "card_id": "fi-treasury-futures-basis",
+      "title": "Treasury Futures Basis and Cheapest-to-Deliver",
+      "summary_curated": "A Treasury futures contract obligates the short to deliver from a basket of eligible bonds; the short chooses the cheapest-to-deliver (CTD) by minimising the clean-price basis P_i - F·c_i where c_i is the conversion factor. The implied repo rate (IRR) ranks delivery candidates; CTD-switching optionality belongs to the short and depresses the futures price.",
+      "source_stance": "primary-tuckman",
+      "audit_flag": "ok",
+      "audit_notes": "Tuckman Ch.13 'Forwards and Futures: Preliminaries' + Ch.14 'Note and Bond Futures' verified at pp.351-399 -> PDF 366-414 (+15 offset). Tuckman supporting Ch.12 Repo pp.327-349 -> PDF 342-364 verified topical (IRR carries through to repo specialness). Hull supporting pp.105-130 = Ch.5 'Determination of Forward and Futures Prices' verified topical.",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "fi_tuckman_serrat_2011_fixed_income_securities_3ed",
+          "legacy_pages": [
+            377,
+            377
+          ],
+          "pdf_pages": [
+            392,
+            392
+          ],
+          "chunk_id": "fi_tuckman_serrat_2011_fixed_income_securities_3ed:p392:0489",
+          "chunk_hash": "9d74b58edff980aa761dd9e8b1d27ce9293408c70a90f14e69c79c5cc7a97dff",
+          "quote": "The bond that minimizes the cost of delivery is called the cheapest-to-deliver or the CTD",
+          "volume": null
+        },
+        {
+          "role": "supporting",
+          "source_id": "fi_tuckman_serrat_2011_fixed_income_securities_3ed",
+          "legacy_pages": [
+            347,
+            347
+          ],
+          "pdf_pages": [
+            362,
+            362
+          ],
+          "chunk_id": "fi_tuckman_serrat_2011_fixed_income_securities_3ed:p362:0451",
+          "chunk_hash": "ae7b1b57f274193c3aafaefcba0f0e6ede3cd57ef13a2d091d05dd8aa9b20de4",
+          "quote": "In other words, by the time the then-current 10-year has been around for a month, the specialness of the 31 2 s is projected to have dissipated",
+          "volume": null
+        },
+        {
+          "role": "supporting",
+          "source_id": "cb_hull_2022_options_futures_derivatives_11ed",
+          "legacy_pages": [
+            123,
+            123
+          ],
+          "pdf_pages": [
+            123,
+            123
+          ],
+          "chunk_id": "cb_hull_2022_options_futures_derivatives_11ed:p123:0180",
+          "chunk_hash": "49b6c3fef1f0dfab708063680b684dbbd9f4a7b358c8cc0091c0fcc82e985c3c",
+          "quote": "Forward contracts are easier to analyze than futures contracts because there is no daily settlement—only a single payment at maturity",
+          "volume": null
+        }
+      ]
+    },
+    {
+      "card_id": "fi-yield-and-price-mechanics",
+      "title": "Bond Yield and Price Mechanics",
+      "summary_curated": "A bond's price is the discounted sum of its contractual cashflows; yield-to-maturity (YTM) is the single internal rate that equates the discounted-cashflow sum to the observed price. Price and YTM are inverse representations of the same information. Flat (clean) price excludes accrued; full (dirty) price includes it. Portfolio YTM is NOT the cashflow-weighted average of constituent YTMs.",
+      "source_stance": "primary-cfa",
+      "audit_flag": "wrong_volume_corrected",
+      "audit_notes": "Legacy 'CFA Vol.5 pp.110-150' maps via +2637 to PDF 2747-2787 = mid-R44 Credit Analysis + start of R45 Derivatives — NOT yield/price mechanics. The intended R41 'Introduction to Fixed-Income Valuation' is in Vol.4 at PDF 2454-2524 (Vol.4 pp.517-587 via +1937 offset). Corrected primary cite to Vol.4 R41 pp.519-548 (PDF 2456-2486), the Yield-to-Maturity / Prices and Yields section. Legacy Hull supporting pp.84-95 maps to Ch.3 Hedging Strategies (stock-index futures / portfolio beta) — NOT bond yield/price. Corrected to Hull pp.104-107 (= Ch.4 'Interest Rates' bond-price / yield / par-yield section).",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "cfa_2022_l1_combined",
+          "legacy_pages": [
+            521,
+            521
+          ],
+          "pdf_pages": [
+            2458,
+            2458
+          ],
+          "chunk_id": "cfa_2022_l1_combined:p2458:3615",
+          "chunk_hash": "eed3812135cf22e26f295daab0a92c836ed051f440ec86d01db40b43a44502ab",
+          "quote": "The yield-to-maturity is the rate of return on the bond to an investor given three critical assumptions: 1 The investor holds the bond to maturity",
+          "volume": 4
+        },
+        {
+          "role": "supporting",
+          "source_id": "cb_hull_2022_options_futures_derivatives_11ed",
+          "legacy_pages": [
+            105,
+            105
+          ],
+          "pdf_pages": [
+            105,
+            105
+          ],
+          "chunk_id": "cb_hull_2022_options_futures_derivatives_11ed:p105:0154",
+          "chunk_hash": "0a62819daa964b4fe53ae85c0d28939959dbc0c6ba26c70d46415a146926c0bb",
+          "quote": "(DerivaGem can be used to calculate bond prices.) Bond Yield A bond’s yield is the single discount rate that, when applied to all cash flows, gives a bond price equal to its market price",
+          "volume": null
+        }
+      ]
+    },
+    {
+      "card_id": "fi-yield-curve-construction",
+      "title": "Yield Curve Construction",
+      "summary_curated": "Curve construction inverts the pricing operation: given a vector of bond prices (deposits at the short end, futures/FRAs in the middle, par swaps at the long end), bootstrap each tenor's zero rate iteratively, then choose an interpolation rule (linear-in-zero, cubic spline, monotone cubic in log-discount factor). Small zero-rate differences amplify into large forward-rate differences.",
+      "source_stance": "primary-brigo",
+      "audit_flag": "ok",
+      "audit_notes": "Brigo Ch.1 §1.4 'Forward Rates' verified at pp.10-35 -> PDF 60-85; legacy primary pp.1-30 maps to PDF 51-80 covering Ch.1 §1.1-§1.4 (Bank Account through Forward Rates / Interest-Rate Swaps). Hull supporting pp.84-110 = Ch.4 LIBOR / Zero Rates verified topical. Veronesi supporting pp.50-90 verified topical (Ch.2 Basics of Fixed Income / Yield Curve Construction).",
+      "citations": [
+        {
+          "role": "primary",
+          "source_id": "fi_brigo_mercurio_2006_interest_rate_models_2ed",
+          "legacy_pages": [
+            12,
+            12
+          ],
+          "pdf_pages": [
+            62,
+            62
+          ],
+          "chunk_id": "fi_brigo_mercurio_2006_interest_rate_models_2ed:p062:0097",
+          "chunk_hash": "4fa23726dc19daac0b1316cf7af329bd708771702838f4d29a5fd93e745bb82b",
+          "quote": "Forward rates are interest rates that can be locked in today for an investment in a future time period, and are set consistently with the current term structure of discount factors",
+          "volume": null
+        },
+        {
+          "role": "supporting",
+          "source_id": "cb_hull_2022_options_futures_derivatives_11ed",
+          "legacy_pages": [
+            106,
+            106
+          ],
+          "pdf_pages": [
+            106,
+            106
+          ],
+          "chunk_id": "cb_hull_2022_options_futures_derivatives_11ed:p106:0156",
+          "chunk_hash": "749b45e653901225273ed35eb70ef52cee0e5f7c4d69e72781b4d3bdc5620ae7",
+          "quote": "4.7 DETERMINING ZERO RATES In this section we describe a procedure known as the bootstrap method which can be used to determine zero rates",
+          "volume": null
+        },
+        {
+          "role": "supporting",
+          "source_id": "fi_veronesi_2010_fixed_income_securities",
+          "legacy_pages": [
+            58,
+            58
+          ],
+          "pdf_pages": [
+            96,
+            96
+          ],
+          "chunk_id": "fi_veronesi_2010_fixed_income_securities:p096:0130",
+          "chunk_hash": "7ae7ef1a7b08f2d73a9c3ce07b7c15db3e20cc866c838a15a995afff192580a6",
+          "quote": "Compute the semiannual yield curve, spanning over 9 years, from the data using the bootstrap procedure",
+          "volume": null
+        }
+      ]
+    }
+  ]
+}

@@ -867,13 +867,8 @@ mod tests {
         );
     }
 
-    /// Static cross-check that the Python builder's
-    /// `DEFAULT_THRESHOLD` literal matches the Rust audit's
-    /// `EXPECTED_THRESHOLD`. Closes the third leg of the locked-
-    /// threshold consistency contract (builder ↔ Rust runtime ↔
-    /// sweep). A drift in the Python literal fails this test on
-    /// every `cargo test -p xtask` run even if nobody re-ran the
-    /// builder.
+    /// Static cross-check that the frozen semantic cache's locked
+    /// threshold remains the Rust audit's `EXPECTED_THRESHOLD`.
     #[test]
     fn frozen_threshold_matches_committed_provenance() {
         use crate::semantic_cache_provenance::EXPECTED_THRESHOLD;
