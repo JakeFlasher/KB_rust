@@ -1,59 +1,21 @@
 {
-  "schema_version": "cfa.migration_faithfulness_review.v1",
-  "scope": "Independent SEMANTIC-faithfulness review of the two migration artifacts kb verify cannot judge: the cross-link mapping (migration_cross_links.json, 9 documented pairs / 15 directed links) and the 54 quote repairs (migration_quote_audit.json). kb verify proves only verbatim containment, not that a quote backs the card's claim.",
-  "method": "Four independent skeptical review subagents — one over the cross-link pairs, one per reading (14/15/22) over the quote repairs — each read the cards plus a source-context bundle (build_faithfulness_bundle.py) and returned per-item verdicts faithful/questionable/unfaithful (unfaithful = blocking). Substitutes the analyze/Codex lane under the loop's --privacy posture; the loop's own review provides the external check on this integration.",
-  "totals": {
-    "cross_link_directed_links": 15,
-    "cross_link_faithful": 13,
-    "cross_link_questionable_resolved": 1,
-    "cross_link_blocking_resolved": 1,
-    "quote_repairs": 54,
-    "quote_faithful": 42,
-    "quote_questionable_recorded": 8,
-    "quote_blocking_resolved": 3
-  },
-  "blocking_findings_resolved": [
-    {
-      "kind": "cross_link",
-      "item": "fa-shleifer-vishny-limits-to-arbitrage -> mt-value-traders-arbitrageurs",
-      "finding": "the See Also note claimed both cards 'derive the same performance-sensitive-capital limits-to-arbitrage mechanism', but mt-value-traders-arbitrageurs is a Harris value-trader/arbitrageur taxonomy (liquidity suppliers of last resort; arbitrageurs enforce the law of one price) and contains no performance-sensitive-capital / forced-liquidation model.",
-      "resolution": "dropped mt-value-traders-arbitrageurs from the pair in migration_cross_links.json (pair keeps mt-funding-liquidity-fire-sales + be-limits-of-arbitrage, both confirmed faithful), AND added a committed deterministic skeleton-prose rewrite (migration_cross_links.json skeleton_prose_rewrites) applied by the emitter so the GENERATED fa-shleifer-vishny card no longer names mt-value-traders-arbitrageurs nor repeats the false 'both derive the same mechanism' claim — the mechanism is now attributed only to mt-funding-liquidity-fire-sales. The cross-link validator gained a forbidden-mention check that fails if the withdrawn counterpart survives in a migrated card's See Also. Validator re-run PASS; endpoints kb verify PASS."
-    },
-    {
-      "kind": "quote_repair",
-      "card_id": "pa-currency-attribution-karnosky-singer",
-      "finding": "the heuristic re-anchored to a PDF typesetting running-header ('Trim Size: 170mm x 244mm ... c06.tex ...') with zero semantic content.",
-      "resolution": "reviewed_faithful_reanchor override -> 'by using continuously compounded returns in their model and solve the forward premium concern' (page corrected 323->322 to the page holding the run); kb verify PASS."
-    },
-    {
-      "kind": "quote_repair",
-      "card_id": "mt-execution-systems-quote-vs-order-driven",
-      "finding": "the heuristic re-anchored to an unrelated market-hours sentence ('Traders use the hours before the open to collect and submit orders'); the cited execution-system taxonomy sentence on the same page is U+FFFE-broken at 'quote-driven'.",
-      "resolution": "reviewed_faithful_reanchor override -> 'order-driven markets, and brokered markets.' (clean on-page run naming the execution systems the card defines); kb verify PASS."
-    },
-    {
-      "kind": "quote_repair",
-      "card_id": "fa-iiv-iopv-intraday-fair-value",
-      "finding": "the heuristic re-anchored to an adjacent return-innovation equation sentence unrelated to the card's 'three distinct values' claim.",
-      "resolution": "reviewed_faithful_reanchor override -> 'values: (1) the ETF secondary market price, (2) NAV, and (3) the' (the on-page enumeration of the three values); kb verify PASS."
-    }
+  "schema_version": "cfa.migration_faithfulness_review.v2",
+  "reviewer": "codex gpt-5.5:high (RLCR round 1, 2026-06-03)",
+  "scope": "46 spot-check items: 28 BF/RM re-anchors + 18 flagged-card bindings (incl. be-neglected-tail-risk, 2 LPPL, 3 FS, 2 zero-match overrides)",
+  "blocking_unfaithful_count": 14,
+  "blocking_cards": [
+    "be-confirmation-prior-biased-inference",
+    "be-cumulative-prospect-theory-risk",
+    "be-destabilizing-arbitrage-positive-feedback",
+    "be-evolutionary-capm-time-varying-beta",
+    "be-fundamentalist-chartist-ham",
+    "be-moderate-vs-adapt-bias-allocation",
+    "be-prospect-theory-three-characteristic-pricing",
+    "be-sparsity-attention-framework",
+    "rm-cramer-lundberg-heavy-tail-ruin",
+    "rm-kusuoka-law-invariant-representation",
+    "rm-conditional-dynamic-risk-measures",
+    "rm-time-consistency-recursiveness"
   ],
-  "questionable_non_blocking": [
-    {"kind": "cross_link", "item": "fa-market-liquidity-dimensions-and-no-arbitrage -> mt-three-dimensions-liquidity", "note": "the pair note over-claimed a shared spread/depth/resiliency triad (mt-three-dimensions-liquidity is a market/funding/monetary trichotomy). RESOLVED this round by rewording the note to be accurate for both counterparts; the See Also link stands (both are liquidity-dimension cards)."},
-    {"kind": "quote_repair", "card_id": "mt-block-trader-upstairs-depth", "note": "re-anchor (overlap 0.071) shifts to a narrower 'dealers trade out at a profit' point vs the original screening claim."},
-    {"kind": "quote_repair", "card_id": "mt-market-manipulation-bluffing", "note": "re-anchor to a specific stop-gunning tactic vs the general manipulation definition the card defines."},
-    {"kind": "quote_repair", "card_id": "pa-dgtw-cs-ct-as-decomposition", "note": "re-anchor supports the card's Boundary-Notes liquidity caveat, not the bound 125-fractile grid definition."},
-    {"kind": "quote_repair", "card_id": "pa-gips-2020-composites-and-mechanics", "note": "re-anchor to a tangential business-efficiency aside vs the GIPS definition the citation anchors."},
-    {"kind": "quote_repair", "card_id": "pa-fi-carry-rolldown-pulltopar-time-decomposition", "note": "re-anchor to a 'rolldown seldom substantial' magnitude claim the card does not itself make."},
-    {"kind": "quote_repair", "card_id": "fa-liquidity-adjusted-var", "note": "final trim asserts only that the LVaR concept 'is simple'; the return/liquidity two-component split it leans on is in context but not in the quote."},
-    {"kind": "quote_repair", "card_id": "fa-search-bargaining-liquidity-premium", "note": "a trim ends before the 'bargaining power of the market maker' clause the card quotes; restored only by context."},
-    {"kind": "quote_repair", "card_id": "fa-shleifer-vishny-limits-to-arbitrage", "note": "a trim stops before the 'allocated capital depends on past performance' clause (the performance-sensitive-capital point); restored by context."}
-  ],
-  "follow_up": "The questionable (non-blocking) items are conservative trims/re-anchors whose final quote is a verbatim substring that supports an adjacent or context-restored point; they are filed for the post-v1 anchor-truth quality pass, not fixed here, to avoid over-editing faithful-enough quotes.",
-  "reviewer_summaries": {
-    "cross_links": "13/15 links faithful; the complementary links are not over-claimed as duplicates; one blocking mislink (mt-value-traders-arbitrageurs) and one over-claimed note (mt-three-dimensions-liquidity) both resolved.",
-    "reading_14": "20 repairs (11 trim / 9 reanchor): 17 faithful, 2 questionable, 1 blocking (mt-execution-systems re-anchored off the taxonomy onto market hours) resolved; all trims preserve the load-bearing proposition.",
-    "reading_15": "17 repairs (6 trim / 11 reanchor): 13 faithful, 3 questionable, 1 blocking (pa-currency-attribution re-anchored to a PDF header) resolved.",
-    "reading_22": "17 repairs (10 trim / 7 reanchor): 12 faithful, several questionable, 1 blocking (fa-iiv-iopv re-anchored to an off-topic equation) resolved."
-  }
+  "verdict_raw": "be-bjw-anomaly-pricing-model | bf_barberis_jin_wang_2021_pt_anomalies | FAITHFUL | Supports GH skewed-t distribution adoption\nbe-bjw-anomaly-pricing-model | bf_barberis_jin_wang_2021_pt_anomalies | FAITHFUL | Supports stated preference parameters\nbe-brock-hommes-switching | bf_compecon_v4_2018_ham | QUESTIONABLE | Supports profit input, not switching rule\nbe-closed-end-fund-puzzle | bf_shleifer_2000_inefficient_markets | QUESTIONABLE | Supports sentiment risk, not full puzzle\nbe-cognitive-vs-emotional-bias-taxonomy | bf_pompian_2006_bfwm | QUESTIONABLE | Supports taxonomy usefulness only\nbe-confirmation-prior-biased-inference | bf_hbe_vol2_2019 | UNFAITHFUL | Incomplete equation reference\nbe-cumulative-prospect-theory-risk | bf_wakker_2010_pt_risk_ambiguity | UNFAITHFUL | Discusses stochastic dominance, not CPT construction\nbe-destabilizing-arbitrage-positive-feedback | bf_shleifer_2000_inefficient_markets | FAITHFUL | Supports anticipatory positive-feedback buying\nbe-destabilizing-arbitrage-positive-feedback | bf_shleifer_2000_inefficient_markets | UNFAITHFUL | Header fragment, not substantive support\nbe-evolutionary-capm-time-varying-beta | bf_compecon_v4_2018_ham | UNFAITHFUL | Figure description, not CAPM beta relation\nbe-fund-flow-pressure | bf_shleifer_2000_inefficient_markets | FAITHFUL | Supports capital erosion during attractive opportunities\nbe-fundamentalist-chartist-ham | bf_compecon_v4_2018_ham | UNFAITHFUL | Broken fragment lacks model support\nbe-investor-overreaction | bf_shleifer_2000_inefficient_markets | QUESTIONABLE | Supports reversal evidence, not overreaction mechanism\nbe-kernel-of-truth | bf_gennaioli_shleifer_2018_crisis_beliefs | QUESTIONABLE | Example supports representativeness only\nbe-loss-aversion-reference-dependence | bf_wakker_2010_pt_risk_ambiguity | FAITHFUL | Directly supports loss aversion\nbe-moderate-vs-adapt-bias-allocation | bf_pompian_2006_bfwm | UNFAITHFUL | Generic chapter aim, not decision rules\nbe-moderate-vs-adapt-bias-allocation | bf_pompian_2006_bfwm | QUESTIONABLE | Supports emotional-bias difficulty only\nbe-overconfidence-disagreement-short-sale | bf_hbe_vol1_2018 | FAITHFUL | Directly supports disagreement and short-sale mechanism\nbe-probability-weighting-inverse-s | bf_wakker_2010_pt_risk_ambiguity | QUESTIONABLE | Supports likelihood-insensitivity parameter only\nbe-prospect-theory-asset-pricing | bf_hbe_vol1_2018 | FAITHFUL | Supports loss aversion producing high equity premium\nbe-prospect-theory-three-characteristic-pricing | bf_barberis_jin_wang_2021_pt_anomalies | UNFAITHFUL | Generic sentence lacks characteristic pricing support\nbe-quasi-hyperbolic-discounting | bf_hbe_vol2_2019 | FAITHFUL | Supports beta-delta utility terms\nbe-rank-dependent-utility-via-ranks | bf_wakker_2010_pt_risk_ambiguity | QUESTIONABLE | Supports rank term, not marginal weighting\nbe-representativeness-strength-vs-weight | bf_hbe_vol2_2019 | FAITHFUL | Supports sample proportion outweighing sample size\nbe-representativeness-strength-vs-weight | bf_hbe_vol2_2019 | QUESTIONABLE | Supports strength-weight distinction only\nbe-sparsity-attention-framework | bf_hbe_vol2_2019 | UNFAITHFUL | Vague setup lacks sparse-max details\nbe-square-root-impact-zero-intelligence | bf_compecon_v4_2018_ham | QUESTIONABLE | Supports square-root law only\nrm-cramer-lundberg-heavy-tail-ruin | rm_embrechts_kluppelberg_mikosch_1997_modelling_extremal_events | UNFAITHFUL | Incomplete fragment lacks ruin asymptotic\nbe-neglected-tail-risk | bf_gennaioli_shleifer_2018_crisis_beliefs | FAITHFUL | Supports non-increased volatility condition\nbe-neglected-tail-risk | bf_gennaioli_shleifer_2018_crisis_beliefs | FAITHFUL | Supports optimism and tail-risk neglect\nbe-neglected-tail-risk | bf_gennaioli_shleifer_2018_crisis_beliefs | FAITHFUL | Supports pooled neglected fragility\nrm-lppl-precursor-formula-contested | rm_sornette_2017_why_stock_markets_crash | FAITHFUL | Supports LPPL singular crash precursor\nrm-crash-as-critical-point | rm_sornette_2017_why_stock_markets_crash | QUESTIONABLE | Supports order-disorder crash idea only\nrm-kusuoka-law-invariant-representation | rm_follmer_schied_2025_stochastic_finance | QUESTIONABLE | Supports AV@R building-block role\nrm-kusuoka-law-invariant-representation | rm_follmer_schied_2025_stochastic_finance | UNFAITHFUL | Incomplete iff statement\nrm-kusuoka-law-invariant-representation | rm_follmer_schied_2025_stochastic_finance | FAITHFUL | Supports law-invariance implying Fatou property\nrm-conditional-dynamic-risk-measures | rm_follmer_schied_2025_stochastic_finance | UNFAITHFUL | Incomplete convexity lead-in\nrm-conditional-dynamic-risk-measures | rm_follmer_schied_2025_stochastic_finance | FAITHFUL | Supports conditional minimal penalty representation\nrm-conditional-dynamic-risk-measures | rm_follmer_schied_2025_stochastic_finance | UNFAITHFUL | Entropy example does not support general claim\nrm-time-consistency-recursiveness | rm_follmer_schied_2025_stochastic_finance | QUESTIONABLE | Supports equivalence existence, not properties\nrm-time-consistency-recursiveness | rm_follmer_schied_2025_stochastic_finance | QUESTIONABLE | Supports recursiveness example only\nrm-time-consistency-recursiveness | rm_follmer_schied_2025_stochastic_finance | UNFAITHFUL | Subjectless negative fragment\nrm-time-consistency-recursiveness | rm_follmer_schied_2025_stochastic_finance | UNFAITHFUL | Fragment omits supermartingale criterion\nbe-square-root-impact-zero-intelligence | bf_compecon_v4_2018_ham | FAITHFUL | Supports square-root impact evidence\nbe-square-root-impact-zero-intelligence | bf_compecon_v4_2018_ham | FAITHFUL | Supports random zero-intelligence order flows\nbe-square-root-impact-zero-intelligence | bf_compecon_v4_2018_ham | FAITHFUL | Supports Poisson limit-order flow\n\nBLOCKING_UNFAITHFUL: 14 be-confirmation-prior-biased-inference, be-cumulative-prospect-theory-risk, be-destabilizing-arbitrage-positive-feedback, be-evolutionary-capm-time-varying-beta, be-fundamentalist-chartist-ham, be-moderate-vs-adapt-bias-allocation, be-prospect-theory-three-characteristic-pricing, be-sparsity-attention-framework, rm-cramer-lundberg-heavy-tail-ruin, rm-kusuoka-law-invariant-representation, rm-conditional-dynamic-risk-measures, rm-time-consistency-recursiveness\n"
 }

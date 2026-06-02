@@ -1,0 +1,25 @@
+{
+  "net_new_chunks": 9982,
+  "net_new_sources": [
+    "bf_barberis_jin_wang_2021_pt_anomalies",
+    "bf_compecon_v4_2018_ham",
+    "bf_hbe_vol1_2018",
+    "bf_hbe_vol2_2019",
+    "bf_pompian_2006_bfwm",
+    "bf_wakker_2010_pt_risk_ambiguity",
+    "rm_bouchaud_potters_2003_theory_financial_risk",
+    "rm_christoffersen_2012_elements",
+    "rm_embrechts_kluppelberg_mikosch_1997_modelling_extremal_events",
+    "rm_follmer_schied_2025_stochastic_finance",
+    "rm_gregory_2020_xva_challenge",
+    "rm_hull_2023_rmfi",
+    "rm_potters_bouchaud_2020_random_matrix_theory",
+    "rm_sornette_2017_why_stock_markets_crash"
+  ],
+  "post_merge_chunks": 75291,
+  "post_merge_sources": 101,
+  "pre_ingest_baseline_chunks": 65309,
+  "prior_87_byte_stable": true,
+  "prior_changed": 0,
+  "prior_missing": 0
+}

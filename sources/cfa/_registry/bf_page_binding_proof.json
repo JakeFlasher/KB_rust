@@ -1,0 +1,870 @@
+{
+  "all_within_span": true,
+  "derivation_status_counts": {
+    "auto": 169,
+    "recall_located": 45,
+    "reviewed_override": 12
+  },
+  "nonverbatim_bindings": [
+    {
+      "bound_chunk": "bf_hbe_vol1_2018:p159:0248",
+      "card_id": "be-ambiguity-aversion-asset-pricing",
+      "chunk_span": [
+        159,
+        160
+      ],
+      "derivation": "recall_located",
+      "page_range": [
+        160,
+        160
+      ],
+      "source_id": "bf_hbe_vol1_2018",
+      "within_span": true
+    },
+    {
+      "bound_chunk": "bf_wakker_2010_pt_risk_ambiguity:p334:0458",
+      "card_id": "be-ambiguity-sources-ellsberg",
+      "chunk_span": [
+        334,
+        335
+      ],
+      "derivation": "recall_located",
+      "page_range": [
+        334,
+        334
+      ],
+      "source_id": "bf_wakker_2010_pt_risk_ambiguity",
+      "within_span": true
+    },
+    {
+      "bound_chunk": "bf_wakker_2010_pt_risk_ambiguity:p336:0461",
+      "card_id": "be-ambiguity-sources-ellsberg",
+      "chunk_span": [
+        336,
+        337
+      ],
+      "derivation": "recall_located",
+      "page_range": [
+        336,
+        336
+      ],
+      "source_id": "bf_wakker_2010_pt_risk_ambiguity",
+      "within_span": true
+    },
+    {
+      "bound_chunk": "bf_gennaioli_shleifer_2018_crisis_beliefs:p194:0185",
+      "card_id": "be-belief-driven-credit-cycle",
+      "chunk_span": [
+        194,
+        195
+      ],
+      "derivation": "reviewed_override",
+      "page_range": [
+        194,
+        194
+      ],
+      "source_id": "bf_gennaioli_shleifer_2018_crisis_beliefs",
+      "within_span": true
+    },
+    {
+      "bound_chunk": "bf_compecon_v4_2018_ham:p286:0407",
+      "card_id": "be-bifurcation-route-instability",
+      "chunk_span": [
+        286,
+        287
+      ],
+      "derivation": "recall_located",
+      "page_range": [
+        286,
+        286
+      ],
+      "source_id": "bf_compecon_v4_2018_ham",
+      "within_span": true
+    },
+    {
+      "bound_chunk": "bf_compecon_v4_2018_ham:p286:0406",
+      "card_id": "be-bifurcation-route-instability",
+      "chunk_span": [
+        286,
+        286
+      ],
+      "derivation": "recall_located",
+      "page_range": [
+        286,
+        286
+      ],
+      "source_id": "bf_compecon_v4_2018_ham",
+      "within_span": true
+    },
+    {
+      "bound_chunk": "bf_compecon_v4_2018_ham:p286:0407",
+      "card_id": "be-bifurcation-route-instability",
+      "chunk_span": [
+        286,
+        287
+      ],
+      "derivation": "recall_located",
+      "page_range": [
+        287,
+        287
+      ],
+      "source_id": "bf_compecon_v4_2018_ham",
+      "within_span": true
+    },
+    {
+      "bound_chunk": "bf_barberis_jin_wang_2021_pt_anomalies:p023:0029",
+      "card_id": "be-bjw-anomaly-pricing-model",
+      "chunk_span": [
+        23,
+        24
+      ],
+      "derivation": "recall_located",
+      "page_range": [
+        23,
+        23
+      ],
+      "source_id": "bf_barberis_jin_wang_2021_pt_anomalies",
+      "within_span": true
+    },
+    {
+      "bound_chunk": "bf_barberis_jin_wang_2021_pt_anomalies:p016:0019",
+      "card_id": "be-bjw-anomaly-pricing-model",
+      "chunk_span": [
+        16,
+        16
+      ],
+      "derivation": "recall_located",
+      "page_range": [
+        16,
+        16
+      ],
+      "source_id": "bf_barberis_jin_wang_2021_pt_anomalies",
+      "within_span": true
+    },
+    {
+      "bound_chunk": "bf_barberis_jin_wang_2021_pt_anomalies:p015:0018",
+      "card_id": "be-bjw-anomaly-pricing-model",
+      "chunk_span": [
+        15,
+        16
+      ],
+      "derivation": "recall_located",
+      "page_range": [
+        15,
+        15
+      ],
+      "source_id": "bf_barberis_jin_wang_2021_pt_anomalies",
+      "within_span": true
+    },
+    {
+      "bound_chunk": "bf_barberis_jin_wang_2021_pt_anomalies:p032:0042",
+      "card_id": "be-bjw-anomaly-pricing-model",
+      "chunk_span": [
+        32,
+        33
+      ],
+      "derivation": "reviewed_override",
+      "page_range": [
+        33,
+        33
+      ],
+      "source_id": "bf_barberis_jin_wang_2021_pt_anomalies",
+      "within_span": true
+    },
+    {
+      "bound_chunk": "bf_barberis_jin_wang_2021_pt_anomalies:p018:0023",
+      "card_id": "be-bjw-bounded-rationality-equilibrium",
+      "chunk_span": [
+        18,
+        19
+      ],
+      "derivation": "recall_located",
+      "page_range": [
+        19,
+        19
+      ],
+      "source_id": "bf_barberis_jin_wang_2021_pt_anomalies",
+      "within_span": true
+    },
+    {
+      "bound_chunk": "bf_barberis_jin_wang_2021_pt_anomalies:p020:0025",
+      "card_id": "be-bjw-bounded-rationality-equilibrium",
+      "chunk_span": [
+        20,
+        21
+      ],
+      "derivation": "recall_located",
+      "page_range": [
+        20,
+        20
+      ],
+      "source_id": "bf_barberis_jin_wang_2021_pt_anomalies",
+      "within_span": true
+    },
+    {
+      "bound_chunk": "bf_compecon_v4_2018_ham:p284:0403",
+      "card_id": "be-brock-hommes-switching",
+      "chunk_span": [
+        284,
+        285
+      ],
+      "derivation": "recall_located",
+      "page_range": [
+        284,
+        284
+      ],
+      "source_id": "bf_compecon_v4_2018_ham",
+      "within_span": true
+    },
+    {
+      "bound_chunk": "bf_compecon_v4_2018_ham:p284:0403",
+      "card_id": "be-brock-hommes-switching",
+      "chunk_span": [
+        284,
+        285
+      ],
+      "derivation": "reviewed_override",
+      "page_range": [
+        284,
+        284
+      ],
+      "source_id": "bf_compecon_v4_2018_ham",
+      "within_span": true
+    },
+    {
+      "bound_chunk": "bf_compecon_v4_2018_ham:p284:0403",
+      "card_id": "be-brock-hommes-switching",
+      "chunk_span": [
+        284,
+        285
+      ],
+      "derivation": "recall_located",
+      "page_range": [
+        284,
+        284
+      ],
+      "source_id": "bf_compecon_v4_2018_ham",
+      "within_span": true
+    },
+    {
+      "bound_chunk": "bf_hbe_vol2_2019:p043:0064",
+      "card_id": "be-commitment-and-naivete",
+      "chunk_span": [
+        43,
+        43
+      ],
+      "derivation": "recall_located",
+      "page_range": [
+        43,
+        43
+      ],
+      "source_id": "bf_hbe_vol2_2019",
+      "within_span": true
+    },
+    {
+      "bound_chunk": "bf_hbe_vol2_2019:p164:0264",
+      "card_id": "be-confirmation-prior-biased-inference",
+      "chunk_span": [
+        164,
+        164
+      ],
+      "derivation": "recall_located",
+      "page_range": [
+        164,
+        164
+      ],
+      "source_id": "bf_hbe_vol2_2019",
+      "within_span": true
+    },
+    {
+      "bound_chunk": "bf_wakker_2010_pt_risk_ambiguity:p270:0365",
+      "card_id": "be-cumulative-prospect-theory-risk",
+      "chunk_span": [
+        270,
+        270
+      ],
+      "derivation": "reviewed_override",
+      "page_range": [
+        270,
+        270
+      ],
+      "source_id": "bf_wakker_2010_pt_risk_ambiguity",
+      "within_span": true
+    },
+    {
+      "bound_chunk": "bf_shleifer_2000_inefficient_markets:p175:0197",
+      "card_id": "be-destabilizing-arbitrage-positive-feedback",
+      "chunk_span": [
+        175,
+        176
+      ],
+      "derivation": "recall_located",
+      "page_range": [
+        176,
+        176
+      ],
+      "source_id": "bf_shleifer_2000_inefficient_markets",
+      "within_span": true
+    },
+    {
+      "bound_chunk": "bf_compecon_v4_2018_ham:p285:0405",
+      "card_id": "be-emergent-heterogeneity-volatility-feedback",
+      "chunk_span": [
+        285,
+        286
+      ],
+      "derivation": "recall_located",
+      "page_range": [
+        286,
+        286
+      ],
+      "source_id": "bf_compecon_v4_2018_ham",
+      "within_span": true
+    },
+    {
+      "bound_chunk": "bf_compecon_v4_2018_ham:p312:0445",
+      "card_id": "be-evolutionary-capm-time-varying-beta",
+      "chunk_span": [
+        312,
+        312
+      ],
+      "derivation": "recall_located",
+      "page_range": [
+        312,
+        312
+      ],
+      "source_id": "bf_compecon_v4_2018_ham",
+      "within_span": true
+    },
+    {
+      "bound_chunk": "bf_hbe_vol1_2018:p041:0056",
+      "card_id": "be-expectations-based-reference-points",
+      "chunk_span": [
+        41,
+        41
+      ],
+      "derivation": "recall_located",
+      "page_range": [
+        41,
+        41
+      ],
+      "source_id": "bf_hbe_vol1_2018",
+      "within_span": true
+    },
+    {
+      "bound_chunk": "bf_compecon_v4_2018_ham:p509:0760",
+      "card_id": "be-experimental-asset-bubbles",
+      "chunk_span": [
+        509,
+        510
+      ],
+      "derivation": "recall_located",
+      "page_range": [
+        510,
+        510
+      ],
+      "source_id": "bf_compecon_v4_2018_ham",
+      "within_span": true
+    },
+    {
+      "bound_chunk": "bf_compecon_v4_2018_ham:p283:0401",
+      "card_id": "be-fundamentalist-chartist-ham",
+      "chunk_span": [
+        283,
+        283
+      ],
+      "derivation": "reviewed_override",
+      "page_range": [
+        283,
+        283
+      ],
+      "source_id": "bf_compecon_v4_2018_ham",
+      "within_span": true
+    },
+    {
+      "bound_chunk": "bf_hbe_vol2_2019:p046:0070",
+      "card_id": "be-household-liquidity-illiquidity-puzzle",
+      "chunk_span": [
+        46,
+        47
+      ],
+      "derivation": "reviewed_override",
+      "page_range": [
+        47,
+        47
+      ],
+      "source_id": "bf_hbe_vol2_2019",
+      "within_span": true
+    },
+    {
+      "bound_chunk": "bf_compecon_v4_2018_ham:p601:0894",
+      "card_id": "be-keynesian-beauty-contest-level-k",
+      "chunk_span": [
+        601,
+        601
+      ],
+      "derivation": "recall_located",
+      "page_range": [
+        601,
+        601
+      ],
+      "source_id": "bf_compecon_v4_2018_ham",
+      "within_span": true
+    },
+    {
+      "bound_chunk": "bf_compecon_v4_2018_ham:p601:0895",
+      "card_id": "be-keynesian-beauty-contest-level-k",
+      "chunk_span": [
+        601,
+        602
+      ],
+      "derivation": "reviewed_override",
+      "page_range": [
+        602,
+        602
+      ],
+      "source_id": "bf_compecon_v4_2018_ham",
+      "within_span": true
+    },
+    {
+      "bound_chunk": "bf_wakker_2010_pt_risk_ambiguity:p254:0342",
+      "card_id": "be-loss-aversion-reference-dependence",
+      "chunk_span": [
+        254,
+        255
+      ],
+      "derivation": "recall_located",
+      "page_range": [
+        255,
+        255
+      ],
+      "source_id": "bf_wakker_2010_pt_risk_ambiguity",
+      "within_span": true
+    },
+    {
+      "bound_chunk": "bf_pompian_2006_bfwm:p231:0246",
+      "card_id": "be-myopic-loss-aversion-equity-premium",
+      "chunk_span": [
+        231,
+        232
+      ],
+      "derivation": "recall_located",
+      "page_range": [
+        232,
+        232
+      ],
+      "source_id": "bf_pompian_2006_bfwm",
+      "within_span": true
+    },
+    {
+      "bound_chunk": "bf_pompian_2006_bfwm:p071:0072",
+      "card_id": "be-overconfidence-bias",
+      "chunk_span": [
+        71,
+        72
+      ],
+      "derivation": "recall_located",
+      "page_range": [
+        72,
+        72
+      ],
+      "source_id": "bf_pompian_2006_bfwm",
+      "within_span": true
+    },
+    {
+      "bound_chunk": "bf_hbe_vol1_2018:p124:0188",
+      "card_id": "be-overconfidence-self-attribution-prices",
+      "chunk_span": [
+        124,
+        124
+      ],
+      "derivation": "recall_located",
+      "page_range": [
+        124,
+        124
+      ],
+      "source_id": "bf_hbe_vol1_2018",
+      "within_span": true
+    },
+    {
+      "bound_chunk": "bf_hbe_vol1_2018:p124:0188",
+      "card_id": "be-overconfidence-self-attribution-prices",
+      "chunk_span": [
+        124,
+        124
+      ],
+      "derivation": "recall_located",
+      "page_range": [
+        124,
+        124
+      ],
+      "source_id": "bf_hbe_vol1_2018",
+      "within_span": true
+    },
+    {
+      "bound_chunk": "bf_hbe_vol1_2018:p124:0188",
+      "card_id": "be-overconfidence-self-attribution-prices",
+      "chunk_span": [
+        124,
+        124
+      ],
+      "derivation": "recall_located",
+      "page_range": [
+        124,
+        124
+      ],
+      "source_id": "bf_hbe_vol1_2018",
+      "within_span": true
+    },
+    {
+      "bound_chunk": "bf_wakker_2010_pt_risk_ambiguity:p225:0299",
+      "card_id": "be-probability-weighting-inverse-s",
+      "chunk_span": [
+        225,
+        226
+      ],
+      "derivation": "recall_located",
+      "page_range": [
+        225,
+        225
+      ],
+      "source_id": "bf_wakker_2010_pt_risk_ambiguity",
+      "within_span": true
+    },
+    {
+      "bound_chunk": "bf_hbe_vol1_2018:p153:0237",
+      "card_id": "be-prospect-theory-asset-pricing",
+      "chunk_span": [
+        153,
+        153
+      ],
+      "derivation": "recall_located",
+      "page_range": [
+        153,
+        153
+      ],
+      "source_id": "bf_hbe_vol1_2018",
+      "within_span": true
+    },
+    {
+      "bound_chunk": "bf_barberis_jin_wang_2021_pt_anomalies:p044:0057",
+      "card_id": "be-prospect-theory-ingredient-decomposition",
+      "chunk_span": [
+        44,
+        45
+      ],
+      "derivation": "recall_located",
+      "page_range": [
+        45,
+        45
+      ],
+      "source_id": "bf_barberis_jin_wang_2021_pt_anomalies",
+      "within_span": true
+    },
+    {
+      "bound_chunk": "bf_barberis_jin_wang_2021_pt_anomalies:p045:0058",
+      "card_id": "be-prospect-theory-ingredient-decomposition",
+      "chunk_span": [
+        45,
+        46
+      ],
+      "derivation": "recall_located",
+      "page_range": [
+        45,
+        45
+      ],
+      "source_id": "bf_barberis_jin_wang_2021_pt_anomalies",
+      "within_span": true
+    },
+    {
+      "bound_chunk": "bf_barberis_jin_wang_2021_pt_anomalies:p002:0002",
+      "card_id": "be-prospect-theory-three-characteristic-pricing",
+      "chunk_span": [
+        2,
+        3
+      ],
+      "derivation": "reviewed_override",
+      "page_range": [
+        2,
+        3
+      ],
+      "source_id": "bf_barberis_jin_wang_2021_pt_anomalies",
+      "within_span": true
+    },
+    {
+      "bound_chunk": "bf_barberis_jin_wang_2021_pt_anomalies:p010:0012",
+      "card_id": "be-prospect-theory-three-characteristic-pricing",
+      "chunk_span": [
+        10,
+        11
+      ],
+      "derivation": "reviewed_override",
+      "page_range": [
+        11,
+        11
+      ],
+      "source_id": "bf_barberis_jin_wang_2021_pt_anomalies",
+      "within_span": true
+    },
+    {
+      "bound_chunk": "bf_barberis_jin_wang_2021_pt_anomalies:p012:0014",
+      "card_id": "be-prospect-theory-three-characteristic-pricing",
+      "chunk_span": [
+        12,
+        13
+      ],
+      "derivation": "recall_located",
+      "page_range": [
+        12,
+        12
+      ],
+      "source_id": "bf_barberis_jin_wang_2021_pt_anomalies",
+      "within_span": true
+    },
+    {
+      "bound_chunk": "bf_hbe_vol2_2019:p016:0019",
+      "card_id": "be-quasi-hyperbolic-discounting",
+      "chunk_span": [
+        16,
+        17
+      ],
+      "derivation": "recall_located",
+      "page_range": [
+        17,
+        17
+      ],
+      "source_id": "bf_hbe_vol2_2019",
+      "within_span": true
+    },
+    {
+      "bound_chunk": "bf_hbe_vol2_2019:p017:0021",
+      "card_id": "be-quasi-hyperbolic-discounting",
+      "chunk_span": [
+        17,
+        18
+      ],
+      "derivation": "recall_located",
+      "page_range": [
+        18,
+        18
+      ],
+      "source_id": "bf_hbe_vol2_2019",
+      "within_span": true
+    },
+    {
+      "bound_chunk": "bf_wakker_2010_pt_risk_ambiguity:p181:0240",
+      "card_id": "be-rank-dependent-utility-via-ranks",
+      "chunk_span": [
+        181,
+        182
+      ],
+      "derivation": "reviewed_override",
+      "page_range": [
+        182,
+        182
+      ],
+      "source_id": "bf_wakker_2010_pt_risk_ambiguity",
+      "within_span": true
+    },
+    {
+      "bound_chunk": "bf_hbe_vol2_2019:p320:0522",
+      "card_id": "be-rational-inattention-entropy",
+      "chunk_span": [
+        320,
+        321
+      ],
+      "derivation": "recall_located",
+      "page_range": [
+        320,
+        320
+      ],
+      "source_id": "bf_hbe_vol2_2019",
+      "within_span": true
+    },
+    {
+      "bound_chunk": "bf_gennaioli_shleifer_2018_crisis_beliefs:p184:0175",
+      "card_id": "be-rational-vs-diagnostic-expectations",
+      "chunk_span": [
+        184,
+        185
+      ],
+      "derivation": "recall_located",
+      "page_range": [
+        185,
+        185
+      ],
+      "source_id": "bf_gennaioli_shleifer_2018_crisis_beliefs",
+      "within_span": true
+    },
+    {
+      "bound_chunk": "bf_compecon_v4_2018_ham:p523:0780",
+      "card_id": "be-rationally-heterogeneous-expectations",
+      "chunk_span": [
+        523,
+        524
+      ],
+      "derivation": "recall_located",
+      "page_range": [
+        523,
+        523
+      ],
+      "source_id": "bf_compecon_v4_2018_ham",
+      "within_span": true
+    },
+    {
+      "bound_chunk": "bf_hbe_vol1_2018:p020:0025",
+      "card_id": "be-reference-dependent-preferences-foundations",
+      "chunk_span": [
+        20,
+        21
+      ],
+      "derivation": "recall_located",
+      "page_range": [
+        21,
+        21
+      ],
+      "source_id": "bf_hbe_vol1_2018",
+      "within_span": true
+    },
+    {
+      "bound_chunk": "bf_pompian_2006_bfwm:p267:0285",
+      "card_id": "be-regret-aversion-status-quo-endowment",
+      "chunk_span": [
+        267,
+        268
+      ],
+      "derivation": "recall_located",
+      "page_range": [
+        268,
+        268
+      ],
+      "source_id": "bf_pompian_2006_bfwm",
+      "within_span": true
+    },
+    {
+      "bound_chunk": "bf_hbe_vol2_2019:p155:0250",
+      "card_id": "be-representativeness-strength-vs-weight",
+      "chunk_span": [
+        155,
+        155
+      ],
+      "derivation": "recall_located",
+      "page_range": [
+        155,
+        155
+      ],
+      "source_id": "bf_hbe_vol2_2019",
+      "within_span": true
+    },
+    {
+      "bound_chunk": "bf_hbe_vol2_2019:p155:0250",
+      "card_id": "be-representativeness-strength-vs-weight",
+      "chunk_span": [
+        155,
+        155
+      ],
+      "derivation": "reviewed_override",
+      "page_range": [
+        155,
+        155
+      ],
+      "source_id": "bf_hbe_vol2_2019",
+      "within_span": true
+    },
+    {
+      "bound_chunk": "bf_hbe_vol2_2019:p156:0252",
+      "card_id": "be-representativeness-strength-vs-weight",
+      "chunk_span": [
+        156,
+        157
+      ],
+      "derivation": "recall_located",
+      "page_range": [
+        156,
+        156
+      ],
+      "source_id": "bf_hbe_vol2_2019",
+      "within_span": true
+    },
+    {
+      "bound_chunk": "bf_compecon_v4_2018_ham:p419:0616",
+      "card_id": "be-square-root-impact-zero-intelligence",
+      "chunk_span": [
+        419,
+        420
+      ],
+      "derivation": "recall_located",
+      "page_range": [
+        420,
+        420
+      ],
+      "source_id": "bf_compecon_v4_2018_ham",
+      "within_span": true
+    },
+    {
+      "bound_chunk": "bf_compecon_v4_2018_ham:p423:0623",
+      "card_id": "be-square-root-impact-zero-intelligence",
+      "chunk_span": [
+        423,
+        424
+      ],
+      "derivation": "recall_located",
+      "page_range": [
+        424,
+        424
+      ],
+      "source_id": "bf_compecon_v4_2018_ham",
+      "within_span": true
+    },
+    {
+      "bound_chunk": "bf_compecon_v4_2018_ham:p420:0617",
+      "card_id": "be-square-root-impact-zero-intelligence",
+      "chunk_span": [
+        420,
+        420
+      ],
+      "derivation": "reviewed_override",
+      "page_range": [
+        420,
+        420
+      ],
+      "source_id": "bf_compecon_v4_2018_ham",
+      "within_span": true
+    },
+    {
+      "bound_chunk": "bf_compecon_v4_2018_ham:p423:0623",
+      "card_id": "be-square-root-impact-zero-intelligence",
+      "chunk_span": [
+        423,
+        424
+      ],
+      "derivation": "recall_located",
+      "page_range": [
+        424,
+        424
+      ],
+      "source_id": "bf_compecon_v4_2018_ham",
+      "within_span": true
+    },
+    {
+      "bound_chunk": "bf_compecon_v4_2018_ham:p416:0611",
+      "card_id": "be-stylized-facts-financial-markets",
+      "chunk_span": [
+        416,
+        417
+      ],
+      "derivation": "recall_located",
+      "page_range": [
+        416,
+        416
+      ],
+      "source_id": "bf_compecon_v4_2018_ham",
+      "within_span": true
+    }
+  ],
+  "note": "Every BF citation's resolver-bound page_range is within its chunk span; the non-verbatim (recall_located/reviewed_override) derived pages all produced real, kb-verify-confirmed, span-consistent bindings.",
+  "schema_version": "cfa.bf_page_binding_proof.v1",
+  "total_bf_citations": 226,
+  "violations": [],
+  "within_span": 226
+}

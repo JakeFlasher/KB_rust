@@ -1,0 +1,3359 @@
+{
+  "cards": [
+    {
+      "card_id": "be-ambiguity-aversion-asset-pricing",
+      "citations": [
+        {
+          "chunk_hash": "d89f99b840576aa2092c1e5efce0189602e74e5e03dd3d0d98e807b8ac398604",
+          "chunk_id": "bf_hbe_vol1_2018:p159:0247",
+          "edge_type": "defines",
+          "page_range": [
+            159,
+            159
+          ],
+          "quote": "An important idea is that people are averse to situations of ambiguity in a way that they are not to situations of mere risk.",
+          "source_id": "bf_hbe_vol1_2018"
+        },
+        {
+          "chunk_hash": "1cab0bd70238f321f487960407703c7bd12ef65bd99a8bacadd8b2a33a273841",
+          "chunk_id": "bf_hbe_vol1_2018:p159:0248",
+          "edge_type": "supports",
+          "page_range": [
+            160,
+            160
+          ],
+          "quote": "She then chooses the action that maximizes the minimum Expected Utility she could obtain under any of these candidate probability",
+          "source_id": "bf_hbe_vol1_2018"
+        },
+        {
+          "chunk_hash": "df28cbaf2702162b48f7b77ae16f6b248a50494539236f2c206d7aa4b629c48f",
+          "chunk_id": "bf_hbe_vol1_2018:p160:0249",
+          "edge_type": "supports",
+          "page_range": [
+            160,
+            160
+          ],
+          "quote": "if an individual is sufficiently ambiguity averse, she may not invest in the stock market at all",
+          "source_id": "bf_hbe_vol1_2018"
+        },
+        {
+          "chunk_hash": "8885a7938dcd5e7701f0952d740930cce22fcd30e6905b9329cbf8975ab8b5e9",
+          "chunk_id": "bf_hbe_vol1_2018:p160:0250",
+          "edge_type": "supports",
+          "page_range": [
+            161,
+            161
+          ],
+          "quote": "Ambiguity aversion may also amplify financial crises",
+          "source_id": "bf_hbe_vol1_2018"
+        }
+      ],
+      "summary": "Ambiguity aversion (rooted in the Ellsberg paradox, formalized by multiple-priors maxmin EU) means investors dislike situations where they cannot assign a single probability distribution; in finance it can explain limited stock-market participation, home bias / under-diversification, an ambiguity premium, and crisis amplification.",
+      "tags": [
+        "behavioral-finance",
+        "ambiguity-aversion",
+        "asset-pricing",
+        "home-bias",
+        "participation"
+      ],
+      "title": "Ambiguity Aversion in Asset Pricing"
+    },
+    {
+      "card_id": "be-ambiguity-sources-ellsberg",
+      "citations": [
+        {
+          "chunk_hash": "a6ba09b9ca40991e9e9bd35a4e50091fea42beedc4d9dfe7f2c56750bac983e6",
+          "chunk_id": "bf_wakker_2010_pt_risk_ambiguity:p301:0410",
+          "edge_type": "supports",
+          "page_range": [
+            302,
+            302
+          ],
+          "quote": "the theory is a genuine generalization that can, for instance, accommodate the Ellsberg paradox and the home bias, phenomena that violate probabilistic sophistication.",
+          "source_id": "bf_wakker_2010_pt_risk_ambiguity"
+        },
+        {
+          "chunk_hash": "f5eee2b9e06802b235d4ccae538585bd5219bd9142a550e486d4f9b25779c8b7",
+          "chunk_id": "bf_wakker_2010_pt_risk_ambiguity:p334:0458",
+          "edge_type": "defines",
+          "page_range": [
+            334,
+            334
+          ],
+          "quote": "Eq. (11.1.1) may hold but Eq. (11.1.2) is precluded.",
+          "source_id": "bf_wakker_2010_pt_risk_ambiguity"
+        },
+        {
+          "chunk_hash": "3d0e5151eafbe64420e77afcb0aaf1f3b1e5c8e9e4098e6bb3129154397365d4",
+          "chunk_id": "bf_wakker_2010_pt_risk_ambiguity:p336:0461",
+          "edge_type": "defines",
+          "page_range": [
+            336,
+            336
+          ],
+          "quote": "the probability weighting function corresponding to the source, called the source",
+          "source_id": "bf_wakker_2010_pt_risk_ambiguity"
+        }
+      ],
+      "summary": "The Ellsberg paradox shows source-dependent uncertainty attitudes: a nonadditive capacity W accommodates the known-urn-over-unknown-urn preference, and source functions w_So capture ambiguity aversion and insensitivity within the rank-dependent (uncertainty-weighting) apparatus.",
+      "tags": [
+        "behavioral-finance",
+        "ambiguity",
+        "ellsberg-paradox",
+        "source-functions"
+      ],
+      "title": "Ambiguity, the Ellsberg Paradox, and Sources"
+    },
+    {
+      "card_id": "be-asset-pricing-anomalies-catalog",
+      "citations": [
+        {
+          "chunk_hash": "5df91b7e281e20159f3d97178624dd5662ac21c55c44ff5533a5282e6f857a03",
+          "chunk_id": "bf_hbe_vol1_2018:p090:0133",
+          "edge_type": "defines",
+          "page_range": [
+            91,
+            91
+          ],
+          "quote": "There are three central facts about the returns on the overall U.S. stock market: these",
+          "source_id": "bf_hbe_vol1_2018"
+        },
+        {
+          "chunk_hash": "5d85d3a454050cc2c1756c304cf2d5545b54627dbbe8ac3a3e8dc4e98d388927",
+          "chunk_id": "bf_hbe_vol1_2018:p091:0135",
+          "edge_type": "supports",
+          "page_range": [
+            92,
+            92
+          ],
+          "quote": "Time-series predictability and excess volatility are now seen as the same",
+          "source_id": "bf_hbe_vol1_2018"
+        },
+        {
+          "chunk_hash": "04ce6861fe556d9f8ea77b20caf267bc1e6076e6be47aee95ed68741929c209e",
+          "chunk_id": "bf_hbe_vol1_2018:p094:0138",
+          "edge_type": "supports",
+          "page_range": [
+            94,
+            94
+          ],
+          "quote": "Notice the contrast with long-term reversal.",
+          "source_id": "bf_hbe_vol1_2018"
+        },
+        {
+          "chunk_hash": "fd023d214263db1e9ad5375a023538fc7ce195cdf897afc371bc5c32366fffac",
+          "chunk_id": "bf_hbe_vol1_2018:p121:0183",
+          "edge_type": "supports",
+          "page_range": [
+            121,
+            121
+          ],
+          "quote": "the concept of overconfidence can help explain a number of puzzling facts in finance, most notably the very high trading volume in financial markets",
+          "source_id": "bf_hbe_vol1_2018"
+        }
+      ],
+      "summary": "The set of empirical facts behavioral asset-pricing models target: a high equity premium, excess volatility (= time-series predictability via the P/D ratio), the cross-section of average returns (momentum, reversal, value, beta and volatility anomalies), bubbles, and high trading volume.",
+      "tags": [
+        "behavioral-finance",
+        "asset-pricing",
+        "anomalies",
+        "trading-volume",
+        "bubbles"
+      ],
+      "title": "Asset-Pricing Anomalies Catalog"
+    },
+    {
+      "card_id": "be-belief-driven-credit-cycle",
+      "citations": [
+        {
+          "chunk_hash": "efc38a0dc5d0e86f63c42fb040e50f86aecdad7a20d34519776fc3bba76e0121",
+          "chunk_id": "bf_gennaioli_shleifer_2018_crisis_beliefs:p192:0183",
+          "edge_type": "defines",
+          "page_range": [
+            193,
+            193
+          ],
+          "quote": "Under diagnostic expectations, with θ > 0, the issuance of risky debt overreacts to news.",
+          "source_id": "bf_gennaioli_shleifer_2018_crisis_beliefs"
+        },
+        {
+          "chunk_hash": "3d55ca040e42a109d2303c5d3cfa15bf1d337aedd1bde26b11f09f24fd3f7945",
+          "chunk_id": "bf_gennaioli_shleifer_2018_crisis_beliefs:p194:0185",
+          "edge_type": "supports",
+          "page_range": [
+            194,
+            194
+          ],
+          "quote": "It displays stronger reversals than fundamentals",
+          "source_id": "bf_gennaioli_shleifer_2018_crisis_beliefs"
+        },
+        {
+          "chunk_hash": "18185127844c24622e37379b4f041985db8405e2463d473e1f99af953bf5079d",
+          "chunk_id": "bf_gennaioli_shleifer_2018_crisis_beliefs:p197:0188",
+          "edge_type": "supports",
+          "page_range": [
+            197,
+            197
+          ],
+          "quote": "in good times debt expands, the junk share is high, and the average return going forward is low.",
+          "source_id": "bf_gennaioli_shleifer_2018_crisis_beliefs"
+        }
+      ],
+      "summary": "Diagnostic beliefs generate credit cycles: good news breeds over-optimism that compresses spreads and over-expands risky-debt issuance, which then systematically and predictably reverses as optimism cools -- yielding excess volatility, mean reversion stronger than fundamentals, and low forward returns on the junk share.",
+      "tags": [
+        "behavioral-finance",
+        "credit-cycles",
+        "diagnostic-expectations",
+        "junk-share"
+      ],
+      "title": "Belief-Driven Credit Cycle"
+    },
+    {
+      "card_id": "be-belief-perseverance-biases",
+      "citations": [
+        {
+          "chunk_hash": "3207d0d282f11fc3da8ce0b22e6415aa68e26624b31188fecd9dcd85ef3c9b5b",
+          "chunk_id": "bf_pompian_2006_bfwm:p139:0143",
+          "edge_type": "defines",
+          "page_range": [
+            139,
+            139
+          ],
+          "quote": "Conservatism bias is a mental process in which people cling to their prior views or forecasts at the expense of",
+          "source_id": "bf_pompian_2006_bfwm"
+        },
+        {
+          "chunk_hash": "32de5f72859ac62474b94861d3af40e02142e92f82db43d3674a8f3e188d6c4c",
+          "chunk_id": "bf_pompian_2006_bfwm:p206:0219",
+          "edge_type": "supports",
+          "page_range": [
+            207,
+            207
+          ],
+          "quote": "that emphasizes ideas that confirm our beliefs, while devaluing whatever contradicts our beliefs.",
+          "source_id": "bf_pompian_2006_bfwm"
+        },
+        {
+          "chunk_hash": "026c0e785667aae3381754b841b56ca16bc9e806aa9208089156a518249d1c6b",
+          "chunk_id": "bf_pompian_2006_bfwm:p218:0232",
+          "edge_type": "supports",
+          "page_range": [
+            219,
+            219
+          ],
+          "quote": "hindsight bias is the impulse that insists:",
+          "source_id": "bf_pompian_2006_bfwm"
+        },
+        {
+          "chunk_hash": "4af84c7fe2da640b3cc784e294ce9aa95a0c7e41df819c9d408c0bb83aab6d9e",
+          "chunk_id": "bf_pompian_2006_bfwm:p130:0134",
+          "edge_type": "supports",
+          "page_range": [
+            131,
+            131
+          ],
+          "quote": "The illusion of control bias describes the tendency of human beings to believe that they can control or at least influence",
+          "source_id": "bf_pompian_2006_bfwm"
+        }
+      ],
+      "summary": "The belief-perseverance family of cognitive biases — conservatism, confirmation, representativeness, illusion of control, hindsight — in which investors cling to or over-defend prior beliefs and mis-update in the face of new evidence.",
+      "tags": [
+        "behavioral-finance",
+        "belief-perseverance",
+        "cognitive-bias",
+        "conservatism",
+        "representativeness"
+      ],
+      "title": "Belief-Perseverance Biases"
+    },
+    {
+      "card_id": "be-bias-aware-asset-allocation-workflow",
+      "citations": [
+        {
+          "chunk_hash": "981529c06ac2cbc8adf144a43bca0a68b440e11347ce18adcb75bcfdb78e73c4",
+          "chunk_id": "bf_pompian_2006_bfwm:p062:0063",
+          "edge_type": "defines",
+          "page_range": [
+            62,
+            62
+          ],
+          "quote": "best practical allocation may be a slightly underperforming long-term investment program to which the client can comfortably",
+          "source_id": "bf_pompian_2006_bfwm"
+        },
+        {
+          "chunk_hash": "74e021f5f6f5d7a11cc2fe168a623925713c3f38a2d152b78d41208fb20645e3",
+          "chunk_id": "bf_pompian_2006_bfwm:p061:0062",
+          "edge_type": "supports",
+          "page_range": [
+            61,
+            61
+          ],
+          "quote": "risk tolerance questionnaires provide, at best, broad guidelines for asset allocation and should only be used in concert with other",
+          "source_id": "bf_pompian_2006_bfwm"
+        },
+        {
+          "chunk_hash": "a85a48a6e56a0ce97f187aa94caad504bee7c5b80a4baa6ea51978d5fa263529",
+          "chunk_id": "bf_pompian_2006_bfwm:p064:0066",
+          "edge_type": "supports",
+          "page_range": [
+            65,
+            65
+          ],
+          "quote": "a behaviorally adjusted allocation should not stray more than 20 percent from the mean-variance-optimized allocation.",
+          "source_id": "bf_pompian_2006_bfwm"
+        }
+      ],
+      "summary": "The best-practical-allocation workflow: diagnose client biases, decide moderate-or-adapt, then adjust the rational mean-variance allocation within a bounded deviation (~20%) to a behaviorally adjusted, livable portfolio the client can adhere to.",
+      "tags": [
+        "behavioral-finance",
+        "asset-allocation",
+        "best-practical-allocation",
+        "mean-variance",
+        "workflow"
+      ],
+      "title": "Bias-Aware Asset-Allocation Workflow"
+    },
+    {
+      "card_id": "be-bifurcation-route-instability",
+      "citations": [
+        {
+          "chunk_hash": "cadbe5fc3b1cb22a63e177f440694d1fd65724394ee217eae93e5f515bec1b31",
+          "chunk_id": "bf_compecon_v4_2018_ham:p286:0407",
+          "edge_type": "defines",
+          "page_range": [
+            286,
+            286
+          ],
+          "quote": "meaning that the fundamental price becomes less stable when traders switch their strategies more often. This is essentially the rational routes to randomness of Brock and Hommes",
+          "source_id": "bf_compecon_v4_2018_ham"
+        },
+        {
+          "chunk_hash": "f7ebacc442d4bc617fac7552fb982ed9af65aac6bc768057cde56e3d4ad41c14",
+          "chunk_id": "bf_compecon_v4_2018_ham:p286:0406",
+          "edge_type": "supports",
+          "page_range": [
+            286,
+            286
+          ],
+          "quote": "that is, there is an invariant curve near the fundamental steady state.",
+          "source_id": "bf_compecon_v4_2018_ham"
+        },
+        {
+          "chunk_hash": "cadbe5fc3b1cb22a63e177f440694d1fd65724394ee217eae93e5f515bec1b31",
+          "chunk_id": "bf_compecon_v4_2018_ham:p286:0407",
+          "edge_type": "supports",
+          "page_range": [
+            287,
+            287
+          ],
+          "quote": "unstable and the trajectory converges to an invariant circle bifurcating from the fundamental steady state.",
+          "source_id": "bf_compecon_v4_2018_ham"
+        }
+      ],
+      "summary": "Rational route to randomness: as the intensity of choice (or chartist extrapolation) rises, the fundamental steady state of an adaptive belief system loses stability through a Neimark-Sacker (Hopf) bifurcation into invariant cycles and complex dynamics.",
+      "tags": [
+        "behavioral-finance",
+        "heterogeneous-agents",
+        "bifurcation",
+        "instability",
+        "nonlinear-dynamics"
+      ],
+      "title": "Rational Route to Randomness: Bifurcation Instability"
+    },
+    {
+      "card_id": "be-bjw-anomaly-pricing-model",
+      "citations": [
+        {
+          "chunk_hash": "42ff917903ddf9a8485a770ef5ab150bd4177b8ecb1477c3fc6f4106ace82e85",
+          "chunk_id": "bf_barberis_jin_wang_2021_pt_anomalies:p023:0029",
+          "edge_type": "defines",
+          "page_range": [
+            23,
+            23
+          ],
+          "quote": "To construct the set of anomalies, we start with 10 anomalies drawn from Stambaugh, Yu, and Yuan (2012).",
+          "source_id": "bf_barberis_jin_wang_2021_pt_anomalies"
+        },
+        {
+          "chunk_hash": "4ff2114fb200cfdb2c19feeaff9c551ec222922711ba2222ab9f37bc4066d968",
+          "chunk_id": "bf_barberis_jin_wang_2021_pt_anomalies:p016:0019",
+          "edge_type": "supports",
+          "page_range": [
+            16,
+            16
+          ],
+          "quote": "to match the empirical volatility and skewness of asset",
+          "source_id": "bf_barberis_jin_wang_2021_pt_anomalies"
+        },
+        {
+          "chunk_hash": "55756a7fdfbd6a5b04b6802f0dda6748eb5262697b0bb9c531d8f8191115e256",
+          "chunk_id": "bf_barberis_jin_wang_2021_pt_anomalies:p015:0018",
+          "edge_type": "supports",
+          "page_range": [
+            15,
+            15
+          ],
+          "quote": "One distribution that is increasingly seen as a superior way of modeling skewness and fat tails in asset returns is the “generalized hyperbolic (GH) skewed t” distribution, and we adopt it here.",
+          "source_id": "bf_barberis_jin_wang_2021_pt_anomalies"
+        },
+        {
+          "chunk_hash": "c59b8fb9f8fc1644e01042f9adb3f9a6f24c73e7b85b572387e13043f13cd9e5",
+          "chunk_id": "bf_barberis_jin_wang_2021_pt_anomalies:p032:0042",
+          "edge_type": "supports",
+          "page_range": [
+            33,
+            33
+          ],
+          "quote": "Our preference parameter values are therefore24 (α, δ, λ) = (0.7, 0.65, 1.5).",
+          "source_id": "bf_barberis_jin_wang_2021_pt_anomalies"
+        }
+      ],
+      "summary": "A single prospect-theory preference specification, fed empirical volatility, skewness, gain overhang, and beta of the typical stock in each anomaly decile via a GH skewed-t return distribution, generates a broad cross-section of anomaly predictions from one calibrated model.",
+      "tags": [
+        "behavioral-finance",
+        "asset-pricing",
+        "anomalies",
+        "calibration"
+      ],
+      "title": "BJW Single-Preference Anomaly Pricing Model"
+    },
+    {
+      "card_id": "be-bjw-bounded-rationality-equilibrium",
+      "citations": [
+        {
+          "chunk_hash": "6da4533441bcfb7488584fe79a598c30515c2d597068faa5c168843b3b36163e",
+          "chunk_id": "bf_barberis_jin_wang_2021_pt_anomalies:p018:0022",
+          "edge_type": "defines",
+          "page_range": [
+            18,
+            18
+          ],
+          "quote": "An equilibrium in which investors have identical holdings for all assets therefore does not exist.",
+          "source_id": "bf_barberis_jin_wang_2021_pt_anomalies"
+        },
+        {
+          "chunk_hash": "caa61ac7f8dc1d5ab6f290ee7527e26ac57f855a0dfd55eda3f7556037cbdc02",
+          "chunk_id": "bf_barberis_jin_wang_2021_pt_anomalies:p018:0023",
+          "edge_type": "supports",
+          "page_range": [
+            19,
+            19
+          ],
+          "quote": "to asset i that maximizes the objective function in (9), an investor assumes that his holdings of the other",
+          "source_id": "bf_barberis_jin_wang_2021_pt_anomalies"
+        },
+        {
+          "chunk_hash": "95418fb66e92756b5791fc95033255b801acdae668dd63688f46788f0c6e24f9",
+          "chunk_id": "bf_barberis_jin_wang_2021_pt_anomalies:p020:0025",
+          "edge_type": "supports",
+          "page_range": [
+            20,
+            20
+          ],
+          "quote": "both of which are nonnegative. These maxima straddle the market supply",
+          "source_id": "bf_barberis_jin_wang_2021_pt_anomalies"
+        }
+      ],
+      "summary": "With prospect-theory preferences a homogeneous-holdings equilibrium fails to exist; BJW close the model with a bounded-rationality assumption (each investor treats other holdings as market weights), reducing the problem to one dimension and yielding two market-clearing maxima per asset.",
+      "tags": [
+        "behavioral-finance",
+        "equilibrium",
+        "bounded-rationality",
+        "market-clearing"
+      ],
+      "title": "BJW Bounded-Rationality Heterogeneous-Holdings Equilibrium"
+    },
+    {
+      "card_id": "be-brock-hommes-switching",
+      "citations": [
+        {
+          "chunk_hash": "dd5faedd6aef948101ce3682e6068425e8df66cd2db49110d8a65fcf69626597",
+          "chunk_id": "bf_compecon_v4_2018_ham:p284:0403",
+          "edge_type": "defines",
+          "page_range": [
+            284,
+            284
+          ],
+          "quote": "Following Brock and Hommes (1997, 1998), the market fraction of investors choosing strategy h at time t + 1 is determined by",
+          "source_id": "bf_compecon_v4_2018_ham"
+        },
+        {
+          "chunk_hash": "dd5faedd6aef948101ce3682e6068425e8df66cd2db49110d8a65fcf69626597",
+          "chunk_id": "bf_compecon_v4_2018_ham:p284:0403",
+          "edge_type": "supports",
+          "page_range": [
+            284,
+            284
+          ],
+          "quote": "measures the intensity of the choice and",
+          "source_id": "bf_compecon_v4_2018_ham"
+        },
+        {
+          "chunk_hash": "dd5faedd6aef948101ce3682e6068425e8df66cd2db49110d8a65fcf69626597",
+          "chunk_id": "bf_compecon_v4_2018_ham:p284:0403",
+          "edge_type": "supports",
+          "page_range": [
+            284,
+            284
+          ],
+          "quote": "Let πh,t+1 be the realized profit between t and t +1 of type-h investors, πh,t+1 = zh,t(pt+1 + dt+1 − Rpt) for h = 1, 2.",
+          "source_id": "bf_compecon_v4_2018_ham"
+        }
+      ],
+      "summary": "Brock-Hommes adaptive belief system: agents endogenously switch among forecasting rules according to past realized profit via a discrete-choice (logit) rule, with the intensity-of-choice beta governing how sharply they chase the more profitable strategy.",
+      "tags": [
+        "behavioral-finance",
+        "heterogeneous-agents",
+        "discrete-choice",
+        "intensity-of-choice",
+        "adaptive-beliefs"
+      ],
+      "title": "Brock-Hommes Adaptive Belief Switching"
+    },
+    {
+      "card_id": "be-closed-end-fund-puzzle",
+      "citations": [
+        {
+          "chunk_hash": "252e929b15a8a031ffacdcd3e001e1943b286aec213b87281e4068943c82bb58",
+          "chunk_id": "bf_shleifer_2000_inefficient_markets:p062:0070",
+          "edge_type": "defines",
+          "page_range": [
+            63,
+            63
+          ],
+          "quote": "There are four important pieces to the puzzle which together characterize the life cycle of a closed end fund",
+          "source_id": "bf_shleifer_2000_inefficient_markets"
+        },
+        {
+          "chunk_hash": "cad7d93f9395220d1afbbdcf22238d4f20b133191d023160a3695ed404b28905",
+          "chunk_id": "bf_shleifer_2000_inefficient_markets:p067:0076",
+          "edge_type": "supports",
+          "page_range": [
+            68,
+            68
+          ],
+          "quote": "Suppose further that noise traders' beliefs about the return on u relative to the return on s are subject to",
+          "source_id": "bf_shleifer_2000_inefficient_markets"
+        },
+        {
+          "chunk_hash": "3f90ff2091a70b9d732a583d3045c23c5e13e20dffb070afdeb2375c521a160a",
+          "chunk_id": "bf_shleifer_2000_inefficient_markets:p072:0083",
+          "edge_type": "supports",
+          "page_range": [
+            73,
+            73
+          ],
+          "quote": "levels of and changes in discounts should be highly correlated across funds. Since the same",
+          "source_id": "bf_shleifer_2000_inefficient_markets"
+        },
+        {
+          "chunk_hash": "cc7967319b97986d18cb25f8b65ebef261862c2d80fcc4c524ffebba92f297b4",
+          "chunk_id": "bf_shleifer_2000_inefficient_markets:p068:0077",
+          "edge_type": "supports",
+          "page_range": [
+            68,
+            68
+          ],
+          "quote": "In this model, the risk from holding a closed end fund (and any other security subject to the same stochastic sentiment) consists of two parts: the risk of holding the fund's portfolio and the risk that noise trader sentiment about the funds changes.",
+          "source_id": "bf_shleifer_2000_inefficient_markets"
+        }
+      ],
+      "summary": "The four-part closed-end fund puzzle (start at a premium, drift to a discount, discounts comove and mean-revert, discounts shrink on open-ending) is evidence for systematic individual-investor sentiment rather than agency, tax, or illiquidity costs.",
+      "tags": [
+        "behavioral-finance",
+        "closed-end-funds",
+        "investor-sentiment",
+        "noise-trader-risk"
+      ],
+      "title": "Closed-End Fund Discount Puzzle"
+    },
+    {
+      "card_id": "be-cognitive-vs-emotional-bias-taxonomy",
+      "citations": [
+        {
+          "chunk_hash": "69c68f9e75c801a08a5ad3b4b177a813fdce58fe2fce6a98ae1efa6f33b89510",
+          "chunk_id": "bf_pompian_2006_bfwm:p063:0065",
+          "edge_type": "defines",
+          "page_range": [
+            64,
+            64
+          ],
+          "quote": "Behavioral biases fall into two broad categories, cognitive and emotional, with both varieties yielding irrational judgments.",
+          "source_id": "bf_pompian_2006_bfwm"
+        },
+        {
+          "chunk_hash": "69c68f9e75c801a08a5ad3b4b177a813fdce58fe2fce6a98ae1efa6f33b89510",
+          "chunk_id": "bf_pompian_2006_bfwm:p063:0065",
+          "edge_type": "supports",
+          "page_range": [
+            64,
+            64
+          ],
+          "quote": "Because cognitive biases stem from faulty reasoning, better information and advice can often",
+          "source_id": "bf_pompian_2006_bfwm"
+        },
+        {
+          "chunk_hash": "285d84b24dbaadfc2f31c6e26572af9e57e6520219cf80163d962971ddf7a1bc",
+          "chunk_id": "bf_pompian_2006_bfwm:p068:0069",
+          "edge_type": "supports",
+          "page_range": [
+            69,
+            69
+          ],
+          "quote": "This sort of bias taxonomy is helpful—an underlying theory about why people operate under bias has not been produced.",
+          "source_id": "bf_pompian_2006_bfwm"
+        }
+      ],
+      "summary": "Pompian's master partition of investor biases into cognitive errors (faulty reasoning, correctable with information) versus emotional biases (impulse/intuition, hard to rectify); the organizing taxonomy that conditions how an advisor treats each bias.",
+      "tags": [
+        "behavioral-finance",
+        "bias-taxonomy",
+        "cognitive-bias",
+        "emotional-bias"
+      ],
+      "title": "Cognitive vs Emotional Bias Taxonomy"
+    },
+    {
+      "card_id": "be-commitment-and-naivete",
+      "citations": [
+        {
+          "chunk_hash": "6b9a8d2f4f1be3b4a5cd030b643565bc9cb6ef972ed575b6ee88ba69e421eeff",
+          "chunk_id": "bf_hbe_vol2_2019:p018:0022",
+          "edge_type": "defines",
+          "page_range": [
+            18,
+            18
+          ],
+          "quote": "Sophisticated beliefs imply that the agent has a correct theory of her own future time preferences.",
+          "source_id": "bf_hbe_vol2_2019"
+        },
+        {
+          "chunk_hash": "a9818907e09fb24a105b2a8c2e424fbd9c6c515cd16895e255c1d07d0e5abe02",
+          "chunk_id": "bf_hbe_vol2_2019:p041:0062",
+          "edge_type": "supports",
+          "page_range": [
+            42,
+            42
+          ],
+          "quote": "People partially but do not fully anticipate their extent of future present-focus.",
+          "source_id": "bf_hbe_vol2_2019"
+        },
+        {
+          "chunk_hash": "78c0529c516b6cbdfb8347126c7ee01082ecd69a6a7f6e9af015162dd63408c4",
+          "chunk_id": "bf_hbe_vol2_2019:p043:0064",
+          "edge_type": "supports",
+          "page_range": [
+            43,
+            43
+          ],
+          "quote": "firms design credit contracts with large penalties for deferring repayment and",
+          "source_id": "bf_hbe_vol2_2019"
+        },
+        {
+          "chunk_hash": "f115122fe44adbefd78b47af50f5d5d99791df92ffb2960ed77f4261c2c489e8",
+          "chunk_id": "bf_hbe_vol2_2019:p047:0071",
+          "edge_type": "supports",
+          "page_range": [
+            47,
+            47
+          ],
+          "quote": "People sometimes demand commitment devices.",
+          "source_id": "bf_hbe_vol2_2019"
+        }
+      ],
+      "summary": "Sophisticated agents foresee their own future present bias and demand commitment devices; naive agents (beta-hat ~ 1) do not; partial naivete and welfare consequences in credit and gym contracts.",
+      "tags": [
+        "behavioral-finance",
+        "present-bias",
+        "commitment",
+        "sophistication-naivete"
+      ],
+      "title": "Commitment and Naivete"
+    },
+    {
+      "card_id": "be-comonotonicity-choquet-integration",
+      "citations": [
+        {
+          "chunk_hash": "61f4d303a75210e260b4b3707eb1c2bacf1da9906d10c1370c8db3e8eaf5e58f",
+          "chunk_id": "bf_wakker_2010_pt_risk_ambiguity:p326:0446",
+          "edge_type": "defines",
+          "page_range": [
+            326,
+            326
+          ],
+          "quote": "A set of prospects is comonotonic if the same complete ranking of events (further discussed below) can be used for all prospects.",
+          "source_id": "bf_wakker_2010_pt_risk_ambiguity"
+        },
+        {
+          "chunk_hash": "9a0f516ec58af7bc107bc26e2630b48b8f96c405797a781d24522d7fcc450968",
+          "chunk_id": "bf_wakker_2010_pt_risk_ambiguity:p325:0444",
+          "edge_type": "supports",
+          "page_range": [
+            325,
+            325
+          ],
+          "quote": "Similarly to the integral definition of RDU in Eq. (6.9.1) for risk, RDU for uncertainty can be calculated as",
+          "source_id": "bf_wakker_2010_pt_risk_ambiguity"
+        },
+        {
+          "chunk_hash": "6ad59d852523544bb96c7dc5165c618361276f74a04420b8766cef5c1b4bc239",
+          "chunk_id": "bf_wakker_2010_pt_risk_ambiguity:p329:0452",
+          "edge_type": "supports",
+          "page_range": [
+            330,
+            330
+          ],
+          "quote": "rank-tradeoff consistency can be weakened to comonotonic tradeoff consistency.",
+          "source_id": "bf_wakker_2010_pt_risk_ambiguity"
+        }
+      ],
+      "summary": "Comonotonic prospects share one complete ranking of events so each event keeps a fixed rank; on a comonotonic set the rank-dependent (Choquet) integral over a nonadditive capacity W coincides with an EU functional, and comonotonic tradeoff consistency is the behavioral axiom behind rank dependence.",
+      "tags": [
+        "behavioral-finance",
+        "comonotonicity",
+        "choquet-integral",
+        "tradeoff-consistency"
+      ],
+      "title": "Comonotonicity and Choquet Integration"
+    },
+    {
+      "card_id": "be-confirmation-prior-biased-inference",
+      "citations": [
+        {
+          "chunk_hash": "4e4e5959760c811bdb29d94d03b8ace68aa45a28c2b287a541a4b348c1ca23bd",
+          "chunk_id": "bf_hbe_vol2_2019:p162:0262",
+          "edge_type": "defines",
+          "page_range": [
+            162,
+            162
+          ],
+          "quote": "drawing inferences in a manner that is biased in favor of current beliefs",
+          "source_id": "bf_hbe_vol2_2019"
+        },
+        {
+          "chunk_hash": "4d3da5b81c948ce7bbaf0c89b7c083fcd46cc48c13704cc5aa07502e6d5860b4",
+          "chunk_id": "bf_hbe_vol2_2019:p164:0264",
+          "edge_type": "supports",
+          "page_range": [
+            164,
+            164
+          ],
+          "quote": "With prior-biased inference defined as in Eq.",
+          "source_id": "bf_hbe_vol2_2019"
+        },
+        {
+          "chunk_hash": "9bb13dda5622b677a72ae51a45febfc82b3e6a501f8e852988b7239584d3b01a",
+          "chunk_id": "bf_hbe_vol2_2019:p168:0271",
+          "edge_type": "supports",
+          "page_range": [
+            168,
+            168
+          ],
+          "quote": "is that the agent sometimes misperceives disconfirming signals as confirming.",
+          "source_id": "bf_hbe_vol2_2019"
+        },
+        {
+          "chunk_hash": "6aefeadfc9c0ceeff14a6379329fcbefeb5697eb5f38d10167a711f289eb4d2d",
+          "chunk_id": "bf_hbe_vol2_2019:p169:0273",
+          "edge_type": "supports",
+          "page_range": [
+            169,
+            169
+          ],
+          "quote": "momentum arises and bubbles occur because once biased traders are optimistic, they underreact to negative signals",
+          "source_id": "bf_hbe_vol2_2019"
+        }
+      ],
+      "summary": "Prior-biased inference: agents update asymmetrically, weighting signals that confirm current beliefs more than disconfirming ones (c_conf >= 0 >= c_disconf); Rabin-Schrag misperception model; belief polarization and finance implications.",
+      "tags": [
+        "behavioral-finance",
+        "confirmation-bias",
+        "belief-updating",
+        "biased-inference"
+      ],
+      "title": "Confirmation Bias and Prior-Biased Inference"
+    },
+    {
+      "card_id": "be-cumulative-prospect-theory-risk",
+      "citations": [
+        {
+          "chunk_hash": "ca98082d4e24e8d914037f64f3f9f8251740dc6dbb33bbd9c67c3d55db5615fe",
+          "chunk_id": "bf_wakker_2010_pt_risk_ambiguity:p268:0363",
+          "edge_type": "defines",
+          "page_range": [
+            269,
+            269
+          ],
+          "quote": "the decision weight of an outcome depends not only on its rank, but also on its sign. Hence, Luce & Fishburn (1991) used the term rank- and sign-dependent utility",
+          "source_id": "bf_wakker_2010_pt_risk_ambiguity"
+        },
+        {
+          "chunk_hash": "a93a636dd4ff8617a99c7e0fc5e472f882cbd9a444491ac9f823d76f087feef0",
+          "chunk_id": "bf_wakker_2010_pt_risk_ambiguity:p268:0362",
+          "edge_type": "supports",
+          "page_range": [
+            268,
+            268
+          ],
+          "quote": "Prospect theory (PT), in its updated version as introduced by Tversky & Kahneman (1992), generalizes rank-dependent utility by incorporating reference dependence and loss aversion.",
+          "source_id": "bf_wakker_2010_pt_risk_ambiguity"
+        },
+        {
+          "chunk_hash": "36217413760d5bf8bfc83dcd4d44ab089c6ba1dfae53492d42e979a3e8c94096",
+          "chunk_id": "bf_wakker_2010_pt_risk_ambiguity:p270:0365",
+          "edge_type": "supports",
+          "page_range": [
+            270,
+            270
+          ],
+          "quote": "In this way we can easily verify that PT satisfies stochastic dominance, as we will see later.",
+          "source_id": "bf_wakker_2010_pt_risk_ambiguity"
+        }
+      ],
+      "summary": "Cumulative prospect theory under risk combines a reference-dependent value function with rank- AND sign-dependent decision weights, using separate weighting functions w+ on gain-ranks and w- on loss-ranks summed against U(x).",
+      "tags": [
+        "behavioral-finance",
+        "prospect-theory",
+        "rank-dependence",
+        "sign-dependence"
+      ],
+      "title": "Cumulative Prospect Theory Under Risk"
+    },
+    {
+      "card_id": "be-destabilizing-arbitrage-positive-feedback",
+      "citations": [
+        {
+          "chunk_hash": "a99cca5806cc77130203e9890989089843ec535b24096b80ae2e8832321b8152",
+          "chunk_id": "bf_shleifer_2000_inefficient_markets:p164:0185",
+          "edge_type": "supports",
+          "page_range": [
+            165,
+            165
+          ],
+          "quote": "When arbitrageurs receive good news, they recognize that the initial price increase will stimulate buying by positive feedback traders tomorrow.",
+          "source_id": "bf_shleifer_2000_inefficient_markets"
+        },
+        {
+          "chunk_hash": "cb806cf8956744b1516d01a7aa44d139cdf16e98453ce1e3e6efe03ee9410ff7",
+          "chunk_id": "bf_shleifer_2000_inefficient_markets:p163:0184",
+          "edge_type": "defines",
+          "page_range": [
+            164,
+            164
+          ],
+          "quote": "Positive Feedback Investment Strategies 155 positive feedback trading.",
+          "source_id": "bf_shleifer_2000_inefficient_markets"
+        },
+        {
+          "chunk_hash": "c2c1437646f43ad29db3cdb6a04624208b0a66e5da58c424e63c528674ba2738",
+          "chunk_id": "bf_shleifer_2000_inefficient_markets:p175:0197",
+          "edge_type": "supports",
+          "page_range": [
+            176,
+            176
+          ],
+          "quote": "the way arbitrageurs make money in this model is through short-term trading: they buy in period",
+          "source_id": "bf_shleifer_2000_inefficient_markets"
+        },
+        {
+          "chunk_hash": "fde555b6f03ebbf2051b89ae07d23ba5576174159d5118bb49bb7f86997f5d8c",
+          "chunk_id": "bf_shleifer_2000_inefficient_markets:p172:0194",
+          "edge_type": "supports",
+          "page_range": [
+            172,
+            172
+          ],
+          "quote": "the addition of arbitrageurs can push prices away from",
+          "source_id": "bf_shleifer_2000_inefficient_markets"
+        }
+      ],
+      "summary": "With positive-feedback (trend-chasing) traders present, informed arbitrageurs who anticipate future noise demand rationally buy early to ride and amplify a price bubble rather than correct it, so adding arbitrageurs pushes prices further from fundamentals (DSSW 1990).",
+      "tags": [
+        "behavioral-finance",
+        "positive-feedback",
+        "arbitrage",
+        "bubbles",
+        "noise-trader-risk"
+      ],
+      "title": "Destabilizing Arbitrage With Positive-Feedback Traders"
+    },
+    {
+      "card_id": "be-diagnostic-expectations",
+      "citations": [
+        {
+          "chunk_hash": "6c37ce0669b4860d1ccd22b18d5a793a9e5afb22f2f62a15f36c254f1457c69e",
+          "chunk_id": "bf_gennaioli_shleifer_2018_crisis_beliefs:p160:0152",
+          "edge_type": "defines",
+          "page_range": [
+            161,
+            161
+          ],
+          "quote": "probability judgments are formed using the representativeness-distorted density",
+          "source_id": "bf_gennaioli_shleifer_2018_crisis_beliefs"
+        },
+        {
+          "chunk_hash": "456c8df2fe40a88d0ab390aa29c913fd0d3990c828acd65b868dd6c05effd6ad",
+          "chunk_id": "bf_gennaioli_shleifer_2018_crisis_beliefs:p167:0159",
+          "edge_type": "supports",
+          "page_range": [
+            168,
+            168
+          ],
+          "quote": "Cash flow realizations that have become more likely in light of news are overweighted, while cash flow realizations that have become less likely are underweighted.",
+          "source_id": "bf_gennaioli_shleifer_2018_crisis_beliefs"
+        },
+        {
+          "chunk_hash": "ccf46e712b76b82973faf98404bdbcbcfb87282394232c259722da10c95ed414",
+          "chunk_id": "bf_gennaioli_shleifer_2018_crisis_beliefs:p168:0160",
+          "edge_type": "supports",
+          "page_range": [
+            169,
+            169
+          ],
+          "quote": "When θ = 0, diagnostic beliefs coincide with rational expectations",
+          "source_id": "bf_gennaioli_shleifer_2018_crisis_beliefs"
+        }
+      ],
+      "summary": "The diagnostic-expectations operator: a representativeness-distorted density h^theta(x) proportional to h(x|news) times [h(x|news)/h(x|baseline)]^theta, renormalized; the diagnostic expectation E^theta over-weights states made representative by recent news, theta tunes the distortion, and theta=0 recovers rational expectations.",
+      "tags": [
+        "behavioral-finance",
+        "diagnostic-expectations",
+        "representativeness",
+        "overreaction"
+      ],
+      "title": "Diagnostic Expectations Operator"
+    },
+    {
+      "card_id": "be-emergent-heterogeneity-volatility-feedback",
+      "citations": [
+        {
+          "chunk_hash": "f76a6cf54d84837b4c2443d757d54de6f9b3f2d685787af6811a40f2049d940a",
+          "chunk_id": "bf_compecon_v4_2018_ham:p455:0673",
+          "edge_type": "defines",
+          "page_range": [
+            456,
+            456
+          ],
+          "quote": "regularities characterizing asset returns and volatility, and they seem to be best understood as emergent properties of a system composed of dispersed activity with conflicting centrifugal and centripetal tendencies.",
+          "source_id": "bf_compecon_v4_2018_ham"
+        },
+        {
+          "chunk_hash": "cea642cee1c7be29f4f1d692a702ada4eacf7192b58de7c4aa03aa2d20a5ec7c",
+          "chunk_id": "bf_compecon_v4_2018_ham:p469:0696",
+          "edge_type": "supports",
+          "page_range": [
+            470,
+            470
+          ],
+          "quote": "In this model, switching is based on social interaction and herding rather than profitability considerations. Alfarano et al. (2005) show that in this model the tail behavior of the distributions of returns is a function of the herding tendency of agents.",
+          "source_id": "bf_compecon_v4_2018_ham"
+        },
+        {
+          "chunk_hash": "04ea4efc236cf96217200bbdf35f15dcb1c93c0281b0780f123262a478446827",
+          "chunk_id": "bf_compecon_v4_2018_ham:p285:0405",
+          "edge_type": "supports",
+          "page_range": [
+            286,
+            286
+          ],
+          "quote": "is also in line with Franke and Westerhoff (2012, 2016) who estimate various HAMs and show that herding behavior plays a key role in matching the stylized facts.",
+          "source_id": "bf_compecon_v4_2018_ham"
+        },
+        {
+          "chunk_hash": "f7ebacc442d4bc617fac7552fb982ed9af65aac6bc768057cde56e3d4ad41c14",
+          "chunk_id": "bf_compecon_v4_2018_ham:p286:0406",
+          "edge_type": "supports",
+          "page_range": [
+            286,
+            286
+          ],
+          "quote": "the noise traders play an important role in generating insignificant ACs on the returns, while the significantly decayed AC patterns of the absolute returns and squared returns are more influenced by the fundamental noise.",
+          "source_id": "bf_compecon_v4_2018_ham"
+        }
+      ],
+      "summary": "In the Kirman / Alfarano social-interaction lineage, fat tails and volatility clustering are not assumed but emerge endogenously from herding among heterogeneous agents; the tail heaviness becomes a function of the herding tendency rather than of exogenous shocks.",
+      "tags": [
+        "behavioral-finance",
+        "herding",
+        "emergent-criticality",
+        "volatility-clustering",
+        "fat-tails"
+      ],
+      "title": "Emergent Fat Tails and Volatility Clustering From Herding"
+    },
+    {
+      "card_id": "be-evolutionary-capm-time-varying-beta",
+      "citations": [
+        {
+          "chunk_hash": "f1b397743550bb70a33ef5089fbab225d52975b978283694554e90e9ff12ad25",
+          "chunk_id": "bf_compecon_v4_2018_ham:p307:0437",
+          "edge_type": "defines",
+          "page_range": [
+            307,
+            307
+          ],
+          "quote": "through the construction of a consensus belief, Chiarella et al. (2013b) develop a dynamic CAPM relationship between the market-average expected returns of the risky assets and their ex-ante betas in temporary equilibrium.",
+          "source_id": "bf_compecon_v4_2018_ham"
+        },
+        {
+          "chunk_hash": "f1b397743550bb70a33ef5089fbab225d52975b978283694554e90e9ff12ad25",
+          "chunk_id": "bf_compecon_v4_2018_ham:p307:0437",
+          "edge_type": "supports",
+          "page_range": [
+            307,
+            307
+          ],
+          "quote": "changes in the market portfolio and risk-return relationships may occur due to changes of investor sentiment (such as chartists acting more strongly as momentum traders).",
+          "source_id": "bf_compecon_v4_2018_ham"
+        },
+        {
+          "chunk_hash": "22d1afb449cc6e377a60e6d5238789822636f33a8afc5cf989a2b3803b8cf528",
+          "chunk_id": "bf_compecon_v4_2018_ham:p312:0445",
+          "edge_type": "supports",
+          "page_range": [
+            312,
+            312
+          ],
+          "quote": "8 (from the top-left to bottom-right) shows the time series of asset prices (pt), asset returns (rt), the aggregate wealth shares invested in the risky assets (i.e.",
+          "source_id": "bf_compecon_v4_2018_ham"
+        },
+        {
+          "chunk_hash": "b0929b794a4005f1d5d8b6f6bfaa4cfa4f97b48a01c43b5de688ebb1d7b437b9",
+          "chunk_id": "bf_compecon_v4_2018_ham:p312:0446",
+          "edge_type": "supports",
+          "page_range": [
+            312,
+            312
+          ],
+          "quote": "The CAPM relation (26) is evolutionary, since asset and market returns, as well as the corresponding consensus beliefs, co-evolve endogenously, based on the dynamic HAM with expectations feedback.",
+          "source_id": "bf_compecon_v4_2018_ham"
+        }
+      ],
+      "summary": "An evolutionary multi-asset HAM in which adaptive type fractions and a consensus belief yield a dynamic CAPM relation whose ex-ante betas vary over time as investor sentiment shifts, replacing the static efficient-market beta with an endogenous, adaptive one.",
+      "tags": [
+        "behavioral-finance",
+        "heterogeneous-agents",
+        "evolutionary-capm",
+        "time-varying-beta",
+        "consensus-belief"
+      ],
+      "title": "Evolutionary CAPM With Time-Varying Beta"
+    },
+    {
+      "card_id": "be-expectations-based-reference-points",
+      "citations": [
+        {
+          "chunk_hash": "26c08c554dbaba624ba4074c3837c7394fbd3895723090a69578176ee047e236",
+          "chunk_id": "bf_hbe_vol1_2018:p039:0054",
+          "edge_type": "defines",
+          "page_range": [
+            40,
+            40
+          ],
+          "quote": "gains and losses are defined relative to an expectations-based referent",
+          "source_id": "bf_hbe_vol1_2018"
+        },
+        {
+          "chunk_hash": "68b581162727181936671ffef3ec0ac2b72c626f94c8a1ddf30868c0c3e2f961",
+          "chunk_id": "bf_hbe_vol1_2018:p040:0055",
+          "edge_type": "supports",
+          "page_range": [
+            40,
+            40
+          ],
+          "quote": "if one uses an expectations-based referent combined with an assumption that expectations must be rational, the",
+          "source_id": "bf_hbe_vol1_2018"
+        },
+        {
+          "chunk_hash": "f5eefeb898dadc23f452c24d5e6ea536727df972bc12bbf90c72f0cfa328be5d",
+          "chunk_id": "bf_hbe_vol1_2018:p041:0056",
+          "edge_type": "supports",
+          "page_range": [
+            41,
+            41
+          ],
+          "quote": "is compared to every outcome that might have occurred in the reference lottery R.",
+          "source_id": "bf_hbe_vol1_2018"
+        },
+        {
+          "chunk_hash": "23732ff5fd7b2bd6ceca59c2e26fc687a33ae4ed6010e72eb9416be5d62b298b",
+          "chunk_id": "bf_hbe_vol1_2018:p043:0059",
+          "edge_type": "supports",
+          "page_range": [
+            43,
+            43
+          ],
+          "quote": "much of the literature has assumed that expectations must be",
+          "source_id": "bf_hbe_vol1_2018"
+        }
+      ],
+      "summary": "Koszegi-Rabin make the reference point the rational expectation of outcomes: gains and losses are felt relative to a reference lottery R, each outcome compared to every outcome that might have occurred; imposing that expectations equal actual behavior (personal equilibrium) sharply disciplines the otherwise free reference point.",
+      "tags": [
+        "behavioral-finance",
+        "reference-dependence",
+        "expectations-based",
+        "personal-equilibrium",
+        "koszegi-rabin"
+      ],
+      "title": "Expectations-Based Reference Points"
+    },
+    {
+      "card_id": "be-experimental-asset-bubbles",
+      "citations": [
+        {
+          "chunk_hash": "85e1b7bc6f316d8cd13758a3cef65ea10fa1be41f66c63b498af145314214348",
+          "chunk_id": "bf_compecon_v4_2018_ham:p509:0760",
+          "edge_type": "defines",
+          "page_range": [
+            510,
+            510
+          ],
+          "quote": "Experimental tests, beginning with Smith et al. (1988), have consistently found that inexperienced subjects over-price such assets relative to the",
+          "source_id": "bf_compecon_v4_2018_ham"
+        },
+        {
+          "chunk_hash": "85e1b7bc6f316d8cd13758a3cef65ea10fa1be41f66c63b498af145314214348",
+          "chunk_id": "bf_compecon_v4_2018_ham:p509:0760",
+          "edge_type": "supports",
+          "page_range": [
+            510,
+            510
+          ],
+          "quote": "they are less prone to exhibit mis-pricing in repeated interactions.",
+          "source_id": "bf_compecon_v4_2018_ham"
+        },
+        {
+          "chunk_hash": "85e1b7bc6f316d8cd13758a3cef65ea10fa1be41f66c63b498af145314214348",
+          "chunk_id": "bf_compecon_v4_2018_ham:p509:0760",
+          "edge_type": "supports",
+          "page_range": [
+            510,
+            510
+          ],
+          "quote": "bubbles are less likely among more cognitively sophisticated subjects and more likely among groups with mixed cognitive abilities.",
+          "source_id": "bf_compecon_v4_2018_ham"
+        },
+        {
+          "chunk_hash": "49fcf6634232e269791b7b75bd4b178e49004c399fa11788c135f098bd03155f",
+          "chunk_id": "bf_compecon_v4_2018_ham:p524:0781",
+          "edge_type": "supports",
+          "page_range": [
+            524,
+            524
+          ],
+          "quote": "in 5 of their six experiments, prices periodically hit the upper bound of 1000",
+          "source_id": "bf_compecon_v4_2018_ham"
+        }
+      ],
+      "summary": "Smith-Suchanek-Williams laboratory asset markets: inexperienced subjects systematically over-price an asset relative to its known rational-expectations fundamental, producing bubbles and crashes even when dividends are common knowledge; experience and cognitive sophistication reduce mispricing.",
+      "tags": [
+        "behavioral-finance",
+        "experimental-economics",
+        "asset-bubbles",
+        "fundamental-value",
+        "positive-feedback"
+      ],
+      "title": "Experimental Asset-Market Bubbles and Crashes"
+    },
+    {
+      "card_id": "be-extrapolation-from-recent-data",
+      "citations": [
+        {
+          "chunk_hash": "d59b5888d5a19ee425449d3e1b7a4dfe6496811bfedab7fe1a8dafe783981702",
+          "chunk_id": "bf_gennaioli_shleifer_2018_crisis_beliefs:p124:0117",
+          "edge_type": "supports",
+          "page_range": [
+            125,
+            125
+          ],
+          "quote": "expectations of stock returns are predominantly extrapolative: Expectations of future returns are strongly positively correlated with past returns.",
+          "source_id": "bf_gennaioli_shleifer_2018_crisis_beliefs"
+        },
+        {
+          "chunk_hash": "e0bf24cf6f235c1b2fceeae52f141bbebed2b6672329012f774443a95476ba86",
+          "chunk_id": "bf_gennaioli_shleifer_2018_crisis_beliefs:p130:0123",
+          "edge_type": "supports",
+          "page_range": [
+            131,
+            131
+          ],
+          "quote": "high past returns predict expectation errors: When past returns are high, expected future returns are on average higher than realizations.",
+          "source_id": "bf_gennaioli_shleifer_2018_crisis_beliefs"
+        },
+        {
+          "chunk_hash": "06b642b98f539f9c55412442f5349755de106e895e564943d4515fd7c49106a8",
+          "chunk_id": "bf_gennaioli_shleifer_2018_crisis_beliefs:p134:0127",
+          "edge_type": "supports",
+          "page_range": [
+            135,
+            135
+          ],
+          "quote": "Analysts use information about past performance but overreact by",
+          "source_id": "bf_gennaioli_shleifer_2018_crisis_beliefs"
+        }
+      ],
+      "summary": "Survey expectations of stock returns, earnings growth, and credit spreads are highly correlated across populations, predict actual behavior, and are predominantly extrapolative -- high after good past performance, then predictably disappointed -- the empirical case that expectations over-react to recent data.",
+      "tags": [
+        "behavioral-finance",
+        "extrapolation",
+        "survey-expectations",
+        "overreaction"
+      ],
+      "title": "Extrapolation From Recent Data (Survey Evidence)"
+    },
+    {
+      "card_id": "be-extrapolative-beliefs-asset-prices",
+      "citations": [
+        {
+          "chunk_hash": "304dac5016490991166878ce679f3d5288fcceceb08d2080072e52d777a193e4",
+          "chunk_id": "bf_hbe_vol1_2018:p102:0152",
+          "edge_type": "defines",
+          "page_range": [
+            102,
+            102
+          ],
+          "quote": "expectation of the future return of an asset, asset class, or fund is a weighted average of the past returns of the",
+          "source_id": "bf_hbe_vol1_2018"
+        },
+        {
+          "chunk_hash": "2f53b4b3083c9e0ce6c2f30bd2e678869202a74e87dc4825e55fbf0e767ffaf1",
+          "chunk_id": "bf_hbe_vol1_2018:p103:0154",
+          "edge_type": "supports",
+          "page_range": [
+            103,
+            103
+          ],
+          "quote": "a weighted average of past price changes that puts more weight on the more recent past",
+          "source_id": "bf_hbe_vol1_2018"
+        },
+        {
+          "chunk_hash": "731b939f435403036bc967f9463faaad24929d6110b4d8dd1844f63e40cb3ab4",
+          "chunk_id": "bf_hbe_vol1_2018:p104:0155",
+          "edge_type": "supports",
+          "page_range": [
+            104,
+            104
+          ],
+          "quote": "if past price changes have been strongly positive, extrapolators become more bullish about the future price change and therefore increase their demand for the risky asset, pushing its price higher",
+          "source_id": "bf_hbe_vol1_2018"
+        },
+        {
+          "chunk_hash": "651c8dc27d67bc6ba75bd8a068174b306c44f8adde91bf49cb815f8d79544a32",
+          "chunk_id": "bf_hbe_vol1_2018:p102:0153",
+          "edge_type": "supports",
+          "page_range": [
+            102,
+            102
+          ],
+          "quote": "the average belief of the surveyed investors about the future stock market return is a positive function of recent past stock market returns",
+          "source_id": "bf_hbe_vol1_2018"
+        }
+      ],
+      "summary": "In an equilibrium with extrapolators (who expect future price changes as a weighted average of recent past changes) and boundedly-rational fundamental traders, prices are anchored to fundamentals plus an extrapolation term, generating bubbles, excess volatility, and time-series predictability.",
+      "tags": [
+        "behavioral-finance",
+        "extrapolation",
+        "asset-pricing",
+        "bubbles",
+        "noise-traders"
+      ],
+      "title": "Extrapolative Beliefs and Asset Prices"
+    },
+    {
+      "card_id": "be-financial-crisis-narrative",
+      "citations": [
+        {
+          "chunk_hash": "084dd45d0579817a165dea3d5abb146b44410579dfe04faa4fc46b82b11de99a",
+          "chunk_id": "bf_gennaioli_shleifer_2018_crisis_beliefs:p065:0056",
+          "edge_type": "supports",
+          "page_range": [
+            66,
+            66
+          ],
+          "quote": "they entail at worst minor losses on junior tranches of subprime MBS and none on the AAA-rated tranches.",
+          "source_id": "bf_gennaioli_shleifer_2018_crisis_beliefs"
+        },
+        {
+          "chunk_hash": "38614aed2b68d9098466a662753e0bc8cbe3149fe0977bc26c0aa67a1604a998",
+          "chunk_id": "bf_gennaioli_shleifer_2018_crisis_beliefs:p074:0065",
+          "edge_type": "supports",
+          "page_range": [
+            75,
+            75
+          ],
+          "quote": "bankruptcy brought this reality to mind and triggered a meltdown.",
+          "source_id": "bf_gennaioli_shleifer_2018_crisis_beliefs"
+        },
+        {
+          "chunk_hash": "e4cf91ce4da7daa388119861361fa130059387a841e9f9f6021b5cf1c1705fe2",
+          "chunk_id": "bf_gennaioli_shleifer_2018_crisis_beliefs:p175:0167",
+          "edge_type": "defines",
+          "page_range": [
+            175,
+            175
+          ],
+          "quote": "We see the bankruptcy of Lehman as news about risk σ0. This news only needed to be significant enough to make a financial meltdown representative.",
+          "source_id": "bf_gennaioli_shleifer_2018_crisis_beliefs"
+        }
+      ],
+      "summary": "The 2008 crisis read as a belief-driven narrative: pre-2007 diagnostic over-optimism about home prices and AAA-MBS safety, neglected systematic mortgage tail risk that survived the 2007 tremors, and the Lehman bankruptcy as news about systemic risk that triggered a sharp reversal of beliefs.",
+      "tags": [
+        "behavioral-finance",
+        "financial-crisis",
+        "neglected-risk",
+        "diagnostic-expectations"
+      ],
+      "title": "The 2007-09 Crisis as a Belief-Driven Narrative"
+    },
+    {
+      "card_id": "be-fund-flow-pressure",
+      "citations": [
+        {
+          "chunk_hash": "114c7160cb22213e74a3987d13fdf1901f13a459e38beb2c3b80ae2bc4c8fdf5",
+          "chunk_id": "bf_shleifer_2000_inefficient_markets:p097:0108",
+          "edge_type": "defines",
+          "page_range": [
+            98,
+            98
+          ],
+          "quote": "We refer to the phenomenon of responsiveness of funds under management to past returns as performance based arbitrage.",
+          "source_id": "bf_shleifer_2000_inefficient_markets"
+        },
+        {
+          "chunk_hash": "07c806da83ef5920df6c0bcfcdac87ec184a133f7efc67584cf833dc4a4cda11",
+          "chunk_id": "bf_shleifer_2000_inefficient_markets:p098:0109",
+          "edge_type": "supports",
+          "page_range": [
+            99,
+            99
+          ],
+          "quote": "Poor performance can thus erode both the equity base and the borrowing capacity of an arbitrageur, regardless of the attractiveness of arbitrage opportunities he faces.",
+          "source_id": "bf_shleifer_2000_inefficient_markets"
+        },
+        {
+          "chunk_hash": "f70eaa90abe0a4a3cb14755bf4b01f44fa1f23fb56bd1bd756668d042efff196",
+          "chunk_id": "bf_shleifer_2000_inefficient_markets:p102:0114",
+          "edge_type": "supports",
+          "page_range": [
+            102,
+            102
+          ],
+          "quote": "in a particular segment at time 2 is an increasing function of arbitrageurs' gross return",
+          "source_id": "bf_shleifer_2000_inefficient_markets"
+        },
+        {
+          "chunk_hash": "487fb7c7bcc963a05a7ecc40985ae1777d5509ca7b7aa4103b5ab82ec6c7eb14",
+          "chunk_id": "bf_shleifer_2000_inefficient_markets:p109:0123",
+          "edge_type": "supports",
+          "page_range": [
+            109,
+            109
+          ],
+          "quote": "a market driven by PBA loses its resiliency in extreme",
+          "source_id": "bf_shleifer_2000_inefficient_markets"
+        }
+      ],
+      "summary": "Under performance-based arbitrage (Shleifer-Vishny 1997), investors allocate capital to arbitrageurs by past returns, so deepening mispricing produces interim losses, fund withdrawals, and forced liquidation exactly when expected returns are highest — arbitrage is least effective and least resilient in panics.",
+      "tags": [
+        "behavioral-finance",
+        "limits-of-arbitrage",
+        "fund-flows",
+        "agency",
+        "fire-sales"
+      ],
+      "title": "Performance-Based Arbitrage And Fund-Flow Pressure"
+    },
+    {
+      "card_id": "be-fundamentalist-chartist-ham",
+      "citations": [
+        {
+          "chunk_hash": "cf61f3811adae83478188cf5efac6b62696a339d033e72f344f8ee525bdbbced",
+          "chunk_id": "bf_compecon_v4_2018_ham:p277:0392",
+          "edge_type": "defines",
+          "page_range": [
+            278,
+            278
+          ],
+          "quote": "fundamental rules, or chartists vs.",
+          "source_id": "bf_compecon_v4_2018_ham"
+        },
+        {
+          "chunk_hash": "cf61f3811adae83478188cf5efac6b62696a339d033e72f344f8ee525bdbbced",
+          "chunk_id": "bf_compecon_v4_2018_ham:p277:0392",
+          "edge_type": "supports",
+          "page_range": [
+            278,
+            278
+          ],
+          "quote": "Since chartists rely on extrapolative rules to forecast future prices and to take their position in the market, they tend to sustain and reinforce current price trends or to amplify the deviations from the",
+          "source_id": "bf_compecon_v4_2018_ham"
+        },
+        {
+          "chunk_hash": "39ce9e9830b5e45c8a9e2d7444b336d2fc23ad12696cc6ac1863e36c40d02c33",
+          "chunk_id": "bf_compecon_v4_2018_ham:p283:0401",
+          "edge_type": "supports",
+          "page_range": [
+            283,
+            283
+          ],
+          "quote": "the market price is determined by the market maker as follows,",
+          "source_id": "bf_compecon_v4_2018_ham"
+        }
+      ],
+      "summary": "The canonical two-type HAM: a market maker sets price from order flow generated by mean-reverting fundamentalists and trend-extrapolating chartists, whose time-varying population fractions drive endogenous boom-bust price dynamics around fundamental value.",
+      "tags": [
+        "behavioral-finance",
+        "heterogeneous-agents",
+        "fundamentalist-chartist",
+        "market-maker",
+        "price-dynamics"
+      ],
+      "title": "Fundamentalist vs Chartist Heterogeneous-Agent Model"
+    },
+    {
+      "card_id": "be-gamblers-fallacy-law-of-small-numbers",
+      "citations": [
+        {
+          "chunk_hash": "8478c0524ba38da4003fec81d0d165642993897e74c46eb6931d8e00a066e5ab",
+          "chunk_id": "bf_hbe_vol2_2019:p082:0131",
+          "edge_type": "defines",
+          "page_range": [
+            83,
+            83
+          ],
+          "quote": "fallacy (GF) refers to the mistaken belief that, in a sequence of signals known to be i.i.d., observing one signal reduces the likelihood of next observing that same signal.",
+          "source_id": "bf_hbe_vol2_2019"
+        },
+        {
+          "chunk_hash": "8efa422c6eedcbc7099d41e512ecb868b3d03c2fa6efbeae0d228faa670dfa4e",
+          "chunk_id": "bf_hbe_vol2_2019:p084:0135",
+          "edge_type": "defines",
+          "page_range": [
+            85,
+            85
+          ],
+          "quote": "view a sample randomly drawn from a population as highly representative, that is, similar to the population in all essential",
+          "source_id": "bf_hbe_vol2_2019"
+        },
+        {
+          "chunk_hash": "e07fc78b85e9d46e924a54ae37e64a9b5d1db480ab432b4b017c3faeb434dd8c",
+          "chunk_id": "bf_hbe_vol2_2019:p085:0136",
+          "edge_type": "supports",
+          "page_range": [
+            85,
+            85
+          ],
+          "quote": "she forms beliefs as if the signals are drawn without replacement from an urn of finite size M",
+          "source_id": "bf_hbe_vol2_2019"
+        },
+        {
+          "chunk_hash": "38fa83a2a7cd3c99a0da8f0ba3f09b9012f9b77e23695e268477bec652f32c47",
+          "chunk_id": "bf_hbe_vol2_2019:p087:0140",
+          "edge_type": "supports",
+          "page_range": [
+            87,
+            87
+          ],
+          "quote": "to someone who suffers from the GF, an i.i.d. process looks like it has too many streaks, so a belief in the hot hand arises to explain the apparent excess of",
+          "source_id": "bf_hbe_vol2_2019"
+        }
+      ],
+      "summary": "The gambler's fallacy (a signal reduces the chance of repeating) follows from the Law of Small Numbers (small samples seen as representative); Rabin's urn-without-replacement model; the hot-hand bias as mirror image.",
+      "tags": [
+        "behavioral-finance",
+        "representativeness",
+        "random-sequences",
+        "belief-biases"
+      ],
+      "title": "Gambler's Fallacy and the Law of Small Numbers"
+    },
+    {
+      "card_id": "be-household-liquidity-illiquidity-puzzle",
+      "citations": [
+        {
+          "chunk_hash": "a7303be02874c7cb3b80dbade689908a4d26d55ec06f73de164e9f8425bf806b",
+          "chunk_id": "bf_hbe_vol2_2019:p045:0067",
+          "edge_type": "supports",
+          "page_range": [
+            45,
+            45
+          ],
+          "quote": "Households tend to hold very low levels of liquid assets.",
+          "source_id": "bf_hbe_vol2_2019"
+        },
+        {
+          "chunk_hash": "f0349cbabd925b3e96bf600804880021e27b3450f34eda743aa9cf1233a21daa",
+          "chunk_id": "bf_hbe_vol2_2019:p046:0069",
+          "edge_type": "supports",
+          "page_range": [
+            46,
+            46
+          ],
+          "quote": "households that borrow on their credit cards tend to also accumulate large stocks of illiquid wealth",
+          "source_id": "bf_hbe_vol2_2019"
+        },
+        {
+          "chunk_hash": "e98f18a4caa5ea9a628b43509ba9f58ab2a7ada1886e2941ef81a814c4ba3aa0",
+          "chunk_id": "bf_hbe_vol2_2019:p046:0070",
+          "edge_type": "supports",
+          "page_range": [
+            47,
+            47
+          ],
+          "quote": "= 0.99, and a coefficient of relative risk aversion of",
+          "source_id": "bf_hbe_vol2_2019"
+        }
+      ],
+      "summary": "Households simultaneously hold low liquid wealth, high illiquid wealth, and revolving high-interest debt with high MPC out of liquid changes; Laibson et al. explain this with present bias (beta~0.51, delta~0.99) where illiquidity acts as commitment.",
+      "tags": [
+        "behavioral-finance",
+        "present-bias",
+        "household-finance",
+        "commitment"
+      ],
+      "title": "Household Liquidity / Co-Holding Puzzle"
+    },
+    {
+      "card_id": "be-information-processing-biases",
+      "citations": [
+        {
+          "chunk_hash": "adbfe01e78f29ed82da0fbe0ef9c18da41edca496a5f9ef812309fe6caf162dc",
+          "chunk_id": "bf_pompian_2006_bfwm:p095:0097",
+          "edge_type": "defines",
+          "page_range": [
+            96,
+            96
+          ],
+          "quote": "Anchoring and adjustment is a psychological heuristic that influences the way people intuit probabilities.",
+          "source_id": "bf_pompian_2006_bfwm"
+        },
+        {
+          "chunk_hash": "041ef6d32ed2223959f01368daad6f5d868feecbf9ff61f7241f644204b29f28",
+          "chunk_id": "bf_pompian_2006_bfwm:p190:0201",
+          "edge_type": "supports",
+          "page_range": [
+            191,
+            191
+          ],
+          "quote": "tendency to code, categorize, and evaluate economic outcomes by grouping their assets into any number of nonfungible (noninterchangeable) mental",
+          "source_id": "bf_pompian_2006_bfwm"
+        },
+        {
+          "chunk_hash": "cf9c62237152fdd2b18bc8328b3c2d3cb0cda737f4547f2c3be59c200ab64abf",
+          "chunk_id": "bf_pompian_2006_bfwm:p258:0275",
+          "edge_type": "supports",
+          "page_range": [
+            259,
+            259
+          ],
+          "quote": "Framing effects occur when preferences change as a function of some variation in framing.",
+          "source_id": "bf_pompian_2006_bfwm"
+        },
+        {
+          "chunk_hash": "068f58eb5ad53daf4501f378660e367ea858efb7f3f98855096718dabec702d1",
+          "chunk_id": "bf_pompian_2006_bfwm:p113:0116",
+          "edge_type": "supports",
+          "page_range": [
+            114,
+            114
+          ],
+          "quote": "The availability bias is a rule of thumb, or mental shortcut, that allows people to estimate the probability of an outcome based on how prevalent or familiar that outcome appears in their lives.",
+          "source_id": "bf_pompian_2006_bfwm"
+        },
+        {
+          "chunk_hash": "7bfdfa4cfe41304cd63f23f0c00bb772f9df8f9a784a1519721bd94ec9274004",
+          "chunk_id": "bf_pompian_2006_bfwm:p235:0250",
+          "edge_type": "supports",
+          "page_range": [
+            236,
+            236
+          ],
+          "quote": "Recency bias is a cognitive predisposition that causes people to more prominently recall and emphasize recent events and observations than those that occurred in the near or distant past.",
+          "source_id": "bf_pompian_2006_bfwm"
+        }
+      ],
+      "summary": "The information-processing family of cognitive biases — anchoring & adjustment, mental accounting, framing, availability, self-attribution, recency — in which the mechanics of perceiving, coding, and recalling information distort an otherwise-held belief.",
+      "tags": [
+        "behavioral-finance",
+        "information-processing",
+        "cognitive-bias",
+        "anchoring",
+        "framing"
+      ],
+      "title": "Information-Processing Biases"
+    },
+    {
+      "card_id": "be-investor-clientele-segmentation",
+      "citations": [
+        {
+          "chunk_hash": "d5a5b47849e61f0b71897d715d46b8fdedd5db80b66e8f2b714b3901242a536e",
+          "chunk_id": "bf_shleifer_2000_inefficient_markets:p069:0078",
+          "edge_type": "supports",
+          "page_range": [
+            69,
+            69
+          ],
+          "quote": "the evidence strongly indicates that closed end funds are both held and traded primarily by individual investors.",
+          "source_id": "bf_shleifer_2000_inefficient_markets"
+        },
+        {
+          "chunk_hash": "63a848e240f6063192aad6f657229a2399be65f97a70d3abb86a3f1ab7c0fef8",
+          "chunk_id": "bf_shleifer_2000_inefficient_markets:p070:0079",
+          "edge_type": "supports",
+          "page_range": [
+            70,
+            70
+          ],
+          "quote": "the sentiment that affects closed end fund discounts should also affect other securities that are held and traded predominantly by",
+          "source_id": "bf_shleifer_2000_inefficient_markets"
+        },
+        {
+          "chunk_hash": "d5a5b47849e61f0b71897d715d46b8fdedd5db80b66e8f2b714b3901242a536e",
+          "chunk_id": "bf_shleifer_2000_inefficient_markets:p069:0078",
+          "edge_type": "supports",
+          "page_range": [
+            69,
+            69
+          ],
+          "quote": "in the United Kingdom, closed end funds are primarily held by institutions, and so we would not predict that small investor sentiment matters",
+          "source_id": "bf_shleifer_2000_inefficient_markets"
+        },
+        {
+          "chunk_hash": "f168acf2b43124292558113ad99ab12a76925c1b84b9580ba0002959735dd2f5",
+          "chunk_id": "bf_shleifer_2000_inefficient_markets:p110:0124",
+          "edge_type": "supports",
+          "page_range": [
+            110,
+            110
+          ],
+          "quote": "a great deal of professional arbitrage activity, such as that by hedge funds, is concentrated in a few markets, such as the bond market and the foreign exchange",
+          "source_id": "bf_shleifer_2000_inefficient_markets"
+        }
+      ],
+      "summary": "Sentiment mispricing concentrates in assets held by a common clientele: U.S. closed-end funds and small stocks are held predominantly by individuals, so their shared sentiment is systematic and priced, while professional arbitrage is itself segmented by narrow strategy, limiting where capital can correct mispricing.",
+      "tags": [
+        "behavioral-finance",
+        "investor-clienteles",
+        "segmentation",
+        "noise-trader-risk",
+        "limits-of-arbitrage"
+      ],
+      "title": "Investor Clienteles And Noise-Trader Segmentation"
+    },
+    {
+      "card_id": "be-investor-overreaction",
+      "citations": [
+        {
+          "chunk_hash": "b38849a48a7d18f362c274eaf7e711fe146f61dde1cb51cf74f085c2aa5c0c83",
+          "chunk_id": "bf_shleifer_2000_inefficient_markets:p129:0146",
+          "edge_type": "supports",
+          "page_range": [
+            130,
+            130
+          ],
+          "quote": "The thrust of the evidence is that, over horizons of three to five years, there is a relatively slight negative autocorrelation in stock returns in many markets.",
+          "source_id": "bf_shleifer_2000_inefficient_markets"
+        },
+        {
+          "chunk_hash": "48d46c3547e89f7f63917ae958e45f26a27479dd27f14adfbdc110da0c2163c7",
+          "chunk_id": "bf_shleifer_2000_inefficient_markets:p129:0145",
+          "edge_type": "defines",
+          "page_range": [
+            129,
+            129
+          ],
+          "quote": "after a series of announcements of good news, the investor becomes overly optimistic that future news announcements will also be good and hence overreacts",
+          "source_id": "bf_shleifer_2000_inefficient_markets"
+        },
+        {
+          "chunk_hash": "3957b4864cb441abe4ac95320470e0f9e4d26e0d37af6b30f88c75b0b36cacb2",
+          "chunk_id": "bf_shleifer_2000_inefficient_markets:p120:0137",
+          "edge_type": "supports",
+          "page_range": [
+            121,
+            121
+          ],
+          "quote": "over longer horizons of perhaps three to five years, security prices overreact to consistent patterns of news pointing in the same direction",
+          "source_id": "bf_shleifer_2000_inefficient_markets"
+        }
+      ],
+      "summary": "Over three-to-five-year horizons securities overreact to consistent strings of same-direction news: De Bondt-Thaler show past extreme losers later outperform past extreme winners. This is the representativeness-driven overreaction signature, mirror image of short-horizon momentum.",
+      "tags": [
+        "behavioral-finance",
+        "overreaction",
+        "long-horizon-reversal",
+        "representativeness",
+        "anomalies"
+      ],
+      "title": "Long-Horizon Reversal And Investor Overreaction"
+    },
+    {
+      "card_id": "be-kernel-of-truth",
+      "citations": [
+        {
+          "chunk_hash": "e0b3314314bd85364fe87548c05c7062d084b4eba942b174255ebfd1ffcf06a7",
+          "chunk_id": "bf_gennaioli_shleifer_2018_crisis_beliefs:p153:0145",
+          "edge_type": "defines",
+          "page_range": [
+            154,
+            154
+          ],
+          "quote": "Representativeness causes biases by exaggerating real patterns in the data.",
+          "source_id": "bf_gennaioli_shleifer_2018_crisis_beliefs"
+        },
+        {
+          "chunk_hash": "9953702e673baba93fe26c69e331db9c7db0d64ad1c08c111f4314867f15b417",
+          "chunk_id": "bf_gennaioli_shleifer_2018_crisis_beliefs:p163:0155",
+          "edge_type": "supports",
+          "page_range": [
+            164,
+            164
+          ],
+          "quote": "This idea that stereotypes exaggerate real differences between groups is referred to as",
+          "source_id": "bf_gennaioli_shleifer_2018_crisis_beliefs"
+        },
+        {
+          "chunk_hash": "0e2ab8e9b21c131373fa5486814d012edb14f6c9b6aac3628b504609eb5ad9dd",
+          "chunk_id": "bf_gennaioli_shleifer_2018_crisis_beliefs:p160:0151",
+          "edge_type": "supports",
+          "page_range": [
+            160,
+            160
+          ],
+          "quote": "As a result, red hair is representative of Irish people.",
+          "source_id": "bf_gennaioli_shleifer_2018_crisis_beliefs"
+        }
+      ],
+      "summary": "The kernel-of-truth principle: representativeness distorts beliefs by exaggerating real differences across types/states, amplifying outcomes objectively made more likely by recent news -- so biases move in the right direction but too far, and depend on measurable features of the world.",
+      "tags": [
+        "behavioral-finance",
+        "representativeness",
+        "kernel-of-truth",
+        "stereotypes"
+      ],
+      "title": "Kernel of Truth"
+    },
+    {
+      "card_id": "be-keynesian-beauty-contest-level-k",
+      "citations": [
+        {
+          "chunk_hash": "3b522963e0b133e9776152ec4a0196b0a8fad4e3c5ab06f31cacc9e73155d68e",
+          "chunk_id": "bf_compecon_v4_2018_ham:p601:0894",
+          "edge_type": "defines",
+          "page_range": [
+            601,
+            601
+          ],
+          "quote": "and tournament payoffs) to the experimental literature.",
+          "source_id": "bf_compecon_v4_2018_ham"
+        },
+        {
+          "chunk_hash": "134179f9e8a94f1a3809fcb5fdf37ee516fccafca6e92353688903aa1352f6cf",
+          "chunk_id": "bf_compecon_v4_2018_ham:p601:0895",
+          "edge_type": "supports",
+          "page_range": [
+            602,
+            602
+          ],
+          "quote": "2/3 = 33.33, if b = 2/3. A level-2 (L2) player anticipates a level-1",
+          "source_id": "bf_compecon_v4_2018_ham"
+        },
+        {
+          "chunk_hash": "134179f9e8a94f1a3809fcb5fdf37ee516fccafca6e92353688903aa1352f6cf",
+          "chunk_id": "bf_compecon_v4_2018_ham:p601:0895",
+          "edge_type": "supports",
+          "page_range": [
+            602,
+            602
+          ],
+          "quote": "It is assumed that all (naive) players in a Beauty Contest game choose randomly, with an average of 50 in the interval [0, 100], for insufficient reasoning.",
+          "source_id": "bf_compecon_v4_2018_ham"
+        },
+        {
+          "chunk_hash": "3b522963e0b133e9776152ec4a0196b0a8fad4e3c5ab06f31cacc9e73155d68e",
+          "chunk_id": "bf_compecon_v4_2018_ham:p601:0894",
+          "edge_type": "supports",
+          "page_range": [
+            601,
+            601
+          ],
+          "quote": "first-period behavior is far away from the equilibrium, all choosing zero, but behavior slowly converges over time towards zero.",
+          "source_id": "bf_compecon_v4_2018_ham"
+        }
+      ],
+      "summary": "The p-guessing (beauty contest) game and the level-k model: starting from a random level-0 anchor, a level-k player best-responds to level k-1, so observed guesses cluster at finitely many iterations rather than at the rational-expectations equilibrium, capturing bounded depth of strategic reasoning.",
+      "tags": [
+        "behavioral-finance",
+        "beauty-contest",
+        "level-k",
+        "higher-order-beliefs",
+        "bounded-rationality"
+      ],
+      "title": "Keynesian Beauty Contest and Level-k Reasoning"
+    },
+    {
+      "card_id": "be-loss-aversion-reference-dependence",
+      "citations": [
+        {
+          "chunk_hash": "1ef8671f20cfeb0af665349327999cb96318b0a7ba1bea295e7e017967eb2a87",
+          "chunk_id": "bf_wakker_2010_pt_risk_ambiguity:p254:0342",
+          "edge_type": "defines",
+          "page_range": [
+            255,
+            255
+          ],
+          "quote": "> 1, so that losses are overweighted relative to gains.",
+          "source_id": "bf_wakker_2010_pt_risk_ambiguity"
+        },
+        {
+          "chunk_hash": "1ef8671f20cfeb0af665349327999cb96318b0a7ba1bea295e7e017967eb2a87",
+          "chunk_id": "bf_wakker_2010_pt_risk_ambiguity:p254:0342",
+          "edge_type": "supports",
+          "page_range": [
+            255,
+            255
+          ],
+          "quote": "“Losses loom larger than gains” (Kahneman & Tversky, 1979).",
+          "source_id": "bf_wakker_2010_pt_risk_ambiguity"
+        },
+        {
+          "chunk_hash": "3ea20ccaf834cba64d9a01b66d7ed07057835619bfa320d7ae3ece840fd00968",
+          "chunk_id": "bf_wakker_2010_pt_risk_ambiguity:p256:0345",
+          "edge_type": "supports",
+          "page_range": [
+            257,
+            257
+          ],
+          "quote": "It is only if reference points vary that the modeling of outcomes as changes with respect to a reference point really deviates",
+          "source_id": "bf_wakker_2010_pt_risk_ambiguity"
+        }
+      ],
+      "summary": "Outcomes are coded as gains and losses relative to a reference point; the value function has a kink at the reference point with loss aversion coefficient lambda>1, modeled as U(a)=u(a) for gains and U(a)=lambda*u(a) for losses.",
+      "tags": [
+        "behavioral-finance",
+        "loss-aversion",
+        "reference-dependence",
+        "value-function"
+      ],
+      "title": "Loss Aversion and Reference Dependence"
+    },
+    {
+      "card_id": "be-moderate-vs-adapt-bias-allocation",
+      "citations": [
+        {
+          "chunk_hash": "6dd332f5d737a510d525aa9460b7ec207398700a75054eafef4b7346c3d729eb",
+          "chunk_id": "bf_pompian_2006_bfwm:p059:0060",
+          "edge_type": "defines",
+          "page_range": [
+            60,
+            60
+          ],
+          "quote": "This chapter, which reviews the practical consequences of investor bias in asset allocation decisions, might, with any luck, sow the seeds of a preliminary thought process for establishing an industry-standard methodology for detecting and responding to investor biases.",
+          "source_id": "bf_pompian_2006_bfwm"
+        },
+        {
+          "chunk_hash": "69c68f9e75c801a08a5ad3b4b177a813fdce58fe2fce6a98ae1efa6f33b89510",
+          "chunk_id": "bf_pompian_2006_bfwm:p063:0065",
+          "edge_type": "supports",
+          "page_range": [
+            64,
+            64
+          ],
+          "quote": "way of life at risk, moderating the bias is the best response.",
+          "source_id": "bf_pompian_2006_bfwm"
+        },
+        {
+          "chunk_hash": "69c68f9e75c801a08a5ad3b4b177a813fdce58fe2fce6a98ae1efa6f33b89510",
+          "chunk_id": "bf_pompian_2006_bfwm:p063:0065",
+          "edge_type": "supports",
+          "page_range": [
+            64,
+            64
+          ],
+          "quote": "Conversely, because emotional biases originate from impulse or intuition rather than conscious calculations, they are difficult to rectify.",
+          "source_id": "bf_pompian_2006_bfwm"
+        }
+      ],
+      "summary": "Pompian's two-principle decision rule for biases in asset allocation: moderate (correct) cognitive biases and adapt to emotional biases (Principle II), and moderate biases in less-wealthy clients but adapt to them in wealthier ones (Principle I).",
+      "tags": [
+        "behavioral-finance",
+        "moderate-vs-adapt",
+        "asset-allocation",
+        "wealth-level",
+        "bias-treatment"
+      ],
+      "title": "Moderate vs Adapt to Investor Biases"
+    },
+    {
+      "card_id": "be-momentum-anomaly",
+      "citations": [
+        {
+          "chunk_hash": "cb89304782bc5444505ad3b1c323ab87ffa73d6e89fe4b4e87e7a516a22137ad",
+          "chunk_id": "bf_shleifer_2000_inefficient_markets:p123:0140",
+          "edge_type": "defines",
+          "page_range": [
+            123,
+            123
+          ],
+          "quote": "By underreaction we mean that the average return on the company's stock in the period following an announcement of good news",
+          "source_id": "bf_shleifer_2000_inefficient_markets"
+        },
+        {
+          "chunk_hash": "b0547c1477d56ae56cee0df2e166f127ddfdda84795fa4e08907b41dd666e826",
+          "chunk_id": "bf_shleifer_2000_inefficient_markets:p125:0142",
+          "edge_type": "supports",
+          "page_range": [
+            125,
+            125
+          ],
+          "quote": "the market underreacts to the earnings announcement in revising a",
+          "source_id": "bf_shleifer_2000_inefficient_markets"
+        },
+        {
+          "chunk_hash": "b0547c1477d56ae56cee0df2e166f127ddfdda84795fa4e08907b41dd666e826",
+          "chunk_id": "bf_shleifer_2000_inefficient_markets:p125:0142",
+          "edge_type": "supports",
+          "page_range": [
+            126,
+            126
+          ],
+          "quote": "investors typically (but not always) believe that earnings are more stationary than they really are.",
+          "source_id": "bf_shleifer_2000_inefficient_markets"
+        },
+        {
+          "chunk_hash": "1fad58fac73c7d681c525e108215dc4d7937520e3017341c9f8c01db00be024b",
+          "chunk_id": "bf_shleifer_2000_inefficient_markets:p126:0143",
+          "edge_type": "supports",
+          "page_range": [
+            126,
+            126
+          ],
+          "quote": "underperforms the past six-month winner portfolio by nearly nine percent.",
+          "source_id": "bf_shleifer_2000_inefficient_markets"
+        }
+      ],
+      "summary": "Short-horizon return continuation (momentum, post-earnings-announcement drift) is the conservatism-driven underreaction signature: positive return autocorrelation over ~one month to one year as prices slowly incorporate news, documented by Bernard's SUE drift and Jegadeesh-Titman / Chan et al. six-month momentum.",
+      "tags": [
+        "behavioral-finance",
+        "momentum",
+        "underreaction",
+        "conservatism",
+        "anomalies"
+      ],
+      "title": "Momentum As Underreaction To News"
+    },
+    {
+      "card_id": "be-multiple-priors-maxmin-eu",
+      "citations": [
+        {
+          "chunk_hash": "64449bb101caa62e1925d20b3c1ed18994da82edd9370b22a6f9e96707af0c20",
+          "chunk_id": "bf_wakker_2010_pt_risk_ambiguity:p341:0469",
+          "edge_type": "defines",
+          "page_range": [
+            341,
+            341
+          ],
+          "quote": "A popular alternative to RDU for Case 1 is the maxmin expected utility (MEU) model, also sometimes referred to using the general name multiple priors",
+          "source_id": "bf_wakker_2010_pt_risk_ambiguity"
+        },
+        {
+          "chunk_hash": "67fa26fbdfad7179318d0cb570cf84e9c9717c0b4422ef194a1a8af16f9d8bbd",
+          "chunk_id": "bf_wakker_2010_pt_risk_ambiguity:p340:0467",
+          "edge_type": "supports",
+          "page_range": [
+            340,
+            340
+          ],
+          "quote": "If W is convex then its CORE is nonempty and W is the minimum over all of its CORE elements.",
+          "source_id": "bf_wakker_2010_pt_risk_ambiguity"
+        },
+        {
+          "chunk_hash": "07de4e9e2c7d89528006904feae25ca5796f27b06a9249d616905a8cbd7a6867",
+          "chunk_id": "bf_wakker_2010_pt_risk_ambiguity:p342:0470",
+          "edge_type": "supports",
+          "page_range": [
+            342,
+            342
+          ],
+          "quote": "It became popular in decision theory when Gilboa & Schmeidler (1989) proved its soundness by providing a behavioral foundation.",
+          "source_id": "bf_wakker_2010_pt_risk_ambiguity"
+        }
+      ],
+      "summary": "Maxmin expected utility (Gilboa-Schmeidler) evaluates a prospect as the minimum expected utility over a convex set of priors C; it equals Choquet EU when C is the CORE of a convex capacity, and the alpha-maxmin model blends the worst-case inf with the best-case sup.",
+      "tags": [
+        "behavioral-finance",
+        "multiple-priors",
+        "maxmin-expected-utility",
+        "ambiguity"
+      ],
+      "title": "Multiple Priors and Maxmin Expected Utility"
+    },
+    {
+      "card_id": "be-myopic-loss-aversion-equity-premium",
+      "citations": [
+        {
+          "chunk_hash": "b2c6f112b07906ed24c6fc6c310e1c9364fc4df2df33d416b66652bac03e35ef",
+          "chunk_id": "bf_pompian_2006_bfwm:p227:0242",
+          "edge_type": "supports",
+          "page_range": [
+            228,
+            228
+          ],
+          "quote": "the possibility of a loss is on average twice as powerful a motivator as the possibility of making a gain of equal magnitude",
+          "source_id": "bf_pompian_2006_bfwm"
+        },
+        {
+          "chunk_hash": "2b97f7686c27b81a79c528e8c6771717291ac2402efe3749d8717c4247ff6f53",
+          "chunk_id": "bf_pompian_2006_bfwm:p228:0243",
+          "edge_type": "supports",
+          "page_range": [
+            229,
+            229
+          ],
+          "quote": "people weigh all potential gains and losses in relation to some benchmark reference point (the point of origin on the graph in Figure 19.1).",
+          "source_id": "bf_pompian_2006_bfwm"
+        },
+        {
+          "chunk_hash": "04013ceca1797ee3136cfa526947110687814ec05c6e9e356085128c2ac4604b",
+          "chunk_id": "bf_pompian_2006_bfwm:p229:0244",
+          "edge_type": "supports",
+          "page_range": [
+            230,
+            230
+          ],
+          "quote": "The disposition effect is the desire to hold losing investments too long (risk-seeking behavior) and to sell winning investments too quickly (risk-avoidance behavior).",
+          "source_id": "bf_pompian_2006_bfwm"
+        },
+        {
+          "chunk_hash": "b31bccff13f4883c5f637f5aca0e94e7e59065d07cdb07e0a6bb2ebc0ed4e8c6",
+          "chunk_id": "bf_pompian_2006_bfwm:p231:0246",
+          "edge_type": "supports",
+          "page_range": [
+            232,
+            232
+          ],
+          "quote": "suggested a solution to the equity risk premium puzzle based on what they call “myopic loss aversion.” Their explanation is grounded in two behavioral concepts: loss aversion and myopia.",
+          "source_id": "bf_pompian_2006_bfwm"
+        },
+        {
+          "chunk_hash": "b31bccff13f4883c5f637f5aca0e94e7e59065d07cdb07e0a6bb2ebc0ed4e8c6",
+          "chunk_id": "bf_pompian_2006_bfwm:p231:0246",
+          "edge_type": "supports",
+          "page_range": [
+            232,
+            232
+          ],
+          "quote": "on stocks and the lower, average rate of return on riskless Treasury bills (T-bills)—had steadily averaged 6.18 percent over the preceding",
+          "source_id": "bf_pompian_2006_bfwm"
+        }
+      ],
+      "summary": "Myopic loss aversion (Benartzi-Thaler): loss aversion plus frequent portfolio evaluation and narrow framing makes equities feel too risky, which Pompian's Ch.19 presents as the solution to the equity-premium puzzle (Mehra-Prescott 6.18%, ~1-year horizon); the chapter also supplies the loss-aversion building block (~2:1, S-shaped value function, disposition effect).",
+      "tags": [
+        "behavioral-finance",
+        "loss-aversion",
+        "myopic-loss-aversion",
+        "equity-premium",
+        "narrow-framing"
+      ],
+      "title": "Myopic Loss Aversion and the Equity Premium"
+    },
+    {
+      "card_id": "be-neglected-tail-risk",
+      "citations": [
+        {
+          "chunk_hash": "d86c5bf0fe7555fa14c968097f1c7b72095d3191ba2ef5b9294d6952038f160d",
+          "chunk_id": "bf_gennaioli_shleifer_2018_crisis_beliefs:p231:0220",
+          "edge_type": "defines",
+          "page_range": [
+            232,
+            232
+          ],
+          "quote": "Agents neglect downside risk in the sense of definition 3.1 if and only if cash flow volatility has not increased relative to the past",
+          "source_id": "bf_gennaioli_shleifer_2018_crisis_beliefs"
+        },
+        {
+          "chunk_hash": "a4c0c5555b7e0dfc485d22be26d8ca3d0f9afaf8d848250629581d40c60b5669",
+          "chunk_id": "bf_gennaioli_shleifer_2018_crisis_beliefs:p173:0165",
+          "edge_type": "supports",
+          "page_range": [
+            174,
+            174
+          ],
+          "quote": "When market participants perceive a higher mean and a lower variance, they are optimistic about the average return on mortgages and they neglect tail risk.",
+          "source_id": "bf_gennaioli_shleifer_2018_crisis_beliefs"
+        },
+        {
+          "chunk_hash": "e4cf91ce4da7daa388119861361fa130059387a841e9f9f6021b5cf1c1705fe2",
+          "chunk_id": "bf_gennaioli_shleifer_2018_crisis_beliefs:p175:0167",
+          "edge_type": "supports",
+          "page_range": [
+            176,
+            176
+          ],
+          "quote": "the pooling of risks exposed the entire financial sector to the same neglected risk.",
+          "source_id": "bf_gennaioli_shleifer_2018_crisis_beliefs"
+        }
+      ],
+      "summary": "Under good news with non-rising volatility, diagnostic investors thin the left tail, perceive cash flows as too safe, over-issue safe-looking (AAA) debt, and build hidden fragility -- so that when a bad tail state later becomes representative, fire sales and price collapses follow.",
+      "tags": [
+        "behavioral-finance",
+        "neglected-risk",
+        "diagnostic-expectations",
+        "financial-fragility"
+      ],
+      "title": "Neglected Tail Risk"
+    },
+    {
+      "card_id": "be-overconfidence-bias",
+      "citations": [
+        {
+          "chunk_hash": "06a6d8653bad335a3e19befe13f6615f113b621aa1c4ec15ef34f60aec534352",
+          "chunk_id": "bf_pompian_2006_bfwm:p070:0071",
+          "edge_type": "defines",
+          "page_range": [
+            71,
+            71
+          ],
+          "quote": "intuitive reasoning, judgments, and cognitive abilities.",
+          "source_id": "bf_pompian_2006_bfwm"
+        },
+        {
+          "chunk_hash": "a67953f7b06d64b92842702a1a5408c3073c7b618d56c8f3a2848fab3a610693",
+          "chunk_id": "bf_pompian_2006_bfwm:p071:0072",
+          "edge_type": "supports",
+          "page_range": [
+            72,
+            72
+          ],
+          "quote": "intervals that investors assign to their investment predictions are too",
+          "source_id": "bf_pompian_2006_bfwm"
+        },
+        {
+          "chunk_hash": "76cc6742ec987048d0ebb52ee1fe5d6fb8a9975752892934f053bb7a7856208b",
+          "chunk_id": "bf_pompian_2006_bfwm:p074:0075",
+          "edge_type": "supports",
+          "page_range": [
+            75,
+            75
+          ],
+          "quote": "study would have done better, on average, if they had maintained their start-of-the-year portfolios for the entire year.",
+          "source_id": "bf_pompian_2006_bfwm"
+        },
+        {
+          "chunk_hash": "a6ef9250a1716e6c2100e8ec7d85e7e546c4b06d1ca8dbcff51e573f9974d2dc",
+          "chunk_id": "bf_pompian_2006_bfwm:p072:0073",
+          "edge_type": "supports",
+          "page_range": [
+            73,
+            73
+          ],
+          "quote": "Subjects reported being 100 percent sure when they were actually only 70 percent to 80 percent",
+          "source_id": "bf_pompian_2006_bfwm"
+        }
+      ],
+      "summary": "Overconfidence as unwarranted faith in one's reasoning, split into prediction overconfidence (too-narrow confidence intervals) and certainty overconfidence (miscalibrated certainty); Barber-Odean links it to excessive trading and underperformance.",
+      "tags": [
+        "behavioral-finance",
+        "overconfidence",
+        "cognitive-bias",
+        "miscalibration",
+        "excessive-trading"
+      ],
+      "title": "Overconfidence Bias"
+    },
+    {
+      "card_id": "be-overconfidence-disagreement-short-sale",
+      "citations": [
+        {
+          "chunk_hash": "29712839f743704531c8ab3f020e5f433b0ba0c3cee42538dd72ae1e0c304454",
+          "chunk_id": "bf_hbe_vol1_2018:p125:0190",
+          "edge_type": "defines",
+          "page_range": [
+            125,
+            125
+          ],
+          "quote": "if short sales are not possible, the pessimists do not take a position in the asset. The price of the asset then reflects only the expectations of the optimists. As such, the asset is overpriced.",
+          "source_id": "bf_hbe_vol1_2018"
+        },
+        {
+          "chunk_hash": "29712839f743704531c8ab3f020e5f433b0ba0c3cee42538dd72ae1e0c304454",
+          "chunk_id": "bf_hbe_vol1_2018:p125:0190",
+          "edge_type": "supports",
+          "page_range": [
+            125,
+            125
+          ],
+          "quote": "means that, when there is significant disagreement, the asset is overvalued relative to the present value of its future cash flows as perceived by the",
+          "source_id": "bf_hbe_vol1_2018"
+        },
+        {
+          "chunk_hash": "9ae9df948378b6991a55e899bc0081fe1571031398514eb0b06e6f549fd0828f",
+          "chunk_id": "bf_hbe_vol1_2018:p126:0192",
+          "edge_type": "supports",
+          "page_range": [
+            126,
+            126
+          ],
+          "quote": "Scheinkman and Xiong (2003) show how overconfidence-based disagreement and a short-sale constraint can explain this coincidence of overvaluation and high volume.",
+          "source_id": "bf_hbe_vol1_2018"
+        },
+        {
+          "chunk_hash": "9ae9df948378b6991a55e899bc0081fe1571031398514eb0b06e6f549fd0828f",
+          "chunk_id": "bf_hbe_vol1_2018:p126:0192",
+          "edge_type": "supports",
+          "page_range": [
+            126,
+            126
+          ],
+          "quote": "this leads to larger fluctuations in the relative optimism of the two investor groups. This, in turn, leads to higher trading volume, but also greater",
+          "source_id": "bf_hbe_vol1_2018"
+        }
+      ],
+      "summary": "Miller's static and Harrison-Kreps / Scheinkman-Xiong dynamic mechanisms: when investors disagree (driven by overconfidence) and short sales are constrained, prices reflect only optimists, producing overvaluation; the dynamic resale option also generates speculative bubbles and very high trading volume.",
+      "tags": [
+        "behavioral-finance",
+        "overconfidence",
+        "short-sale-constraint",
+        "bubbles",
+        "trading-volume"
+      ],
+      "title": "Disagreement with a Short-Sale Constraint"
+    },
+    {
+      "card_id": "be-overconfidence-self-attribution-prices",
+      "citations": [
+        {
+          "chunk_hash": "2e2acaa7ae35ba4a4503920cd243561bb81d66d02274300a83f4f47501a69c9c",
+          "chunk_id": "bf_hbe_vol1_2018:p124:0188",
+          "edge_type": "defines",
+          "page_range": [
+            124,
+            124
+          ],
+          "quote": "the asset will be misvalued: overvalued if the signal is good and undervalued if it is bad.",
+          "source_id": "bf_hbe_vol1_2018"
+        },
+        {
+          "chunk_hash": "2e2acaa7ae35ba4a4503920cd243561bb81d66d02274300a83f4f47501a69c9c",
+          "chunk_id": "bf_hbe_vol1_2018:p124:0188",
+          "edge_type": "supports",
+          "page_range": [
+            124,
+            124
+          ],
+          "quote": "the tendency, driven by a desire to maintain a positive self-image, to give oneself credit for a good outcome but to blame a bad outcome on extraneous bad luck.",
+          "source_id": "bf_hbe_vol1_2018"
+        },
+        {
+          "chunk_hash": "2e2acaa7ae35ba4a4503920cd243561bb81d66d02274300a83f4f47501a69c9c",
+          "chunk_id": "bf_hbe_vol1_2018:p124:0188",
+          "edge_type": "supports",
+          "page_range": [
+            124,
+            124
+          ],
+          "quote": "Biased updating of this kind generates both medium-term momentum and",
+          "source_id": "bf_hbe_vol1_2018"
+        },
+        {
+          "chunk_hash": "fd023d214263db1e9ad5375a023538fc7ce195cdf897afc371bc5c32366fffac",
+          "chunk_id": "bf_hbe_vol1_2018:p121:0183",
+          "edge_type": "supports",
+          "page_range": [
+            121,
+            121
+          ],
+          "quote": "the very high trading volume in financial markets",
+          "source_id": "bf_hbe_vol1_2018"
+        }
+      ],
+      "summary": "Daniel-Hirshleifer-Subrahmanyam: overconfident investors overweight private signals, causing mispricing that corrects on public news (excess volatility, reversal); adding biased self-attribution -- confidence rising on confirming public news but not falling on disconfirming news -- produces short-run momentum then long-run reversal.",
+      "tags": [
+        "behavioral-finance",
+        "overconfidence",
+        "self-attribution",
+        "momentum",
+        "reversal"
+      ],
+      "title": "Overconfidence and Biased Self-Attribution in Prices"
+    },
+    {
+      "card_id": "be-present-focused-preferences-taxonomy",
+      "citations": [
+        {
+          "chunk_hash": "d78d6971636709870dc8e2a9815f272e908ee8a293f47fa7514400a58000a31f",
+          "chunk_id": "bf_hbe_vol2_2019:p013:0015",
+          "edge_type": "defines",
+          "page_range": [
+            14,
+            14
+          ],
+          "quote": "Present-focused preferences exist if agents are more likely in the present to choose an action that generates immediate experienced utility",
+          "source_id": "bf_hbe_vol2_2019"
+        },
+        {
+          "chunk_hash": "57a75170b00e5324e522cd8d8314f64f332303d2d414e59b2dfa85abf5e4f7a7",
+          "chunk_id": "bf_hbe_vol2_2019:p015:0017",
+          "edge_type": "supports",
+          "page_range": [
+            15,
+            15
+          ],
+          "quote": "Preferences can be dynamically consistent even if choices are dynamically inconsistent.",
+          "source_id": "bf_hbe_vol2_2019"
+        },
+        {
+          "chunk_hash": "1654695c32bd577a541bbd3ba0d4cdd9b25f733d80b577a1036918710f97009a",
+          "chunk_id": "bf_hbe_vol2_2019:p027:0038",
+          "edge_type": "supports",
+          "page_range": [
+            27,
+            27
+          ],
+          "quote": "These models share the property that agents choose more impatiently for the present than when they choose for the future.",
+          "source_id": "bf_hbe_vol2_2019"
+        }
+      ],
+      "summary": "Ericson-Laibson's present-focused preferences as a meta-category for intertemporal-choice models, classified along two axes (dynamic consistency, taste for commitment), with present bias as one special case.",
+      "tags": [
+        "behavioral-finance",
+        "intertemporal-choice",
+        "present-bias",
+        "time-inconsistency"
+      ],
+      "title": "Present-Focused Preferences Taxonomy"
+    },
+    {
+      "card_id": "be-probability-weighting-inverse-s",
+      "citations": [
+        {
+          "chunk_hash": "c81e7eb233151384c04a5b096c740453bb494c9e2190412e744bb58dcc69203e",
+          "chunk_id": "bf_wakker_2010_pt_risk_ambiguity:p220:0294",
+          "edge_type": "supports",
+          "page_range": [
+            220,
+            220
+          ],
+          "quote": "the overweighting of small probabilities, and Tversky & Kahneman (1992) incorporated this phenomenon.",
+          "source_id": "bf_wakker_2010_pt_risk_ambiguity"
+        },
+        {
+          "chunk_hash": "535fc9a6b3206a0c9d63352c9421e5002f0ef2dc7223deac2702ca138a2781d8",
+          "chunk_id": "bf_wakker_2010_pt_risk_ambiguity:p241:0323",
+          "edge_type": "defines",
+          "page_range": [
+            241,
+            241
+          ],
+          "quote": "Best-rank overweighting has sometimes been called subadditivity, or lower",
+          "source_id": "bf_wakker_2010_pt_risk_ambiguity"
+        },
+        {
+          "chunk_hash": "5b5e831f6645fac7c39aa2d85740b33c6f3619838977172734cd60ac3f882fb0",
+          "chunk_id": "bf_wakker_2010_pt_risk_ambiguity:p225:0299",
+          "edge_type": "defines",
+          "page_range": [
+            225,
+            225
+          ],
+          "quote": "6 Thus a is an anti-index of likelihood insensitivity.",
+          "source_id": "bf_wakker_2010_pt_risk_ambiguity"
+        }
+      ],
+      "summary": "The probability weighting function w(p) is commonly inverse-S: small probabilities overweighted and moderate-to-large underweighted, decomposing into a cognitive likelihood-insensitivity component and a motivational pessimism (elevation) component.",
+      "tags": [
+        "behavioral-finance",
+        "probability-weighting",
+        "likelihood-insensitivity",
+        "pessimism"
+      ],
+      "title": "Probability Weighting: The Inverse-S Function"
+    },
+    {
+      "card_id": "be-prospect-theory-anomaly-verdict",
+      "citations": [
+        {
+          "chunk_hash": "341b1adbfa15db9067807995b30bce8f7e39ac61355399d5beb8a65e39806ac2",
+          "chunk_id": "bf_barberis_jin_wang_2021_pt_anomalies:p037:0049",
+          "edge_type": "defines",
+          "page_range": [
+            38,
+            38
+          ],
+          "quote": "the model is helpful for thinking about 14 of the 23 anomalies",
+          "source_id": "bf_barberis_jin_wang_2021_pt_anomalies"
+        },
+        {
+          "chunk_hash": "c4c233496a5a820df5f6ef5c06fc1d25284edbc511a54b7651da2117f0a9638a",
+          "chunk_id": "bf_barberis_jin_wang_2021_pt_anomalies:p041:0053",
+          "edge_type": "supports",
+          "page_range": [
+            41,
+            41
+          ],
+          "quote": "Table III shows that the model incorrectly predicts a negative alpha for decile 1 of the size anomaly, which contains the stocks with the lowest market capitalization.",
+          "source_id": "bf_barberis_jin_wang_2021_pt_anomalies"
+        },
+        {
+          "chunk_hash": "c4c233496a5a820df5f6ef5c06fc1d25284edbc511a54b7651da2117f0a9638a",
+          "chunk_id": "bf_barberis_jin_wang_2021_pt_anomalies:p041:0053",
+          "edge_type": "supports",
+          "page_range": [
+            41,
+            41
+          ],
+          "quote": "a large fraction of their return comes around earnings announcement dates.",
+          "source_id": "bf_barberis_jin_wang_2021_pt_anomalies"
+        },
+        {
+          "chunk_hash": "376a457f9773591e17fa31bef839f59c73597796e46dd310566f9e79da71702a",
+          "chunk_id": "bf_barberis_jin_wang_2021_pt_anomalies:p043:0056",
+          "edge_type": "supports",
+          "page_range": [
+            43,
+            43
+          ],
+          "quote": "our model performs better than the CAPM and three-factor model, similarly to the four-factor model, and less well than the five- and six-factor models",
+          "source_id": "bf_barberis_jin_wang_2021_pt_anomalies"
+        }
+      ],
+      "summary": "The BJW model helps explain 14 of 23 anomalies (momentum, volatility, distress, profitability, skewness, issuance, PEAD, ...), makes no strong prediction on 2, and predicts the wrong sign on 7 (notably size and value), with the failures concentrated in belief-driven anomalies.",
+      "tags": [
+        "behavioral-finance",
+        "anomalies",
+        "asset-pricing",
+        "model-evaluation"
+      ],
+      "title": "Prospect-Theory Anomaly Scorecard"
+    },
+    {
+      "card_id": "be-prospect-theory-asset-pricing",
+      "citations": [
+        {
+          "chunk_hash": "b91ee5c745c339706e7fd813b30865e26aa113a9de40cffcfc4ff0fb3f96ba48",
+          "chunk_id": "bf_hbe_vol1_2018:p152:0236",
+          "edge_type": "supports",
+          "page_range": [
+            152,
+            152
+          ],
+          "quote": "the stock market earns a high average return so that it can be competitive with the bond market in the eyes of prospect theory investors",
+          "source_id": "bf_hbe_vol1_2018"
+        },
+        {
+          "chunk_hash": "ba6b4760aa619daf726b5fb41dcb3723856ebecbac6c7b7ea51f6a645e68e725",
+          "chunk_id": "bf_hbe_vol1_2018:p153:0237",
+          "edge_type": "defines",
+          "page_range": [
+            153,
+            153
+          ],
+          "quote": "this term captures the idea that the investor also derives utility from annual gains and losses in her financial wealth",
+          "source_id": "bf_hbe_vol1_2018"
+        },
+        {
+          "chunk_hash": "ba6b4760aa619daf726b5fb41dcb3723856ebecbac6c7b7ea51f6a645e68e725",
+          "chunk_id": "bf_hbe_vol1_2018:p153:0237",
+          "edge_type": "supports",
+          "page_range": [
+            153,
+            153
+          ],
+          "quote": "They find that, for values of loss aversion λ drawn from experimental studies, and for values of b0 that put substantial weight on the gain-loss utility term, the equilibrium equity premium is large – as high as 6% per year for high values of b0.",
+          "source_id": "bf_hbe_vol1_2018"
+        },
+        {
+          "chunk_hash": "b91209ccc8c1aefdf16712839834d56244f71c007ae42ff5cbf88c86efc60c6a",
+          "chunk_id": "bf_hbe_vol1_2018:p153:0238",
+          "edge_type": "supports",
+          "page_range": [
+            154,
+            154
+          ],
+          "quote": "if she has experienced gains in recent years, she is less loss averse going forward, while if she has experienced losses, she is more loss averse",
+          "source_id": "bf_hbe_vol1_2018"
+        }
+      ],
+      "summary": "Gain-loss (prospect-theory) utility in equilibrium (Benartzi-Thaler, Barberis-Huang-Santos): investors derive utility from annual gains and losses in financial wealth; loss aversion delivers a high equity premium, and time-varying effective loss aversion (high after losses, low after gains) delivers excess volatility and return predictability.",
+      "tags": [
+        "behavioral-finance",
+        "prospect-theory",
+        "asset-pricing",
+        "equity-premium",
+        "loss-aversion"
+      ],
+      "title": "Prospect-Theory Preferences in Asset Pricing"
+    },
+    {
+      "card_id": "be-prospect-theory-ingredient-decomposition",
+      "citations": [
+        {
+          "chunk_hash": "59749a02eb2c4e61fc418bf14296e706162139d0b84c5cb21a265b581fbeb4bd",
+          "chunk_id": "bf_barberis_jin_wang_2021_pt_anomalies:p044:0057",
+          "edge_type": "defines",
+          "page_range": [
+            45,
+            45
+          ],
+          "quote": "fractions of the spread that come from loss aversion, probability weighting, and diminishing sensitivity are",
+          "source_id": "bf_barberis_jin_wang_2021_pt_anomalies"
+        },
+        {
+          "chunk_hash": "be7608215e7f6fcfcba9fba97a112afbe356dd597d9fa7e9ceffab3d3bc9cadd",
+          "chunk_id": "bf_barberis_jin_wang_2021_pt_anomalies:p045:0058",
+          "edge_type": "supports",
+          "page_range": [
+            45,
+            45
+          ],
+          "quote": "it is only when we also add probability weighting that the model can explain 14 anomalies. As such, probability weighting almost doubles the number of anomalies we can explain.",
+          "source_id": "bf_barberis_jin_wang_2021_pt_anomalies"
+        },
+        {
+          "chunk_hash": "af333d0b45832c0d4a75dd5ef480f9cf76376106b839ec95559ecedc9a06382b",
+          "chunk_id": "bf_barberis_jin_wang_2021_pt_anomalies:p045:0059",
+          "edge_type": "supports",
+          "page_range": [
+            46,
+            46
+          ],
+          "quote": "this specification can explain only five of the 23 anomalies",
+          "source_id": "bf_barberis_jin_wang_2021_pt_anomalies"
+        }
+      ],
+      "summary": "Decomposing the model's anomaly alpha spreads attributes -21% to loss aversion (wrong sign), 48% to probability weighting, and 73% to diminishing sensitivity; probability weighting is essential because it is what lets diminishing sensitivity act, nearly doubling the anomalies explained.",
+      "tags": [
+        "behavioral-finance",
+        "prospect-theory",
+        "anomalies",
+        "decomposition"
+      ],
+      "title": "Prospect-Theory Ingredient Decomposition of Anomaly Spreads"
+    },
+    {
+      "card_id": "be-prospect-theory-three-characteristic-pricing",
+      "citations": [
+        {
+          "chunk_hash": "7ed0f7e9f963c849ac5cbac781b5dbe963aca72620dc92dc79f72d2310b6ec67",
+          "chunk_id": "bf_barberis_jin_wang_2021_pt_anomalies:p002:0002",
+          "edge_type": "defines",
+          "page_range": [
+            2,
+            3
+          ],
+          "quote": "the price of an asset will depend in part on three asset",
+          "source_id": "bf_barberis_jin_wang_2021_pt_anomalies"
+        },
+        {
+          "chunk_hash": "2e5814c345a506a59e5bf1bf184c2b0ab9bf059b3cb9858af89fabbc65e5420e",
+          "chunk_id": "bf_barberis_jin_wang_2021_pt_anomalies:p010:0012",
+          "edge_type": "supports",
+          "page_range": [
+            11,
+            11
+          ],
+          "quote": "they are loss-averse, they dislike assets with volatile returns; all else equal, they require a higher average return on these",
+          "source_id": "bf_barberis_jin_wang_2021_pt_anomalies"
+        },
+        {
+          "chunk_hash": "4db0e27143c48c34860c97d35a90456fe3946a57ac21a4a902ac869d48f105b5",
+          "chunk_id": "bf_barberis_jin_wang_2021_pt_anomalies:p012:0014",
+          "edge_type": "supports",
+          "page_range": [
+            12,
+            12
+          ],
+          "quote": "It is the sum of two terms.",
+          "source_id": "bf_barberis_jin_wang_2021_pt_anomalies"
+        }
+      ],
+      "summary": "In an economy of narrowly-framing prospect-theory investors, a stock's required return depends on three characteristics of its own return distribution: volatility (loss aversion raises it), skewness (probability weighting lowers it), and prior gain overhang (diminishing sensitivity raises it).",
+      "tags": [
+        "behavioral-finance",
+        "prospect-theory",
+        "asset-pricing",
+        "narrow-framing"
+      ],
+      "title": "Prospect-Theory Three-Characteristic Pricing"
+    },
+    {
+      "card_id": "be-quasi-hyperbolic-discounting",
+      "citations": [
+        {
+          "chunk_hash": "691ca6ae9d99fc0793a4786244669c4953f706833b74b303985d1c493b5fec29",
+          "chunk_id": "bf_hbe_vol2_2019:p016:0019",
+          "edge_type": "defines",
+          "page_range": [
+            17,
+            17
+          ],
+          "quote": "(1) Here Ut is total utility, ut is flow utility in period t, β is the present bias parameter, and δ is the long-run discount factor.",
+          "source_id": "bf_hbe_vol2_2019"
+        },
+        {
+          "chunk_hash": "19feb17bc57429780e8916b9aaba7e6a78606ebf577ee61f102edc4da46f45ef",
+          "chunk_id": "bf_hbe_vol2_2019:p017:0021",
+          "edge_type": "supports",
+          "page_range": [
+            18,
+            18
+          ],
+          "quote": "= 1 these preferences revert to exponential discounting.",
+          "source_id": "bf_hbe_vol2_2019"
+        },
+        {
+          "chunk_hash": "6b9a8d2f4f1be3b4a5cd030b643565bc9cb6ef972ed575b6ee88ba69e421eeff",
+          "chunk_id": "bf_hbe_vol2_2019:p018:0022",
+          "edge_type": "supports",
+          "page_range": [
+            18,
+            18
+          ],
+          "quote": "Present-biased preferences are dynamically inconsistent",
+          "source_id": "bf_hbe_vol2_2019"
+        }
+      ],
+      "summary": "The beta-delta quasi-hyperbolic model U_t = u_t + beta*sum delta^k u_{t+k}: a single present-bias parameter beta<1 multiplies the exponentially delta-discounted continuation stream, generating dynamic inconsistency.",
+      "tags": [
+        "behavioral-finance",
+        "present-bias",
+        "discounting",
+        "time-inconsistency"
+      ],
+      "title": "Quasi-Hyperbolic (Beta-Delta) Discounting"
+    },
+    {
+      "card_id": "be-rank-dependent-utility-via-ranks",
+      "citations": [
+        {
+          "chunk_hash": "3c12c6c81b58bba61de2a3249f7a2f4877c044120eb33db3faab99b81ea40ff7",
+          "chunk_id": "bf_wakker_2010_pt_risk_ambiguity:p181:0240",
+          "edge_type": "defines",
+          "page_range": [
+            182,
+            182
+          ],
+          "quote": "Note that w(p þ r) is the rank of the outcome in the prospect next-worse to a.",
+          "source_id": "bf_wakker_2010_pt_risk_ambiguity"
+        },
+        {
+          "chunk_hash": "4edee00fa87a06e95ddbae5a9dd89c1e0abeca95b3624d1295eff796b9b3e3d9",
+          "chunk_id": "bf_wakker_2010_pt_risk_ambiguity:p176:0234",
+          "edge_type": "supports",
+          "page_range": [
+            176,
+            176
+          ],
+          "quote": "Under RDU, the weight of a utility is the difference between two transformed ranks",
+          "source_id": "bf_wakker_2010_pt_risk_ambiguity"
+        },
+        {
+          "chunk_hash": "659e2c8873fc0196470b33b1bacf29eb56874015bb5fa42e4a1545bb9af90e2f",
+          "chunk_id": "bf_wakker_2010_pt_risk_ambiguity:p172:0229",
+          "edge_type": "supports",
+          "page_range": [
+            172,
+            172
+          ],
+          "quote": "describes the probability of y yielding an outcome ranked strictly better than",
+          "source_id": "bf_wakker_2010_pt_risk_ambiguity"
+        }
+      ],
+      "summary": "Rank-dependent utility evaluates a prospect by ranking outcomes best-to-worst and weighting each outcome's utility by the marginal w-contribution of its probability to the cumulative rank, w(p+r)-w(r).",
+      "tags": [
+        "behavioral-finance",
+        "rank-dependent-utility",
+        "decision-weights",
+        "probability-weighting"
+      ],
+      "title": "Rank-Dependent Utility via Ranks"
+    },
+    {
+      "card_id": "be-rational-inattention-entropy",
+      "citations": [
+        {
+          "chunk_hash": "05279ffb8457428e225bf40ac62ad8e18a032a6a65bcfd04e8041d6418b5db30",
+          "chunk_id": "bf_hbe_vol2_2019:p320:0522",
+          "edge_type": "defines",
+          "page_range": [
+            320,
+            320
+          ],
+          "quote": "Sims (1998, 2003) extends the ideas to allow for larger choice sets in which agents freely choose the properties of their signals. He uses the entropy penalty",
+          "source_id": "bf_hbe_vol2_2019"
+        },
+        {
+          "chunk_hash": "05279ffb8457428e225bf40ac62ad8e18a032a6a65bcfd04e8041d6418b5db30",
+          "chunk_id": "bf_hbe_vol2_2019:p320:0522",
+          "edge_type": "supports",
+          "page_range": [
+            320,
+            320
+          ],
+          "quote": "the entropy of X for the discrete case is defined as",
+          "source_id": "bf_hbe_vol2_2019"
+        },
+        {
+          "chunk_hash": "84448ce2ab2a953264f5f327cc057d1e375340f2bb8b195afd1fed99b26b3c63",
+          "chunk_id": "bf_hbe_vol2_2019:p323:0526",
+          "edge_type": "supports",
+          "page_range": [
+            323,
+            323
+          ],
+          "quote": "the decision problem (70) boils down to",
+          "source_id": "bf_hbe_vol2_2019"
+        },
+        {
+          "chunk_hash": "905a9627bba3fdd62b64b440031068c89dd5be05081a81774155fe5bb886653f",
+          "chunk_id": "bf_hbe_vol2_2019:p324:0527",
+          "edge_type": "supports",
+          "page_range": [
+            324,
+            324
+          ],
+          "quote": "with the global entropy constraint of Sims we obtain uniform dampening across all variables",
+          "source_id": "bf_hbe_vol2_2019"
+        }
+      ],
+      "summary": "Sims rational inattention: agents freely choose a signal structure subject to a Shannon mutual-information capacity constraint I(A,X) <= K; the entropy penalty yields a tractable Gaussian solution m = 1 - e^{-2K} with uniform dampening across dimensions.",
+      "tags": [
+        "behavioral-finance",
+        "inattention",
+        "information-theory",
+        "entropy"
+      ],
+      "title": "Rational Inattention (Entropy-Based)"
+    },
+    {
+      "card_id": "be-rational-vs-diagnostic-expectations",
+      "citations": [
+        {
+          "chunk_hash": "c2bbfbb77a7da813cef23d4cf8bbebefc70612a3c53235649354bbac893e23cc",
+          "chunk_id": "bf_gennaioli_shleifer_2018_crisis_beliefs:p184:0175",
+          "edge_type": "defines",
+          "page_range": [
+            185,
+            185
+          ],
+          "quote": "expectations distort the rational expectation",
+          "source_id": "bf_gennaioli_shleifer_2018_crisis_beliefs"
+        },
+        {
+          "chunk_hash": "f1deb465324203baecf94e0423f2e55820881dcaf5153e8f8503c81f93df5f8a",
+          "chunk_id": "bf_gennaioli_shleifer_2018_crisis_beliefs:p185:0176",
+          "edge_type": "supports",
+          "page_range": [
+            186,
+            186
+          ],
+          "quote": "when forecasters overreact to news, the correlation between their forecast revisions and forecast errors should be negative.",
+          "source_id": "bf_gennaioli_shleifer_2018_crisis_beliefs"
+        },
+        {
+          "chunk_hash": "c8780ca6687461b0645862f5ce48e1331fe15cbe7252c5c504930aa5441c99b4",
+          "chunk_id": "bf_gennaioli_shleifer_2018_crisis_beliefs:p188:0179",
+          "edge_type": "supports",
+          "page_range": [
+            189,
+            189
+          ],
+          "quote": "for given current news, updating about future outcomes is more aggressive in macroeconomic series characterized by higher",
+          "source_id": "bf_gennaioli_shleifer_2018_crisis_beliefs"
+        }
+      ],
+      "summary": "Diagnostic expectations nest rational expectations at theta=0, are forward-looking unlike mechanical adaptive rules, and generate overreaction to news: forecast revisions and forecast errors are negatively correlated, so good news breeds excess optimism that predictably reverses.",
+      "tags": [
+        "behavioral-finance",
+        "diagnostic-expectations",
+        "rational-expectations",
+        "overreaction"
+      ],
+      "title": "Diagnostic vs Rational (and Adaptive) Expectations"
+    },
+    {
+      "card_id": "be-rationally-heterogeneous-expectations",
+      "citations": [
+        {
+          "chunk_hash": "a624c3d4da3771b0e7a44e2866115bcab2f5bd248b8d140bdc1fcca80a4361e1",
+          "chunk_id": "bf_compecon_v4_2018_ham:p523:0780",
+          "edge_type": "supports",
+          "page_range": [
+            523,
+            523
+          ],
+          "quote": "there is tremendous coordination on price forecasts within each group, a kind of group specific expectation norm.",
+          "source_id": "bf_compecon_v4_2018_ham"
+        },
+        {
+          "chunk_hash": "a624c3d4da3771b0e7a44e2866115bcab2f5bd248b8d140bdc1fcca80a4361e1",
+          "chunk_id": "bf_compecon_v4_2018_ham:p523:0780",
+          "edge_type": "supports",
+          "page_range": [
+            523,
+            523
+          ],
+          "quote": "is found to be positive, indicating that if subjects see a positive (negative) trend in the past two prices, they expect prices to continue to increase (decrease).",
+          "source_id": "bf_compecon_v4_2018_ham"
+        },
+        {
+          "chunk_hash": "ab3d3bf90e7c04ac654e81de696fc0010cae559e0eaa4556bff6d8872afbda6b",
+          "chunk_id": "bf_compecon_v4_2018_ham:p525:0782",
+          "edge_type": "defines",
+          "page_range": [
+            525,
+            525
+          ],
+          "quote": "Anufriev and Hommes (2012) therefore propose the use of a heuristic switching model, based on Brock and Hommes (1997) to explain the",
+          "source_id": "bf_compecon_v4_2018_ham"
+        },
+        {
+          "chunk_hash": "a624c3d4da3771b0e7a44e2866115bcab2f5bd248b8d140bdc1fcca80a4361e1",
+          "chunk_id": "bf_compecon_v4_2018_ham:p523:0780",
+          "edge_type": "supports",
+          "page_range": [
+            524,
+            524
+          ],
+          "quote": "Hommes et al. conclude that 75 percent of their subjects can be classified using linear adaptive rules that depart from the rational expectations equilibrium prediction.",
+          "source_id": "bf_compecon_v4_2018_ham"
+        }
+      ],
+      "summary": "Learning-to-forecast experiments: subjects coordinate within groups on simple trend-following/anchoring rules rather than the rational-expectations equilibrium, producing oscillations and bubbles; a Brock-Hommes heuristic-switching model with a few rules reproduces this rationally heterogeneous expectation formation.",
+      "tags": [
+        "behavioral-finance",
+        "learning-to-forecast",
+        "heterogeneous-expectations",
+        "heuristic-switching",
+        "positive-feedback"
+      ],
+      "title": "Rationally Heterogeneous Expectations in Learning-to-Forecast"
+    },
+    {
+      "card_id": "be-reference-dependent-preferences-foundations",
+      "citations": [
+        {
+          "chunk_hash": "a6bf6f4fbbb0588c0cf08039183ba4a8ea4a19bdd1e0fcffbc4833d87d2c17a4",
+          "chunk_id": "bf_hbe_vol1_2018:p010:0010",
+          "edge_type": "defines",
+          "page_range": [
+            11,
+            11
+          ],
+          "quote": "outcomes are not experienced on an absolute scale, but rather are experienced relative to some point of reference. Moreover, losses relative to the reference point are felt more severely than commensurate gains.",
+          "source_id": "bf_hbe_vol1_2018"
+        },
+        {
+          "chunk_hash": "324d8171f25df0bffab230707acdc79409adde75ca6eed85815a8504b8e5a3f7",
+          "chunk_id": "bf_hbe_vol1_2018:p020:0025",
+          "edge_type": "defines",
+          "page_range": [
+            21,
+            21
+          ],
+          "quote": "let r be a reference point around which a person defines gains and",
+          "source_id": "bf_hbe_vol1_2018"
+        },
+        {
+          "chunk_hash": "324d8171f25df0bffab230707acdc79409adde75ca6eed85815a8504b8e5a3f7",
+          "chunk_id": "bf_hbe_vol1_2018:p020:0025",
+          "edge_type": "supports",
+          "page_range": [
+            21,
+            21
+          ],
+          "quote": "Zero value of reference point: v(0) = 0.",
+          "source_id": "bf_hbe_vol1_2018"
+        },
+        {
+          "chunk_hash": "084910a26b8e6304aca9798604570cab55e8ee81e63c2be3418194c16fd01c5c",
+          "chunk_id": "bf_hbe_vol1_2018:p021:0026",
+          "edge_type": "supports",
+          "page_range": [
+            22,
+            22
+          ],
+          "quote": "losses loom larger than commensurate gains",
+          "source_id": "bf_hbe_vol1_2018"
+        }
+      ],
+      "summary": "O'Donoghue-Sprenger's foundations: reference-dependent preferences derive gain-loss utility from how realized outcomes compare to a reference point, departing from Expected Utility over final wealth; the value function has zero value at the reference point, diminishing sensitivity, and loss aversion, with modeling choices over coding and reference-point selection.",
+      "tags": [
+        "behavioral-finance",
+        "reference-dependence",
+        "prospect-theory",
+        "loss-aversion",
+        "gain-loss-utility"
+      ],
+      "title": "Foundations of Reference-Dependent Preferences"
+    },
+    {
+      "card_id": "be-regret-aversion-status-quo-endowment",
+      "citations": [
+        {
+          "chunk_hash": "aeea7194f0f0f25b24857ee826a5cbfdb9a8ca03704923e3338128d918225843",
+          "chunk_id": "bf_pompian_2006_bfwm:p246:0261",
+          "edge_type": "defines",
+          "page_range": [
+            247,
+            247
+          ],
+          "quote": "actions because they fear that, in hindsight, whatever course they select will prove less than optimal.",
+          "source_id": "bf_pompian_2006_bfwm"
+        },
+        {
+          "chunk_hash": "4a4e8d2003094118251074ad91aeaa725239e3d115c1f2803c915bfbd440f5ea",
+          "chunk_id": "bf_pompian_2006_bfwm:p267:0285",
+          "edge_type": "supports",
+          "page_range": [
+            268,
+            268
+          ],
+          "quote": "predisposes people facing an array of choice options to elect whatever option ratifies or extends the existing condition",
+          "source_id": "bf_pompian_2006_bfwm"
+        },
+        {
+          "chunk_hash": "51c6ba4ef62dce1aeaaa46dafb2c760c7701a20a67fcec61edccfd4e0542da4e",
+          "chunk_id": "bf_pompian_2006_bfwm:p158:0164",
+          "edge_type": "supports",
+          "page_range": [
+            159,
+            159
+          ],
+          "quote": "People who exhibit endowment bias value an asset more when they hold property rights to it than when they",
+          "source_id": "bf_pompian_2006_bfwm"
+        },
+        {
+          "chunk_hash": "bef4610a9c388c80d366e6038450f975b8924bf4b36e21489997e1bc76004d11",
+          "chunk_id": "bf_pompian_2006_bfwm:p269:0287",
+          "edge_type": "supports",
+          "page_range": [
+            269,
+            269
+          ],
+          "quote": "Loss aversion bias, endowment bias, and status quo bias often combine; and the result is an overall tendency to prefer things to stay as they are",
+          "source_id": "bf_pompian_2006_bfwm"
+        }
+      ],
+      "summary": "The emotional 'stickiness' cluster — regret aversion, status-quo bias, and the endowment effect — that combine to produce portfolio inertia: holding inherited or concentrated positions, avoiding decisive action, and demanding more to sell than to buy.",
+      "tags": [
+        "behavioral-finance",
+        "emotional-bias",
+        "regret-aversion",
+        "status-quo",
+        "endowment-effect"
+      ],
+      "title": "Regret Aversion, Status-Quo, and Endowment"
+    },
+    {
+      "card_id": "be-representativeness-conjunction-base-rate",
+      "citations": [
+        {
+          "chunk_hash": "de8da0f3dc3687cba0e567d3110593c17bce46989a1e005a551ddfa4ff9af5b1",
+          "chunk_id": "bf_gennaioli_shleifer_2018_crisis_beliefs:p155:0147",
+          "edge_type": "defines",
+          "page_range": [
+            155,
+            155
+          ],
+          "quote": "Kahneman and Tversky describe the representativeness heuristic as our tendency to judge likelihood by similarity.",
+          "source_id": "bf_gennaioli_shleifer_2018_crisis_beliefs"
+        },
+        {
+          "chunk_hash": "de8da0f3dc3687cba0e567d3110593c17bce46989a1e005a551ddfa4ff9af5b1",
+          "chunk_id": "bf_gennaioli_shleifer_2018_crisis_beliefs:p155:0147",
+          "edge_type": "supports",
+          "page_range": [
+            156,
+            156
+          ],
+          "quote": "The conjunction fallacy refers to the mistake of judging an event A ∩ B to be more likely than either A or B alone.",
+          "source_id": "bf_gennaioli_shleifer_2018_crisis_beliefs"
+        },
+        {
+          "chunk_hash": "306be575553e36a208ad0f142c121a845c166ab304a1cc6d493f4b2bd3548dfc",
+          "chunk_id": "bf_gennaioli_shleifer_2018_crisis_beliefs:p156:0148",
+          "edge_type": "supports",
+          "page_range": [
+            157,
+            157
+          ],
+          "quote": "Base rate neglect refers to the tendency for individuals to react too strongly to information",
+          "source_id": "bf_gennaioli_shleifer_2018_crisis_beliefs"
+        }
+      ],
+      "summary": "Kahneman-Tversky's representativeness heuristic judges likelihood by similarity, and accounts for two robust errors -- the conjunction fallacy (Linda) and base-rate neglect (overreaction to a positive medical test) -- the psychology Gennaioli-Shleifer formalize.",
+      "tags": [
+        "behavioral-finance",
+        "representativeness",
+        "heuristics",
+        "judgment-biases"
+      ],
+      "title": "Representativeness, Conjunction Fallacy, Base-Rate Neglect"
+    },
+    {
+      "card_id": "be-representativeness-strength-vs-weight",
+      "citations": [
+        {
+          "chunk_hash": "f6dc5630a12eb2dfbf23abba026c482d7a7b277835f8c265de729d87f86a65a2",
+          "chunk_id": "bf_hbe_vol2_2019:p155:0250",
+          "edge_type": "defines",
+          "page_range": [
+            155,
+            155
+          ],
+          "quote": "of the evidence, and then they adjust this impression based on the",
+          "source_id": "bf_hbe_vol2_2019"
+        },
+        {
+          "chunk_hash": "f6dc5630a12eb2dfbf23abba026c482d7a7b277835f8c265de729d87f86a65a2",
+          "chunk_id": "bf_hbe_vol2_2019:p155:0250",
+          "edge_type": "supports",
+          "page_range": [
+            155,
+            155
+          ],
+          "quote": "(4.14), Griffin and Tversky found that the coefficient on sample proportion is greater than the coefficient on sample size.",
+          "source_id": "bf_hbe_vol2_2019"
+        },
+        {
+          "chunk_hash": "bec73e7718897f52f0d65b1e7f2992f9a66e732c5f20c33428937de75e72268c",
+          "chunk_id": "bf_hbe_vol2_2019:p156:0252",
+          "edge_type": "supports",
+          "page_range": [
+            156,
+            156
+          ],
+          "quote": "The higher likelihood is identified with the strength of the evidence and the lower likelihood with the weight.",
+          "source_id": "bf_hbe_vol2_2019"
+        }
+      ],
+      "summary": "Griffin-Tversky: belief updating forms an impression from evidence strength (extremity, ~ sample proportion) then under-adjusts for weight (reliability, ~ sample size); explains overreaction to sample proportion and underreaction to sample size.",
+      "tags": [
+        "behavioral-finance",
+        "representativeness",
+        "belief-updating",
+        "over-underreaction"
+      ],
+      "title": "Strength-versus-Weight Theory of Biased Updating"
+    },
+    {
+      "card_id": "be-self-control-mental-accounting",
+      "citations": [
+        {
+          "chunk_hash": "8a3503c2e48ce38a5dfe28ad7b61dd15bc7be0786be4d573de5c409ecce022bd",
+          "chunk_id": "bf_pompian_2006_bfwm:p169:0177",
+          "edge_type": "defines",
+          "page_range": [
+            170,
+            170
+          ],
+          "quote": "self-control bias is a human behavioral tendency that causes people to consume today at the expense of saving for tomorrow.",
+          "source_id": "bf_pompian_2006_bfwm"
+        },
+        {
+          "chunk_hash": "f925eeced84b674209e7ae8895fe0c132292c2fb95359e655e4773b96d6711b9",
+          "chunk_id": "bf_pompian_2006_bfwm:p171:0179",
+          "edge_type": "supports",
+          "page_range": [
+            172,
+            172
+          ],
+          "quote": "accounts: (1) current income, (2) current assets, and (3) future income.",
+          "source_id": "bf_pompian_2006_bfwm"
+        },
+        {
+          "chunk_hash": "81c8694ec60799baeb4135f5d0ea78a5afca390ba17f991d8de61619b827b9a7",
+          "chunk_id": "bf_pompian_2006_bfwm:p194:0205",
+          "edge_type": "supports",
+          "page_range": [
+            194,
+            194
+          ],
+          "quote": "between investments leads investors to construct portfolios in a layered, pyramid format.",
+          "source_id": "bf_pompian_2006_bfwm"
+        },
+        {
+          "chunk_hash": "041ef6d32ed2223959f01368daad6f5d868feecbf9ff61f7241f644204b29f28",
+          "chunk_id": "bf_pompian_2006_bfwm:p190:0201",
+          "edge_type": "supports",
+          "page_range": [
+            191,
+            191
+          ],
+          "quote": "tendency to code, categorize, and evaluate economic outcomes by grouping their assets into any number of nonfungible (noninterchangeable) mental",
+          "source_id": "bf_pompian_2006_bfwm"
+        }
+      ],
+      "summary": "Self-control bias (consuming today at the expense of saving tomorrow) paired with mental accounting; the behavioral life-cycle theory and the layered goal-pyramid portfolio it produces, where each tier funds one goal in isolation, neglecting cross-tier correlations.",
+      "tags": [
+        "behavioral-finance",
+        "self-control",
+        "mental-accounting",
+        "behavioral-portfolio-theory",
+        "life-cycle"
+      ],
+      "title": "Self-Control and Mental Accounting"
+    },
+    {
+      "card_id": "be-sparsity-attention-framework",
+      "citations": [
+        {
+          "chunk_hash": "98778302129b653016e46216696a295d33be691f84f9ace7fb319d397f6287b5",
+          "chunk_id": "bf_hbe_vol2_2019:p276:0455",
+          "edge_type": "supports",
+          "page_range": [
+            276,
+            276
+          ],
+          "quote": "people anchor on a simple perception of the world, and partially adjusts toward it",
+          "source_id": "bf_hbe_vol2_2019"
+        },
+        {
+          "chunk_hash": "d9f6aa733fdc327c558ad86b32855b24a4c334cfed9209593571985cb74305cd",
+          "chunk_id": "bf_hbe_vol2_2019:p299:0491",
+          "edge_type": "defines",
+          "page_range": [
+            300,
+            300
+          ],
+          "quote": "The key step of the sparse max is that the agent will solve a version of this problem.",
+          "source_id": "bf_hbe_vol2_2019"
+        },
+        {
+          "chunk_hash": "13fa2982af7eb841670837ff9ff513d2aea82447b723454994e105990e43f57d",
+          "chunk_id": "bf_hbe_vol2_2019:p302:0495",
+          "edge_type": "supports",
+          "page_range": [
+            302,
+            302
+          ],
+          "quote": "Eliminate each feature of the world that would change the action by only a small amount",
+          "source_id": "bf_hbe_vol2_2019"
+        }
+      ],
+      "summary": "Gabaix sparse-max operator: an attention vector m in [0,1] dampens perceived variables toward a default, chosen by trading attention gains against a sparsity-inducing cost kappa*sum m_i^alpha; alpha=1 yields both sparsity and a continuous reaction.",
+      "tags": [
+        "behavioral-finance",
+        "inattention",
+        "bounded-rationality",
+        "sparse-max"
+      ],
+      "title": "Sparsity-Based Attention Framework"
+    },
+    {
+      "card_id": "be-square-root-impact-zero-intelligence",
+      "citations": [
+        {
+          "chunk_hash": "6ef2f14d688fb60ce7cddd89b693fa16ab783965804a1957e91f7abcb0fb9082",
+          "chunk_id": "bf_compecon_v4_2018_ham:p419:0616",
+          "edge_type": "defines",
+          "page_range": [
+            420,
+            420
+          ],
+          "quote": "there is now overwhelming empirical evidence ruling out the simple linear impact law, and suggesting instead a concave, square-root-like growth of impact with volume, often dubbed the",
+          "source_id": "bf_compecon_v4_2018_ham"
+        },
+        {
+          "chunk_hash": "be5011c5a6aaf5697993a29f682e4780ba95ef24808c74a9c41873c06028cf8e",
+          "chunk_id": "bf_compecon_v4_2018_ham:p423:0623",
+          "edge_type": "defines",
+          "page_range": [
+            424,
+            424
+          ],
+          "quote": "model, order flows are completely random and assumed to be governed by the following stochastic",
+          "source_id": "bf_compecon_v4_2018_ham"
+        },
+        {
+          "chunk_hash": "1bbd5075653de38b09976960373fbde5637104b17e6b5c97f15492e36fa6be23",
+          "chunk_id": "bf_compecon_v4_2018_ham:p420:0617",
+          "edge_type": "supports",
+          "page_range": [
+            420,
+            420
+          ],
+          "quote": "This square-root impact law is extremely well established empirically but extremely surprising",
+          "source_id": "bf_compecon_v4_2018_ham"
+        },
+        {
+          "chunk_hash": "be5011c5a6aaf5697993a29f682e4780ba95ef24808c74a9c41873c06028cf8e",
+          "chunk_id": "bf_compecon_v4_2018_ham:p423:0623",
+          "edge_type": "supports",
+          "page_range": [
+            424,
+            424
+          ],
+          "quote": "m(t)), buy (resp. sell) limit orders arrive as a Poisson process with rate",
+          "source_id": "bf_compecon_v4_2018_ham"
+        }
+      ],
+      "summary": "Market microstructure from order flow: the universal empirical square-root law says a metaorder's price impact grows as the square root of its volume, and minimal zero-intelligence limit-order-book models (random Poisson order flows) are the agent-based test bed used to rationalize it.",
+      "tags": [
+        "behavioral-finance",
+        "market-microstructure",
+        "square-root-impact",
+        "zero-intelligence",
+        "limit-order-book"
+      ],
+      "title": "Square-Root Market Impact and Zero-Intelligence Order Flow"
+    },
+    {
+      "card_id": "be-stylized-facts-financial-markets",
+      "citations": [
+        {
+          "chunk_hash": "846e61d7a7339089bac7322678fe8c8480cf203e55732b441f1056cb49d8c2e4",
+          "chunk_id": "bf_compecon_v4_2018_ham:p415:0610",
+          "edge_type": "defines",
+          "page_range": [
+            416,
+            416
+          ],
+          "quote": "unconditional distribution of returns has fat tails, which decay as a power law for large arguments and are much heavier than the corresponding tails of the Gaussian distribution",
+          "source_id": "bf_compecon_v4_2018_ham"
+        },
+        {
+          "chunk_hash": "9026c24e4d35aa0ef4e32e054e7b10aefd98084da407fddf6ad1ec61ef0c853a",
+          "chunk_id": "bf_compecon_v4_2018_ham:p416:0611",
+          "edge_type": "supports",
+          "page_range": [
+            416,
+            416
+          ],
+          "quote": "is consistently found to be around 3 for a wide variety of different markets, which suggests some kind of universality in the mechanism",
+          "source_id": "bf_compecon_v4_2018_ham"
+        },
+        {
+          "chunk_hash": "38525959b7330163c062c0aa380a9145954fd0d79d6114c50400efeee8ac68a0",
+          "chunk_id": "bf_compecon_v4_2018_ham:p417:0612",
+          "edge_type": "supports",
+          "page_range": [
+            417,
+            417
+          ],
+          "quote": "The dynamics of financial markets is in fact highly intermittent, with periods of intense activity intertwined with periods of relative calm.",
+          "source_id": "bf_compecon_v4_2018_ham"
+        },
+        {
+          "chunk_hash": "d0984629dcf1671aac8a508f11e70b8862d2e51747cc6045ef82a71f0da08f8f",
+          "chunk_id": "bf_compecon_v4_2018_ham:p417:0613",
+          "edge_type": "supports",
+          "page_range": [
+            418,
+            418
+          ],
+          "quote": "Another striking stylized fact of financial markets is the persistence in the sign of the order flow.",
+          "source_id": "bf_compecon_v4_2018_ham"
+        }
+      ],
+      "summary": "The empirical catalog every market model must match: returns are nearly uncorrelated (random-walk-like) yet have fat power-law tails (tail exponent near 3), volatility clusters with long memory, and order-flow signs are strongly long-range autocorrelated.",
+      "tags": [
+        "behavioral-finance",
+        "stylized-facts",
+        "fat-tails",
+        "volatility-clustering",
+        "long-memory"
+      ],
+      "title": "Stylized Facts of Financial Markets"
+    },
+    {
+      "card_id": "be-three-frameworks-behavioral-asset-pricing",
+      "citations": [
+        {
+          "chunk_hash": "6cd43b7111f73fed715ae6ee9186bf2aec28c80f5c6c893f8d14cd90d6539791",
+          "chunk_id": "bf_hbe_vol1_2018:p090:0132",
+          "edge_type": "defines",
+          "page_range": [
+            90,
+            90
+          ],
+          "quote": "finance lies in just three frameworks: the extrapolation framework (Section 4), the overconfidence framework (Section 5), and a gain-loss utility framework inspired by prospect theory (Section 7).",
+          "source_id": "bf_hbe_vol1_2018"
+        },
+        {
+          "chunk_hash": "6cd43b7111f73fed715ae6ee9186bf2aec28c80f5c6c893f8d14cd90d6539791",
+          "chunk_id": "bf_hbe_vol1_2018:p090:0132",
+          "edge_type": "supports",
+          "page_range": [
+            90,
+            90
+          ],
+          "quote": "extrapolation is most helpful for explaining fluctuations in financial markets, overconfidence for",
+          "source_id": "bf_hbe_vol1_2018"
+        },
+        {
+          "chunk_hash": "c3475a37518d5c2e668f5afc3b889993d25e868fdb7a89821c4410de147230c5",
+          "chunk_id": "bf_hbe_vol1_2018:p088:0129",
+          "edge_type": "supports",
+          "page_range": [
+            88,
+            88
+          ],
+          "quote": "Research in behavioral finance has tried to improve the psychological realism of the traditional model along three dimensions.",
+          "source_id": "bf_hbe_vol1_2018"
+        }
+      ],
+      "summary": "Barberis argues behavioral finance is not scattered: its center of gravity is three psychology-based frameworks -- extrapolative beliefs, overconfidence/disagreement, and gain-loss (prospect-theory) preferences -- each with a distinct natural application across prices and volume.",
+      "tags": [
+        "behavioral-finance",
+        "asset-pricing",
+        "extrapolation",
+        "overconfidence",
+        "prospect-theory"
+      ],
+      "title": "Three Frameworks of Behavioral Asset Pricing"
+    },
+    {
+      "card_id": "be-value-anomaly",
+      "citations": [
+        {
+          "chunk_hash": "295283cc3a09786eb03acba2afdc5c00b56c31c41510c815713848889fd3a62f",
+          "chunk_id": "bf_shleifer_2000_inefficient_markets:p130:0147",
+          "edge_type": "supports",
+          "page_range": [
+            130,
+            130
+          ],
+          "quote": "Stocks with very high valuations relative to their assets or earnings (growth or glamour stocks), which tend to",
+          "source_id": "bf_shleifer_2000_inefficient_markets"
+        },
+        {
+          "chunk_hash": "082b78bcd36c3a63e571b0e25fa8cdf71cc3c5d1878392fffd05bfb2cfd1020e",
+          "chunk_id": "bf_shleifer_2000_inefficient_markets:p132:0150",
+          "edge_type": "supports",
+          "page_range": [
+            133,
+            133
+          ],
+          "quote": "Investor expectations of future growth implied by the pricing multiples appear to be excessively tied to past growth despite the fact that future growth rates are more stationary.",
+          "source_id": "bf_shleifer_2000_inefficient_markets"
+        },
+        {
+          "chunk_hash": "624e591d60e31fd523e8f8cdefed447ea2edb831cb5917d658560427bfde3e2c",
+          "chunk_id": "bf_shleifer_2000_inefficient_markets:p133:0151",
+          "edge_type": "supports",
+          "page_range": [
+            133,
+            133
+          ],
+          "quote": "He finds that analysts are excessively bullish about the stocks they are most optimistic about and excessively bearish about the stocks they are most pessimistic about.",
+          "source_id": "bf_shleifer_2000_inefficient_markets"
+        }
+      ],
+      "summary": "The value premium (high book-to-market / low-multiple stocks outperform glamour stocks) reflects expectational error: investors extrapolate past growth, overprice glamour and underprice value; La Porta's analyst-forecast sort shows the high-growth-forecast stocks earn the lowest returns, not a pure risk story.",
+      "tags": [
+        "behavioral-finance",
+        "value-premium",
+        "overreaction",
+        "expectational-error",
+        "anomalies"
+      ],
+      "title": "Value Premium As Expectational Error"
+    }
+  ],
+  "generated_by": "resolve_migration_citations.py",
+  "note": "Resolved chunk_id/chunk_hash bound from incoming skeleton citations against the frozen merged chunks_manifest; confirmed by kb verify. Quote repairs (each with a machine-proven structured cause) are recorded in migration_quote_audit.json.",
+  "reading_id": "10_behavioral_finance",
+  "schema_version": "cfa.migration_curated_citations.v1"
+}

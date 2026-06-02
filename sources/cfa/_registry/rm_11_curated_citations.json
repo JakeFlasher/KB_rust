@@ -1,0 +1,799 @@
+{
+  "cards": [
+    {
+      "card_id": "rm-basel-capital-accord-evolution",
+      "citations": [
+        {
+          "chunk_hash": "2f3ea8af54276cc648f5e73bd0e2f86e53ed26b5e4f1f1966a71d06a9158fbd7",
+          "chunk_id": "rm_hull_2023_rmfi:p573:0791",
+          "edge_type": "defines",
+          "page_range": [
+            573,
+            573
+          ],
+          "quote": "The general requirement in Basel I that banks hold a total capital equal to 8% of risk-weighted assets (RWA) remains unchanged.",
+          "source_id": "rm_hull_2023_rmfi"
+        }
+      ],
+      "summary": "The Basel lineage builds bank capital off risk-weighted assets: the Cooke ratio and RWA in Basel I, three pillars plus IRB in Basel II, and the CET1/AT1/Tier-2 stack with conservation/countercyclical buffers, a 3% leverage ratio, and LCR/NSFR in Basel III, per Hull Ch.25–26.",
+      "tags": [
+        "risk-management",
+        "basel-accords",
+        "regulatory-capital"
+      ],
+      "title": "Basel Capital Accords I → II → II.5 → III: The Regulatory-Capital Workflow"
+    },
+    {
+      "card_id": "rm-bernoulli-poisson-mixture-credit",
+      "citations": [
+        {
+          "chunk_hash": "d102587c39bcbdb9783a468d5bf2ea61d6cec35ee4211567044ba27c74e9e82a",
+          "chunk_id": "rm_mcneil_frey_embrechts_2015_qrm:p457:0662",
+          "edge_type": "defines",
+          "page_range": [
+            457,
+            457
+          ],
+          "quote": "Dependence between defaults stems from the dependence of individual default probabilities on the set of common factors",
+          "source_id": "rm_mcneil_frey_embrechts_2015_qrm"
+        }
+      ],
+      "summary": "Mixture credit models make defaults conditionally independent given common factors Psi with conditional PDs p_i(Psi); one-factor Bernoulli mixtures generate default-rate contagion, the Poisson-mixture limit yields CreditRisk+, and most threshold models (those with a conditional-independence structure) can be written as Bernoulli mixtures, per McNeil et al. (2015) Ch.11 §11.2.",
+      "tags": [
+        "risk-management",
+        "credit-risk",
+        "mixture-models"
+      ],
+      "title": "Bernoulli and Poisson Mixture Credit Models (incl. CreditRisk+)"
+    },
+    {
+      "card_id": "rm-conditional-dynamic-risk-measures",
+      "citations": [
+        {
+          "chunk_hash": "a26216400011dbb85cda3300785c382ce3204f360935f9ea96bd44509e5b1c01",
+          "chunk_id": "rm_follmer_schied_2025_stochastic_finance:p523:0619",
+          "edge_type": "defines",
+          "page_range": [
+            523,
+            523
+          ],
+          "quote": "A monetary conditional risk measure will be called convex if it satisfies",
+          "source_id": "rm_follmer_schied_2025_stochastic_finance"
+        },
+        {
+          "chunk_hash": "fc3f64448df451426bc06696b51c509c1b41dbaf42fcdcbf237f44a47911464c",
+          "chunk_id": "rm_follmer_schied_2025_stochastic_finance:p525:0621",
+          "edge_type": "supports",
+          "page_range": [
+            525,
+            525
+          ],
+          "quote": "we are going to take the minimal penalty function, defined as the worst conditional loss",
+          "source_id": "rm_follmer_schied_2025_stochastic_finance"
+        },
+        {
+          "chunk_hash": "368bc33ff71d32cb2d35f9fc3aba6aefcf307209afe3e46eb0e15298e9f48d29",
+          "chunk_id": "rm_follmer_schied_2025_stochastic_finance:p529:0625",
+          "edge_type": "supports",
+          "page_range": [
+            529,
+            529
+          ],
+          "quote": "denotes the conditional relative entropy of Q",
+          "source_id": "rm_follmer_schied_2025_stochastic_finance"
+        }
+      ],
+      "summary": "Follmer-Schied lift the static monetary-risk-measure axioms to a filtration: conditional cash invariance, monotonicity, and convexity define an Ft-measurable risk map, with a conditional robust (dual) representation via an essential-supremum over models and an Ft-measurable penalty (conditional relative entropy in the entropic case), per Ch.11 §11.1.",
+      "tags": [
+        "risk-management",
+        "convex-risk-measures",
+        "dynamic-risk",
+        "robust-representation"
+      ],
+      "title": "Conditional (Dynamic) Risk Measures and Their Robust Representation"
+    },
+    {
+      "card_id": "rm-copulas-sklar-dependence",
+      "citations": [
+        {
+          "chunk_hash": "03d34aea6913a5e9c64d0e1ba40696ca2488dc97bc567e49631a582f135ccf83",
+          "chunk_id": "rm_mcneil_frey_embrechts_2015_qrm:p245:0352",
+          "edge_type": "defines",
+          "page_range": [
+            245,
+            245
+          ],
+          "quote": "A useful property of the copula of a distribution is its invariance under strictly increasing transformations of the marginals",
+          "source_id": "rm_mcneil_frey_embrechts_2015_qrm"
+        }
+      ],
+      "summary": "Sklar's theorem decomposes any joint distribution into its marginal dfs plus a copula that is unique on continuous margins; copula invariance under strictly increasing margin transforms isolates the dependence structure, supporting Gauss/t/Gumbel/Clayton families, per McNeil et al. (2015) Ch.7.",
+      "tags": [
+        "risk-management",
+        "copulas",
+        "dependence"
+      ],
+      "title": "Copulas and Sklar's Theorem: Separating Margins from Dependence"
+    },
+    {
+      "card_id": "rm-cramer-lundberg-heavy-tail-ruin",
+      "citations": [
+        {
+          "chunk_hash": "efc6be3f3ef7b47bd58c9a1d6dc81850ff1d32a189a553e41c6797ce8fc1a2f2",
+          "chunk_id": "rm_embrechts_kluppelberg_mikosch_1997_modelling_extremal_events:p054:0050",
+          "edge_type": "defines",
+          "page_range": [
+            54,
+            54
+          ],
+          "quote": "For claim size distributions with subexponential integrated tail distribution",
+          "source_id": "rm_embrechts_kluppelberg_mikosch_1997_modelling_extremal_events"
+        }
+      ],
+      "summary": "EKM's heavy-tail-probability / ruin-asymptotics mechanism for fat tails: when the integrated-tail F_I is subexponential the ruin probability decays polynomially as ψ(u) ~ ρ⁻¹ F̄_I(u), an estimate that holds if and only if F_I ∈ S, contrasting the exponential small-claim Lundberg bound, per Embrechts, Klüppelberg & Mikosch (1997) Ch.1.",
+      "tags": [
+        "risk-management",
+        "heavy-tails",
+        "ruin-theory"
+      ],
+      "title": "Cramér-Lundberg Ruin Theory for Heavy-Tailed (Subexponential) Claims"
+    },
+    {
+      "card_id": "rm-crash-as-critical-point",
+      "citations": [
+        {
+          "chunk_hash": "3a2c0509e85d9588f5f5db3a27f1f9ad0d94a5e9eafce13e9047fa588d7a0137",
+          "chunk_id": "rm_sornette_2017_why_stock_markets_crash:p181:0213",
+          "edge_type": "defines",
+          "page_range": [
+            181,
+            181
+          ],
+          "quote": "a crash happens when order wins (a majority has the same opinion: selling), and normal times are when disorder wins (buyers and sellers disagree",
+          "source_id": "rm_sornette_2017_why_stock_markets_crash"
+        }
+      ],
+      "summary": "Sornette's self-organized-criticality / phase-transition mechanism for fat tails: slow build-up of long-range correlations among imitating traders drives imitation strength K toward a critical value K_c where cluster size diverges and a coordinated sell-off becomes possible, making the trigger secondary to the unstable critical state, per Sornette (2017) Ch.1 and Ch.5.",
+      "tags": [
+        "risk-management",
+        "criticality",
+        "herding"
+      ],
+      "title": "Crashes as Endogenous Critical Points: Imitation, Herding, and the Order-Disorder Transition"
+    },
+    {
+      "card_id": "rm-dynamic-conditional-correlation-dcc",
+      "citations": [
+        {
+          "chunk_hash": "de9103be1fde66639db124eaa4048a9afb3989a0fda45fba16e4915a93f73169",
+          "chunk_id": "rm_christoffersen_2012_elements:p167:0224",
+          "edge_type": "defines",
+          "page_range": [
+            167,
+            167
+          ],
+          "quote": "modeling the conditional correlation of the raw returns is equivalent to modeling the conditional covariance of the standardized returns",
+          "source_id": "rm_christoffersen_2012_elements"
+        },
+        {
+          "chunk_hash": "d3183751217c9936af58570bfa3ef1b6a7af859445f4f493b021a472794e9f2a",
+          "chunk_id": "rm_christoffersen_2012_elements:p166:0223",
+          "edge_type": "supports",
+          "page_range": [
+            166,
+            166
+          ],
+          "quote": "The definition of correlation can be rearranged to provide the decomposition of",
+          "source_id": "rm_christoffersen_2012_elements"
+        }
+      ],
+      "summary": "DCC decomposes the covariance matrix as Σ=DΥD, models standardized-return correlations with their own correlation-targeted GARCH dynamics under a common persistence, and normalizes the Q recursion so Υ stays a valid PSD correlation matrix, per Christoffersen Ch.7.",
+      "tags": [
+        "risk-management",
+        "dynamic-conditional-correlation",
+        "covariance-modeling"
+      ],
+      "title": "Dynamic Conditional Correlation (DCC)"
+    },
+    {
+      "card_id": "rm-economic-capital-vs-regulatory-capital",
+      "citations": [
+        {
+          "chunk_hash": "3c464f8fa0faf09eec00825e3a465ef3d3e2e618d4e099df882328936fbef9bc",
+          "chunk_id": "rm_hull_2023_rmfi:p627:0869",
+          "edge_type": "defines",
+          "page_range": [
+            628,
+            628
+          ],
+          "quote": "Economic capital is usually defined as the amount of capital a financial institution needs in order to absorb losses over one year with a certain confidence level.",
+          "source_id": "rm_hull_2023_rmfi"
+        }
+      ],
+      "summary": "Economic capital is a bank's own one-year unexpected-loss buffer — the gap between the confidence-level quantile of the loss distribution and expected loss — with the confidence level pinned to a target rating and built bottom-up or top-down via Merton, per Hull Ch.28.",
+      "tags": [
+        "risk-management",
+        "economic-capital",
+        "regulatory-capital"
+      ],
+      "title": "Economic Capital: Unexpected Loss and the Rating-Linked Confidence Level"
+    },
+    {
+      "card_id": "rm-elliptical-spherical-distributions",
+      "citations": [
+        {
+          "chunk_hash": "c7d5ca4ba152bf064f5ee109630cb0cdbd64a9c94303f2baf1f2af81b52c340f",
+          "chunk_id": "rm_mcneil_frey_embrechts_2015_qrm:p317:0453",
+          "edge_type": "defines",
+          "page_range": [
+            318,
+            318
+          ],
+          "quote": "Part (2) gives a special case where the VaR risk measure is subadditive and therefore coherent",
+          "source_id": "rm_mcneil_frey_embrechts_2015_qrm"
+        }
+      ],
+      "summary": "Spherical/elliptical laws defined via the stochastic representation X = mu + RAS and the characteristic-generator form; inside a common elliptical world VaR is subadditive and coherent and mean-variance (Markowitz) optimization is justified, marking the boundary of Gaussian-style risk intuition, per McNeil et al. (2015) Ch.6 and Ch.8.",
+      "tags": [
+        "risk-management",
+        "elliptical-distributions",
+        "coherence"
+      ],
+      "title": "Spherical and Elliptical Distributions: When VaR Behaves and Markowitz Holds"
+    },
+    {
+      "card_id": "rm-evt-gpd-pot-hill",
+      "citations": [
+        {
+          "chunk_hash": "7f1251c7927b7eddfadb00e6f839325b36adb4872eb6b30ee8871f254df2b0fe",
+          "chunk_id": "rm_mcneil_frey_embrechts_2015_qrm:p170:0241",
+          "edge_type": "defines",
+          "page_range": [
+            170,
+            170
+          ],
+          "quote": "the GPD is the canonical distribution for modelling excess losses over high thresholds",
+          "source_id": "rm_mcneil_frey_embrechts_2015_qrm"
+        }
+      ],
+      "summary": "McNeil's applied/statistical EVT mechanism for fat tails: GEV for block maxima, Pickands-Balkema-de Haan giving the GPD as the limiting excess-over-threshold law, the mean-excess diagnostic, the POT point-process model, and the Hill tail-index estimator feeding deep-tail VaR/ES, per McNeil et al. (2015) Ch.5.",
+      "tags": [
+        "risk-management",
+        "extreme-value-theory",
+        "fat-tails"
+      ],
+      "title": "Applied EVT: GPD, Peaks-Over-Threshold, and the Hill Estimator"
+    },
+    {
+      "card_id": "rm-exposure-profile-shapes",
+      "citations": [
+        {
+          "chunk_hash": "28ce890c69823d5ee5fe473de9d4314f522261b4d367e975ee744ccd2b47de1f",
+          "chunk_id": "rm_gregory_2020_xva_challenge:p305:0461",
+          "edge_type": "defines",
+          "page_range": [
+            306,
+            306
+          ],
+          "quote": "the exposure of such a profile will follow a ‘square-root-of-time’ rule, meaning that the exposure will be proportional to the square root of the time",
+          "source_id": "rm_gregory_2020_xva_challenge"
+        }
+      ],
+      "summary": "Canonical credit-exposure profile shapes from diffusion plus cash-flow roll-off: monotone √t for single-cash-flow forwards, peaked (T−t)√t for swaps (max near T/3), and jump profiles for credit derivatives, per Gregory Ch.11.2.",
+      "tags": [
+        "risk-management",
+        "counterparty-risk",
+        "exposure"
+      ],
+      "title": "Exposure-Profile Shapes: Square-Root-of-Time and (T−t)√t Rules"
+    },
+    {
+      "card_id": "rm-filtered-historical-simulation",
+      "citations": [
+        {
+          "chunk_hash": "57be0b41eb6f327d2b7f21a16c6830fd749537af3d82ac560be497bd509a04d3",
+          "chunk_id": "rm_christoffersen_2012_elements:p134:0178",
+          "edge_type": "defines",
+          "page_range": [
+            134,
+            134
+          ],
+          "quote": "FHS combines model-based methods of dynamic variance, such as GARCH, with model-free methods of distribution",
+          "source_id": "rm_christoffersen_2012_elements"
+        }
+      ],
+      "summary": "FHS standardizes returns by a GARCH variance forecast to extract i.i.d. shocks, resamples those shocks model-free, and re-inflates by tomorrow's forecast variance to compute VaR/ES at any horizon, per Christoffersen Ch.6.",
+      "tags": [
+        "risk-management",
+        "filtered-historical-simulation",
+        "garch"
+      ],
+      "title": "Filtered Historical Simulation (FHS)"
+    },
+    {
+      "card_id": "rm-fisher-tippett-ev-types",
+      "citations": [
+        {
+          "chunk_hash": "a480bdbf690ea76e66036fa3af44711ba7b1af11ef791c18df54400bfafbf917",
+          "chunk_id": "rm_embrechts_kluppelberg_mikosch_1997_modelling_extremal_events:p132:0125",
+          "edge_type": "defines",
+          "page_range": [
+            132,
+            132
+          ],
+          "quote": "The following result is the basis of classical extreme value theory",
+          "source_id": "rm_embrechts_kluppelberg_mikosch_1997_modelling_extremal_events"
+        }
+      ],
+      "summary": "EKM's heavy-tail-probability mechanism for fat tails via maxima: the only non-degenerate limit laws for affinely-normalized sample maxima c_n⁻¹(M_n − d_n) are the three max-stable extreme-value types — Fréchet Φ_α, Weibull Ψ_α, Gumbel Λ — unified by the GEV shape parameter ξ, per Embrechts, Klüppelberg & Mikosch (1997) Ch.3.",
+      "tags": [
+        "risk-management",
+        "extreme-value-theory",
+        "fat-tails"
+      ],
+      "title": "Fisher-Tippett-Gnedenko Theorem and the Three Extreme-Value Types"
+    },
+    {
+      "card_id": "rm-frtb-stressed-es-market-risk-capital",
+      "citations": [
+        {
+          "chunk_hash": "c7278460f4c7da857a11a91dbf4e1e24d284d44416282c5857e0bb0e8c0768d8",
+          "chunk_id": "rm_hull_2023_rmfi:p614:0848",
+          "edge_type": "defines",
+          "page_range": [
+            614,
+            614
+          ],
+          "quote": "Instead of VaR with a 99% confidence level, it uses expected shortfall (ES) with a 97.5% confidence level.",
+          "source_id": "rm_hull_2023_rmfi"
+        }
+      ],
+      "summary": "Basel's Fundamental Review of the Trading Book replaces 99% VaR with stressed expected shortfall at 97.5%, buckets risk factors into five liquidity horizons, and runs parallel standardized (delta/vega/curvature + default + residual) and internal-models approaches, per Hull Ch.27.",
+      "tags": [
+        "risk-management",
+        "frtb",
+        "market-risk-capital"
+      ],
+      "title": "FRTB: Stressed Expected Shortfall as the Market-Risk Capital Engine"
+    },
+    {
+      "card_id": "rm-garch-conditional-variance",
+      "citations": [
+        {
+          "chunk_hash": "d567b5ec44c41e14e484082c4f11e1b7e14100d87efb4c36a1340cd725cd123b",
+          "chunk_id": "rm_christoffersen_2012_elements:p080:0101",
+          "edge_type": "defines",
+          "page_range": [
+            81,
+            81
+          ],
+          "quote": "the RiskMetrics model can be viewed as a special case of the simple GARCH model",
+          "source_id": "rm_christoffersen_2012_elements"
+        },
+        {
+          "chunk_hash": "e8a4e5120d81391badbd595f50ecfa56b952411c1072eef0a081c68d4b35abd4",
+          "chunk_id": "rm_christoffersen_2012_elements:p081:0103",
+          "edge_type": "supports",
+          "page_range": [
+            81,
+            81
+          ],
+          "quote": "We will refer to α + β as the persistence of the model",
+          "source_id": "rm_christoffersen_2012_elements"
+        }
+      ],
+      "summary": "GARCH(1,1) models tomorrow's variance as a mean-reverting mix of long-run variance, today's squared return, and today's variance; it nests RiskMetrics and yields a multi-day variance term structure, per Christoffersen Ch.4.",
+      "tags": [
+        "risk-management",
+        "garch",
+        "volatility-modeling"
+      ],
+      "title": "The GARCH(1,1) Conditional-Variance Engine"
+    },
+    {
+      "card_id": "rm-kusuoka-law-invariant-representation",
+      "citations": [
+        {
+          "chunk_hash": "73d2ee7d03695e981d07f0d4f08a10399ec08293c0e96bccfddc745c4c31a704",
+          "chunk_id": "rm_follmer_schied_2025_stochastic_finance:p257:0306",
+          "edge_type": "defines",
+          "page_range": [
+            258,
+            258
+          ],
+          "quote": "can be viewed as the building blocks for law-invariant convex risk measures",
+          "source_id": "rm_follmer_schied_2025_stochastic_finance"
+        },
+        {
+          "chunk_hash": "a789e1e5cc999fbfd5a8544fd8af9a4180751e730e1ef9708805c78f23ef5980",
+          "chunk_id": "rm_follmer_schied_2025_stochastic_finance:p258:0307",
+          "edge_type": "defines",
+          "page_range": [
+            259,
+            259
+          ],
+          "quote": "A coherent risk measure ρ is law-invariant if and only if",
+          "source_id": "rm_follmer_schied_2025_stochastic_finance"
+        },
+        {
+          "chunk_hash": "432b0bdefaeb0234fe834afed9f56ec93d81a018890d433506bf348ce0591732",
+          "chunk_id": "rm_follmer_schied_2025_stochastic_finance:p248:0295",
+          "edge_type": "supports",
+          "page_range": [
+            249,
+            249
+          ],
+          "quote": "Every law-invariant convex risk measure on L∞ has the Fatou property.",
+          "source_id": "rm_follmer_schied_2025_stochastic_finance"
+        }
+      ],
+      "summary": "Follmer-Schied's Kusuoka representation: on an atomless space, law-invariant convex risk measures are exactly a sup over probability mixtures of AV@R minus a penalty, the coherent case drops the penalty, and law-invariance auto-implies the Fatou property — the bridge from convex/coherent axioms to the AV@R/ES spectral family.",
+      "tags": [
+        "risk-management",
+        "coherent-risk",
+        "law-invariance",
+        "kusuoka",
+        "expected-shortfall"
+      ],
+      "title": "Kusuoka Representation: Every Law-Invariant Coherent Measure Is a Mixture of AV@R"
+    },
+    {
+      "card_id": "rm-levy-stable-paretian-tails",
+      "citations": [
+        {
+          "chunk_hash": "ea250fd600e452d838850fc4638dc95d29f428b158b182de5dd4b01fee54aa1c",
+          "chunk_id": "rm_bouchaud_potters_2003_theory_financial_risk:p032:0035",
+          "edge_type": "defines",
+          "page_range": [
+            32,
+            32
+          ],
+          "quote": "distributions is their power-law behaviour for large arguments, often called Pareto",
+          "source_id": "rm_bouchaud_potters_2003_theory_financial_risk"
+        }
+      ],
+      "summary": "Bouchaud & Potters' statistical-physics Lévy/stable mechanism for fat tails: symmetric Lévy laws via the characteristic function exp(-a_µ|z|^µ), power-law Paretian tails L_µ(x) ~ µA±^µ/|x|^{1+µ} with tail amplitudes as generalized cumulants and asymmetry β, recovering the Gaussian at µ=2, per Bouchaud & Potters (2003) Ch.1 §1.8.",
+      "tags": [
+        "risk-management",
+        "fat-tails",
+        "levy-stable"
+      ],
+      "title": "Lévy-Stable Laws and Paretian Tails: The Physics Origin of Fat Tails"
+    },
+    {
+      "card_id": "rm-lppl-precursor-formula-contested",
+      "citations": [
+        {
+          "chunk_hash": "9fc9ae961cf8e5ae09efe4bf9de7fb74d66a47bd53a2eb09907174f0bfa3b006",
+          "chunk_id": "rm_sornette_2017_why_stock_markets_crash:p257:0314",
+          "edge_type": "defines",
+          "page_range": [
+            258,
+            258
+          ],
+          "quote": "This equation is the simplest example of a log-periodic correction to a pure power law for an observable exhibiting a singularity at the time tc at which the crash has the highest probability",
+          "source_id": "rm_sornette_2017_why_stock_markets_crash"
+        }
+      ],
+      "summary": "Sornette's contested LPPL precursor: the simplest log-periodic correction F(t)=A+B(t_c−t)^m[1+C cos(ω ln((t_c−t)/T))] to a power-law singularity at t_c, with discrete scale invariance and preferred scaling ratio λ≈2, presented as a diagnostic stance on bubble dynamics, not settled crash-prediction fact, per Sornette (2017) Ch.7.",
+      "tags": [
+        "risk-management",
+        "log-periodic",
+        "bubbles"
+      ],
+      "title": "The Log-Periodic Power-Law (LPPL/LPPLS) Crash Precursor — A Contested Stance"
+    },
+    {
+      "card_id": "rm-marchenko-pastur-law",
+      "citations": [
+        {
+          "chunk_hash": "a62210aea8bbb11faff25bc1bc884f1c4e37a57104325222906558c530bcf09c",
+          "chunk_id": "rm_potters_bouchaud_2020_random_matrix_theory:p070:0077",
+          "edge_type": "defines",
+          "page_range": [
+            71,
+            71
+          ],
+          "quote": "In the large N limit we obtain the following self-consistent equation for g(z)",
+          "source_id": "rm_potters_bouchaud_2020_random_matrix_theory"
+        },
+        {
+          "chunk_hash": "a62210aea8bbb11faff25bc1bc884f1c4e37a57104325222906558c530bcf09c",
+          "chunk_id": "rm_potters_bouchaud_2020_random_matrix_theory:p070:0077",
+          "edge_type": "supports",
+          "page_range": [
+            71,
+            71
+          ],
+          "quote": "The argument of the square-root is quadratic in z and its roots (the edge of spectrum) are given by",
+          "source_id": "rm_potters_bouchaud_2020_random_matrix_theory"
+        }
+      ],
+      "summary": "The Marchenko-Pastur law gives the limiting eigenvalue density of a white-Wishart sample covariance matrix with spectral edges (1±√q)² and a (q-1)/q delta-mass for q>1, derived from a self-consistent Stieltjes equation, per Potters & Bouchaud Ch.4.",
+      "tags": [
+        "risk-management",
+        "random-matrix-theory",
+        "covariance-cleaning"
+      ],
+      "title": "Marchenko-Pastur Law: The Null Spectrum of a Sample Covariance Matrix"
+    },
+    {
+      "card_id": "rm-optimal-nongaussian-portfolios",
+      "citations": [
+        {
+          "chunk_hash": "37593fd278c66d67cc59add9452ceea52dbade5b944932a56e4fbdc6d1e40217",
+          "chunk_id": "rm_bouchaud_potters_2003_theory_financial_risk:p229:0300",
+          "edge_type": "defines",
+          "page_range": [
+            229,
+            229
+          ],
+          "quote": "(that generalize the variance) simply add to describe the far-tail of the distribution of the",
+          "source_id": "rm_bouchaud_potters_2003_theory_financial_risk"
+        }
+      ],
+      "summary": "Bouchaud & Potters' minimum-loss-probability portfolio under power-law tails: tail amplitudes add as A_p^µ = Σ p_i^µ A_i^µ, so minimizing loss probability minimizes A_p^µ independently of the loss level, with the Markowitz Σ⁻¹ weights and the CAPM β-relation surviving only as the Gaussian µ=2 special case, per Bouchaud & Potters (2003) Ch.12 §12.1-12.2.",
+      "tags": [
+        "risk-management",
+        "portfolio-optimization",
+        "fat-tails"
+      ],
+      "title": "Optimal Non-Gaussian / Minimum-VaR Portfolios"
+    },
+    {
+      "card_id": "rm-raroc-risk-adjusted-return-on-capital",
+      "citations": [
+        {
+          "chunk_hash": "2dc18f8185e6e58f8d90234746602f61968e5f1d9703658887e69f8e5de7a334",
+          "chunk_id": "rm_hull_2023_rmfi:p640:0886",
+          "edge_type": "defines",
+          "page_range": [
+            641,
+            641
+          ],
+          "quote": "RAROC can be calculated ex-ante (before the start of the year) or ex-post (after the end of the year).",
+          "source_id": "rm_hull_2023_rmfi"
+        }
+      ],
+      "summary": "RAROC measures a business unit's return per unit of economic capital — (revenues − costs − expected losses) / economic capital — with the RORAC naming nuance (it is the denominator that is risk-adjusted) and an ex-ante-vs-ex-post use split, per Hull Ch.28.8.",
+      "tags": [
+        "risk-management",
+        "raroc",
+        "economic-capital"
+      ],
+      "title": "RAROC / RORAC: Risk-Adjusted Performance on Economic Capital"
+    },
+    {
+      "card_id": "rm-rotationally-invariant-estimator",
+      "citations": [
+        {
+          "chunk_hash": "238026a0a6ad6d8bf611bd6d7327b8bb6c7e0ee4ce5986072df3e5993ddc7e00",
+          "chunk_id": "rm_potters_bouchaud_2020_random_matrix_theory:p323:0389",
+          "edge_type": "defines",
+          "page_range": [
+            323,
+            323
+          ],
+          "quote": "if the scm E is rotated by some O, then our estimation of C must be rotated in the same fashion",
+          "source_id": "rm_potters_bouchaud_2020_random_matrix_theory"
+        },
+        {
+          "chunk_hash": "7081f554ce0a7b5f1b8fac05c6f33e197125e7d3708b1ab9436cfa390c1b702a",
+          "chunk_id": "rm_potters_bouchaud_2020_random_matrix_theory:p323:0390",
+          "edge_type": "supports",
+          "page_range": [
+            324,
+            324
+          ],
+          "quote": "the large N limit allows one to actually compute the optimal ξ ’s from the data alone, without having to know C",
+          "source_id": "rm_potters_bouchaud_2020_random_matrix_theory"
+        }
+      ],
+      "summary": "A rotationally-invariant estimator keeps the sample covariance eigenvectors and only reshapes its eigenvalues; the oracle shrinkage ξ_k = v_kᵀ C v_k minimizing estimation error becomes computable from data alone in the large-dimension limit, per Potters & Bouchaud Ch.19.",
+      "tags": [
+        "risk-management",
+        "random-matrix-theory",
+        "covariance-cleaning"
+      ],
+      "title": "Rotationally-Invariant Estimator (RIE) and the Oracle Shrinkage Function"
+    },
+    {
+      "card_id": "rm-sa-ccr-counterparty-capital",
+      "citations": [
+        {
+          "chunk_hash": "f71df92d64638f848428d78bb297a1ca1c00146a1963ec1d1d5fc2e20e3c683e",
+          "chunk_id": "rm_gregory_2020_xva_challenge:p374:0558",
+          "edge_type": "defines",
+          "page_range": [
+            375,
+            375
+          ],
+          "quote": "The SA-CCR methodology – like the CEM – treats the EAD as a combination of the CE or replacement cost (RC) and PFE",
+          "source_id": "rm_gregory_2020_xva_challenge"
+        },
+        {
+          "chunk_hash": "55a85940bda3b2e50b365a8a3f19d225f72c1e12666c80e9a0d20a358afb046c",
+          "chunk_id": "rm_gregory_2020_xva_challenge:p382:0570",
+          "edge_type": "supports",
+          "page_range": [
+            382,
+            382
+          ],
+          "quote": "is the previously described alpha parameter with a default value of 1.4.",
+          "source_id": "rm_gregory_2020_xva_challenge"
+        }
+      ],
+      "summary": "How Basel turns derivatives counterparty risk into capital: EAD via CEM→SA-CCR→IMM (IMM sets EAD=α×EEPE with α=1.4; SA-CCR sets EAD=α×(RC+PFE) with an over-collateralisation multiplier), feeding the CVA capital charge (basic BA-CVA and standardised SA-CVA; the older internal-model/VaR-style charge is removed), per Gregory Ch.13.",
+      "tags": [
+        "risk-management",
+        "counterparty-capital",
+        "sa-ccr"
+      ],
+      "title": "Regulatory Counterparty Capital: SA-CCR, EAD = α×EEPE, and the CVA Capital Ladder"
+    },
+    {
+      "card_id": "rm-tail-dependence-coefficients",
+      "citations": [
+        {
+          "chunk_hash": "8215c325c6896b38d6af35576d63f4587c745c0edf030031cfc9b4ededab158e",
+          "chunk_id": "rm_mcneil_frey_embrechts_2015_qrm:p269:0386",
+          "edge_type": "defines",
+          "page_range": [
+            269,
+            269
+          ],
+          "quote": "the Gauss copula is asymptotically independent in both tails, while the t copula has both upper and lower tail dependence of the same magnitude",
+          "source_id": "rm_mcneil_frey_embrechts_2015_qrm"
+        }
+      ],
+      "summary": "Upper/lower tail-dependence coefficients lambda_u, lambda_l are limiting conditional quantile-exceedance probabilities depending only on the copula; the Gauss copula is asymptotically independent while the t and Gumbel copulas show positive tail dependence, per McNeil et al. (2015) Ch.7 §7.2.4.",
+      "tags": [
+        "risk-management",
+        "tail-dependence",
+        "copulas"
+      ],
+      "title": "Coefficients of Tail Dependence"
+    },
+    {
+      "card_id": "rm-threshold-credit-models",
+      "citations": [
+        {
+          "chunk_hash": "223b5f8b5bdfaa82686e2bee61d8eeb90eb455204871da36b4fa890dfe42a2d3",
+          "chunk_id": "rm_mcneil_frey_embrechts_2015_qrm:p449:0650",
+          "edge_type": "defines",
+          "page_range": [
+            450,
+            450
+          ],
+          "quote": "result clarifies the central role of copulas in threshold models",
+          "source_id": "rm_mcneil_frey_embrechts_2015_qrm"
+        }
+      ],
+      "summary": "In a threshold credit model default occurs when a latent critical variable falls below a threshold; joint default depends only on the copula of the critical variables, so CreditMetrics and KMV/Merton are exactly Gaussian threshold models with a Gauss copula, per McNeil et al. (2015) Ch.11 §11.1.",
+      "tags": [
+        "risk-management",
+        "credit-risk",
+        "copulas"
+      ],
+      "title": "Threshold (Latent-Variable) Credit Models and Their Copula Structure"
+    },
+    {
+      "card_id": "rm-time-consistency-recursiveness",
+      "citations": [
+        {
+          "chunk_hash": "1cc83d8174682f976300f3f265564e7a6e6e21c13e8f3cc3016329454efa77fc",
+          "chunk_id": "rm_follmer_schied_2025_stochastic_finance:p532:0628",
+          "edge_type": "defines",
+          "page_range": [
+            532,
+            532
+          ],
+          "quote": "Time consistency is equivalent to each of the following two properties:",
+          "source_id": "rm_follmer_schied_2025_stochastic_finance"
+        },
+        {
+          "chunk_hash": "1cc83d8174682f976300f3f265564e7a6e6e21c13e8f3cc3016329454efa77fc",
+          "chunk_id": "rm_follmer_schied_2025_stochastic_finance:p532:0628",
+          "edge_type": "supports",
+          "page_range": [
+            533,
+            533
+          ],
+          "quote": "is time-consistent. Let us check recursiveness:",
+          "source_id": "rm_follmer_schied_2025_stochastic_finance"
+        },
+        {
+          "chunk_hash": "f2fe70cae17b796714918aae7afd1a10ff530d6627253d1d7784be2ae3a24472",
+          "chunk_id": "rm_follmer_schied_2025_stochastic_finance:p533:0629",
+          "edge_type": "supports",
+          "page_range": [
+            533,
+            533
+          ],
+          "quote": "is not time-consistent,",
+          "source_id": "rm_follmer_schied_2025_stochastic_finance"
+        },
+        {
+          "chunk_hash": "9f41e5b761fdf8070faee5eb0121f34bd3b989574807b82549f8e6166d6a26d5",
+          "chunk_id": "rm_follmer_schied_2025_stochastic_finance:p539:0636",
+          "edge_type": "supports",
+          "page_range": [
+            540,
+            540
+          ],
+          "quote": "This can be seen as a built-in",
+          "source_id": "rm_follmer_schied_2025_stochastic_finance"
+        }
+      ],
+      "summary": "Föllmer-Schied's dynamic-risk consistency: (strong) time consistency of a sequence of conditional convex risk measures equals recursiveness rho_t = rho_t(-rho_{t+1}), and (for sensitive sequences) equals a Q-supermartingale / Doob property of the penalty process. Entropic risk is consistent; AV@R is not.",
+      "tags": [
+        "risk-management",
+        "dynamic-risk-measures",
+        "time-consistency",
+        "supermartingale"
+      ],
+      "title": "Time Consistency, Recursiveness and the Supermartingale Criterion"
+    },
+    {
+      "card_id": "rm-truncated-levy-clt-crossover",
+      "citations": [
+        {
+          "chunk_hash": "db1d92a523d8e5aa899d82b95d18bd3f4c32ca2841596b94274f266647ee802a",
+          "chunk_id": "rm_bouchaud_potters_2003_theory_financial_risk:p035:0038",
+          "edge_type": "defines",
+          "page_range": [
+            35,
+            35
+          ],
+          "quote": "distribution has the interesting property of being infinitely divisible for all values of α and µ",
+          "source_id": "rm_bouchaud_potters_2003_theory_financial_risk"
+        }
+      ],
+      "summary": "Bouchaud & Potters' truncated-Lévy mechanism for fat tails: a power-law tail carrying an exponential cut-off, infinitely divisible for all α and µ, that aggregates Lévy-like below a crossover sample size N* and converges to Gaussian above it — why fat tails dominate short horizons but fade at long ones, per Bouchaud & Potters (2003) Ch.1 §1.8 and Ch.2 §2.3.6.",
+      "tags": [
+        "risk-management",
+        "fat-tails",
+        "levy-stable"
+      ],
+      "title": "Truncated Lévy Flights and the Lévy→Gaussian Convergence Crossover"
+    },
+    {
+      "card_id": "rm-wrong-way-risk-taxonomy",
+      "citations": [
+        {
+          "chunk_hash": "600c5b99ae2965cdd4aad5588f6fee6c642ca4f6774c6973a88cf364a21b675c",
+          "chunk_id": "rm_gregory_2020_xva_challenge:p523:0778",
+          "edge_type": "defines",
+          "page_range": [
+            523,
+            523
+          ],
+          "quote": "WWR is the phrase generally used to indicate an unfavourable dependence between exposure (EPE) and counterparty credit quality: the exposure is high when the counterparty is more likely to default, and vice versa.",
+          "source_id": "rm_gregory_2020_xva_challenge"
+        },
+        {
+          "chunk_hash": "600c5b99ae2965cdd4aad5588f6fee6c642ca4f6774c6973a88cf364a21b675c",
+          "chunk_id": "rm_gregory_2020_xva_challenge:p523:0778",
+          "edge_type": "supports",
+          "page_range": [
+            523,
+            523
+          ],
+          "quote": "In contrast, ‘right-way’ risk can also exist in cases where the dependence between exposure and credit quality is a favourable one.",
+          "source_id": "rm_gregory_2020_xva_challenge"
+        }
+      ],
+      "summary": "Wrong-way risk is unfavourable dependence between exposure (EPE) and counterparty credit quality — exposure peaks just as the counterparty is most likely to default; Gregory Ch.17.6 splits it into general (macro) vs specific (structural) WWR with right-way risk as the favourable mirror.",
+      "tags": [
+        "risk-management",
+        "wrong-way-risk",
+        "cva"
+      ],
+      "title": "Wrong-Way and Right-Way Risk in CVA"
+    }
+  ],
+  "generated_by": "resolve_migration_citations.py",
+  "note": "Resolved chunk_id/chunk_hash bound from incoming skeleton citations against the frozen merged chunks_manifest; confirmed by kb verify. Quote repairs (each with a machine-proven structured cause) are recorded in migration_quote_audit.json.",
+  "reading_id": "11_risk_management",
+  "schema_version": "cfa.migration_curated_citations.v1"
+}

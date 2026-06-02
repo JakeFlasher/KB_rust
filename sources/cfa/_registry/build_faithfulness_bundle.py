@@ -28,7 +28,8 @@ CROSS = REGISTRY / "migration_cross_links.json"
 READING_OF_PREFIX = {"mt-": "14_microstructure_and_trading",
                      "pa-": "15_performance_and_attribution",
                      "fa-": "22_fund_level_arbitrage",
-                     "be-": "10_behavioral_finance"}
+                     "be-": "10_behavioral_finance",
+                     "rm-": "11_risk_management"}
 WINDOW = 170
 
 

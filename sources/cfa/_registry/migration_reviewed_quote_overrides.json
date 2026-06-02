@@ -23,6 +23,20 @@
       "original_quote": "I need to model three distinct values: (1) the ETF secondary market price, (2) NAV, and (3) the (unobserved) expected value of the ETF.",
       "final_quote": "values: (1) the ETF secondary market price, (2) NAV, and (3) the",
       "reason": "review: the heuristic re-anchored to an adjacent return-innovation equation sentence unrelated to the card's claim; re-anchored to the clean on-page enumeration of the three distinct values (secondary-market price, NAV, expected value) the card models."
+    },
+    {
+      "card_id": "be-square-root-impact-zero-intelligence",
+      "source_id": "bf_compecon_v4_2018_ham",
+      "original_quote": "I(Q, T) ~ Y sigma_T (Q / V_T)^delta",
+      "final_quote": "This square-root impact law is extremely well established empirically but extremely surprising",
+      "reason": "review (BF/RM migration): a pure formula (I(Q,T) ~ Y sigmaT (Q/VT)^delta) that is not verbatim under any extraction and has too few content words for the equation-mismatch recall proof, so it failed closed (zero_match); re-anchored to the clean on-page (PDF 420) prose naming the square-root impact law the formula expresses. Routed to the faithfulness review."
+    },
+    {
+      "card_id": "rm-cramer-lundberg-heavy-tail-ruin",
+      "source_id": "rm_embrechts_kluppelberg_mikosch_1997_modelling_extremal_events",
+      "original_quote": "Consequently, the estimate (1.32) is only possible under the condition",
+      "final_quote": "For claim size distributions with subexponential integrated tail distribution",
+      "reason": "review (BF/RM migration): PDF page 54 is a heavily extraction-mangled theorem page (control-char/U+FFFE noise breaks every sentence), leaving no clean re-anchor candidate, so it failed closed (zero_match); re-anchored to the clean on-page run stating the subexponential integrated-tail condition under which the Cramer-Lundberg heavy-tail ruin estimate holds. Routed to the faithfulness review."
     }
   ]
 }
