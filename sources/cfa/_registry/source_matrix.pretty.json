@@ -101,8 +101,14 @@
       "pm_pedersen_2015_efficiently_inefficient"
     ],
     "10_behavioral_finance": [
+      "bf_barberis_jin_wang_2021_pt_anomalies",
+      "bf_compecon_v4_2018_ham",
       "bf_gennaioli_shleifer_2018_crisis_beliefs",
+      "bf_hbe_vol1_2018",
+      "bf_hbe_vol2_2019",
+      "bf_pompian_2006_bfwm",
       "bf_shleifer_2000_inefficient_markets",
+      "bf_wakker_2010_pt_risk_ambiguity",
       "cfa_2022_l1_combined",
       "econ_hart_mascolell_2013_simple_adaptive_strategies"
     ],
@@ -115,7 +121,15 @@
       "china_cb_spc_bond_disputes_2020",
       "fi_crepey_bielecki_brigo_2014_counterparty_risk_funding",
       "fi_duffie_singleton_2003_credit_risk",
-      "rm_mcneil_frey_embrechts_2015_qrm"
+      "rm_bouchaud_potters_2003_theory_financial_risk",
+      "rm_christoffersen_2012_elements",
+      "rm_embrechts_kluppelberg_mikosch_1997_modelling_extremal_events",
+      "rm_follmer_schied_2025_stochastic_finance",
+      "rm_gregory_2020_xva_challenge",
+      "rm_hull_2023_rmfi",
+      "rm_mcneil_frey_embrechts_2015_qrm",
+      "rm_potters_bouchaud_2020_random_matrix_theory",
+      "rm_sornette_2017_why_stock_markets_crash"
     ],
     "12_alternative_investments": [
       "cfa_2022_l1_combined",

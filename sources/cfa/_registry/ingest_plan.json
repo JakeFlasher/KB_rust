@@ -1738,5 +1738,285 @@
     ],
     "out_dir": "out/cfa/ingest_per_source/mt_ohara_1995_market_microstructure_theory_en",
     "source_id": "mt_ohara_1995_market_microstructure_theory_en"
+  },
+  {
+    "canonical_path": "sources/cfa/pdfs/10_behavioral_finance/bf_barberis_jin_wang_2021_pt_anomalies.pdf",
+    "command": [
+      "cargo",
+      "run",
+      "-p",
+      "cacg-cli",
+      "--bin",
+      "kb",
+      "--",
+      "ingest",
+      "sources/cfa/pdfs/10_behavioral_finance/bf_barberis_jin_wang_2021_pt_anomalies.pdf",
+      "--source-id",
+      "bf_barberis_jin_wang_2021_pt_anomalies",
+      "--out",
+      "out/cfa/ingest_per_source/bf_barberis_jin_wang_2021_pt_anomalies"
+    ],
+    "out_dir": "out/cfa/ingest_per_source/bf_barberis_jin_wang_2021_pt_anomalies",
+    "source_id": "bf_barberis_jin_wang_2021_pt_anomalies"
+  },
+  {
+    "canonical_path": "sources/cfa/pdfs/10_behavioral_finance/bf_compecon_v4_2018_ham.pdf",
+    "command": [
+      "cargo",
+      "run",
+      "-p",
+      "cacg-cli",
+      "--bin",
+      "kb",
+      "--",
+      "ingest",
+      "sources/cfa/pdfs/10_behavioral_finance/bf_compecon_v4_2018_ham.pdf",
+      "--source-id",
+      "bf_compecon_v4_2018_ham",
+      "--out",
+      "out/cfa/ingest_per_source/bf_compecon_v4_2018_ham"
+    ],
+    "out_dir": "out/cfa/ingest_per_source/bf_compecon_v4_2018_ham",
+    "source_id": "bf_compecon_v4_2018_ham"
+  },
+  {
+    "canonical_path": "sources/cfa/pdfs/10_behavioral_finance/bf_hbe_vol1_2018.pdf",
+    "command": [
+      "cargo",
+      "run",
+      "-p",
+      "cacg-cli",
+      "--bin",
+      "kb",
+      "--",
+      "ingest",
+      "sources/cfa/pdfs/10_behavioral_finance/bf_hbe_vol1_2018.pdf",
+      "--source-id",
+      "bf_hbe_vol1_2018",
+      "--out",
+      "out/cfa/ingest_per_source/bf_hbe_vol1_2018"
+    ],
+    "out_dir": "out/cfa/ingest_per_source/bf_hbe_vol1_2018",
+    "source_id": "bf_hbe_vol1_2018"
+  },
+  {
+    "canonical_path": "sources/cfa/pdfs/10_behavioral_finance/bf_hbe_vol2_2019.pdf",
+    "command": [
+      "cargo",
+      "run",
+      "-p",
+      "cacg-cli",
+      "--bin",
+      "kb",
+      "--",
+      "ingest",
+      "sources/cfa/pdfs/10_behavioral_finance/bf_hbe_vol2_2019.pdf",
+      "--source-id",
+      "bf_hbe_vol2_2019",
+      "--out",
+      "out/cfa/ingest_per_source/bf_hbe_vol2_2019"
+    ],
+    "out_dir": "out/cfa/ingest_per_source/bf_hbe_vol2_2019",
+    "source_id": "bf_hbe_vol2_2019"
+  },
+  {
+    "canonical_path": "sources/cfa/pdfs/10_behavioral_finance/bf_pompian_2006_bfwm.pdf",
+    "command": [
+      "cargo",
+      "run",
+      "-p",
+      "cacg-cli",
+      "--bin",
+      "kb",
+      "--",
+      "ingest",
+      "sources/cfa/pdfs/10_behavioral_finance/bf_pompian_2006_bfwm.pdf",
+      "--source-id",
+      "bf_pompian_2006_bfwm",
+      "--out",
+      "out/cfa/ingest_per_source/bf_pompian_2006_bfwm"
+    ],
+    "out_dir": "out/cfa/ingest_per_source/bf_pompian_2006_bfwm",
+    "source_id": "bf_pompian_2006_bfwm"
+  },
+  {
+    "canonical_path": "sources/cfa/pdfs/10_behavioral_finance/bf_wakker_2010_pt_risk_ambiguity.pdf",
+    "command": [
+      "cargo",
+      "run",
+      "-p",
+      "cacg-cli",
+      "--bin",
+      "kb",
+      "--",
+      "ingest",
+      "sources/cfa/pdfs/10_behavioral_finance/bf_wakker_2010_pt_risk_ambiguity.pdf",
+      "--source-id",
+      "bf_wakker_2010_pt_risk_ambiguity",
+      "--out",
+      "out/cfa/ingest_per_source/bf_wakker_2010_pt_risk_ambiguity"
+    ],
+    "out_dir": "out/cfa/ingest_per_source/bf_wakker_2010_pt_risk_ambiguity",
+    "source_id": "bf_wakker_2010_pt_risk_ambiguity"
+  },
+  {
+    "canonical_path": "sources/cfa/pdfs/11_risk_management/rm_bouchaud_potters_2003_theory_financial_risk.pdf",
+    "command": [
+      "cargo",
+      "run",
+      "-p",
+      "cacg-cli",
+      "--bin",
+      "kb",
+      "--",
+      "ingest",
+      "sources/cfa/pdfs/11_risk_management/rm_bouchaud_potters_2003_theory_financial_risk.pdf",
+      "--source-id",
+      "rm_bouchaud_potters_2003_theory_financial_risk",
+      "--out",
+      "out/cfa/ingest_per_source/rm_bouchaud_potters_2003_theory_financial_risk"
+    ],
+    "out_dir": "out/cfa/ingest_per_source/rm_bouchaud_potters_2003_theory_financial_risk",
+    "source_id": "rm_bouchaud_potters_2003_theory_financial_risk"
+  },
+  {
+    "canonical_path": "sources/cfa/pdfs/11_risk_management/rm_christoffersen_2012_elements.pdf",
+    "command": [
+      "cargo",
+      "run",
+      "-p",
+      "cacg-cli",
+      "--bin",
+      "kb",
+      "--",
+      "ingest",
+      "sources/cfa/pdfs/11_risk_management/rm_christoffersen_2012_elements.pdf",
+      "--source-id",
+      "rm_christoffersen_2012_elements",
+      "--out",
+      "out/cfa/ingest_per_source/rm_christoffersen_2012_elements"
+    ],
+    "out_dir": "out/cfa/ingest_per_source/rm_christoffersen_2012_elements",
+    "source_id": "rm_christoffersen_2012_elements"
+  },
+  {
+    "canonical_path": "sources/cfa/pdfs/11_risk_management/rm_embrechts_kluppelberg_mikosch_1997_modelling_extremal_events.pdf",
+    "command": [
+      "cargo",
+      "run",
+      "-p",
+      "cacg-cli",
+      "--bin",
+      "kb",
+      "--",
+      "ingest",
+      "sources/cfa/pdfs/11_risk_management/rm_embrechts_kluppelberg_mikosch_1997_modelling_extremal_events.pdf",
+      "--source-id",
+      "rm_embrechts_kluppelberg_mikosch_1997_modelling_extremal_events",
+      "--out",
+      "out/cfa/ingest_per_source/rm_embrechts_kluppelberg_mikosch_1997_modelling_extremal_events"
+    ],
+    "out_dir": "out/cfa/ingest_per_source/rm_embrechts_kluppelberg_mikosch_1997_modelling_extremal_events",
+    "source_id": "rm_embrechts_kluppelberg_mikosch_1997_modelling_extremal_events"
+  },
+  {
+    "canonical_path": "sources/cfa/pdfs/11_risk_management/rm_follmer_schied_2025_stochastic_finance.pdf",
+    "command": [
+      "cargo",
+      "run",
+      "-p",
+      "cacg-cli",
+      "--bin",
+      "kb",
+      "--",
+      "ingest",
+      "sources/cfa/pdfs/11_risk_management/rm_follmer_schied_2025_stochastic_finance.pdf",
+      "--source-id",
+      "rm_follmer_schied_2025_stochastic_finance",
+      "--out",
+      "out/cfa/ingest_per_source/rm_follmer_schied_2025_stochastic_finance"
+    ],
+    "out_dir": "out/cfa/ingest_per_source/rm_follmer_schied_2025_stochastic_finance",
+    "source_id": "rm_follmer_schied_2025_stochastic_finance"
+  },
+  {
+    "canonical_path": "sources/cfa/pdfs/11_risk_management/rm_gregory_2020_xva_challenge.pdf",
+    "command": [
+      "cargo",
+      "run",
+      "-p",
+      "cacg-cli",
+      "--bin",
+      "kb",
+      "--",
+      "ingest",
+      "sources/cfa/pdfs/11_risk_management/rm_gregory_2020_xva_challenge.pdf",
+      "--source-id",
+      "rm_gregory_2020_xva_challenge",
+      "--out",
+      "out/cfa/ingest_per_source/rm_gregory_2020_xva_challenge"
+    ],
+    "out_dir": "out/cfa/ingest_per_source/rm_gregory_2020_xva_challenge",
+    "source_id": "rm_gregory_2020_xva_challenge"
+  },
+  {
+    "canonical_path": "sources/cfa/pdfs/11_risk_management/rm_hull_2023_rmfi.pdf",
+    "command": [
+      "cargo",
+      "run",
+      "-p",
+      "cacg-cli",
+      "--bin",
+      "kb",
+      "--",
+      "ingest",
+      "sources/cfa/pdfs/11_risk_management/rm_hull_2023_rmfi.pdf",
+      "--source-id",
+      "rm_hull_2023_rmfi",
+      "--out",
+      "out/cfa/ingest_per_source/rm_hull_2023_rmfi"
+    ],
+    "out_dir": "out/cfa/ingest_per_source/rm_hull_2023_rmfi",
+    "source_id": "rm_hull_2023_rmfi"
+  },
+  {
+    "canonical_path": "sources/cfa/pdfs/11_risk_management/rm_potters_bouchaud_2020_random_matrix_theory.pdf",
+    "command": [
+      "cargo",
+      "run",
+      "-p",
+      "cacg-cli",
+      "--bin",
+      "kb",
+      "--",
+      "ingest",
+      "sources/cfa/pdfs/11_risk_management/rm_potters_bouchaud_2020_random_matrix_theory.pdf",
+      "--source-id",
+      "rm_potters_bouchaud_2020_random_matrix_theory",
+      "--out",
+      "out/cfa/ingest_per_source/rm_potters_bouchaud_2020_random_matrix_theory"
+    ],
+    "out_dir": "out/cfa/ingest_per_source/rm_potters_bouchaud_2020_random_matrix_theory",
+    "source_id": "rm_potters_bouchaud_2020_random_matrix_theory"
+  },
+  {
+    "canonical_path": "sources/cfa/pdfs/11_risk_management/rm_sornette_2017_why_stock_markets_crash.pdf",
+    "command": [
+      "cargo",
+      "run",
+      "-p",
+      "cacg-cli",
+      "--bin",
+      "kb",
+      "--",
+      "ingest",
+      "sources/cfa/pdfs/11_risk_management/rm_sornette_2017_why_stock_markets_crash.pdf",
+      "--source-id",
+      "rm_sornette_2017_why_stock_markets_crash",
+      "--out",
+      "out/cfa/ingest_per_source/rm_sornette_2017_why_stock_markets_crash"
+    ],
+    "out_dir": "out/cfa/ingest_per_source/rm_sornette_2017_why_stock_markets_crash",
+    "source_id": "rm_sornette_2017_why_stock_markets_crash"
   }
 ]

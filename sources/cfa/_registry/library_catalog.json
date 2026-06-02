@@ -835,6 +835,128 @@
         "subcorpus_authorizations": [
           "10"
         ]
+      },
+      {
+        "audit_rating": "GOOD (2593.9 cpp)",
+        "cfa_relevance_hint": "core",
+        "citation_method": "pp.<N-M>",
+        "edition": "Wakker (2010) Prospect Theory: For Risk and Ambiguity (Cambridge University Press)",
+        "format": "PDF",
+        "legacy_path": "10_Behavioral_Finance/Prospect Theory_ For Risk and Ambiguity.pdf",
+        "library_path": "pdfs/10_behavioral_finance/bf_wakker_2010_pt_risk_ambiguity.pdf",
+        "page_count": 519,
+        "primary_or_supporting": "primary",
+        "quotable": "yes",
+        "review_flags": [],
+        "sha256": "9fd04072b9edf7e11811d78acc799a593a328ca96e9e8ce0b5d788604dfaa6c0",
+        "shared_anchor": false,
+        "size_bytes": 4651730,
+        "source_id": "bf_wakker_2010_pt_risk_ambiguity",
+        "subcorpus_authorizations": [
+          "10"
+        ]
+      },
+      {
+        "audit_rating": "GOOD (3485.7 cpp)",
+        "cfa_relevance_hint": "core",
+        "citation_method": "pp.<N-M>",
+        "edition": "Bernheim, DellaVigna & Laibson, eds. (2018) Handbook of Behavioral Economics: Foundations and Applications, Vol. 1 (Elsevier/North-Holland)",
+        "format": "PDF",
+        "legacy_path": "10_Behavioral_Finance/Handbook of Behavioral Economics - Foundations and Applications 1.pdf",
+        "library_path": "pdfs/10_behavioral_finance/bf_hbe_vol1_2018.pdf",
+        "page_count": 737,
+        "primary_or_supporting": "primary",
+        "quotable": "yes",
+        "review_flags": [],
+        "sha256": "3509ad4570794f2617cfd91cb5e55d0414adf2a763281a2f77307ad5788703e9",
+        "shared_anchor": false,
+        "size_bytes": 6738975,
+        "source_id": "bf_hbe_vol1_2018",
+        "subcorpus_authorizations": [
+          "10"
+        ]
+      },
+      {
+        "audit_rating": "GOOD (3847.3 cpp)",
+        "cfa_relevance_hint": "adjacent",
+        "citation_method": "pp.<N-M>",
+        "edition": "Bernheim, DellaVigna & Laibson, eds. (2019) Handbook of Behavioral Economics: Foundations and Applications, Vol. 2 (Elsevier/North-Holland)",
+        "format": "PDF",
+        "legacy_path": "10_Behavioral_Finance/Handbook of Behavioral Economics - Foundations and Applications 2.pdf",
+        "library_path": "pdfs/10_behavioral_finance/bf_hbe_vol2_2019.pdf",
+        "page_count": 515,
+        "primary_or_supporting": "supporting",
+        "quotable": "yes",
+        "review_flags": [],
+        "sha256": "b1db56e6678d6dcda03d4cf8787e1ef3ae61f721cacfe2b372cc0149f45fb48c",
+        "shared_anchor": false,
+        "size_bytes": 5164777,
+        "source_id": "bf_hbe_vol2_2019",
+        "subcorpus_authorizations": [
+          "10"
+        ]
+      },
+      {
+        "audit_rating": "GOOD (3062.9 cpp)",
+        "cfa_relevance_hint": "core",
+        "citation_method": "pp.<N-M>",
+        "edition": "Hommes & LeBaron, eds. (2018) Handbook of Computational Economics, Vol. 4: Heterogeneous Agent Modeling (Elsevier/North-Holland)",
+        "format": "PDF",
+        "legacy_path": "10_Behavioral_Finance/Handbook of Computational Economics_ Heterogeneous Agent Modeling (Volume 4) 4.pdf",
+        "library_path": "pdfs/10_behavioral_finance/bf_compecon_v4_2018_ham.pdf",
+        "page_count": 822,
+        "primary_or_supporting": "primary",
+        "quotable": "yes",
+        "review_flags": [],
+        "sha256": "884882e21daa88585642243004fb5240cc84c1966eb269af49a512a6855997f6",
+        "shared_anchor": false,
+        "size_bytes": 20852468,
+        "source_id": "bf_compecon_v4_2018_ham",
+        "subcorpus_authorizations": [
+          "10"
+        ]
+      },
+      {
+        "audit_rating": "GOOD (3009.3 cpp)",
+        "cfa_relevance_hint": "core",
+        "citation_method": "pp.<N-M>",
+        "edition": "Barberis, Jin & Wang (2021) Prospect Theory and Stock Market Anomalies, Journal of Finance",
+        "format": "PDF",
+        "legacy_path": "10_Behavioral_Finance/Prospect Theory and Stock Market Anomalies.pdf",
+        "library_path": "pdfs/10_behavioral_finance/bf_barberis_jin_wang_2021_pt_anomalies.pdf",
+        "page_count": 68,
+        "primary_or_supporting": "primary",
+        "quotable": "yes",
+        "review_flags": [],
+        "sha256": "d9dca552d7bc3cc50f9f0f52ac4f82b997af791df98f90f5aa3862d64351e3b6",
+        "shared_anchor": false,
+        "size_bytes": 550262,
+        "source_id": "bf_barberis_jin_wang_2021_pt_anomalies",
+        "subcorpus_authorizations": [
+          "10"
+        ]
+      },
+      {
+        "audit_rating": "GOOD (2516.2 cpp)",
+        "cfa_relevance_hint": "core",
+        "citation_method": "pp.<N-M>",
+        "edition": "Pompian (2006) Behavioral Finance and Wealth Management, 1st ed. (Wiley) [on-disk 1e; CFA-L3 2e (2012) framing flagged per Critical Rule 6]",
+        "format": "PDF",
+        "legacy_path": "10_Behavioral_Finance/Behavioral Finance and Wealth Management_ How to Build Optimal Portfolios That Account for Investor Biases.pdf",
+        "library_path": "pdfs/10_behavioral_finance/bf_pompian_2006_bfwm.pdf",
+        "page_count": 338,
+        "primary_or_supporting": "primary",
+        "quotable": "yes",
+        "review_flags": [
+          "edition-1e-on-disk-vs-cfa-2e"
+        ],
+        "sha256": "2c1e5bc58649c6733fe122fd79a9da723545a54fb7c79609338d317ded012602",
+        "shared_anchor": false,
+        "size_bytes": 3457592,
+        "source_id": "bf_pompian_2006_bfwm",
+        "subcorpus_authorizations": [
+          "10"
+        ]
       }
     ],
     "11_risk_management": [
@@ -854,6 +976,166 @@
         "shared_anchor": false,
         "size_bytes": 8700335,
         "source_id": "rm_mcneil_frey_embrechts_2015_qrm",
+        "subcorpus_authorizations": [
+          "11"
+        ]
+      },
+      {
+        "audit_rating": "GOOD (2405.7 cpp)",
+        "cfa_relevance_hint": "core",
+        "citation_method": "pp.<N-M>",
+        "edition": "Hull (2023) Risk Management and Financial Institutions (Wiley)",
+        "format": "PDF",
+        "legacy_path": "11_Risk_Management/Risk Management and Financial Institutions.pdf",
+        "library_path": "pdfs/11_risk_management/rm_hull_2023_rmfi.pdf",
+        "page_count": 833,
+        "primary_or_supporting": "primary",
+        "quotable": "yes",
+        "review_flags": [],
+        "sha256": "18d308d777cc9f4fc8d7f53a8ca519716a304a148509e996445ef2b397109a45",
+        "shared_anchor": false,
+        "size_bytes": 8585018,
+        "source_id": "rm_hull_2023_rmfi",
+        "subcorpus_authorizations": [
+          "11"
+        ]
+      },
+      {
+        "audit_rating": "GOOD (2435.1 cpp)",
+        "cfa_relevance_hint": "adjacent",
+        "citation_method": "pp.<N-M>",
+        "edition": "Christoffersen (2012) Elements of Financial Risk Management, 2nd ed. (Academic Press)",
+        "format": "PDF",
+        "legacy_path": "11_Risk_Management/Elements of Financial Risk Management, Second Edition  .pdf",
+        "library_path": "pdfs/11_risk_management/rm_christoffersen_2012_elements.pdf",
+        "page_count": 327,
+        "primary_or_supporting": "supporting",
+        "quotable": "yes",
+        "review_flags": [],
+        "sha256": "451c49e5cd864121263b1a4d79c0f03427aa1b0da19e937752a504348defc46f",
+        "shared_anchor": false,
+        "size_bytes": 3476173,
+        "source_id": "rm_christoffersen_2012_elements",
+        "subcorpus_authorizations": [
+          "11"
+        ]
+      },
+      {
+        "audit_rating": "GOOD (2452.9 cpp)",
+        "cfa_relevance_hint": "adjacent",
+        "citation_method": "pp.<N-M>",
+        "edition": "Embrechts, Klüppelberg & Mikosch (1997) Modelling Extremal Events for Insurance and Finance (Springer)",
+        "format": "PDF",
+        "legacy_path": "11_Risk_Management/Modelling Extremal Events_ for Insurance and Finance (Stochastic Modelling and Applied Probability).pdf",
+        "library_path": "pdfs/11_risk_management/rm_embrechts_kluppelberg_mikosch_1997_modelling_extremal_events.pdf",
+        "page_count": 655,
+        "primary_or_supporting": "supporting",
+        "quotable": "yes",
+        "review_flags": [],
+        "sha256": "a4a7ca407b7470dbc10fb7ebc0c60f170ace8a090c9d893c0ecdbb8aa536a796",
+        "shared_anchor": false,
+        "size_bytes": 5189921,
+        "source_id": "rm_embrechts_kluppelberg_mikosch_1997_modelling_extremal_events",
+        "subcorpus_authorizations": [
+          "11"
+        ]
+      },
+      {
+        "audit_rating": "GOOD (3195.7 cpp)",
+        "cfa_relevance_hint": "adjacent",
+        "citation_method": "pp.<N-M>",
+        "edition": "Gregory (2020) The xVA Challenge: Counterparty Risk, Funding, Collateral, Capital and Initial Margin (Wiley)",
+        "format": "PDF",
+        "legacy_path": "11_Risk_Management/The xVA challenge_ counterparty risk, funding, collateral, capital and initial margin.pdf",
+        "library_path": "pdfs/11_risk_management/rm_gregory_2020_xva_challenge.pdf",
+        "page_count": 683,
+        "primary_or_supporting": "supporting",
+        "quotable": "yes",
+        "review_flags": [],
+        "sha256": "6b2636f12934e2ec763d871ac98db38a728008f8d8344966a4a852d0e8a53e02",
+        "shared_anchor": false,
+        "size_bytes": 14936222,
+        "source_id": "rm_gregory_2020_xva_challenge",
+        "subcorpus_authorizations": [
+          "11"
+        ]
+      },
+      {
+        "audit_rating": "GOOD (2881.1 cpp)",
+        "cfa_relevance_hint": "adjacent",
+        "citation_method": "pp.<N-M>",
+        "edition": "Bouchaud & Potters (2003) Theory of Financial Risk and Derivative Pricing, 2nd ed. (Cambridge University Press)",
+        "format": "PDF",
+        "legacy_path": "11_Risk_Management/Theory of Financial Risk and Derivative Pricing_ From Statistical Physics to Risk Management.pdf",
+        "library_path": "pdfs/11_risk_management/rm_bouchaud_potters_2003_theory_financial_risk.pdf",
+        "page_count": 401,
+        "primary_or_supporting": "supporting",
+        "quotable": "yes",
+        "review_flags": [],
+        "sha256": "46cd33ce272d27e75012f157a5c527eab3915b678a77fe1baaa8f0ac3bf9f044",
+        "shared_anchor": false,
+        "size_bytes": 4580219,
+        "source_id": "rm_bouchaud_potters_2003_theory_financial_risk",
+        "subcorpus_authorizations": [
+          "11"
+        ]
+      },
+      {
+        "audit_rating": "GOOD (2906.7 cpp)",
+        "cfa_relevance_hint": "adjacent",
+        "citation_method": "pp.<N-M>",
+        "edition": "Potters & Bouchaud (2020) A First Course in Random Matrix Theory (Cambridge University Press)",
+        "format": "PDF",
+        "legacy_path": "11_Risk_Management/A First Course in Random Matrix Theory.pdf",
+        "library_path": "pdfs/11_risk_management/rm_potters_bouchaud_2020_random_matrix_theory.pdf",
+        "page_count": 371,
+        "primary_or_supporting": "supporting",
+        "quotable": "yes",
+        "review_flags": [],
+        "sha256": "8d70869f14b7e2cf01cd405f8c2ce6b1fbc8b128fb76dd033721b99358305f4e",
+        "shared_anchor": false,
+        "size_bytes": 4083773,
+        "source_id": "rm_potters_bouchaud_2020_random_matrix_theory",
+        "subcorpus_authorizations": [
+          "11"
+        ]
+      },
+      {
+        "audit_rating": "GOOD (2387.8 cpp)",
+        "cfa_relevance_hint": "adjacent",
+        "citation_method": "pp.<N-M>",
+        "edition": "Sornette (2017) Why Stock Markets Crash: Critical Events in Complex Financial Systems (Princeton University Press)",
+        "format": "PDF",
+        "legacy_path": "11_Risk_Management/Why Stock Markets Crash_ Critical Events in Complex Financial Systems.pdf",
+        "library_path": "pdfs/11_risk_management/rm_sornette_2017_why_stock_markets_crash.pdf",
+        "page_count": 448,
+        "primary_or_supporting": "supporting",
+        "quotable": "yes",
+        "review_flags": [],
+        "sha256": "8cd11df9b42ca9b845be6470b0d0bbd64c15278a2c898a95059c9fc1d9d771c2",
+        "shared_anchor": false,
+        "size_bytes": 7346111,
+        "source_id": "rm_sornette_2017_why_stock_markets_crash",
+        "subcorpus_authorizations": [
+          "11"
+        ]
+      },
+      {
+        "audit_rating": "GOOD (2379.6 cpp)",
+        "cfa_relevance_hint": "adjacent",
+        "citation_method": "pp.<N-M>",
+        "edition": "Föllmer & Schied (2025) Stochastic Finance: An Introduction in Discrete Time, 5th ed. (De Gruyter)",
+        "format": "PDF",
+        "legacy_path": "11_Risk_Management/Stochastic_Finance_5th_Ed_-_Hans_Follmer_Alexander_Schied.pdf",
+        "library_path": "pdfs/11_risk_management/rm_follmer_schied_2025_stochastic_finance.pdf",
+        "page_count": 664,
+        "primary_or_supporting": "supporting",
+        "quotable": "yes",
+        "review_flags": [],
+        "sha256": "fb8bcab1c4c44361c8950c4b0c58f8db5947cc9e98340185b2f4a30503310225",
+        "shared_anchor": false,
+        "size_bytes": 22888910,
+        "source_id": "rm_follmer_schied_2025_stochastic_finance",
         "subcorpus_authorizations": [
           "11"
         ]
@@ -1488,11 +1770,11 @@
     ]
   },
   "counts": {
-    "active_files": 70,
-    "active_unique_source_ids": 70,
+    "active_files": 84,
+    "active_unique_source_ids": 84,
     "deferred_files": 36,
     "excluded_files": 6,
-    "total_files": 112
+    "total_files": 126
   },
   "deferred": {
     "21_sota_acquisitions_2026_non_china": {
