@@ -22,12 +22,23 @@ marks this milestone.
 > **408 / 0** post-absorption; the gates (`check_v1_constants.py`, `check_v1_card_hash_invariance.py`,
 > `run_corpus_gate.sh`) are green at **408/0/408**.
 
-| v0 | v1 | what |
-|----|----|------|
-| 268 | **402** | active emitted cards |
-| 274 | **408** | legacy total (active + 6 quarantined) |
-| 70 | **87** | authorized/ingested sources (70 original + 17 migrated, incl. the O'Hara sandwich) |
-| 11 | **14** | readings on disk |
+> **Superseded again by the 2026-06 Behavioral-Finance (reading 10) + Risk-Management (reading 11)
+> template-deck merge → 500 active / 500 total / 101 sources / 14 readings.** This replayed the
+> incoming-skeleton recipe below for two additional readings: 64 net-new `be-` + 28 net-new `rm-` cards
+> (92 additive, corpus 408 → **500**), ingesting 14 new source PDFs (87 → **101**) under the same
+> libpdfium pin (the prior 87 sources' chunk identities are byte-stable). The additive release leaves all
+> 408 pre-existing cards byte-unchanged (only `be-limits-of-arbitrage` differs from the v0 268 baseline,
+> on the cross-link allowlist), keeps `EXPECTED_BASELINE = 268` immutable, and bumps the gates to
+> **active 500 / total 500 / sources 101 / readings 14**. The 48 Risk-Management deepenings to 15 live
+> `rm-` cards land as a separate allowlisted commit. Read every `408`/`87` count below as **500 / 101**
+> post-merge.
+
+| v0 | v1 | merge | what |
+|----|----|----|------|
+| 268 | 402 | **500** | active emitted cards (402 v1 + 6 absorbed = 408; + 92 BF/RM = 500) |
+| 274 | 408 | **500** | total (0 quarantined) |
+| 70 | 87 | **101** | authorized/ingested sources (87 + 14 BF/RM template-deck PDFs) |
+| 11 | 14 | **14** | readings on disk (BF/RM are existing readings 10/11) |
 
 ## Sources & ingest (87 sources)
 

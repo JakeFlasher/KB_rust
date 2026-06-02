@@ -262,16 +262,16 @@
       "within_span": true
     },
     {
-      "bound_chunk": "bf_hbe_vol2_2019:p164:0264",
+      "bound_chunk": "bf_hbe_vol2_2019:p163:0263",
       "card_id": "be-confirmation-prior-biased-inference",
       "chunk_span": [
-        164,
+        163,
         164
       ],
       "derivation": "recall_located",
       "page_range": [
-        164,
-        164
+        163,
+        163
       ],
       "source_id": "bf_hbe_vol2_2019",
       "within_span": true
@@ -322,11 +322,11 @@
       "within_span": true
     },
     {
-      "bound_chunk": "bf_compecon_v4_2018_ham:p312:0445",
+      "bound_chunk": "bf_compecon_v4_2018_ham:p312:0446",
       "card_id": "be-evolutionary-capm-time-varying-beta",
       "chunk_span": [
         312,
-        312
+        313
       ],
       "derivation": "recall_located",
       "page_range": [
@@ -367,10 +367,10 @@
       "within_span": true
     },
     {
-      "bound_chunk": "bf_compecon_v4_2018_ham:p283:0401",
+      "bound_chunk": "bf_compecon_v4_2018_ham:p282:0400",
       "card_id": "be-fundamentalist-chartist-ham",
       "chunk_span": [
-        283,
+        282,
         283
       ],
       "derivation": "reviewed_override",

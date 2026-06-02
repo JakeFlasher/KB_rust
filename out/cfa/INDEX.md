@@ -275,40 +275,132 @@ schema_version: cacg.v0
 
 | id | title | citations | card_hash |
 |----|-------|-----------|-----------|
+| be-ambiguity-aversion-asset-pricing | Ambiguity Aversion in Asset Pricing | 4 | 8139e554bde8… |
+| be-ambiguity-sources-ellsberg | Ambiguity, the Ellsberg Paradox, and Sources | 3 | 1e040f81b5b7… |
+| be-asset-pricing-anomalies-catalog | Asset-Pricing Anomalies Catalog | 4 | f508bf7fe1f3… |
+| be-belief-driven-credit-cycle | Belief-Driven Credit Cycle | 3 | 76e281a6ac12… |
+| be-belief-perseverance-biases | Belief-Perseverance Biases | 4 | 5cf445cdb0be… |
+| be-bias-aware-asset-allocation-workflow | Bias-Aware Asset-Allocation Workflow | 3 | 01b6b37d0140… |
+| be-bifurcation-route-instability | Rational Route to Randomness: Bifurcation Instability | 3 | 3cd1a7fa2070… |
+| be-bjw-anomaly-pricing-model | BJW Single-Preference Anomaly Pricing Model | 4 | 0b1c17628971… |
+| be-bjw-bounded-rationality-equilibrium | BJW Bounded-Rationality Heterogeneous-Holdings Equilibrium | 3 | 9eb6dc066ebb… |
+| be-brock-hommes-switching | Brock-Hommes Adaptive Belief Switching | 3 | 4ee1f59e349a… |
+| be-closed-end-fund-puzzle | Closed-End Fund Discount Puzzle | 4 | 441f14ab3dbe… |
+| be-cognitive-vs-emotional-bias-taxonomy | Cognitive vs Emotional Bias Taxonomy | 3 | ca9e329cb9d5… |
+| be-commitment-and-naivete | Commitment and Naivete | 4 | 08d5105e1be5… |
+| be-comonotonicity-choquet-integration | Comonotonicity and Choquet Integration | 3 | 7d6c6e9246ad… |
+| be-confirmation-prior-biased-inference | Confirmation Bias and Prior-Biased Inference | 4 | 366e48f25b30… |
+| be-cumulative-prospect-theory-risk | Cumulative Prospect Theory Under Risk | 3 | 83ab4ed1e744… |
+| be-destabilizing-arbitrage-positive-feedback | Destabilizing Arbitrage With Positive-Feedback Traders | 4 | 5d0106aedef1… |
+| be-diagnostic-expectations | Diagnostic Expectations Operator | 3 | 8e14650473a8… |
+| be-emergent-heterogeneity-volatility-feedback | Emergent Fat Tails and Volatility Clustering From Herding | 4 | afcbaf4028eb… |
+| be-evolutionary-capm-time-varying-beta | Evolutionary CAPM With Time-Varying Beta | 4 | 1cff0c939305… |
+| be-expectations-based-reference-points | Expectations-Based Reference Points | 4 | 9d8ee27118ec… |
+| be-experimental-asset-bubbles | Experimental Asset-Market Bubbles and Crashes | 4 | f79ef21cae91… |
+| be-extrapolation-from-recent-data | Extrapolation From Recent Data (Survey Evidence) | 3 | db20c6dfe44a… |
+| be-extrapolative-beliefs-asset-prices | Extrapolative Beliefs and Asset Prices | 4 | e691b6928f36… |
+| be-financial-crisis-narrative | The 2007-09 Crisis as a Belief-Driven Narrative | 3 | b70ddc30e778… |
+| be-fund-flow-pressure | Performance-Based Arbitrage And Fund-Flow Pressure | 4 | 775183042ac5… |
+| be-fundamentalist-chartist-ham | Fundamentalist vs Chartist Heterogeneous-Agent Model | 3 | aae99d9e9e75… |
+| be-gamblers-fallacy-law-of-small-numbers | Gambler's Fallacy and the Law of Small Numbers | 4 | 4cedfefd2719… |
+| be-household-liquidity-illiquidity-puzzle | Household Liquidity / Co-Holding Puzzle | 3 | bac3322b00ea… |
+| be-information-processing-biases | Information-Processing Biases | 5 | 61ed401288c2… |
+| be-investor-clientele-segmentation | Investor Clienteles And Noise-Trader Segmentation | 4 | 4583b9decabc… |
+| be-investor-overreaction | Long-Horizon Reversal And Investor Overreaction | 3 | c60a9fb59bf0… |
+| be-kernel-of-truth | Kernel of Truth | 3 | e89943524ce9… |
+| be-keynesian-beauty-contest-level-k | Keynesian Beauty Contest and Level-k Reasoning | 4 | c9d7dd9ba18d… |
 | be-limits-of-arbitrage | Limits of Arbitrage | 1 | 67604c91df97… |
+| be-loss-aversion-reference-dependence | Loss Aversion and Reference Dependence | 3 | 9038cfdf89e9… |
+| be-moderate-vs-adapt-bias-allocation | Moderate vs Adapt to Investor Biases | 3 | 66b25cea4fda… |
+| be-momentum-anomaly | Momentum As Underreaction To News | 4 | d95315f0fc68… |
+| be-multiple-priors-maxmin-eu | Multiple Priors and Maxmin Expected Utility | 3 | 0f77335a182f… |
+| be-myopic-loss-aversion-equity-premium | Myopic Loss Aversion and the Equity Premium | 5 | 09ed85a4c6bb… |
+| be-neglected-tail-risk | Neglected Tail Risk | 3 | 5c3815091682… |
 | be-noise-trader-equilibrium | Noise-Trader Risk Equilibrium | 2 | 75902330346e… |
+| be-overconfidence-bias | Overconfidence Bias | 4 | f56baa8076d0… |
+| be-overconfidence-disagreement-short-sale | Disagreement with a Short-Sale Constraint | 4 | fb652e47a1fe… |
+| be-overconfidence-self-attribution-prices | Overconfidence and Biased Self-Attribution in Prices | 4 | 6ddc6fa1bc62… |
+| be-present-focused-preferences-taxonomy | Present-Focused Preferences Taxonomy | 3 | 5ea51ac27178… |
+| be-probability-weighting-inverse-s | Probability Weighting: The Inverse-S Function | 3 | e0b11ab026fb… |
+| be-prospect-theory-anomaly-verdict | Prospect-Theory Anomaly Scorecard | 4 | fdf8670842fa… |
+| be-prospect-theory-asset-pricing | Prospect-Theory Preferences in Asset Pricing | 4 | da5cb6d4de70… |
+| be-prospect-theory-ingredient-decomposition | Prospect-Theory Ingredient Decomposition of Anomaly Spreads | 3 | 87e8119aae14… |
+| be-prospect-theory-three-characteristic-pricing | Prospect-Theory Three-Characteristic Pricing | 3 | f97bc617068a… |
+| be-quasi-hyperbolic-discounting | Quasi-Hyperbolic (Beta-Delta) Discounting | 3 | 9800d530550c… |
+| be-rank-dependent-utility-via-ranks | Rank-Dependent Utility via Ranks | 3 | a0d124a5552d… |
+| be-rational-inattention-entropy | Rational Inattention (Entropy-Based) | 4 | a5698920bb97… |
+| be-rational-vs-diagnostic-expectations | Diagnostic vs Rational (and Adaptive) Expectations | 3 | 94b1ae05409a… |
+| be-rationally-heterogeneous-expectations | Rationally Heterogeneous Expectations in Learning-to-Forecast | 4 | b13338017269… |
+| be-reference-dependent-preferences-foundations | Foundations of Reference-Dependent Preferences | 4 | fdf5809eeab1… |
+| be-regret-aversion-status-quo-endowment | Regret Aversion, Status-Quo, and Endowment | 4 | b468a184457d… |
 | be-regret-matching-foundations | Regret-Matching Foundations | 2 | 50856b77ec71… |
+| be-representativeness-conjunction-base-rate | Representativeness, Conjunction Fallacy, Base-Rate Neglect | 3 | 26ffdc793c4a… |
+| be-representativeness-strength-vs-weight | Strength-versus-Weight Theory of Biased Updating | 3 | ccee3efd6976… |
+| be-self-control-mental-accounting | Self-Control and Mental Accounting | 4 | 679c2ecbf8dd… |
 | be-sentiment-vs-fundamentals | Sentiment-Driven Mispricing vs Fundamental Anchor | 2 | 3ff930a81de0… |
+| be-sparsity-attention-framework | Sparsity-Based Attention Framework | 3 | 986a87cdf872… |
+| be-square-root-impact-zero-intelligence | Square-Root Market Impact and Zero-Intelligence Order Flow | 4 | 3ab38871d53f… |
+| be-stylized-facts-financial-markets | Stylized Facts of Financial Markets | 4 | 2cc4c81ece25… |
+| be-three-frameworks-behavioral-asset-pricing | Three Frameworks of Behavioral Asset Pricing | 3 | 83c7ee19be20… |
 | be-two-model-mispricing | Two-Model Mispricing Taxonomy | 1 | 56daf0c55f49… |
+| be-value-anomaly | Value Premium As Expectational Error | 3 | a502ad753921… |
 
 ## 11_risk_management
 
 | id | title | citations | card_hash |
 |----|-------|-----------|-----------|
 | rm-backtesting-investment-strategies | Backtesting Investment Strategies — L1 Notes Exceedance-Counting Framework | 2 | c696f4d4d328… |
+| rm-basel-capital-accord-evolution | Basel Capital Accords I → II → II.5 → III: The Regulatory-Capital Workflow | 1 | b0529336cc5f… |
+| rm-bernoulli-poisson-mixture-credit | Bernoulli and Poisson Mixture Credit Models (incl. CreditRisk+) | 1 | 1b1b60ff30c8… |
 | rm-chinese-cb-default-cohort-attribution | Chinese CB Default-Cohort Attribution Under McNeil Portfolio Credit-Risk Framework | 7 | e4bb4e3fb7f6… |
+| rm-conditional-dynamic-risk-measures | Conditional (Dynamic) Risk Measures and Their Robust Representation | 3 | cc6015300eb0… |
+| rm-copulas-sklar-dependence | Copulas and Sklar's Theorem: Separating Margins from Dependence | 1 | 053e0a311527… |
+| rm-cramer-lundberg-heavy-tail-ruin | Cramér-Lundberg Ruin Theory for Heavy-Tailed (Subexponential) Claims | 1 | 19dde75c27f6… |
+| rm-crash-as-critical-point | Crashes as Endogenous Critical Points: Imitation, Herding, and the Order-Disorder Transition | 1 | 2e9e8578dce2… |
 | rm-credit-risk-metrics-restatement | Credit Risk Metrics Restatement — McNeil Ch.10 §10.1 + §10.1.5 | 2 | d9dd2bbd2571… |
 | rm-credit-var-portfolio | Portfolio Credit-VaR — McNeil Ch.11 §11.1-§11.3 | 2 | c9f7e3dc2ed4… |
 | rm-delta-gamma-vega-pl-decomposition | Delta-Gamma-Vega P&L Decomposition — L1 Notes Portfolio-Risk-Reporting Framing | 2 | 52fc3d8fde0d… |
+| rm-dynamic-conditional-correlation-dcc | Dynamic Conditional Correlation (DCC) | 2 | 07a8b1bd8851… |
+| rm-economic-capital-vs-regulatory-capital | Economic Capital: Unexpected Loss and the Rating-Linked Confidence Level | 1 | 035ca8df54d6… |
+| rm-elliptical-spherical-distributions | Spherical and Elliptical Distributions: When VaR Behaves and Markowitz Holds | 1 | 015d958b9955… |
+| rm-evt-gpd-pot-hill | Applied EVT: GPD, Peaks-Over-Threshold, and the Hill Estimator | 1 | cc64f596bc81… |
 | rm-expected-shortfall-mechanics | Expected Shortfall Mechanics — McNeil Ch.2 §2.3.4 + Ch.8 §8.2 | 2 | 1f14dbc7a9d3… |
+| rm-exposure-profile-shapes | Exposure-Profile Shapes: Square-Root-of-Time and (T−t)√t Rules | 1 | 1f70b0eb741c… |
+| rm-filtered-historical-simulation | Filtered Historical Simulation (FHS) | 1 | e961b4bb49ac… |
+| rm-fisher-tippett-ev-types | Fisher-Tippett-Gnedenko Theorem and the Three Extreme-Value Types | 1 | ab94617faf14… |
+| rm-frtb-stressed-es-market-risk-capital | FRTB: Stressed Expected Shortfall as the Market-Risk Capital Engine | 1 | c397d8eea6b4… |
+| rm-garch-conditional-variance | The GARCH(1,1) Conditional-Variance Engine | 2 | e57b9f51cdf6… |
 | rm-historical-simulation-var | Historical-Simulation VaR — McNeil Ch.9 §9.2.3-§9.2.4 | 1 | d0083ac9890a… |
 | rm-integrated-firm-wide-risk-aggregation | Integrated Firm-Wide Risk Aggregation — McNeil Ch.8 §8.4-§8.5 | 2 | ce591a981bb5… |
+| rm-kusuoka-law-invariant-representation | Kusuoka Representation: Every Law-Invariant Coherent Measure Is a Mixture of AV@R | 3 | 02b1ea42b305… |
+| rm-levy-stable-paretian-tails | Lévy-Stable Laws and Paretian Tails: The Physics Origin of Fat Tails | 1 | 2cb3ea84d8c5… |
 | rm-loss-distribution-anatomy | Loss-Distribution Anatomy — P&L Convention, Horizons, and Mapping | 2 | df09ada25441… |
+| rm-lppl-precursor-formula-contested | The Log-Periodic Power-Law (LPPL/LPPLS) Crash Precursor — A Contested Stance | 1 | 8c2f694fb16a… |
+| rm-marchenko-pastur-law | Marchenko-Pastur Law: The Null Spectrum of a Sample Covariance Matrix | 2 | 2e7817c2d10b… |
 | rm-monte-carlo-var | Monte Carlo VaR — McNeil Ch.9 §9.2.5-§9.2.7 | 1 | a41742a86f98… |
 | rm-operational-risk-basics | Operational Risk Basics — McNeil Ch.13 §13.1 | 1 | d672956c9ee5… |
 | rm-operational-risk-quantification | Operational Risk Quantification — McNeil Ch.13 §13.2 | 1 | 6d60c54d50c3… |
+| rm-optimal-nongaussian-portfolios | Optimal Non-Gaussian / Minimum-VaR Portfolios | 1 | b9846543e609… |
 | rm-parametric-var | Parametric (Variance-Covariance) VaR — McNeil Ch.9 §9.2.2 | 2 | 61a2bc8ed155… |
 | rm-portfolio-xva-aggregation | Portfolio XVA Aggregation — McNeil Ch.17 §17.2-§17.3 + Crepey-Bielecki-Brigo Ch.1-2 | 4 | 0b3449e6f7d2… |
+| rm-raroc-risk-adjusted-return-on-capital | RAROC / RORAC: Risk-Adjusted Performance on Economic Capital | 1 | c0df236bff5e… |
 | rm-real-rate-policy-rate-notes | Real Rate vs Policy Rate — L1 Notes Risk-Input Decomposition | 2 | 863c3e9ab26a… |
 | rm-risk-measure-axioms | Coherent and Convex Risk-Measure Axioms | 3 | dc5bf63c0f68… |
 | rm-risk-objectives-and-tolerance | Risk Objectives and Risk Tolerance — Risk-Management Entry Point | 1 | 16f637624330… |
 | rm-risk-type-taxonomy | Risk-Type Taxonomy — Market / Credit / Liquidity / Operational / Business / Regulatory | 2 | 7583f0da898f… |
+| rm-rotationally-invariant-estimator | Rotationally-Invariant Estimator (RIE) and the Oracle Shrinkage Function | 2 | 33df4383fff9… |
+| rm-sa-ccr-counterparty-capital | Regulatory Counterparty Capital: SA-CCR, EAD = α×EEPE, and the CVA Capital Ladder | 2 | fdf3f6880d50… |
 | rm-scenario-analysis | Scenario Analysis — Forward-Looking Loss Aggregation under Designed Scenarios | 2 | 8ab02a799ea9… |
 | rm-sensitivity-versus-simulation | Sensitivity-Based vs Simulation-Based Risk Measurement | 2 | 253ea2de816e… |
 | rm-stress-testing | Stress Testing — Coherent-Risk-Measure Duals and Reverse Stress | 2 | 84c7d55a483e… |
+| rm-tail-dependence-coefficients | Coefficients of Tail Dependence | 1 | aae24644ca50… |
+| rm-threshold-credit-models | Threshold (Latent-Variable) Credit Models and Their Copula Structure | 1 | 4d4578bff1a9… |
+| rm-time-consistency-recursiveness | Time Consistency, Recursiveness and the Supermartingale Criterion | 4 | da6c8df26342… |
+| rm-truncated-levy-clt-crossover | Truncated Lévy Flights and the Lévy→Gaussian Convergence Crossover | 1 | 177bccbe9d80… |
 | rm-value-added-active-return | Value-Added and Active Return — L1 Notes Risk-Budget-Consumption Framing | 3 | 98170abf7995… |
 | rm-value-at-risk-notes | Value-at-Risk — L1 Notes Definition and Estimation Framework | 3 | a2bf076bf9eb… |
 | rm-var-and-es-taxonomy | VaR and Expected Shortfall — Side-by-Side Taxonomy | 3 | eb59028ad01d… |
+| rm-wrong-way-risk-taxonomy | Wrong-Way and Right-Way Risk in CVA | 2 | 0ef63842241a… |
 
 ## 14_microstructure_and_trading
 

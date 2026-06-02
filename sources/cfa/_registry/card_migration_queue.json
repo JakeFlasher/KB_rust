@@ -25049,6 +25049,7 @@
       "unauthorized_source_ids": []
     },
     {
+      "absorbed_note": "Re-authored from a non-notes primary source in the 2026-06 quarantine-absorption.",
       "body_bytes": 7421,
       "cacg_emission_blockers": [
         "chunk_hash_binding_required",
@@ -25135,8 +25136,7 @@
       "summary_candidate": "Tracking Error and Active Risk: defining active return as the portfolio-minus-benchmark difference and active risk (tracking error) as the volatility of that difference, and locating these quantities in the active-management evaluation framework",
       "target_path": "cards/cfa/09_portfolio_management_and_asset_pricing/pm-tracking-error-and-active-risk.md",
       "title": "Tracking Error and Active Risk",
-      "unauthorized_source_ids": [],
-      "absorbed_note": "Re-authored from a non-notes primary source in the 2026-06 quarantine-absorption."
+      "unauthorized_source_ids": []
     },
     {
       "body_bytes": 10579,
@@ -26214,6 +26214,7 @@
       "unauthorized_source_ids": []
     },
     {
+      "absorbed_note": "Re-authored from a non-notes primary source in the 2026-06 quarantine-absorption.",
       "body_bytes": 9579,
       "cacg_emission_blockers": [
         "chunk_hash_binding_required",
@@ -26275,8 +26276,7 @@
       "summary_candidate": "Historical-Simulation VaR — McNeil Ch.9 §9.2.3-§9.2.4: deriving the historical-simulation VaR estimator from an empirical loss-quantile and noting the dynamic-historical-simulation volatility-scaling extension",
       "target_path": "cards/cfa/11_risk_management/rm-historical-simulation-var.md",
       "title": "Historical-Simulation VaR — McNeil Ch.9 §9.2.3-§9.2.4",
-      "unauthorized_source_ids": [],
-      "absorbed_note": "Re-authored from a non-notes primary source in the 2026-06 quarantine-absorption."
+      "unauthorized_source_ids": []
     },
     {
       "body_bytes": 11152,
@@ -26458,6 +26458,7 @@
       "unauthorized_source_ids": []
     },
     {
+      "absorbed_note": "Re-authored from a non-notes primary source in the 2026-06 quarantine-absorption.",
       "body_bytes": 10919,
       "cacg_emission_blockers": [
         "chunk_hash_binding_required",
@@ -26544,8 +26545,7 @@
       "summary_candidate": "Monte Carlo VaR — McNeil Ch.9 §9.2.5-§9.2.7: deriving the Monte Carlo VaR estimator from a factor-model + path-simulation framework and noting the multi-period scaling intuition",
       "target_path": "cards/cfa/11_risk_management/rm-monte-carlo-var.md",
       "title": "Monte Carlo VaR — McNeil Ch.9 §9.2.5-§9.2.7",
-      "unauthorized_source_ids": [],
-      "absorbed_note": "Re-authored from a non-notes primary source in the 2026-06 quarantine-absorption."
+      "unauthorized_source_ids": []
     },
     {
       "body_bytes": 10727,
@@ -26675,6 +26675,7 @@
       "unauthorized_source_ids": []
     },
     {
+      "absorbed_note": "Re-authored from a non-notes primary source in the 2026-06 quarantine-absorption.",
       "body_bytes": 9957,
       "cacg_emission_blockers": [
         "chunk_hash_binding_required",
@@ -26762,8 +26763,7 @@
       "summary_candidate": "Parametric (Variance-Covariance) VaR — McNeil Ch.9 §9.2.2: deriving the variance-covariance / parametric VaR estimator under the elliptical-distribution assumption with the quantile-of-normal framing",
       "target_path": "cards/cfa/11_risk_management/rm-parametric-var.md",
       "title": "Parametric (Variance-Covariance) VaR — McNeil Ch.9 §9.2.2",
-      "unauthorized_source_ids": [],
-      "absorbed_note": "Re-authored from a non-notes primary source in the 2026-06 quarantine-absorption."
+      "unauthorized_source_ids": []
     },
     {
       "body_bytes": 12437,
@@ -27062,6 +27062,7 @@
       "unauthorized_source_ids": []
     },
     {
+      "absorbed_note": "Re-authored from a non-notes primary source in the 2026-06 quarantine-absorption.",
       "body_bytes": 9560,
       "cacg_emission_blockers": [
         "chunk_hash_binding_required",
@@ -27149,8 +27150,7 @@
       "summary_candidate": "Risk Objectives and Risk Tolerance — Risk-Management Entry Point: framing the L1 risk-objective + risk-tolerance + ability-vs-willingness structure as a risk-management input rather than a portfolio-construction input",
       "target_path": "cards/cfa/11_risk_management/rm-risk-objectives-and-tolerance.md",
       "title": "Risk Objectives and Risk Tolerance — Risk-Management Entry Point",
-      "unauthorized_source_ids": [],
-      "absorbed_note": "Re-authored from a non-notes primary source in the 2026-06 quarantine-absorption."
+      "unauthorized_source_ids": []
     },
     {
       "body_bytes": 11232,
@@ -27328,6 +27328,7 @@
       "unauthorized_source_ids": []
     },
     {
+      "absorbed_note": "Re-authored from a non-notes primary source in the 2026-06 quarantine-absorption.",
       "body_bytes": 9147,
       "cacg_emission_blockers": [
         "chunk_hash_binding_required",
@@ -27414,8 +27415,7 @@
       "summary_candidate": "Sensitivity-Based vs Simulation-Based Risk Measurement: classifying risk-measure approaches as sensitivity-based (delta / gamma / vega) versus simulation-based (historical / Monte Carlo) with the portfolio-mapping vs computational-cost trade-off",
       "target_path": "cards/cfa/11_risk_management/rm-sensitivity-versus-simulation.md",
       "title": "Sensitivity-Based vs Simulation-Based Risk Measurement",
-      "unauthorized_source_ids": [],
-      "absorbed_note": "Re-authored from a non-notes primary source in the 2026-06 quarantine-absorption."
+      "unauthorized_source_ids": []
     },
     {
       "body_bytes": 11568,
@@ -30661,6 +30661,1202 @@
       ],
       "target_path": "cards/cfa/15_performance_and_attribution/pa-variability-ratios-sharpe-information.md",
       "title": "Variability Ratios: Sharpe and the Information Ratio"
+    },
+    {
+      "card_id": "be-ambiguity-aversion-asset-pricing",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "10_behavioral_finance",
+      "source_ids": [
+        "bf_hbe_vol1_2018"
+      ],
+      "target_path": "cards/cfa/10_behavioral_finance/be-ambiguity-aversion-asset-pricing.md",
+      "title": "Ambiguity Aversion in Asset Pricing"
+    },
+    {
+      "card_id": "be-ambiguity-sources-ellsberg",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "10_behavioral_finance",
+      "source_ids": [
+        "bf_wakker_2010_pt_risk_ambiguity"
+      ],
+      "target_path": "cards/cfa/10_behavioral_finance/be-ambiguity-sources-ellsberg.md",
+      "title": "Ambiguity, the Ellsberg Paradox, and Sources"
+    },
+    {
+      "card_id": "be-asset-pricing-anomalies-catalog",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "10_behavioral_finance",
+      "source_ids": [
+        "bf_hbe_vol1_2018"
+      ],
+      "target_path": "cards/cfa/10_behavioral_finance/be-asset-pricing-anomalies-catalog.md",
+      "title": "Asset-Pricing Anomalies Catalog"
+    },
+    {
+      "card_id": "be-belief-driven-credit-cycle",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "10_behavioral_finance",
+      "source_ids": [
+        "bf_gennaioli_shleifer_2018_crisis_beliefs"
+      ],
+      "target_path": "cards/cfa/10_behavioral_finance/be-belief-driven-credit-cycle.md",
+      "title": "Belief-Driven Credit Cycle"
+    },
+    {
+      "card_id": "be-belief-perseverance-biases",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "10_behavioral_finance",
+      "source_ids": [
+        "bf_pompian_2006_bfwm"
+      ],
+      "target_path": "cards/cfa/10_behavioral_finance/be-belief-perseverance-biases.md",
+      "title": "Belief-Perseverance Biases"
+    },
+    {
+      "card_id": "be-bias-aware-asset-allocation-workflow",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "10_behavioral_finance",
+      "source_ids": [
+        "bf_pompian_2006_bfwm"
+      ],
+      "target_path": "cards/cfa/10_behavioral_finance/be-bias-aware-asset-allocation-workflow.md",
+      "title": "Bias-Aware Asset-Allocation Workflow"
+    },
+    {
+      "card_id": "be-bifurcation-route-instability",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "10_behavioral_finance",
+      "source_ids": [
+        "bf_compecon_v4_2018_ham"
+      ],
+      "target_path": "cards/cfa/10_behavioral_finance/be-bifurcation-route-instability.md",
+      "title": "Rational Route to Randomness: Bifurcation Instability"
+    },
+    {
+      "card_id": "be-bjw-anomaly-pricing-model",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "10_behavioral_finance",
+      "source_ids": [
+        "bf_barberis_jin_wang_2021_pt_anomalies"
+      ],
+      "target_path": "cards/cfa/10_behavioral_finance/be-bjw-anomaly-pricing-model.md",
+      "title": "BJW Single-Preference Anomaly Pricing Model"
+    },
+    {
+      "card_id": "be-bjw-bounded-rationality-equilibrium",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "10_behavioral_finance",
+      "source_ids": [
+        "bf_barberis_jin_wang_2021_pt_anomalies"
+      ],
+      "target_path": "cards/cfa/10_behavioral_finance/be-bjw-bounded-rationality-equilibrium.md",
+      "title": "BJW Bounded-Rationality Heterogeneous-Holdings Equilibrium"
+    },
+    {
+      "card_id": "be-brock-hommes-switching",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "10_behavioral_finance",
+      "source_ids": [
+        "bf_compecon_v4_2018_ham"
+      ],
+      "target_path": "cards/cfa/10_behavioral_finance/be-brock-hommes-switching.md",
+      "title": "Brock-Hommes Adaptive Belief Switching"
+    },
+    {
+      "card_id": "be-closed-end-fund-puzzle",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "10_behavioral_finance",
+      "source_ids": [
+        "bf_shleifer_2000_inefficient_markets"
+      ],
+      "target_path": "cards/cfa/10_behavioral_finance/be-closed-end-fund-puzzle.md",
+      "title": "Closed-End Fund Discount Puzzle"
+    },
+    {
+      "card_id": "be-cognitive-vs-emotional-bias-taxonomy",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "10_behavioral_finance",
+      "source_ids": [
+        "bf_pompian_2006_bfwm"
+      ],
+      "target_path": "cards/cfa/10_behavioral_finance/be-cognitive-vs-emotional-bias-taxonomy.md",
+      "title": "Cognitive vs Emotional Bias Taxonomy"
+    },
+    {
+      "card_id": "be-commitment-and-naivete",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "10_behavioral_finance",
+      "source_ids": [
+        "bf_hbe_vol2_2019"
+      ],
+      "target_path": "cards/cfa/10_behavioral_finance/be-commitment-and-naivete.md",
+      "title": "Commitment and Naivete"
+    },
+    {
+      "card_id": "be-comonotonicity-choquet-integration",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "10_behavioral_finance",
+      "source_ids": [
+        "bf_wakker_2010_pt_risk_ambiguity"
+      ],
+      "target_path": "cards/cfa/10_behavioral_finance/be-comonotonicity-choquet-integration.md",
+      "title": "Comonotonicity and Choquet Integration"
+    },
+    {
+      "card_id": "be-confirmation-prior-biased-inference",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "10_behavioral_finance",
+      "source_ids": [
+        "bf_hbe_vol2_2019"
+      ],
+      "target_path": "cards/cfa/10_behavioral_finance/be-confirmation-prior-biased-inference.md",
+      "title": "Confirmation Bias and Prior-Biased Inference"
+    },
+    {
+      "card_id": "be-cumulative-prospect-theory-risk",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "10_behavioral_finance",
+      "source_ids": [
+        "bf_wakker_2010_pt_risk_ambiguity"
+      ],
+      "target_path": "cards/cfa/10_behavioral_finance/be-cumulative-prospect-theory-risk.md",
+      "title": "Cumulative Prospect Theory Under Risk"
+    },
+    {
+      "card_id": "be-destabilizing-arbitrage-positive-feedback",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "10_behavioral_finance",
+      "source_ids": [
+        "bf_shleifer_2000_inefficient_markets"
+      ],
+      "target_path": "cards/cfa/10_behavioral_finance/be-destabilizing-arbitrage-positive-feedback.md",
+      "title": "Destabilizing Arbitrage With Positive-Feedback Traders"
+    },
+    {
+      "card_id": "be-diagnostic-expectations",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "10_behavioral_finance",
+      "source_ids": [
+        "bf_gennaioli_shleifer_2018_crisis_beliefs"
+      ],
+      "target_path": "cards/cfa/10_behavioral_finance/be-diagnostic-expectations.md",
+      "title": "Diagnostic Expectations Operator"
+    },
+    {
+      "card_id": "be-emergent-heterogeneity-volatility-feedback",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "10_behavioral_finance",
+      "source_ids": [
+        "bf_compecon_v4_2018_ham"
+      ],
+      "target_path": "cards/cfa/10_behavioral_finance/be-emergent-heterogeneity-volatility-feedback.md",
+      "title": "Emergent Fat Tails and Volatility Clustering From Herding"
+    },
+    {
+      "card_id": "be-evolutionary-capm-time-varying-beta",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "10_behavioral_finance",
+      "source_ids": [
+        "bf_compecon_v4_2018_ham"
+      ],
+      "target_path": "cards/cfa/10_behavioral_finance/be-evolutionary-capm-time-varying-beta.md",
+      "title": "Evolutionary CAPM With Time-Varying Beta"
+    },
+    {
+      "card_id": "be-expectations-based-reference-points",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "10_behavioral_finance",
+      "source_ids": [
+        "bf_hbe_vol1_2018"
+      ],
+      "target_path": "cards/cfa/10_behavioral_finance/be-expectations-based-reference-points.md",
+      "title": "Expectations-Based Reference Points"
+    },
+    {
+      "card_id": "be-experimental-asset-bubbles",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "10_behavioral_finance",
+      "source_ids": [
+        "bf_compecon_v4_2018_ham"
+      ],
+      "target_path": "cards/cfa/10_behavioral_finance/be-experimental-asset-bubbles.md",
+      "title": "Experimental Asset-Market Bubbles and Crashes"
+    },
+    {
+      "card_id": "be-extrapolation-from-recent-data",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "10_behavioral_finance",
+      "source_ids": [
+        "bf_gennaioli_shleifer_2018_crisis_beliefs"
+      ],
+      "target_path": "cards/cfa/10_behavioral_finance/be-extrapolation-from-recent-data.md",
+      "title": "Extrapolation From Recent Data (Survey Evidence)"
+    },
+    {
+      "card_id": "be-extrapolative-beliefs-asset-prices",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "10_behavioral_finance",
+      "source_ids": [
+        "bf_hbe_vol1_2018"
+      ],
+      "target_path": "cards/cfa/10_behavioral_finance/be-extrapolative-beliefs-asset-prices.md",
+      "title": "Extrapolative Beliefs and Asset Prices"
+    },
+    {
+      "card_id": "be-financial-crisis-narrative",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "10_behavioral_finance",
+      "source_ids": [
+        "bf_gennaioli_shleifer_2018_crisis_beliefs"
+      ],
+      "target_path": "cards/cfa/10_behavioral_finance/be-financial-crisis-narrative.md",
+      "title": "The 2007-09 Crisis as a Belief-Driven Narrative"
+    },
+    {
+      "card_id": "be-fund-flow-pressure",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "10_behavioral_finance",
+      "source_ids": [
+        "bf_shleifer_2000_inefficient_markets"
+      ],
+      "target_path": "cards/cfa/10_behavioral_finance/be-fund-flow-pressure.md",
+      "title": "Performance-Based Arbitrage And Fund-Flow Pressure"
+    },
+    {
+      "card_id": "be-fundamentalist-chartist-ham",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "10_behavioral_finance",
+      "source_ids": [
+        "bf_compecon_v4_2018_ham"
+      ],
+      "target_path": "cards/cfa/10_behavioral_finance/be-fundamentalist-chartist-ham.md",
+      "title": "Fundamentalist vs Chartist Heterogeneous-Agent Model"
+    },
+    {
+      "card_id": "be-gamblers-fallacy-law-of-small-numbers",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "10_behavioral_finance",
+      "source_ids": [
+        "bf_hbe_vol2_2019"
+      ],
+      "target_path": "cards/cfa/10_behavioral_finance/be-gamblers-fallacy-law-of-small-numbers.md",
+      "title": "Gambler's Fallacy and the Law of Small Numbers"
+    },
+    {
+      "card_id": "be-household-liquidity-illiquidity-puzzle",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "10_behavioral_finance",
+      "source_ids": [
+        "bf_hbe_vol2_2019"
+      ],
+      "target_path": "cards/cfa/10_behavioral_finance/be-household-liquidity-illiquidity-puzzle.md",
+      "title": "Household Liquidity / Co-Holding Puzzle"
+    },
+    {
+      "card_id": "be-information-processing-biases",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "10_behavioral_finance",
+      "source_ids": [
+        "bf_pompian_2006_bfwm"
+      ],
+      "target_path": "cards/cfa/10_behavioral_finance/be-information-processing-biases.md",
+      "title": "Information-Processing Biases"
+    },
+    {
+      "card_id": "be-investor-clientele-segmentation",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "10_behavioral_finance",
+      "source_ids": [
+        "bf_shleifer_2000_inefficient_markets"
+      ],
+      "target_path": "cards/cfa/10_behavioral_finance/be-investor-clientele-segmentation.md",
+      "title": "Investor Clienteles And Noise-Trader Segmentation"
+    },
+    {
+      "card_id": "be-investor-overreaction",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "10_behavioral_finance",
+      "source_ids": [
+        "bf_shleifer_2000_inefficient_markets"
+      ],
+      "target_path": "cards/cfa/10_behavioral_finance/be-investor-overreaction.md",
+      "title": "Long-Horizon Reversal And Investor Overreaction"
+    },
+    {
+      "card_id": "be-kernel-of-truth",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "10_behavioral_finance",
+      "source_ids": [
+        "bf_gennaioli_shleifer_2018_crisis_beliefs"
+      ],
+      "target_path": "cards/cfa/10_behavioral_finance/be-kernel-of-truth.md",
+      "title": "Kernel of Truth"
+    },
+    {
+      "card_id": "be-keynesian-beauty-contest-level-k",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "10_behavioral_finance",
+      "source_ids": [
+        "bf_compecon_v4_2018_ham"
+      ],
+      "target_path": "cards/cfa/10_behavioral_finance/be-keynesian-beauty-contest-level-k.md",
+      "title": "Keynesian Beauty Contest and Level-k Reasoning"
+    },
+    {
+      "card_id": "be-loss-aversion-reference-dependence",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "10_behavioral_finance",
+      "source_ids": [
+        "bf_wakker_2010_pt_risk_ambiguity"
+      ],
+      "target_path": "cards/cfa/10_behavioral_finance/be-loss-aversion-reference-dependence.md",
+      "title": "Loss Aversion and Reference Dependence"
+    },
+    {
+      "card_id": "be-moderate-vs-adapt-bias-allocation",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "10_behavioral_finance",
+      "source_ids": [
+        "bf_pompian_2006_bfwm"
+      ],
+      "target_path": "cards/cfa/10_behavioral_finance/be-moderate-vs-adapt-bias-allocation.md",
+      "title": "Moderate vs Adapt to Investor Biases"
+    },
+    {
+      "card_id": "be-momentum-anomaly",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "10_behavioral_finance",
+      "source_ids": [
+        "bf_shleifer_2000_inefficient_markets"
+      ],
+      "target_path": "cards/cfa/10_behavioral_finance/be-momentum-anomaly.md",
+      "title": "Momentum As Underreaction To News"
+    },
+    {
+      "card_id": "be-multiple-priors-maxmin-eu",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "10_behavioral_finance",
+      "source_ids": [
+        "bf_wakker_2010_pt_risk_ambiguity"
+      ],
+      "target_path": "cards/cfa/10_behavioral_finance/be-multiple-priors-maxmin-eu.md",
+      "title": "Multiple Priors and Maxmin Expected Utility"
+    },
+    {
+      "card_id": "be-myopic-loss-aversion-equity-premium",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "10_behavioral_finance",
+      "source_ids": [
+        "bf_pompian_2006_bfwm"
+      ],
+      "target_path": "cards/cfa/10_behavioral_finance/be-myopic-loss-aversion-equity-premium.md",
+      "title": "Myopic Loss Aversion and the Equity Premium"
+    },
+    {
+      "card_id": "be-neglected-tail-risk",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "10_behavioral_finance",
+      "source_ids": [
+        "bf_gennaioli_shleifer_2018_crisis_beliefs"
+      ],
+      "target_path": "cards/cfa/10_behavioral_finance/be-neglected-tail-risk.md",
+      "title": "Neglected Tail Risk"
+    },
+    {
+      "card_id": "be-overconfidence-bias",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "10_behavioral_finance",
+      "source_ids": [
+        "bf_pompian_2006_bfwm"
+      ],
+      "target_path": "cards/cfa/10_behavioral_finance/be-overconfidence-bias.md",
+      "title": "Overconfidence Bias"
+    },
+    {
+      "card_id": "be-overconfidence-disagreement-short-sale",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "10_behavioral_finance",
+      "source_ids": [
+        "bf_hbe_vol1_2018"
+      ],
+      "target_path": "cards/cfa/10_behavioral_finance/be-overconfidence-disagreement-short-sale.md",
+      "title": "Disagreement with a Short-Sale Constraint"
+    },
+    {
+      "card_id": "be-overconfidence-self-attribution-prices",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "10_behavioral_finance",
+      "source_ids": [
+        "bf_hbe_vol1_2018"
+      ],
+      "target_path": "cards/cfa/10_behavioral_finance/be-overconfidence-self-attribution-prices.md",
+      "title": "Overconfidence and Biased Self-Attribution in Prices"
+    },
+    {
+      "card_id": "be-present-focused-preferences-taxonomy",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "10_behavioral_finance",
+      "source_ids": [
+        "bf_hbe_vol2_2019"
+      ],
+      "target_path": "cards/cfa/10_behavioral_finance/be-present-focused-preferences-taxonomy.md",
+      "title": "Present-Focused Preferences Taxonomy"
+    },
+    {
+      "card_id": "be-probability-weighting-inverse-s",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "10_behavioral_finance",
+      "source_ids": [
+        "bf_wakker_2010_pt_risk_ambiguity"
+      ],
+      "target_path": "cards/cfa/10_behavioral_finance/be-probability-weighting-inverse-s.md",
+      "title": "Probability Weighting: The Inverse-S Function"
+    },
+    {
+      "card_id": "be-prospect-theory-anomaly-verdict",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "10_behavioral_finance",
+      "source_ids": [
+        "bf_barberis_jin_wang_2021_pt_anomalies"
+      ],
+      "target_path": "cards/cfa/10_behavioral_finance/be-prospect-theory-anomaly-verdict.md",
+      "title": "Prospect-Theory Anomaly Scorecard"
+    },
+    {
+      "card_id": "be-prospect-theory-asset-pricing",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "10_behavioral_finance",
+      "source_ids": [
+        "bf_hbe_vol1_2018"
+      ],
+      "target_path": "cards/cfa/10_behavioral_finance/be-prospect-theory-asset-pricing.md",
+      "title": "Prospect-Theory Preferences in Asset Pricing"
+    },
+    {
+      "card_id": "be-prospect-theory-ingredient-decomposition",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "10_behavioral_finance",
+      "source_ids": [
+        "bf_barberis_jin_wang_2021_pt_anomalies"
+      ],
+      "target_path": "cards/cfa/10_behavioral_finance/be-prospect-theory-ingredient-decomposition.md",
+      "title": "Prospect-Theory Ingredient Decomposition of Anomaly Spreads"
+    },
+    {
+      "card_id": "be-prospect-theory-three-characteristic-pricing",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "10_behavioral_finance",
+      "source_ids": [
+        "bf_barberis_jin_wang_2021_pt_anomalies"
+      ],
+      "target_path": "cards/cfa/10_behavioral_finance/be-prospect-theory-three-characteristic-pricing.md",
+      "title": "Prospect-Theory Three-Characteristic Pricing"
+    },
+    {
+      "card_id": "be-quasi-hyperbolic-discounting",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "10_behavioral_finance",
+      "source_ids": [
+        "bf_hbe_vol2_2019"
+      ],
+      "target_path": "cards/cfa/10_behavioral_finance/be-quasi-hyperbolic-discounting.md",
+      "title": "Quasi-Hyperbolic (Beta-Delta) Discounting"
+    },
+    {
+      "card_id": "be-rank-dependent-utility-via-ranks",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "10_behavioral_finance",
+      "source_ids": [
+        "bf_wakker_2010_pt_risk_ambiguity"
+      ],
+      "target_path": "cards/cfa/10_behavioral_finance/be-rank-dependent-utility-via-ranks.md",
+      "title": "Rank-Dependent Utility via Ranks"
+    },
+    {
+      "card_id": "be-rational-inattention-entropy",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "10_behavioral_finance",
+      "source_ids": [
+        "bf_hbe_vol2_2019"
+      ],
+      "target_path": "cards/cfa/10_behavioral_finance/be-rational-inattention-entropy.md",
+      "title": "Rational Inattention (Entropy-Based)"
+    },
+    {
+      "card_id": "be-rational-vs-diagnostic-expectations",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "10_behavioral_finance",
+      "source_ids": [
+        "bf_gennaioli_shleifer_2018_crisis_beliefs"
+      ],
+      "target_path": "cards/cfa/10_behavioral_finance/be-rational-vs-diagnostic-expectations.md",
+      "title": "Diagnostic vs Rational (and Adaptive) Expectations"
+    },
+    {
+      "card_id": "be-rationally-heterogeneous-expectations",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "10_behavioral_finance",
+      "source_ids": [
+        "bf_compecon_v4_2018_ham"
+      ],
+      "target_path": "cards/cfa/10_behavioral_finance/be-rationally-heterogeneous-expectations.md",
+      "title": "Rationally Heterogeneous Expectations in Learning-to-Forecast"
+    },
+    {
+      "card_id": "be-reference-dependent-preferences-foundations",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "10_behavioral_finance",
+      "source_ids": [
+        "bf_hbe_vol1_2018"
+      ],
+      "target_path": "cards/cfa/10_behavioral_finance/be-reference-dependent-preferences-foundations.md",
+      "title": "Foundations of Reference-Dependent Preferences"
+    },
+    {
+      "card_id": "be-regret-aversion-status-quo-endowment",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "10_behavioral_finance",
+      "source_ids": [
+        "bf_pompian_2006_bfwm"
+      ],
+      "target_path": "cards/cfa/10_behavioral_finance/be-regret-aversion-status-quo-endowment.md",
+      "title": "Regret Aversion, Status-Quo, and Endowment"
+    },
+    {
+      "card_id": "be-representativeness-conjunction-base-rate",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "10_behavioral_finance",
+      "source_ids": [
+        "bf_gennaioli_shleifer_2018_crisis_beliefs"
+      ],
+      "target_path": "cards/cfa/10_behavioral_finance/be-representativeness-conjunction-base-rate.md",
+      "title": "Representativeness, Conjunction Fallacy, Base-Rate Neglect"
+    },
+    {
+      "card_id": "be-representativeness-strength-vs-weight",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "10_behavioral_finance",
+      "source_ids": [
+        "bf_hbe_vol2_2019"
+      ],
+      "target_path": "cards/cfa/10_behavioral_finance/be-representativeness-strength-vs-weight.md",
+      "title": "Strength-versus-Weight Theory of Biased Updating"
+    },
+    {
+      "card_id": "be-self-control-mental-accounting",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "10_behavioral_finance",
+      "source_ids": [
+        "bf_pompian_2006_bfwm"
+      ],
+      "target_path": "cards/cfa/10_behavioral_finance/be-self-control-mental-accounting.md",
+      "title": "Self-Control and Mental Accounting"
+    },
+    {
+      "card_id": "be-sparsity-attention-framework",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "10_behavioral_finance",
+      "source_ids": [
+        "bf_hbe_vol2_2019"
+      ],
+      "target_path": "cards/cfa/10_behavioral_finance/be-sparsity-attention-framework.md",
+      "title": "Sparsity-Based Attention Framework"
+    },
+    {
+      "card_id": "be-square-root-impact-zero-intelligence",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "10_behavioral_finance",
+      "source_ids": [
+        "bf_compecon_v4_2018_ham"
+      ],
+      "target_path": "cards/cfa/10_behavioral_finance/be-square-root-impact-zero-intelligence.md",
+      "title": "Square-Root Market Impact and Zero-Intelligence Order Flow"
+    },
+    {
+      "card_id": "be-stylized-facts-financial-markets",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "10_behavioral_finance",
+      "source_ids": [
+        "bf_compecon_v4_2018_ham"
+      ],
+      "target_path": "cards/cfa/10_behavioral_finance/be-stylized-facts-financial-markets.md",
+      "title": "Stylized Facts of Financial Markets"
+    },
+    {
+      "card_id": "be-three-frameworks-behavioral-asset-pricing",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "10_behavioral_finance",
+      "source_ids": [
+        "bf_hbe_vol1_2018"
+      ],
+      "target_path": "cards/cfa/10_behavioral_finance/be-three-frameworks-behavioral-asset-pricing.md",
+      "title": "Three Frameworks of Behavioral Asset Pricing"
+    },
+    {
+      "card_id": "be-value-anomaly",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "10_behavioral_finance",
+      "source_ids": [
+        "bf_shleifer_2000_inefficient_markets"
+      ],
+      "target_path": "cards/cfa/10_behavioral_finance/be-value-anomaly.md",
+      "title": "Value Premium As Expectational Error"
+    },
+    {
+      "card_id": "rm-basel-capital-accord-evolution",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "11_risk_management",
+      "source_ids": [
+        "rm_hull_2023_rmfi"
+      ],
+      "target_path": "cards/cfa/11_risk_management/rm-basel-capital-accord-evolution.md",
+      "title": "Basel Capital Accords I → II → II.5 → III: The Regulatory-Capital Workflow"
+    },
+    {
+      "card_id": "rm-bernoulli-poisson-mixture-credit",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "11_risk_management",
+      "source_ids": [
+        "rm_mcneil_frey_embrechts_2015_qrm"
+      ],
+      "target_path": "cards/cfa/11_risk_management/rm-bernoulli-poisson-mixture-credit.md",
+      "title": "Bernoulli and Poisson Mixture Credit Models (incl. CreditRisk+)"
+    },
+    {
+      "card_id": "rm-conditional-dynamic-risk-measures",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "11_risk_management",
+      "source_ids": [
+        "rm_follmer_schied_2025_stochastic_finance"
+      ],
+      "target_path": "cards/cfa/11_risk_management/rm-conditional-dynamic-risk-measures.md",
+      "title": "Conditional (Dynamic) Risk Measures and Their Robust Representation"
+    },
+    {
+      "card_id": "rm-copulas-sklar-dependence",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "11_risk_management",
+      "source_ids": [
+        "rm_mcneil_frey_embrechts_2015_qrm"
+      ],
+      "target_path": "cards/cfa/11_risk_management/rm-copulas-sklar-dependence.md",
+      "title": "Copulas and Sklar's Theorem: Separating Margins from Dependence"
+    },
+    {
+      "card_id": "rm-cramer-lundberg-heavy-tail-ruin",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "11_risk_management",
+      "source_ids": [
+        "rm_embrechts_kluppelberg_mikosch_1997_modelling_extremal_events"
+      ],
+      "target_path": "cards/cfa/11_risk_management/rm-cramer-lundberg-heavy-tail-ruin.md",
+      "title": "Cramér-Lundberg Ruin Theory for Heavy-Tailed (Subexponential) Claims"
+    },
+    {
+      "card_id": "rm-crash-as-critical-point",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "11_risk_management",
+      "source_ids": [
+        "rm_sornette_2017_why_stock_markets_crash"
+      ],
+      "target_path": "cards/cfa/11_risk_management/rm-crash-as-critical-point.md",
+      "title": "Crashes as Endogenous Critical Points: Imitation, Herding, and the Order-Disorder Transition"
+    },
+    {
+      "card_id": "rm-dynamic-conditional-correlation-dcc",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "11_risk_management",
+      "source_ids": [
+        "rm_christoffersen_2012_elements"
+      ],
+      "target_path": "cards/cfa/11_risk_management/rm-dynamic-conditional-correlation-dcc.md",
+      "title": "Dynamic Conditional Correlation (DCC)"
+    },
+    {
+      "card_id": "rm-economic-capital-vs-regulatory-capital",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "11_risk_management",
+      "source_ids": [
+        "rm_hull_2023_rmfi"
+      ],
+      "target_path": "cards/cfa/11_risk_management/rm-economic-capital-vs-regulatory-capital.md",
+      "title": "Economic Capital: Unexpected Loss and the Rating-Linked Confidence Level"
+    },
+    {
+      "card_id": "rm-elliptical-spherical-distributions",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "11_risk_management",
+      "source_ids": [
+        "rm_mcneil_frey_embrechts_2015_qrm"
+      ],
+      "target_path": "cards/cfa/11_risk_management/rm-elliptical-spherical-distributions.md",
+      "title": "Spherical and Elliptical Distributions: When VaR Behaves and Markowitz Holds"
+    },
+    {
+      "card_id": "rm-evt-gpd-pot-hill",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "11_risk_management",
+      "source_ids": [
+        "rm_mcneil_frey_embrechts_2015_qrm"
+      ],
+      "target_path": "cards/cfa/11_risk_management/rm-evt-gpd-pot-hill.md",
+      "title": "Applied EVT: GPD, Peaks-Over-Threshold, and the Hill Estimator"
+    },
+    {
+      "card_id": "rm-exposure-profile-shapes",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "11_risk_management",
+      "source_ids": [
+        "rm_gregory_2020_xva_challenge"
+      ],
+      "target_path": "cards/cfa/11_risk_management/rm-exposure-profile-shapes.md",
+      "title": "Exposure-Profile Shapes: Square-Root-of-Time and (T−t)√t Rules"
+    },
+    {
+      "card_id": "rm-filtered-historical-simulation",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "11_risk_management",
+      "source_ids": [
+        "rm_christoffersen_2012_elements"
+      ],
+      "target_path": "cards/cfa/11_risk_management/rm-filtered-historical-simulation.md",
+      "title": "Filtered Historical Simulation (FHS)"
+    },
+    {
+      "card_id": "rm-fisher-tippett-ev-types",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "11_risk_management",
+      "source_ids": [
+        "rm_embrechts_kluppelberg_mikosch_1997_modelling_extremal_events"
+      ],
+      "target_path": "cards/cfa/11_risk_management/rm-fisher-tippett-ev-types.md",
+      "title": "Fisher-Tippett-Gnedenko Theorem and the Three Extreme-Value Types"
+    },
+    {
+      "card_id": "rm-frtb-stressed-es-market-risk-capital",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "11_risk_management",
+      "source_ids": [
+        "rm_hull_2023_rmfi"
+      ],
+      "target_path": "cards/cfa/11_risk_management/rm-frtb-stressed-es-market-risk-capital.md",
+      "title": "FRTB: Stressed Expected Shortfall as the Market-Risk Capital Engine"
+    },
+    {
+      "card_id": "rm-garch-conditional-variance",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "11_risk_management",
+      "source_ids": [
+        "rm_christoffersen_2012_elements"
+      ],
+      "target_path": "cards/cfa/11_risk_management/rm-garch-conditional-variance.md",
+      "title": "The GARCH(1,1) Conditional-Variance Engine"
+    },
+    {
+      "card_id": "rm-kusuoka-law-invariant-representation",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "11_risk_management",
+      "source_ids": [
+        "rm_follmer_schied_2025_stochastic_finance"
+      ],
+      "target_path": "cards/cfa/11_risk_management/rm-kusuoka-law-invariant-representation.md",
+      "title": "Kusuoka Representation: Every Law-Invariant Coherent Measure Is a Mixture of AV@R"
+    },
+    {
+      "card_id": "rm-levy-stable-paretian-tails",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "11_risk_management",
+      "source_ids": [
+        "rm_bouchaud_potters_2003_theory_financial_risk"
+      ],
+      "target_path": "cards/cfa/11_risk_management/rm-levy-stable-paretian-tails.md",
+      "title": "Lévy-Stable Laws and Paretian Tails: The Physics Origin of Fat Tails"
+    },
+    {
+      "card_id": "rm-lppl-precursor-formula-contested",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "11_risk_management",
+      "source_ids": [
+        "rm_sornette_2017_why_stock_markets_crash"
+      ],
+      "target_path": "cards/cfa/11_risk_management/rm-lppl-precursor-formula-contested.md",
+      "title": "The Log-Periodic Power-Law (LPPL/LPPLS) Crash Precursor — A Contested Stance"
+    },
+    {
+      "card_id": "rm-marchenko-pastur-law",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "11_risk_management",
+      "source_ids": [
+        "rm_potters_bouchaud_2020_random_matrix_theory"
+      ],
+      "target_path": "cards/cfa/11_risk_management/rm-marchenko-pastur-law.md",
+      "title": "Marchenko-Pastur Law: The Null Spectrum of a Sample Covariance Matrix"
+    },
+    {
+      "card_id": "rm-optimal-nongaussian-portfolios",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "11_risk_management",
+      "source_ids": [
+        "rm_bouchaud_potters_2003_theory_financial_risk"
+      ],
+      "target_path": "cards/cfa/11_risk_management/rm-optimal-nongaussian-portfolios.md",
+      "title": "Optimal Non-Gaussian / Minimum-VaR Portfolios"
+    },
+    {
+      "card_id": "rm-raroc-risk-adjusted-return-on-capital",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "11_risk_management",
+      "source_ids": [
+        "rm_hull_2023_rmfi"
+      ],
+      "target_path": "cards/cfa/11_risk_management/rm-raroc-risk-adjusted-return-on-capital.md",
+      "title": "RAROC / RORAC: Risk-Adjusted Performance on Economic Capital"
+    },
+    {
+      "card_id": "rm-rotationally-invariant-estimator",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "11_risk_management",
+      "source_ids": [
+        "rm_potters_bouchaud_2020_random_matrix_theory"
+      ],
+      "target_path": "cards/cfa/11_risk_management/rm-rotationally-invariant-estimator.md",
+      "title": "Rotationally-Invariant Estimator (RIE) and the Oracle Shrinkage Function"
+    },
+    {
+      "card_id": "rm-sa-ccr-counterparty-capital",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "11_risk_management",
+      "source_ids": [
+        "rm_gregory_2020_xva_challenge"
+      ],
+      "target_path": "cards/cfa/11_risk_management/rm-sa-ccr-counterparty-capital.md",
+      "title": "Regulatory Counterparty Capital: SA-CCR, EAD = α×EEPE, and the CVA Capital Ladder"
+    },
+    {
+      "card_id": "rm-tail-dependence-coefficients",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "11_risk_management",
+      "source_ids": [
+        "rm_mcneil_frey_embrechts_2015_qrm"
+      ],
+      "target_path": "cards/cfa/11_risk_management/rm-tail-dependence-coefficients.md",
+      "title": "Coefficients of Tail Dependence"
+    },
+    {
+      "card_id": "rm-threshold-credit-models",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "11_risk_management",
+      "source_ids": [
+        "rm_mcneil_frey_embrechts_2015_qrm"
+      ],
+      "target_path": "cards/cfa/11_risk_management/rm-threshold-credit-models.md",
+      "title": "Threshold (Latent-Variable) Credit Models and Their Copula Structure"
+    },
+    {
+      "card_id": "rm-time-consistency-recursiveness",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "11_risk_management",
+      "source_ids": [
+        "rm_follmer_schied_2025_stochastic_finance"
+      ],
+      "target_path": "cards/cfa/11_risk_management/rm-time-consistency-recursiveness.md",
+      "title": "Time Consistency, Recursiveness and the Supermartingale Criterion"
+    },
+    {
+      "card_id": "rm-truncated-levy-clt-crossover",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "11_risk_management",
+      "source_ids": [
+        "rm_bouchaud_potters_2003_theory_financial_risk"
+      ],
+      "target_path": "cards/cfa/11_risk_management/rm-truncated-levy-clt-crossover.md",
+      "title": "Truncated Lévy Flights and the Lévy→Gaussian Convergence Crossover"
+    },
+    {
+      "card_id": "rm-wrong-way-risk-taxonomy",
+      "migration_bucket": "deferred_book_skeleton_emitted",
+      "migration_origin": "deferred_books_skeleton",
+      "notes_taint": false,
+      "problems": [],
+      "reading_id": "11_risk_management",
+      "source_ids": [
+        "rm_gregory_2020_xva_challenge"
+      ],
+      "target_path": "cards/cfa/11_risk_management/rm-wrong-way-risk-taxonomy.md",
+      "title": "Wrong-Way and Right-Way Risk in CVA"
     }
   ],
   "generated_at_utc": "1970-01-01T00:00:00Z",
@@ -30701,14 +31897,13 @@
   },
   "legacy_root": "/home/jakeshea/CFA_reading/CFA_reading",
   "migration_additions": {
-    "count": 134,
+    "count": 92,
     "generated_by": "emit_migration_readings.py",
     "notes_taint": false,
     "origin": "deferred_books_skeleton",
     "reading_counts": {
-      "14_microstructure_and_trading": 73,
-      "15_performance_and_attribution": 35,
-      "22_fund_level_arbitrage": 26
+      "10_behavioral_finance": 64,
+      "11_risk_management": 28
     },
     "schema_version": "cfa.migration_queue_additions.v1"
   },

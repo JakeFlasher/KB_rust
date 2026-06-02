@@ -30,8 +30,10 @@ from pathlib import Path
 REPO = Path(__file__).resolve().parents[3]
 REGISTRY = REPO / "sources/cfa/_registry"
 # Post-2026-06 quarantine-absorption: all 6 notes-taint cards re-authored into the active
-# corpus, so active == total == 408 (zero quarantined).
-EXPECTED = {"active": 408, "total": 408, "sources": 87, "readings": 14}
+# corpus (active == total == 408, zero quarantined). BF+RM template-deck merge (2026-06):
+# + 92 net-new additive cards (64 be- + 28 rm-) and + 14 ingested sources (87 -> 101), so
+# active == total == 500 across the same 14 readings.
+EXPECTED = {"active": 500, "total": 500, "sources": 101, "readings": 14}
 
 # Gate/recipe scripts that must not hard-code a load-bearing v0 count (comparison or
 # default). Includes merge_ingest_manifests.py so the v1 source-count default (87) is

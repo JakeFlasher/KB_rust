@@ -1,7 +1,7 @@
 {
   "schema_version": "cfa_verify_baseline/v1",
-  "total": 408,
-  "passes": 408,
+  "total": 500,
+  "passes": 500,
   "failures": 0,
   "all_pass": true
 }

@@ -305,27 +305,11 @@ def bind_citation(cit: dict[str, Any], reading_id: str, by_src: dict[str, list],
         contains = 0 if (c["start_page"] <= lo and hi <= c["end_page"]) else 1
         return (contains, c["end_page"] - c["start_page"], c["chunk_id"])
 
-    # 1. AUTO-bind: candidate(s) whose normalized cited-page-window text contains the authored quote.
-    proposed = [(c, [max(lo, c["start_page"]), min(hi, c["end_page"])]) for c in cand]
-    proposed = [(c, cpr) for c, cpr in proposed if window_contains(c, cpr[0], cpr[1], nq)]
-    if len(proposed) == 1:
-        c, cpr = proposed[0]
-        return bound(c, quote, cpr, "auto", page_change(cpr, c))
-    if len(proposed) > 1:
-        # FAIL CLOSED on multiple verifying candidates, UNLESS the committed policy authorizes
-        # deterministic disambiguation of a pure chunker-OVERLAP set (record all alternatives).
-        chunks = [c for c, _ in proposed]
-        candidate_ids = sorted(c["chunk_id"] for c in chunks)
-        overlap = is_overlap_set(chunks)
-        if overlap and policy.get("allow_overlap_disambiguation", {}).get("enabled"):
-            c, cpr = sorted(proposed, key=fit_key)[0]
-            return bound(c, quote, cpr, "auto", page_change(cpr, c), overlap_alternatives=candidate_ids)
-        return {"status": "ambiguous", "authored_page_range": [lo, hi],
-                "candidate_chunk_ids": candidate_ids, "is_overlap_set": overlap}
-
-    # 1b. REVIEWED OVERRIDE — a human faithfulness review may supersede the heuristic repair
-    # for a specific citation with a curated clean verbatim run; it must still verify verbatim in the
-    # cited-page window (and is re-confirmed by the kb-verify pass). Fail loud if the curated run does not.
+    # 0. REVIEWED OVERRIDE — a human faithfulness review SUPERSEDES the heuristic for a specific
+    # citation, INCLUDING a verbatim auto-bind whose authored quote is a semantically weak fragment.
+    # Checked FIRST (before auto-bind) so the human decision always wins; the override is a clean,
+    # word-bounded verbatim run that must still verify in the cited-page window (re-confirmed by the
+    # kb-verify pass). Fail loud if the curated run does not verify.
     ov = (overrides or {}).get((sid, quote))
     if ov:
         fq = ov["final_quote"]
@@ -348,6 +332,24 @@ def bind_citation(cit: dict[str, Any], reading_id: str, by_src: dict[str, list],
                                   "overlap": round(overlap_score(fq, nq), 3), "reason": reason})
         raise SystemExit(
             f"reviewed override for ({sid}) does not verify in any cited-page window: {fq!r}")
+
+    # 1. AUTO-bind: candidate(s) whose normalized cited-page-window text contains the authored quote.
+    proposed = [(c, [max(lo, c["start_page"]), min(hi, c["end_page"])]) for c in cand]
+    proposed = [(c, cpr) for c, cpr in proposed if window_contains(c, cpr[0], cpr[1], nq)]
+    if len(proposed) == 1:
+        c, cpr = proposed[0]
+        return bound(c, quote, cpr, "auto", page_change(cpr, c))
+    if len(proposed) > 1:
+        # FAIL CLOSED on multiple verifying candidates, UNLESS the committed policy authorizes
+        # deterministic disambiguation of a pure chunker-OVERLAP set (record all alternatives).
+        chunks = [c for c, _ in proposed]
+        candidate_ids = sorted(c["chunk_id"] for c in chunks)
+        overlap = is_overlap_set(chunks)
+        if overlap and policy.get("allow_overlap_disambiguation", {}).get("enabled"):
+            c, cpr = sorted(proposed, key=fit_key)[0]
+            return bound(c, quote, cpr, "auto", page_change(cpr, c), overlap_alternatives=candidate_ids)
+        return {"status": "ambiguous", "authored_page_range": [lo, hi],
+                "candidate_chunk_ids": candidate_ids, "is_overlap_set": overlap}
 
     # 2. REPAIR — only for MACHINE-PROVEN documented extraction conditions, tried in order; a citation
     # that satisfies NONE fails closed (zero_match) and is never silently bound. Each repair carries a

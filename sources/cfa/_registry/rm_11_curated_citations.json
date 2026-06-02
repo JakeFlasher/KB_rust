@@ -50,14 +50,14 @@
       "card_id": "rm-conditional-dynamic-risk-measures",
       "citations": [
         {
-          "chunk_hash": "a26216400011dbb85cda3300785c382ce3204f360935f9ea96bd44509e5b1c01",
-          "chunk_id": "rm_follmer_schied_2025_stochastic_finance:p523:0619",
+          "chunk_hash": "060d81f9863fdbba60678240539d7b85be20009e38c6aaad206ede7ccd0c095f",
+          "chunk_id": "rm_follmer_schied_2025_stochastic_finance:p522:0618",
           "edge_type": "defines",
           "page_range": [
             523,
             523
           ],
-          "quote": "A monetary conditional risk measure will be called convex if it satisfies",
+          "quote": "we prove a conditional version of the robust representation theorem",
           "source_id": "rm_follmer_schied_2025_stochastic_finance"
         },
         {
@@ -79,7 +79,7 @@
             529,
             529
           ],
-          "quote": "denotes the conditional relative entropy of Q",
+          "quote": "the induced convex conditional risk measure ρt is given by",
           "source_id": "rm_follmer_schied_2025_stochastic_finance"
         }
       ],
@@ -126,7 +126,7 @@
             54,
             54
           ],
-          "quote": "For claim size distributions with subexponential integrated tail distribution",
+          "quote": "natural class when it comes to ruin estimates whenever the",
           "source_id": "rm_embrechts_kluppelberg_mikosch_1997_modelling_extremal_events"
         }
       ],
@@ -412,7 +412,7 @@
             259,
             259
           ],
-          "quote": "A coherent risk measure ρ is law-invariant if and only if",
+          "quote": "Conversely, for any probability measure μ on (0,1], the function q defined by",
           "source_id": "rm_follmer_schied_2025_stochastic_finance"
         },
         {
@@ -703,14 +703,14 @@
           "source_id": "rm_follmer_schied_2025_stochastic_finance"
         },
         {
-          "chunk_hash": "f2fe70cae17b796714918aae7afd1a10ff530d6627253d1d7784be2ae3a24472",
-          "chunk_id": "rm_follmer_schied_2025_stochastic_finance:p533:0629",
+          "chunk_hash": "1cc83d8174682f976300f3f265564e7a6e6e21c13e8f3cc3016329454efa77fc",
+          "chunk_id": "rm_follmer_schied_2025_stochastic_finance:p532:0628",
           "edge_type": "supports",
           "page_range": [
             533,
             533
           ],
-          "quote": "is not time-consistent,",
+          "quote": "is time-consistent. Let us check recursiveness",
           "source_id": "rm_follmer_schied_2025_stochastic_finance"
         },
         {
@@ -721,7 +721,7 @@
             540,
             540
           ],
-          "quote": "This can be seen as a built-in",
+          "quote": "the process (αmin t (Q))t=0,1,...,T is a Q-supermartingale for any such Q",
           "source_id": "rm_follmer_schied_2025_stochastic_finance"
         }
       ],

@@ -731,14 +731,14 @@
           "source_id": "bf_hbe_vol2_2019"
         },
         {
-          "chunk_hash": "4d3da5b81c948ce7bbaf0c89b7c083fcd46cc48c13704cc5aa07502e6d5860b4",
-          "chunk_id": "bf_hbe_vol2_2019:p164:0264",
+          "chunk_hash": "7dacc58e0c79166c3435f7759fe60c722198d1b332190631f1bf6b2456d836c1",
+          "chunk_id": "bf_hbe_vol2_2019:p163:0263",
           "edge_type": "supports",
           "page_range": [
-            164,
-            164
+            163,
+            163
           ],
-          "quote": "With prior-biased inference defined as in Eq.",
+          "quote": "Prior-biased inference is the possibility that c may depend on whether a newly observed signal reinforces or weakens current priors",
           "source_id": "bf_hbe_vol2_2019"
         },
         {
@@ -806,7 +806,7 @@
             270,
             270
           ],
-          "quote": "In this way we can easily verify that PT satisfies stochastic dominance, as we will see later.",
+          "quote": "It is often useful to take the PT functional as the sum of an RDU functional applied to gains, and another RDU functional applied to losses",
           "source_id": "bf_wakker_2010_pt_risk_ambiguity"
         }
       ],
@@ -841,7 +841,7 @@
             164,
             164
           ],
-          "quote": "Positive Feedback Investment Strategies 155 positive feedback trading.",
+          "quote": "It can result from extrapolative expectations about prices, or trend chasing",
           "source_id": "bf_shleifer_2000_inefficient_markets"
         },
         {
@@ -1007,14 +1007,14 @@
           "source_id": "bf_compecon_v4_2018_ham"
         },
         {
-          "chunk_hash": "22d1afb449cc6e377a60e6d5238789822636f33a8afc5cf989a2b3803b8cf528",
-          "chunk_id": "bf_compecon_v4_2018_ham:p312:0445",
+          "chunk_hash": "b0929b794a4005f1d5d8b6f6bfaa4cfa4f97b48a01c43b5de688ebb1d7b437b9",
+          "chunk_id": "bf_compecon_v4_2018_ham:p312:0446",
           "edge_type": "supports",
           "page_range": [
             312,
             312
           ],
-          "quote": "8 (from the top-left to bottom-right) shows the time series of asset prices (pt), asset returns (rt), the aggregate wealth shares invested in the risky assets (i.e.",
+          "quote": "large literature on time-varying betas has been developed within the conditional CAPM",
           "source_id": "bf_compecon_v4_2018_ham"
         },
         {
@@ -1389,14 +1389,14 @@
           "source_id": "bf_compecon_v4_2018_ham"
         },
         {
-          "chunk_hash": "39ce9e9830b5e45c8a9e2d7444b336d2fc23ad12696cc6ac1863e36c40d02c33",
-          "chunk_id": "bf_compecon_v4_2018_ham:p283:0401",
+          "chunk_hash": "930ba1f29e02bdafd51c1493bf62b9ff36e5010caf2d0a911da3a1993eb1293a",
+          "chunk_id": "bf_compecon_v4_2018_ham:p282:0400",
           "edge_type": "supports",
           "page_range": [
             283,
             283
           ],
-          "quote": "the market price is determined by the market maker as follows,",
+          "quote": "the fractions of the fundamentalists and trend followers have fixed",
           "source_id": "bf_compecon_v4_2018_ham"
         }
       ],
@@ -1848,7 +1848,7 @@
             60,
             60
           ],
-          "quote": "This chapter, which reviews the practical consequences of investor bias in asset allocation decisions, might, with any luck, sow the seeds of a preliminary thought process for establishing an industry-standard methodology for detecting and responding to investor biases.",
+          "quote": "When should advisors attempt to moderate, or counteract, biased client reasoning",
           "source_id": "bf_pompian_2006_bfwm"
         },
         {
@@ -2563,7 +2563,7 @@
             12,
             12
           ],
-          "quote": "It is the sum of two terms.",
+          "quote": "it captures both prospect theory and narrow framing",
           "source_id": "bf_barberis_jin_wang_2021_pt_anomalies"
         }
       ],
@@ -3117,7 +3117,7 @@
             300,
             300
           ],
-          "quote": "The key step of the sparse max is that the agent will solve a version of this problem.",
+          "quote": "attention creates a psychic cost",
           "source_id": "bf_hbe_vol2_2019"
         },
         {

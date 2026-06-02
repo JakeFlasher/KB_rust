@@ -332,12 +332,12 @@
     },
     {
       "card_id": "be-confirmation-prior-biased-inference",
-      "cause": "equation_extraction_mismatch",
-      "chunk_id": "bf_hbe_vol2_2019:p164:0264",
-      "final_quote": "With prior-biased inference defined as in Eq.",
+      "cause": "reviewed_faithful_reanchor",
+      "chunk_id": "bf_hbe_vol2_2019:p163:0263",
+      "final_quote": "Prior-biased inference is the possibility that c may depend on whether a newly observed signal reinforces or weakens current priors",
       "original_quote": "The prior-biased-inference hypothesis is c_conf >= 0 >= c_disconf, with at least one inequality strict.",
-      "overlap": 0.2,
-      "reason": "authored quote transcribes math notation Pdfium extracts differently (its content words are present on the cited page but it is not verbatim); re-anchored to the best-overlap clean prose sentence on the cited page, per the sources' authoring guidance",
+      "overlap": 0.194,
+      "reason": "review (BF/RM faithfulness, RLCR R2): math quote (c_conf >= 0 >= c_disconf) not verbatim; re-anchored to the clean on-page prose defining prior-biased (confirming-vs-disconfirming) inference (page corrected [164, 164] -> [163, 163] to the page holding the curated run)",
       "source_id": "bf_hbe_vol2_2019",
       "type": "reanchor"
     },
@@ -354,12 +354,12 @@
     },
     {
       "card_id": "be-cumulative-prospect-theory-risk",
-      "cause": "equation_extraction_mismatch",
+      "cause": "reviewed_faithful_reanchor",
       "chunk_id": "bf_wakker_2010_pt_risk_ambiguity:p270:0365",
-      "final_quote": "In this way we can easily verify that PT satisfies stochastic dominance, as we will see later.",
+      "final_quote": "It is often useful to take the PT functional as the sum of an RDU functional applied to gains, and another RDU functional applied to losses",
       "original_quote": "PT(x) = PT(x+) + PT(x-).",
-      "overlap": 0.059,
-      "reason": "authored quote transcribes math notation Pdfium extracts differently (its content words are present on the cited page but it is not verbatim); re-anchored to the best-overlap clean prose sentence on the cited page, per the sources' authoring guidance",
+      "overlap": 0.05,
+      "reason": "review (BF/RM faithfulness, RLCR R2): pure formula PT(x)=PT(x+)+PT(x-); re-anchored to the clean prose stating the same gain/loss RDU decomposition (the auto re-anchor wrongly hit a stochastic-dominance sentence) (page corrected [270, 271] -> [270, 270] to the page holding the curated run)",
       "source_id": "bf_wakker_2010_pt_risk_ambiguity",
       "type": "reanchor"
     },
@@ -376,12 +376,12 @@
     },
     {
       "card_id": "be-destabilizing-arbitrage-positive-feedback",
-      "cause": "pdfium_ufffe_hyphenation",
+      "cause": "reviewed_faithful_reanchor",
       "chunk_id": "bf_shleifer_2000_inefficient_markets:p163:0184",
-      "final_quote": "Positive Feedback Investment Strategies 155 positive feedback trading.",
+      "final_quote": "It can result from extrapolative expectations about prices, or trend chasing",
       "original_quote": "Positive feedback investors buy securities after prices rise and sell after prices fall.",
-      "overlap": 0.133,
-      "reason": "authored quote spans a Pdfium STX->U+FFFE hyphenation marker the kernel preserves; trimmed to the longest clean verbatim run, else re-anchored to the best-overlap clean on-page sentence",
+      "overlap": 0.048,
+      "reason": "review (BF/RM faithfulness, RLCR R2): authored quote U+FFFE-broken; the auto re-anchor hit a section-header fragment; re-anchored to the clean prose defining positive-feedback (trend-chasing) trading",
       "source_id": "bf_shleifer_2000_inefficient_markets",
       "type": "reanchor"
     },
@@ -442,12 +442,12 @@
     },
     {
       "card_id": "be-evolutionary-capm-time-varying-beta",
-      "cause": "equation_extraction_mismatch",
-      "chunk_id": "bf_compecon_v4_2018_ham:p312:0445",
-      "final_quote": "8 (from the top-left to bottom-right) shows the time series of asset prices (pt), asset returns (rt), the aggregate wealth shares invested in the risky assets (i.e.",
+      "cause": "reviewed_faithful_reanchor",
+      "chunk_id": "bf_compecon_v4_2018_ham:p312:0446",
+      "final_quote": "large literature on time-varying betas has been developed within the conditional CAPM",
       "original_quote": "one obtains the CAPM-like return relation E_{a,t}(r_{t+1}) - r_f 1 = beta_{a,t}[E_{a,t}(r_{m,t+1}) - r_f]",
-      "overlap": 0.051,
-      "reason": "authored quote transcribes math notation Pdfium extracts differently (its content words are present on the cited page but it is not verbatim); re-anchored to the best-overlap clean prose sentence on the cited page, per the sources' authoring guidance",
+      "overlap": 0.077,
+      "reason": "review (BF/RM faithfulness, RLCR R2): math/equation quote; the auto re-anchor hit a figure caption; re-anchored to the clean prose on time-varying betas in the conditional CAPM (distinct from the cards already-auto-bound evolutionary-CAPM sentence)",
       "source_id": "bf_compecon_v4_2018_ham",
       "type": "reanchor"
     },
@@ -607,14 +607,14 @@
     },
     {
       "card_id": "be-fundamentalist-chartist-ham",
-      "cause": "chunk_boundary_span",
-      "chunk_id": "bf_compecon_v4_2018_ham:p283:0401",
-      "final_quote": "the market price is determined by the market maker as follows,",
+      "cause": "reviewed_faithful_reanchor",
+      "chunk_id": "bf_compecon_v4_2018_ham:p282:0400",
+      "final_quote": "the fractions of the fundamentalists and trend followers have fixed",
       "original_quote": "the market price is determined by the market maker as follows, p_{t+1} = p_t + lambda Z_{e,t} = p_t + mu z_{e,t} + delta_t",
-      "reason": "authored quote is verbatim within the cited page(s) but spans a chunk/page boundary (not a substring of any single chunk); trimmed to the longest clean verbatim run within one chunk's cited-page window",
-      "retained_fraction": 0.508,
+      "overlap": 0.04,
+      "reason": "review (BF/RM faithfulness, RLCR R2): authored quote trails into the price-setting formula; re-anchored to the clean prose on the fundamentalist/trend-follower population fractions of the HAM",
       "source_id": "bf_compecon_v4_2018_ham",
-      "type": "trim"
+      "type": "reanchor"
     },
     {
       "card_id": "be-gamblers-fallacy-law-of-small-numbers",
@@ -772,12 +772,12 @@
     },
     {
       "card_id": "be-moderate-vs-adapt-bias-allocation",
-      "cause": "pdfium_ufffe_hyphenation",
+      "cause": "reviewed_faithful_reanchor",
       "chunk_id": "bf_pompian_2006_bfwm:p059:0060",
-      "final_quote": "This chapter, which reviews the practical consequences of investor bias in asset allocation decisions, might, with any luck, sow the seeds of a preliminary thought process for establishing an industry-standard methodology for detecting and responding to investor biases.",
+      "final_quote": "When should advisors attempt to moderate, or counteract, biased client reasoning",
       "original_quote": "When should advisors attempt to moderate, or counteract, biased client reasoning to accommodate a predetermined asset allocation? Conversely, when should advisors adapt",
-      "overlap": 0.082,
-      "reason": "authored quote spans a Pdfium STX->U+FFFE hyphenation marker the kernel preserves; trimmed to the longest clean verbatim run, else re-anchored to the best-overlap clean on-page sentence",
+      "overlap": 0.611,
+      "reason": "review (BF/RM faithfulness, RLCR R2): authored quote (the moderate-vs-adapt question) U+FFFE-broken at \"accommodate\"; re-anchored to its clean word-bounded run framing the moderate-the-bias decision",
       "source_id": "bf_pompian_2006_bfwm",
       "type": "reanchor"
     },
@@ -1036,12 +1036,12 @@
     },
     {
       "card_id": "be-prospect-theory-three-characteristic-pricing",
-      "cause": "equation_extraction_mismatch",
+      "cause": "reviewed_faithful_reanchor",
       "chunk_id": "bf_barberis_jin_wang_2021_pt_anomalies:p012:0014",
-      "final_quote": "It is the sum of two terms.",
+      "final_quote": "it captures both prospect theory and narrow framing",
       "original_quote": "the i'th component, V(Gi), corresponds to asset i. Specifically, Gi is the potential gain or loss on asset i",
-      "overlap": 0.095,
-      "reason": "authored quote transcribes math notation Pdfium extracts differently (its content words are present on the cited page but it is not verbatim); re-anchored to the best-overlap clean prose sentence on the cited page, per the sources' authoring guidance",
+      "overlap": 0.0,
+      "reason": "review (BF/RM faithfulness, RLCR R2): math quote (V(Gi) per-asset value); the auto re-anchor hit a generic \"sum of two terms\" sentence; re-anchored to the clean prose on the prospect-theory/narrow-framing pricing term",
       "source_id": "bf_barberis_jin_wang_2021_pt_anomalies",
       "type": "reanchor"
     },
@@ -1256,12 +1256,12 @@
     },
     {
       "card_id": "be-sparsity-attention-framework",
-      "cause": "pdfium_ufffe_hyphenation",
+      "cause": "reviewed_faithful_reanchor",
       "chunk_id": "bf_hbe_vol2_2019:p299:0491",
-      "final_quote": "The key step of the sparse max is that the agent will solve a version of this problem.",
+      "final_quote": "attention creates a psychic cost",
       "original_quote": "In the sparse max, the agent optimizes in two steps.",
-      "overlap": 0.211,
-      "reason": "authored quote spans a Pdfium STX->U+FFFE hyphenation marker the kernel preserves; trimmed to the longest clean verbatim run, else re-anchored to the best-overlap clean on-page sentence",
+      "overlap": 0.0,
+      "reason": "review (BF/RM faithfulness, RLCR R2): authored setup sentence vague; re-anchored to the clean prose stating the sparsity attention cost (the sparse-max kappa penalty the card defines)",
       "source_id": "bf_hbe_vol2_2019",
       "type": "reanchor"
     },
@@ -1950,13 +1950,35 @@
       "type": "trim"
     },
     {
+      "card_id": "rm-conditional-dynamic-risk-measures",
+      "cause": "reviewed_faithful_reanchor",
+      "chunk_id": "rm_follmer_schied_2025_stochastic_finance:p522:0618",
+      "final_quote": "we prove a conditional version of the robust representation theorem",
+      "original_quote": "A monetary conditional risk measure will be called convex if it satisfies",
+      "overlap": 0.1,
+      "reason": "review (BF/RM faithfulness, RLCR R2): authored \"convex if it satisfies\" lead-in incomplete; re-anchored to the clean prose stating the conditional robust representation theorem the card cites",
+      "source_id": "rm_follmer_schied_2025_stochastic_finance",
+      "type": "reanchor"
+    },
+    {
+      "card_id": "rm-conditional-dynamic-risk-measures",
+      "cause": "reviewed_faithful_reanchor",
+      "chunk_id": "rm_follmer_schied_2025_stochastic_finance:p529:0625",
+      "final_quote": "the induced convex conditional risk measure ρt is given by",
+      "original_quote": "denotes the conditional relative entropy of Q",
+      "overlap": 0.133,
+      "reason": "review (BF/RM faithfulness, RLCR R2): authored entropy-example fragment does not support the general conditional-risk-measure claim; re-anchored to the clean prose on the induced convex conditional risk measure",
+      "source_id": "rm_follmer_schied_2025_stochastic_finance",
+      "type": "reanchor"
+    },
+    {
       "card_id": "rm-cramer-lundberg-heavy-tail-ruin",
       "cause": "reviewed_faithful_reanchor",
       "chunk_id": "rm_embrechts_kluppelberg_mikosch_1997_modelling_extremal_events:p054:0050",
-      "final_quote": "For claim size distributions with subexponential integrated tail distribution",
+      "final_quote": "natural class when it comes to ruin estimates whenever the",
       "original_quote": "Consequently, the estimate (1.32) is only possible under the condition",
-      "overlap": 0.0,
-      "reason": "review (BF/RM migration): PDF page 54 is a heavily extraction-mangled theorem page (control-char/U+FFFE noise breaks every sentence), leaving no clean re-anchor candidate, so it failed closed (zero_match); re-anchored to the clean on-page run stating the subexponential integrated-tail condition under which the Cramer-Lundberg heavy-tail ruin estimate holds. Routed to the faithfulness review.",
+      "overlap": 0.053,
+      "reason": "review (BF/RM migration): PDF page 54 is a control-char-mangled theorem page; the original R1 override lacked the ruin asymptotic; re-anchored to the clean on-page run stating the subexponential class is the natural class for the Cramer-Lundberg ruin estimate.",
       "source_id": "rm_embrechts_kluppelberg_mikosch_1997_modelling_extremal_events",
       "type": "reanchor"
     },
@@ -1970,6 +1992,17 @@
       "retained_fraction": 0.735,
       "source_id": "rm_sornette_2017_why_stock_markets_crash",
       "type": "trim"
+    },
+    {
+      "card_id": "rm-kusuoka-law-invariant-representation",
+      "cause": "reviewed_faithful_reanchor",
+      "chunk_id": "rm_follmer_schied_2025_stochastic_finance:p258:0307",
+      "final_quote": "Conversely, for any probability measure μ on (0,1], the function q defined by",
+      "original_quote": "A coherent risk measure ρ is law-invariant if and only if",
+      "overlap": 0.045,
+      "reason": "review (BF/RM faithfulness, RLCR R2): authored \"if and only if\" iff-fragment incomplete; re-anchored to the clean prose on the AV@R/probability-measure correspondence underlying the Kusuoka representation",
+      "source_id": "rm_follmer_schied_2025_stochastic_finance",
+      "type": "reanchor"
     },
     {
       "card_id": "rm-levy-stable-paretian-tails",
@@ -2003,6 +2036,28 @@
       "retained_fraction": 0.9,
       "source_id": "rm_gregory_2020_xva_challenge",
       "type": "trim"
+    },
+    {
+      "card_id": "rm-time-consistency-recursiveness",
+      "cause": "reviewed_faithful_reanchor",
+      "chunk_id": "rm_follmer_schied_2025_stochastic_finance:p532:0628",
+      "final_quote": "is time-consistent. Let us check recursiveness",
+      "original_quote": "is not time-consistent,",
+      "overlap": 0.375,
+      "reason": "review (BF/RM faithfulness, RLCR R2): authored subjectless negative fragment; re-anchored to the clean prose checking recursiveness (the rho_t = rho_t(-rho_{t+1}) equivalence the card states)",
+      "source_id": "rm_follmer_schied_2025_stochastic_finance",
+      "type": "reanchor"
+    },
+    {
+      "card_id": "rm-time-consistency-recursiveness",
+      "cause": "reviewed_faithful_reanchor",
+      "chunk_id": "rm_follmer_schied_2025_stochastic_finance:p539:0636",
+      "final_quote": "the process (αmin t (Q))t=0,1,...,T is a Q-supermartingale for any such Q",
+      "original_quote": "This can be seen as a built-in",
+      "overlap": 0.05,
+      "reason": "review (BF/RM faithfulness, RLCR R2): authored fragment omits the supermartingale criterion; re-anchored to the clean prose stating the minimal-penalty Q-supermartingale property the card cites",
+      "source_id": "rm_follmer_schied_2025_stochastic_finance",
+      "type": "reanchor"
     },
     {
       "card_id": "rm-truncated-levy-clt-crossover",

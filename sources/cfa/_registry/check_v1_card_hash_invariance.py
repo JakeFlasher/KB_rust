@@ -31,7 +31,8 @@ MANIFEST_AT_TAG = "out/cfa_legacy/cards_manifest.json"
 V0_TAG = "v0-candidate"
 CROSS_LINKS = REPO / "sources/cfa/_registry/migration_cross_links.json"
 # Post-2026-06 quarantine-absorption: 402 + 6 re-authored notes-taint cards = 408 active.
-EXPECTED_ACTIVE = 408
+# BF+RM template-deck merge (2026-06): + 92 net-new additive cards (64 be- + 28 rm-) = 500 active.
+EXPECTED_ACTIVE = 500
 EXPECTED_BASELINE = 268
 
 
@@ -107,7 +108,7 @@ def main() -> int:
             print(f"  - {f}", file=sys.stderr)
         return 1
     print("\nV1 CARD-HASH INVARIANCE: PASS (only the released-card allowlist changed among the 268; "
-          "quarantine set empty post-absorption; 408 active)")
+          "quarantine set empty post-absorption; 500 active)")
     return 0
 
 

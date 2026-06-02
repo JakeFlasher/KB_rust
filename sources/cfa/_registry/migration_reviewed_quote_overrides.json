@@ -35,8 +35,99 @@
       "card_id": "rm-cramer-lundberg-heavy-tail-ruin",
       "source_id": "rm_embrechts_kluppelberg_mikosch_1997_modelling_extremal_events",
       "original_quote": "Consequently, the estimate (1.32) is only possible under the condition",
-      "final_quote": "For claim size distributions with subexponential integrated tail distribution",
-      "reason": "review (BF/RM migration): PDF page 54 is a heavily extraction-mangled theorem page (control-char/U+FFFE noise breaks every sentence), leaving no clean re-anchor candidate, so it failed closed (zero_match); re-anchored to the clean on-page run stating the subexponential integrated-tail condition under which the Cramer-Lundberg heavy-tail ruin estimate holds. Routed to the faithfulness review."
+      "final_quote": "natural class when it comes to ruin estimates whenever the",
+      "reason": "review (BF/RM migration): PDF page 54 is a control-char-mangled theorem page; the original R1 override lacked the ruin asymptotic; re-anchored to the clean on-page run stating the subexponential class is the natural class for the Cramer-Lundberg ruin estimate."
+    },
+    {
+      "card_id": "be-confirmation-prior-biased-inference",
+      "source_id": "bf_hbe_vol2_2019",
+      "original_quote": "The prior-biased-inference hypothesis is c_conf >= 0 >= c_disconf, with at least one inequality strict.",
+      "final_quote": "Prior-biased inference is the possibility that c may depend on whether a newly observed signal reinforces or weakens current priors",
+      "reason": "review (BF/RM faithfulness, RLCR R2): math quote (c_conf >= 0 >= c_disconf) not verbatim; re-anchored to the clean on-page prose defining prior-biased (confirming-vs-disconfirming) inference"
+    },
+    {
+      "card_id": "be-cumulative-prospect-theory-risk",
+      "source_id": "bf_wakker_2010_pt_risk_ambiguity",
+      "original_quote": "PT(x) = PT(x+) + PT(x-).",
+      "final_quote": "It is often useful to take the PT functional as the sum of an RDU functional applied to gains, and another RDU functional applied to losses",
+      "reason": "review (BF/RM faithfulness, RLCR R2): pure formula PT(x)=PT(x+)+PT(x-); re-anchored to the clean prose stating the same gain/loss RDU decomposition (the auto re-anchor wrongly hit a stochastic-dominance sentence)"
+    },
+    {
+      "card_id": "be-destabilizing-arbitrage-positive-feedback",
+      "source_id": "bf_shleifer_2000_inefficient_markets",
+      "original_quote": "Positive feedback investors buy securities after prices rise and sell after prices fall.",
+      "final_quote": "It can result from extrapolative expectations about prices, or trend chasing",
+      "reason": "review (BF/RM faithfulness, RLCR R2): authored quote U+FFFE-broken; the auto re-anchor hit a section-header fragment; re-anchored to the clean prose defining positive-feedback (trend-chasing) trading"
+    },
+    {
+      "card_id": "be-evolutionary-capm-time-varying-beta",
+      "source_id": "bf_compecon_v4_2018_ham",
+      "original_quote": "one obtains the CAPM-like return relation E_{a,t}(r_{t+1}) - r_f 1 = beta_{a,t}[E_{a,t}(r_{m,t+1}) - r_f]",
+      "final_quote": "large literature on time-varying betas has been developed within the conditional CAPM",
+      "reason": "review (BF/RM faithfulness, RLCR R2): math/equation quote; the auto re-anchor hit a figure caption; re-anchored to the clean prose on time-varying betas in the conditional CAPM (distinct from the cards already-auto-bound evolutionary-CAPM sentence)"
+    },
+    {
+      "card_id": "be-fundamentalist-chartist-ham",
+      "source_id": "bf_compecon_v4_2018_ham",
+      "original_quote": "the market price is determined by the market maker as follows, p_{t+1} = p_t + lambda Z_{e,t} = p_t + mu z_{e,t} + delta_t",
+      "final_quote": "the fractions of the fundamentalists and trend followers have fixed",
+      "reason": "review (BF/RM faithfulness, RLCR R2): authored quote trails into the price-setting formula; re-anchored to the clean prose on the fundamentalist/trend-follower population fractions of the HAM"
+    },
+    {
+      "card_id": "be-moderate-vs-adapt-bias-allocation",
+      "source_id": "bf_pompian_2006_bfwm",
+      "original_quote": "When should advisors attempt to moderate, or counteract, biased client reasoning to accommodate a predetermined asset allocation? Conversely, when should advisors adapt",
+      "final_quote": "When should advisors attempt to moderate, or counteract, biased client reasoning",
+      "reason": "review (BF/RM faithfulness, RLCR R2): authored quote (the moderate-vs-adapt question) U+FFFE-broken at \"accommodate\"; re-anchored to its clean word-bounded run framing the moderate-the-bias decision"
+    },
+    {
+      "card_id": "be-prospect-theory-three-characteristic-pricing",
+      "source_id": "bf_barberis_jin_wang_2021_pt_anomalies",
+      "original_quote": "the i'th component, V(Gi), corresponds to asset i. Specifically, Gi is the potential gain or loss on asset i",
+      "final_quote": "it captures both prospect theory and narrow framing",
+      "reason": "review (BF/RM faithfulness, RLCR R2): math quote (V(Gi) per-asset value); the auto re-anchor hit a generic \"sum of two terms\" sentence; re-anchored to the clean prose on the prospect-theory/narrow-framing pricing term"
+    },
+    {
+      "card_id": "be-sparsity-attention-framework",
+      "source_id": "bf_hbe_vol2_2019",
+      "original_quote": "In the sparse max, the agent optimizes in two steps.",
+      "final_quote": "attention creates a psychic cost",
+      "reason": "review (BF/RM faithfulness, RLCR R2): authored setup sentence vague; re-anchored to the clean prose stating the sparsity attention cost (the sparse-max kappa penalty the card defines)"
+    },
+    {
+      "card_id": "rm-kusuoka-law-invariant-representation",
+      "source_id": "rm_follmer_schied_2025_stochastic_finance",
+      "original_quote": "A coherent risk measure ρ is law-invariant if and only if",
+      "final_quote": "Conversely, for any probability measure μ on (0,1], the function q defined by",
+      "reason": "review (BF/RM faithfulness, RLCR R2): authored \"if and only if\" iff-fragment incomplete; re-anchored to the clean prose on the AV@R/probability-measure correspondence underlying the Kusuoka representation"
+    },
+    {
+      "card_id": "rm-conditional-dynamic-risk-measures",
+      "source_id": "rm_follmer_schied_2025_stochastic_finance",
+      "original_quote": "A monetary conditional risk measure will be called convex if it satisfies",
+      "final_quote": "we prove a conditional version of the robust representation theorem",
+      "reason": "review (BF/RM faithfulness, RLCR R2): authored \"convex if it satisfies\" lead-in incomplete; re-anchored to the clean prose stating the conditional robust representation theorem the card cites"
+    },
+    {
+      "card_id": "rm-conditional-dynamic-risk-measures",
+      "source_id": "rm_follmer_schied_2025_stochastic_finance",
+      "original_quote": "denotes the conditional relative entropy of Q",
+      "final_quote": "the induced convex conditional risk measure ρt is given by",
+      "reason": "review (BF/RM faithfulness, RLCR R2): authored entropy-example fragment does not support the general conditional-risk-measure claim; re-anchored to the clean prose on the induced convex conditional risk measure"
+    },
+    {
+      "card_id": "rm-time-consistency-recursiveness",
+      "source_id": "rm_follmer_schied_2025_stochastic_finance",
+      "original_quote": "is not time-consistent,",
+      "final_quote": "is time-consistent. Let us check recursiveness",
+      "reason": "review (BF/RM faithfulness, RLCR R2): authored subjectless negative fragment; re-anchored to the clean prose checking recursiveness (the rho_t = rho_t(-rho_{t+1}) equivalence the card states)"
+    },
+    {
+      "card_id": "rm-time-consistency-recursiveness",
+      "source_id": "rm_follmer_schied_2025_stochastic_finance",
+      "original_quote": "This can be seen as a built-in",
+      "final_quote": "the process (αmin t (Q))t=0,1,...,T is a Q-supermartingale for any such Q",
+      "reason": "review (BF/RM faithfulness, RLCR R2): authored fragment omits the supermartingale criterion; re-anchored to the clean prose stating the minimal-penalty Q-supermartingale property the card cites"
     }
   ]
 }
