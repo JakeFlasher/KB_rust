@@ -56,11 +56,17 @@ SOURCE_MATRIX = OUT / "source_matrix.json"
 CARDS_MANIFEST = OUT / "cards_manifest.json"
 KB_BINARY = ROOT / "target/debug/kb"
 DEFERRED = Path(os.environ.get("KB_DEFERRED_ORIGIN", "/home/jakeshea/CFA_reading/deferred_books"))
+CFA_READING = Path(os.environ.get("KB_CFA_READING", "/home/jakeshea/CFA_reading"))
 
+# (skeleton base dir, origin subdirectory, reading_id, curated-registry prefix). The
+# 14/15/22 sets live under deferred_books/; the 10/11 template decks live directly under
+# CFA_reading/. The skeleton cards for every set sit at <base>/<origin>/_card_skeletons/<reading_id>/.
 SETS = (
-    ("14_Microstructure_and_Trading", "14_microstructure_and_trading", "mt_14"),
-    ("15_Performance_and_Attribution", "15_performance_and_attribution", "pa_15"),
-    ("22_Fund_Level_Arbitrage", "22_fund_level_arbitrage", "fa_22"),
+    (DEFERRED, "14_Microstructure_and_Trading", "14_microstructure_and_trading", "mt_14"),
+    (DEFERRED, "15_Performance_and_Attribution", "15_performance_and_attribution", "pa_15"),
+    (DEFERRED, "22_Fund_Level_Arbitrage", "22_fund_level_arbitrage", "fa_22"),
+    (CFA_READING, "10_Behavioral_Finance", "10_behavioral_finance", "bf_10"),
+    (CFA_READING, "11_Risk_Management", "11_risk_management", "rm_11"),
 )
 BIND_REPORT = REGISTRY / "migration_bind_report.json"
 QUOTE_AUDIT = REGISTRY / "migration_quote_audit.json"
@@ -141,8 +147,8 @@ def has_illegal_chars(text: str) -> bool:
 def load_skeletons() -> list[dict[str, Any]]:
     import yaml
     cards: list[dict[str, Any]] = []
-    for origin, rid, prefix in SETS:
-        skd = DEFERRED / origin / "_card_skeletons" / rid
+    for base, origin, rid, prefix in SETS:
+        skd = base / origin / "_card_skeletons" / rid
         for f in sorted(skd.glob("*.md")):
             fm = yaml.safe_load(f.read_text(encoding="utf-8").split("---", 2)[1])
             if not fm or fm.get("reading_id") != rid:
@@ -460,11 +466,11 @@ def resolve() -> dict[str, Any]:
         shutil.rmtree(work, ignore_errors=True)
 
     # Pass3: assemble registries / report / audit / counts.
-    registries: dict[str, list] = {p: [] for _, _, p in SETS}
+    registries: dict[str, list] = {p: [] for *_, p in SETS}
     report: list[dict[str, Any]] = []
     audit: list[dict[str, Any]] = []
     counts = {p: {"total": 0, "auto": 0, "trim": 0, "reanchor": 0, "page_corrections": 0, "unbound": 0}
-              for _, _, p in SETS}
+              for *_, p in SETS}
     by_card: dict[str, list] = {}
     for card, cit, rec in items:
         prefix = card["registry"]
@@ -536,7 +542,7 @@ def emit(result: dict[str, Any]) -> dict[str, Any]:
                 f"auto-bind below {MIN_AUTO_BIND_RATE:.0%} for set(s) {low} (rates {rates}); no policy "
                 "override (allow_documented_quote_repairs.min_auto_bind_rate_override). Fail-closed.")
     for _set in SETS:
-        rid, prefix = _set[1], _set[2]
+        rid, prefix = _set[2], _set[3]
         write_json(REGISTRY / f"{prefix}_curated_citations.json", {
             "schema_version": "cfa.migration_curated_citations.v1",
             "generated_by": "resolve_migration_citations.py",

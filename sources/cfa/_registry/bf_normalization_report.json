@@ -1,0 +1,642 @@
+{
+  "cards_needing_rewrite": 64,
+  "cards_rewritten": 64,
+  "deck": "/home/jakeshea/CFA_reading/10_Behavioral_Finance/_card_skeletons/10_behavioral_finance",
+  "per_card": [
+    {
+      "card": "be-ambiguity-aversion-asset-pricing.md",
+      "card_edge_edge_types": {
+        "depends_on": 1,
+        "extends": 1
+      },
+      "card_edges_stripped": 1,
+      "changed": true,
+      "edge_types_remapped": 0,
+      "placeholders_injected": 4
+    },
+    {
+      "card": "be-ambiguity-sources-ellsberg.md",
+      "card_edge_edge_types": {
+        "depends_on": 1
+      },
+      "card_edges_stripped": 1,
+      "changed": true,
+      "edge_types_remapped": 0,
+      "placeholders_injected": 3
+    },
+    {
+      "card": "be-asset-pricing-anomalies-catalog.md",
+      "card_edge_edge_types": {},
+      "card_edges_stripped": 0,
+      "changed": true,
+      "edge_types_remapped": 0,
+      "placeholders_injected": 4
+    },
+    {
+      "card": "be-belief-driven-credit-cycle.md",
+      "card_edge_edge_types": {
+        "depends_on": 1
+      },
+      "card_edges_stripped": 1,
+      "changed": true,
+      "edge_types_remapped": 0,
+      "placeholders_injected": 3
+    },
+    {
+      "card": "be-belief-perseverance-biases.md",
+      "card_edge_edge_types": {
+        "depends_on": 1
+      },
+      "card_edges_stripped": 1,
+      "changed": true,
+      "edge_types_remapped": 0,
+      "placeholders_injected": 4
+    },
+    {
+      "card": "be-bias-aware-asset-allocation-workflow.md",
+      "card_edge_edge_types": {
+        "depends_on": 1
+      },
+      "card_edges_stripped": 1,
+      "changed": true,
+      "edge_types_remapped": 0,
+      "placeholders_injected": 3
+    },
+    {
+      "card": "be-bifurcation-route-instability.md",
+      "card_edge_edge_types": {
+        "depends_on": 1
+      },
+      "card_edges_stripped": 1,
+      "changed": true,
+      "edge_types_remapped": 0,
+      "placeholders_injected": 3
+    },
+    {
+      "card": "be-bjw-anomaly-pricing-model.md",
+      "card_edge_edge_types": {
+        "depends_on": 1
+      },
+      "card_edges_stripped": 1,
+      "changed": true,
+      "edge_types_remapped": 0,
+      "placeholders_injected": 4
+    },
+    {
+      "card": "be-bjw-bounded-rationality-equilibrium.md",
+      "card_edge_edge_types": {},
+      "card_edges_stripped": 0,
+      "changed": true,
+      "edge_types_remapped": 0,
+      "placeholders_injected": 3
+    },
+    {
+      "card": "be-brock-hommes-switching.md",
+      "card_edge_edge_types": {
+        "depends_on": 1
+      },
+      "card_edges_stripped": 1,
+      "changed": true,
+      "edge_types_remapped": 0,
+      "placeholders_injected": 3
+    },
+    {
+      "card": "be-closed-end-fund-puzzle.md",
+      "card_edge_edge_types": {
+        "depends_on": 2
+      },
+      "card_edges_stripped": 1,
+      "changed": true,
+      "edge_types_remapped": 0,
+      "placeholders_injected": 4
+    },
+    {
+      "card": "be-cognitive-vs-emotional-bias-taxonomy.md",
+      "card_edge_edge_types": {},
+      "card_edges_stripped": 0,
+      "changed": true,
+      "edge_types_remapped": 0,
+      "placeholders_injected": 3
+    },
+    {
+      "card": "be-commitment-and-naivete.md",
+      "card_edge_edge_types": {
+        "depends_on": 1,
+        "extends": 1
+      },
+      "card_edges_stripped": 1,
+      "changed": true,
+      "edge_types_remapped": 0,
+      "placeholders_injected": 4
+    },
+    {
+      "card": "be-comonotonicity-choquet-integration.md",
+      "card_edge_edge_types": {},
+      "card_edges_stripped": 0,
+      "changed": true,
+      "edge_types_remapped": 1,
+      "placeholders_injected": 3
+    },
+    {
+      "card": "be-confirmation-prior-biased-inference.md",
+      "card_edge_edge_types": {},
+      "card_edges_stripped": 0,
+      "changed": true,
+      "edge_types_remapped": 0,
+      "placeholders_injected": 4
+    },
+    {
+      "card": "be-cumulative-prospect-theory-risk.md",
+      "card_edge_edge_types": {
+        "depends_on": 3
+      },
+      "card_edges_stripped": 1,
+      "changed": true,
+      "edge_types_remapped": 0,
+      "placeholders_injected": 3
+    },
+    {
+      "card": "be-destabilizing-arbitrage-positive-feedback.md",
+      "card_edge_edge_types": {
+        "depends_on": 1
+      },
+      "card_edges_stripped": 1,
+      "changed": true,
+      "edge_types_remapped": 0,
+      "placeholders_injected": 4
+    },
+    {
+      "card": "be-diagnostic-expectations.md",
+      "card_edge_edge_types": {
+        "depends_on": 2
+      },
+      "card_edges_stripped": 1,
+      "changed": true,
+      "edge_types_remapped": 0,
+      "placeholders_injected": 3
+    },
+    {
+      "card": "be-emergent-heterogeneity-volatility-feedback.md",
+      "card_edge_edge_types": {},
+      "card_edges_stripped": 0,
+      "changed": true,
+      "edge_types_remapped": 0,
+      "placeholders_injected": 4
+    },
+    {
+      "card": "be-evolutionary-capm-time-varying-beta.md",
+      "card_edge_edge_types": {
+        "depends_on": 1
+      },
+      "card_edges_stripped": 1,
+      "changed": true,
+      "edge_types_remapped": 0,
+      "placeholders_injected": 4
+    },
+    {
+      "card": "be-expectations-based-reference-points.md",
+      "card_edge_edge_types": {
+        "depends_on": 1
+      },
+      "card_edges_stripped": 1,
+      "changed": true,
+      "edge_types_remapped": 0,
+      "placeholders_injected": 4
+    },
+    {
+      "card": "be-experimental-asset-bubbles.md",
+      "card_edge_edge_types": {
+        "depends_on": 1
+      },
+      "card_edges_stripped": 1,
+      "changed": true,
+      "edge_types_remapped": 0,
+      "placeholders_injected": 4
+    },
+    {
+      "card": "be-extrapolation-from-recent-data.md",
+      "card_edge_edge_types": {
+        "extends": 1
+      },
+      "card_edges_stripped": 1,
+      "changed": true,
+      "edge_types_remapped": 0,
+      "placeholders_injected": 3
+    },
+    {
+      "card": "be-extrapolative-beliefs-asset-prices.md",
+      "card_edge_edge_types": {
+        "depends_on": 1,
+        "extends": 1
+      },
+      "card_edges_stripped": 1,
+      "changed": true,
+      "edge_types_remapped": 0,
+      "placeholders_injected": 4
+    },
+    {
+      "card": "be-financial-crisis-narrative.md",
+      "card_edge_edge_types": {
+        "depends_on": 1
+      },
+      "card_edges_stripped": 1,
+      "changed": true,
+      "edge_types_remapped": 0,
+      "placeholders_injected": 3
+    },
+    {
+      "card": "be-fund-flow-pressure.md",
+      "card_edge_edge_types": {
+        "depends_on": 1
+      },
+      "card_edges_stripped": 1,
+      "changed": true,
+      "edge_types_remapped": 0,
+      "placeholders_injected": 4
+    },
+    {
+      "card": "be-fundamentalist-chartist-ham.md",
+      "card_edge_edge_types": {
+        "depends_on": 3
+      },
+      "card_edges_stripped": 1,
+      "changed": true,
+      "edge_types_remapped": 0,
+      "placeholders_injected": 3
+    },
+    {
+      "card": "be-gamblers-fallacy-law-of-small-numbers.md",
+      "card_edge_edge_types": {},
+      "card_edges_stripped": 0,
+      "changed": true,
+      "edge_types_remapped": 0,
+      "placeholders_injected": 4
+    },
+    {
+      "card": "be-household-liquidity-illiquidity-puzzle.md",
+      "card_edge_edge_types": {
+        "depends_on": 1,
+        "extends": 1
+      },
+      "card_edges_stripped": 1,
+      "changed": true,
+      "edge_types_remapped": 0,
+      "placeholders_injected": 3
+    },
+    {
+      "card": "be-information-processing-biases.md",
+      "card_edge_edge_types": {
+        "depends_on": 1
+      },
+      "card_edges_stripped": 1,
+      "changed": true,
+      "edge_types_remapped": 0,
+      "placeholders_injected": 5
+    },
+    {
+      "card": "be-investor-clientele-segmentation.md",
+      "card_edge_edge_types": {
+        "depends_on": 1
+      },
+      "card_edges_stripped": 1,
+      "changed": true,
+      "edge_types_remapped": 0,
+      "placeholders_injected": 4
+    },
+    {
+      "card": "be-investor-overreaction.md",
+      "card_edge_edge_types": {
+        "depends_on": 2
+      },
+      "card_edges_stripped": 1,
+      "changed": true,
+      "edge_types_remapped": 0,
+      "placeholders_injected": 3
+    },
+    {
+      "card": "be-kernel-of-truth.md",
+      "card_edge_edge_types": {
+        "depends_on": 1
+      },
+      "card_edges_stripped": 1,
+      "changed": true,
+      "edge_types_remapped": 0,
+      "placeholders_injected": 3
+    },
+    {
+      "card": "be-keynesian-beauty-contest-level-k.md",
+      "card_edge_edge_types": {},
+      "card_edges_stripped": 0,
+      "changed": true,
+      "edge_types_remapped": 0,
+      "placeholders_injected": 4
+    },
+    {
+      "card": "be-loss-aversion-reference-dependence.md",
+      "card_edge_edge_types": {},
+      "card_edges_stripped": 0,
+      "changed": true,
+      "edge_types_remapped": 0,
+      "placeholders_injected": 3
+    },
+    {
+      "card": "be-moderate-vs-adapt-bias-allocation.md",
+      "card_edge_edge_types": {
+        "depends_on": 1
+      },
+      "card_edges_stripped": 1,
+      "changed": true,
+      "edge_types_remapped": 0,
+      "placeholders_injected": 3
+    },
+    {
+      "card": "be-momentum-anomaly.md",
+      "card_edge_edge_types": {
+        "depends_on": 2
+      },
+      "card_edges_stripped": 1,
+      "changed": true,
+      "edge_types_remapped": 0,
+      "placeholders_injected": 4
+    },
+    {
+      "card": "be-multiple-priors-maxmin-eu.md",
+      "card_edge_edge_types": {
+        "depends_on": 1
+      },
+      "card_edges_stripped": 1,
+      "changed": true,
+      "edge_types_remapped": 0,
+      "placeholders_injected": 3
+    },
+    {
+      "card": "be-myopic-loss-aversion-equity-premium.md",
+      "card_edge_edge_types": {
+        "depends_on": 1
+      },
+      "card_edges_stripped": 1,
+      "changed": true,
+      "edge_types_remapped": 0,
+      "placeholders_injected": 5
+    },
+    {
+      "card": "be-neglected-tail-risk.md",
+      "card_edge_edge_types": {
+        "depends_on": 1
+      },
+      "card_edges_stripped": 1,
+      "changed": true,
+      "edge_types_remapped": 0,
+      "placeholders_injected": 3
+    },
+    {
+      "card": "be-overconfidence-bias.md",
+      "card_edge_edge_types": {
+        "depends_on": 1
+      },
+      "card_edges_stripped": 1,
+      "changed": true,
+      "edge_types_remapped": 0,
+      "placeholders_injected": 4
+    },
+    {
+      "card": "be-overconfidence-disagreement-short-sale.md",
+      "card_edge_edge_types": {
+        "depends_on": 1,
+        "extends": 1
+      },
+      "card_edges_stripped": 1,
+      "changed": true,
+      "edge_types_remapped": 0,
+      "placeholders_injected": 4
+    },
+    {
+      "card": "be-overconfidence-self-attribution-prices.md",
+      "card_edge_edge_types": {},
+      "card_edges_stripped": 0,
+      "changed": true,
+      "edge_types_remapped": 0,
+      "placeholders_injected": 4
+    },
+    {
+      "card": "be-present-focused-preferences-taxonomy.md",
+      "card_edge_edge_types": {},
+      "card_edges_stripped": 0,
+      "changed": true,
+      "edge_types_remapped": 0,
+      "placeholders_injected": 3
+    },
+    {
+      "card": "be-probability-weighting-inverse-s.md",
+      "card_edge_edge_types": {
+        "depends_on": 1
+      },
+      "card_edges_stripped": 1,
+      "changed": true,
+      "edge_types_remapped": 0,
+      "placeholders_injected": 3
+    },
+    {
+      "card": "be-prospect-theory-anomaly-verdict.md",
+      "card_edge_edge_types": {
+        "depends_on": 1
+      },
+      "card_edges_stripped": 1,
+      "changed": true,
+      "edge_types_remapped": 0,
+      "placeholders_injected": 4
+    },
+    {
+      "card": "be-prospect-theory-asset-pricing.md",
+      "card_edge_edge_types": {
+        "depends_on": 1,
+        "extends": 1
+      },
+      "card_edges_stripped": 1,
+      "changed": true,
+      "edge_types_remapped": 0,
+      "placeholders_injected": 4
+    },
+    {
+      "card": "be-prospect-theory-ingredient-decomposition.md",
+      "card_edge_edge_types": {
+        "depends_on": 1
+      },
+      "card_edges_stripped": 1,
+      "changed": true,
+      "edge_types_remapped": 0,
+      "placeholders_injected": 3
+    },
+    {
+      "card": "be-prospect-theory-three-characteristic-pricing.md",
+      "card_edge_edge_types": {
+        "depends_on": 2
+      },
+      "card_edges_stripped": 1,
+      "changed": true,
+      "edge_types_remapped": 0,
+      "placeholders_injected": 3
+    },
+    {
+      "card": "be-quasi-hyperbolic-discounting.md",
+      "card_edge_edge_types": {
+        "extends": 1
+      },
+      "card_edges_stripped": 1,
+      "changed": true,
+      "edge_types_remapped": 0,
+      "placeholders_injected": 3
+    },
+    {
+      "card": "be-rank-dependent-utility-via-ranks.md",
+      "card_edge_edge_types": {
+        "depends_on": 1
+      },
+      "card_edges_stripped": 1,
+      "changed": true,
+      "edge_types_remapped": 0,
+      "placeholders_injected": 3
+    },
+    {
+      "card": "be-rational-inattention-entropy.md",
+      "card_edge_edge_types": {
+        "extends": 1
+      },
+      "card_edges_stripped": 1,
+      "changed": true,
+      "edge_types_remapped": 1,
+      "placeholders_injected": 4
+    },
+    {
+      "card": "be-rational-vs-diagnostic-expectations.md",
+      "card_edge_edge_types": {
+        "depends_on": 1
+      },
+      "card_edges_stripped": 1,
+      "changed": true,
+      "edge_types_remapped": 1,
+      "placeholders_injected": 3
+    },
+    {
+      "card": "be-rationally-heterogeneous-expectations.md",
+      "card_edge_edge_types": {
+        "depends_on": 1
+      },
+      "card_edges_stripped": 1,
+      "changed": true,
+      "edge_types_remapped": 0,
+      "placeholders_injected": 4
+    },
+    {
+      "card": "be-reference-dependent-preferences-foundations.md",
+      "card_edge_edge_types": {
+        "depends_on": 1
+      },
+      "card_edges_stripped": 1,
+      "changed": true,
+      "edge_types_remapped": 0,
+      "placeholders_injected": 4
+    },
+    {
+      "card": "be-regret-aversion-status-quo-endowment.md",
+      "card_edge_edge_types": {
+        "depends_on": 1
+      },
+      "card_edges_stripped": 1,
+      "changed": true,
+      "edge_types_remapped": 0,
+      "placeholders_injected": 4
+    },
+    {
+      "card": "be-representativeness-conjunction-base-rate.md",
+      "card_edge_edge_types": {},
+      "card_edges_stripped": 0,
+      "changed": true,
+      "edge_types_remapped": 0,
+      "placeholders_injected": 3
+    },
+    {
+      "card": "be-representativeness-strength-vs-weight.md",
+      "card_edge_edge_types": {},
+      "card_edges_stripped": 0,
+      "changed": true,
+      "edge_types_remapped": 0,
+      "placeholders_injected": 3
+    },
+    {
+      "card": "be-self-control-mental-accounting.md",
+      "card_edge_edge_types": {
+        "depends_on": 1
+      },
+      "card_edges_stripped": 1,
+      "changed": true,
+      "edge_types_remapped": 0,
+      "placeholders_injected": 4
+    },
+    {
+      "card": "be-sparsity-attention-framework.md",
+      "card_edge_edge_types": {},
+      "card_edges_stripped": 0,
+      "changed": true,
+      "edge_types_remapped": 0,
+      "placeholders_injected": 3
+    },
+    {
+      "card": "be-square-root-impact-zero-intelligence.md",
+      "card_edge_edge_types": {
+        "depends_on": 1
+      },
+      "card_edges_stripped": 1,
+      "changed": true,
+      "edge_types_remapped": 0,
+      "placeholders_injected": 4
+    },
+    {
+      "card": "be-stylized-facts-financial-markets.md",
+      "card_edge_edge_types": {},
+      "card_edges_stripped": 0,
+      "changed": true,
+      "edge_types_remapped": 0,
+      "placeholders_injected": 4
+    },
+    {
+      "card": "be-three-frameworks-behavioral-asset-pricing.md",
+      "card_edge_edge_types": {
+        "depends_on": 3,
+        "extends": 3
+      },
+      "card_edges_stripped": 1,
+      "changed": true,
+      "edge_types_remapped": 0,
+      "placeholders_injected": 3
+    },
+    {
+      "card": "be-value-anomaly.md",
+      "card_edge_edge_types": {
+        "depends_on": 2
+      },
+      "card_edges_stripped": 1,
+      "changed": true,
+      "edge_types_remapped": 0,
+      "placeholders_injected": 3
+    }
+  ],
+  "reading_id": "10_behavioral_finance",
+  "schema_version": "cfa.template_deck_normalization.v1",
+  "totals": {
+    "card_edge_edge_types_stripped": {
+      "depends_on": 58,
+      "extends": 12
+    },
+    "cards": 64,
+    "cards_with_card_edges_stripped": 49,
+    "citation_edge_types_remapped": 3,
+    "citations_placeholders_injected": 226,
+    "non_standard_edge_types_eliminated": {
+      "total": 73,
+      "via_card_edges_stripped": 70,
+      "via_citation_remap": 3
+    }
+  },
+  "wrote_files": true
+}

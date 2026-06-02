@@ -30,7 +30,7 @@ import sys
 import tempfile
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import Any
+from typing import Any, NamedTuple
 
 import yaml
 
@@ -40,6 +40,7 @@ REGISTRY = ROOT / "sources/cfa/_registry"
 CARDS_MANIFEST = ROOT / "out/cfa/cards_manifest.json"
 CARDS_DIR = ROOT / "cards/cfa"
 ORIGIN = Path(os.environ.get("KB_DEFERRED_ORIGIN", "/home/jakeshea/CFA_reading/deferred_books"))
+CFA_READING = Path(os.environ.get("KB_CFA_READING", "/home/jakeshea/CFA_reading"))
 REPORT_PATH = REGISTRY / "incoming_skeleton_preflight.json"
 FROZEN_TIMESTAMP = "1970-01-01T00:00:00Z"
 
@@ -51,11 +52,47 @@ REQUIRED_CITATION_FIELDS = ("source_id", "chunk_id", "chunk_hash", "page_range",
 
 # Each incoming set: (origin subdirectory, target reading_id, card-id prefix,
 # expected card count). The reading_id doubles as the skeleton subfolder name.
+# 14/15/22 live under deferred_books/<subdir>/ with ``_sources.json`` at the set
+# root and skeletons under ``_card_skeletons/<reading_id>/``.
 INCOMING_SETS = (
     ("14_Microstructure_and_Trading", "14_microstructure_and_trading", "mt-", 73),
     ("15_Performance_and_Attribution", "15_performance_and_attribution", "pa-", 35),
     ("22_Fund_Level_Arbitrage", "22_fund_level_arbitrage", "fa-", 26),
 )
+# The two template decks (10 Behavioral Finance / 11 Risk Management) live directly
+# under CFA_reading/<subdir>/ and differ from the deferred_books layout: their
+# ``_sources.json`` sits INSIDE ``_card_skeletons/`` (next to the ``<reading_id>/``
+# subfolder), per register_template_decks.py.
+TEMPLATE_DECK_SETS = (
+    ("10_Behavioral_Finance", "10_behavioral_finance", "be-", 64),
+    ("11_Risk_Management", "11_risk_management", "rm-", 28),
+)
+
+
+class SetSpec(NamedTuple):
+    """One incoming set with its paths already resolved, so the evaluator is
+    layout-agnostic (the deferred_books and template-deck layouts differ only in
+    where ``_sources.json`` lives relative to the skeleton subfolder)."""
+    reading_id: str
+    prefix: str
+    expected_count: int
+    sources_json: Path
+    skeleton_dir: Path
+
+
+def set_specs() -> list[SetSpec]:
+    specs: list[SetSpec] = []
+    for origin_subdir, reading_id, prefix, count in INCOMING_SETS:
+        set_dir = ORIGIN / origin_subdir
+        specs.append(SetSpec(reading_id, prefix, count,
+                             set_dir / "_sources.json",
+                             set_dir / "_card_skeletons" / reading_id))
+    for origin_subdir, reading_id, prefix, count in TEMPLATE_DECK_SETS:
+        skel_root = CFA_READING / origin_subdir / "_card_skeletons"
+        specs.append(SetSpec(reading_id, prefix, count,
+                             skel_root / "_sources.json",
+                             skel_root / reading_id))
+    return specs
 
 
 def generated_at_utc() -> str:
@@ -276,16 +313,12 @@ def check_card(
     return problems, single_page_count
 
 
-def evaluate_set(
-    origin_subdir: str,
-    reading_id: str,
-    prefix: str,
-    expected_count: int,
-    existing_ids: set[str],
-) -> dict[str, Any]:
-    set_dir = ORIGIN / origin_subdir
-    sources_json = set_dir / "_sources.json"
-    skeleton_dir = set_dir / "_card_skeletons" / reading_id
+def evaluate_set(spec: SetSpec, existing_ids: set[str]) -> dict[str, Any]:
+    reading_id = spec.reading_id
+    prefix = spec.prefix
+    expected_count = spec.expected_count
+    sources_json = spec.sources_json
+    skeleton_dir = spec.skeleton_dir
 
     result: dict[str, Any] = {
         "reading_id": reading_id,
@@ -346,21 +379,27 @@ def evaluate_set(
     return result
 
 
-def run_checks() -> dict[str, Any]:
+def run_checks(readings: set[str] | None = None) -> dict[str, Any]:
     existing_ids, existing_problems = existing_card_ids()
     sets: list[dict[str, Any]] = []
     all_incoming_ids: dict[str, str] = {}
     cross_set_problems: list[str] = list(existing_problems)
 
-    for origin_subdir, reading_id, prefix, expected_count in INCOMING_SETS:
-        set_result = evaluate_set(origin_subdir, reading_id, prefix, expected_count, existing_ids)
+    specs = set_specs()
+    if readings is not None:
+        unknown = sorted(readings - {s.reading_id for s in specs})
+        if unknown:
+            raise SystemExit(f"--readings names unknown set(s): {unknown}")
+        specs = [s for s in specs if s.reading_id in readings]
+    for spec in specs:
+        set_result = evaluate_set(spec, existing_ids)
         for cid in set_result["card_ids"]:
             if cid in all_incoming_ids:
                 cross_set_problems.append(
-                    f"incoming_id_collision:{cid}:{all_incoming_ids[cid]}:{reading_id}"
+                    f"incoming_id_collision:{cid}:{all_incoming_ids[cid]}:{spec.reading_id}"
                 )
             else:
-                all_incoming_ids[cid] = reading_id
+                all_incoming_ids[cid] = spec.reading_id
         sets.append(set_result)
 
     total_observed = sum(s["observed_count"] for s in sets)
@@ -530,12 +569,18 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--self-test", action="store_true", help="run hermetic self-test and exit")
     parser.add_argument("--report", action="store_true", help="write the JSON report artifact")
+    parser.add_argument("--readings", type=str, default=None,
+                        help="comma-separated reading_id(s) to check (default: every incoming set). "
+                             "A migration scopes to its currently-incoming decks, e.g. "
+                             "--readings 10_behavioral_finance,11_risk_management (the already-migrated "
+                             "14/15/22 sets collide with their now-live cards by design)")
     args = parser.parse_args()
 
     if args.self_test:
         return self_test()
 
-    report = run_checks()
+    readings = {r.strip() for r in args.readings.split(",") if r.strip()} if args.readings else None
+    report = run_checks(readings)
     if args.report:
         write_json(REPORT_PATH, report)
 

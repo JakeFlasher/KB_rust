@@ -1,0 +1,5193 @@
+{
+  "cards_needing_rewrite": 52,
+  "citations_total": 226,
+  "deck": "/home/jakeshea/CFA_reading/10_Behavioral_Finance/_card_skeletons/10_behavioral_finance",
+  "offset_outliers_for_faithfulness_review": [
+    {
+      "card_id": "be-neglected-tail-risk",
+      "derived_page_range": [
+        232,
+        232
+      ],
+      "implied_offset": 76,
+      "quote_head": "Agents neglect downside risk in the sense of definition 3.1 if and only if cash flow volat",
+      "source_id": "bf_gennaioli_shleifer_2018_crisis_beliefs",
+      "source_median_offset": 13,
+      "status": "auto"
+    }
+  ],
+  "rows": [
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          159,
+          159
+        ]
+      ],
+      "card_id": "be-ambiguity-aversion-asset-pricing",
+      "derived_page_range": [
+        159,
+        159
+      ],
+      "implied_offset": 0,
+      "offset_expected_page": 159,
+      "quote_head": "An important idea is that people are averse to situations of ambiguity in a way that they ",
+      "recall": null,
+      "skeleton_page_range_read": [
+        159,
+        159
+      ],
+      "source_id": "bf_hbe_vol1_2018",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 0,
+      "candidate_windows": [],
+      "card_id": "be-ambiguity-aversion-asset-pricing",
+      "derived_page_range": [
+        160,
+        160
+      ],
+      "implied_offset": 0,
+      "offset_expected_page": 160,
+      "quote_head": "she brings to mind many candidate probability distributions ... She then chooses the actio",
+      "recall": 1.0,
+      "skeleton_page_range_read": [
+        160,
+        160
+      ],
+      "source_id": "bf_hbe_vol1_2018",
+      "status": "recall_located"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          160,
+          160
+        ]
+      ],
+      "card_id": "be-ambiguity-aversion-asset-pricing",
+      "derived_page_range": [
+        160,
+        160
+      ],
+      "implied_offset": 0,
+      "offset_expected_page": 160,
+      "quote_head": "if an individual is sufficiently ambiguity averse, she may not invest in the stock market ",
+      "recall": null,
+      "skeleton_page_range_read": [
+        160,
+        160
+      ],
+      "source_id": "bf_hbe_vol1_2018",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          161,
+          161
+        ]
+      ],
+      "card_id": "be-ambiguity-aversion-asset-pricing",
+      "derived_page_range": [
+        161,
+        161
+      ],
+      "implied_offset": 0,
+      "offset_expected_page": 161,
+      "quote_head": "Ambiguity aversion may also amplify financial crises",
+      "recall": null,
+      "skeleton_page_range_read": [
+        161,
+        161
+      ],
+      "source_id": "bf_hbe_vol1_2018",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          302,
+          302
+        ]
+      ],
+      "card_id": "be-ambiguity-sources-ellsberg",
+      "derived_page_range": [
+        302,
+        302
+      ],
+      "implied_offset": 16,
+      "offset_expected_page": 302,
+      "quote_head": "the theory is a genuine generalization that can, for instance, accommodate the Ellsberg pa",
+      "recall": null,
+      "skeleton_page_range_read": [
+        286,
+        286
+      ],
+      "source_id": "bf_wakker_2010_pt_risk_ambiguity",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 0,
+      "candidate_windows": [],
+      "card_id": "be-ambiguity-sources-ellsberg",
+      "derived_page_range": [
+        334,
+        334
+      ],
+      "implied_offset": 16,
+      "offset_expected_page": 334,
+      "quote_head": "Source preference holds for A over B if, for all A in A and B in B, Eq. (11.1.1) may hold ",
+      "recall": 1.0,
+      "skeleton_page_range_read": [
+        318,
+        318
+      ],
+      "source_id": "bf_wakker_2010_pt_risk_ambiguity",
+      "status": "recall_located"
+    },
+    {
+      "candidate_count": 0,
+      "candidate_windows": [],
+      "card_id": "be-ambiguity-sources-ellsberg",
+      "derived_page_range": [
+        336,
+        336
+      ],
+      "implied_offset": 16,
+      "offset_expected_page": 336,
+      "quote_head": "the probability weighting function corresponding to the source, called the source function",
+      "recall": 1.0,
+      "skeleton_page_range_read": [
+        320,
+        320
+      ],
+      "source_id": "bf_wakker_2010_pt_risk_ambiguity",
+      "status": "recall_located"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          91,
+          91
+        ]
+      ],
+      "card_id": "be-asset-pricing-anomalies-catalog",
+      "derived_page_range": [
+        91,
+        91
+      ],
+      "implied_offset": 0,
+      "offset_expected_page": 91,
+      "quote_head": "There are three central facts about the returns on the overall U.S. stock market: these re",
+      "recall": null,
+      "skeleton_page_range_read": [
+        91,
+        91
+      ],
+      "source_id": "bf_hbe_vol1_2018",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          92,
+          92
+        ]
+      ],
+      "card_id": "be-asset-pricing-anomalies-catalog",
+      "derived_page_range": [
+        92,
+        92
+      ],
+      "implied_offset": 0,
+      "offset_expected_page": 92,
+      "quote_head": "Time-series predictability and excess volatility are now seen as the same phenomenon.",
+      "recall": null,
+      "skeleton_page_range_read": [
+        92,
+        92
+      ],
+      "source_id": "bf_hbe_vol1_2018",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          94,
+          94
+        ]
+      ],
+      "card_id": "be-asset-pricing-anomalies-catalog",
+      "derived_page_range": [
+        94,
+        94
+      ],
+      "implied_offset": 0,
+      "offset_expected_page": 94,
+      "quote_head": "This is known as \"momentum.\" Notice the contrast with long-term reversal.",
+      "recall": null,
+      "skeleton_page_range_read": [
+        94,
+        94
+      ],
+      "source_id": "bf_hbe_vol1_2018",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          121,
+          121
+        ]
+      ],
+      "card_id": "be-asset-pricing-anomalies-catalog",
+      "derived_page_range": [
+        121,
+        121
+      ],
+      "implied_offset": 0,
+      "offset_expected_page": 121,
+      "quote_head": "the concept of overconfidence can help explain a number of puzzling facts in finance, most",
+      "recall": null,
+      "skeleton_page_range_read": [
+        121,
+        121
+      ],
+      "source_id": "bf_hbe_vol1_2018",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          193,
+          193
+        ]
+      ],
+      "card_id": "be-belief-driven-credit-cycle",
+      "derived_page_range": [
+        193,
+        193
+      ],
+      "implied_offset": 13,
+      "offset_expected_page": 193,
+      "quote_head": "Under diagnostic expectations, with θ > 0, the issuance of risky debt overreacts to news.",
+      "recall": null,
+      "skeleton_page_range_read": [
+        180,
+        180
+      ],
+      "source_id": "bf_gennaioli_shleifer_2018_crisis_beliefs",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 2,
+      "candidate_windows": [
+        [
+          194,
+          194
+        ],
+        [
+          236,
+          236
+        ]
+      ],
+      "card_id": "be-belief-driven-credit-cycle",
+      "derived_page_range": [
+        194,
+        194
+      ],
+      "implied_offset": 13,
+      "offset_expected_page": 194,
+      "quote_head": "It displays stronger reversals than fundamentals",
+      "recall": null,
+      "skeleton_page_range_read": [
+        181,
+        181
+      ],
+      "source_id": "bf_gennaioli_shleifer_2018_crisis_beliefs",
+      "status": "reviewed_override"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          197,
+          197
+        ]
+      ],
+      "card_id": "be-belief-driven-credit-cycle",
+      "derived_page_range": [
+        197,
+        197
+      ],
+      "implied_offset": 13,
+      "offset_expected_page": 197,
+      "quote_head": "in good times debt expands, the junk share is high, and the average return going forward i",
+      "recall": null,
+      "skeleton_page_range_read": [
+        184,
+        184
+      ],
+      "source_id": "bf_gennaioli_shleifer_2018_crisis_beliefs",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          139,
+          139
+        ]
+      ],
+      "card_id": "be-belief-perseverance-biases",
+      "derived_page_range": [
+        139,
+        139
+      ],
+      "implied_offset": 20,
+      "offset_expected_page": 139,
+      "quote_head": "Conservatism bias is a mental process in which people cling to their prior views or foreca",
+      "recall": null,
+      "skeleton_page_range_read": [
+        119,
+        119
+      ],
+      "source_id": "bf_pompian_2006_bfwm",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          207,
+          207
+        ]
+      ],
+      "card_id": "be-belief-perseverance-biases",
+      "derived_page_range": [
+        207,
+        207
+      ],
+      "implied_offset": 20,
+      "offset_expected_page": 207,
+      "quote_head": "Confirmation bias refers to a type of selective perception that emphasizes ideas that conf",
+      "recall": null,
+      "skeleton_page_range_read": [
+        187,
+        187
+      ],
+      "source_id": "bf_pompian_2006_bfwm",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          219,
+          219
+        ]
+      ],
+      "card_id": "be-belief-perseverance-biases",
+      "derived_page_range": [
+        219,
+        219
+      ],
+      "implied_offset": 20,
+      "offset_expected_page": 219,
+      "quote_head": "hindsight bias is the impulse that insists: \"I knew it all along!\"",
+      "recall": null,
+      "skeleton_page_range_read": [
+        199,
+        199
+      ],
+      "source_id": "bf_pompian_2006_bfwm",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          131,
+          131
+        ]
+      ],
+      "card_id": "be-belief-perseverance-biases",
+      "derived_page_range": [
+        131,
+        131
+      ],
+      "implied_offset": 20,
+      "offset_expected_page": 131,
+      "quote_head": "The illusion of control bias describes the tendency of human beings to believe that they c",
+      "recall": null,
+      "skeleton_page_range_read": [
+        111,
+        111
+      ],
+      "source_id": "bf_pompian_2006_bfwm",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          62,
+          62
+        ]
+      ],
+      "card_id": "be-bias-aware-asset-allocation-workflow",
+      "derived_page_range": [
+        62,
+        62
+      ],
+      "implied_offset": 20,
+      "offset_expected_page": 62,
+      "quote_head": "a client's best practical allocation may be a slightly underperforming long-term investmen",
+      "recall": null,
+      "skeleton_page_range_read": [
+        42,
+        42
+      ],
+      "source_id": "bf_pompian_2006_bfwm",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          61,
+          61
+        ]
+      ],
+      "card_id": "be-bias-aware-asset-allocation-workflow",
+      "derived_page_range": [
+        61,
+        61
+      ],
+      "implied_offset": 20,
+      "offset_expected_page": 61,
+      "quote_head": "risk tolerance questionnaires provide, at best, broad guidelines for asset allocation and ",
+      "recall": null,
+      "skeleton_page_range_read": [
+        41,
+        41
+      ],
+      "source_id": "bf_pompian_2006_bfwm",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          65,
+          65
+        ]
+      ],
+      "card_id": "be-bias-aware-asset-allocation-workflow",
+      "derived_page_range": [
+        65,
+        65
+      ],
+      "implied_offset": 20,
+      "offset_expected_page": 65,
+      "quote_head": "a behaviorally adjusted allocation should not stray more than 20 percent from the mean-var",
+      "recall": null,
+      "skeleton_page_range_read": [
+        45,
+        46
+      ],
+      "source_id": "bf_pompian_2006_bfwm",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 0,
+      "candidate_windows": [],
+      "card_id": "be-bifurcation-route-instability",
+      "derived_page_range": [
+        286,
+        286
+      ],
+      "implied_offset": 18,
+      "offset_expected_page": 286,
+      "quote_head": "When the cost of the fundamental strategy C_1 is higher than the cost of the trend followi",
+      "recall": 0.947,
+      "skeleton_page_range_read": [
+        268,
+        268
+      ],
+      "source_id": "bf_compecon_v4_2018_ham",
+      "status": "recall_located"
+    },
+    {
+      "candidate_count": 0,
+      "candidate_windows": [],
+      "card_id": "be-bifurcation-route-instability",
+      "derived_page_range": [
+        286,
+        286
+      ],
+      "implied_offset": 18,
+      "offset_expected_page": 286,
+      "quote_head": "The fundamental steady state is locally asymptotically stable for gamma in (0, gamma**), a",
+      "recall": 0.947,
+      "skeleton_page_range_read": [
+        268,
+        268
+      ],
+      "source_id": "bf_compecon_v4_2018_ham",
+      "status": "recall_located"
+    },
+    {
+      "candidate_count": 0,
+      "candidate_windows": [],
+      "card_id": "be-bifurcation-route-instability",
+      "derived_page_range": [
+        287,
+        287
+      ],
+      "implied_offset": 18,
+      "offset_expected_page": 287,
+      "quote_head": "as gamma increases and passes gamma**, the fundamental steady state becomes unstable and t",
+      "recall": 0.938,
+      "skeleton_page_range_read": [
+        269,
+        269
+      ],
+      "source_id": "bf_compecon_v4_2018_ham",
+      "status": "recall_located"
+    },
+    {
+      "candidate_count": 0,
+      "candidate_windows": [],
+      "card_id": "be-bjw-anomaly-pricing-model",
+      "derived_page_range": [
+        23,
+        23
+      ],
+      "implied_offset": 1,
+      "offset_expected_page": 23,
+      "quote_head": "we consider 23 anomalies... To construct the set of anomalies, we start with 10 anomalies ",
+      "recall": 1.0,
+      "skeleton_page_range_read": [
+        22,
+        22
+      ],
+      "source_id": "bf_barberis_jin_wang_2021_pt_anomalies",
+      "status": "recall_located"
+    },
+    {
+      "candidate_count": 0,
+      "candidate_windows": [],
+      "card_id": "be-bjw-anomaly-pricing-model",
+      "derived_page_range": [
+        16,
+        16
+      ],
+      "implied_offset": 1,
+      "offset_expected_page": 16,
+      "quote_head": "we set Si, zeta_i, and nu to match the empirical volatility and skewness of asset i's retu",
+      "recall": 0.941,
+      "skeleton_page_range_read": [
+        15,
+        15
+      ],
+      "source_id": "bf_barberis_jin_wang_2021_pt_anomalies",
+      "status": "recall_located"
+    },
+    {
+      "candidate_count": 0,
+      "candidate_windows": [],
+      "card_id": "be-bjw-anomaly-pricing-model",
+      "derived_page_range": [
+        15,
+        15
+      ],
+      "implied_offset": 1,
+      "offset_expected_page": 15,
+      "quote_head": "the generalized hyperbolic (GH) skewed t distribution, and we adopt it here",
+      "recall": 1.0,
+      "skeleton_page_range_read": [
+        14,
+        14
+      ],
+      "source_id": "bf_barberis_jin_wang_2021_pt_anomalies",
+      "status": "recall_located"
+    },
+    {
+      "candidate_count": 0,
+      "candidate_windows": [],
+      "card_id": "be-bjw-anomaly-pricing-model",
+      "derived_page_range": [
+        33,
+        33
+      ],
+      "implied_offset": 1,
+      "offset_expected_page": 33,
+      "quote_head": "Our preference parameter values are therefore (alpha, delta, lambda) = (0.7, 0.65, 1.5)",
+      "recall": null,
+      "skeleton_page_range_read": [
+        32,
+        32
+      ],
+      "source_id": "bf_barberis_jin_wang_2021_pt_anomalies",
+      "status": "reviewed_override"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          18,
+          18
+        ]
+      ],
+      "card_id": "be-bjw-bounded-rationality-equilibrium",
+      "derived_page_range": [
+        18,
+        18
+      ],
+      "implied_offset": 1,
+      "offset_expected_page": 18,
+      "quote_head": "An equilibrium in which investors have identical holdings for all assets therefore does no",
+      "recall": null,
+      "skeleton_page_range_read": [
+        17,
+        17
+      ],
+      "source_id": "bf_barberis_jin_wang_2021_pt_anomalies",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 0,
+      "candidate_windows": [],
+      "card_id": "be-bjw-bounded-rationality-equilibrium",
+      "derived_page_range": [
+        19,
+        19
+      ],
+      "implied_offset": 1,
+      "offset_expected_page": 19,
+      "quote_head": "when trying to determine the allocation Theta_i to asset i that maximizes the objective fu",
+      "recall": 0.952,
+      "skeleton_page_range_read": [
+        18,
+        18
+      ],
+      "source_id": "bf_barberis_jin_wang_2021_pt_anomalies",
+      "status": "recall_located"
+    },
+    {
+      "candidate_count": 0,
+      "candidate_windows": [],
+      "card_id": "be-bjw-bounded-rationality-equilibrium",
+      "derived_page_range": [
+        20,
+        20
+      ],
+      "implied_offset": 1,
+      "offset_expected_page": 20,
+      "quote_head": "the function in (16) has just two global maxima, Theta_i* and Theta_i**, both of which are",
+      "recall": 0.941,
+      "skeleton_page_range_read": [
+        19,
+        19
+      ],
+      "source_id": "bf_barberis_jin_wang_2021_pt_anomalies",
+      "status": "recall_located"
+    },
+    {
+      "candidate_count": 0,
+      "candidate_windows": [],
+      "card_id": "be-brock-hommes-switching",
+      "derived_page_range": [
+        284,
+        284
+      ],
+      "implied_offset": 18,
+      "offset_expected_page": 284,
+      "quote_head": "Following Brock and Hommes (1997, 1998), the market fraction of investors choosing strateg",
+      "recall": 0.882,
+      "skeleton_page_range_read": [
+        266,
+        266
+      ],
+      "source_id": "bf_compecon_v4_2018_ham",
+      "status": "recall_located"
+    },
+    {
+      "candidate_count": 0,
+      "candidate_windows": [],
+      "card_id": "be-brock-hommes-switching",
+      "derived_page_range": [
+        284,
+        284
+      ],
+      "implied_offset": 18,
+      "offset_expected_page": 284,
+      "quote_head": "where beta measures the intensity of the choice and C_h >= 0 the cost.",
+      "recall": null,
+      "skeleton_page_range_read": [
+        266,
+        266
+      ],
+      "source_id": "bf_compecon_v4_2018_ham",
+      "status": "reviewed_override"
+    },
+    {
+      "candidate_count": 0,
+      "candidate_windows": [],
+      "card_id": "be-brock-hommes-switching",
+      "derived_page_range": [
+        284,
+        284
+      ],
+      "implied_offset": 18,
+      "offset_expected_page": 284,
+      "quote_head": "Let pi_{h,t+1} be the realized profit between t and t + 1 of type-h investors, pi_{h,t+1} ",
+      "recall": 1.0,
+      "skeleton_page_range_read": [
+        266,
+        266
+      ],
+      "source_id": "bf_compecon_v4_2018_ham",
+      "status": "recall_located"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          63,
+          63
+        ]
+      ],
+      "card_id": "be-closed-end-fund-puzzle",
+      "derived_page_range": [
+        63,
+        63
+      ],
+      "implied_offset": 9,
+      "offset_expected_page": 63,
+      "quote_head": "There are four important pieces to the puzzle which together characterize the life cycle o",
+      "recall": null,
+      "skeleton_page_range_read": [
+        54,
+        55
+      ],
+      "source_id": "bf_shleifer_2000_inefficient_markets",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          68,
+          68
+        ]
+      ],
+      "card_id": "be-closed-end-fund-puzzle",
+      "derived_page_range": [
+        68,
+        68
+      ],
+      "implied_offset": 9,
+      "offset_expected_page": 68,
+      "quote_head": "Suppose further that noise traders' beliefs about the return on u relative to the return o",
+      "recall": null,
+      "skeleton_page_range_read": [
+        59,
+        59
+      ],
+      "source_id": "bf_shleifer_2000_inefficient_markets",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          73,
+          73
+        ]
+      ],
+      "card_id": "be-closed-end-fund-puzzle",
+      "derived_page_range": [
+        73,
+        73
+      ],
+      "implied_offset": 9,
+      "offset_expected_page": 73,
+      "quote_head": "levels of and changes in discounts should be highly correlated across funds. Since the sam",
+      "recall": null,
+      "skeleton_page_range_read": [
+        64,
+        64
+      ],
+      "source_id": "bf_shleifer_2000_inefficient_markets",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          68,
+          68
+        ]
+      ],
+      "card_id": "be-closed-end-fund-puzzle",
+      "derived_page_range": [
+        68,
+        68
+      ],
+      "implied_offset": 9,
+      "offset_expected_page": 68,
+      "quote_head": "any investor holding a closed end fund bears the risk that the discount widens in the futu",
+      "recall": null,
+      "skeleton_page_range_read": [
+        59,
+        59
+      ],
+      "source_id": "bf_shleifer_2000_inefficient_markets",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          64,
+          64
+        ]
+      ],
+      "card_id": "be-cognitive-vs-emotional-bias-taxonomy",
+      "derived_page_range": [
+        64,
+        64
+      ],
+      "implied_offset": 20,
+      "offset_expected_page": 64,
+      "quote_head": "Behavioral biases fall into two broad categories, cognitive and emotional, with both varie",
+      "recall": null,
+      "skeleton_page_range_read": [
+        44,
+        44
+      ],
+      "source_id": "bf_pompian_2006_bfwm",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          64,
+          64
+        ]
+      ],
+      "card_id": "be-cognitive-vs-emotional-bias-taxonomy",
+      "derived_page_range": [
+        64,
+        64
+      ],
+      "implied_offset": 20,
+      "offset_expected_page": 64,
+      "quote_head": "Because cognitive biases stem from faulty reasoning, better information and advice can oft",
+      "recall": null,
+      "skeleton_page_range_read": [
+        44,
+        44
+      ],
+      "source_id": "bf_pompian_2006_bfwm",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          69,
+          69
+        ]
+      ],
+      "card_id": "be-cognitive-vs-emotional-bias-taxonomy",
+      "derived_page_range": [
+        69,
+        69
+      ],
+      "implied_offset": 20,
+      "offset_expected_page": 69,
+      "quote_head": "still other scholars classify biases along cognitive or emotional lines. This sort of bias",
+      "recall": null,
+      "skeleton_page_range_read": [
+        49,
+        49
+      ],
+      "source_id": "bf_pompian_2006_bfwm",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          18,
+          18
+        ]
+      ],
+      "card_id": "be-commitment-and-naivete",
+      "derived_page_range": [
+        18,
+        18
+      ],
+      "implied_offset": 1,
+      "offset_expected_page": 17,
+      "quote_head": "Sophisticated beliefs imply that the agent has a correct theory of her own future time pre",
+      "recall": null,
+      "skeleton_page_range_read": [
+        17,
+        18
+      ],
+      "source_id": "bf_hbe_vol2_2019",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          42,
+          42
+        ]
+      ],
+      "card_id": "be-commitment-and-naivete",
+      "derived_page_range": [
+        42,
+        42
+      ],
+      "implied_offset": 0,
+      "offset_expected_page": 42,
+      "quote_head": "People partially but do not fully anticipate their extent of future present-focus.",
+      "recall": null,
+      "skeleton_page_range_read": [
+        42,
+        42
+      ],
+      "source_id": "bf_hbe_vol2_2019",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 0,
+      "candidate_windows": [],
+      "card_id": "be-commitment-and-naivete",
+      "derived_page_range": [
+        43,
+        43
+      ],
+      "implied_offset": 0,
+      "offset_expected_page": 43,
+      "quote_head": "firms design credit contracts with large penalties for deferring repayment and naive indiv",
+      "recall": 0.955,
+      "skeleton_page_range_read": [
+        43,
+        43
+      ],
+      "source_id": "bf_hbe_vol2_2019",
+      "status": "recall_located"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          47,
+          47
+        ]
+      ],
+      "card_id": "be-commitment-and-naivete",
+      "derived_page_range": [
+        47,
+        47
+      ],
+      "implied_offset": 0,
+      "offset_expected_page": 47,
+      "quote_head": "People sometimes demand commitment devices.",
+      "recall": null,
+      "skeleton_page_range_read": [
+        47,
+        47
+      ],
+      "source_id": "bf_hbe_vol2_2019",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          326,
+          326
+        ]
+      ],
+      "card_id": "be-comonotonicity-choquet-integration",
+      "derived_page_range": [
+        326,
+        326
+      ],
+      "implied_offset": 16,
+      "offset_expected_page": 326,
+      "quote_head": "A set of prospects is comonotonic if the same complete ranking of events (further discusse",
+      "recall": null,
+      "skeleton_page_range_read": [
+        310,
+        310
+      ],
+      "source_id": "bf_wakker_2010_pt_risk_ambiguity",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          325,
+          325
+        ]
+      ],
+      "card_id": "be-comonotonicity-choquet-integration",
+      "derived_page_range": [
+        325,
+        325
+      ],
+      "implied_offset": 16,
+      "offset_expected_page": 325,
+      "quote_head": "Similarly to the integral definition of RDU in Eq. (6.9.1) for risk, RDU for uncertainty c",
+      "recall": null,
+      "skeleton_page_range_read": [
+        309,
+        309
+      ],
+      "source_id": "bf_wakker_2010_pt_risk_ambiguity",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          330,
+          330
+        ]
+      ],
+      "card_id": "be-comonotonicity-choquet-integration",
+      "derived_page_range": [
+        330,
+        330
+      ],
+      "implied_offset": 16,
+      "offset_expected_page": 330,
+      "quote_head": "rank-tradeoff consistency can be weakened to comonotonic tradeoff consistency.",
+      "recall": null,
+      "skeleton_page_range_read": [
+        314,
+        314
+      ],
+      "source_id": "bf_wakker_2010_pt_risk_ambiguity",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          162,
+          162
+        ]
+      ],
+      "card_id": "be-confirmation-prior-biased-inference",
+      "derived_page_range": [
+        162,
+        162
+      ],
+      "implied_offset": 0,
+      "offset_expected_page": 162,
+      "quote_head": "drawing inferences in a manner that is biased in favor of current beliefs",
+      "recall": null,
+      "skeleton_page_range_read": [
+        162,
+        163
+      ],
+      "source_id": "bf_hbe_vol2_2019",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 0,
+      "candidate_windows": [],
+      "card_id": "be-confirmation-prior-biased-inference",
+      "derived_page_range": [
+        164,
+        164
+      ],
+      "implied_offset": 0,
+      "offset_expected_page": 164,
+      "quote_head": "The prior-biased-inference hypothesis is c_conf >= 0 >= c_disconf, with at least one inequ",
+      "recall": 0.833,
+      "skeleton_page_range_read": [
+        164,
+        164
+      ],
+      "source_id": "bf_hbe_vol2_2019",
+      "status": "recall_located"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          168,
+          168
+        ]
+      ],
+      "card_id": "be-confirmation-prior-biased-inference",
+      "derived_page_range": [
+        168,
+        168
+      ],
+      "implied_offset": 0,
+      "offset_expected_page": 168,
+      "quote_head": "The central assumption is that the agent sometimes misperceives disconfirming signals as c",
+      "recall": null,
+      "skeleton_page_range_read": [
+        168,
+        168
+      ],
+      "source_id": "bf_hbe_vol2_2019",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          169,
+          169
+        ]
+      ],
+      "card_id": "be-confirmation-prior-biased-inference",
+      "derived_page_range": [
+        169,
+        169
+      ],
+      "implied_offset": 0,
+      "offset_expected_page": 169,
+      "quote_head": "momentum arises and bubbles occur because once biased traders are optimistic, they underre",
+      "recall": null,
+      "skeleton_page_range_read": [
+        169,
+        169
+      ],
+      "source_id": "bf_hbe_vol2_2019",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          269,
+          269
+        ]
+      ],
+      "card_id": "be-cumulative-prospect-theory-risk",
+      "derived_page_range": [
+        269,
+        269
+      ],
+      "implied_offset": 16,
+      "offset_expected_page": 269,
+      "quote_head": "the decision weight of an outcome depends not only on its rank, but also on its sign. Henc",
+      "recall": null,
+      "skeleton_page_range_read": [
+        253,
+        253
+      ],
+      "source_id": "bf_wakker_2010_pt_risk_ambiguity",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          268,
+          268
+        ]
+      ],
+      "card_id": "be-cumulative-prospect-theory-risk",
+      "derived_page_range": [
+        268,
+        268
+      ],
+      "implied_offset": 16,
+      "offset_expected_page": 268,
+      "quote_head": "Prospect theory (PT), in its updated version as introduced by Tversky & Kahneman (1992), g",
+      "recall": null,
+      "skeleton_page_range_read": [
+        252,
+        252
+      ],
+      "source_id": "bf_wakker_2010_pt_risk_ambiguity",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 0,
+      "candidate_windows": [],
+      "card_id": "be-cumulative-prospect-theory-risk",
+      "derived_page_range": [
+        270,
+        271
+      ],
+      "implied_offset": 16,
+      "offset_expected_page": 270,
+      "quote_head": "PT(x) = PT(x+) + PT(x-).",
+      "recall": null,
+      "skeleton_page_range_read": [
+        254,
+        254
+      ],
+      "source_id": "bf_wakker_2010_pt_risk_ambiguity",
+      "status": "reviewed_override"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          165,
+          165
+        ]
+      ],
+      "card_id": "be-destabilizing-arbitrage-positive-feedback",
+      "derived_page_range": [
+        165,
+        165
+      ],
+      "implied_offset": 9,
+      "offset_expected_page": 165,
+      "quote_head": "in the presence of positive feedback traders, arbitrage can be destabilizing. When arbitra",
+      "recall": null,
+      "skeleton_page_range_read": [
+        156,
+        156
+      ],
+      "source_id": "bf_shleifer_2000_inefficient_markets",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          164,
+          164
+        ]
+      ],
+      "card_id": "be-destabilizing-arbitrage-positive-feedback",
+      "derived_page_range": [
+        164,
+        164
+      ],
+      "implied_offset": 9,
+      "offset_expected_page": 164,
+      "quote_head": "Positive feedback investors buy securities after prices rise and sell after prices fall.",
+      "recall": null,
+      "skeleton_page_range_read": [
+        155,
+        155
+      ],
+      "source_id": "bf_shleifer_2000_inefficient_markets",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 0,
+      "candidate_windows": [],
+      "card_id": "be-destabilizing-arbitrage-positive-feedback",
+      "derived_page_range": [
+        176,
+        176
+      ],
+      "implied_offset": 9,
+      "offset_expected_page": 176,
+      "quote_head": "the way arbitrageurs make money in this model is through short-term trading: they buy in p",
+      "recall": 1.0,
+      "skeleton_page_range_read": [
+        167,
+        167
+      ],
+      "source_id": "bf_shleifer_2000_inefficient_markets",
+      "status": "recall_located"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          172,
+          172
+        ]
+      ],
+      "card_id": "be-destabilizing-arbitrage-positive-feedback",
+      "derived_page_range": [
+        172,
+        172
+      ],
+      "implied_offset": 9,
+      "offset_expected_page": 172,
+      "quote_head": "the addition of arbitrageurs can push prices away from fundamentals.",
+      "recall": null,
+      "skeleton_page_range_read": [
+        163,
+        163
+      ],
+      "source_id": "bf_shleifer_2000_inefficient_markets",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          161,
+          161
+        ]
+      ],
+      "card_id": "be-diagnostic-expectations",
+      "derived_page_range": [
+        161,
+        161
+      ],
+      "implied_offset": 13,
+      "offset_expected_page": 161,
+      "quote_head": "probability judgments are formed using the representativeness-distorted density",
+      "recall": null,
+      "skeleton_page_range_read": [
+        148,
+        148
+      ],
+      "source_id": "bf_gennaioli_shleifer_2018_crisis_beliefs",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          168,
+          168
+        ]
+      ],
+      "card_id": "be-diagnostic-expectations",
+      "derived_page_range": [
+        168,
+        168
+      ],
+      "implied_offset": 13,
+      "offset_expected_page": 168,
+      "quote_head": "Cash flow realizations that have become more likely in light of news are overweighted, whi",
+      "recall": null,
+      "skeleton_page_range_read": [
+        155,
+        155
+      ],
+      "source_id": "bf_gennaioli_shleifer_2018_crisis_beliefs",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          169,
+          169
+        ]
+      ],
+      "card_id": "be-diagnostic-expectations",
+      "derived_page_range": [
+        169,
+        169
+      ],
+      "implied_offset": 13,
+      "offset_expected_page": 169,
+      "quote_head": "When θ = 0, diagnostic beliefs coincide with rational expectations",
+      "recall": null,
+      "skeleton_page_range_read": [
+        156,
+        156
+      ],
+      "source_id": "bf_gennaioli_shleifer_2018_crisis_beliefs",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          456,
+          456
+        ]
+      ],
+      "card_id": "be-emergent-heterogeneity-volatility-feedback",
+      "derived_page_range": [
+        456,
+        456
+      ],
+      "implied_offset": 18,
+      "offset_expected_page": 456,
+      "quote_head": "These are overall statistical regularities characterizing asset returns and volatility, an",
+      "recall": null,
+      "skeleton_page_range_read": [
+        438,
+        438
+      ],
+      "source_id": "bf_compecon_v4_2018_ham",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          470,
+          470
+        ]
+      ],
+      "card_id": "be-emergent-heterogeneity-volatility-feedback",
+      "derived_page_range": [
+        470,
+        470
+      ],
+      "implied_offset": 18,
+      "offset_expected_page": 470,
+      "quote_head": "In this model, switching is based on social interaction and herding rather than profitabil",
+      "recall": null,
+      "skeleton_page_range_read": [
+        452,
+        452
+      ],
+      "source_id": "bf_compecon_v4_2018_ham",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 0,
+      "candidate_windows": [],
+      "card_id": "be-emergent-heterogeneity-volatility-feedback",
+      "derived_page_range": [
+        286,
+        286
+      ],
+      "implied_offset": 18,
+      "offset_expected_page": 286,
+      "quote_head": "It is also in line with Franke and Westerhoff (2012, 2016) who estimate various HAMs and s",
+      "recall": 1.0,
+      "skeleton_page_range_read": [
+        268,
+        268
+      ],
+      "source_id": "bf_compecon_v4_2018_ham",
+      "status": "recall_located"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          286,
+          286
+        ]
+      ],
+      "card_id": "be-emergent-heterogeneity-volatility-feedback",
+      "derived_page_range": [
+        286,
+        286
+      ],
+      "implied_offset": 18,
+      "offset_expected_page": 286,
+      "quote_head": "the noise traders play an important role in generating insignificant ACs on the returns, w",
+      "recall": null,
+      "skeleton_page_range_read": [
+        268,
+        268
+      ],
+      "source_id": "bf_compecon_v4_2018_ham",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          307,
+          307
+        ]
+      ],
+      "card_id": "be-evolutionary-capm-time-varying-beta",
+      "derived_page_range": [
+        307,
+        307
+      ],
+      "implied_offset": 18,
+      "offset_expected_page": 307,
+      "quote_head": "through the construction of a consensus belief, Chiarella et al. (2013b) develop a dynamic",
+      "recall": null,
+      "skeleton_page_range_read": [
+        289,
+        289
+      ],
+      "source_id": "bf_compecon_v4_2018_ham",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          307,
+          307
+        ]
+      ],
+      "card_id": "be-evolutionary-capm-time-varying-beta",
+      "derived_page_range": [
+        307,
+        307
+      ],
+      "implied_offset": 18,
+      "offset_expected_page": 307,
+      "quote_head": "Results show that systematic changes in the market portfolio and risk-return relationships",
+      "recall": null,
+      "skeleton_page_range_read": [
+        289,
+        289
+      ],
+      "source_id": "bf_compecon_v4_2018_ham",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 0,
+      "candidate_windows": [],
+      "card_id": "be-evolutionary-capm-time-varying-beta",
+      "derived_page_range": [
+        312,
+        312
+      ],
+      "implied_offset": 18,
+      "offset_expected_page": 312,
+      "quote_head": "one obtains the CAPM-like return relation E_{a,t}(r_{t+1}) - r_f 1 = beta_{a,t}[E_{a,t}(r_",
+      "recall": 1.0,
+      "skeleton_page_range_read": [
+        294,
+        294
+      ],
+      "source_id": "bf_compecon_v4_2018_ham",
+      "status": "recall_located"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          312,
+          312
+        ]
+      ],
+      "card_id": "be-evolutionary-capm-time-varying-beta",
+      "derived_page_range": [
+        312,
+        312
+      ],
+      "implied_offset": 18,
+      "offset_expected_page": 312,
+      "quote_head": "The CAPM relation (26) is evolutionary, since asset and market returns, as well as the cor",
+      "recall": null,
+      "skeleton_page_range_read": [
+        294,
+        294
+      ],
+      "source_id": "bf_compecon_v4_2018_ham",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          40,
+          40
+        ]
+      ],
+      "card_id": "be-expectations-based-reference-points",
+      "derived_page_range": [
+        40,
+        40
+      ],
+      "implied_offset": 1,
+      "offset_expected_page": 39,
+      "quote_head": "gains and losses are defined relative to an expectations-based referent",
+      "recall": null,
+      "skeleton_page_range_read": [
+        39,
+        39
+      ],
+      "source_id": "bf_hbe_vol1_2018",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          40,
+          40
+        ]
+      ],
+      "card_id": "be-expectations-based-reference-points",
+      "derived_page_range": [
+        40,
+        40
+      ],
+      "implied_offset": 1,
+      "offset_expected_page": 39,
+      "quote_head": "if one uses an expectations-based referent combined with an assumption that expectations m",
+      "recall": null,
+      "skeleton_page_range_read": [
+        39,
+        39
+      ],
+      "source_id": "bf_hbe_vol1_2018",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 0,
+      "candidate_windows": [],
+      "card_id": "be-expectations-based-reference-points",
+      "derived_page_range": [
+        41,
+        41
+      ],
+      "implied_offset": 1,
+      "offset_expected_page": 40,
+      "quote_head": "KR propose an alternative approach in which x_n is compared to every outcome that might ha",
+      "recall": 1.0,
+      "skeleton_page_range_read": [
+        40,
+        40
+      ],
+      "source_id": "bf_hbe_vol1_2018",
+      "status": "recall_located"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          43,
+          43
+        ]
+      ],
+      "card_id": "be-expectations-based-reference-points",
+      "derived_page_range": [
+        43,
+        43
+      ],
+      "implied_offset": 1,
+      "offset_expected_page": 42,
+      "quote_head": "much of the literature has assumed that expectations must be \"rational\" in the sense that ",
+      "recall": null,
+      "skeleton_page_range_read": [
+        42,
+        42
+      ],
+      "source_id": "bf_hbe_vol1_2018",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          510,
+          510
+        ]
+      ],
+      "card_id": "be-experimental-asset-bubbles",
+      "derived_page_range": [
+        510,
+        510
+      ],
+      "implied_offset": 18,
+      "offset_expected_page": 510,
+      "quote_head": "Experimental tests, beginning with Smith et al. (1988), have consistently found that inexp",
+      "recall": null,
+      "skeleton_page_range_read": [
+        492,
+        492
+      ],
+      "source_id": "bf_compecon_v4_2018_ham",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 0,
+      "candidate_windows": [],
+      "card_id": "be-experimental-asset-bubbles",
+      "derived_page_range": [
+        510,
+        510
+      ],
+      "implied_offset": 18,
+      "offset_expected_page": 510,
+      "quote_head": "once a group of subjects has experienced a price 'bubble,' they are less prone to exhibit ",
+      "recall": 1.0,
+      "skeleton_page_range_read": [
+        492,
+        492
+      ],
+      "source_id": "bf_compecon_v4_2018_ham",
+      "status": "recall_located"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          510,
+          510
+        ]
+      ],
+      "card_id": "be-experimental-asset-bubbles",
+      "derived_page_range": [
+        510,
+        510
+      ],
+      "implied_offset": 18,
+      "offset_expected_page": 510,
+      "quote_head": "bubbles are less likely among more cognitively sophisticated subjects and more likely amon",
+      "recall": null,
+      "skeleton_page_range_read": [
+        492,
+        492
+      ],
+      "source_id": "bf_compecon_v4_2018_ham",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          524,
+          524
+        ]
+      ],
+      "card_id": "be-experimental-asset-bubbles",
+      "derived_page_range": [
+        524,
+        524
+      ],
+      "implied_offset": 18,
+      "offset_expected_page": 524,
+      "quote_head": "in 5 of their six experiments, prices periodically hit the upper bound of 1000 - more than",
+      "recall": null,
+      "skeleton_page_range_read": [
+        506,
+        506
+      ],
+      "source_id": "bf_compecon_v4_2018_ham",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          125,
+          125
+        ]
+      ],
+      "card_id": "be-extrapolation-from-recent-data",
+      "derived_page_range": [
+        125,
+        125
+      ],
+      "implied_offset": 13,
+      "offset_expected_page": 125,
+      "quote_head": "expectations of stock returns are predominantly extrapolative: Expectations of future retu",
+      "recall": null,
+      "skeleton_page_range_read": [
+        112,
+        112
+      ],
+      "source_id": "bf_gennaioli_shleifer_2018_crisis_beliefs",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          131,
+          131
+        ]
+      ],
+      "card_id": "be-extrapolation-from-recent-data",
+      "derived_page_range": [
+        131,
+        131
+      ],
+      "implied_offset": 13,
+      "offset_expected_page": 131,
+      "quote_head": "high past returns predict expectation errors: When past returns are high, expected future ",
+      "recall": null,
+      "skeleton_page_range_read": [
+        118,
+        118
+      ],
+      "source_id": "bf_gennaioli_shleifer_2018_crisis_beliefs",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          135,
+          135
+        ]
+      ],
+      "card_id": "be-extrapolation-from-recent-data",
+      "derived_page_range": [
+        135,
+        135
+      ],
+      "implied_offset": 13,
+      "offset_expected_page": 135,
+      "quote_head": "Analysts use information about past performance but overreact by predicting too many high ",
+      "recall": null,
+      "skeleton_page_range_read": [
+        122,
+        122
+      ],
+      "source_id": "bf_gennaioli_shleifer_2018_crisis_beliefs",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          102,
+          102
+        ]
+      ],
+      "card_id": "be-extrapolative-beliefs-asset-prices",
+      "derived_page_range": [
+        102,
+        102
+      ],
+      "implied_offset": 0,
+      "offset_expected_page": 102,
+      "quote_head": "Return extrapolation is the idea that people's expectation of the future return of an asse",
+      "recall": null,
+      "skeleton_page_range_read": [
+        102,
+        102
+      ],
+      "source_id": "bf_hbe_vol1_2018",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          103,
+          103
+        ]
+      ],
+      "card_id": "be-extrapolative-beliefs-asset-prices",
+      "derived_page_range": [
+        103,
+        103
+      ],
+      "implied_offset": 0,
+      "offset_expected_page": 103,
+      "quote_head": "a weighted average of past price changes that puts more weight on the more recent past",
+      "recall": null,
+      "skeleton_page_range_read": [
+        103,
+        103
+      ],
+      "source_id": "bf_hbe_vol1_2018",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          104,
+          104
+        ]
+      ],
+      "card_id": "be-extrapolative-beliefs-asset-prices",
+      "derived_page_range": [
+        104,
+        104
+      ],
+      "implied_offset": 0,
+      "offset_expected_page": 104,
+      "quote_head": "if past price changes have been strongly positive, extrapolators become more bullish about",
+      "recall": null,
+      "skeleton_page_range_read": [
+        104,
+        104
+      ],
+      "source_id": "bf_hbe_vol1_2018",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          102,
+          102
+        ]
+      ],
+      "card_id": "be-extrapolative-beliefs-asset-prices",
+      "derived_page_range": [
+        102,
+        102
+      ],
+      "implied_offset": 1,
+      "offset_expected_page": 101,
+      "quote_head": "the average belief of the surveyed investors about the future stock market return is a pos",
+      "recall": null,
+      "skeleton_page_range_read": [
+        101,
+        101
+      ],
+      "source_id": "bf_hbe_vol1_2018",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          66,
+          66
+        ]
+      ],
+      "card_id": "be-financial-crisis-narrative",
+      "derived_page_range": [
+        66,
+        66
+      ],
+      "implied_offset": 13,
+      "offset_expected_page": 66,
+      "quote_head": "they entail at worst minor losses on junior tranches of subprime MBS and none on the AAA-r",
+      "recall": null,
+      "skeleton_page_range_read": [
+        53,
+        53
+      ],
+      "source_id": "bf_gennaioli_shleifer_2018_crisis_beliefs",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          75,
+          75
+        ]
+      ],
+      "card_id": "be-financial-crisis-narrative",
+      "derived_page_range": [
+        75,
+        75
+      ],
+      "implied_offset": 13,
+      "offset_expected_page": 75,
+      "quote_head": "Lehman's bankruptcy brought this reality to mind and triggered a meltdown.",
+      "recall": null,
+      "skeleton_page_range_read": [
+        62,
+        62
+      ],
+      "source_id": "bf_gennaioli_shleifer_2018_crisis_beliefs",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          175,
+          175
+        ]
+      ],
+      "card_id": "be-financial-crisis-narrative",
+      "derived_page_range": [
+        175,
+        175
+      ],
+      "implied_offset": 13,
+      "offset_expected_page": 175,
+      "quote_head": "We see the bankruptcy of Lehman as news about risk σ0. This news only needed to be signifi",
+      "recall": null,
+      "skeleton_page_range_read": [
+        162,
+        162
+      ],
+      "source_id": "bf_gennaioli_shleifer_2018_crisis_beliefs",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          98,
+          98
+        ]
+      ],
+      "card_id": "be-fund-flow-pressure",
+      "derived_page_range": [
+        98,
+        98
+      ],
+      "implied_offset": 9,
+      "offset_expected_page": 98,
+      "quote_head": "We refer to the phenomenon of responsiveness of funds under management to past returns as ",
+      "recall": null,
+      "skeleton_page_range_read": [
+        89,
+        89
+      ],
+      "source_id": "bf_shleifer_2000_inefficient_markets",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          99,
+          99
+        ]
+      ],
+      "card_id": "be-fund-flow-pressure",
+      "derived_page_range": [
+        99,
+        99
+      ],
+      "implied_offset": 9,
+      "offset_expected_page": 99,
+      "quote_head": "when arbitrage requires debt or equity capital, arbitrageurs can become most constrained p",
+      "recall": null,
+      "skeleton_page_range_read": [
+        90,
+        90
+      ],
+      "source_id": "bf_shleifer_2000_inefficient_markets",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          102,
+          102
+        ]
+      ],
+      "card_id": "be-fund-flow-pressure",
+      "derived_page_range": [
+        102,
+        102
+      ],
+      "implied_offset": 9,
+      "offset_expected_page": 102,
+      "quote_head": "investors' aggregate supply of funds to the arbitrageurs in a particular segment at time 2",
+      "recall": null,
+      "skeleton_page_range_read": [
+        93,
+        93
+      ],
+      "source_id": "bf_shleifer_2000_inefficient_markets",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          109,
+          109
+        ]
+      ],
+      "card_id": "be-fund-flow-pressure",
+      "derived_page_range": [
+        109,
+        109
+      ],
+      "implied_offset": 9,
+      "offset_expected_page": 109,
+      "quote_head": "a market driven by PBA loses its resiliency in extreme circumstances.",
+      "recall": null,
+      "skeleton_page_range_read": [
+        100,
+        100
+      ],
+      "source_id": "bf_shleifer_2000_inefficient_markets",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          278,
+          278
+        ]
+      ],
+      "card_id": "be-fundamentalist-chartist-ham",
+      "derived_page_range": [
+        278,
+        278
+      ],
+      "implied_offset": 18,
+      "offset_expected_page": 278,
+      "quote_head": "this chapter is mostly concerned with analytically tractable models based on the interplay",
+      "recall": null,
+      "skeleton_page_range_read": [
+        260,
+        260
+      ],
+      "source_id": "bf_compecon_v4_2018_ham",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          278,
+          278
+        ]
+      ],
+      "card_id": "be-fundamentalist-chartist-ham",
+      "derived_page_range": [
+        278,
+        278
+      ],
+      "implied_offset": 18,
+      "offset_expected_page": 278,
+      "quote_head": "Since chartists rely on extrapolative rules to forecast future prices and to take their po",
+      "recall": null,
+      "skeleton_page_range_read": [
+        260,
+        260
+      ],
+      "source_id": "bf_compecon_v4_2018_ham",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 0,
+      "candidate_windows": [],
+      "card_id": "be-fundamentalist-chartist-ham",
+      "derived_page_range": [
+        283,
+        283
+      ],
+      "implied_offset": 18,
+      "offset_expected_page": 283,
+      "quote_head": "the market price is determined by the market maker as follows, p_{t+1} = p_t + lambda Z_{e",
+      "recall": null,
+      "skeleton_page_range_read": [
+        265,
+        265
+      ],
+      "source_id": "bf_compecon_v4_2018_ham",
+      "status": "reviewed_override"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          83,
+          83
+        ]
+      ],
+      "card_id": "be-gamblers-fallacy-law-of-small-numbers",
+      "derived_page_range": [
+        83,
+        83
+      ],
+      "implied_offset": 0,
+      "offset_expected_page": 83,
+      "quote_head": "The gambler's fallacy (GF) refers to the mistaken belief that, in a sequence of signals kn",
+      "recall": null,
+      "skeleton_page_range_read": [
+        83,
+        83
+      ],
+      "source_id": "bf_hbe_vol2_2019",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          85,
+          85
+        ]
+      ],
+      "card_id": "be-gamblers-fallacy-law-of-small-numbers",
+      "derived_page_range": [
+        85,
+        85
+      ],
+      "implied_offset": 0,
+      "offset_expected_page": 85,
+      "quote_head": "people view a sample randomly drawn from a population as highly representative, that is, s",
+      "recall": null,
+      "skeleton_page_range_read": [
+        85,
+        85
+      ],
+      "source_id": "bf_hbe_vol2_2019",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          85,
+          85
+        ]
+      ],
+      "card_id": "be-gamblers-fallacy-law-of-small-numbers",
+      "derived_page_range": [
+        85,
+        85
+      ],
+      "implied_offset": 0,
+      "offset_expected_page": 85,
+      "quote_head": "she forms beliefs as if the signals are drawn without replacement from an urn of finite si",
+      "recall": null,
+      "skeleton_page_range_read": [
+        85,
+        85
+      ],
+      "source_id": "bf_hbe_vol2_2019",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          87,
+          87
+        ]
+      ],
+      "card_id": "be-gamblers-fallacy-law-of-small-numbers",
+      "derived_page_range": [
+        87,
+        87
+      ],
+      "implied_offset": 0,
+      "offset_expected_page": 87,
+      "quote_head": "to someone who suffers from the GF, an i.i.d. process looks like it has too many streaks, ",
+      "recall": null,
+      "skeleton_page_range_read": [
+        87,
+        87
+      ],
+      "source_id": "bf_hbe_vol2_2019",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          45,
+          45
+        ]
+      ],
+      "card_id": "be-household-liquidity-illiquidity-puzzle",
+      "derived_page_range": [
+        45,
+        45
+      ],
+      "implied_offset": 0,
+      "offset_expected_page": 45,
+      "quote_head": "Households tend to hold very low levels of liquid assets.",
+      "recall": null,
+      "skeleton_page_range_read": [
+        45,
+        45
+      ],
+      "source_id": "bf_hbe_vol2_2019",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          46,
+          46
+        ]
+      ],
+      "card_id": "be-household-liquidity-illiquidity-puzzle",
+      "derived_page_range": [
+        46,
+        46
+      ],
+      "implied_offset": 0,
+      "offset_expected_page": 46,
+      "quote_head": "households that borrow on their credit cards tend to also accumulate large stocks of illiq",
+      "recall": null,
+      "skeleton_page_range_read": [
+        46,
+        46
+      ],
+      "source_id": "bf_hbe_vol2_2019",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 0,
+      "candidate_windows": [],
+      "card_id": "be-household-liquidity-illiquidity-puzzle",
+      "derived_page_range": [
+        47,
+        47
+      ],
+      "implied_offset": 0,
+      "offset_expected_page": 47,
+      "quote_head": "they estimate beta = 0.51, delta = 0.99, and a coefficient of relative risk aversion of 1.",
+      "recall": null,
+      "skeleton_page_range_read": [
+        47,
+        47
+      ],
+      "source_id": "bf_hbe_vol2_2019",
+      "status": "reviewed_override"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          96,
+          96
+        ]
+      ],
+      "card_id": "be-information-processing-biases",
+      "derived_page_range": [
+        96,
+        96
+      ],
+      "implied_offset": 20,
+      "offset_expected_page": 96,
+      "quote_head": "Anchoring and adjustment is a psychological heuristic that influences the way people intui",
+      "recall": null,
+      "skeleton_page_range_read": [
+        76,
+        76
+      ],
+      "source_id": "bf_pompian_2006_bfwm",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          191,
+          191
+        ]
+      ],
+      "card_id": "be-information-processing-biases",
+      "derived_page_range": [
+        191,
+        191
+      ],
+      "implied_offset": 20,
+      "offset_expected_page": 191,
+      "quote_head": "mental accounting describes people's tendency to code, categorize, and evaluate economic o",
+      "recall": null,
+      "skeleton_page_range_read": [
+        171,
+        171
+      ],
+      "source_id": "bf_pompian_2006_bfwm",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          259,
+          259
+        ]
+      ],
+      "card_id": "be-information-processing-biases",
+      "derived_page_range": [
+        259,
+        259
+      ],
+      "implied_offset": 20,
+      "offset_expected_page": 259,
+      "quote_head": "Framing effects occur when preferences change as a function of some variation in framing.",
+      "recall": null,
+      "skeleton_page_range_read": [
+        239,
+        239
+      ],
+      "source_id": "bf_pompian_2006_bfwm",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          114,
+          114
+        ]
+      ],
+      "card_id": "be-information-processing-biases",
+      "derived_page_range": [
+        114,
+        114
+      ],
+      "implied_offset": 20,
+      "offset_expected_page": 114,
+      "quote_head": "The availability bias is a rule of thumb, or mental shortcut, that allows people to estima",
+      "recall": null,
+      "skeleton_page_range_read": [
+        94,
+        94
+      ],
+      "source_id": "bf_pompian_2006_bfwm",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          236,
+          236
+        ]
+      ],
+      "card_id": "be-information-processing-biases",
+      "derived_page_range": [
+        236,
+        236
+      ],
+      "implied_offset": 20,
+      "offset_expected_page": 236,
+      "quote_head": "Recency bias is a cognitive predisposition that causes people to more prominently recall a",
+      "recall": null,
+      "skeleton_page_range_read": [
+        216,
+        216
+      ],
+      "source_id": "bf_pompian_2006_bfwm",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          69,
+          69
+        ]
+      ],
+      "card_id": "be-investor-clientele-segmentation",
+      "derived_page_range": [
+        69,
+        69
+      ],
+      "implied_offset": 9,
+      "offset_expected_page": 69,
+      "quote_head": "the evidence strongly indicates that closed end funds are both held and traded primarily b",
+      "recall": null,
+      "skeleton_page_range_read": [
+        60,
+        60
+      ],
+      "source_id": "bf_shleifer_2000_inefficient_markets",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          70,
+          70
+        ]
+      ],
+      "card_id": "be-investor-clientele-segmentation",
+      "derived_page_range": [
+        70,
+        70
+      ],
+      "implied_offset": 9,
+      "offset_expected_page": 70,
+      "quote_head": "the sentiment that affects closed end fund discounts should also affect other securities t",
+      "recall": null,
+      "skeleton_page_range_read": [
+        61,
+        61
+      ],
+      "source_id": "bf_shleifer_2000_inefficient_markets",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          69,
+          69
+        ]
+      ],
+      "card_id": "be-investor-clientele-segmentation",
+      "derived_page_range": [
+        69,
+        69
+      ],
+      "implied_offset": 9,
+      "offset_expected_page": 69,
+      "quote_head": "in the United Kingdom, closed end funds are primarily held by institutions, and so we woul",
+      "recall": null,
+      "skeleton_page_range_read": [
+        60,
+        60
+      ],
+      "source_id": "bf_shleifer_2000_inefficient_markets",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          110,
+          110
+        ]
+      ],
+      "card_id": "be-investor-clientele-segmentation",
+      "derived_page_range": [
+        110,
+        110
+      ],
+      "implied_offset": 9,
+      "offset_expected_page": 110,
+      "quote_head": "a great deal of professional arbitrage activity, such as that by hedge funds, is concentra",
+      "recall": null,
+      "skeleton_page_range_read": [
+        101,
+        101
+      ],
+      "source_id": "bf_shleifer_2000_inefficient_markets",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          130,
+          130
+        ]
+      ],
+      "card_id": "be-investor-overreaction",
+      "derived_page_range": [
+        130,
+        130
+      ],
+      "implied_offset": 9,
+      "offset_expected_page": 130,
+      "quote_head": "portfolios of stocks with extremely poor returns over the previous three years dramaticall",
+      "recall": null,
+      "skeleton_page_range_read": [
+        121,
+        121
+      ],
+      "source_id": "bf_shleifer_2000_inefficient_markets",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          129,
+          129
+        ]
+      ],
+      "card_id": "be-investor-overreaction",
+      "derived_page_range": [
+        129,
+        129
+      ],
+      "implied_offset": 9,
+      "offset_expected_page": 129,
+      "quote_head": "after a series of announcements of good news, the investor becomes overly optimistic that ",
+      "recall": null,
+      "skeleton_page_range_read": [
+        120,
+        120
+      ],
+      "source_id": "bf_shleifer_2000_inefficient_markets",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          121,
+          121
+        ]
+      ],
+      "card_id": "be-investor-overreaction",
+      "derived_page_range": [
+        121,
+        121
+      ],
+      "implied_offset": 9,
+      "offset_expected_page": 121,
+      "quote_head": "over longer horizons of perhaps three to five years, security prices overreact to consiste",
+      "recall": null,
+      "skeleton_page_range_read": [
+        112,
+        112
+      ],
+      "source_id": "bf_shleifer_2000_inefficient_markets",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          154,
+          154
+        ]
+      ],
+      "card_id": "be-kernel-of-truth",
+      "derived_page_range": [
+        154,
+        154
+      ],
+      "implied_offset": 13,
+      "offset_expected_page": 154,
+      "quote_head": "Representativeness causes biases by exaggerating real patterns in the data.",
+      "recall": null,
+      "skeleton_page_range_read": [
+        141,
+        141
+      ],
+      "source_id": "bf_gennaioli_shleifer_2018_crisis_beliefs",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          164,
+          164
+        ]
+      ],
+      "card_id": "be-kernel-of-truth",
+      "derived_page_range": [
+        164,
+        164
+      ],
+      "implied_offset": 13,
+      "offset_expected_page": 164,
+      "quote_head": "This idea that stereotypes exaggerate real differences between groups is referred to as \"t",
+      "recall": null,
+      "skeleton_page_range_read": [
+        151,
+        151
+      ],
+      "source_id": "bf_gennaioli_shleifer_2018_crisis_beliefs",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          160,
+          160
+        ]
+      ],
+      "card_id": "be-kernel-of-truth",
+      "derived_page_range": [
+        160,
+        160
+      ],
+      "implied_offset": 13,
+      "offset_expected_page": 160,
+      "quote_head": "While rare in absolute terms, red hair is relatively much more common among the Irish. As ",
+      "recall": null,
+      "skeleton_page_range_read": [
+        147,
+        147
+      ],
+      "source_id": "bf_gennaioli_shleifer_2018_crisis_beliefs",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 0,
+      "candidate_windows": [],
+      "card_id": "be-keynesian-beauty-contest-level-k",
+      "derived_page_range": [
+        601,
+        601
+      ],
+      "implied_offset": 18,
+      "offset_expected_page": 601,
+      "quote_head": "Nagel (1995) introduces the basic BC game (y^i = b E-hat^i (1/N) sum_{j=1}^N y^j and tourn",
+      "recall": 0.846,
+      "skeleton_page_range_read": [
+        583,
+        583
+      ],
+      "source_id": "bf_compecon_v4_2018_ham",
+      "status": "recall_located"
+    },
+    {
+      "candidate_count": 0,
+      "candidate_windows": [],
+      "card_id": "be-keynesian-beauty-contest-level-k",
+      "derived_page_range": [
+        602,
+        602
+      ],
+      "implied_offset": 18,
+      "offset_expected_page": 602,
+      "quote_head": "A level-1 (L1) player anticipates this and chooses the best response, 50 * 2/3 = 33.33, if",
+      "recall": null,
+      "skeleton_page_range_read": [
+        584,
+        584
+      ],
+      "source_id": "bf_compecon_v4_2018_ham",
+      "status": "reviewed_override"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          602,
+          602
+        ]
+      ],
+      "card_id": "be-keynesian-beauty-contest-level-k",
+      "derived_page_range": [
+        602,
+        602
+      ],
+      "implied_offset": 18,
+      "offset_expected_page": 602,
+      "quote_head": "It is assumed that all (naive) players in a Beauty Contest game choose randomly, with an a",
+      "recall": null,
+      "skeleton_page_range_read": [
+        584,
+        584
+      ],
+      "source_id": "bf_compecon_v4_2018_ham",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          601,
+          601
+        ]
+      ],
+      "card_id": "be-keynesian-beauty-contest-level-k",
+      "derived_page_range": [
+        601,
+        601
+      ],
+      "implied_offset": 18,
+      "offset_expected_page": 601,
+      "quote_head": "first-period behavior is far away from the equilibrium, all choosing zero, but behavior sl",
+      "recall": null,
+      "skeleton_page_range_read": [
+        583,
+        583
+      ],
+      "source_id": "bf_compecon_v4_2018_ham",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 0,
+      "candidate_windows": [],
+      "card_id": "be-loss-aversion-reference-dependence",
+      "derived_page_range": [
+        255,
+        255
+      ],
+      "implied_offset": 16,
+      "offset_expected_page": 255,
+      "quote_head": "Loss aversion holds if lambda > 1, so that losses are overweighted relative to gains.",
+      "recall": 0.9,
+      "skeleton_page_range_read": [
+        239,
+        239
+      ],
+      "source_id": "bf_wakker_2010_pt_risk_ambiguity",
+      "status": "recall_located"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          255,
+          255
+        ]
+      ],
+      "card_id": "be-loss-aversion-reference-dependence",
+      "derived_page_range": [
+        255,
+        255
+      ],
+      "implied_offset": 16,
+      "offset_expected_page": 255,
+      "quote_head": "\"Losses loom larger than gains\"",
+      "recall": null,
+      "skeleton_page_range_read": [
+        239,
+        239
+      ],
+      "source_id": "bf_wakker_2010_pt_risk_ambiguity",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          257,
+          257
+        ]
+      ],
+      "card_id": "be-loss-aversion-reference-dependence",
+      "derived_page_range": [
+        257,
+        257
+      ],
+      "implied_offset": 16,
+      "offset_expected_page": 257,
+      "quote_head": "It is only if reference points vary that the modeling of outcomes as changes with respect ",
+      "recall": null,
+      "skeleton_page_range_read": [
+        241,
+        241
+      ],
+      "source_id": "bf_wakker_2010_pt_risk_ambiguity",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          60,
+          60
+        ]
+      ],
+      "card_id": "be-moderate-vs-adapt-bias-allocation",
+      "derived_page_range": [
+        60,
+        60
+      ],
+      "implied_offset": 20,
+      "offset_expected_page": 60,
+      "quote_head": "When should advisors attempt to moderate, or counteract, biased client reasoning to accomm",
+      "recall": null,
+      "skeleton_page_range_read": [
+        40,
+        40
+      ],
+      "source_id": "bf_pompian_2006_bfwm",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          64,
+          64
+        ]
+      ],
+      "card_id": "be-moderate-vs-adapt-bias-allocation",
+      "derived_page_range": [
+        64,
+        64
+      ],
+      "implied_offset": 20,
+      "offset_expected_page": 64,
+      "quote_head": "if a biased allocation could put a client's way of life at risk, moderating the bias is th",
+      "recall": null,
+      "skeleton_page_range_read": [
+        44,
+        44
+      ],
+      "source_id": "bf_pompian_2006_bfwm",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          64,
+          64
+        ]
+      ],
+      "card_id": "be-moderate-vs-adapt-bias-allocation",
+      "derived_page_range": [
+        64,
+        64
+      ],
+      "implied_offset": 20,
+      "offset_expected_page": 64,
+      "quote_head": "Because cognitive biases stem from faulty reasoning, better information and advice can oft",
+      "recall": null,
+      "skeleton_page_range_read": [
+        44,
+        44
+      ],
+      "source_id": "bf_pompian_2006_bfwm",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          123,
+          123
+        ]
+      ],
+      "card_id": "be-momentum-anomaly",
+      "derived_page_range": [
+        123,
+        123
+      ],
+      "implied_offset": 9,
+      "offset_expected_page": 123,
+      "quote_head": "By underreaction we mean that the average return on the company's stock in the period foll",
+      "recall": null,
+      "skeleton_page_range_read": [
+        114,
+        114
+      ],
+      "source_id": "bf_shleifer_2000_inefficient_markets",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          125,
+          125
+        ]
+      ],
+      "card_id": "be-momentum-anomaly",
+      "derived_page_range": [
+        125,
+        125
+      ],
+      "implied_offset": 9,
+      "offset_expected_page": 125,
+      "quote_head": "the market underreacts to the earnings announcement in revising a company's stock price.",
+      "recall": null,
+      "skeleton_page_range_read": [
+        116,
+        116
+      ],
+      "source_id": "bf_shleifer_2000_inefficient_markets",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          126,
+          126
+        ]
+      ],
+      "card_id": "be-momentum-anomaly",
+      "derived_page_range": [
+        126,
+        126
+      ],
+      "implied_offset": 9,
+      "offset_expected_page": 126,
+      "quote_head": "investors typically (but not always) believe that earnings are more stationary than they r",
+      "recall": null,
+      "skeleton_page_range_read": [
+        117,
+        117
+      ],
+      "source_id": "bf_shleifer_2000_inefficient_markets",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          126,
+          126
+        ]
+      ],
+      "card_id": "be-momentum-anomaly",
+      "derived_page_range": [
+        126,
+        126
+      ],
+      "implied_offset": 9,
+      "offset_expected_page": 126,
+      "quote_head": "the past six-month loser portfolio underperforms the past six-month winner portfolio by ne",
+      "recall": null,
+      "skeleton_page_range_read": [
+        117,
+        117
+      ],
+      "source_id": "bf_shleifer_2000_inefficient_markets",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          341,
+          341
+        ]
+      ],
+      "card_id": "be-multiple-priors-maxmin-eu",
+      "derived_page_range": [
+        341,
+        341
+      ],
+      "implied_offset": 16,
+      "offset_expected_page": 341,
+      "quote_head": "A popular alternative to RDU for Case 1 is the maxmin expected utility (MEU) model, also s",
+      "recall": null,
+      "skeleton_page_range_read": [
+        325,
+        325
+      ],
+      "source_id": "bf_wakker_2010_pt_risk_ambiguity",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          340,
+          340
+        ]
+      ],
+      "card_id": "be-multiple-priors-maxmin-eu",
+      "derived_page_range": [
+        340,
+        340
+      ],
+      "implied_offset": 16,
+      "offset_expected_page": 340,
+      "quote_head": "If W is convex then its CORE is nonempty and W is the minimum over all of its CORE element",
+      "recall": null,
+      "skeleton_page_range_read": [
+        324,
+        324
+      ],
+      "source_id": "bf_wakker_2010_pt_risk_ambiguity",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          342,
+          342
+        ]
+      ],
+      "card_id": "be-multiple-priors-maxmin-eu",
+      "derived_page_range": [
+        342,
+        342
+      ],
+      "implied_offset": 16,
+      "offset_expected_page": 342,
+      "quote_head": "It became popular in decision theory when Gilboa & Schmeidler (1989) proved its soundness ",
+      "recall": null,
+      "skeleton_page_range_read": [
+        326,
+        326
+      ],
+      "source_id": "bf_wakker_2010_pt_risk_ambiguity",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          228,
+          228
+        ]
+      ],
+      "card_id": "be-myopic-loss-aversion-equity-premium",
+      "derived_page_range": [
+        228,
+        228
+      ],
+      "implied_offset": 20,
+      "offset_expected_page": 228,
+      "quote_head": "the possibility of a loss is on average twice as powerful a motivator as the possibility o",
+      "recall": null,
+      "skeleton_page_range_read": [
+        208,
+        208
+      ],
+      "source_id": "bf_pompian_2006_bfwm",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          229,
+          229
+        ]
+      ],
+      "card_id": "be-myopic-loss-aversion-equity-premium",
+      "derived_page_range": [
+        229,
+        229
+      ],
+      "implied_offset": 20,
+      "offset_expected_page": 229,
+      "quote_head": "people weigh all potential gains and losses in relation to some benchmark reference point ",
+      "recall": null,
+      "skeleton_page_range_read": [
+        209,
+        210
+      ],
+      "source_id": "bf_pompian_2006_bfwm",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          230,
+          230
+        ]
+      ],
+      "card_id": "be-myopic-loss-aversion-equity-premium",
+      "derived_page_range": [
+        230,
+        230
+      ],
+      "implied_offset": 20,
+      "offset_expected_page": 230,
+      "quote_head": "The disposition effect is the desire to hold losing investments too long (risk-seeking beh",
+      "recall": null,
+      "skeleton_page_range_read": [
+        210,
+        210
+      ],
+      "source_id": "bf_pompian_2006_bfwm",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 0,
+      "candidate_windows": [],
+      "card_id": "be-myopic-loss-aversion-equity-premium",
+      "derived_page_range": [
+        232,
+        232
+      ],
+      "implied_offset": 20,
+      "offset_expected_page": 232,
+      "quote_head": "Professors Shlomo Benartzi and Richard Thaler suggested a solution to the equity risk prem",
+      "recall": 1.0,
+      "skeleton_page_range_read": [
+        212,
+        212
+      ],
+      "source_id": "bf_pompian_2006_bfwm",
+      "status": "recall_located"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          232,
+          232
+        ]
+      ],
+      "card_id": "be-myopic-loss-aversion-equity-premium",
+      "derived_page_range": [
+        232,
+        232
+      ],
+      "implied_offset": 20,
+      "offset_expected_page": 232,
+      "quote_head": "the equity premium—the gap between the average rate of return on stocks and the lower, ave",
+      "recall": null,
+      "skeleton_page_range_read": [
+        212,
+        212
+      ],
+      "source_id": "bf_pompian_2006_bfwm",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          232,
+          232
+        ]
+      ],
+      "card_id": "be-neglected-tail-risk",
+      "derived_page_range": [
+        232,
+        232
+      ],
+      "implied_offset": 76,
+      "offset_expected_page": 169,
+      "quote_head": "Agents neglect downside risk in the sense of definition 3.1 if and only if cash flow volat",
+      "recall": null,
+      "skeleton_page_range_read": [
+        156,
+        156
+      ],
+      "source_id": "bf_gennaioli_shleifer_2018_crisis_beliefs",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          174,
+          174
+        ]
+      ],
+      "card_id": "be-neglected-tail-risk",
+      "derived_page_range": [
+        174,
+        174
+      ],
+      "implied_offset": 13,
+      "offset_expected_page": 174,
+      "quote_head": "When market participants perceive a higher mean and a lower variance, they are optimistic ",
+      "recall": null,
+      "skeleton_page_range_read": [
+        161,
+        161
+      ],
+      "source_id": "bf_gennaioli_shleifer_2018_crisis_beliefs",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          176,
+          176
+        ]
+      ],
+      "card_id": "be-neglected-tail-risk",
+      "derived_page_range": [
+        176,
+        176
+      ],
+      "implied_offset": 13,
+      "offset_expected_page": 176,
+      "quote_head": "the pooling of risks exposed the entire financial sector to the same neglected risk.",
+      "recall": null,
+      "skeleton_page_range_read": [
+        163,
+        163
+      ],
+      "source_id": "bf_gennaioli_shleifer_2018_crisis_beliefs",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          71,
+          71
+        ]
+      ],
+      "card_id": "be-overconfidence-bias",
+      "derived_page_range": [
+        71,
+        71
+      ],
+      "implied_offset": 20,
+      "offset_expected_page": 71,
+      "quote_head": "overconfidence can be summarized as unwarranted faith in one's intuitive reasoning, judgme",
+      "recall": null,
+      "skeleton_page_range_read": [
+        51,
+        51
+      ],
+      "source_id": "bf_pompian_2006_bfwm",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 0,
+      "candidate_windows": [],
+      "card_id": "be-overconfidence-bias",
+      "derived_page_range": [
+        72,
+        72
+      ],
+      "implied_offset": 20,
+      "offset_expected_page": 72,
+      "quote_head": "the confidence intervals that investors assign to their investment predictions are too nar",
+      "recall": 1.0,
+      "skeleton_page_range_read": [
+        52,
+        52
+      ],
+      "source_id": "bf_pompian_2006_bfwm",
+      "status": "recall_located"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          75,
+          75
+        ]
+      ],
+      "card_id": "be-overconfidence-bias",
+      "derived_page_range": [
+        75,
+        75
+      ],
+      "implied_offset": 20,
+      "offset_expected_page": 75,
+      "quote_head": "Both men and women in Barber and Odean's study would have done better, on average, if they",
+      "recall": null,
+      "skeleton_page_range_read": [
+        55,
+        55
+      ],
+      "source_id": "bf_pompian_2006_bfwm",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          73,
+          73
+        ]
+      ],
+      "card_id": "be-overconfidence-bias",
+      "derived_page_range": [
+        73,
+        73
+      ],
+      "implied_offset": 20,
+      "offset_expected_page": 73,
+      "quote_head": "Subjects reported being 100 percent sure when they were actually only 70 percent to 80 per",
+      "recall": null,
+      "skeleton_page_range_read": [
+        53,
+        53
+      ],
+      "source_id": "bf_pompian_2006_bfwm",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          125,
+          125
+        ]
+      ],
+      "card_id": "be-overconfidence-disagreement-short-sale",
+      "derived_page_range": [
+        125,
+        125
+      ],
+      "implied_offset": 0,
+      "offset_expected_page": 125,
+      "quote_head": "if short sales are not possible, the pessimists do not take a position in the asset. The p",
+      "recall": null,
+      "skeleton_page_range_read": [
+        125,
+        125
+      ],
+      "source_id": "bf_hbe_vol1_2018",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          125,
+          125
+        ]
+      ],
+      "card_id": "be-overconfidence-disagreement-short-sale",
+      "derived_page_range": [
+        125,
+        125
+      ],
+      "implied_offset": 0,
+      "offset_expected_page": 125,
+      "quote_head": "the existence of a \"resale option\" means that, when there is significant disagreement, the",
+      "recall": null,
+      "skeleton_page_range_read": [
+        125,
+        125
+      ],
+      "source_id": "bf_hbe_vol1_2018",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          126,
+          126
+        ]
+      ],
+      "card_id": "be-overconfidence-disagreement-short-sale",
+      "derived_page_range": [
+        126,
+        126
+      ],
+      "implied_offset": 0,
+      "offset_expected_page": 126,
+      "quote_head": "it can explain why overvaluation is often accompanied by high trading volume, an empirical",
+      "recall": null,
+      "skeleton_page_range_read": [
+        126,
+        126
+      ],
+      "source_id": "bf_hbe_vol1_2018",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          126,
+          126
+        ]
+      ],
+      "card_id": "be-overconfidence-disagreement-short-sale",
+      "derived_page_range": [
+        126,
+        126
+      ],
+      "implied_offset": 0,
+      "offset_expected_page": 126,
+      "quote_head": "this leads to larger fluctuations in the relative optimism of the two investor groups. Thi",
+      "recall": null,
+      "skeleton_page_range_read": [
+        126,
+        126
+      ],
+      "source_id": "bf_hbe_vol1_2018",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 0,
+      "candidate_windows": [],
+      "card_id": "be-overconfidence-self-attribution-prices",
+      "derived_page_range": [
+        124,
+        124
+      ],
+      "implied_offset": 0,
+      "offset_expected_page": 124,
+      "quote_head": "If he is overconfident -- if he overestimates the precision of the signal -- the asset wil",
+      "recall": 1.0,
+      "skeleton_page_range_read": [
+        124,
+        124
+      ],
+      "source_id": "bf_hbe_vol1_2018",
+      "status": "recall_located"
+    },
+    {
+      "candidate_count": 0,
+      "candidate_windows": [],
+      "card_id": "be-overconfidence-self-attribution-prices",
+      "derived_page_range": [
+        124,
+        124
+      ],
+      "implied_offset": 0,
+      "offset_expected_page": 124,
+      "quote_head": "This asymmetric updating is motivated by \"self-attribution bias\" -- the tendency, driven b",
+      "recall": 1.0,
+      "skeleton_page_range_read": [
+        124,
+        124
+      ],
+      "source_id": "bf_hbe_vol1_2018",
+      "status": "recall_located"
+    },
+    {
+      "candidate_count": 0,
+      "candidate_windows": [],
+      "card_id": "be-overconfidence-self-attribution-prices",
+      "derived_page_range": [
+        124,
+        124
+      ],
+      "implied_offset": 0,
+      "offset_expected_page": 124,
+      "quote_head": "Biased updating of this kind generates both medium-term momentum and long-term reversal.",
+      "recall": 1.0,
+      "skeleton_page_range_read": [
+        124,
+        124
+      ],
+      "source_id": "bf_hbe_vol1_2018",
+      "status": "recall_located"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          121,
+          121
+        ]
+      ],
+      "card_id": "be-overconfidence-self-attribution-prices",
+      "derived_page_range": [
+        121,
+        121
+      ],
+      "implied_offset": 0,
+      "offset_expected_page": 121,
+      "quote_head": "the very high trading volume in financial markets",
+      "recall": null,
+      "skeleton_page_range_read": [
+        121,
+        121
+      ],
+      "source_id": "bf_hbe_vol1_2018",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          14,
+          14
+        ]
+      ],
+      "card_id": "be-present-focused-preferences-taxonomy",
+      "derived_page_range": [
+        14,
+        14
+      ],
+      "implied_offset": 1,
+      "offset_expected_page": 13,
+      "quote_head": "Present-focused preferences exist if agents are more likely in the present to choose an ac",
+      "recall": null,
+      "skeleton_page_range_read": [
+        13,
+        14
+      ],
+      "source_id": "bf_hbe_vol2_2019",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          15,
+          15
+        ]
+      ],
+      "card_id": "be-present-focused-preferences-taxonomy",
+      "derived_page_range": [
+        15,
+        15
+      ],
+      "implied_offset": 0,
+      "offset_expected_page": 15,
+      "quote_head": "Preferences can be dynamically consistent even if choices are dynamically inconsistent.",
+      "recall": null,
+      "skeleton_page_range_read": [
+        15,
+        15
+      ],
+      "source_id": "bf_hbe_vol2_2019",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          27,
+          27
+        ]
+      ],
+      "card_id": "be-present-focused-preferences-taxonomy",
+      "derived_page_range": [
+        27,
+        27
+      ],
+      "implied_offset": 0,
+      "offset_expected_page": 27,
+      "quote_head": "These models share the property that agents choose more impatiently for the present than w",
+      "recall": null,
+      "skeleton_page_range_read": [
+        27,
+        28
+      ],
+      "source_id": "bf_hbe_vol2_2019",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          220,
+          220
+        ]
+      ],
+      "card_id": "be-probability-weighting-inverse-s",
+      "derived_page_range": [
+        220,
+        220
+      ],
+      "implied_offset": 16,
+      "offset_expected_page": 220,
+      "quote_head": "the overweighting of small probabilities, and Tversky & Kahneman (1992) incorporated this ",
+      "recall": null,
+      "skeleton_page_range_read": [
+        204,
+        204
+      ],
+      "source_id": "bf_wakker_2010_pt_risk_ambiguity",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          241,
+          241
+        ]
+      ],
+      "card_id": "be-probability-weighting-inverse-s",
+      "derived_page_range": [
+        241,
+        241
+      ],
+      "implied_offset": 16,
+      "offset_expected_page": 241,
+      "quote_head": "Best-rank overweighting has sometimes been called subadditivity, or lower subadditivity",
+      "recall": null,
+      "skeleton_page_range_read": [
+        225,
+        225
+      ],
+      "source_id": "bf_wakker_2010_pt_risk_ambiguity",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 0,
+      "candidate_windows": [],
+      "card_id": "be-probability-weighting-inverse-s",
+      "derived_page_range": [
+        225,
+        225
+      ],
+      "implied_offset": 16,
+      "offset_expected_page": 225,
+      "quote_head": "a is an index of likelihood sensitivity (\"curvature,\" or \"inverse-S shape\"); (2b+a)/2 is a",
+      "recall": 1.0,
+      "skeleton_page_range_read": [
+        209,
+        209
+      ],
+      "source_id": "bf_wakker_2010_pt_risk_ambiguity",
+      "status": "recall_located"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          38,
+          38
+        ]
+      ],
+      "card_id": "be-prospect-theory-anomaly-verdict",
+      "derived_page_range": [
+        38,
+        38
+      ],
+      "implied_offset": 1,
+      "offset_expected_page": 38,
+      "quote_head": "the model is helpful for thinking about 14 of the 23 anomalies",
+      "recall": null,
+      "skeleton_page_range_read": [
+        37,
+        37
+      ],
+      "source_id": "bf_barberis_jin_wang_2021_pt_anomalies",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          41,
+          41
+        ]
+      ],
+      "card_id": "be-prospect-theory-anomaly-verdict",
+      "derived_page_range": [
+        41,
+        41
+      ],
+      "implied_offset": 1,
+      "offset_expected_page": 41,
+      "quote_head": "Table III shows that the model incorrectly predicts a negative alpha for decile 1 of the s",
+      "recall": null,
+      "skeleton_page_range_read": [
+        40,
+        40
+      ],
+      "source_id": "bf_barberis_jin_wang_2021_pt_anomalies",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          41,
+          41
+        ]
+      ],
+      "card_id": "be-prospect-theory-anomaly-verdict",
+      "derived_page_range": [
+        41,
+        41
+      ],
+      "implied_offset": 1,
+      "offset_expected_page": 41,
+      "quote_head": "a large fraction of their return comes around earnings announcement dates. This suggests t",
+      "recall": null,
+      "skeleton_page_range_read": [
+        40,
+        40
+      ],
+      "source_id": "bf_barberis_jin_wang_2021_pt_anomalies",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          43,
+          43
+        ]
+      ],
+      "card_id": "be-prospect-theory-anomaly-verdict",
+      "derived_page_range": [
+        43,
+        43
+      ],
+      "implied_offset": 1,
+      "offset_expected_page": 43,
+      "quote_head": "our model performs better than the CAPM and three-factor model, similarly to the four-fact",
+      "recall": null,
+      "skeleton_page_range_read": [
+        42,
+        42
+      ],
+      "source_id": "bf_barberis_jin_wang_2021_pt_anomalies",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          152,
+          152
+        ]
+      ],
+      "card_id": "be-prospect-theory-asset-pricing",
+      "derived_page_range": [
+        152,
+        152
+      ],
+      "implied_offset": 0,
+      "offset_expected_page": 152,
+      "quote_head": "the stock market earns a high average return so that it can be competitive with the bond m",
+      "recall": null,
+      "skeleton_page_range_read": [
+        152,
+        152
+      ],
+      "source_id": "bf_hbe_vol1_2018",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          153,
+          153
+        ]
+      ],
+      "card_id": "be-prospect-theory-asset-pricing",
+      "derived_page_range": [
+        153,
+        153
+      ],
+      "implied_offset": 0,
+      "offset_expected_page": 153,
+      "quote_head": "this term captures the idea that the investor also derives utility from annual gains and l",
+      "recall": null,
+      "skeleton_page_range_read": [
+        153,
+        153
+      ],
+      "source_id": "bf_hbe_vol1_2018",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 0,
+      "candidate_windows": [],
+      "card_id": "be-prospect-theory-asset-pricing",
+      "derived_page_range": [
+        153,
+        153
+      ],
+      "implied_offset": 0,
+      "offset_expected_page": 153,
+      "quote_head": "for values of loss aversion drawn from experimental studies ... the equilibrium equity pre",
+      "recall": 1.0,
+      "skeleton_page_range_read": [
+        153,
+        153
+      ],
+      "source_id": "bf_hbe_vol1_2018",
+      "status": "recall_located"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          154,
+          154
+        ]
+      ],
+      "card_id": "be-prospect-theory-asset-pricing",
+      "derived_page_range": [
+        154,
+        154
+      ],
+      "implied_offset": 0,
+      "offset_expected_page": 154,
+      "quote_head": "if she has experienced gains in recent years, she is less loss averse going forward, while",
+      "recall": null,
+      "skeleton_page_range_read": [
+        154,
+        154
+      ],
+      "source_id": "bf_hbe_vol1_2018",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 0,
+      "candidate_windows": [],
+      "card_id": "be-prospect-theory-ingredient-decomposition",
+      "derived_page_range": [
+        45,
+        45
+      ],
+      "implied_offset": 1,
+      "offset_expected_page": 45,
+      "quote_head": "the fractions of the spread that come from loss aversion, probability weighting, and dimin",
+      "recall": 1.0,
+      "skeleton_page_range_read": [
+        44,
+        44
+      ],
+      "source_id": "bf_barberis_jin_wang_2021_pt_anomalies",
+      "status": "recall_located"
+    },
+    {
+      "candidate_count": 0,
+      "candidate_windows": [],
+      "card_id": "be-prospect-theory-ingredient-decomposition",
+      "derived_page_range": [
+        45,
+        45
+      ],
+      "implied_offset": 1,
+      "offset_expected_page": 45,
+      "quote_head": "it is only when we also add probability weighting that the model can explain 14 anomalies.",
+      "recall": 1.0,
+      "skeleton_page_range_read": [
+        44,
+        44
+      ],
+      "source_id": "bf_barberis_jin_wang_2021_pt_anomalies",
+      "status": "recall_located"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          46,
+          46
+        ]
+      ],
+      "card_id": "be-prospect-theory-ingredient-decomposition",
+      "derived_page_range": [
+        46,
+        46
+      ],
+      "implied_offset": 1,
+      "offset_expected_page": 46,
+      "quote_head": "this specification can explain only five of the 23 anomalies",
+      "recall": null,
+      "skeleton_page_range_read": [
+        45,
+        45
+      ],
+      "source_id": "bf_barberis_jin_wang_2021_pt_anomalies",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 0,
+      "candidate_windows": [],
+      "card_id": "be-prospect-theory-three-characteristic-pricing",
+      "derived_page_range": [
+        2,
+        3
+      ],
+      "implied_offset": 1,
+      "offset_expected_page": 2,
+      "quote_head": "the price of an asset will depend in part on three asset characteristics: the volatility o",
+      "recall": null,
+      "skeleton_page_range_read": [
+        1,
+        2
+      ],
+      "source_id": "bf_barberis_jin_wang_2021_pt_anomalies",
+      "status": "reviewed_override"
+    },
+    {
+      "candidate_count": 0,
+      "candidate_windows": [],
+      "card_id": "be-prospect-theory-three-characteristic-pricing",
+      "derived_page_range": [
+        11,
+        11
+      ],
+      "implied_offset": 1,
+      "offset_expected_page": 11,
+      "quote_head": "since they are loss-averse, they dislike assets with volatile returns; all else equal, the",
+      "recall": null,
+      "skeleton_page_range_read": [
+        10,
+        10
+      ],
+      "source_id": "bf_barberis_jin_wang_2021_pt_anomalies",
+      "status": "reviewed_override"
+    },
+    {
+      "candidate_count": 0,
+      "candidate_windows": [],
+      "card_id": "be-prospect-theory-three-characteristic-pricing",
+      "derived_page_range": [
+        12,
+        12
+      ],
+      "implied_offset": 1,
+      "offset_expected_page": 12,
+      "quote_head": "the i'th component, V(Gi), corresponds to asset i. Specifically, Gi is the potential gain ",
+      "recall": 1.0,
+      "skeleton_page_range_read": [
+        11,
+        11
+      ],
+      "source_id": "bf_barberis_jin_wang_2021_pt_anomalies",
+      "status": "recall_located"
+    },
+    {
+      "candidate_count": 0,
+      "candidate_windows": [],
+      "card_id": "be-quasi-hyperbolic-discounting",
+      "derived_page_range": [
+        17,
+        17
+      ],
+      "implied_offset": 0,
+      "offset_expected_page": 17,
+      "quote_head": "Here U_t is total utility, u_t is flow utility in period t, beta is the present bias param",
+      "recall": 0.875,
+      "skeleton_page_range_read": [
+        17,
+        17
+      ],
+      "source_id": "bf_hbe_vol2_2019",
+      "status": "recall_located"
+    },
+    {
+      "candidate_count": 0,
+      "candidate_windows": [],
+      "card_id": "be-quasi-hyperbolic-discounting",
+      "derived_page_range": [
+        18,
+        18
+      ],
+      "implied_offset": 0,
+      "offset_expected_page": 18,
+      "quote_head": "When beta = 1 these preferences revert to exponential discounting.",
+      "recall": 0.857,
+      "skeleton_page_range_read": [
+        18,
+        18
+      ],
+      "source_id": "bf_hbe_vol2_2019",
+      "status": "recall_located"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          18,
+          18
+        ]
+      ],
+      "card_id": "be-quasi-hyperbolic-discounting",
+      "derived_page_range": [
+        18,
+        18
+      ],
+      "implied_offset": 0,
+      "offset_expected_page": 18,
+      "quote_head": "Present-biased preferences are dynamically inconsistent",
+      "recall": null,
+      "skeleton_page_range_read": [
+        18,
+        18
+      ],
+      "source_id": "bf_hbe_vol2_2019",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 0,
+      "candidate_windows": [],
+      "card_id": "be-rank-dependent-utility-via-ranks",
+      "derived_page_range": [
+        182,
+        182
+      ],
+      "implied_offset": 12,
+      "offset_expected_page": 186,
+      "quote_head": "decision weight = marginal w-contribution of outcome probability to rank.",
+      "recall": null,
+      "skeleton_page_range_read": [
+        170,
+        171
+      ],
+      "source_id": "bf_wakker_2010_pt_risk_ambiguity",
+      "status": "reviewed_override"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          176,
+          176
+        ]
+      ],
+      "card_id": "be-rank-dependent-utility-via-ranks",
+      "derived_page_range": [
+        176,
+        176
+      ],
+      "implied_offset": 16,
+      "offset_expected_page": 176,
+      "quote_head": "Under RDU, the weight of a utility is the difference between two transformed ranks",
+      "recall": null,
+      "skeleton_page_range_read": [
+        160,
+        160
+      ],
+      "source_id": "bf_wakker_2010_pt_risk_ambiguity",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          172,
+          172
+        ]
+      ],
+      "card_id": "be-rank-dependent-utility-via-ranks",
+      "derived_page_range": [
+        172,
+        172
+      ],
+      "implied_offset": 16,
+      "offset_expected_page": 172,
+      "quote_head": "the rank - or, informally, the good-news probability - describes the probability of y yiel",
+      "recall": null,
+      "skeleton_page_range_read": [
+        156,
+        156
+      ],
+      "source_id": "bf_wakker_2010_pt_risk_ambiguity",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          320,
+          320
+        ]
+      ],
+      "card_id": "be-rational-inattention-entropy",
+      "derived_page_range": [
+        320,
+        320
+      ],
+      "implied_offset": 0,
+      "offset_expected_page": 320,
+      "quote_head": "Sims (1998, 2003) extends the ideas to allow for larger choice sets in which agents freely",
+      "recall": null,
+      "skeleton_page_range_read": [
+        320,
+        320
+      ],
+      "source_id": "bf_hbe_vol2_2019",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 0,
+      "candidate_windows": [],
+      "card_id": "be-rational-inattention-entropy",
+      "derived_page_range": [
+        320,
+        320
+      ],
+      "implied_offset": 0,
+      "offset_expected_page": 320,
+      "quote_head": "the entropy of X for the discrete case is defined as H(X) = -E[log f(X)] = - sum_i p_i log",
+      "recall": 0.875,
+      "skeleton_page_range_read": [
+        320,
+        320
+      ],
+      "source_id": "bf_hbe_vol2_2019",
+      "status": "recall_located"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          323,
+          323
+        ]
+      ],
+      "card_id": "be-rational-inattention-entropy",
+      "derived_page_range": [
+        323,
+        323
+      ],
+      "implied_offset": 0,
+      "offset_expected_page": 323,
+      "quote_head": "the decision problem (70) boils down to",
+      "recall": null,
+      "skeleton_page_range_read": [
+        323,
+        323
+      ],
+      "source_id": "bf_hbe_vol2_2019",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          324,
+          324
+        ]
+      ],
+      "card_id": "be-rational-inattention-entropy",
+      "derived_page_range": [
+        324,
+        324
+      ],
+      "implied_offset": 0,
+      "offset_expected_page": 324,
+      "quote_head": "with the global entropy constraint of Sims we obtain uniform dampening across all variable",
+      "recall": null,
+      "skeleton_page_range_read": [
+        324,
+        324
+      ],
+      "source_id": "bf_hbe_vol2_2019",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 0,
+      "candidate_windows": [],
+      "card_id": "be-rational-vs-diagnostic-expectations",
+      "derived_page_range": [
+        185,
+        185
+      ],
+      "implied_offset": 13,
+      "offset_expected_page": 185,
+      "quote_head": "Diagnostic expectations distort the rational expectation ρX̂t in the direction of current ",
+      "recall": 1.0,
+      "skeleton_page_range_read": [
+        172,
+        172
+      ],
+      "source_id": "bf_gennaioli_shleifer_2018_crisis_beliefs",
+      "status": "recall_located"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          186,
+          186
+        ]
+      ],
+      "card_id": "be-rational-vs-diagnostic-expectations",
+      "derived_page_range": [
+        186,
+        186
+      ],
+      "implied_offset": 13,
+      "offset_expected_page": 186,
+      "quote_head": "when forecasters overreact to news, the correlation between their forecast revisions and f",
+      "recall": null,
+      "skeleton_page_range_read": [
+        173,
+        173
+      ],
+      "source_id": "bf_gennaioli_shleifer_2018_crisis_beliefs",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          189,
+          189
+        ]
+      ],
+      "card_id": "be-rational-vs-diagnostic-expectations",
+      "derived_page_range": [
+        189,
+        189
+      ],
+      "implied_offset": 13,
+      "offset_expected_page": 189,
+      "quote_head": "for given current news, updating about future outcomes is more aggressive in macroeconomic",
+      "recall": null,
+      "skeleton_page_range_read": [
+        176,
+        176
+      ],
+      "source_id": "bf_gennaioli_shleifer_2018_crisis_beliefs",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          523,
+          523
+        ]
+      ],
+      "card_id": "be-rationally-heterogeneous-expectations",
+      "derived_page_range": [
+        523,
+        523
+      ],
+      "implied_offset": 18,
+      "offset_expected_page": 523,
+      "quote_head": "there is tremendous coordination on price forecasts within each group, a kind of group spe",
+      "recall": null,
+      "skeleton_page_range_read": [
+        505,
+        505
+      ],
+      "source_id": "bf_compecon_v4_2018_ham",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 0,
+      "candidate_windows": [],
+      "card_id": "be-rationally-heterogeneous-expectations",
+      "derived_page_range": [
+        523,
+        523
+      ],
+      "implied_offset": 18,
+      "offset_expected_page": 523,
+      "quote_head": "The estimated value of gamma is found to be positive, indicating that if subjects see a po",
+      "recall": 0.852,
+      "skeleton_page_range_read": [
+        505,
+        505
+      ],
+      "source_id": "bf_compecon_v4_2018_ham",
+      "status": "recall_located"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          525,
+          525
+        ]
+      ],
+      "card_id": "be-rationally-heterogeneous-expectations",
+      "derived_page_range": [
+        525,
+        525
+      ],
+      "implied_offset": 18,
+      "offset_expected_page": 525,
+      "quote_head": "Anufriev and Hommes (2012) therefore propose the use of a heuristic switching model, based",
+      "recall": null,
+      "skeleton_page_range_read": [
+        507,
+        507
+      ],
+      "source_id": "bf_compecon_v4_2018_ham",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          524,
+          524
+        ]
+      ],
+      "card_id": "be-rationally-heterogeneous-expectations",
+      "derived_page_range": [
+        524,
+        524
+      ],
+      "implied_offset": 18,
+      "offset_expected_page": 524,
+      "quote_head": "Hommes et al. conclude that 75 percent of their subjects can be classified using linear ad",
+      "recall": null,
+      "skeleton_page_range_read": [
+        506,
+        506
+      ],
+      "source_id": "bf_compecon_v4_2018_ham",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          11,
+          11
+        ]
+      ],
+      "card_id": "be-reference-dependent-preferences-foundations",
+      "derived_page_range": [
+        11,
+        11
+      ],
+      "implied_offset": 0,
+      "offset_expected_page": 11,
+      "quote_head": "outcomes are not experienced on an absolute scale, but rather are experienced relative to ",
+      "recall": null,
+      "skeleton_page_range_read": [
+        11,
+        11
+      ],
+      "source_id": "bf_hbe_vol1_2018",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 0,
+      "candidate_windows": [],
+      "card_id": "be-reference-dependent-preferences-foundations",
+      "derived_page_range": [
+        21,
+        21
+      ],
+      "implied_offset": 1,
+      "offset_expected_page": 20,
+      "quote_head": "let r be a reference point around which a person defines gains and losses -- i.e., x_n > r",
+      "recall": 1.0,
+      "skeleton_page_range_read": [
+        20,
+        20
+      ],
+      "source_id": "bf_hbe_vol1_2018",
+      "status": "recall_located"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          21,
+          21
+        ]
+      ],
+      "card_id": "be-reference-dependent-preferences-foundations",
+      "derived_page_range": [
+        21,
+        21
+      ],
+      "implied_offset": 1,
+      "offset_expected_page": 20,
+      "quote_head": "Zero value of reference point: v(0) = 0.",
+      "recall": null,
+      "skeleton_page_range_read": [
+        20,
+        20
+      ],
+      "source_id": "bf_hbe_vol1_2018",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          22,
+          22
+        ]
+      ],
+      "card_id": "be-reference-dependent-preferences-foundations",
+      "derived_page_range": [
+        22,
+        22
+      ],
+      "implied_offset": 1,
+      "offset_expected_page": 21,
+      "quote_head": "losses loom larger than commensurate gains",
+      "recall": null,
+      "skeleton_page_range_read": [
+        21,
+        21
+      ],
+      "source_id": "bf_hbe_vol1_2018",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          247,
+          247
+        ]
+      ],
+      "card_id": "be-regret-aversion-status-quo-endowment",
+      "derived_page_range": [
+        247,
+        247
+      ],
+      "implied_offset": 20,
+      "offset_expected_page": 247,
+      "quote_head": "People exhibiting regret aversion avoid taking decisive actions because they fear that, in",
+      "recall": null,
+      "skeleton_page_range_read": [
+        227,
+        227
+      ],
+      "source_id": "bf_pompian_2006_bfwm",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 0,
+      "candidate_windows": [],
+      "card_id": "be-regret-aversion-status-quo-endowment",
+      "derived_page_range": [
+        268,
+        268
+      ],
+      "implied_offset": 20,
+      "offset_expected_page": 268,
+      "quote_head": "status quo bias ... predisposes people facing an array of choice options to elect whatever",
+      "recall": 1.0,
+      "skeleton_page_range_read": [
+        248,
+        248
+      ],
+      "source_id": "bf_pompian_2006_bfwm",
+      "status": "recall_located"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          159,
+          159
+        ]
+      ],
+      "card_id": "be-regret-aversion-status-quo-endowment",
+      "derived_page_range": [
+        159,
+        159
+      ],
+      "implied_offset": 20,
+      "offset_expected_page": 159,
+      "quote_head": "People who exhibit endowment bias value an asset more when they hold property rights to it",
+      "recall": null,
+      "skeleton_page_range_read": [
+        139,
+        139
+      ],
+      "source_id": "bf_pompian_2006_bfwm",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          269,
+          269
+        ]
+      ],
+      "card_id": "be-regret-aversion-status-quo-endowment",
+      "derived_page_range": [
+        269,
+        269
+      ],
+      "implied_offset": 20,
+      "offset_expected_page": 269,
+      "quote_head": "Loss aversion bias, endowment bias, and status quo bias often combine; and the result is a",
+      "recall": null,
+      "skeleton_page_range_read": [
+        249,
+        249
+      ],
+      "source_id": "bf_pompian_2006_bfwm",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          155,
+          155
+        ]
+      ],
+      "card_id": "be-representativeness-conjunction-base-rate",
+      "derived_page_range": [
+        155,
+        155
+      ],
+      "implied_offset": 13,
+      "offset_expected_page": 155,
+      "quote_head": "Kahneman and Tversky describe the representativeness heuristic as our tendency to judge li",
+      "recall": null,
+      "skeleton_page_range_read": [
+        142,
+        143
+      ],
+      "source_id": "bf_gennaioli_shleifer_2018_crisis_beliefs",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          156,
+          156
+        ]
+      ],
+      "card_id": "be-representativeness-conjunction-base-rate",
+      "derived_page_range": [
+        156,
+        156
+      ],
+      "implied_offset": 13,
+      "offset_expected_page": 156,
+      "quote_head": "The conjunction fallacy refers to the mistake of judging an event A ∩ B to be more likely ",
+      "recall": null,
+      "skeleton_page_range_read": [
+        143,
+        143
+      ],
+      "source_id": "bf_gennaioli_shleifer_2018_crisis_beliefs",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          157,
+          157
+        ]
+      ],
+      "card_id": "be-representativeness-conjunction-base-rate",
+      "derived_page_range": [
+        157,
+        157
+      ],
+      "implied_offset": 13,
+      "offset_expected_page": 157,
+      "quote_head": "Base rate neglect refers to the tendency for individuals to react too strongly to informat",
+      "recall": null,
+      "skeleton_page_range_read": [
+        144,
+        144
+      ],
+      "source_id": "bf_gennaioli_shleifer_2018_crisis_beliefs",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 0,
+      "candidate_windows": [],
+      "card_id": "be-representativeness-strength-vs-weight",
+      "derived_page_range": [
+        155,
+        155
+      ],
+      "implied_offset": 0,
+      "offset_expected_page": 155,
+      "quote_head": "people form an initial impression based on the strength of the evidence, and then they adj",
+      "recall": 1.0,
+      "skeleton_page_range_read": [
+        155,
+        155
+      ],
+      "source_id": "bf_hbe_vol2_2019",
+      "status": "recall_located"
+    },
+    {
+      "candidate_count": 0,
+      "candidate_windows": [],
+      "card_id": "be-representativeness-strength-vs-weight",
+      "derived_page_range": [
+        155,
+        155
+      ],
+      "implied_offset": 0,
+      "offset_expected_page": 155,
+      "quote_head": "the sample proportion ... is strength and the sample size (N) is weight",
+      "recall": null,
+      "skeleton_page_range_read": [
+        155,
+        155
+      ],
+      "source_id": "bf_hbe_vol2_2019",
+      "status": "reviewed_override"
+    },
+    {
+      "candidate_count": 0,
+      "candidate_windows": [],
+      "card_id": "be-representativeness-strength-vs-weight",
+      "derived_page_range": [
+        156,
+        156
+      ],
+      "implied_offset": 0,
+      "offset_expected_page": 156,
+      "quote_head": "participants overweighted the numerator and underweighted the denominator",
+      "recall": 0.857,
+      "skeleton_page_range_read": [
+        156,
+        156
+      ],
+      "source_id": "bf_hbe_vol2_2019",
+      "status": "recall_located"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          170,
+          170
+        ]
+      ],
+      "card_id": "be-self-control-mental-accounting",
+      "derived_page_range": [
+        170,
+        170
+      ],
+      "implied_offset": 20,
+      "offset_expected_page": 170,
+      "quote_head": "self-control bias is a human behavioral tendency that causes people to consume today at th",
+      "recall": null,
+      "skeleton_page_range_read": [
+        150,
+        150
+      ],
+      "source_id": "bf_pompian_2006_bfwm",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          172,
+          172
+        ]
+      ],
+      "card_id": "be-self-control-mental-accounting",
+      "derived_page_range": [
+        172,
+        172
+      ],
+      "implied_offset": 20,
+      "offset_expected_page": 172,
+      "quote_head": "wealth is assumed to be divided into three \"mental\" accounts: (1) current income, (2) curr",
+      "recall": null,
+      "skeleton_page_range_read": [
+        152,
+        152
+      ],
+      "source_id": "bf_pompian_2006_bfwm",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          194,
+          194
+        ]
+      ],
+      "card_id": "be-self-control-mental-accounting",
+      "derived_page_range": [
+        194,
+        194
+      ],
+      "implied_offset": 20,
+      "offset_expected_page": 194,
+      "quote_head": "the difficulty individuals have in addressing interactions between investments leads inves",
+      "recall": null,
+      "skeleton_page_range_read": [
+        174,
+        174
+      ],
+      "source_id": "bf_pompian_2006_bfwm",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          191,
+          191
+        ]
+      ],
+      "card_id": "be-self-control-mental-accounting",
+      "derived_page_range": [
+        191,
+        191
+      ],
+      "implied_offset": 20,
+      "offset_expected_page": 191,
+      "quote_head": "mental accounting describes people's tendency to code, categorize, and evaluate economic o",
+      "recall": null,
+      "skeleton_page_range_read": [
+        171,
+        171
+      ],
+      "source_id": "bf_pompian_2006_bfwm",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          276,
+          276
+        ]
+      ],
+      "card_id": "be-sparsity-attention-framework",
+      "derived_page_range": [
+        276,
+        276
+      ],
+      "implied_offset": 0,
+      "offset_expected_page": 276,
+      "quote_head": "people anchor on a simple perception of the world, and partially adjusts toward it",
+      "recall": null,
+      "skeleton_page_range_read": [
+        276,
+        276
+      ],
+      "source_id": "bf_hbe_vol2_2019",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          300,
+          300
+        ]
+      ],
+      "card_id": "be-sparsity-attention-framework",
+      "derived_page_range": [
+        300,
+        300
+      ],
+      "implied_offset": 0,
+      "offset_expected_page": 300,
+      "quote_head": "In the sparse max, the agent optimizes in two steps.",
+      "recall": null,
+      "skeleton_page_range_read": [
+        300,
+        300
+      ],
+      "source_id": "bf_hbe_vol2_2019",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          302,
+          302
+        ]
+      ],
+      "card_id": "be-sparsity-attention-framework",
+      "derived_page_range": [
+        302,
+        302
+      ],
+      "implied_offset": 0,
+      "offset_expected_page": 302,
+      "quote_head": "Eliminate each feature of the world that would change the action by only a small amount",
+      "recall": null,
+      "skeleton_page_range_read": [
+        302,
+        302
+      ],
+      "source_id": "bf_hbe_vol2_2019",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 0,
+      "candidate_windows": [],
+      "card_id": "be-square-root-impact-zero-intelligence",
+      "derived_page_range": [
+        420,
+        420
+      ],
+      "implied_offset": 18,
+      "offset_expected_page": 420,
+      "quote_head": "there is now overwhelming empirical evidence ruling out the simple linear impact law, and ",
+      "recall": 1.0,
+      "skeleton_page_range_read": [
+        402,
+        402
+      ],
+      "source_id": "bf_compecon_v4_2018_ham",
+      "status": "recall_located"
+    },
+    {
+      "candidate_count": 0,
+      "candidate_windows": [],
+      "card_id": "be-square-root-impact-zero-intelligence",
+      "derived_page_range": [
+        424,
+        424
+      ],
+      "implied_offset": 18,
+      "offset_expected_page": 424,
+      "quote_head": "In the Santa-Fe 'Zero-Intelligence' model, order flows are completely random and assumed t",
+      "recall": 1.0,
+      "skeleton_page_range_read": [
+        406,
+        406
+      ],
+      "source_id": "bf_compecon_v4_2018_ham",
+      "status": "recall_located"
+    },
+    {
+      "candidate_count": 0,
+      "candidate_windows": [],
+      "card_id": "be-square-root-impact-zero-intelligence",
+      "derived_page_range": [
+        420,
+        420
+      ],
+      "implied_offset": 18,
+      "offset_expected_page": 420,
+      "quote_head": "I(Q, T) ~ Y sigma_T (Q / V_T)^delta",
+      "recall": null,
+      "skeleton_page_range_read": [
+        402,
+        402
+      ],
+      "source_id": "bf_compecon_v4_2018_ham",
+      "status": "reviewed_override"
+    },
+    {
+      "candidate_count": 0,
+      "candidate_windows": [],
+      "card_id": "be-square-root-impact-zero-intelligence",
+      "derived_page_range": [
+        424,
+        424
+      ],
+      "implied_offset": 18,
+      "offset_expected_page": 424,
+      "quote_head": "At each price level p <= m(t) (resp. p >= m(t)), buy (resp. sell) limit orders arrive as a",
+      "recall": 0.933,
+      "skeleton_page_range_read": [
+        406,
+        406
+      ],
+      "source_id": "bf_compecon_v4_2018_ham",
+      "status": "recall_located"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          416,
+          416
+        ]
+      ],
+      "card_id": "be-stylized-facts-financial-markets",
+      "derived_page_range": [
+        416,
+        416
+      ],
+      "implied_offset": 18,
+      "offset_expected_page": 416,
+      "quote_head": "unconditional distribution of returns has fat tails, which decay as a power law for large ",
+      "recall": null,
+      "skeleton_page_range_read": [
+        398,
+        398
+      ],
+      "source_id": "bf_compecon_v4_2018_ham",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 0,
+      "candidate_windows": [],
+      "card_id": "be-stylized-facts-financial-markets",
+      "derived_page_range": [
+        416,
+        416
+      ],
+      "implied_offset": 18,
+      "offset_expected_page": 416,
+      "quote_head": "the tail parameter mu is consistently found to be around 3 for a wide variety of different",
+      "recall": 1.0,
+      "skeleton_page_range_read": [
+        398,
+        398
+      ],
+      "source_id": "bf_compecon_v4_2018_ham",
+      "status": "recall_located"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          417,
+          417
+        ]
+      ],
+      "card_id": "be-stylized-facts-financial-markets",
+      "derived_page_range": [
+        417,
+        417
+      ],
+      "implied_offset": 18,
+      "offset_expected_page": 417,
+      "quote_head": "The dynamics of financial markets is in fact highly intermittent, with periods of intense ",
+      "recall": null,
+      "skeleton_page_range_read": [
+        399,
+        399
+      ],
+      "source_id": "bf_compecon_v4_2018_ham",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          418,
+          418
+        ]
+      ],
+      "card_id": "be-stylized-facts-financial-markets",
+      "derived_page_range": [
+        418,
+        418
+      ],
+      "implied_offset": 18,
+      "offset_expected_page": 418,
+      "quote_head": "Another striking stylized fact of financial markets is the persistence in the sign of the ",
+      "recall": null,
+      "skeleton_page_range_read": [
+        400,
+        400
+      ],
+      "source_id": "bf_compecon_v4_2018_ham",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          90,
+          90
+        ]
+      ],
+      "card_id": "be-three-frameworks-behavioral-asset-pricing",
+      "derived_page_range": [
+        90,
+        90
+      ],
+      "implied_offset": 0,
+      "offset_expected_page": 90,
+      "quote_head": "The center of gravity in behavioral finance lies in just three frameworks: the extrapolati",
+      "recall": null,
+      "skeleton_page_range_read": [
+        90,
+        90
+      ],
+      "source_id": "bf_hbe_vol1_2018",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          90,
+          90
+        ]
+      ],
+      "card_id": "be-three-frameworks-behavioral-asset-pricing",
+      "derived_page_range": [
+        90,
+        90
+      ],
+      "implied_offset": 0,
+      "offset_expected_page": 90,
+      "quote_head": "extrapolation is most helpful for explaining fluctuations in financial markets, overconfid",
+      "recall": null,
+      "skeleton_page_range_read": [
+        90,
+        90
+      ],
+      "source_id": "bf_hbe_vol1_2018",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          88,
+          88
+        ]
+      ],
+      "card_id": "be-three-frameworks-behavioral-asset-pricing",
+      "derived_page_range": [
+        88,
+        88
+      ],
+      "implied_offset": 0,
+      "offset_expected_page": 88,
+      "quote_head": "Research in behavioral finance has tried to improve the psychological realism of the tradi",
+      "recall": null,
+      "skeleton_page_range_read": [
+        88,
+        88
+      ],
+      "source_id": "bf_hbe_vol1_2018",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          130,
+          130
+        ]
+      ],
+      "card_id": "be-value-anomaly",
+      "derived_page_range": [
+        130,
+        130
+      ],
+      "implied_offset": 9,
+      "offset_expected_page": 130,
+      "quote_head": "Stocks with very high valuations relative to their assets or earnings (growth or glamour s",
+      "recall": null,
+      "skeleton_page_range_read": [
+        121,
+        121
+      ],
+      "source_id": "bf_shleifer_2000_inefficient_markets",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          133,
+          133
+        ]
+      ],
+      "card_id": "be-value-anomaly",
+      "derived_page_range": [
+        133,
+        133
+      ],
+      "implied_offset": 9,
+      "offset_expected_page": 133,
+      "quote_head": "Investor expectations of future growth implied by the pricing multiples appear to be exces",
+      "recall": null,
+      "skeleton_page_range_read": [
+        124,
+        124
+      ],
+      "source_id": "bf_shleifer_2000_inefficient_markets",
+      "status": "auto"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_windows": [
+        [
+          133,
+          133
+        ]
+      ],
+      "card_id": "be-value-anomaly",
+      "derived_page_range": [
+        133,
+        133
+      ],
+      "implied_offset": 9,
+      "offset_expected_page": 133,
+      "quote_head": "He finds that analysts are excessively bullish about the stocks they are most optimistic a",
+      "recall": null,
+      "skeleton_page_range_read": [
+        124,
+        124
+      ],
+      "source_id": "bf_shleifer_2000_inefficient_markets",
+      "status": "auto"
+    }
+  ],
+  "schema_version": "cfa.bf_page_derivation_ledger.v1",
+  "source_median_offset": {
+    "bf_barberis_jin_wang_2021_pt_anomalies": 1,
+    "bf_compecon_v4_2018_ham": 18,
+    "bf_gennaioli_shleifer_2018_crisis_beliefs": 13,
+    "bf_hbe_vol1_2018": 0,
+    "bf_hbe_vol2_2019": 0,
+    "bf_pompian_2006_bfwm": 20,
+    "bf_shleifer_2000_inefficient_markets": 9,
+    "bf_wakker_2010_pt_risk_ambiguity": 16
+  },
+  "status_counts": {
+    "ambiguous": 0,
+    "auto": 169,
+    "recall_located": 45,
+    "reviewed_override": 12,
+    "unresolved": 0
+  },
+  "status_legend": {
+    "auto": "loose-verbatim quote found on exactly one page-window — the PDF page is that window",
+    "recall_located": "verbatim (even loose) failed because the quote transcribes math notation (C_1->C1, gamma->γ, ∈->2) or elides text with '...'; the page is the UNIQUE clear maximum of content-word recall (>= 0.80, beats runner-up by >= 0.10). The resolver verbatim-binds within this window via its equation/boundary repair.",
+    "reviewed_override": "human-reviewed page from bf_page_derivation_overrides.json, verified by a distinctive evidence_quote that loose-verbatim appears in the window"
+  },
+  "unresolved_or_ambiguous": 0
+}

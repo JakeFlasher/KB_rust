@@ -79,8 +79,9 @@ CHUNKS_MANIFEST = OUT / "chunks_manifest.json"
 CARDS_MANIFEST = OUT / "cards_manifest.json"
 QUEUE = REGISTRY / "card_migration_queue.json"
 
+CFA_READING = Path(os.environ.get("KB_CFA_READING", str(Path.home() / "CFA_reading")))
 DEFAULT_SKELETON_ROOT = Path(
-    os.environ.get("KB_MIGRATION_SKELETON_ROOT", str(Path.home() / "CFA_reading/deferred_books"))
+    os.environ.get("KB_MIGRATION_SKELETON_ROOT", str(CFA_READING / "deferred_books"))
 )
 
 REGISTRY_SCHEMA_VERSION = "cfa.migration_curated_citations.v1"
@@ -96,18 +97,25 @@ class Reading(NamedTuple):
     set_dir: str
     prefix: str
     card_count: int
+    skeleton_base: Path
 
 
-# The three migrated readings. ``card_count`` is the published cardinality and
-# acts as a fixed tripwire: a skeleton directory that silently gains or loses a
-# card is rejected even if the registry agrees with it.
+# The migrated readings. ``card_count`` is the published cardinality and acts as a
+# fixed tripwire: a skeleton directory that silently gains or loses a card is rejected
+# even if the registry agrees with it. 14/15/22 live under deferred_books/; the 10/11
+# template decks live directly under CFA_reading/ (their skeleton_base differs). The
+# read-only skeleton dir for each is <skeleton_base>/<set_dir>/_card_skeletons/<reading_id>/.
 READINGS: list[Reading] = [
     Reading("14_microstructure_and_trading", "mt_14_curated_citations.json",
-            "14_Microstructure_and_Trading", "mt-", 73),
+            "14_Microstructure_and_Trading", "mt-", 73, DEFAULT_SKELETON_ROOT),
     Reading("15_performance_and_attribution", "pa_15_curated_citations.json",
-            "15_Performance_and_Attribution", "pa-", 35),
+            "15_Performance_and_Attribution", "pa-", 35, DEFAULT_SKELETON_ROOT),
     Reading("22_fund_level_arbitrage", "fa_22_curated_citations.json",
-            "22_Fund_Level_Arbitrage", "fa-", 26),
+            "22_Fund_Level_Arbitrage", "fa-", 26, DEFAULT_SKELETON_ROOT),
+    Reading("10_behavioral_finance", "bf_10_curated_citations.json",
+            "10_Behavioral_Finance", "be-", 64, CFA_READING),
+    Reading("11_risk_management", "rm_11_curated_citations.json",
+            "11_Risk_Management", "rm-", 28, CFA_READING),
 ]
 
 QUEUE_ADDITIONS_SCHEMA = "cfa.migration_queue_additions.v1"
@@ -262,10 +270,19 @@ def load_registry_cards(reading: Reading) -> dict[str, dict[str, Any]]:
     return by_id
 
 
-def skeleton_ids(reading: Reading, skeleton_root: Path) -> set[str]:
+def skeleton_dir_for(reading: Reading, override_root: Path | None) -> Path:
+    """The read-only skeleton directory for a reading. Each reading defaults to its
+    own deck base (14/15/22 -> deferred_books, 10/11 -> CFA_reading); a non-None
+    ``override_root`` (--skeleton-root / $KB_MIGRATION_SKELETON_ROOT) overrides the base
+    for ALL readings (used by tests / relocated checkouts)."""
+    base = override_root if override_root is not None else reading.skeleton_base
+    return base / reading.set_dir / "_card_skeletons" / reading.reading_id
+
+
+def skeleton_ids(reading: Reading, override_root: Path | None) -> set[str]:
     """The authored card-id set on disk for a reading (every ``*.md`` whose name
     is not ``INDEX.md`` and does not start with ``_``)."""
-    d = skeleton_root / reading.set_dir / "_card_skeletons" / reading.reading_id
+    d = skeleton_dir_for(reading, override_root)
     if not d.is_dir():
         raise SystemExit(f"skeleton directory not found: {d}")
     ids: set[str] = set()
@@ -333,20 +350,37 @@ def reconcile_queue(queue: dict[str, Any], new_records: list[dict[str, Any]]) ->
     return queue
 
 
-def emit(skeleton_root: Path, *, force: bool, dry_run: bool, cross_links_path: Path) -> dict[str, Any]:
+def emit(override_root: Path | None, *, force: bool, dry_run: bool, cross_links_path: Path,
+         readings: set[str] | None = None) -> dict[str, Any]:
     manifest = read_json(CHUNKS_MANIFEST)
     chunks_by_id = {c["chunk_id"]: c for c in manifest["chunks"]}
     retracted_chunks = set(manifest.get("retracted_chunk_ids", []))
     retracted_sources = set(manifest.get("retracted_source_ids", []))
     matrix_allowed = read_json(SOURCE_MATRIX)["allowed"]
-    # The PRE-MIGRATION published id set: cards in readings OTHER than the migrated
-    # ones. After the v1 `kb index` the manifest also contains the 134 migrated ids,
-    # so a rerun from the released tree must not treat a migrated card's own published
-    # id as a collision — the guard only catches a new id clashing with a released
-    # (non-migrated-reading) card.
-    migrated_reading_ids = {r.reading_id for r in READINGS}
-    published_ids = {c["id"] for c in read_json(CARDS_MANIFEST)["cards"]
-                     if c.get("reading_id") not in migrated_reading_ids}
+
+    # Scope the run to the requested readings (default: every reading this emitter owns).
+    # A migration that lands additively scopes to its own decks so it writes ONLY its
+    # net-new cards and never touches the already-released readings (whose on-disk cards
+    # carry a `kb index`-stamped `card_hash` the emitter does not render).
+    known = {r.reading_id for r in READINGS}
+    if readings is not None:
+        unknown = sorted(readings - known)
+        if unknown:
+            raise SystemExit(f"--readings names reading(s) this emitter does not own: {unknown}")
+    selected = [r for r in READINGS if readings is None or r.reading_id in readings]
+    if not selected:
+        raise SystemExit("no readings selected to emit")
+
+    # The exact net-new id set this run owns = the skeleton ids across the selected
+    # readings. ``published_ids`` is every already-published id EXCEPT those, so a new
+    # card colliding with ANY pre-existing card — INCLUDING a live card in a migrated
+    # reading (the 5 live be-/24 live rm- cards) — is caught, while a re-emit of an
+    # already-released migrated card is not flagged as a self-collision (its own id is
+    # now in the manifest but also in the emitted set, so it is excluded).
+    emitted_ids: set[str] = set()
+    for reading in selected:
+        emitted_ids |= skeleton_ids(reading, override_root)
+    published_ids = {c["id"] for c in read_json(CARDS_MANIFEST)["cards"]} - emitted_ids
     # Cross-reading See Also links for the documented overlap pairs are injected
     # into each new card's body from the committed map (the released-card side is
     # applied separately, since those cards are not emitted from skeletons). The map
@@ -360,13 +394,13 @@ def emit(skeleton_root: Path, *, force: bool, dry_run: bool, cross_links_path: P
     planned: list[tuple[Path, str]] = []
     new_records: list[dict[str, Any]] = []
     seen_new: dict[str, str] = {}
-    for reading in READINGS:
+    for reading in selected:
         if reading.reading_id not in matrix_allowed:
             raise SystemExit(f"{reading.reading_id}: not authorized in source_matrix")
         allowed = set(matrix_allowed[reading.reading_id])
         by_id = load_registry_cards(reading)
         registry_ids = set(by_id)
-        disk_ids = skeleton_ids(reading, skeleton_root)
+        disk_ids = skeleton_ids(reading, override_root)
         guard_reading_id_set(reading, registry_ids, disk_ids)
         for cid in sorted(registry_ids):
             if cid in seen_new:
@@ -384,9 +418,7 @@ def emit(skeleton_root: Path, *, force: bool, dry_run: bool, cross_links_path: P
                     chunks_by_id=chunks_by_id, retracted_chunks=retracted_chunks,
                     retracted_sources=retracted_sources,
                 )
-            body = split_skeleton(
-                skeleton_root / reading.set_dir / "_card_skeletons" / reading.reading_id / f"{cid}.md"
-            )
+            body = split_skeleton(skeleton_dir_for(reading, override_root) / f"{cid}.md")
             body = apply_prose_rewrites(body, rewrites_by_card.get(cid, []))
             if cid in new_card_links:
                 body = inject_links(body, new_card_links[cid])
@@ -419,7 +451,7 @@ def emit(skeleton_root: Path, *, force: bool, dry_run: bool, cross_links_path: P
         )
 
     return {
-        "readings": {r.reading_id: r.card_count for r in READINGS},
+        "readings": {r.reading_id: r.card_count for r in selected},
         "cards_planned": len(planned),
         "cards_written": written,
         "queue_records": len(new_records),
@@ -544,9 +576,14 @@ def _self_test() -> int:
 
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
-    ap.add_argument("--skeleton-root", type=Path, default=DEFAULT_SKELETON_ROOT,
-                    help="root holding <set-dir>/_card_skeletons/<reading_id>/ "
-                         "(default: $KB_MIGRATION_SKELETON_ROOT or ~/CFA_reading/deferred_books)")
+    ap.add_argument("--skeleton-root", type=Path, default=None,
+                    help="override the deck base for ALL readings (each reading otherwise uses its "
+                         "own base: 14/15/22 -> deferred_books, 10/11 -> CFA_reading). The skeleton "
+                         "dir is <base>/<set-dir>/_card_skeletons/<reading_id>/ (tests / relocated checkouts)")
+    ap.add_argument("--readings", type=str, default=None,
+                    help="comma-separated reading_id(s) to emit (default: every reading this emitter "
+                         "owns). An additive migration scopes to its own decks, e.g. "
+                         "--readings 10_behavioral_finance,11_risk_management")
     ap.add_argument("--force", action="store_true",
                     help="overwrite an existing card whose bytes differ from the rendered output")
     ap.add_argument("--dry-run", action="store_true", help="validate everything, write nothing")
@@ -557,8 +594,9 @@ def main() -> int:
     args = ap.parse_args()
     if args.self_test:
         return _self_test()
+    readings = {r.strip() for r in args.readings.split(",") if r.strip()} if args.readings else None
     result = emit(args.skeleton_root, force=args.force, dry_run=args.dry_run,
-                  cross_links_path=args.cross_links)
+                  cross_links_path=args.cross_links, readings=readings)
     print(json.dumps(result, indent=2))
     return 0
 

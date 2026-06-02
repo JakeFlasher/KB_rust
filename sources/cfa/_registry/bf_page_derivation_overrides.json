@@ -1,0 +1,126 @@
+{
+  "schema_version": "cfa.bf_page_derivation_overrides.v1",
+  "note": "Human-reviewed PDF page-windows for BF citations that the verbatim (loose) + recall page-locator could not resolve (math/formula/elision quotes, or a verbatim phrase appearing on >1 page). Each override is VERIFIED: its evidence_quote (a distinctive prose phrase read on the named page) must loose-verbatim appear in the page-window, else derive_bf_citation_pages.py fails loud. The resolver then binds the actual (math) quote within this window via its documented equation/boundary repair.",
+  "overrides": [
+    {
+      "source_id": "bf_barberis_jin_wang_2021_pt_anomalies",
+      "quote": "Our preference parameter values are therefore (alpha, delta, lambda) = (0.7, 0.65, 1.5)",
+      "page_range": [
+        33,
+        33
+      ],
+      "evidence_quote": "preference parameter values",
+      "reason": "Parameter-value quote (alpha,delta,lambda); not verbatim under any extraction. Printed 32 + offset (+1) = 33, which states the preference parameter values. Resolver re-anchors to prose on this page."
+    },
+    {
+      "source_id": "bf_barberis_jin_wang_2021_pt_anomalies",
+      "quote": "since they are loss-averse, they dislike assets with volatile returns; all else equal, they require a higher average return on these assets",
+      "page_range": [
+        11,
+        11
+      ],
+      "evidence_quote": "dislike assets with volatile returns",
+      "reason": "Elision/typography quote; printed 10 + offset (+1) = 11 (recall 1.0). Resolver re-anchors."
+    },
+    {
+      "source_id": "bf_barberis_jin_wang_2021_pt_anomalies",
+      "quote": "the price of an asset will depend in part on three asset characteristics: the volatility of the asset's returns, the skewness of the asset's returns, and the average prior gain or loss",
+      "page_range": [
+        2,
+        3
+      ],
+      "evidence_quote": "depend in part on three asset",
+      "reason": "Quote spans the page-2/3 boundary; printed [1,2] + offset (+1). Page 2 carries \"the price of an asset will depend in part on three asset\". Resolver binds within [2,3]."
+    },
+    {
+      "source_id": "bf_compecon_v4_2018_ham",
+      "quote": "A level-1 (L1) player anticipates this and chooses the best response, 50 * 2/3 = 33.33, if b = 2/3. A level-2 (L2) player anticipates a level-1 player's choice and chooses 22.22 = 50 * (2/3)^2.",
+      "page_range": [
+        602,
+        602
+      ],
+      "evidence_quote": "best response",
+      "reason": "Math quote (50*2/3...); printed 584 + offset (+18) = 602, the level-k best-response discussion (recall 1.0). Resolver re-anchors."
+    },
+    {
+      "source_id": "bf_compecon_v4_2018_ham",
+      "quote": "I(Q, T) ~ Y sigma_T (Q / V_T)^delta",
+      "page_range": [
+        420,
+        420
+      ],
+      "evidence_quote": "square-root impact law",
+      "reason": "Pure formula; printed 402 + offset (+18) = 420, the square-root impact law page carrying I(Q,T) approx Y sigmaT (Q/VT)^delta. Resolver re-anchors to prose."
+    },
+    {
+      "source_id": "bf_compecon_v4_2018_ham",
+      "quote": "the market price is determined by the market maker as follows, p_{t+1} = p_t + lambda Z_{e,t} = p_t + mu z_{e,t} + delta_t",
+      "page_range": [
+        283,
+        283
+      ],
+      "evidence_quote": "the market maker",
+      "reason": "Math quote (p_{t+1}=...); printed 265 + offset (+18) = 283. Resolver re-anchors."
+    },
+    {
+      "source_id": "bf_compecon_v4_2018_ham",
+      "quote": "where beta measures the intensity of the choice and C_h >= 0 the cost.",
+      "page_range": [
+        284,
+        284
+      ],
+      "evidence_quote": "intensity of the choice",
+      "reason": "Math quote (beta, C_h); printed 266 + offset (+18) = 284, the discrete-choice intensity discussion. Resolver re-anchors."
+    },
+    {
+      "source_id": "bf_gennaioli_shleifer_2018_crisis_beliefs",
+      "quote": "It displays stronger reversals than fundamentals",
+      "page_range": [
+        194,
+        194
+      ],
+      "evidence_quote": "It displays stronger reversals than fundamentals",
+      "reason": "Verbatim on PDF pages 194 and 236; printed page 181 + the sources learned printed->PDF offset (+13) selects 194 (the cited occurrence); 236 is a later coincidental reuse."
+    },
+    {
+      "source_id": "bf_hbe_vol2_2019",
+      "quote": "the sample proportion ... is strength and the sample size (N) is weight",
+      "page_range": [
+        155,
+        155
+      ],
+      "evidence_quote": "is strength and the sample size",
+      "reason": "Elision quote (\" ... \"); printed 155 + offset (0) = 155, carrying \"the sample proportion ... is strength and the sample size (N) is weight\". Resolver re-anchors/trims."
+    },
+    {
+      "source_id": "bf_hbe_vol2_2019",
+      "quote": "they estimate beta = 0.51, delta = 0.99, and a coefficient of relative risk aversion of 1.3",
+      "page_range": [
+        47,
+        47
+      ],
+      "evidence_quote": "coefficient of relative risk aversion",
+      "reason": "Estimate quote (beta, delta values); printed 47 + offset (0) = 47. Resolver re-anchors to prose on this page."
+    },
+    {
+      "source_id": "bf_wakker_2010_pt_risk_ambiguity",
+      "quote": "PT(x) = PT(x+) + PT(x-).",
+      "page_range": [
+        270,
+        271
+      ],
+      "evidence_quote": "RDU functional applied",
+      "reason": "Pure formula (PT decomposition); pdftotext renders + as thorn. The decomposition prose is on pp.270-271 (PT functional as the sum of an RDU functional applied to gains ... applied to losses). Printed 254 + offset (~+16). Resolver re-anchors."
+    },
+    {
+      "source_id": "bf_wakker_2010_pt_risk_ambiguity",
+      "quote": "decision weight = marginal w-contribution of outcome probability to rank.",
+      "page_range": [
+        182,
+        182
+      ],
+      "evidence_quote": "marginal w contribution",
+      "reason": "Typography quote (w-contribution vs \"w contribution\"); page 182 defines \"the marginal w contribution of its outcome probability p to its rank\". Resolver re-anchors."
+    }
+  ]
+}
