@@ -53,7 +53,6 @@ REGISTRY = ROOT / "sources/cfa/_registry"
 OUT = ROOT / "out/cfa"
 CHUNKS_MANIFEST = OUT / "chunks_manifest.json"
 SOURCE_MATRIX = OUT / "source_matrix.json"
-CARDS_MANIFEST = OUT / "cards_manifest.json"
 KB_BINARY = ROOT / "target/debug/kb"
 DEFERRED = Path(os.environ.get("KB_DEFERRED_ORIGIN", "/home/jakeshea/CFA_reading/deferred_books"))
 CFA_READING = Path(os.environ.get("KB_CFA_READING", "/home/jakeshea/CFA_reading"))
