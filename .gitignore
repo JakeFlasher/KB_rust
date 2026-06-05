@@ -50,6 +50,12 @@ crates/cacg-cli/out/
 /framework.tar.gz
 *.tar.gz
 
+# Large PDF payloads travel outside git. Use scripts/pdf-archive.py to create
+# a path-preserving archive before committing a source-only repository.
+*.pdf
+*.PDF
+/.pdf-archives/
+
 # Local-only loop state (loop trackers, round summaries, contracts, skill artifacts)
 .humanize*
 .stress/
@@ -77,4 +83,3 @@ perf-reports/
 # real card on disk. Treat as a runtime artifact until QS-2 swaps
 # the test to a still-unimplemented verb.
 crates/cacg-cli/cards/
-

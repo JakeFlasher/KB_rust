@@ -68,6 +68,133 @@ KB_FROZEN_CLOCK=1 cargo run -p cacg-cli --bin kb -- ingest \
 `KB_FROZEN_CLOCK=1` collapses timestamps and UUIDs in generated artifacts so
 fixture runs are byte-stable.
 
+## PDF archive transport
+
+PDFs are intentionally treated as an external payload: keep the source code in
+git, upload/download the PDF zip somewhere else, then restore the PDFs locally
+when needed. The archive stores repo-relative paths and SHA-256 hashes, so new
+PDFs in future subfolders are picked up automatically when the archive is
+rebuilt.
+
+Create or refresh the local archive:
+
+```bash
+scripts/pdf-archive.py pack --overwrite
+```
+
+Create the archive and stage all tracked PDFs for removal from git while leaving
+the local files on disk:
+
+```bash
+scripts/pdf-archive.py patch --overwrite
+# equivalent to:
+# scripts/pdf-archive.py pack --overwrite --git-rm-cached
+```
+
+The default archive path is `.pdf-archives/repo-pdfs.zip`, which is ignored by
+git. Upload that zip outside git. After cloning the source-only repo elsewhere,
+download the zip and restore the PDFs into their original paths:
+
+```bash
+scripts/pdf-archive.py unpatch --archive /path/to/repo-pdfs.zip
+scripts/pdf-archive.py status --archive /path/to/repo-pdfs.zip
+```
+
+## Exporting a deck into another project
+
+`scripts/export-knowledge.sh` copies one deck (cards + the consumer-facing
+manifests) into a downstream project in a structured, tiered layout — for
+example as a `.claude/knowledge/` knowledge base for the humanize RLCR harness.
+It reads from the local **working tree** (not `git archive`): the
+consumer-critical `source_matrix.json`, `chunks_manifest.json`, and
+`summaries.sqlite` are gitignored build artifacts that exist on disk but are
+never committed.
+
+```bash
+# Default: query tier (browse + `kb search`/`kb show`), deck cfa, into <target>/.claude/knowledge
+scripts/export-knowledge.sh /path/to/target-project
+
+# Verify tier also ships chunks_manifest.json so `kb verify` works in the target
+scripts/export-knowledge.sh /path/to/target-project --tier verify
+
+# Preview the plan without writing anything
+scripts/export-knowledge.sh /path/to/target-project --tier full --dry-run
+```
+
+### Tiers
+
+| Tier | Size | Adds | Enables |
+|------|------|------|---------|
+| `query` (default) | ~9 MB | cards + small manifests (`source_matrix`, `cards_manifest`, `summaries`, `INDEX.md`, `summaries.sqlite`, semantic cache) | browse, `kb search`, `kb show` |
+| `verify` | ~195 MB | + `chunks_manifest.json` (+ reproducibility lock) | `kb verify`, `kb verify --round-summary` |
+| `full` | ~1.3 GB | + `sources/<deck>/` (PDFs + `_registry/`) | re-ingest |
+
+The large `out/<deck>/ingest_per_source/` and any `*.lock` / `lint_journal` /
+`v0_baseline` artifacts are always excluded.
+
+### Options
+
+```
+<TARGET_DIR>             (required) project directory to export into
+--tier query|verify|full what to copy (default: query)
+--deck <name>            deck under cards/ and out/ (default: cfa)
+--dest-root <relpath>    sub-path under TARGET (default: .claude/knowledge)
+--no-sqlite              skip summaries.sqlite (regenerable FTS index)
+--no-semantic            skip out/semantic_cache.json{,.provenance.json}
+--with-binary            also copy the built kb binary into <dest>/bin/kb (platform-specific)
+--force                  overwrite an existing populated dest-root
+--dry-run                print the plan; copy nothing
+-h, --help               usage
+```
+
+Requires `rsync`, `jq`, and `sha256sum` (or `shasum`).
+
+### Output layout
+
+```
+<TARGET>/.claude/knowledge/
+  INDEX.md               card index / primer (humanize reads this)
+  README.md              generated consumer guide
+  EXPORT_MANIFEST.json   receipt: per-file size + sha256, source commit, kb version, tier
+  kb-query.sh            wrapper: ./kb-query.sh {search|show|verify} ...
+  cards/<deck>/...       cards (.md + .history.jsonl), grouped by reading_id
+  out/<deck>/...         source_matrix.json, cards_manifest.json, summaries.json, INDEX.md, ...
+  out/semantic_cache.json (+ provenance)
+  sources/<deck>/...     (full tier only) pdfs/ + _registry/
+```
+
+The script builds into a staging directory **on the target's filesystem** and
+swaps it into place with an atomic rename only after integrity checks pass:
+every copied file is re-hashed against the receipt, every manifested card path
+must be present, `source_matrix.json` must authorize each shipped reading, and —
+when the pinned `kb` binary is available — a `kb index` re-derivation must
+reproduce `cards_manifest.json` byte-for-byte.
+
+### Querying an export
+
+```bash
+cargo build --release -p cacg-cli          # produces target/release/kb (reports "kb 0.1.0")
+cd /path/to/target-project/.claude/knowledge
+KB_BIN=/path/to/target/release/kb ./kb-query.sh search "duration convexity" --top-k 5 --json
+KB_BIN=/path/to/target/release/kb ./kb-query.sh show fi-duration-and-convexity
+```
+
+The wrapper `cd`s into the export root because `cards_manifest.json` stores
+repo-relative card paths that `kb show` resolves against the working directory.
+Verify the export at any time with the commands printed in the generated
+`README.md` (per-file sha256 against the receipt, plus a `kb index` re-derivation
+diff).
+
+### humanize integration
+
+A query-tier export lands `INDEX.md` at `.claude/knowledge/INDEX.md`, where the
+humanize RLCR harness expects its knowledge primer. With the companion
+`kb-knowledge-route.sh` `UserPromptSubmit` hook and `kb_enabled: true` in the
+project's `.humanize/config.json`, each prompt auto-routes matching cards; a
+round summary's `## Knowledge Consulted` section can then be content-verified
+with `kb verify --round-summary` (verify tier). See
+[`docs/integration-with-humanize.md`](docs/integration-with-humanize.md).
+
 ## Verification Model
 
 ```
@@ -128,6 +255,7 @@ tests/adversarial/       12 one-code adversarial fixtures
 cards/cfa/        active migrated CFA cards and history sidecars
 sources/cfa/      staged CFA source corpus and registry
 out/cfa/          committed release manifests and rebuild recipes
+scripts/                 operator scripts (export-knowledge.sh: tiered deck export)
 docs/                    current operator and architecture documentation
 ```
 
