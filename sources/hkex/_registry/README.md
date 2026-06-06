@@ -14,8 +14,11 @@ registry. They read but never write `cards/cfa/**`, `out/cfa/**`, or `sources/cf
 | `corpus_model.py` | Parse `corpus_complete.md` into utterances; separate each `★AUTHOR` citable text from its `(↪in reply to …)` parent context. | `python3 corpus_model.py` |
 | `render_corpus_pdf.py` | Deterministic Noto-CJK renderer → `goubujiao_corpus.pdf`. | `--write` / `--check-determinism` / `--self-test` |
 | `check_corpus_parity.py` | Corpus→PDF parity proof (ingest + per-page containment + id mapping over every author utterance). | `--check` |
+| `check_cjk_ingest_spike.py` | CJK ingest parity SPIKE (AC-3, hard gate before authoring): ingest with the CJK config; prove single-chunk **author-origin** verbatim binding of all 192 candidate seed quotes (lengthen/pid-correct/recurrence; reject `//@non-author` repost spans) + edge/exclusion fixtures; control-char gate; synthetic `kb verify`. | `--check` |
 
-Committed evidence: `renderer_provenance.json`, `parity_report.json`, `cfa_isolation_baseline.json`.
+Committed evidence: `renderer_provenance.json`, `parity_report.json`, `cfa_isolation_baseline.json`,
+`cjk_ingest_spike_report.json`. The spike's reusable ingest output lives (gitignored) under
+`out/hkex/ingest_per_source/goubujiao_xueqiu_corpus/` and is regenerated idempotently.
 
 ## Rebuilding the local-only artifacts
 
@@ -37,6 +40,8 @@ cargo build --workspace                                                  # produ
 python3 sources/hkex/_registry/render_corpus_pdf.py --write              # PDF + provenance
 python3 sources/hkex/_registry/render_corpus_pdf.py --check-determinism  # 3 subprocs -> identical SHA == provenance
 python3 sources/hkex/_registry/check_corpus_parity.py --check            # corpus->PDF parity PASS
+python3 sources/hkex/_registry/check_cjk_ingest_spike.py --check         # AC-3 ingest spike PASS (single-chunk author-origin binding)
+python3 sources/hkex/_registry/cfa_isolation_guard.py --check            # cfa byte-untouched
 ```
 
 `check_corpus_parity.py` resolves the `kb` binary from `KB_BIN` (if set), else

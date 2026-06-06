@@ -1,0 +1,158 @@
+{
+  "ambiguous_multi_match": [],
+  "attribution_rejected": [
+    {
+      "pid": "223159123",
+      "quote": "依旧认为移动是现在市场上最好的defensive play，电信是最佳的增长与股",
+      "repost_users": [
+        "欲辨已忘言-"
+      ],
+      "title": "Telecom sector framework: defensive vs growth, carriers vs cloud, upstream over downstream",
+      "verdict": "faithful"
+    },
+    {
+      "pid": "223159123",
+      "quote": "电信对自己天翼云的估值不低于2000亿元，但是短期内不会分拆。这部分估值在200",
+      "repost_users": [
+        "欲辨已忘言-"
+      ],
+      "title": "Cloud sector thesis: ease-of-adoption moat, hidden-asset optionality, cross-market analog",
+      "verdict": "misattributed"
+    },
+    {
+      "pid": "223159123",
+      "quote": "电信的投资者关系工作人员非常专业，对公司的各个数据和公告了如指掌（让我惊讶），同",
+      "repost_users": [
+        "欲辨已忘言-"
+      ],
+      "title": "IR calls as due diligence and shareholder base as marketing asset",
+      "verdict": "misattributed"
+    }
+  ],
+  "bound_flag_counts": {
+    "bound_clean": 187,
+    "lengthened": 0,
+    "pid_corrected": 1,
+    "recurrence": 1
+  },
+  "candidate_count": 73,
+  "chunk_count": 6970,
+  "config": {
+    "max_pages_per_chunk": 1,
+    "overlap_tokens": 0,
+    "target_tokens": 100000
+  },
+  "control_char_failures": [],
+  "edge_fixtures": {
+    "negative_context_status": "zero_match",
+    "negative_repost_status": "attribution_rejected",
+    "ok": true,
+    "positives": [
+      {
+        "au": "1",
+        "quote": "除非大幅低于行駛價",
+        "status": "bound",
+        "token": "行駛"
+      },
+      {
+        "au": "1",
+        "quote": "是特別股息，行使價被調整為11.31",
+        "status": "bound",
+        "token": "行使"
+      },
+      {
+        "au": "1",
+        "quote": "稅，所以轉成石鼓變得沒有意義",
+        "status": "bound",
+        "token": "石鼓"
+      },
+      {
+        "au": "1",
+        "quote": "，以個人名義實物方式持有都不用交稅。",
+        "status": "bound",
+        "token": "實物"
+      },
+      {
+        "au": "1",
+        "quote": ".5元，最近除淨，由於是特別股息，行",
+        "status": "bound",
+        "token": "除淨"
+      },
+      {
+        "au": "1",
+        "quote": "call算是半裸吧？如無意外，我明天",
+        "status": "bound",
+        "token": "半裸"
+      },
+      {
+        "au": "1",
+        "quote": "l call$中国海洋石油(0088",
+        "status": "bound",
+        "token": "$"
+      },
+      {
+        "au": "1",
+        "quote": "28我要10%。如果是內資，應該$中",
+        "status": "bound",
+        "token": "%"
+      }
+    ]
+  },
+  "ingest_dir": "out/hkex/ingest_per_source/goubujiao_xueqiu_corpus",
+  "ingest_runtime_secs": 1.1,
+  "kb_binary": "target/debug/kb",
+  "lengthened_binds": [],
+  "note": "attribution_rejected entries are commenter-original quotes the author reposted via //@<non-author> (e.g. post 223159123 / Tianyi-Cloud, research §3.1/§5.2 misattributed exclusion); the spike correctly refuses to bind them as author-origin. They are excluded from authoring (AC-8).",
+  "pdf_page_count": 6970,
+  "pdf_sha256": "452e853d8ae0e8a9ba11b5198b4a05c931fa6bf45674eb0d8137f5645ee7b53f",
+  "pid_corrected_binds": [
+    {
+      "bound_kind": "areply",
+      "bound_pid": "223366919",
+      "quote": "同意最後一句",
+      "seed_pid": "223301216"
+    }
+  ],
+  "recurrence_binds": [
+    {
+      "alternatives": [
+        "goubujiao_xueqiu_corpus:p2491:2490"
+      ],
+      "pid": "223426897",
+      "quote": "不偏離行權價"
+    }
+  ],
+  "schema_version": "hkex.cjk_ingest_spike_report.v1",
+  "seed_count": 192,
+  "smoke_errors": [],
+  "status_counts": {
+    "attribution_rejected": 3,
+    "bound": 189
+  },
+  "synthetic_verify": [
+    {
+      "card_id": "gbj-spike-synth-0",
+      "chunk_id": "goubujiao_xueqiu_corpus:p461:0460",
+      "err": null,
+      "pass": true,
+      "reading_id": "07_derivatives_and_volatility"
+    },
+    {
+      "card_id": "gbj-spike-synth-1",
+      "chunk_id": "goubujiao_xueqiu_corpus:p2017:2016",
+      "err": null,
+      "pass": true,
+      "reading_id": "11_risk_management"
+    },
+    {
+      "card_id": "gbj-spike-synth-2",
+      "chunk_id": "goubujiao_xueqiu_corpus:p1914:1913",
+      "err": null,
+      "pass": true,
+      "reading_id": "05_equity"
+    }
+  ],
+  "unprincipled_rejections": [],
+  "verdict": "PASS",
+  "zero_match": []
+}

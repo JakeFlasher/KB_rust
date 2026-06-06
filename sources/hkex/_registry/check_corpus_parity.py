@@ -240,10 +240,10 @@ def main() -> int:
             if not m or m.group(5) != "0":
                 au_bad += 1
 
-        # control chars across all chunks
-        BAD = {"\x02", "￾", "�"}
+        # control chars across all chunks: C0 (except \n\t\r), DEL, C1, and U+FFFE/U+FFFD.
         ctrl = sorted({hex(ord(ch)) for c in chunks for ch in c["text"]
-                       if (ord(ch) < 0x20 and ch not in "\n\t\r") or ch in BAD})
+                       if (ord(ch) < 0x20 and ch not in "\n\t\r") or ord(ch) == 0x7F
+                       or 0x80 <= ord(ch) <= 0x9F or ch in ("￾", "�")})
 
         # length-matched fail-closed negative control (18 fabricated chars)
         full_norm = normalize_text(" ".join(pages.values()))
