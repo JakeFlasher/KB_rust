@@ -18,7 +18,9 @@ registry. They read but never write `cards/cfa/**`, `out/cfa/**`, or `sources/cf
 | `run_ingest_per_source.py` | Per-source ingest runner (AC-4): ingests each `ingest_plan.json` source into `out/hkex/ingest_per_source/<source_id>/` with a per-source chunk `--config`; clobber/partial fail closed; resumable; resolves `kb` fail-closed. | (run) / `--force` |
 | `merge_hkex_manifests.py` | Deterministic merge (AC-4): composes `out/hkex/{chunks,sources}_manifest.json` (validate one-source/manifest, recompute `source_sha256`+`chunk_hash`, dedup, canonical sort, atomic, byte-identical re-run); writes the committed `ingest_merge_report.json`. | (run) / `--self-test` |
 | `html_to_pdf.py` | Deterministic HTML→text-layer PDF recipe (AC-4) for the IRD/IFEC HTML grounding sources; records a `.provenance.json`. | `--html … --out …` / `--self-test` |
+| `validate_source_matrix.py` | Validates `out/hkex/source_matrix.json` (AC-5): reading_ids ∈ CFA taxonomy; matrix sources ∈ merged `sources_manifest`; Xueqiu authorized for exactly the inventory-derived authorable readings (no blanket); card-aware no-unauthorized/no-unused once cards exist. READING-level only — §5.2 exclusions + ★AUTHOR attribution are AC-8. | (run) / `--self-test` |
 | `seed_overrides.json` / `ingest_plan.json` | Reviewer-authorized seed disambiguations (AC-3); the per-source ingest plan (AC-4). | (data) |
+| `out/hkex/source_matrix.json` | Hand-authored authorization matrix (AC-5), committed via the `.gitignore` re-include chain. | (data) |
 
 Committed evidence: `renderer_provenance.json`, `parity_report.json`, `cfa_isolation_baseline.json`,
 `cjk_ingest_spike_report.json`, `ingest_merge_report.json`. The reusable per-source ingest output
@@ -47,8 +49,10 @@ python3 sources/hkex/_registry/check_corpus_parity.py --check            # corpu
 python3 sources/hkex/_registry/check_cjk_ingest_spike.py --check         # AC-3 ingest spike PASS (single-chunk author-origin binding)
 python3 sources/hkex/_registry/run_ingest_per_source.py --force          # AC-4 per-source ingest -> out/hkex/ingest_per_source/<id>/
 python3 sources/hkex/_registry/merge_hkex_manifests.py --require-count 1  # AC-4 deterministic merge -> out/hkex/{chunks,sources}_manifest.json
-python3 sources/hkex/_registry/merge_hkex_manifests.py --self-test        # AC-4 dedup/clobber/sort/sha/atomic
+python3 sources/hkex/_registry/merge_hkex_manifests.py --self-test        # AC-4 dedup/clobber/sort/sha/atomic/struct
 python3 sources/hkex/_registry/html_to_pdf.py --self-test                 # AC-4 HTML->PDF recipe
+python3 sources/hkex/_registry/validate_source_matrix.py                  # AC-5 source_matrix authorization PASS
+python3 sources/hkex/_registry/validate_source_matrix.py --self-test      # AC-5 negatives
 python3 sources/hkex/_registry/cfa_isolation_guard.py --check            # cfa byte-untouched
 ```
 

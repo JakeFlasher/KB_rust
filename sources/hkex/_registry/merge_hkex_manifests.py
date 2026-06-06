@@ -19,9 +19,12 @@ import argparse
 import hashlib
 import json
 import os
+import re
 import tempfile
 from pathlib import Path
 from typing import Any
+
+_HEX64 = re.compile(r"^[0-9a-f]{64}$")
 
 ROOT = Path(__file__).resolve().parents[3]
 PLAN_PATH = ROOT / "sources/hkex/_registry/ingest_plan.json"
@@ -87,6 +90,41 @@ def validate_source_manifest(path: Path, expected_id: str, expected_path: str, r
     return source
 
 
+def validate_chunk_struct(chunk: dict[str, Any], expected_id: str, prev_ordinal: int, ctx: str) -> None:
+    """Mirror the kernel `cacg-core::schema` chunk invariants at the merge trust boundary
+    (a malformed chunk must fail HERE, not silently flow into the manifest kb verifies)."""
+    sid, cid = chunk.get("source_id"), chunk.get("chunk_id", "")
+    sp, ep, ordn = chunk.get("start_page"), chunk.get("end_page"), chunk.get("ordinal")
+    txt = chunk.get("text")
+    if sid != expected_id:
+        raise SystemExit(f"{ctx}: source_id mismatch (got {sid!r}, expected {expected_id!r})")
+    if not isinstance(sp, int) or not isinstance(ep, int) or sp < 1 or ep < 1:
+        raise SystemExit(f"{ctx}: start_page/end_page must be ints >= 1")
+    if ep < sp:
+        raise SystemExit(f"{ctx}: end_page < start_page")
+    if not isinstance(ordn, int) or ordn < 0 or ordn <= prev_ordinal:
+        raise SystemExit(f"{ctx}: ordinal must be a non-negative, strictly increasing int (got {ordn})")
+    if cid != f"{sid}:p{sp:03d}:{ordn:04d}":
+        raise SystemExit(f"{ctx}: chunk_id {cid!r} != canonical {sid}:p{sp:03d}:{ordn:04d}")
+    if not isinstance(chunk.get("token_count"), int) or chunk["token_count"] < 1:
+        raise SystemExit(f"{ctx}: token_count must be an int >= 1")
+    if not isinstance(txt, str) or not txt:
+        raise SystemExit(f"{ctx}: text must be non-empty")
+    if not _HEX64.match(str(chunk.get("chunk_hash", ""))):
+        raise SystemExit(f"{ctx}: chunk_hash must be 64-hex")
+    spans = chunk.get("page_spans")
+    if not isinstance(spans, list) or not spans:
+        raise SystemExit(f"{ctx}: page_spans must contain >= 1 span")
+    nbytes, prev_off = len(txt.encode("utf-8")), -1
+    for j, span in enumerate(spans):
+        pg, off = span.get("page"), span.get("byte_offset_in_chunk")
+        if not isinstance(pg, int) or not (sp <= pg <= ep):
+            raise SystemExit(f"{ctx}.page_spans[{j}]: page {pg} outside [{sp},{ep}]")
+        if not isinstance(off, int) or off <= prev_off or off >= nbytes:
+            raise SystemExit(f"{ctx}.page_spans[{j}]: byte_offset {off} not strictly increasing within text")
+        prev_off = off
+
+
 def validate_chunks_manifest(path: Path, expected_id: str) -> list[dict[str, Any]]:
     payload = json.loads(path.read_text(encoding="utf-8"))
     if payload.get("schema_version") != "cacg.v0":
@@ -96,9 +134,10 @@ def validate_chunks_manifest(path: Path, expected_id: str) -> list[dict[str, Any
     chunks = payload.get("chunks")
     if not isinstance(chunks, list) or not chunks:
         raise SystemExit(f"{path}: expected non-empty chunks")
-    for chunk in chunks:
-        if chunk.get("source_id") != expected_id:
-            raise SystemExit(f"{path}: chunk source_id mismatch for {expected_id}")
+    prev_ordinal = -1
+    for i, chunk in enumerate(chunks):
+        validate_chunk_struct(chunk, expected_id, prev_ordinal, f"{path}.chunks[{i}]")
+        prev_ordinal = chunk["ordinal"]
         recomputed = recompute_chunk_hash(chunk)
         if chunk.get("chunk_hash") != recomputed:
             raise SystemExit(f"{path}: chunk_hash mismatch for {chunk.get('chunk_id')}: "
@@ -234,9 +273,10 @@ def self_test() -> int:
             failures.append("dup source_id not rejected")
         except SystemExit:
             pass
-        # duplicate chunk_id across sources rejected: force src_c's chunk_id to collide
-        # with src_a's (its own source_id stays src_c, so it passes the per-source source_id
-        # check; the cross-source chunk_id dedup must still reject the merge).
+        # forged / non-canonical chunk_id rejected: src_c's chunk_id is forged to src_a's.
+        # (Canonical chunk_ids encode the source_id, so a cross-source duplicate chunk_id is
+        # structurally impossible — the canonical-shape check rejects the forgery at the
+        # trust boundary; the seen-chunk-id dedup remains as defense in depth.)
         r3 = _emit_source(root, "src_c", "pdfs/c.pdf", "gamma")
         cm = root / r3["out_dir"] / "chunks_manifest.json"
         p = json.loads(cm.read_text())
@@ -244,7 +284,19 @@ def self_test() -> int:
         cm.write_text(json.dumps(p))
         try:
             merge([r2, r3], root)
-            failures.append("dup chunk_id not rejected")
+            failures.append("forged/duplicate chunk_id not rejected")
+        except SystemExit:
+            pass
+        # structural: a malformed chunk (end_page < start_page) is rejected
+        r4 = _emit_source(root, "src_d", "pdfs/d.pdf", "delta")
+        cm4 = root / r4["out_dir"] / "chunks_manifest.json"
+        p4 = json.loads(cm4.read_text())
+        p4["chunks"][0]["end_page"] = 0
+        p4["chunks"][0]["chunk_hash"] = recompute_chunk_hash(p4["chunks"][0])
+        cm4.write_text(json.dumps(p4))
+        try:
+            merge([r4], root)
+            failures.append("malformed chunk (end_page<start_page) not rejected")
         except SystemExit:
             pass
         # source_sha256 mismatch rejected (tamper the pdf after manifest)

@@ -1,0 +1,14 @@
+{
+  "schema_version": "cacg.v0",
+  "allowed": {
+    "02_economics": ["goubujiao_xueqiu_corpus"],
+    "03_financial_reporting_analysis": ["goubujiao_xueqiu_corpus"],
+    "05_equity": ["goubujiao_xueqiu_corpus"],
+    "07_derivatives_and_volatility": ["goubujiao_xueqiu_corpus"],
+    "09_portfolio_management_and_asset_pricing": ["goubujiao_xueqiu_corpus"],
+    "10_behavioral_finance": ["goubujiao_xueqiu_corpus"],
+    "11_risk_management": ["goubujiao_xueqiu_corpus"],
+    "14_microstructure_and_trading": ["goubujiao_xueqiu_corpus"],
+    "15_performance_and_attribution": ["goubujiao_xueqiu_corpus"]
+  }
+}
