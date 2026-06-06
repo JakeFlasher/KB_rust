@@ -117,6 +117,7 @@ def acquire(refresh: bool, date: str) -> dict:
             })
             continue
         with tempfile.TemporaryDirectory() as d:
+            prov_path = pdf.with_suffix(pdf.suffix + ".provenance.json")  # html_to_pdf sidecar
             tmp = Path(d) / "dl"
             code = curl(url, tmp)
             if code != "200" or not tmp.is_file() or tmp.stat().st_size == 0:
@@ -150,7 +151,7 @@ def acquire(refresh: bool, date: str) -> dict:
                                   "content_sha256": raw_sha, "missing_phrases": miss,
                                   "reason": "snapshot text missing expected sentinel(s)"})
                 pdf.unlink(missing_ok=True)
-                (pdf.with_suffix(pdf.suffix + ".provenance.json")).unlink(missing_ok=True)
+                prov_path.unlink(missing_ok=True)
                 continue
             acquired.append({
                 "source_id": sid, "reading_id": rid, "type": typ, "url": url,
@@ -159,8 +160,7 @@ def acquire(refresh: bool, date: str) -> dict:
                 "snapshot_pdf_sha256": sha256_file(pdf),
                 "page_count": page_count(pdf),
                 "grounds": s.get("grounds"),
-                "html_snapshot_provenance": (str((pdf.with_suffix(pdf.suffix + ".provenance.json")).relative_to(ROOT))
-                                             if html_prov else None),
+                "html_snapshot_provenance": (str(prov_path.relative_to(ROOT)) if html_prov else None),
             })
     manifest = {
         "schema_version": "hkex.grounding_sources.v1",
