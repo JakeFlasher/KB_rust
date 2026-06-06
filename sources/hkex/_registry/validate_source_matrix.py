@@ -143,8 +143,14 @@ def validate(matrix: dict, src_ids: set[str], auth_readings: set[str],
             if not isinstance(srcs, list):
                 continue
             for s in srcs:
-                if (reading, s) not in cited_pairs:
-                    errors.append(f"unused matrix authorization (no card cites it): {reading} -> {s}")
+                if (reading, s) in cited_pairs:
+                    continue
+                # The Xueqiu source is justified by the inventory (practitioner cards may still be
+                # pending — e.g. during AC-6 grounding authoring); a GROUNDING source authorization
+                # must be cited by an authored card.
+                if s == XUEQIU and reading in auth_readings:
+                    continue
+                errors.append(f"unused matrix authorization (no card cites it): {reading} -> {s}")
     return errors
 
 
@@ -179,12 +185,20 @@ def self_test() -> int:
     # card-aware: unauthorized citation
     if not ok(base, cards=[("05_equity", [XUEQIU])]):
         failures.append("unauthorized card citation not rejected")
-    # card-aware: unused matrix authorization (a card covers 02 but not 07)
-    if not ok(base, cards=[("02_economics", [XUEQIU])]):
-        failures.append("unused matrix authorization not rejected")
-    # card-aware: fully-covered matrix passes
-    if ok(base, cards=[("02_economics", [XUEQIU]), ("07_derivatives_and_volatility", [XUEQIU])]):
-        failures.append(f"fully-covered matrix flagged: {ok(base, cards=[('02_economics',[XUEQIU]),('07_derivatives_and_volatility',[XUEQIU])])}")
+    # card-aware: an UNUSED *grounding* authorization is rejected (07 authorizes hk_stamp_duty
+    # but no card cites it). A grounding grant must be justified by a card, not the inventory.
+    g = {"schema_version": "cacg.v0", "allowed": {
+        "02_economics": [XUEQIU], "07_derivatives_and_volatility": [XUEQIU, "hk_stamp_duty"]}}
+    if not ok(g, cards=[("07_derivatives_and_volatility", [XUEQIU])]):
+        failures.append("unused grounding authorization not rejected")
+    # card-aware: every grounding authorization cited -> passes (02->XUEQIU here is uncited but
+    # inventory-justified, so it must NOT be flagged).
+    if ok(g, cards=[("07_derivatives_and_volatility", [XUEQIU, "hk_stamp_duty"])]):
+        failures.append(f"fully-covered grounding matrix flagged: {ok(g, cards=[('07_derivatives_and_volatility',[XUEQIU,'hk_stamp_duty'])])}")
+    # card-aware: a Xueqiu authorization with no card is OK during grounding rounds (the
+    # practitioner cards are pending) -> inventory-justified, never flagged unused.
+    if ok(base, cards=[("02_economics", [XUEQIU])]):
+        failures.append(f"inventory-justified Xueqiu authorization wrongly flagged: {ok(base, cards=[('02_economics',[XUEQIU])])}")
 
     if failures:
         print("SELF-TEST FAILED:")

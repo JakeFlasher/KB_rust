@@ -5,9 +5,12 @@ The free IRD / IFEC grounding sources are HTML pages; ``kb ingest`` is PDF-only,
 snapshotted to a DETERMINISTIC text-layer PDF (same byte-reproducible fpdf2 path as the
 corpus renderer: fixed creation date, stable producer, embedded Noto CJK face). HTML is
 reduced to text deterministically (``html.parser`` with block-structure separators and
-entity decoding; ``<script>``/``<style>`` dropped), then rendered as wrapped paragraphs.
-English official text wraps safely (the kernel normalize collapses a wrap newline to the
-same single space the quote carries), so a verbatim quote binds across line/page breaks.
+entity decoding; ``<script>``/``<style>`` dropped), then rendered as paragraphs wrapped at
+WORD boundaries. Word-boundary wrapping is load-bearing: pdfium injects a separator at every
+soft line break, so a CHAR-level wrap (mid-word) extracts as ``na me`` / ``char ge`` and
+destroys verbatim containment. Wrapping only at existing spaces makes that injected separator
+coincide with the space the quote already carries, so a verbatim English quote binds intact
+across line/page breaks (the kernel normalize collapses the wrap newline to that same space).
 
 A committed provenance record pins the inputs (html sha, font sha, fpdf2 version) and the
 output PDF sha so a re-snapshot is checkable. AC-6 applies this to the real snapshots and
@@ -87,6 +90,16 @@ def sha256_file(path: Path) -> str:
 def render_text_pdf(text: str, out_pdf: Path) -> None:
     from fpdf import FPDF
     from fpdf.enums import WrapMode, XPos, YPos
+    # A "word" longer than the line width would force fpdf2 to char-break it (re-introducing the
+    # mid-word artifact) or raise; pre-split such tokens (rare: long nav slugs/URLs, never quoted
+    # prose) so wrapping stays strictly at spaces.
+    def _split_long(line: str, limit: int = 60) -> str:
+        out = []
+        for tok in line.split(" "):
+            while len(tok) > limit:
+                out.append(tok[:limit]); tok = tok[limit:]
+            out.append(tok)
+        return " ".join(out)
     ensure_font()
     pdf = FPDF(unit="mm", format=PAGE_FORMAT)
     pdf.set_creation_date(EPOCH)
@@ -102,8 +115,11 @@ def render_text_pdf(text: str, out_pdf: Path) -> None:
     for line in text.split("\n"):
         # new_x=LMARGIN returns the cursor to the left margin each block (a bare
         # multi_cell(w=0) otherwise leaves x at the right edge -> 0 width next call);
-        # wrapmode=CHAR breaks an over-long token instead of raising.
-        pdf.multi_cell(w=0, h=5, text=line, new_x=XPos.LMARGIN, new_y=YPos.NEXT, wrapmode=WrapMode.CHAR)
+        # wrapmode=WORD breaks only at spaces so pdfium's line-break separator lands on an
+        # existing space (no "na me"/"char ge" mid-word artifact); _split_long guards the rare
+        # over-long token so WORD-wrap never has to fall back to a char break.
+        pdf.multi_cell(w=0, h=5, text=_split_long(line), new_x=XPos.LMARGIN, new_y=YPos.NEXT,
+                       wrapmode=WrapMode.WORD)
     out_pdf.parent.mkdir(parents=True, exist_ok=True)
     pdf.output(str(out_pdf))
 
@@ -137,10 +153,18 @@ def snapshot(html_path: Path, out_pdf: Path) -> dict:
 
 def self_test() -> int:
     failures: list[str] = []
+    # A long single paragraph that is GUARANTEED to wrap across several lines, so the test
+    # exercises the word-boundary wrap (the whole point of the renderer): if any word were
+    # broken at a wrap, the verbatim long sentence below would not survive ingest.
+    long_para = ("Shares held in electronic form are deposited into the Central Clearing and "
+                 "Settlement System and registered under the name of the nominee company, which "
+                 "means the consideration paid on every sold note and every bought note is charged "
+                 "at the prevailing ad valorem stamp duty rate without any mid word break occurring.")
     sample_html = (
         "<html><head><style>.x{}</style><title>ignored</title></head><body>"
         "<h1>IRD &amp; Stamp Duty</h1>"
         "<p>The rate is 0.1% per side plus HK$5 fixed.</p>"
+        f"<p>{long_para}</p>"
         "<table><tr><td>H-share</td><td>10% PRC withholding</td></tr>"
         "<tr><td>red-chip</td><td>exempt</td></tr></table>"
         "<script>var z='dropme';</script>"
@@ -170,7 +194,9 @@ def self_test() -> int:
         else:
             full = " ".join(c["text"] for c in json.loads((work / "chunks_manifest.json").read_text())["chunks"])
             full = re.sub(r"\s+", " ", full)
-            for q in ("The rate is 0.1% per side", "10% PRC withholding"):
+            # the long wrapped paragraph must survive verbatim (no mid-word break across wraps) —
+            # this is the regression guard that WrapMode.WORD fixed vs the old CHAR wrap.
+            for q in ("The rate is 0.1% per side", "10% PRC withholding", re.sub(r"\s+", " ", long_para)):
                 if q not in full:
                     failures.append(f"quote not contained after ingest: {q!r}")
 

@@ -1,0 +1,130 @@
+{
+  "schema_version": "hkex.grounding_cards.v1",
+  "note": "Curated Layer-A grounding-card specs (plan section 4.3). Each citation carries an ASCII quote_probe; emit_grounding_cards.py binds it to EXACTLY ONE ingested grounding chunk (fail closed on 0 / >1) and stores the verbatim chunk slice. Bodies are source-faithful descriptions of the HK market fact (NOT the practitioner's view, which is Layer B / AC-7). The as-of date footer is added data-driven from grounding_sources.json.",
+  "cards": [
+    {
+      "id": "hk-stock-option-american-style-assignment",
+      "reading_id": "07_derivatives_and_volatility",
+      "title": "HK Stock Options Are American-Style: Early Assignment Risk",
+      "summary": "Hong Kong single-stock options are American-style: the holder may exercise on any business day up to expiry, so a writer of covered calls or cash-secured puts faces assignment at any time, not only at expiration. Physical delivery of the underlying shares follows on exercise.",
+      "tags": ["hong-kong", "stock-options", "american-style", "early-exercise", "assignment", "hkex"],
+      "body": "## What the rule says\n\nHKEX single-stock options are American-style exercise instruments. The official HKEX Stock Options product specification states the exercise window explicitly: an option can be exercised on any business day up to and including the last trading day. Because exercise is not restricted to expiry, the holder of a long option can assign the writer at any point in the contract's life.\n\n## Why it matters for an option-income writer\n\nFor a covered-call or cash-secured-put writer, American-style exercise means assignment is a standing risk on every business day, not a single expiry-day event. Assignment converts the option into a physically-settled stock trade (delivery of the underlying shares), so the writer must be able to deliver (short call) or pay for (short put) the shares whenever assigned.",
+      "citations": [
+        {"source_id": "hkex_stock_options_info_sheet", "edge_type": "defines",
+         "quote_probe": "Options can be exercised at any time up to 6:45 pm on any business day up to and including the last trading day"}
+      ]
+    },
+    {
+      "id": "hk-special-dividend-option-contract-adjustment",
+      "reading_id": "07_derivatives_and_volatility",
+      "title": "HK Option Adjustment: The 2%-of-Close Special-Dividend Threshold",
+      "summary": "HKEX adjusts an option's strike and contract size for a special, extraordinary or cash-bonus distribution only when that distribution is 2 per cent or more of the share's closing price on the announcement day; an ordinary cash dividend triggers no adjustment, so the option holder bears the ex-dividend price drop.",
+      "tags": ["hong-kong", "stock-options", "contract-adjustment", "special-dividend", "capital-adjustment", "hkex"],
+      "body": "## What the rule says\n\nUnder HKEX Operational Trading Procedures Chapter 8 (Special Events), an ordinary cash dividend produces NO capital adjustment to option contracts. For other cash distributions — a special dividend, cash bonus or extraordinary dividend — the Exchange adjusts the option's exercise price and contract size only if the distribution is 2% or more of the share's closing price on the announcement day. Rights issues, bonus issues and spin-offs are always adjusted regardless of size.\n\n## Why it matters for an option-income writer\n\nThe threshold determines who absorbs a dividend. Below 2%, the strike is unchanged and the option holder eats the ex-dividend drop in the share price; at or above 2%, the strike (and contract size) are scaled to keep the contract value unchanged across the ex-date. A writer pricing calls and puts around a distribution must know which side of the 2% line the payout falls on.",
+      "citations": [
+        {"source_id": "hkex_contract_adjustments_chap08", "edge_type": "supports",
+         "quote_probe": "the Exchange will not perform any capital adjustment on option positions unless the value of the payment is 2 per cent or more of the share's closing price on the day of the announcement"}
+      ]
+    },
+    {
+      "id": "hk-short-call-assignment-settlement-timing",
+      "reading_id": "07_derivatives_and_volatility",
+      "title": "HK Exercised-Option Settlement: Exercise Day = T, Delivery T+2",
+      "summary": "When a Hong Kong stock option is exercised the exercise day is trade day T and stock settles T+2; because assignment results are known only after T's cash-market close, an assigned short-call writer cannot simply buy the shares on T+1 to deliver on T+2 and may need stock borrowing to settle on time.",
+      "tags": ["hong-kong", "stock-options", "settlement", "assignment", "seoch", "stock-borrowing"],
+      "body": "## What the rule says\n\nSEOCH Operational Clearing Procedures Chapter 8 sets the settlement timeline for exercised options. The exercise day is treated as trade day (T) for the resulting stock transaction, which is then due for settlement on a T+2 basis. Assignment results, however, are only available after the day-end processing on T — after the underlying cash market has closed.\n\n## Why it matters for an option-income writer\n\nAn assigned short-call writer who does not already hold the shares is in a timing bind: learning of assignment only after T's close, they cannot acquire the shares in the cash market on T+1 with normal T+2 settlement and still deliver on the option's T+2. SEOCH itself notes participants may need stock borrowing or other arrangements to deliver on time — a concrete reason covered (share-backed) call writing is operationally safer than naked short calls in Hong Kong.",
+      "citations": [
+        {"source_id": "seoch_operational_procedures_chap08", "edge_type": "supports",
+         "quote_probe": "it may not be possible for a SEOCH Participant to settle its delivery obligations on T+2 by acquiring the underlying securities in the underlying cash market on T+1"}
+      ]
+    },
+    {
+      "id": "hk-covered-call-shares-as-margin-collateral",
+      "reading_id": "07_derivatives_and_volatility",
+      "title": "HK Covered Call: Long Shares Replace Cash Margin, No Margin Call",
+      "summary": "A Hong Kong covered-call writer who already owns the underlying shares may pledge those shares instead of cash as margin for the short call, with no margin call, provided the long stock's value is at least the option's notional — the mechanism behind covered-call income on HK single-stock options.",
+      "tags": ["hong-kong", "stock-options", "covered-call", "margin", "collateral", "hkex"],
+      "body": "## What the rule says\n\nThe HKEX Introductory Guide to the Stock Options Corner describes the covered-call margin mechanism: an investor who owns the underlying stock of a stock option may use those shares, instead of cash, as the margin for writing the call, as long as the value of the long stock position is at least the notional value represented by the short option. In that covered case there is no margin call to short the call.\n\n## Why it matters for an option-income writer\n\nThis is the structural foundation of a covered-call income programme: the shares the investor already holds both cover potential delivery on assignment and satisfy the margin requirement, so writing the call generates premium without tying up additional cash and without exposure to margin calls on the short option.",
+      "citations": [
+        {"source_id": "hkex_stock_options_corner_guide", "edge_type": "supports",
+         "quote_probe": "Investors owning the underlying stock of the derived stock option may use shares of the underlying stock to replace cash for the margin of writing the call"}
+      ]
+    },
+    {
+      "id": "equity-index-volatility-skew-negative",
+      "reading_id": "07_derivatives_and_volatility",
+      "title": "Equity Volatility Skew Is Negative: Downside Strikes Richer",
+      "summary": "Equity-market implied volatility exhibits a negative skew: downside (low-strike) options carry higher implied volatility than upside strikes, the inverse of the positive skew seen in volatility-of-volatility products. Skew is why out-of-the-money puts are relatively expensive to buy and lucrative to sell.",
+      "tags": ["volatility", "skew", "implied-volatility", "options", "equity-market", "risk-premium"],
+      "body": "## What the source says\n\nColin Bennett's Trading Volatility notes that in the equity market the implied-volatility skew is negative — downside strikes trade at higher implied volatility than upside strikes — and contrasts this with the positive skew seen in some volatility products. Negative equity skew reflects persistent demand for downside protection.\n\n## Why it matters for an option-income writer\n\nNegative skew means out-of-the-money puts are systematically richer (higher implied vol) than equidistant calls. A seller of downside puts (cash-secured puts) therefore collects an embedded skew/insurance premium, while a buyer of protection pays it; understanding skew is what separates harvesting the put risk-premium from simply being short volatility.",
+      "citations": [
+        {"source_id": "bennett_trading_volatility_2014", "edge_type": "supports",
+         "quote_probe": "the inverse of the negative skew seen in the equity market"}
+      ]
+    },
+    {
+      "id": "hk-stock-transfer-stamp-duty-per-side",
+      "reading_id": "14_microstructure_and_trading",
+      "title": "HK Stamp Duty: Ad Valorem Contract-Note Duty on Every Side",
+      "summary": "Hong Kong stamp duty on a stock transfer is an ad valorem contract-note duty charged on BOTH the bought note and the sold note (i.e. per side); the 0.1% rate that applied 1 Sep 2001 to 31 Jul 2021 is levied on the rounded consideration, a fixed round-trip transaction cost on every HK equity trade.",
+      "tags": ["hong-kong", "stamp-duty", "transaction-cost", "trading", "ird", "equities"],
+      "body": "## What the rule says\n\nThe Inland Revenue Department's schedule of stamp-duty rates on Hong Kong stock shows the duty is a contract-note duty charged on every sold note and every bought note — i.e. on both sides of a transfer — as a percentage of the consideration. The rate was 0.1% per side from 1 September 2001 to 31 July 2021; the schedule also records later changes, so any current figure is as of the snapshot date below.\n\n## Why it matters for an option-income writer\n\nStamp duty is a guaranteed round-trip cost on HK cash-equity transactions, including the stock legs created when an option is exercised or assigned (each exercise/assignment becomes an individual stock trade for stamp-duty purposes). It is a fixed drag that an income strategy's premium must clear before the trade is net-profitable.",
+      "citations": [
+        {"source_id": "ird_stamp_duty_hk_stock_rates", "edge_type": "supports",
+         "quote_probe": "Contract Note for sale or purchase of any Hong Kong stock 0.1% of the amount of the consideration or of its value on every sold note and every bought note"}
+      ]
+    },
+    {
+      "id": "hk-ccass-nominee-vs-registered-shareholder",
+      "reading_id": "14_microstructure_and_trading",
+      "title": "HK CCASS: Electronic Shares Sit Under HKSCC Nominees",
+      "summary": "Shares held electronically in Hong Kong's CCASS are registered in the name of HKSCC Nominees Limited, not the investor, so the beneficial holder is not on the company's register and must act through intermediaries for corporate-event information and voting — the default holding form behind a brokerage account.",
+      "tags": ["hong-kong", "ccass", "nominee", "custody", "shareholder-rights", "microstructure"],
+      "body": "## What the source says\n\nThe Investor and Financial Education Council explains that shares held in electronic form are deposited into CCASS and registered under the name of the CCASS nominee, HKSCC Nominees Limited. The investor's name is therefore not recorded in the company's register of shareholders; to receive corporate-event information or to vote, the beneficial holder must act through the intermediary, who relays instructions to HKSCC Nominees.\n\n## Why it matters\n\nAlmost all retail HK positions held through a broker sit in CCASS under the nominee. This is the custody backdrop for an option strategy on HK single stocks: the shares used to cover calls or received on assignment are held in nominee form, and any dividend or corporate-action entitlement flows through that nominee chain rather than directly to the investor.",
+      "citations": [
+        {"source_id": "ifec_physical_share_certificates", "edge_type": "defines",
+         "quote_probe": "shares held in electronic form are deposited into the CCASS and registered under the name of CCASS nominee (i.e. HKSCC Nominees Limited)"}
+      ]
+    },
+    {
+      "id": "hk-physical-certificate-dividend-registration",
+      "reading_id": "14_microstructure_and_trading",
+      "title": "HK Physical Certificates: Register in Your Own Name for Dividends",
+      "summary": "To receive dividends, shareholder circulars and corporate documents directly from a Hong Kong issuer's share registrar, a physical-certificate holder must ensure the certificate is registered in the investor's own name; otherwise entitlements route to the registered (nominee) holder rather than the beneficial owner.",
+      "tags": ["hong-kong", "physical-certificate", "dividends", "share-registrar", "registration", "microstructure"],
+      "body": "## What the source says\n\nThe Investor and Financial Education Council advises that an investor who prefers physical share certificates should make sure the certificates are registered in the investor's own name, so that the share registrar can send dividends, shareholder circulars and other corporate documents directly to the holder. Registration in another party's name redirects those entitlements.\n\n## Why it matters\n\nThe contrast with nominee (CCASS) holding is the practical point: only the name on the register receives dividends and corporate communications directly. For an investor weighing paper versus electronic holding of dividend-paying HK shares, registration determines whether dividends and notices arrive directly or via an intermediary chain.",
+      "citations": [
+        {"source_id": "ifec_physical_share_certificates", "edge_type": "supports",
+         "quote_probe": "make sure that they are registered in your name, so that the share registrar can send you dividends"}
+      ]
+    },
+    {
+      "id": "hk-stock-connect-excludes-derivatives",
+      "reading_id": "14_microstructure_and_trading",
+      "title": "Stock Connect: Only A Shares and ETFs — No Derivatives",
+      "summary": "Under Shanghai and Shenzhen Stock Connect, only A shares and ETFs are eligible Northbound securities; B shares, bonds, derivatives and other product types are excluded — so a Hong Kong investor cannot trade Mainland single-stock options or other derivatives through Stock Connect, only the cash equities and ETFs.",
+      "tags": ["hong-kong", "stock-connect", "northbound", "eligible-securities", "derivatives", "mainland"],
+      "body": "## What the rule says\n\nHKEX's Stock Connect FAQ states that among SSE-/SZSE-listed securities, only A shares and ETFs are included in Shanghai and Shenzhen Connect; other product types such as B shares, bonds and other securities are not included. Stock Connect also encompasses only secondary-market trading, not primary-market activity such as IPOs.\n\n## Why it matters for an option-income writer\n\nA Hong Kong-based investor running an option-income strategy cannot reach Mainland single-stock options or other derivatives through Stock Connect — the Northbound channel admits only cash A shares and ETFs. Option strategies on Chinese companies are therefore practical only on the Hong Kong-listed universe (e.g. H-shares and HK-listed names with listed options), not on Mainland A-share lines via Connect.",
+      "citations": [
+        {"source_id": "hkex_stock_connect_explained", "edge_type": "supports",
+         "quote_probe": "only A shares and ETFs are included in Shanghai and Shenzhen Connect. Other product types such as B shares, bonds, and other securities are not included"}
+      ]
+    },
+    {
+      "id": "hk-mainland-dividend-withholding-cdta",
+      "reading_id": "02_economics",
+      "title": "Mainland–HK CDTA Caps Dividend Withholding at 5%/10%",
+      "summary": "Under the Mainland–Hong Kong Comprehensive Double Taxation Arrangement the maximum Mainland tax on dividends paid to a Hong Kong resident is capped at 5% for a qualifying company (holding at least 25% of the payer's capital) and 10% otherwise — the withholding a HK holder of Mainland-incorporated shares faces on dividends.",
+      "tags": ["hong-kong", "mainland", "dividend", "withholding-tax", "double-taxation", "cdta"],
+      "body": "## What the rule says\n\nThe Inland Revenue Department publishes the maximum tax rates that a jurisdiction with a Comprehensive Double Taxation Agreement/Arrangement with Hong Kong may charge a Hong Kong resident on dividends, interest, royalties and technical fees. For the Chinese Mainland (effective year of assessment 2007/2008), the dividend columns are 5% for qualifying companies and 10% otherwise. The accompanying notes define a qualifying company by reference to Article 10 of the relevant agreement — for the Mainland, a 5% rate where the beneficial owner holds directly at least 25% of the payer's capital.\n\n## Why it matters for an option-income writer\n\nFor a Hong Kong investor holding Mainland-incorporated shares (e.g. H-shares), the CDTA caps the Mainland dividend withholding that erodes the dividend leg of a buy-write or dividend-capture strategy. The cap (5%/10%) is the institutional fact behind why net dividend yield on Mainland names differs from the headline figure; figures are as of the snapshot date below.",
+      "citations": [
+        {"source_id": "ird_dividend_withholding_dta_rates", "edge_type": "defines",
+         "quote_probe": "The following table shows the maximum rates of tax those countries / regions with a Comprehensive Double Taxation Agreement / Arrangement with the Hong Kong Special Administrative Region (Hong Kong) can charge a Hong Kong resident on payments of dividends, interest, royalties and technical fees"},
+        {"source_id": "ird_dividend_withholding_dta_rates", "edge_type": "supports",
+         "quote_probe": "Chinese Mainland Year of Assessment 2007/2008 5 10"},
+        {"source_id": "ird_dividend_withholding_dta_notes", "edge_type": "defines",
+         "quote_probe": "Qualifying Companies Refer to Article 10 of the relevant Comprehensive Double Taxation Agreement / Arrangement to see whether the company is qualified for the special rate"}
+      ]
+    }
+  ]
+}

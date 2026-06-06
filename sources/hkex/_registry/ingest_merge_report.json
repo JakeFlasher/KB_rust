@@ -1,6 +1,6 @@
 {
   "byte_identical_proof": "re-running merge_hkex_manifests.py reproduces the merged-manifest SHAs above (atomic_write reports 'unchanged'); out/hkex/{chunks,sources}_manifest.json are gitignored and regenerated from the committed per-source plan + the rendered PDF.",
-  "chunk_count": 7348,
+  "chunk_count": 7376,
   "libpdfium": {
     "parser_name": "pdfium-render",
     "parser_version": "0.9.1",
@@ -8,10 +8,10 @@
     "pin_disposition": "KB_SKIP_PDFIUM_HASH_CHECK=1 (documented deviation; same as the cfa corpus)",
     "sha256": "816f5e74f78cd759faaf11d6c02df8cca27351311748631828f292e9d26cd591"
   },
-  "merged_chunks_manifest_sha256": "2a52930778200c8b4ffd61ead936092db4605c1a1280a3f5fb231f052c3d9ae8",
-  "merged_sources_manifest_sha256": "7e8a2917b593b5a87abd15268da0eb8a1c5c183017eb584ce880fb13cf9ee2e1",
+  "merged_chunks_manifest_sha256": "4c56e873c69400813d5f7f8c24adb191fc6287e4af842c38384fde926bbc6a54",
+  "merged_sources_manifest_sha256": "158f4f6b1c16175f9d92a3528511b8835dbde3294f199cb444002d6c6e6c2ac5",
   "schema_version": "hkex.ingest_merge_report.v1",
-  "source_count": 8,
+  "source_count": 11,
   "sources": [
     {
       "chunk_count": 324,
@@ -41,6 +41,15 @@
       "source_sha256": "3249727eebb03f57513e56e0e391bd5ce5b1f63114e06a8b09f1a9127d83236a"
     },
     {
+      "chunk_count": 8,
+      "page_count": 10,
+      "parser_name": "pdfium-render",
+      "parser_version": "0.9.1",
+      "source_id": "hkex_stock_connect_explained",
+      "source_path": "sources/hkex/pdfs/hkex_stock_connect_explained.pdf",
+      "source_sha256": "fd2cadbe092d3bac95dbdce6b7e7e40348c28f978e3af094123a45a06d9ca98d"
+    },
+    {
       "chunk_count": 23,
       "page_count": 21,
       "parser_name": "pdfium-render",
@@ -65,7 +74,25 @@
       "parser_version": "0.9.1",
       "source_id": "ifec_physical_share_certificates",
       "source_path": "sources/hkex/pdfs/ifec_physical_share_certificates.pdf",
-      "source_sha256": "fc6daefd3e1843f2779f587e2b33fc097cd3f63d7cf172e044144e93515ea076"
+      "source_sha256": "caeb3417b0daac7d8b978dd1d88b1ad0d7ffee46ae638a85dc529795829eaf54"
+    },
+    {
+      "chunk_count": 13,
+      "page_count": 9,
+      "parser_name": "pdfium-render",
+      "parser_version": "0.9.1",
+      "source_id": "ird_dividend_withholding_dta_notes",
+      "source_path": "sources/hkex/pdfs/ird_dividend_withholding_dta_notes.pdf",
+      "source_sha256": "1a7aa888620564d49c6ea8e1ffb121953814f536c35b2ceb2f2ee979bebaa5a9"
+    },
+    {
+      "chunk_count": 7,
+      "page_count": 12,
+      "parser_name": "pdfium-render",
+      "parser_version": "0.9.1",
+      "source_id": "ird_dividend_withholding_dta_rates",
+      "source_path": "sources/hkex/pdfs/ird_dividend_withholding_dta_rates.pdf",
+      "source_sha256": "5750f40766d9df55cf6b0911c065dcbe1b9ef9c118ccbc65ee44a70a23f9cfd8"
     },
     {
       "chunk_count": 2,

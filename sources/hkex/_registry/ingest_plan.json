@@ -28,6 +28,13 @@
     "note": "Free Tier-1 grounding source (07_derivatives_and_volatility); acquired 2026-06-07 from https://www.hkex.com.hk/-/media/HKEX-Market/Products/Listed-Derivatives/Single-Stock/Stock-Options/Trading-Information/Contract-Adjustments/chap08.pdf."
   },
   {
+    "source_id": "hkex_stock_connect_explained",
+    "source_type": "grounding_pdf",
+    "canonical_path": "sources/hkex/pdfs/hkex_stock_connect_explained.pdf",
+    "out_dir": "out/hkex/ingest_per_source/hkex_stock_connect_explained",
+    "note": "Free Tier-1 grounding source (14_microstructure_and_trading); acquired 2026-06-07 from https://www.hkex.com.hk/Mutual-Market/Connect-Hub/Stock-Connect?sc_lang=en."
+  },
+  {
     "source_id": "hkex_stock_options_corner_guide",
     "source_type": "grounding_pdf",
     "canonical_path": "sources/hkex/pdfs/hkex_stock_options_corner_guide.pdf",
@@ -47,6 +54,20 @@
     "canonical_path": "sources/hkex/pdfs/ifec_physical_share_certificates.pdf",
     "out_dir": "out/hkex/ingest_per_source/ifec_physical_share_certificates",
     "note": "Free Tier-1 grounding source (14_microstructure_and_trading); acquired 2026-06-07 from https://www.ifec.org.hk/web/en/blog/2024/07/physical-share-certificates.page."
+  },
+  {
+    "source_id": "ird_dividend_withholding_dta_notes",
+    "source_type": "grounding_pdf",
+    "canonical_path": "sources/hkex/pdfs/ird_dividend_withholding_dta_notes.pdf",
+    "out_dir": "out/hkex/ingest_per_source/ird_dividend_withholding_dta_notes",
+    "note": "Free Tier-1 grounding source (02_economics); acquired 2026-06-07 from https://www.ird.gov.hk/eng/tax/dta_notes.htm."
+  },
+  {
+    "source_id": "ird_dividend_withholding_dta_rates",
+    "source_type": "grounding_pdf",
+    "canonical_path": "sources/hkex/pdfs/ird_dividend_withholding_dta_rates.pdf",
+    "out_dir": "out/hkex/ingest_per_source/ird_dividend_withholding_dta_rates",
+    "note": "Free Tier-1 grounding source (02_economics); acquired 2026-06-07 from https://www.ird.gov.hk/eng/tax/dta_rates.htm."
   },
   {
     "source_id": "ird_stamp_duty_hk_stock_rates",

@@ -1,0 +1,184 @@
+{
+  "cards": [
+    {
+      "citations": [
+        {
+          "chunk_id": "hkex_stock_options_info_sheet:p002:0002",
+          "page_range": [
+            2,
+            2
+          ],
+          "quote": "Options can be exercised at any time up to 6:45 pm on any business day up to and including the last trading day",
+          "source_id": "hkex_stock_options_info_sheet"
+        }
+      ],
+      "id": "hk-stock-option-american-style-assignment",
+      "path": "cards/hkex/07_derivatives_and_volatility/hk-stock-option-american-style-assignment.md",
+      "reading_id": "07_derivatives_and_volatility"
+    },
+    {
+      "citations": [
+        {
+          "chunk_id": "hkex_contract_adjustments_chap08:p001:0001",
+          "page_range": [
+            1,
+            2
+          ],
+          "quote": "the Exchange will not perform any capital adjustment on option positions unless the value of the payment is 2 per cent or more of the share's closing price on the day of the announcement",
+          "source_id": "hkex_contract_adjustments_chap08"
+        }
+      ],
+      "id": "hk-special-dividend-option-contract-adjustment",
+      "path": "cards/hkex/07_derivatives_and_volatility/hk-special-dividend-option-contract-adjustment.md",
+      "reading_id": "07_derivatives_and_volatility"
+    },
+    {
+      "citations": [
+        {
+          "chunk_id": "seoch_operational_procedures_chap08:p001:0000",
+          "page_range": [
+            1,
+            1
+          ],
+          "quote": "it may not be possible for a SEOCH Participant to settle its delivery obligations on T+2 by acquiring the underlying securities in the underlying cash market on T+1",
+          "source_id": "seoch_operational_procedures_chap08"
+        }
+      ],
+      "id": "hk-short-call-assignment-settlement-timing",
+      "path": "cards/hkex/07_derivatives_and_volatility/hk-short-call-assignment-settlement-timing.md",
+      "reading_id": "07_derivatives_and_volatility"
+    },
+    {
+      "citations": [
+        {
+          "chunk_id": "hkex_stock_options_corner_guide:p014:0014",
+          "page_range": [
+            14,
+            15
+          ],
+          "quote": "Investors owning the underlying stock of the derived stock option may use shares of the underlying stock to replace cash for the margin of writing the call",
+          "source_id": "hkex_stock_options_corner_guide"
+        }
+      ],
+      "id": "hk-covered-call-shares-as-margin-collateral",
+      "path": "cards/hkex/07_derivatives_and_volatility/hk-covered-call-shares-as-margin-collateral.md",
+      "reading_id": "07_derivatives_and_volatility"
+    },
+    {
+      "citations": [
+        {
+          "chunk_id": "bennett_trading_volatility_2014:p079:0081",
+          "page_range": [
+            79,
+            80
+          ],
+          "quote": "the inverse of the negative skew seen in the equity market",
+          "source_id": "bennett_trading_volatility_2014"
+        }
+      ],
+      "id": "equity-index-volatility-skew-negative",
+      "path": "cards/hkex/07_derivatives_and_volatility/equity-index-volatility-skew-negative.md",
+      "reading_id": "07_derivatives_and_volatility"
+    },
+    {
+      "citations": [
+        {
+          "chunk_id": "ird_stamp_duty_hk_stock_rates:p001:0000",
+          "page_range": [
+            1,
+            1
+          ],
+          "quote": "Contract Note for sale or purchase of any Hong Kong stock 0.1% of the amount of the consideration or of its value on every sold note and every bought note",
+          "source_id": "ird_stamp_duty_hk_stock_rates"
+        }
+      ],
+      "id": "hk-stock-transfer-stamp-duty-per-side",
+      "path": "cards/hkex/14_microstructure_and_trading/hk-stock-transfer-stamp-duty-per-side.md",
+      "reading_id": "14_microstructure_and_trading"
+    },
+    {
+      "citations": [
+        {
+          "chunk_id": "ifec_physical_share_certificates:p001:0000",
+          "page_range": [
+            1,
+            1
+          ],
+          "quote": "shares held in electronic form are deposited into the CCASS and registered under the name of CCASS nominee (i.e. HKSCC Nominees Limited)",
+          "source_id": "ifec_physical_share_certificates"
+        }
+      ],
+      "id": "hk-ccass-nominee-vs-registered-shareholder",
+      "path": "cards/hkex/14_microstructure_and_trading/hk-ccass-nominee-vs-registered-shareholder.md",
+      "reading_id": "14_microstructure_and_trading"
+    },
+    {
+      "citations": [
+        {
+          "chunk_id": "ifec_physical_share_certificates:p001:0001",
+          "page_range": [
+            1,
+            2
+          ],
+          "quote": "make sure that they are registered in your name, so that the share registrar can send you dividends",
+          "source_id": "ifec_physical_share_certificates"
+        }
+      ],
+      "id": "hk-physical-certificate-dividend-registration",
+      "path": "cards/hkex/14_microstructure_and_trading/hk-physical-certificate-dividend-registration.md",
+      "reading_id": "14_microstructure_and_trading"
+    },
+    {
+      "citations": [
+        {
+          "chunk_id": "hkex_stock_connect_explained:p009:0006",
+          "page_range": [
+            9,
+            10
+          ],
+          "quote": "only A shares and ETFs are included in Shanghai and Shenzhen Connect. Other product types such as B shares, bonds, and other securities are not included",
+          "source_id": "hkex_stock_connect_explained"
+        }
+      ],
+      "id": "hk-stock-connect-excludes-derivatives",
+      "path": "cards/hkex/14_microstructure_and_trading/hk-stock-connect-excludes-derivatives.md",
+      "reading_id": "14_microstructure_and_trading"
+    },
+    {
+      "citations": [
+        {
+          "chunk_id": "ird_dividend_withholding_dta_rates:p003:0002",
+          "page_range": [
+            3,
+            4
+          ],
+          "quote": "The following table shows the maximum rates of tax those countries / regions with a Comprehensive Double Taxation Agreement / Arrangement with the Hong Kong Special Administrative Region (Hong Kong) can charge a Hong Kong resident on payments of dividends, interest, royalties and technical fees",
+          "source_id": "ird_dividend_withholding_dta_rates"
+        },
+        {
+          "chunk_id": "ird_dividend_withholding_dta_rates:p005:0003",
+          "page_range": [
+            5,
+            6
+          ],
+          "quote": "Chinese Mainland Year of Assessment 2007/2008 5 10",
+          "source_id": "ird_dividend_withholding_dta_rates"
+        },
+        {
+          "chunk_id": "ird_dividend_withholding_dta_notes:p003:0002",
+          "page_range": [
+            3,
+            4
+          ],
+          "quote": "Qualifying Companies Refer to Article 10 of the relevant Comprehensive Double Taxation Agreement / Arrangement to see whether the company is qualified for the special rate",
+          "source_id": "ird_dividend_withholding_dta_notes"
+        }
+      ],
+      "id": "hk-mainland-dividend-withholding-cdta",
+      "path": "cards/hkex/02_economics/hk-mainland-dividend-withholding-cdta.md",
+      "reading_id": "02_economics"
+    }
+  ],
+  "errors": [],
+  "schema_version": "hkex.emit_grounding_cards.v1"
+}

@@ -2,7 +2,7 @@
   "note": "Dated, SHA-pinned snapshots of the free Tier-1 grounding sources. The *.pdf are gitignored; this manifest + the per-HTML .pdf.provenance.json are committed. A clean rebuild re-downloads from `url`; a changed SHA means the upstream source moved/changed (volatile HKEX URLs may need re-resolution). Unresolved sources are in omission_ledger.",
   "omission_ledger": [],
   "schema_version": "hkex.grounding_sources.v1",
-  "source_count": 7,
+  "source_count": 10,
   "sources": [
     {
       "acquisition_date": "2026-06-07",
@@ -30,6 +30,18 @@
     },
     {
       "acquisition_date": "2026-06-07",
+      "grounds": "HKEX Stock Connect eligible-product boundary: only A shares and ETFs are included; derivatives/options are NOT tradable via Connect.",
+      "html_snapshot_provenance": "sources/hkex/pdfs/hkex_stock_connect_explained.pdf.provenance.json",
+      "page_count": 10,
+      "raw_download_sha256": "217e4c81410cad08fe472d4e0326214376d2a98e06a8b5b10a2b35b06ce9e2e5",
+      "reading_id": "14_microstructure_and_trading",
+      "snapshot_pdf_sha256": "fd2cadbe092d3bac95dbdce6b7e7e40348c28f978e3af094123a45a06d9ca98d",
+      "source_id": "hkex_stock_connect_explained",
+      "type": "html",
+      "url": "https://www.hkex.com.hk/Mutual-Market/Connect-Hub/Stock-Connect?sc_lang=en"
+    },
+    {
+      "acquisition_date": "2026-06-07",
       "grounds": "Introductory guide to the Stock Options Corner (covered-call / cash-secured-put mechanics framing).",
       "html_snapshot_provenance": null,
       "page_count": 21,
@@ -42,7 +54,7 @@
     },
     {
       "acquisition_date": "2026-06-07",
-      "grounds": "The HK stock-options instrument: SEOCH clearing, American-style, multiplier / board lot.",
+      "grounds": "The HK stock-options instrument: American-style option payoff, premium, strike, multiplier.",
       "html_snapshot_provenance": null,
       "page_count": 4,
       "raw_download_sha256": "34237246fc71ad2571a97d8606ec7ea8d18569d83ad0d6ed4ba4bb81d55801b5",
@@ -57,16 +69,40 @@
       "grounds": "CCASS vs paper certificates; withdraw-cert -> re-register workflow; the dividend-to-HKSCC-Nominees trap; the HK$3.5/board-lot withdrawal fee.",
       "html_snapshot_provenance": "sources/hkex/pdfs/ifec_physical_share_certificates.pdf.provenance.json",
       "page_count": 2,
-      "raw_download_sha256": "460cbcd5509e5d2c18fb0f4aaac4a7d602f2e6cad7d342b2df03f0dd1cd093ae",
+      "raw_download_sha256": "59c8c77b0d70e2cfb8fedb4cd952846a676f7f9497b5463c4c740c8a3061f54c",
       "reading_id": "14_microstructure_and_trading",
-      "snapshot_pdf_sha256": "fc6daefd3e1843f2779f587e2b33fc097cd3f63d7cf172e044144e93515ea076",
+      "snapshot_pdf_sha256": "caeb3417b0daac7d8b978dd1d88b1ad0d7ffee46ae638a85dc529795829eaf54",
       "source_id": "ifec_physical_share_certificates",
       "type": "html",
       "url": "https://www.ifec.org.hk/web/en/blog/2024/07/physical-share-certificates.page"
     },
     {
       "acquisition_date": "2026-06-07",
-      "grounds": "HK stock transfer stamp duty: 0.1%/side + HK$5 fixed; stamping mechanics.",
+      "grounds": "IRD comprehensive double-taxation-arrangement notes: dividend treatment / withholding context (zero HK WHT vs PRC WHT on H-shares; red-chip context).",
+      "html_snapshot_provenance": "sources/hkex/pdfs/ird_dividend_withholding_dta_notes.pdf.provenance.json",
+      "page_count": 9,
+      "raw_download_sha256": "f9725a3431449c0ada318ac4e49d17a8d7842b6ed26b7c9414b6d4960d91d22b",
+      "reading_id": "02_economics",
+      "snapshot_pdf_sha256": "1a7aa888620564d49c6ea8e1ffb121953814f536c35b2ceb2f2ee979bebaa5a9",
+      "source_id": "ird_dividend_withholding_dta_notes",
+      "type": "html",
+      "url": "https://www.ird.gov.hk/eng/tax/dta_notes.htm"
+    },
+    {
+      "acquisition_date": "2026-06-07",
+      "grounds": "IRD DTA withholding-rate table: the dividend withholding rates (the Mainland-HK arrangement caps PRC dividend WHT).",
+      "html_snapshot_provenance": "sources/hkex/pdfs/ird_dividend_withholding_dta_rates.pdf.provenance.json",
+      "page_count": 12,
+      "raw_download_sha256": "37b6162c14bbd5a867678ef985688169e44326603e96020085d668edf9bf10f0",
+      "reading_id": "02_economics",
+      "snapshot_pdf_sha256": "5750f40766d9df55cf6b0911c065dcbe1b9ef9c118ccbc65ee44a70a23f9cfd8",
+      "source_id": "ird_dividend_withholding_dta_rates",
+      "type": "html",
+      "url": "https://www.ird.gov.hk/eng/tax/dta_rates.htm"
+    },
+    {
+      "acquisition_date": "2026-06-07",
+      "grounds": "HK stock-transfer stamp duty: 0.1%/side + HK$5 fixed; stamping mechanics + historical rates.",
       "html_snapshot_provenance": null,
       "page_count": 2,
       "raw_download_sha256": "0262489a033010c72e7d78f4b5951d5416cce37989a631b081e71f755c584210",
