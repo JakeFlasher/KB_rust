@@ -140,6 +140,15 @@ def resolve_seed(nidx: list[dict], all_nauthors: list[str], pid: str, cid: str |
         return {"status": "attribution_rejected", "quote": quote, "seed_pid": pid,
                 "repost_users": repost_users}
     pidmatch = [e for e in authw if e["pid"] == pid and (cid is None or e["cid"] == cid)]
+    if cid is not None and not pidmatch:
+        # An EXPLICIT comment_id pin (a reviewed seed override's `set_comment_id`, or a seed's own
+        # `comment_id`) that matches NO author-word hit is a stale/typo pin: FAIL CLOSED with
+        # actionable detail rather than silently dropping to the heuristic author-word pool, which
+        # could lengthen+bind a DIFFERENT author utterance and PASS — defeating the override.
+        return {"status": "explicit_cid_miss", "quote": quote, "seed_pid": pid, "seed_cid": cid,
+                "author_word_candidates": [{"chunk_id": e["chunk"]["chunk_id"], "pid": e["pid"],
+                                            "cid": e["cid"], "page": e["chunk"]["start_page"]}
+                                           for e in authw]}
     pid_corrected = not pidmatch
     pool = pidmatch if pidmatch else authw
     final_q, lengthened = quote, False
@@ -252,11 +261,27 @@ def edge_fixtures(nidx: list[dict], all_nauthors: list[str]) -> dict:
                               None, "电信对自己天翼云的估值不低于2000亿元")
     # negative 2: a (↪in reply to ...) parent context (never rendered) -> zero_match
     neg_context = resolve_seed(nidx, all_nauthors, "0", None, "讨论已被 丹书铁券 删除")
+    # negative 3: an EXPLICIT but WRONG comment_id pin on a real, cleanly-binding author utterance
+    # must FAIL CLOSED (explicit_cid_miss), never silently fall back to the author-word pool.
+    neg_cid = {"status": "skipped"}
+    for u in au:
+        for tok in pos_tokens:
+            if tok in u.text and "//@" not in u.text.split(tok)[0]:
+                i = u.text.find(tok)
+                span = u.text[max(0, i - 6):i + 12].strip()
+                if len(normalize_text(span)) >= 6 and \
+                        resolve_seed(nidx, all_nauthors, u.post_id, u.comment_id, span)["status"] == "bound":
+                    neg_cid = resolve_seed(nidx, all_nauthors, u.post_id, "99999999999", span)
+                    break
+        if neg_cid.get("status") != "skipped":
+            break
     ok = (all(p["status"] == "bound" for p in positives)
           and neg_repost["status"] == "attribution_rejected"
-          and neg_context["status"] == "zero_match")
+          and neg_context["status"] == "zero_match"
+          and neg_cid["status"] == "explicit_cid_miss")
     return {"positives": positives, "negative_repost_status": neg_repost["status"],
-            "negative_context_status": neg_context["status"], "ok": ok}
+            "negative_context_status": neg_context["status"],
+            "negative_explicit_cid_miss_status": neg_cid["status"], "ok": ok}
 
 
 def synth_verify(kb: Path, env: dict, chunks_manifest: Path, binds: list[dict]) -> list[dict]:
@@ -365,8 +390,13 @@ def main() -> int:
     zero = [b for b in binds if b["res"]["status"] == "zero_match"]
     ambiguous = [b for b in binds if b["res"]["status"] == "ambiguous_multi_match"]
     rejected = [b for b in binds if b["res"]["status"] == "attribution_rejected"]
+    cid_miss = [b for b in binds if b["res"]["status"] == "explicit_cid_miss"]
     # every rejection must be principled: a non-author //@ repost, no author-origin span.
     unprincipled = [b for b in rejected if not b["res"].get("repost_users")]
+    # belt-and-suspenders: every seed must terminate in an ACCEPTED state (a clean bind or a
+    # principled attribution rejection); any other status (zero/ambiguous/explicit_cid_miss, or a
+    # future-added one) leaves the count short and fails the verdict.
+    accounted = len(bound) + len(rejected) == len(seeds)
     flags = {
         "bound_clean": sum(1 for b in bound if not (b["res"]["pid_corrected"] or b["res"]["lengthened"])),
         "pid_corrected": sum(1 for b in bound if b["res"]["pid_corrected"]),
@@ -376,7 +406,8 @@ def main() -> int:
     edges = edge_fixtures(nidx, all_nauthors)
     synth = synth_verify(kb, env, chunks_manifest, bound)
 
-    ok = (not smoke_errs and not ctrl and not zero and not ambiguous and not unprincipled
+    ok = (not smoke_errs and not ctrl and not zero and not ambiguous and not cid_miss
+          and not unprincipled and accounted
           and edges["ok"] and len(synth) >= 3 and all(s["pass"] for s in synth))
 
     try:
@@ -405,6 +436,10 @@ def main() -> int:
         "attribution_rejected": [{"pid": b["seed"]["post_id"], "title": b["seed"]["title"],
                                   "verdict": b["seed"]["verdict"], "repost_users": b["res"].get("repost_users"),
                                   "quote": b["seed"]["quote"][:40]} for b in rejected],
+        "explicit_cid_miss": [{"pid": b["seed"]["post_id"], "seed_cid": b["res"].get("seed_cid"),
+                               "quote": b["seed"]["quote"][:40],
+                               "author_word_candidates": b["res"].get("author_word_candidates")} for b in cid_miss],
+        "seeds_accounted": accounted,
         "unprincipled_rejections": [b["seed"]["post_id"] for b in unprincipled],
         "lengthened_binds": [{"pid": b["seed"]["post_id"], "orig": b["seed"]["quote"][:30],
                               "final": b["res"]["final_quote"][:40]} for b in bound if b["res"]["lengthened"]],

@@ -89,9 +89,32 @@ def acquire(refresh: bool, date: str) -> dict:
     for s in spec:
         sid, rid, typ, url = s["source_id"], s["reading_id"], s["type"], s["url"]
         pdf = PDF_DIR / f"{sid}.pdf"
-        # idempotent reuse: local PDF present + matches the recorded snapshot SHA
-        if not refresh and pdf.is_file() and sid in prior and sha256_file(pdf) == prior[sid].get("snapshot_pdf_sha256"):
-            acquired.append(prior[sid])
+        prior_entry = prior.get(sid)
+        # Idempotent reuse of an unchanged snapshot: the local PDF matches the recorded SHA AND the
+        # url/type it was acquired under are still the spec's. Reuse skips the (expensive) re-download
+        # but STILL re-validates the snapshot against the CURRENT spec's expected_phrases (fail closed)
+        # and rebuilds the manifest entry from CURRENT spec metadata (reading_id/url/grounds) — so a
+        # tightened/corrected spec is honored on a plain --acquire, never silently bypassed until
+        # someone remembers --refresh. A changed url/type falls through to a fresh re-acquire below.
+        if (not refresh and pdf.is_file() and prior_entry is not None
+                and prior_entry.get("url") == url and prior_entry.get("type") == typ
+                and sha256_file(pdf) == prior_entry.get("snapshot_pdf_sha256")):
+            miss = missing_phrases(pdf, s.get("expected_phrases", []))
+            if miss:
+                omissions.append({"source_id": sid, "url": url, "http_code": "reuse",
+                                  "content_sha256": prior_entry.get("raw_download_sha256"),
+                                  "missing_phrases": miss,
+                                  "reason": "reused snapshot text missing expected sentinel(s)"})
+                continue
+            acquired.append({
+                "source_id": sid, "reading_id": rid, "type": typ, "url": url,
+                "acquisition_date": prior_entry.get("acquisition_date", date),
+                "raw_download_sha256": prior_entry.get("raw_download_sha256"),
+                "snapshot_pdf_sha256": sha256_file(pdf),
+                "page_count": page_count(pdf),
+                "grounds": s.get("grounds"),
+                "html_snapshot_provenance": prior_entry.get("html_snapshot_provenance"),
+            })
             continue
         with tempfile.TemporaryDirectory() as d:
             tmp = Path(d) / "dl"

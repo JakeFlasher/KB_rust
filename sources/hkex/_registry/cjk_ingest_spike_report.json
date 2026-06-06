@@ -44,6 +44,7 @@
   "control_char_failures": [],
   "edge_fixtures": {
     "negative_context_status": "zero_match",
+    "negative_explicit_cid_miss_status": "explicit_cid_miss",
     "negative_repost_status": "attribution_rejected",
     "ok": true,
     "positives": [
@@ -97,6 +98,7 @@
       }
     ]
   },
+  "explicit_cid_miss": [],
   "ingest_dir": "out/hkex/ingest_per_source/goubujiao_xueqiu_corpus",
   "ingest_runtime_secs": 1.2,
   "kb_binary": "target/debug/kb",
@@ -124,6 +126,7 @@
   ],
   "schema_version": "hkex.cjk_ingest_spike_report.v1",
   "seed_count": 192,
+  "seeds_accounted": true,
   "smoke_errors": [],
   "status_counts": {
     "attribution_rejected": 3,
