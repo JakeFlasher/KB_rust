@@ -1,0 +1,10 @@
+[
+  {
+    "source_id": "goubujiao_xueqiu_corpus",
+    "source_type": "xueqiu_pdf",
+    "canonical_path": "sources/hkex/pdfs/goubujiao_corpus.pdf",
+    "out_dir": "out/hkex/ingest_per_source/goubujiao_xueqiu_corpus",
+    "config": {"chunking": {"target_tokens": 100000, "overlap_tokens": 0, "max_pages_per_chunk": 1}},
+    "note": "The complete Xueqiu corpus, rendered by render_corpus_pdf.py (gitignored). CJK chunk config => one utterance per single-page chunk. Grounding sources (HKEX/IRD/IFEC/Bennett) are appended at AC-6 using this same plan + the default chunk config; HTML sources are first snapshotted to PDF via html_to_pdf.py."
+  }
+]

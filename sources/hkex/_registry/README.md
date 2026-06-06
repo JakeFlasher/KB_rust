@@ -14,11 +14,15 @@ registry. They read but never write `cards/cfa/**`, `out/cfa/**`, or `sources/cf
 | `corpus_model.py` | Parse `corpus_complete.md` into utterances; separate each `★AUTHOR` citable text from its `(↪in reply to …)` parent context. | `python3 corpus_model.py` |
 | `render_corpus_pdf.py` | Deterministic Noto-CJK renderer → `goubujiao_corpus.pdf`. | `--write` / `--check-determinism` / `--self-test` |
 | `check_corpus_parity.py` | Corpus→PDF parity proof (ingest + per-page containment + id mapping over every author utterance). | `--check` |
-| `check_cjk_ingest_spike.py` | CJK ingest parity SPIKE (AC-3, hard gate before authoring): ingest with the CJK config; prove single-chunk **author-origin** verbatim binding of all 192 candidate seed quotes (lengthen/pid-correct/recurrence; reject `//@non-author` repost spans) + edge/exclusion fixtures; control-char gate; synthetic `kb verify`. | `--check` |
+| `check_cjk_ingest_spike.py` | CJK ingest parity SPIKE (AC-3, hard gate before authoring): ingest with the CJK config; prove single-chunk **author-origin** verbatim binding of all 192 candidate seed quotes (lengthen/pid-correct; fail closed on un-lengthenable multi-match via `seed_overrides.json`; reject `//@non-author` repost spans) + edge/exclusion fixtures; control-char gate; synthetic `kb verify`. | `--check` |
+| `run_ingest_per_source.py` | Per-source ingest runner (AC-4): ingests each `ingest_plan.json` source into `out/hkex/ingest_per_source/<source_id>/` with a per-source chunk `--config`; clobber/partial fail closed; resumable; resolves `kb` fail-closed. | (run) / `--force` |
+| `merge_hkex_manifests.py` | Deterministic merge (AC-4): composes `out/hkex/{chunks,sources}_manifest.json` (validate one-source/manifest, recompute `source_sha256`+`chunk_hash`, dedup, canonical sort, atomic, byte-identical re-run); writes the committed `ingest_merge_report.json`. | (run) / `--self-test` |
+| `html_to_pdf.py` | Deterministic HTML→text-layer PDF recipe (AC-4) for the IRD/IFEC HTML grounding sources; records a `.provenance.json`. | `--html … --out …` / `--self-test` |
+| `seed_overrides.json` / `ingest_plan.json` | Reviewer-authorized seed disambiguations (AC-3); the per-source ingest plan (AC-4). | (data) |
 
 Committed evidence: `renderer_provenance.json`, `parity_report.json`, `cfa_isolation_baseline.json`,
-`cjk_ingest_spike_report.json`. The spike's reusable ingest output lives (gitignored) under
-`out/hkex/ingest_per_source/goubujiao_xueqiu_corpus/` and is regenerated idempotently.
+`cjk_ingest_spike_report.json`, `ingest_merge_report.json`. The reusable per-source ingest output
++ the merged manifests live (gitignored) under `out/hkex/` and are regenerated idempotently.
 
 ## Rebuilding the local-only artifacts
 
@@ -41,8 +45,17 @@ python3 sources/hkex/_registry/render_corpus_pdf.py --write              # PDF +
 python3 sources/hkex/_registry/render_corpus_pdf.py --check-determinism  # 3 subprocs -> identical SHA == provenance
 python3 sources/hkex/_registry/check_corpus_parity.py --check            # corpus->PDF parity PASS
 python3 sources/hkex/_registry/check_cjk_ingest_spike.py --check         # AC-3 ingest spike PASS (single-chunk author-origin binding)
+python3 sources/hkex/_registry/run_ingest_per_source.py --force          # AC-4 per-source ingest -> out/hkex/ingest_per_source/<id>/
+python3 sources/hkex/_registry/merge_hkex_manifests.py --require-count 1  # AC-4 deterministic merge -> out/hkex/{chunks,sources}_manifest.json
+python3 sources/hkex/_registry/merge_hkex_manifests.py --self-test        # AC-4 dedup/clobber/sort/sha/atomic
+python3 sources/hkex/_registry/html_to_pdf.py --self-test                 # AC-4 HTML->PDF recipe
 python3 sources/hkex/_registry/cfa_isolation_guard.py --check            # cfa byte-untouched
 ```
+
+`run_ingest_per_source.py` + `merge_hkex_manifests.py` are adapted from (and never mutate) the
+`cfa` registry's `run_ingest_per_source.py` / `merge_ingest_manifests.py`. AC-6 appends the free
+grounding sources (HKEX/IRD/IFEC/Bennett) to `ingest_plan.json` — HTML sources are first
+snapshotted to PDF via `html_to_pdf.py` — then re-runs the runner + merge with the new count.
 
 `check_corpus_parity.py` resolves the `kb` binary from `KB_BIN` (if set), else
 `target/debug/kb` (guaranteed by `cargo build --workspace`), else `target/release/kb`, and

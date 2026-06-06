@@ -98,7 +98,7 @@
     ]
   },
   "ingest_dir": "out/hkex/ingest_per_source/goubujiao_xueqiu_corpus",
-  "ingest_runtime_secs": 1.1,
+  "ingest_runtime_secs": 1.2,
   "kb_binary": "target/debug/kb",
   "lengthened_binds": [],
   "note": "attribution_rejected entries are commenter-original quotes the author reposted via //@<non-author> (e.g. post 223159123 / Tianyi-Cloud, research §3.1/§5.2 misattributed exclusion); the spike correctly refuses to bind them as author-origin. They are excluded from authoring (AC-8).",

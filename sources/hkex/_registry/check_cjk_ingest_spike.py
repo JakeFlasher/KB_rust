@@ -15,8 +15,9 @@ substring PROPOSES a chunk; `kb verify` CONFIRMS. Author-origin discipline:
     (attribution); a quote after `//@<author-id>:` is a self-repost duplicate → bound to
     the canonical non-repost author utterance instead.
   * A commenter-requote / duplicate multi-match is disambiguated by LENGTHENING the quote
-    to its author-original span; an irreducible verbatim duplicate across distinct author
-    utterances binds deterministically (lowest page) with all alternatives recorded.
+    to its author-original span; a multi-match that cannot be lengthened to a unique span
+    FAILS CLOSED (`ambiguous_multi_match`) and must be fixed via a reviewed seed override
+    (`seed_overrides.json`, consulted before the heuristic) — never a silent best-fit.
   * A seed whose `post_id` is imprecise binds to its unique author-origin chunk with a
     recorded pid correction.
 
@@ -336,8 +337,11 @@ def main() -> int:
     cfg = INGEST_DIR / "cjk_chunk.yaml"
     cfg.write_text("chunking:\n  target_tokens: 100000\n  overlap_tokens: 0\n  max_pages_per_chunk: 1\n")
     t0 = time.time()
-    r = subprocess.run([str(kb), "ingest", str(PDF), "--config", str(cfg), "--out", str(INGEST_DIR),
-                        "--source-id", SOURCE_ID], capture_output=True, text=True, env=env)
+    # Relative paths + cwd=ROOT so the per-source manifest records the canonical (relative)
+    # source_path that merge_hkex_manifests.py validates against.
+    r = subprocess.run([str(kb), "ingest", str(PDF.relative_to(ROOT)), "--config", str(cfg),
+                        "--out", str(INGEST_DIR.relative_to(ROOT)), "--source-id", SOURCE_ID],
+                       cwd=str(ROOT), capture_output=True, text=True, env=env)
     ingest_secs = round(time.time() - t0, 1)
     if r.returncode != 0:
         print(f"FAIL: kb ingest rc={r.returncode}\n{(r.stderr or r.stdout)[:500]}", file=sys.stderr)
