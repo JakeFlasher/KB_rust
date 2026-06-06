@@ -40,7 +40,6 @@ sys.path.insert(0, str(ROOT / "sources/hkex/_registry"))
 from corpus_model import parse, CORPUS  # noqa: E402  # pyright: ignore[reportMissingImports]
 from cacg_normalize import normalize_text  # noqa: E402  # pyright: ignore[reportMissingImports]
 
-KB = ROOT / "target/release/kb"
 PDF = ROOT / "sources/hkex/pdfs/goubujiao_corpus.pdf"
 PROVENANCE = ROOT / "sources/hkex/_registry/renderer_provenance.json"
 REPORT = ROOT / "sources/hkex/_registry/parity_report.json"
@@ -53,6 +52,26 @@ _SIMP = set("个务实调价净会证据济产广经当银环县输华买卖与�
 assert not (_TRAD & _SIMP), "trad/simp sentinel sets must be disjoint"
 
 _EXTRA_PUNCT = "，。！？；：、「」『』（）《》【】…—·“”‘’％¥"
+
+
+def resolve_kb() -> Path:
+    """Resolve the `kb` binary from committed-build conventions, fail-closed.
+
+    `KB_BIN` (if set) wins after an executable-file check; otherwise prefer
+    `target/debug/kb` because AC-1's `cargo build --workspace` guarantees it, and
+    fall back to `target/release/kb`. With neither present the gate refuses rather
+    than depend on an undeclared local build artifact."""
+    env = os.environ.get("KB_BIN")
+    if env:
+        p = Path(env)
+        if not (p.is_file() and os.access(p, os.X_OK)):
+            raise SystemExit(f"FAIL: KB_BIN={env} is not an executable file")
+        return p
+    for cand in (ROOT / "target/debug/kb", ROOT / "target/release/kb"):
+        if cand.is_file() and os.access(cand, os.X_OK):
+            return cand
+    raise SystemExit("FAIL: no kb binary found; run `cargo build --workspace` "
+                     "(produces target/debug/kb) or set KB_BIN=/path/to/kb")
 
 
 def sha256_file(path: Path) -> str:
@@ -138,6 +157,7 @@ def main() -> int:
         print("FAIL: renderer_provenance.json missing; run render_corpus_pdf.py --write", file=sys.stderr)
         return 1
     prov = json.loads(PROVENANCE.read_text())
+    kb = resolve_kb()
 
     # Hardening: never run parity against a stale PDF.
     live_sha = sha256_file(PDF)
@@ -159,7 +179,7 @@ def main() -> int:
         cfg = work / "cjk_chunk.yaml"
         cfg.write_text("chunking:\n  target_tokens: 100000\n  overlap_tokens: 0\n  max_pages_per_chunk: 1\n")
         t0 = time.time()
-        r = subprocess.run([str(KB), "ingest", str(PDF), "--config", str(cfg), "--out", str(work),
+        r = subprocess.run([str(kb), "ingest", str(PDF), "--config", str(cfg), "--out", str(work),
                             "--source-id", "goubujiao_xueqiu_corpus"],
                            capture_output=True, text=True, env=env)
         ingest_secs = round(time.time() - t0, 1)
@@ -231,10 +251,15 @@ def main() -> int:
 
         ok = (failed == 0 and gated >= 40 and au_bad == 0 and not neg
               and not ctrl and not struct_errors)
+        try:
+            kb_recorded = str(kb.relative_to(ROOT))
+        except ValueError:
+            kb_recorded = str(kb)
         report = {
             "schema_version": "hkex.parity_report.v2",
             "pdf_sha256": live_sha,
             "provenance_sha_match": True,
+            "kb_binary": kb_recorded,
             "ingest_runtime_secs": ingest_secs,
             "pdf_page_count": len(pages),
             "chunk_count": len(chunks),

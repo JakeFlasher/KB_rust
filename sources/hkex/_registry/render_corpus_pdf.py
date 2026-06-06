@@ -184,9 +184,18 @@ def do_check_determinism() -> int:
     finally:
         shutil.rmtree(tmp, ignore_errors=True)
     identical = len(set(shas)) == 1
-    prov_sha = json.loads(PROVENANCE.read_text())["output_pdf_sha256"] if PROVENANCE.is_file() else None
-    matches_provenance = (shas[0] == prov_sha) if prov_sha else None
-    ok = identical and matches_provenance is not False
+    # Fail closed when provenance is absent: the determinism check verifies the
+    # COMMITTED artifact is reproducible, so it must be compared against a recorded
+    # SHA (run --write first), not pass on identity alone.
+    if not PROVENANCE.is_file():
+        print(json.dumps({"render_shas": [s[:16] for s in shas], "seeds": seeds,
+                          "byte_identical_across_subprocesses": identical,
+                          "matches_committed_provenance": None,
+                          "verdict": "FAIL (renderer_provenance.json missing; run --write first)"}, indent=2))
+        return 1
+    prov_sha = json.loads(PROVENANCE.read_text())["output_pdf_sha256"]
+    matches_provenance = shas[0] == prov_sha
+    ok = identical and matches_provenance
     print(json.dumps({"render_shas": [s[:16] for s in shas], "seeds": seeds,
                       "byte_identical_across_subprocesses": identical,
                       "matches_committed_provenance": matches_provenance,

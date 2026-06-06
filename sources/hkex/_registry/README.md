@@ -33,10 +33,16 @@ Per **DEC-1 / AC-11** the Xueqiu corpus is excerpts-only: these are gitignored a
 Rebuild + verify from a checkout that has the local corpus + the system Noto CJK font:
 
 ```bash
+cargo build --workspace                                                  # produces target/debug/kb
 python3 sources/hkex/_registry/render_corpus_pdf.py --write              # PDF + provenance
 python3 sources/hkex/_registry/render_corpus_pdf.py --check-determinism  # 3 subprocs -> identical SHA == provenance
 python3 sources/hkex/_registry/check_corpus_parity.py --check            # corpus->PDF parity PASS
 ```
+
+`check_corpus_parity.py` resolves the `kb` binary from `KB_BIN` (if set), else
+`target/debug/kb` (guaranteed by `cargo build --workspace`), else `target/release/kb`, and
+fails closed if none exists — so the gate is reproducible from the committed sources, not
+an undeclared local build. The resolved binary path is recorded in `parity_report.json`.
 
 The committed `renderer_provenance.json` pins the exact inputs (corpus SHA, font `.ttc`
 + extracted-OTF SHA, fpdf2/fontTools versions, page geometry) and the output PDF SHA, so
