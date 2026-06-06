@@ -1,0 +1,11 @@
+{
+  "principles": 288,
+  "batches": 23,
+  "candidates": 73,
+  "verdictCounts": {
+    "overgeneralized": 44,
+    "faithful": 21,
+    "weak_evidence": 5,
+    "misattributed": 3
+  }
+}

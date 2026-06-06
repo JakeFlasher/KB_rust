@@ -1,0 +1,536 @@
+[
+  {
+    "category": "options-income",
+    "recommendations": [
+      {
+        "title": "Options as a Strategic Investment",
+        "authors": "Lawrence G. McMillan",
+        "edition_year": "5th edition, 2012 (Prentice Hall Press / Penguin)",
+        "coverage": "The canonical 1,000+ page options-strategy reference. Ch. 2 'Covered Call Writing' is one of the deepest treatments in print (total-return concept, ROI computation, order execution, follow-up/rolling action, special writing situations). Ch. 19 'The Sale of a Put' covers cash-secured/naked put writing, 'buying stock below its market price,' the covered put sale, and McMillan's argument that covered-call writers should often sell puts instead.",
+        "framework_family": "derivatives",
+        "investor_methods_grounded": [
+          1,
+          3
+        ],
+        "fills_gap": true,
+        "gap_rationale": "Hull (already ingested) is the academic pricing/no-arbitrage text; it does not give the practitioner mechanics of covered-call writing, put selling for income, rolling, assignment management, or theta-vs-delta strike/expiry selection as a lived strategy. McMillan is the standard practitioner bridge and the explicit anchor for method (1). No equivalent in the corpus.",
+        "ingestibility": "English. Commercial book (no official free PDF). ISBN-13 9780735204652. ~1,072 pages hardcover. Obtainable as a purchased DRM-stripped ebook/PDF or scanned hardcover; widely available. Large but ingestible; chapters 2 and 15-20 are the load-bearing sections for this investor.",
+        "authority": "canonical",
+        "tier": "tier1_must_ingest"
+      },
+      {
+        "title": "Alan Ellman's Complete Encyclopedia for Covered Call Writing (Classic Edition)",
+        "authors": "Alan Ellman",
+        "edition_year": "2nd edition, 2019 (Digital Publishing of Florida)",
+        "coverage": "The single most focused practitioner text on covered-call writing as a monthly-income overlay on owned blue-chip stock. Covers option basics, stock fundamental/technical screening, ROI calculators, and — critically — named, codified exit/rolling strategies: rolling down, rolling out, rolling out-and-up, the mid-contract unwind, and 'hitting a double.' 20 chapters, 14 appendices, 151 charts, flow charts for stock selection and exit-strategy decisions.",
+        "framework_family": "derivatives",
+        "investor_methods_grounded": [
+          1,
+          4
+        ],
+        "fills_gap": true,
+        "gap_rationale": "Maps 1:1 to the investor's method (1) covered-call income overlay in a way McMillan's general reference does not: a complete, repeatable retail workflow for strike/expiry selection by moneyness, position management, and disciplined exits/rolls. The corpus has nothing dedicated to the covered-call income overlay practice. Also grounds discipline/process (method 4) via its rules-based decision flowcharts.",
+        "ingestibility": "English. Commercial book (no official free PDF). Softcover ISBN-13 9781937183066; hardcover 9781937183967. ~522 pages. Obtainable via purchase (publisher thebluecollarinvestor.com, Amazon) as print or Kindle; convertible to PDF for ingest.",
+        "authority": "strong",
+        "tier": "tier1_must_ingest"
+      },
+      {
+        "title": "Alan Ellman's Selling Cash-Secured Puts: Investing to Generate Monthly Cash Flow",
+        "authors": "Alan Ellman",
+        "edition_year": "1st edition, 2014 (Digital Publishing of Florida)",
+        "coverage": "Dedicated companion volume on cash-secured put selling as (a) paid stock-acquisition at a discount and (b) monthly income. Covers 100%-collateralized put writing, strike selection by moneyness, return calculations (initial vs. annualized), assignment handling, the PCP/'wheel'-style transition from puts to covered calls, and put-side exit/rolling. Explicitly the conservative, fully-secured framing.",
+        "framework_family": "derivatives",
+        "investor_methods_grounded": [
+          1,
+          2
+        ],
+        "fills_gap": true,
+        "gap_rationale": "Grounds the cash-secured-put leg of method (1) and the put-as-contrarian-accumulation behavior in method (2) — getting paid to set a buy limit on HK blue chips you want to own. The 100%-collateral / never-naked discipline is the book's core posture, matching the investor exactly. No corpus text covers CSP-for-accumulation as a distinct discipline.",
+        "ingestibility": "English. Commercial book (no official free PDF). ISBN-13 9781942634003. ~282 pages. Obtainable via purchase (publisher site, Amazon) print or Kindle; convertible to PDF for ingest.",
+        "authority": "strong",
+        "tier": "tier2_valuable"
+      },
+      {
+        "title": "Get Rich with Options: Four Winning Strategies Straight from the Exchange Floor",
+        "authors": "Lee Lowell",
+        "edition_year": "2nd edition, 2009 (Wiley)",
+        "coverage": "Former CBOE/NYMEX floor-trader's practitioner account of four strategies, three of which are premium-selling income trades: selling (cash-secured) put options, selling option credit spreads, and selling covered calls (the fourth is buying deep-ITM calls as stock surrogate). Strong on a seller's-edge intuition, why selling premium works, and execution realities from the floor.",
+        "framework_family": "derivatives",
+        "investor_methods_grounded": [
+          1,
+          4
+        ],
+        "fills_gap": false,
+        "gap_rationale": "Adds a distinct floor-trader practitioner voice on the seller's edge and premium-selling psychology, but the substantive ground (covered calls, secured-put selling, assignment) is already covered more rigorously by McMillan and more income-specifically by the two Ellman titles. It frames puts as 'naked' (though risk-limited), which is softer than the investor's strict 100%-collateral rule, so it is supplementary rather than core.",
+        "ingestibility": "English. Commercial book (Wiley); also on Wiley Online Library (institutional/DOI 10.1002/9781119198376) and Internet Archive borrow. ISBN-13 9780470445891. ~256 pages. No newer than 2nd edition exists despite occasional 4th-edition claims. Obtainable via purchase or library; convertible to PDF.",
+        "authority": "useful",
+        "tier": "tier3_optional"
+      }
+    ]
+  },
+  {
+    "category": "option-volatility",
+    "recommendations": [
+      {
+        "title": "Option Volatility and Pricing: Advanced Trading Strategies and Techniques",
+        "authors": "Sheldon Natenberg",
+        "edition_year": "2nd edition, 2015 (McGraw-Hill; LoC HG6042.N38 2015; published late 2014)",
+        "coverage": "The canonical practitioner desk text on option pricing intuition, the Greeks (delta/gamma/theta/vega/rho), and how volatility drives P&L. Builds the exact theta-decay-vs-delta-exposure mental model the investor uses: why selling premium is short gamma/long theta, how to think about implied vs realized vol, dynamic hedging, vertical/calendar/diagonal spreads, and risk management of a short-premium book. Directly grounds covered-call and cash-secured-put reasoning at the level of a market maker rather than pure math.",
+        "framework_family": "derivatives",
+        "investor_methods_grounded": [
+          1
+        ],
+        "fills_gap": true,
+        "gap_rationale": "Hull (already ingested) is the pure no-arbitrage theory; it does not teach the practitioner's intuition for theta-vs-delta tradeoffs, vol-cone reasoning, or how a short-premium position actually behaves day to day. Natenberg is the de facto industry training text and provides exactly that desk-level layer with no theory overlap that Hull already covers.",
+        "ingestibility": "English. Commercial book, no free official PDF. Print/eTextbook via McGraw-Hill (ISBN 9780071818773 print, 9780071818780 eText) and VitalSource. ~592 pages. Obtainable as a purchased DRM-removed PDF/eText for ingest; not a regulator/open PDF.",
+        "authority": "canonical",
+        "tier": "tier1_must_ingest"
+      },
+      {
+        "title": "Volatility Trading (+ Website)",
+        "authors": "Euan Sinclair",
+        "edition_year": "2nd edition, 2013 (Wiley Trading)",
+        "coverage": "Quantitative-but-practical treatment of the volatility risk (variance) premium as a tradeable edge: measuring and forecasting realized vol, the behavior of implied vol, hedging error, expected value, position sizing, and trade evaluation for a premium-selling book. New chapters in 2e cover realized/implied dynamics, explicitly trading the variance premium, and using options for equity special situations. Grounds WHY systematically selling vol on blue chips has positive expected value and HOW to size and risk-manage it.",
+        "framework_family": "derivatives",
+        "investor_methods_grounded": [
+          1
+        ],
+        "fills_gap": true,
+        "gap_rationale": "The corpus has Pedersen 'Efficiently Inefficient' (strategy-survey level) and Hull (theory), but neither gives the working quant framework for estimating the variance premium, vol forecasting, hedging-error P&L, and Kelly-style sizing of a short-vol position. Sinclair fills the measurement-and-edge layer between Hull's theory and Natenberg's desk intuition.",
+        "ingestibility": "English. Commercial Wiley book; ~320 pages (ISBN 9781118347133 print, 9781118416723 PDF/ePUB). Available as official Wiley eBook PDF and via Perlego; purchasable for ingest. No free official PDF.",
+        "authority": "strong",
+        "tier": "tier1_must_ingest"
+      },
+      {
+        "title": "Trading Volatility: Trading Volatility, Correlation, Term Structure and Skew",
+        "authors": "Colin Bennett",
+        "edition_year": "1st edition, 2014 (self-published; ISBN 9781499206074)",
+        "coverage": "Practitioner reference (called the 'volatility bible' by Eurex/Capstone) on the structural features of equity-option vol surfaces: skew, term structure, the vol risk premium, dispersion/correlation, plus dedicated material on dividends and options-on-dividends. Most relevant: clear treatment of how special/large dividends and term structure affect option pricing and adjustment intuition, which supports the investor's HKEX special-dividend / contract-adjustment reasoning and his choice of strikes/tenors when writing premium.",
+        "framework_family": "derivatives",
+        "investor_methods_grounded": [
+          1,
+          3
+        ],
+        "fills_gap": true,
+        "gap_rationale": "No ingested book covers vol skew, term-structure trading, dispersion, or the dividend/option-pricing interaction at a practitioner level; Hull touches dividends only theoretically. Bennett uniquely bridges into method (3) by explaining how dividends and term structure drive option pricing, complementing the HKEX operational specs.",
+        "ingestibility": "English. FREE full author-sanctioned PDF at https://trading-volatility.com/Trading-Volatility.pdf (~4.8MB, ~316 pages, verified live). Best ingestibility of the set — a single open PDF, no purchase needed. Also on Amazon in print.",
+        "authority": "strong",
+        "tier": "tier1_must_ingest"
+      },
+      {
+        "title": "Positional Option Trading: An Advanced Guide",
+        "authors": "Euan Sinclair",
+        "edition_year": "1st edition, 2020 (Wiley Trading)",
+        "coverage": "Advanced guide focused on finding and exploiting an option edge with a longer holding horizon (closer to the investor's buy-and-hold-plus-overlay style than market-making). Chapter 4 'The Variance Premium' details the equity-index variance premium, implied skew/correlation premia, and the economic reasons it exists (insurance, jump risk, trading restrictions, inventory). Adds robust trade sizing for option portfolios, BSM robustness, and directional option trading — directly relevant to a value investor sizing covered calls/CSPs as an income overlay.",
+        "framework_family": "derivatives",
+        "investor_methods_grounded": [
+          1
+        ],
+        "fills_gap": false,
+        "gap_rationale": "Substantially overlaps Sinclair's 'Volatility Trading' (2e) on the variance premium and sizing; it deepens the positional/edge-selection angle but is not strictly necessary if Volatility Trading is ingested. Valuable as a complement rather than a unique gap-filler, so marked tier2.",
+        "ingestibility": "English. Commercial Wiley book; ~240 pages (ISBN 9781119583516 print, 9781119583530 / eBook). Available as official Wiley eBook PDF and Kindle; purchasable for ingest. No free official PDF.",
+        "authority": "useful",
+        "tier": "tier2_valuable"
+      }
+    ]
+  },
+  {
+    "category": "dividend-value",
+    "recommendations": [
+      {
+        "title": "The Intelligent Investor (Revised Edition, with Jason Zweig commentary; Warren Buffett preface)",
+        "authors": "Benjamin Graham; commentary by Jason Zweig; preface by Warren E. Buffett",
+        "edition_year": "Revised 4th Edition, 2003 (HarperBusiness Essentials). NOTE: a newer 75th-Anniversary 3rd/2024 edition exists (HarperCollins, ISBN 9780063423527, ~640 pp) with refreshed Zweig commentary; the 2003 revised edition is the long-established, stable-pagination version and is the one to ingest unless the 2024 text is preferred for currency.",
+        "coverage": "The foundational value-investing temperament text: Mr. Market, margin of safety, defensive vs. enterprising investor, and the case for dividend-paying, financially-sound blue chips bought with patience. Zweig's chapter-by-chapter commentaries modernize the examples. Directly grounds methods (2) yield+patience+contrarian accumulation and (4) value temperament/behavioral discipline.",
+        "framework_family": "equity-valuation",
+        "investor_methods_grounded": [
+          2,
+          4
+        ],
+        "fills_gap": true,
+        "gap_rationale": "Corpus has Damodaran (Investment Valuation = DCF/intrinsic-value mechanics) and behavioral-finance texts (Shleifer, Pompian, Wakker) but no canonical value-investing doctrine/temperament source. The Intelligent Investor is the single most-cited grounding for margin-of-safety discipline and contrarian patience; nothing ingested substitutes for it.",
+        "ingestibility": "English. Trade book (not an official/regulatory PDF). Publisher: HarperBusiness Essentials, ISBN 9780060555665 (2003 revised, ~640 pp incl. commentary) or HarperCollins 9780063423527 (2024, ~640 pp). Widely circulated as PDF/EPUB; obtain a clean copy for byte-stable extraction. Publisher page: https://www.harpercollins.com / Zweig's page: https://jasonzweig.com/books/the-intelligent-investor/",
+        "authority": "canonical",
+        "tier": "tier1_must_ingest"
+      },
+      {
+        "title": "Security Analysis, Seventh Edition: Principles and Techniques",
+        "authors": "Benjamin Graham and David L. Dodd; edited with new commentary by Seth A. Klarman (contributors incl. Howard Marks, James Grant, Todd Combs); foreword by Warren E. Buffett",
+        "edition_year": "Seventh Edition, 2023 (McGraw-Hill); preserves the Buffett-endorsed 1940 2nd-edition Graham & Dodd text with ~250 pp of modern value-investor commentary",
+        "coverage": "The deep doctrinal grounding for fundamental value analysis: distinguishing investment from speculation, valuation of senior securities, dividend record and earning power, and quality/safety of income. Modern commentaries connect Graham-Dodd principles to contemporary value practice. Grounds method (2) blue-chip value selection and the analytical backbone of method (4).",
+        "framework_family": "equity-valuation",
+        "investor_methods_grounded": [
+          2,
+          4
+        ],
+        "fills_gap": true,
+        "gap_rationale": "Damodaran (already ingested) covers modern valuation mechanics but not the original value-investing doctrine, the dividend/earning-power-record analysis, or the safety-of-income framing that defines a Graham-Dodd dividend-value investor. The Klarman 7th edition adds current value-manager commentary absent anywhere in the corpus.",
+        "ingestibility": "English. Trade/professional book. Publisher: McGraw-Hill, ISBN 9781264932405, 864 pp. Official page: https://www.mheducation.com/highered/product/security-analysis-seventh-edition.html . Available as EPUB/Kindle and PDF; large file but fully ingestible. Heaviest item on this list.",
+        "authority": "canonical",
+        "tier": "tier1_must_ingest"
+      },
+      {
+        "title": "The Single Best Investment: Creating Wealth with Dividend Growth",
+        "authors": "Lowell Miller",
+        "edition_year": "2nd (Revised) Edition, 2006 (Print Project); 1st ed. 1999 (Adams Media)",
+        "coverage": "The clearest single statement of the dividend-growth income-value philosophy: buy high-quality companies with rising dividends, reinvest, and let yield-plus-growth compound with patience ('the single best investment'). Covers the SQGR framework (Strong finances, Quality, Growing dividend, attractive Return), compounding math, and back-tested dividend-growth performance. Near-exact fit for method (2) yield + patience + contrarian accumulation of blue chips.",
+        "framework_family": "equity-valuation",
+        "investor_methods_grounded": [
+          2,
+          4
+        ],
+        "fills_gap": true,
+        "gap_rationale": "No ingested source treats dividend-GROWTH income investing as a standalone discipline. Damodaran/Graham touch dividends only within broader valuation; Miller is the dedicated, philosophy-first dividend-income text that directly mirrors the investor's yield-overlay-on-blue-chips thesis.",
+        "ingestibility": "English. Trade book, ~258-265 pp. Publisher: Print Project, ISBN 9780965175081. A free author-authorized PDF is hosted by Miller/Howard Investments: https://mhinvest.com/umbraco/api/MHIAPI/GetDocumentByName?docName=SBI_Single_Best_Investment_Miller.pdf (verify it is the complete 2nd edition before ingest). Also on Internet Archive (archive.org/details/singlebestinvest00lowe) and as a paid ebook.",
+        "authority": "strong",
+        "tier": "tier1_must_ingest"
+      },
+      {
+        "title": "Get Rich with Dividends: A Proven System for Earning Double-Digit Returns",
+        "authors": "Marc Lichtenfeld",
+        "edition_year": "3rd Edition, 2023 (Wiley); prior editions 2012 and 2015",
+        "coverage": "The most current practical dividend-income playbook: the 10-11-12 System, 'Perpetual Dividend Raisers' (Aristocrats/Champions), dividend safety screening (payout ratio, coverage, history), and DRIP/compounding mechanics for building a rising income stream. Grounds the operational, screening, and reinvestment side of method (2).",
+        "framework_family": "equity-valuation",
+        "investor_methods_grounded": [
+          2
+        ],
+        "fills_gap": true,
+        "gap_rationale": "Provides modern (2023), screen-driven dividend-safety and reinvestment methodology that the older classics (Graham, Miller) predate. No ingested source supplies a contemporary, rules-based dividend-income selection/monitoring system; complements Miller's philosophy with executable criteria.",
+        "ingestibility": "English. Trade book (Agora/Wiley series), ~232-256 pp. Publisher: John Wiley & Sons, ISBN 9781119985556. Official page: https://www.wiley.com/en-us/Get+Rich+with+Dividends%3A+A+Proven+System+for+Earning+Double-Digit+Returns%2C+3rd+Edition-p-9781119985556 . Available as Kindle/EPUB/PDF via Wiley Online Library (doi:10.1002/9781119157519 for an earlier ed.); obtain the 3rd-edition file.",
+        "authority": "useful",
+        "tier": "tier2_valuable"
+      },
+      {
+        "title": "The Dhandho Investor: The Low-Risk Value Method to High Returns",
+        "authors": "Mohnish Pabrai",
+        "edition_year": "1st Edition, 2007 (John Wiley & Sons)",
+        "coverage": "Asymmetric-payoff value temperament and contrarian capital allocation: 'Heads I win, tails I don't lose much'; few bets, big bets, infrequent bets; buying distressed high-quality businesses cheaply; and Kelly-formula position sizing. Grounds method (4) discipline and the contrarian-accumulation half of method (2); its asymmetric-payoff framing also complements the options-income overlay (method 1) conceptually.",
+        "framework_family": "behavioral-finance",
+        "investor_methods_grounded": [
+          2,
+          4
+        ],
+        "fills_gap": true,
+        "gap_rationale": "Adds the concentrated, low-downside/high-upside contrarian temperament and Kelly-sizing perspective not present in the ingested behavioral set (Shleifer/Pompian/Wakker are theory; Pedersen is strategy mechanics). Pabrai frames value investing as asymmetric bet-selection, a distinct lens that pairs naturally with the investor's collateralized options-income approach.",
+        "ingestibility": "English. Trade book, ~208 pp. Publisher: John Wiley & Sons, ISBN 9780470043899. Official page: https://www.wiley.com/en-us/The+Dhandho+Investor%3A+The+Low+Risk+Value+Method+to+High+Returns-p-9780470043899 . Available as Kindle/EPUB and on Internet Archive (archive.org/details/dhandhoinvestorl00pabr_0); short and easily ingestible.",
+        "authority": "strong",
+        "tier": "tier2_valuable"
+      }
+    ]
+  },
+  {
+    "category": "temperament-behavioral",
+    "recommendations": [
+      {
+        "title": "The Most Important Thing Illuminated: Uncommon Sense for the Thoughtful Investor",
+        "authors": "Howard Marks (with annotated commentary/counterpoints by Christopher C. Davis, Joel Greenblatt, Paul Johnson, and Seth A. Klarman; foreword by Bruce C. Greenwald)",
+        "edition_year": "Illuminated (annotated) edition, Columbia Business School Publishing, January 2013 (original 2011)",
+        "coverage": "Practitioner value-investing philosophy distilled from Oaktree's client memos across 20 chapters: second-level thinking, the price/value relationship, risk recognition vs. volatility, market cycles, the psychology/pendulum of investor sentiment, contrarianism, patience and 'buying when others are fearful.' The Illuminated edition adds margin-side commentary from four leading value investors plus a new chapter on reasonable expectations.",
+        "framework_family": "behavioral-finance",
+        "investor_methods_grounded": [
+          2,
+          4
+        ],
+        "fills_gap": true,
+        "gap_rationale": "The ingested behavioral texts are academic (Shleifer's limits-to-arbitrage economics, Pompian's bias taxonomy, Wakker's prospect-theory formalism). None supplies the practitioner's operating temperament for contrarian, cycle-aware value investing. Marks is the canonical practitioner counterpart: cycle-positioning and contrarian-accumulation discipline are exactly the temperament behind method (2) patient dividend accumulation in beaten-down HK blue chips and the patience underpinning the options-income overlay. It also embeds Klarman's verbatim counterpoints, covering the un-ingestible 'Margin of Safety' ideas.",
+        "ingestibility": "English. Trade book available legitimately as publisher e-book in EPUB and PDF via Columbia University Press (cup.columbia.edu/book/the-most-important-thing-illuminated/9780231162845; e-book ISBN 9780231530798). 248 pages. Print ISBN 9780231162845. Readily obtainable.",
+        "authority": "canonical",
+        "tier": "tier1_must_ingest"
+      },
+      {
+        "title": "The Intelligent Investor (Third Edition / 75th Anniversary): The Definitive Book on Value Investing",
+        "authors": "Benjamin Graham; updated chapter-by-chapter commentary by Jason Zweig; introduction/appendix by Warren E. Buffett",
+        "edition_year": "Third Edition, Harper Business, October 22, 2024 (Graham's text from the 1973 revised 4th ed.; Zweig commentary newly updated). The 2003 Revised Edition (also Zweig, ~640 pp.) is an acceptable fallback.",
+        "coverage": "The doctrinal foundation of defensive/value investing temperament: the Mr. Market allegory (Ch. 8, market fluctuations as servant not instructor) and Margin of Safety as the central concept (Ch. 20), plus defensive vs. enterprising investor frameworks, dividend-record/financial-strength screening criteria, and emotional discipline. Zweig's commentaries translate Graham to modern markets (meme-stock manias, checklists).",
+        "framework_family": "equity-valuation",
+        "investor_methods_grounded": [
+          2,
+          4
+        ],
+        "fills_gap": true,
+        "gap_rationale": "Damodaran (ingested) covers intrinsic-valuation mechanics but not the temperament and decision discipline of value investing. No ingested source carries Graham's Mr. Market / margin-of-safety doctrine — the explicit philosophical root of method (2) (yield + patience + contrarian accumulation) and method (4) (analytical and emotional discipline). Graham's emphasis on dividend records and balance-sheet strength maps directly to the HK blue-chip income screen.",
+        "ingestibility": "English. Mass-market trade book; legitimately available as Harper Business e-book (Kindle/Apple Books/EPUB) and print. 3rd ed. hardcover ISBN 9780063356726; paperback 9780063423527; ~640 pages. No free official PDF, but inexpensive and ubiquitous; e-book convertible for ingest.",
+        "authority": "canonical",
+        "tier": "tier1_must_ingest"
+      },
+      {
+        "title": "The Psychology of Money: Timeless Lessons on Wealth, Greed, and Happiness",
+        "authors": "Morgan Housel",
+        "edition_year": "1st edition, Harriman House, September 8, 2020",
+        "coverage": "Nineteen short essays on financial behavior: that doing well with money is about how you behave, not what you know; the roles of luck and risk, 'enough,' compounding and patience (tails/long horizons), room for error/margin of safety, the cost of volatility as the price of admission, and avoiding ruin. Accessible practitioner-level behavioral discipline rather than academic theory.",
+        "framework_family": "behavioral-finance",
+        "investor_methods_grounded": [
+          4,
+          2
+        ],
+        "fills_gap": true,
+        "gap_rationale": "Adds the patience/long-horizon and 'behavior over intelligence' dimension in plain, distillable form that the academic ingested set (Shleifer/Pompian/Wakker) does not provide. Reinforces the temperament behind buy-and-hold dividend accumulation and the disciplined, never-naked / 100%-collateral risk posture of the options overlay. Lighter and less investing-specific than Marks/Graham, hence valuable rather than must-ingest.",
+        "ingestibility": "English. Trade book widely available legitimately as Harriman House e-book (EPUB/Kindle) and print; no free official PDF. Paperback ISBN 9780857197689; e-book ISBN 9780857197696; ~256 pages. Inexpensive and easily obtained.",
+        "authority": "strong",
+        "tier": "tier2_valuable"
+      },
+      {
+        "title": "Poor Charlie's Almanack: The Essential Wit and Wisdom of Charles T. Munger",
+        "authors": "Charles T. Munger; edited by Peter D. Kaufman; forewords by Warren Buffett and John Collison",
+        "edition_year": "Stripe Press abridged edition, December 5, 2023 (originally 2005)",
+        "coverage": "Eleven talks (1986-2007) presenting Munger's 'latticework of mental models' for rational decision-making, the psychology of human misjudgment (his ~25 standard causes of cognitive error), inversion, circle of competence, multidisciplinary thinking, and patient, concentrated value investing temperament.",
+        "framework_family": "behavioral-finance",
+        "investor_methods_grounded": [
+          4
+        ],
+        "fills_gap": true,
+        "gap_rationale": "Provides a distinctive practitioner taxonomy of decision biases and mental models complementary to (not duplicative of) the academic ingested set; grounds method (4) temperament. Ranked optional because its breadth (general rationality/multidisciplinary) is less tightly coupled to the HK dividend/options use case than Marks or Graham, and the abridged Stripe hardcover is a premium edition.",
+        "ingestibility": "English. Stripe Press 2023 abridged hardcover, ISBN 9781953953230, 384 pages; no authorized free PDF (the official 2005 edition was distributed via poorcharliesalmanack.com but is hard to source cleanly). Premium-priced print/e-book; obtainable but the least convenient to ingest of the four.",
+        "authority": "strong",
+        "tier": "tier3_optional"
+      }
+    ]
+  },
+  {
+    "category": "hk-official",
+    "recommendations": [
+      {
+        "title": "Operational Trading Procedures for Options Trading Exchange Participants of the Stock Exchange — Chapter 8: Special Events (Capital Adjustments)",
+        "authors": "The Stock Exchange of Hong Kong Limited (SEHK), a subsidiary of HKEX",
+        "edition_year": "Current consolidated rulebook chapter (rolling updates; latest amendment series cited as 48-15 / OTP-CapitalAdjustment, 2020s)",
+        "coverage": "THE definitive source for HKEX stock-option contract adjustment on special/cash dividends: the 2% threshold (no adjustment unless special dividend >= 2% of closing price on announcement day), the standard adjustment methodology via adjustment ratio (old strike x ratio = new strike; adjusted contract size = old contract value / new strike), treatment of rights/bonus/spin-off (adjusted irrespective of size), new HKATS class codes for adjusted series co-existing with standard series, odd-lot/fractional-share settlement, and the <=10-trading-day announcement window.",
+        "framework_family": "derivatives",
+        "investor_methods_grounded": [
+          1,
+          3
+        ],
+        "fills_gap": true,
+        "gap_rationale": "Hull and the other ingested derivatives texts teach generic option mechanics but contain NOTHING on the HKEX-specific contract-adjustment regime — especially the 2% special-dividend threshold and the adjustment-ratio formula that directly governs the investor's covered-call/cash-secured-put income on HK blue chips when issuers (e.g. CNOOC, banks) pay special dividends. No corpus item covers this.",
+        "ingestibility": "English official PDF on hkex.com.hk. Primary: https://www.hkex.com.hk/-/media/HKEX-Market/Products/Listed-Derivatives/Single-Stock/Stock-Options/Trading-Information/Contract-Adjustments/chap08.pdf (Chapter 8, ~15-20 pp). Companion rule-update markup with worked methodology: https://www.hkex.com.hk/-/media/HKEX-Market/Services/Rules-and-Forms-and-Fees/Rules/SEHK/Stock-Options/Rule-UpdateOperational-Trading-Procedures-for-Options-Trading-Exchange-Participants-of-the-Stock/48-15-OTP-CapitalAdjustment_e.pdf?la=en . Freely downloadable, no auth.",
+        "authority": "canonical",
+        "tier": "tier1_must_ingest"
+      },
+      {
+        "title": "Stock Connect Information Book for Investors",
+        "authors": "Hong Kong Exchanges and Clearing Limited (HKEX)",
+        "edition_year": "Version dated 23 September 2024 (rolling; check for latest)",
+        "coverage": "Official investor handbook for Shanghai/Shenzhen Connect and Southbound (港股通). Confirms eligible products are limited to eligible stocks (A/H-shares) and qualifying ETFs only — B-shares, bonds, options, futures and other derivatives are excluded; derivatives trade on separate HKATS/DCASS infrastructure outside Connect. Covers Northbound/Southbound order types, quotas (net-buy daily quota), settlement, and the rule that China Connect Securities cannot be physically deposited/withdrawn from CCASS.",
+        "framework_family": "market-microstructure",
+        "investor_methods_grounded": [
+          3
+        ],
+        "fills_gap": true,
+        "gap_rationale": "Harris and O'Hara/Hasbrouck cover generic microstructure but say nothing about the HK/Mainland mutual-market access regime. The hard fact that options are NOT tradable via Stock Connect (a core constraint on the investor's overlay strategy and a key teaching point for Mainland followers) appears in no ingested source.",
+        "ingestibility": "English official PDF, ~54 pages (confirmed via metadata). URL: https://www.hkex.com.hk/-/media/HKEX-Market/Mutual-Market/Stock-Connect/Getting-Started/Information-Booklet-and-FAQ/Information-Book-for-Investors/Investor_Book_En.pdf . Pair with the Stock Connect FAQ PDF (version 2 March 2026): https://www.hkex.com.hk/-/media/HKEX-Market/Mutual-Market/Stock-Connect/Getting-Started/Information-Booklet-and-FAQ/FAQ/FAQ_En.pdf . Free download.",
+        "authority": "canonical",
+        "tier": "tier1_must_ingest"
+      },
+      {
+        "title": "Inland Revenue Department: Notes to Tax Rates for Dividends, Interest, Royalties and Technical Fees (DTA Notes) + Profits/Salaries Tax dividend treatment",
+        "authors": "Inland Revenue Department (IRD), Government of the Hong Kong SAR",
+        "edition_year": "Current online guidance (rolling; 2024-2026)",
+        "coverage": "Confirms Hong Kong's schedular system imposes NO dividend withholding tax and dividends are outside salaries/profits tax (s.26 Inland Revenue Ordinance, anti-double-taxation), with the active-trading exception. Provides the official basis for distinguishing HK-level treatment from the Mainland 10% PRC enterprise income tax withheld on H-share dividends (Guoshuihan [2008] No. 897) versus the different treatment of red-chips (HK/offshore incorporated). Foundational for the H-share-vs-red-chip 10% withholding distinction central to method 3.",
+        "framework_family": "economics",
+        "investor_methods_grounded": [
+          2,
+          3
+        ],
+        "fills_gap": true,
+        "gap_rationale": "HKICPA accounting standards (ingested) cover financial reporting, not investor-level tax. No corpus source explains that HK has zero dividend withholding while H-share dividends still suffer a 10% PRC withholding at source — the exact tax arithmetic driving the investor's yield-on-HK-blue-chips and his physical-certificate-withdrawal tax workaround.",
+        "ingestibility": "English official IRD web pages (printable). Notes to Tax Rates: https://www.ird.gov.hk/eng/tax/dta_notes.htm . Stamp Duty / tax landing: https://www.ird.gov.hk/eng/tax/sdu.htm . Best ingested alongside the IRD Departmental Interpretation and Practice Notes (DIPNs). Short HTML pages (a few pp each); supplement with PwC Hong Kong tax summary for cross-check. Free.",
+        "authority": "canonical",
+        "tier": "tier1_must_ingest"
+      },
+      {
+        "title": "Rates of Stamp Duty — Transfer of Hong Kong Stock + Stamp Duty / Stamping of Share Transfer guidance",
+        "authors": "Inland Revenue Department (IRD), Government of the Hong Kong SAR",
+        "edition_year": "Rates effective 17 November 2023 (current as of 2026)",
+        "coverage": "Official stamp duty rates and procedure on transfer of HK stock: ad valorem duty of 0.1% on each of the bought and sold contract notes (0.2% round-trip total) on the higher of consideration or market value, effective 17 Nov 2023 (reduced from 0.13%); fixed HKD 5 duty on the instrument of transfer; stamping deadlines (2 days if effected in HK, 30 days elsewhere); late-stamping penalties; intra-group and stock-borrowing reliefs.",
+        "framework_family": "market-microstructure",
+        "investor_methods_grounded": [
+          3
+        ],
+        "fills_gap": true,
+        "gap_rationale": "Stamp duty is a HK-specific, non-trivial transaction cost (0.1% per side) that directly affects the investor's accumulation/rolling economics and is referenced in his teaching on cost-aware HK trading. No ingested source states the rate, the 17 Nov 2023 change, or the contract-note mechanics.",
+        "ingestibility": "English official IRD PDFs. Rates: https://www.ird.gov.hk/eng/pdf/sd_stock_rates.pdf (1-2 pp). Stamping of Share Transfer explanatory notes (U3/SOG/PN04A): https://www.ird.gov.hk/eng/pdf/sog_pn04a.pdf (~several pp). GovHK overview: https://www.gov.hk/en/residents/taxes/stamp/stamp_duty_rates.htm . Free download.",
+        "authority": "canonical",
+        "tier": "tier1_must_ingest"
+      },
+      {
+        "title": "Shares Holding (paper certificates vs CCASS) + Physical Share Certificates — Investor Education",
+        "authors": "Investor and Financial Education Council (IFEC) — 'The Chin Family', a Hong Kong statutory investor-education body (supported by SFC/regulators)",
+        "edition_year": "Current (2024 update for the Physical Share Certificates article)",
+        "coverage": "Plain-English official explanation of the two ways to hold HK shares, the procedure and economics of withdrawing physical certificates from CCASS (HKD 3.5/board-lot withdrawal fee; same-day collection if instructed before 2pm), and the critical post-withdrawal step: certificates come registered in HKSCC Nominees' name, so the holder must re-register at the share registrar to receive dividends directly. This is the mechanism behind the investor's physical-certificate technique to take direct registered ownership and control dividend receipt.",
+        "framework_family": "market-microstructure",
+        "investor_methods_grounded": [
+          2,
+          3
+        ],
+        "fills_gap": true,
+        "gap_rationale": "The physical-certificate-withdrawal-to-control-dividend-treatment maneuver is a distinctive, HK-specific operational tactic in the investor's method. No ingested microstructure or accounting source covers CCASS nominee holding, the Register of Members distinction, or the withdrawal/re-registration workflow.",
+        "ingestibility": "English official IFEC web pages (printable HTML). Shares holding: https://www.ifec.org.hk/web/en/investment/investment-products/stock/basics/share-holding.page . Physical Share Certificates: https://www.ifec.org.hk/web/en/blog/2024/07/physical-share-certificates.page . A few pp each. Free. For the operational rule layer, pair with HKEX Operating Guide for Investor Participants (Stock Deposit/Withdrawal): https://www.hkex.com.hk/-/media/HKEX-Market/Services/Settlement-and-Depository/Overview/Investor-Account-Service/Operating-Guide-for-Investor-Participants/3,-d-,5,-d-,1-Stock-Deposit/11deposit.pdf .",
+        "authority": "strong",
+        "tier": "tier1_must_ingest"
+      },
+      {
+        "title": "STOCK OPTIONS (Information Sheet) + Stock Options FAQ / Options Education",
+        "authors": "Hong Kong Exchanges and Clearing Limited (HKEX)",
+        "edition_year": "Information Sheet last revised 2016 (still current product overview); FAQ pages rolling",
+        "coverage": "HKEX's own beginner explainer for HK stock options: defines calls/puts on a single SEHK-listed stock cleared through SEOCH, expiration payoff diagrams of the four basic positions, premium quoted per share, and that option SELLERS face margin requirements (relevant to the investor's 100%-collateral discipline). FAQ pages add HK specifics: American-style exercise, market-maker system, capital adjustment FAQ, early-exercise reasoning. The closest official analogue to a generic 'Understanding Stock Options' booklet, but HK-specific (no booklet of that exact title exists at HKEX).",
+        "framework_family": "derivatives",
+        "investor_methods_grounded": [
+          1,
+          3
+        ],
+        "fills_gap": true,
+        "gap_rationale": "Hull teaches option theory generically; it does not describe the HKEX product (SEOCH clearing, American-style HK single-stock options, HK margin/market-maker setup). This grounds the investor's actual instrument and venue, not the abstract concept.",
+        "ingestibility": "English official PDF, ~4 pages (confirmed via metadata). Info Sheet: https://www.hkex.com.hk/-/media/HKEX-Market/Products/Listed-Derivatives/Single-Stock/Stock-Options/Publications/Stock-Options-Information-Sheet/HKEX_Stock_Options_EN.pdf . FAQ start: https://www.hkex.com.hk/eng/sorc/frontend/stk_opt_faq_1.htm . Options Education portal: https://www.hkex.com.hk/Products/Listed-Derivatives/Single-Stock/Stock-Options/Options-Education?sc_lang=en . Free.",
+        "authority": "canonical",
+        "tier": "tier2_valuable"
+      },
+      {
+        "title": "The Stock Exchange of Hong Kong Limited — Options Trading Rules (Whole OTR)",
+        "authors": "The Stock Exchange of Hong Kong Limited (SEHK) / HKEX",
+        "edition_year": "Current consolidated rulebook (rolling amendments)",
+        "coverage": "The consolidated legal rulebook governing HK stock-option trading: market-maker permits/obligations, exercise (American-style — holder may exercise any time in the option's life, obligations met by delivery/purchase of the underlying stock), levies (SFC/AFRC transaction levies, investor compensation levy) on exercised contracts, block-trade rules, and confirmation that on rights/bonus/unusually-large-dividend events strike price and contract size are adjusted to hold option value constant.",
+        "framework_family": "derivatives",
+        "investor_methods_grounded": [
+          1,
+          3
+        ],
+        "fills_gap": true,
+        "gap_rationale": "Provides the binding rule text (vs. the explainer-level Info Sheet) for HK option exercise, assignment, levies and adjustment — the regulatory bedrock for the investor's rolling/assignment and theta-vs-delta overlay on HK names. Not present in any ingested derivatives text.",
+        "ingestibility": "English official consolidated PDF on hkex.com.hk: https://www.hkex.com.hk/-/media/HKEX-Market/Services/Rules-and-Forms-and-Fees/Rules/SEHK/Whole_OTR_e.pdf (substantial, ~80-150 pp). Companion Operational Trading Procedures Appendix A (exercise + adjustment summary): https://www.hkex.com.hk/-/media/HKEX-Market/Services/Rules-and-Forms-and-Fees/Rules/SEHK/Stock-Options/Operational-Trading-Procedures-for-Options-Trading-Exchange-Participants-of-the-Stock-Exchange/Appendix.pdf . Free.",
+        "authority": "canonical",
+        "tier": "tier2_valuable"
+      },
+      {
+        "title": "Operational Clearing Procedures for Options Trading Exchange Participants of SEOCH — Chapter 14: Capital Adjustments",
+        "authors": "The SEHK Options Clearing House Limited (SEOCH), an HKEX subsidiary",
+        "edition_year": "Current consolidated clearing procedures (rolling)",
+        "coverage": "The clearing-side counterpart to the trading-side Chapter 8: how SEOCH executes capital adjustments in DCASS — timing (night before effective date for mergers/splits/consolidations), transfer of open positions from old to adjusted series under a new class code, handling of pending stock positions via CCASS, entitlements on securities collateral, and the automatic de-covering of shares backing short call positions on the adjustment evening (directly relevant to a covered-call writer holding collateral through a special-dividend adjustment).",
+        "framework_family": "derivatives",
+        "investor_methods_grounded": [
+          1,
+          3
+        ],
+        "fills_gap": true,
+        "gap_rationale": "Explains what happens to the investor's COVERED-CALL collateral and short positions through a corporate-action adjustment (auto de-covering, collateral entitlements) — a precise operational detail absent from Hull/QRM/HKICPA and from the trading-side procedures.",
+        "ingestibility": "English official PDF on hkex.com.hk: https://www.hkex.com.hk/-/media/hkex-market/services/rules-and-forms-and-fees/rules/overview/introduction-to-regulatory-framework/clearing-house-rules/operational-clearing-procedures-for-options-trading-exchange-participants-of-seoch/chap14 (~10-15 pp). Full consolidated OCP (latest upgrade series 33_19): https://www.hkex.com.hk/-/media/HKEX-Market/Services/Rules-and-Forms-and-Fees/Rules/SEOCH/Rule-Update_Operational-Clearing-Procedures-for-Options-Trading-Exchange-Participants-of-SEOCH/33_19_OCP__upgrade_e.pdf?la=en . Free.",
+        "authority": "canonical",
+        "tier": "tier2_valuable"
+      },
+      {
+        "title": "HKEX Stock Options Product Page — Contract Specifications, Board Lot / Contract Multiplier & Eligible Classes",
+        "authors": "Hong Kong Exchanges and Clearing Limited (HKEX)",
+        "edition_year": "Live reference, updated continuously (2026)",
+        "coverage": "Authoritative per-class contract specifications for HK single-stock options: underlying classes (incl. the investor's names — Tencent, Alibaba, China Mobile, CNOOC, HK banks/insurers), contract size / multiplier per option, board-lot of the underlying, tick, expiry months, exercise style, and links to the live Stock Options list. Establishes the exact lot-size and multiplier arithmetic underlying the 100%-collateral cash-secured-put and covered-call sizing.",
+        "framework_family": "derivatives",
+        "investor_methods_grounded": [
+          1,
+          3
+        ],
+        "fills_gap": true,
+        "gap_rationale": "The specific board-lot and contract-multiplier figures per HK underlying (which differ by name and drive collateral math) are not in any ingested source. Needed to make the overlay strategy concrete for the investor's actual tickers.",
+        "ingestibility": "English official HKEX web reference (dynamic). Stock Option detail: https://www.hkex.com.hk/eng/sorc/options/stock_options_detail.aspx ; search: https://www.hkex.com.hk/eng/sorc/options/stock_options_search.aspx ; product landing: https://www.hkex.com.hk/Products/Listed-Derivatives/Single-Stock/Stock-Options/Contract-Specifications?sc_lang=en . Best captured as a dated snapshot/table because specs change. Free.",
+        "authority": "canonical",
+        "tier": "tier2_valuable"
+      },
+      {
+        "title": "Guide on Distribution of Dividends and Other Entitlements",
+        "authors": "Hong Kong Exchanges and Clearing Limited (HKEX) — Listing Department",
+        "edition_year": "Current Listing practice guide (rolling)",
+        "coverage": "Issuer-side procedural guide on how HK-listed companies declare and distribute cash dividends, special dividends and other entitlements: book-close dates, ex-dates, registration deadlines, and the announcement timeline. Useful context for when option capital adjustments are triggered and for the dividend-capture/ex-date timing the income investor must track.",
+        "framework_family": "equity-valuation",
+        "investor_methods_grounded": [
+          2,
+          3
+        ],
+        "fills_gap": true,
+        "gap_rationale": "Connects the dividend declaration/ex-date calendar (issuer side) to both the income-investor's entitlement timing and the option-adjustment trigger. No ingested source gives the HK book-close / ex-date entitlement procedure.",
+        "ingestibility": "English official PDF on hkex.com.hk: https://www.hkex.com.hk/-/media/HKEX-Market/Listing/Rules-and-Guidance/Other-Resources/Listed-Issuers/Practices-and-Procedures-for-Handling-Listing-related-Matters/f_div.pdf (~10-20 pp). Free download.",
+        "authority": "strong",
+        "tier": "tier3_optional"
+      },
+      {
+        "title": "HKEX Introductory Guide to the Stock Options Corner",
+        "authors": "Hong Kong Exchanges and Clearing Limited (HKEX)",
+        "edition_year": "Current (HKEx-branded; covers the online Stock Options Corner tools)",
+        "coverage": "Guide to HKEX's online options analytics: moneyness, implied volatility and the Greeks (delta, theta, vega), the theoretical-price drivers (underlying price, strike, vol, rates, time), the Options/Warrants Calculator, and most-traded call/put series tracking. Reinforces the theta-vs-delta reasoning behind premium-selling in the HK-tool context.",
+        "framework_family": "derivatives",
+        "investor_methods_grounded": [
+          1
+        ],
+        "fills_gap": false,
+        "gap_rationale": "Greeks and option pricing are already thoroughly covered by Hull (ingested). Value here is only the HK-specific tool framing, which is marginal over the canonical theory.",
+        "ingestibility": "English official PDF: https://www.hkex.com.hk/-/media/HKEX-Market/Products/Listed-Derivatives/Single-Stock/Stock-Options/Publications/Introductory-Guide-to-the-Stock-Options-Corner/SO_Corner_Guide.pdf (~10-15 pp). Free.",
+        "authority": "useful",
+        "tier": "tier3_optional"
+      }
+    ]
+  },
+  {
+    "category": "hk-china-equity-context",
+    "recommendations": [
+      {
+        "title": "Red Capitalism: The Fragile Financial Foundation of China's Extraordinary Rise (Revised Edition)",
+        "authors": "Carl E. Walter and Fraser J. T. Howie",
+        "edition_year": "Revised Edition, 2012 (orig. 2011; John Wiley & Sons)",
+        "coverage": "Insider account by two veteran SOE-listing bankers of how the Chinese state uses banks, bond markets and equity capital markets as policy tools. Explains the Big-4 banks, national debt, and why Chinese SOE share prices reflect policy/liquidity more than corporate control. Grounds WHY HK-listed Chinese blue chips (CNOOC, China Mobile/Telecom, the banks, insurers) behave as state-controlled, dividend-distributing, 'policy-market' instruments.",
+        "framework_family": "equity-valuation",
+        "investor_methods_grounded": [
+          2,
+          3,
+          4
+        ],
+        "fills_gap": true,
+        "gap_rationale": "The existing corpus (Damodaran valuation, Shleifer inefficient markets, Pedersen) has no China-specific institutional grounding. Nothing in the corpus explains state ownership, SOE governance, or the 'policy market' dynamic that underlies the investor's contrarian dividend-accumulation thesis on Chinese SOEs. Provides the macro/institutional 'why' behind method 2's stock universe.",
+        "ingestibility": "English. Trade book, 260 pages. Publisher John Wiley & Sons (ISBN 978-1118255100); also on Wiley Online Library (DOI 10.1002/9781119199083) and Apple Books as ebook. Obtainable as DRM-removable EPUB/PDF via Wiley/retail or library e-lending. Single self-contained volume; clean for full ingest.",
+        "authority": "strong",
+        "tier": "tier1_must_ingest"
+      },
+      {
+        "title": "HKEX Stock Connect — Information Book for Investors (and companion Frequently Asked Questions)",
+        "authors": "Hong Kong Exchanges and Clearing Limited (HKEX)",
+        "edition_year": "Information Book for Investors v. 23 September 2024; FAQ v. 2 March 2026 (continuously updated)",
+        "coverage": "Official exchange documentation of the Shanghai/Shenzhen-Hong Kong Stock Connect framework: Southbound/Northbound eligibility (HSLI/HSMI/HSSI constituents, market-cap thresholds, sell-only designation), the rule that only equities and ETFs are Connect-eligible (options and other derivatives are NOT tradable via 港股通), settlement (CCASS), quotas, corporate-action handling, and dividend-tax mechanics by channel.",
+        "framework_family": "market-microstructure",
+        "investor_methods_grounded": [
+          3
+        ],
+        "fills_gap": true,
+        "gap_rationale": "The corpus has generic microstructure (Harris, O'Hara, Hasbrouck) but zero HK/China-specific operational mechanics. This is the single authoritative primary source for the 港股通-cannot-trade-options fact, Connect eligibility, and channel-specific dividend withholding — core to method 3 and not derivable from any general microstructure text. The user explicitly invited official/exchange grounding where books are thin.",
+        "ingestibility": "English (also bilingual versions exist). Official HKEX PDFs. Information Book ~54 pp at hkex.com.hk/.../Information-Book-for-Investors/Investor_Book_En.pdf; FAQ at .../FAQ/FAQ_En.pdf. Free, direct download, standalone PDFs. Note URLs/version dates rotate — re-resolve from the Stock Connect 'Information Booklet & FAQ' landing page at ingest time and pin the version date.",
+        "authority": "canonical",
+        "tier": "tier1_must_ingest"
+      },
+      {
+        "title": "HKEX Stock Options — Operational Trading Procedures, Chapter 8: Special Events (with the Introductory Guide to the Stock Options Corner and Contract Specifications)",
+        "authors": "Hong Kong Exchanges and Clearing Limited / SEHK / SEOCH",
+        "edition_year": "Current live rulebook chapter (periodically amended; verify version at ingest)",
+        "coverage": "Official rules for capital/contract adjustment of HKEX single-stock options on corporate actions: the 2%-of-closing-price threshold that triggers special/extraordinary-dividend adjustments, the adjustment-ratio mechanics for exercise price and contract size, cash-vs-scrip handling, announcement timing (by the 10th trading day), and exceptional-circumstance discretion. Companion docs give contract specs, contract multiplier/board lot, and covered-call/option basics for HK names.",
+        "framework_family": "derivatives",
+        "investor_methods_grounded": [
+          1,
+          3
+        ],
+        "fills_gap": true,
+        "gap_rationale": "The corpus has Hull and Glasserman for general options theory but nothing on HKEX-specific contract specs or the special-dividend contract-adjustment regime — which is decisive for an income overlay built on HK blue chips that frequently pay special dividends. Directly grounds method 1 (rolling/assignment economics around adjustments) and method 3 (HKEX option mechanics) in primary exchange text.",
+        "ingestibility": "English. Official HKEX PDFs (Operational Trading Procedures ch. 8 'Special Events'; SO_Corner introductory guide ~3.5MB; STKO contract specs). Free direct download from hkex.com.hk under Products > Listed Derivatives > Single Stock > Stock Options. Standalone PDFs but URL paths are volatile (a previously cited chap08 path now resolves to an unrelated file) — re-resolve from the Stock Options 'Contract Adjustments' / 'Rules' pages and pin the dated file at ingest.",
+        "authority": "canonical",
+        "tier": "tier1_must_ingest"
+      },
+      {
+        "title": "Privatizing China: Inside China's Stock Markets (2nd Edition)",
+        "authors": "Carl E. Walter and Fraser J. T. Howie",
+        "edition_year": "2nd Edition, 2006 (John Wiley & Sons; orig. 2003)",
+        "coverage": "Detailed history and mechanics of how China built domestic and international equity markets to privatize/reform SOEs: the local-government-to-central-government evolution, the QFII channel, the 2005 share-structure (G-share) reforms, and the overseas-listing process that produced the H-share / red-chip universe. Provides the share-class taxonomy and listing context for the investor's HK blue-chip names.",
+        "framework_family": "equity-valuation",
+        "investor_methods_grounded": [
+          2,
+          3
+        ],
+        "fills_gap": true,
+        "gap_rationale": "Complements Red Capitalism with deeper share-class/listing-structure detail (H-share vs red-chip incorporation, why this drives the dividend-withholding difference central to method 3). No corpus title covers Chinese equity market formation or share-class structure. Mark as tier2 because it overlaps with Red Capitalism and is more dated; valuable but not strictly required if budget-constrained.",
+        "ingestibility": "English. Trade book; Wiley 2nd ed. (ISBN 978-0470822142). ~400 pp. Available as Kindle/ebook and print; obtainable as DRM-removable EPUB or via library e-lending. Single self-contained volume. Note: confirm exact page count at ingest (retailer listings vary).",
+        "authority": "strong",
+        "tier": "tier2_valuable"
+      }
+    ]
+  }
+]

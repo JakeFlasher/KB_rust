@@ -1,0 +1,2571 @@
+{
+  "candidates": [
+    {
+      "card_title_en": "Never-lose-the-base-position: covered option-selling around your fair value",
+      "framework": "deriv",
+      "reading_folder": "07_derivatives_and_volatility",
+      "principle_summary": "The core of his option program is selling calls and puts against a core stake (底倉) he refuses to surrender while the price is below his own estimate of fair value; he only lets shares go above his target (e.g. Tencent 400).",
+      "subprinciples": [
+        "Roll puts/calls to collect premium without giving up the underlying below fair value",
+        "Willingness to part with shares is bounded by your own valuation (e.g. 400 for Tencent)",
+        "Keep a base position to avoid 'falling behind' (不掉隊) on names you want to own"
+      ],
+      "citation_seeds": [
+        {
+          "post_id": "222436722",
+          "quote_zh": "我sell call sell put的原則是不弄丟底倉，至少在我認為的合理價以下不弄丟。"
+        },
+        {
+          "post_id": "222375639",
+          "quote_zh": "我是打算400元之前盡量不弄丟底倉，所以才會這麼做。"
+        }
+      ],
+      "crosslinks": [
+        "deriv-option-payoff-anatomy",
+        "eq-intrinsic-value"
+      ],
+      "hkex_specificity": "high — strikes and fair-value bands expressed in HKD on HK-listed Tencent/CNOOC; uses HK monthly options.",
+      "recurrence": 3,
+      "conviction": "core-philosophy",
+      "evidence_strength": "strong"
+    },
+    {
+      "card_title_en": "Sell puts only on companies you would happily own at the strike (cash-secured, bounded downside)",
+      "framework": "deriv",
+      "reading_folder": "07_derivatives_and_volatility",
+      "principle_summary": "A sell-put is an acquisition tool, not a premium grab: he only writes puts at strikes where he genuinely wants to be assigned the stock, fully cash-backed, so the worst case is bounded (owning a stock he wanted even if it goes to zero costs only ~3% of book).",
+      "subprinciples": [
+        "The strike is a price you have decided is a buy",
+        "Accept assignment as the base case, not as a failure",
+        "Worst case is bounded because positions are small and fully cash-secured",
+        "A value judgment on the underlying is the precondition for the trade"
+      ],
+      "citation_seeds": [
+        {
+          "post_id": "223114673",
+          "quote_zh": "我只sell put我願意以那個價錢接貨的公司"
+        },
+        {
+          "post_id": "223114673",
+          "quote_zh": "我現在sell put，就算騰訊一夜之間價值為零，我虧損也就3%的事情。"
+        },
+        {
+          "post_id": "224025593",
+          "quote_zh": "前提是你對該股的價值有基本判斷"
+        }
+      ],
+      "crosslinks": [
+        "deriv-option-payoff-anatomy",
+        "rm-risk-objectives-and-tolerance",
+        "eq-intrinsic-value"
+      ],
+      "hkex_specificity": "high — references being assigned HK shares and HK position sizing in HKD.",
+      "recurrence": 7,
+      "conviction": "core-philosophy",
+      "evidence_strength": "strong"
+    },
+    {
+      "card_title_en": "No leverage to take delivery: size sell-puts only to cash on hand, never oversell",
+      "framework": "rm",
+      "reading_folder": "11_risk_management",
+      "principle_summary": "His hard bottom line is to sell puts only up to the cash he actually has to take delivery, never more, and never finance assignment with margin — using financing to take delivery is 'looking for death'.",
+      "subprinciples": [
+        "No leverage is the 底線 (bottom line); guard against greed",
+        "Match put quantity to deliverable cash, never oversell",
+        "Capacity to take delivery is the binding constraint on size",
+        "Once a name is already a large holding with no spare cash, stop adding"
+      ],
+      "citation_seeds": [
+        {
+          "post_id": "223114673",
+          "quote_zh": "用融資是找死"
+        },
+        {
+          "post_id": "223114673",
+          "quote_zh": "我sell put有多少錢就接多少的貨，絕不多賣。"
+        },
+        {
+          "post_id": "224796566",
+          "quote_zh": "大鵝已經很多了，我也沒有錢接貨了"
+        }
+      ],
+      "crosslinks": [
+        "rm-risk-objectives-and-tolerance",
+        "rm-risk-type-taxonomy",
+        "pm-portfolio-constraints"
+      ],
+      "hkex_specificity": "medium — HK contract delivery context but the leverage discipline is general.",
+      "recurrence": 6,
+      "conviction": "core-philosophy",
+      "evidence_strength": "strong"
+    },
+    {
+      "card_title_en": "Ordinary investors should not touch derivatives — and never short, never go naked",
+      "framework": "rm",
+      "reading_folder": "11_risk_management",
+      "principle_summary": "He opposes ordinary investors touching any derivatives, including sell-call/sell-put: never sell a call without 100% of the underlying, never sell a put without full cash to take delivery, and never short — misjudging the risk you bear can be fatal ('會死人').",
+      "subprinciples": [
+        "No covered call without 100% of the underlying shares",
+        "No sell-put without full cash to take delivery",
+        "For retail, never short-sell: even a 0.5% short can blow up the account",
+        "The fatal risk falls on those who only think they understand it"
+      ],
+      "citation_seeds": [
+        {
+          "post_id": "223114673",
+          "quote_zh": "高危遊戲，手中沒有100%的正股，千萬不要sell call；同理，沒有準備好全額接貨的錢，不要sell put。會死人㗎！"
+        },
+        {
+          "post_id": "223114673",
+          "quote_zh": "本人一向反對普通投資者觸碰任何的衍生工具，即便是sell call和sell put。"
+        },
+        {
+          "post_id": "227101293",
+          "quote_zh": "如果多手做空0.5%倉位，已經爆倉，想想也蠻可怕的。對於一般人，不做空保平安！"
+        }
+      ],
+      "crosslinks": [
+        "rm-risk-objectives-and-tolerance",
+        "rm-risk-type-taxonomy",
+        "mt-market-manipulation-bluffing"
+      ],
+      "hkex_specificity": "medium — framed for HK retail option access; the no-short rule is general.",
+      "recurrence": 2,
+      "conviction": "core-philosophy",
+      "evidence_strength": "strong"
+    },
+    {
+      "card_title_en": "Avoid accumulators and complex multi-leg products with unbounded loss",
+      "framework": "rm",
+      "reading_folder": "11_risk_management",
+      "principle_summary": "He refuses accumulators and complex structured products because their worst-case loss is a 'bottomless pit' you cannot even account for; he prefers simple instruments where the maximum loss is clearly statable, since complexity invites error.",
+      "subprinciples": [
+        "Always be able to state your maximum loss",
+        "Complexity raises error probability",
+        "A sized sell-put caps loss even if the stock goes to zero; an accumulator does not"
+      ],
+      "citation_seeds": [
+        {
+          "post_id": "223114673",
+          "quote_zh": "accumulator可是無底深淵，連自己最壞情況下會虧損多少也說不清賬。"
+        },
+        {
+          "post_id": "223114673",
+          "quote_zh": "我不會去考慮太複雜的工具，很容易出錯。"
+        }
+      ],
+      "crosslinks": [
+        "rm-risk-type-taxonomy",
+        "rm-neglected-tail-risk",
+        "deriv-anatomy-and-instrument-types"
+      ],
+      "hkex_specificity": "medium — accumulators are a notorious HK private-bank product; reasoning is general.",
+      "recurrence": 2,
+      "conviction": "repeated",
+      "evidence_strength": "strong"
+    },
+    {
+      "card_title_en": "Selling premium harvests volatility/time-value, not direction (non-directional, probability-respecting)",
+      "framework": "deriv",
+      "reading_folder": "07_derivatives_and_volatility",
+      "principle_summary": "He sells puts and calls without predicting price; the ideal outcome is a range-bound, flat underlying ('不死不活'), and edge comes from respecting probabilities anchored to a fundamental floor, not from a directional forecast.",
+      "subprinciples": [
+        "The seller most wants the price to go nowhere",
+        "Do not predict the price; respect probability",
+        "Still anchor strikes to a fundamental floor view",
+        "A short strangle (sell put + sell call) monetizes a range-bound stock"
+      ],
+      "citation_seeds": [
+        {
+          "post_id": "223114673",
+          "quote_zh": "sell put最希望股價不死不話"
+        },
+        {
+          "post_id": "223866640",
+          "quote_zh": "和我之前sell call12元和sell put 10元一樣，不預判股價。"
+        },
+        {
+          "post_id": "224024693",
+          "quote_zh": "我sell 了$中国海洋石油(00883)$ 七月份10元的put，收0.48；又sell了$中国海洋石油(00883)$ 七月份的call，收0.47元。你說不死不活，我是不是應該很開心"
+        }
+      ],
+      "crosslinks": [
+        "deriv-vega-and-theta",
+        "deriv-implied-volatility",
+        "deriv-greeks-overview"
+      ],
+      "hkex_specificity": "high — strikes quoted in HKD on HK names (CNOOC).",
+      "recurrence": 5,
+      "conviction": "core-philosophy",
+      "evidence_strength": "strong"
+    },
+    {
+      "card_title_en": "Keep sold-put strikes near the money; deep-OTM puts earn too little",
+      "framework": "deriv",
+      "reading_folder": "07_derivatives_and_volatility",
+      "principle_summary": "To capture meaningful volatility premium and keep a position, he keeps strikes close to the current price; a strike drifting too far out-of-the-money earns negligible premium and just ties up capital ('弄丟' = losing the position/premium).",
+      "subprinciples": [
+        "Strikes far from price can't harvest the volatility premium",
+        "Deep-OTM puts collect almost nothing per unit of risk",
+        "'弄丟' means letting the strike drift too far so you stop earning premium",
+        "Premium must justify the strike"
+      ],
+      "citation_seeds": [
+        {
+          "post_id": "223114673",
+          "quote_zh": "偏離行權價太遠，吃不了波幅的錢"
+        },
+        {
+          "post_id": "224796566",
+          "quote_zh": "你這樣賺不到多少期權金的"
+        },
+        {
+          "post_id": "223426897",
+          "quote_zh": "不偏離行權價"
+        }
+      ],
+      "crosslinks": [
+        "deriv-delta-and-hedging",
+        "deriv-vega-and-theta",
+        "deriv-option-payoff-anatomy"
+      ],
+      "hkex_specificity": "medium — discussed on HK names but the strike-selection logic is general.",
+      "recurrence": 4,
+      "conviction": "repeated",
+      "evidence_strength": "strong"
+    },
+    {
+      "card_title_en": "Per-name sell-put price bands that govern when to keep writing",
+      "framework": "deriv",
+      "reading_folder": "07_derivatives_and_volatility",
+      "principle_summary": "He sets explicit, name-specific price thresholds: below a floor he keeps selling puts to defend the position; in a middle band he holds near the strike; above an upper bound he stops because he no longer wants more shares (e.g. Tencent <400; Alibaba <120 keep, >120 stop).",
+      "subprinciples": [
+        "Bands are name-specific and tied to his own valuation",
+        "Below floor: keep selling puts to avoid losing chips",
+        "Above the upper bound: stop, you don't want assignment",
+        "These are personal bottom lines that a fast move can challenge"
+      ],
+      "citation_seeds": [
+        {
+          "post_id": "223114673",
+          "quote_zh": "騰訊$400以下，我願意繼續sell put，盡可能不弄丟；$阿里巴巴-SW(09988)$ 120元以下，我盡可能不弄丟籌碼，維持一定倉位不偏離行權價太多，120元以上，我可能就不願意繼續sell put了。"
+        },
+        {
+          "post_id": "224796566",
+          "quote_zh": "120元以下，我盡可能不弄丟籌碼，維持一定倉位不偏離行權價太多，120元以上，我可能就不願意繼續sell put了"
+        }
+      ],
+      "crosslinks": [
+        "deriv-option-payoff-anatomy",
+        "eq-intrinsic-value",
+        "rm-risk-objectives-and-tolerance"
+      ],
+      "hkex_specificity": "high — HKD bands on HK-listed Tencent and Alibaba (09988).",
+      "recurrence": 3,
+      "conviction": "repeated",
+      "evidence_strength": "strong"
+    },
+    {
+      "card_title_en": "Rolling sold puts down to a lower strike for net credit",
+      "framework": "deriv",
+      "reading_folder": "07_derivatives_and_volatility",
+      "principle_summary": "He rolls a losing put down: close the higher strike at a loss and open a lower strike for more premium, netting a credit even if the stock only recovers to the lower strike — and lowering the eventual assignment price (and its percentage-based fees and stamp duty).",
+      "subprinciples": [
+        "Close 360 put (-9), open 340 put (+11) = net +2 if stock recovers to 340",
+        "Lower strike means lower commission and stamp duty on assignment",
+        "Costs and slippage are included in the calculation",
+        "Regret risk: if the stock rebounds past the original strike you lose the higher-strike upside"
+      ],
+      "citation_seeds": [
+        {
+          "post_id": "223819429",
+          "quote_zh": "平倉360元的sell put，虧9元每股，新開340元七月份sell put，收回11元。就這張期權而言，相當於騰訊七月份升回$340，能夠淨賺$2。"
+        },
+        {
+          "post_id": "223819429",
+          "quote_zh": "如果騰訊一直不回升，我按照$340接貨，無論交易佣金和印花稅都要比按照$360接貨少支付一些。"
+        },
+        {
+          "post_id": "225297451",
+          "quote_zh": "如果騰訊反彈至$350，你會後悔的"
+        }
+      ],
+      "crosslinks": [
+        "deriv-option-payoff-anatomy",
+        "mt-effective-cost-trade-benchmark",
+        "deriv-delta-and-hedging"
+      ],
+      "hkex_specificity": "high — HK stamp duty and percentage-based HK commissions on assignment in HKD.",
+      "recurrence": 4,
+      "conviction": "repeated",
+      "evidence_strength": "strong"
+    },
+    {
+      "card_title_en": "Roll deep-OTM near-dated legs forward to free capital (delta-vs-theta)",
+      "framework": "deriv",
+      "reading_folder": "07_derivatives_and_volatility",
+      "principle_summary": "When a near-dated leg has gone deeply out-of-the-money it has little remaining time-value and only ties up capital; he closes it and opens a farther-dated, closer-to-money leg — closing the leg where delta now outweighs theta.",
+      "subprinciples": [
+        "A deep-OTM near leg just occupies capital",
+        "Roll forward to a strike that again earns premium",
+        "Don't adjust right before earnings due to elevated volatility",
+        "Rolling is easiest funded from an already-profitable line"
+      ],
+      "citation_seeds": [
+        {
+          "post_id": "223426897",
+          "quote_zh": "我平的近期已經嚴重價外了，留著占資金"
+        },
+        {
+          "post_id": "223426897",
+          "quote_zh": "平倉了六月份$阿里巴巴-SW(09988)$ 100元的sell put，新開了七月份105元的sell put，收取期權金6.89元"
+        },
+        {
+          "post_id": "224796566",
+          "quote_zh": "如果我平掉105元或者112.5元的期權，還是可以調一點的，畢竟那里賺了點錢"
+        }
+      ],
+      "crosslinks": [
+        "deriv-vega-and-theta",
+        "deriv-greeks-overview",
+        "deriv-delta-and-hedging"
+      ],
+      "hkex_specificity": "medium — HK names but the roll mechanics are general.",
+      "recurrence": 4,
+      "conviction": "repeated",
+      "evidence_strength": "strong"
+    },
+    {
+      "card_title_en": "The wheel: take assignment then reverse into covered calls",
+      "framework": "deriv",
+      "reading_folder": "07_derivatives_and_volatility",
+      "principle_summary": "He treats assignment as routine: once put-assigned the shares he wanted, he turns around and sells calls against them. A call sold against shares he is only about to receive via a pending assignment is 'half-naked' until delivery; if assignment fails he closes the call and opens a fresh put.",
+      "subprinciples": [
+        "Assignment is not a loss if you wanted the shares at the strike",
+        "After assignment, sell calls on the delivered stock",
+        "'Half-naked' call = sold before the underlying is actually in hand",
+        "Escape plan: if shares never arrive, close the call and re-open a put"
+      ],
+      "citation_seeds": [
+        {
+          "post_id": "223828800",
+          "quote_zh": "我不介意接貨，接了就反手賣call"
+        },
+        {
+          "post_id": "223828800",
+          "quote_zh": "Sell call算是半裸吧？"
+        },
+        {
+          "post_id": "223828800",
+          "quote_zh": "如果接不到貨，那麼我就平掉sell call好了，再開個sell put的了。"
+        }
+      ],
+      "crosslinks": [
+        "deriv-option-payoff-anatomy",
+        "deriv-delta-and-hedging",
+        "rm-risk-type-taxonomy"
+      ],
+      "hkex_specificity": "medium — HK Tencent assignment example; wheel logic is general.",
+      "recurrence": 4,
+      "conviction": "repeated",
+      "evidence_strength": "strong"
+    },
+    {
+      "card_title_en": "Covered calls are pocket-money on volatility, not a core return engine",
+      "framework": "deriv",
+      "reading_folder": "07_derivatives_and_volatility",
+      "principle_summary": "He writes covered calls only modestly, to earn small premium ('零用錢') on volatility against a core holding he wants to keep for its earnings; over-doing it caps upside and can wipe out the gains, and he caps call quantity rather than maximizing premium.",
+      "subprinciples": [
+        "Sell calls only in small size against a core holding you're reluctant to part with",
+        "A covered call caps your upside — only acceptable if you don't mind",
+        "Match the leg to the outcome you can tolerate (don't sell calls on names you want to keep)",
+        "If you fear losing shares, don't sell calls; if you fear assignment, don't sell puts"
+      ],
+      "citation_seeds": [
+        {
+          "post_id": "222987869",
+          "quote_zh": "我只是sell call賺點波動的零用錢，沒想到把家用都蝕精光。"
+        },
+        {
+          "post_id": "223121311",
+          "quote_zh": "擔心弄丟籌碼就別sell call，擔心接貨就別sell put！你有看到我sell call保險和電信么？"
+        },
+        {
+          "post_id": "223857399",
+          "quote_zh": "sell call 了1/4$中国海洋石油(00883)$ ，七月份，10.5元，收0.47元期權金。"
+        }
+      ],
+      "crosslinks": [
+        "deriv-option-payoff-anatomy",
+        "deriv-vega-and-theta",
+        "eq-intrinsic-value"
+      ],
+      "hkex_specificity": "high — covered calls on HK CNOOC/insurers/telecom in HKD.",
+      "recurrence": 4,
+      "conviction": "repeated",
+      "evidence_strength": "strong"
+    },
+    {
+      "card_title_en": "Option exercise mechanics: who controls exercise, OTM vs ITM, early exercise",
+      "framework": "deriv",
+      "reading_folder": "07_derivatives_and_volatility",
+      "principle_summary": "As the seller you don't control exercise — the American-style buyer does, but in practice usually waits to month-end unless price is far below strike. An OTM call holder won't exercise (selling captures more value); an ITM option will be exercised, so a covered-call writer must accept shares being called away when ITM at expiry.",
+      "subprinciples": [
+        "The seller waits; the buyer decides whether and when to exercise",
+        "American options can be exercised any time but usually wait to expiry",
+        "OTM holders don't exercise while the option still carries positive value",
+        "ITM options will be exercised — accept the shares get called away"
+      ],
+      "citation_seeds": [
+        {
+          "post_id": "222436722",
+          "quote_zh": "月底才到期，行不行使put的權利，以及決定什麼時候行駛，決定權在買家。我是賣家。"
+        },
+        {
+          "post_id": "222987869",
+          "quote_zh": "但是買call的人不會行權的，當時call的期權市場價格還在0.5-0.6元，他為何要行權？"
+        },
+        {
+          "post_id": "222987869",
+          "quote_zh": "價內當然會行權，月底的事情，誰知道呢？"
+        }
+      ],
+      "crosslinks": [
+        "deriv-option-payoff-anatomy",
+        "deriv-no-arbitrage-bounds",
+        "deriv-put-call-parity"
+      ],
+      "hkex_specificity": "medium — HK American-style equity options; the mechanics are general.",
+      "recurrence": 3,
+      "conviction": "repeated",
+      "evidence_strength": "strong"
+    },
+    {
+      "card_title_en": "Option strike adjustment: special dividends adjust, ordinary dividends do not",
+      "framework": "deriv",
+      "reading_folder": "07_derivatives_and_volatility",
+      "principle_summary": "HK options/warrants are adjusted only for SPECIAL dividends — strike is cut and the share multiplier raised so contract value stays roughly constant (creating messy odd-lots) — while ordinary dividends leave the strike unchanged, so post-ex exercise of an ordinary-dividend option still settles at the original strike.",
+      "subprinciples": [
+        "Special dividend: strike cut, multiplier raised, contract value ~constant",
+        "Ordinary dividend: no strike adjustment, settles at original strike post-ex",
+        "Special dividends and in-kind/stock distributions trigger adjustment",
+        "Confirm the exchange's policy before selling options across a large dividend (US risk)"
+      ],
+      "citation_seeds": [
+        {
+          "post_id": "222375639",
+          "quote_zh": "由於是特別股息，行使價被調整為11.31元，每一張期權代表股數被調整為1105股，這比較有趣。派特別股息錢每張合約價值12.5X1000股，現在是11.31X1105股，合約價值是差不多的。但是這產生了一些碎股，真麻煩。"
+        },
+        {
+          "post_id": "223114673",
+          "quote_zh": "中國神華不是特別股息，如果除淨日之前行權人沒有行使期權，除淨后也是按照原來的價格行權，也就是$26。"
+        },
+        {
+          "post_id": "224217701",
+          "quote_zh": "我比較擔心萬一他大額派股息，但是又不屬於特別股息，不調整行權價，sell put可能會有麻煩"
+        }
+      ],
+      "crosslinks": [
+        "deriv-option-payoff-anatomy",
+        "deriv-put-call-parity",
+        "cb-conversion-feature-mechanics"
+      ],
+      "hkex_specificity": "high — HKEX special-dividend adjustment formula (strike x multiplier); US contrast noted.",
+      "recurrence": 5,
+      "conviction": "repeated",
+      "evidence_strength": "strong"
+    },
+    {
+      "card_title_en": "Dividend-aware option timing: ex-date, assignment timing, and who collects the dividend",
+      "framework": "deriv",
+      "reading_folder": "07_derivatives_and_volatility",
+      "principle_summary": "Whoever holds the share on the ex-dividend (除淨) day collects the dividend; he times sold-put expiry so the dividend lands before possible assignment. Assignment after the ex-date misses the dividend (counterparty exercises after close on T, you're notified T+1). Always check ex-dates, using prior years' as a guide since dividends are announced shortly in advance.",
+      "subprinciples": [
+        "Whoever holds on 除淨 day collects the dividend",
+        "Time expiry so assignment occurs before ex-date if you want the dividend",
+        "Assignment notice arrives T+1, which can fall after ex-date and forfeit the dividend",
+        "Use prior-year ex-dates as the planning input"
+      ],
+      "citation_seeds": [
+        {
+          "post_id": "223114821",
+          "quote_zh": "我是沒錢接六月份的了，但是中海油七月中股息到賬，所以我才選擇sell put七月到期的"
+        },
+        {
+          "post_id": "223114673",
+          "quote_zh": "除淨日股票在誰的手就是誰收息"
+        },
+        {
+          "post_id": "223990393",
+          "quote_zh": "不行。別人是28號收市后行權的，你應該是29號收到被行權的通知。"
+        }
+      ],
+      "crosslinks": [
+        "deriv-option-payoff-anatomy",
+        "deriv-put-call-parity",
+        "eq-payout-policy-and-growth"
+      ],
+      "hkex_specificity": "high — HK ex-dividend (除淨) conventions and HK assignment-notice timing.",
+      "recurrence": 4,
+      "conviction": "repeated",
+      "evidence_strength": "strong"
+    },
+    {
+      "card_title_en": "No dividend arbitrage via short/borrow: the borrower pays the dividend to the lender",
+      "framework": "deriv",
+      "reading_folder": "07_derivatives_and_volatility",
+      "principle_summary": "Selling a call through the ex-date then buying back at the ex-adjusted price creates no free dividend profit, because in a stock-loan/short the borrower must pay the dividend to the lender — whoever holds on the ex-date economically collects it, offsetting the price drop.",
+      "subprinciples": [
+        "The apparent ex-date price drop is offset by the dividend obligation",
+        "Short seller pays the dividend back to the lender",
+        "No free dividend-capture from borrowing the stock"
+      ],
+      "citation_seeds": [
+        {
+          "post_id": "223114673",
+          "quote_zh": "除淨日股票在誰的手就是誰收息"
+        },
+        {
+          "post_id": "223625482",
+          "quote_zh": "是啊"
+        }
+      ],
+      "crosslinks": [
+        "deriv-no-arbitrage-bounds",
+        "deriv-put-call-parity",
+        "fi-repo-and-specials-mechanics"
+      ],
+      "hkex_specificity": "medium — HK securities-lending context; the no-arbitrage logic is general.",
+      "recurrence": 2,
+      "conviction": "stated-once",
+      "evidence_strength": "moderate"
+    },
+    {
+      "card_title_en": "Sell-put underlying selection: choose for bounded downside and rich premium, not conviction",
+      "framework": "deriv",
+      "reading_folder": "07_derivatives_and_volatility",
+      "principle_summary": "Choice of sell-put underlying is a separate decision from long-term conviction: he prefers Alibaba long-term yet sells puts on Tencent purely because its downside is limited and the premium is lucrative. For range-bound, downside-supported but capped-upside names, sell puts and calls rather than hold for appreciation.",
+      "subprinciples": [
+        "Downside risk + premium quality drive the option underlying, not preference",
+        "A maturing, capped-upside name suits sell-put + sell-call over holding",
+        "Prefer to hold the name with the larger upside story instead",
+        "Conviction on a stock and option-underlying choice are separate"
+      ],
+      "citation_seeds": [
+        {
+          "post_id": "224763227",
+          "quote_zh": "我sell put騰訊，純粹因為他的下行空間低，而期權金好賺"
+        },
+        {
+          "post_id": "223649159",
+          "quote_zh": "企鵝下有保護，但上行空間不大了，現在游戲都出海，它只適合留在南極不毛之地，我認為很適合sell put sell call，持有就看不到盈利大前景。我喜歡爸爸更多一些"
+        }
+      ],
+      "crosslinks": [
+        "deriv-implied-volatility",
+        "deriv-option-payoff-anatomy",
+        "eq-intrinsic-value"
+      ],
+      "hkex_specificity": "high — HK Tencent/Alibaba option program.",
+      "recurrence": 3,
+      "conviction": "repeated",
+      "evidence_strength": "strong"
+    },
+    {
+      "card_title_en": "Premium is the buyer's insurance cost and your edge — but a fat premium prices real risk",
+      "framework": "deriv",
+      "reading_folder": "07_derivatives_and_volatility",
+      "principle_summary": "The sold-put premium is an insurance premium the counterparty pays you; elevated implied vol can yield ~6-7%/month, which is exactly why writing is profitable — but the high rate is compensation for risk being transferred, and names offering 8%+ have genuine tail risk he refuses. He also reverse-engineers the counterparty's implied pessimism to confirm his floor-based edge.",
+      "subprinciples": [
+        "Rich premium reflects the buyer's cost — the seller's edge when paired with a value floor",
+        "6-7%/month is regime-specific (elevated IV), not a permanent yield",
+        "The fattest premiums (8%+) are the market pricing real, unbounded risk",
+        "Read the counterparty's implied view (e.g. discounting an upcoming dividend)"
+      ],
+      "citation_seeds": [
+        {
+          "post_id": "224083814",
+          "quote_zh": "你没算錯。不然的話我怎麼會賣得不亦樂乎"
+        },
+        {
+          "post_id": "223114821",
+          "quote_zh": "然後八月中宣布派息0.5-0.6元"
+        }
+      ],
+      "crosslinks": [
+        "deriv-implied-volatility",
+        "deriv-vol-surface-anatomy",
+        "be-limits-of-arbitrage"
+      ],
+      "hkex_specificity": "medium — HK option premiums; the IV-as-insurance logic is general.",
+      "recurrence": 3,
+      "conviction": "repeated",
+      "evidence_strength": "strong"
+    },
+    {
+      "card_title_en": "Refuse fat premiums on no-floor names: high IV is a warning, not free money",
+      "framework": "rm",
+      "reading_folder": "11_risk_management",
+      "principle_summary": "He refuses to sell puts on names whose downside has no fundamental floor even at 8%+ monthly premiums ('都沒底', '不敢買'), because the fat premium reflects genuine unbounded tail risk you cannot value. Restrict option-selling to names you can value with a floor.",
+      "subprinciples": [
+        "A stock with 'no bottom' is uninvestable regardless of premium",
+        "High implied vol is the market pricing real risk, not a gift",
+        "Only sell options where the premium and your remaining position both justify it",
+        "Named avoids: 陌陌, 老虎, 阿里健康, 嘉年华"
+      ],
+      "citation_seeds": [
+        {
+          "post_id": "223114673",
+          "quote_zh": "阿里健康那些，我怎麼敢碰啊？都沒底"
+        },
+        {
+          "post_id": "224083814",
+          "quote_zh": "不敢買呀！"
+        }
+      ],
+      "crosslinks": [
+        "rm-neglected-tail-risk",
+        "rm-risk-type-taxonomy",
+        "deriv-implied-volatility"
+      ],
+      "hkex_specificity": "medium — HK/US optionable names; the tail-risk discipline is general.",
+      "recurrence": 3,
+      "conviction": "repeated",
+      "evidence_strength": "strong"
+    },
+    {
+      "card_title_en": "Fundamental-floor-anchored strike selection (oil-major case)",
+      "framework": "eq",
+      "reading_folder": "05_equity",
+      "principle_summary": "He anchors strike selection to a defensible price floor: for a cash-rich, high-dividend resource name (CNOOC) that earns well even at mid-range oil, he judges ~$8.5 hard to break and sells the $10 put, making it probabilistically favorable over a one-month horizon. The floor is his own judgment and breaks if the earnings/dividend premise fails.",
+      "subprinciples": [
+        "Even mid-range oil yields rich profit and dividends, defending the floor",
+        "Sell puts above the floor for probabilistic edge",
+        "The floor is a personal valuation judgment, not a guarantee",
+        "High-dividend resource names give a value floor (not a price floor)"
+      ],
+      "citation_seeds": [
+        {
+          "post_id": "223114673",
+          "quote_zh": "$中国海洋石油(00883)$ 在很壞的情況下，由於即便中等油價水平也有豐富盈利和豐厚派息，我個人判斷$8.5是很難跌破的，所以我sell put10元，收0.48元，承擔一個多月的風險，概率上對我有利。"
+        },
+        {
+          "post_id": "223866640",
+          "quote_zh": "$中国海洋石油(00883)$ 在很壞的情況下，由於即便中等油價水平也有豐富盈利和豐厚派息，我個人判斷$8.5是很難跌破的，所以我sell put10元，收0.48元"
+        }
+      ],
+      "crosslinks": [
+        "eq-intrinsic-value",
+        "eq-dividend-discount-models",
+        "deriv-option-payoff-anatomy"
+      ],
+      "hkex_specificity": "high — HKD strikes on HK-listed CNOOC (00883).",
+      "recurrence": 2,
+      "conviction": "repeated",
+      "evidence_strength": "strong"
+    },
+    {
+      "card_title_en": "Honest attribution and sizing of the option-income sleeve",
+      "framework": "pa",
+      "reading_folder": "15_performance_and_attribution",
+      "principle_summary": "He runs option-selling as a small experimental sleeve and measures its true contribution against the whole book: ~19% on the ~10% of capital deployed over 3+ months is only ~1.9% to the total portfolio. The result is path-dependent and regime-dependent (it worked because the underlyings drifted mildly up), so he keeps the role modest.",
+      "subprinciples": [
+        "Attribute option income to the whole book, not the deployed slice",
+        "~19% on 10% of capital = ~1.9% to total",
+        "Result is regime-dependent (underlyings drifting mildly up)",
+        "On a strong trender, sell-puts diverge a lot from holding the shares"
+      ],
+      "citation_seeds": [
+        {
+          "post_id": "223114673",
+          "quote_zh": "三月上旬sell put至今，三個多月，只計算占用10%的資金，sell put sell call帶來的賬面收益19%，約為股票組合創收1.9%。"
+        },
+        {
+          "post_id": "223625482",
+          "quote_zh": "這可能與sell put主力對象$阿里巴巴-SW(09988)$ $腾讯控股(00700)$ $中国太保(02601)$ 這幾個月走勢溫和向上有關，實驗繼續…"
+        },
+        {
+          "post_id": "223625482",
+          "quote_zh": "所以還要實驗，如果是700，sell put和持有實股就就差很遠了。"
+        }
+      ],
+      "crosslinks": [
+        "pa-contribution-analysis-benchmark-free",
+        "pa-arithmetic-vs-geometric-excess-return",
+        "deriv-option-payoff-anatomy"
+      ],
+      "hkex_specificity": "medium — HK names; the attribution discipline is general.",
+      "recurrence": 3,
+      "conviction": "repeated",
+      "evidence_strength": "strong"
+    },
+    {
+      "card_title_en": "Self-financing option overlay: size sell-puts to dividend inflow",
+      "framework": "pm",
+      "reading_folder": "09_portfolio_management_and_asset_pricing",
+      "principle_summary": "He matches the number of puts he sells to the shares that incoming dividend cash can buy, so dividend inflows fund any assignment — keeping the program self-financing and unleveraged. Capital availability is a hard gate: an attractive premium is irrelevant without the cash to secure the position.",
+      "subprinciples": [
+        "Tie option capacity to organic cash generation, not borrowing",
+        "Sell puts on dividend-paying names so dividends are assured to arrive",
+        "Capital constraint gates opportunistic sell-puts",
+        "Long-dated puts tie up capital too long"
+      ],
+      "citation_seeds": [
+        {
+          "post_id": "223114673",
+          "quote_zh": "中海油七月中股息到賬，所以我才選擇sell put七月到期的"
+        },
+        {
+          "post_id": "224024550",
+          "quote_zh": "是啊！至少知道會有股息馬上到賬，這是原則。"
+        },
+        {
+          "post_id": "224025593",
+          "quote_zh": "這個sell put有點吸引，但沒錢"
+        }
+      ],
+      "crosslinks": [
+        "pm-portfolio-constraints",
+        "pm-rebalancing-mechanics",
+        "eq-payout-policy-and-growth"
+      ],
+      "hkex_specificity": "high — HK dividend timing funds HK option delivery.",
+      "recurrence": 2,
+      "conviction": "repeated",
+      "evidence_strength": "moderate"
+    },
+    {
+      "card_title_en": "HK option liquidity is concentrated in a few mega-caps; pick market by liquidity not frequency",
+      "framework": "mt",
+      "reading_folder": "14_microstructure_and_trading",
+      "principle_summary": "HK equity options have usable liquidity only in a handful of mega-caps (Alibaba, Tencent, CNOOC); other names are too thin. In HK, quoting the mid almost always fills, while in US options the huge strike/expiry count fragments liquidity and widens spreads. When choosing markets/expiries, liquidity — not how often contracts expire — is the deciding factor, and don't chase a poor market-maker quote.",
+      "subprinciples": [
+        "Only 阿里/騰訊/中海油 have acceptable HK option liquidity",
+        "HK mid-price fills; US mid-price quotes often don't (fragmented liquidity)",
+        "US bid-ask spread loss is an explicit trade-selection cost",
+        "Weekly (US) vs monthly (HK) frequency is a non-issue vs liquidity; don't chase bad MM quotes"
+      ],
+      "citation_seeds": [
+        {
+          "post_id": "224093303",
+          "quote_zh": "阿里騰訊中海油還可以，其他的真的不怎麼樣"
+        },
+        {
+          "post_id": "222517599",
+          "quote_zh": "港股期權我基本上掛中間價一定會成交，美股期權卻經常出現掛中間價沒有成交的情況。我估計是因為行使價太多以及到期日太多的原故，價差的損失也是我的一個考慮"
+        },
+        {
+          "post_id": "223990393",
+          "quote_zh": "多久一次並不是問題，問題在於流動性。"
+        }
+      ],
+      "crosslinks": [
+        "mt-bid-ask-spread-immediacy-price",
+        "mt-liquidity-depth-immediacy-width",
+        "mt-empirical-determinants-illiquidity"
+      ],
+      "hkex_specificity": "high — HK vs US option market microstructure, HK market-maker (莊家) behavior.",
+      "recurrence": 4,
+      "conviction": "repeated",
+      "evidence_strength": "strong"
+    },
+    {
+      "card_title_en": "HK option costs: ~0.3% exercise cost; lot size and stamp-duty mechanics",
+      "framework": "mt",
+      "reading_folder": "14_microstructure_and_trading",
+      "principle_summary": "HK option exercise/assignment cost is ~0.3% (not the ~1% some assume). One HK equity option contract represents 1000 shares (verify the multiplier — it varies and can become odd after special-dividend adjustments). Exercise still incurs stamp duty, but letting an option expire unexercised avoids it — part of why the premium-selling path can be cheaper than trading stock.",
+      "subprinciples": [
+        "HK option exercise cost ~0.3%, not ~1%",
+        "One HK contract = 1000 shares; never assume 100 — always check 股數",
+        "Exercise triggers stamp duty; expiry avoids it",
+        "Special-dividend adjustments produce odd multipliers — re-check every time"
+      ],
+      "citation_seeds": [
+        {
+          "post_id": "223114673",
+          "quote_zh": "行權一樣要交印花稅，但是沒有行權就省下了"
+        },
+        {
+          "post_id": "223990393",
+          "quote_zh": "一張1000股哦，別弄錯"
+        },
+        {
+          "post_id": "222375639",
+          "quote_zh": "每次一定看淸楚股數！"
+        }
+      ],
+      "crosslinks": [
+        "mt-effective-cost-trade-benchmark",
+        "mt-implementation-shortfall",
+        "mt-order-types-market-limit-stop"
+      ],
+      "hkex_specificity": "high — HK stamp duty (印花税), HK 1000-share lot, HK 0.3% exercise cost.",
+      "recurrence": 4,
+      "conviction": "repeated",
+      "evidence_strength": "strong"
+    },
+    {
+      "card_title_en": "Stock Connect (港股通) cannot trade HK options",
+      "framework": "mt",
+      "reading_folder": "14_microstructure_and_trading",
+      "principle_summary": "港股通 accounts cannot trade HK options at all — option strategies require a direct HK/international brokerage account. To run covered calls in a HK account, transfer the underlying shares into your options account (HK platforms may not offer one-click covered calls). Stock-Connect holders' '逃权买回' dividend-dodge timing is derived empirically from multi-year observation.",
+      "subprinciples": [
+        "港股通 has no option capability — use a non-Connect broker",
+        "Cover a call by holding the stock in the option account",
+        "Stock-Connect dividend-dodge buyback timing comes from multi-year statistics, not a formula",
+        "Mainland investors needing options must use a HK broker"
+      ],
+      "citation_seeds": [
+        {
+          "post_id": "222375639",
+          "quote_zh": "沒法"
+        },
+        {
+          "post_id": "222375639",
+          "quote_zh": "你把股票轉到期權戶口就可以了"
+        },
+        {
+          "post_id": "223990393",
+          "quote_zh": "這兩年的觀察和統計"
+        }
+      ],
+      "crosslinks": [
+        "mt-execution-systems-quote-vs-order-driven",
+        "mt-institutional-setting-market-types",
+        "mt-competition-within-among-markets"
+      ],
+      "hkex_specificity": "high — 港股通 (Stock Connect) option restriction, HK option account setup.",
+      "recurrence": 3,
+      "conviction": "repeated",
+      "evidence_strength": "strong"
+    },
+    {
+      "card_title_en": "HK dividend tax: red-chip vs H-share withholding mechanics",
+      "framework": "mt",
+      "reading_folder": "14_microstructure_and_trading",
+      "principle_summary": "Whether a HK-listed Chinese SOE dividend is taxed depends on issuer structure, not the H-share label: red-chips (parent incorporated in HK) are exempt for individual investors, while H-shares incur ~10% withholding when held in street name at a HK brokerage. Classification is ticker-specific (e.g. 392/934 exempt; 762/883/941 taxed +10% at a brokerage), so check each name.",
+      "subprinciples": [
+        "Red-chip = HK-incorporated parent → individual investors exempt by rule",
+        "H-shares incur ~10% withholding held in street name",
+        "Classification is ticker-by-ticker, not category-wide",
+        "Don't assume from the H-share label — verify (e.g. 移动 is telecom, not a red-chip)"
+      ],
+      "citation_seeds": [
+        {
+          "post_id": "222375639",
+          "quote_zh": "有一些不用交，有一些要交10%，比如392、934，完全不用交，762、883、941如果在香港證券行持有就要+10%，但是提取實物，就可以豁免"
+        },
+        {
+          "post_id": "222375639",
+          "quote_zh": "因為是紅籌股，母公司在香港注冊，按例個人投資者不用交稅。"
+        }
+      ],
+      "crosslinks": [
+        "mt-institutional-setting-market-types",
+        "eq-payout-policy-and-growth",
+        "fra-income-tax-accounting"
+      ],
+      "hkex_specificity": "high — HK dividend withholding, red-chip vs H-share taxonomy, specific HK tickers.",
+      "recurrence": 3,
+      "conviction": "repeated",
+      "evidence_strength": "strong"
+    },
+    {
+      "card_title_en": "实物股票 route: convert red-chips to physical certificates to escape dividend tax",
+      "framework": "mt",
+      "reading_folder": "14_microstructure_and_trading",
+      "principle_summary": "For a red-chip otherwise taxed in street name, withdrawing to physical/registered shares (实物股票) held in your own name escapes the ~10% dividend tax — for any holder, mainland or HK. The route only works for red-chips; converting an H-share to physical still incurs the 10%, making it pointless. Conversion is done at the share registrar (generally requires being in HK) but can be delegated to a proxy if your broker permits; dividends on physical shares pay by cheque or HK-bank credit.",
+      "subprinciples": [
+        "Physical-certificate exemption only escapes tax for red-chips",
+        "Converting an H-share to physical is pointless (10% still applies)",
+        "Done at the 過戶處; can be delegated to a friend/agent if the broker permits",
+        "Physical-share dividends pay by cheque or HK bank credit only"
+      ],
+      "citation_seeds": [
+        {
+          "post_id": "222999679",
+          "quote_zh": "762、883、941如果在香港證券行持有就要+10%，但是提取實物，就可以豁免"
+        },
+        {
+          "post_id": "222999679",
+          "quote_zh": "所有股票都可以辦理，但是只有紅籌股才可以逃稅"
+        },
+        {
+          "post_id": "222999679",
+          "quote_zh": "可以，但是依然要10%稅，所以轉成石鼓變得沒有意義"
+        }
+      ],
+      "crosslinks": [
+        "mt-institutional-setting-market-types",
+        "fra-income-tax-accounting",
+        "eq-payout-policy-and-growth"
+      ],
+      "hkex_specificity": "high — HK physical-share (实物股票) registrar route to avoid HK dividend tax.",
+      "recurrence": 4,
+      "conviction": "core-philosophy",
+      "evidence_strength": "strong"
+    },
+    {
+      "card_title_en": "After-tax dividend yield drives peer selection (移动 vs 电信)",
+      "framework": "eq",
+      "reading_folder": "05_equity",
+      "principle_summary": "When two peers' forward valuations are comparable, let your own after-tax position decide: he holds China Mobile (00941, tax-free for him) but would owe 10% on China Telecom (00728); a mainland investor faces ~28% on Mobile and 10% on Telecom, flipping the calculus toward Telecom. Choice is investor-specific and presupposes valuation parity.",
+      "subprinciples": [
+        "Let after-tax dividend, not headline yield, decide between near-identical peers",
+        "His 0% on 941 reflects his HK/physical-share status",
+        "Mainland buyers face ~28% on Mobile, 10% on Telecom",
+        "Valuation parity is the precondition for letting tax decide"
+      ],
+      "citation_seeds": [
+        {
+          "post_id": "222762628",
+          "quote_zh": "我自己會買$中国移动(00941)$ ，因為我持有941不用交股息稅，但728我要10%。如果是內資，應該$中国电信(00728)$ 更好吧？畢竟少交一點稅，22年前瞻估值上也沒什麼差距了。"
+        },
+        {
+          "post_id": "222762628",
+          "quote_zh": "中移動28%"
+        }
+      ],
+      "crosslinks": [
+        "eq-dividend-discount-models",
+        "eq-payout-policy-and-growth",
+        "mt-institutional-setting-market-types"
+      ],
+      "hkex_specificity": "high — HK dividend tax differential on HK-listed 941/728 across investor residency.",
+      "recurrence": 4,
+      "conviction": "repeated",
+      "evidence_strength": "strong"
+    },
+    {
+      "card_title_en": "Fund 分红 vs corporate 派息: dividend tax incidence and channel consistency",
+      "framework": "fra",
+      "reading_folder": "03_financial_reporting_analysis",
+      "principle_summary": "Dividend withholding is triggered only by an actual corporate distribution (派息); a fund's 分红 merely returns capital already yours, so whether a fund distributes is value-neutral and a non-distributing fund avoids holder-level tax. He flags as logically inconsistent that two funds tracking the same index face different tax merely because of the access channel (QDII feeder vs ETF-Connect). For Stock-Connect southbound holders, the HK fund's mainland agent withholds 20% on distributed gains.",
+      "subprinciples": [
+        "派息 (corporate profit distribution) is taxable; 分红 (return of your own capital) is not",
+        "A non-distributing/accumulating fund avoids the holder-level dividend tax",
+        "Same-index funds shouldn't be taxed differently by channel alone",
+        "Southbound ETF distributions to mainland individuals: 20% withholding by the HK fund's mainland agent"
+      ],
+      "citation_seeds": [
+        {
+          "post_id": "224009519",
+          "quote_zh": "派息是企業盈利所得分配，分紅分的是本來就屬於你的錢，ETF分紅與否，價值是沒有分別的。"
+        },
+        {
+          "post_id": "224010830",
+          "quote_zh": "都是一樣的東西，只是操盤手不一樣。這個邏輯上說不過去吧？"
+        },
+        {
+          "post_id": "224335900",
+          "quote_zh": "内地个人投资者通过基金互认从香港基金分配取得的收益，由该香港基金在内地的代理人按照20%的税率代扣代缴个人所得税。"
+        }
+      ],
+      "crosslinks": [
+        "fra-income-tax-accounting",
+        "fa-etf-creation-redemption-mechanism",
+        "mt-institutional-setting-market-types"
+      ],
+      "hkex_specificity": "high — HK fund 派息/分红 tax, Stock-Connect southbound ETF 20% withholding.",
+      "recurrence": 3,
+      "conviction": "repeated",
+      "evidence_strength": "strong"
+    },
+    {
+      "card_title_en": "Holding mentality at bottoms is the most important factor — balanced portfolio as backstop",
+      "framework": "be",
+      "reading_folder": "10_behavioral_finance",
+      "principle_summary": "Over many years the single most important factor is holding mentality, especially at bottoms where watching prices fall erodes confidence until you cut exactly when you should add. A balanced/diversified portfolio is the structural complement that lets you survive the psychological pressure without capitulating on any one name.",
+      "subprinciples": [
+        "The failure mode is reducing into a bottom when you should be adding",
+        "Holding mentality erodes as prices fall",
+        "A balanced portfolio protects the holding mentality at bottoms",
+        "Diversification is a behavioral backstop, not just a risk metric"
+      ],
+      "citation_seeds": [
+        {
+          "post_id": "222402238",
+          "quote_zh": "这么多年，我一直觉得持股心态最重要……尤其是底部，很容易跌着跌着信心都跌没了。结果是该加仓的时候跑了去减仓"
+        },
+        {
+          "post_id": "222402238",
+          "quote_zh": "所以均衡的组合也很重要"
+        }
+      ],
+      "crosslinks": [
+        "be-loss-aversion-reference-dependence",
+        "be-investor-overreaction",
+        "pm-diversification-and-correlation"
+      ],
+      "hkex_specificity": "low — general behavioral discipline.",
+      "recurrence": 1,
+      "conviction": "core-philosophy",
+      "evidence_strength": "moderate"
+    },
+    {
+      "card_title_en": "Total-return (dividend-inclusive) accounting through drawdowns",
+      "framework": "pa",
+      "reading_folder": "15_performance_and_attribution",
+      "principle_summary": "He judges a holding by total return including dividends already received plus option premiums, not by price alone: positions can be 'in profit' on a dividends-included basis even when the share price looks underwater. He counts received cash, not paper yield. Treat the dividend as known, pre-announced ('明牌') income that is the shareholder's due, not a cushion to rationalize a falling price.",
+      "subprinciples": [
+        "Count received cash dividends + premiums, not just price",
+        "High-dividend holdings can be net-profitable through drawdowns",
+        "Dividend is a value floor, not a price floor",
+        "Don't add the dividend back into price-return expectations"
+      ],
+      "citation_seeds": [
+        {
+          "post_id": "223121311",
+          "quote_zh": "只考慮到已收股息，我手中的所有保險股都是盈利的，更別說我還收了期權金。"
+        },
+        {
+          "post_id": "223302399",
+          "quote_zh": "股息保底股價不保底"
+        },
+        {
+          "post_id": "223301216",
+          "quote_zh": "同意最後一句"
+        }
+      ],
+      "crosslinks": [
+        "pa-true-twr-and-chain-linking",
+        "eq-payout-policy-and-growth",
+        "eq-dividend-discount-models"
+      ],
+      "hkex_specificity": "medium — HK high-dividend holdings; the accounting principle is general.",
+      "recurrence": 4,
+      "conviction": "repeated",
+      "evidence_strength": "strong"
+    },
+    {
+      "card_title_en": "Business-value bull market: equity and dividend growth, not price",
+      "framework": "eq",
+      "reading_folder": "05_equity",
+      "principle_summary": "He judges whether he's in a bull market by the business, not the quote: a portfolio whose per-share shareholder equity and dividends keep growing every year (~10% weighted, pre-ex-dividend) is fundamentally in a bull regime regardless of price action. Equities are a positive-expectancy game over a long enough horizon, provided you compress costs and avoid losing industries.",
+      "subprinciples": [
+        "Per-share equity + dividend growth define the real bull regime",
+        "His weighted equity growth ~10% before ex-dividend",
+        "Stocks are an 'average win' game over a long enough horizon",
+        "Win conditions: compress trading costs and avoid loser industries"
+      ],
+      "citation_seeds": [
+        {
+          "post_id": "223625646",
+          "quote_zh": "權益資產一直都處於牛市階段，我的持股組合每年的股東權益和派息都持續增長，怎麼可能不是呢？股價，就別提了"
+        },
+        {
+          "post_id": "223607560",
+          "quote_zh": "股票是一個平均贏的游戲，前提是必須盡可能壓縮交易費用，以及避免輸家的行業。"
+        }
+      ],
+      "crosslinks": [
+        "eq-payout-policy-and-growth",
+        "eq-intrinsic-value",
+        "pm-efficient-markets-and-anomalies"
+      ],
+      "hkex_specificity": "low — general equity philosophy.",
+      "recurrence": 2,
+      "conviction": "core-philosophy",
+      "evidence_strength": "strong"
+    },
+    {
+      "card_title_en": "The discipline of inaction: research deeply, then often do nothing",
+      "framework": "be",
+      "reading_folder": "10_behavioral_finance",
+      "principle_summary": "The hardest, most masterful skill is doing nothing after fully researching a stock or an entire industry; keep the buy-in standard extremely strict and only act when a candidate genuinely clears a high bar. He pairs this with staying within a circle of interest — declining names that don't fit is a valid, sufficient screening decision.",
+      "subprinciples": [
+        "Researching deeply and still holding back is the mark of a master",
+        "Keep the buy bar deliberately high and restrictive",
+        "No qualifying candidate means buy nothing",
+        "Not being interested, after a look, is a valid pass"
+      ],
+      "citation_seeds": [
+        {
+          "post_id": "224442723",
+          "quote_zh": "在投資中最難做到的是什麼？我認為應該是當你研究完一只股票，甚至是一整個行業，最後卻什麼也不做。如果有人研究完一整個行業，卻能夠做到放手，應該有能力成為大師級投資者。"
+        },
+        {
+          "post_id": "224442723",
+          "quote_zh": "那符合標準要頂得很嚴才可以"
+        },
+        {
+          "post_id": "379185257",
+          "quote_zh": "我看過了，不感興趣"
+        }
+      ],
+      "crosslinks": [
+        "be-overconfidence-bias",
+        "be-regret-aversion-status-quo-endowment",
+        "pm-active-vs-passive-decision"
+      ],
+      "hkex_specificity": "low — general behavioral discipline.",
+      "recurrence": 3,
+      "conviction": "stated-once",
+      "evidence_strength": "moderate"
+    },
+    {
+      "card_title_en": "Engagement without overtrading; resist post-dividend itchy hands and extreme-return chasing",
+      "framework": "be",
+      "reading_folder": "10_behavioral_finance",
+      "principle_summary": "Finding enjoyment and staying engaged matters, because pure passivity breeds inertia that eventually drifts you out of the market — but this is not an endorsement of overtrading. Recognize recurring discipline risks: after collecting dividends investors get 'itchy hands', and implausibly high short-term returns (e.g. +47.56% in a month) are a disqualifier to blacklist, not chase.",
+      "subprinciples": [
+        "Total passivity risks attrition from the market",
+        "Engagement is not a license to overtrade",
+        "After dividends, the urge to trade returns — recognize it",
+        "Extreme short-term returns are a red flag, not an attraction"
+      ],
+      "citation_seeds": [
+        {
+          "post_id": "223870964",
+          "quote_zh": "投資中找樂趣很重要，不然會產生惰性，慢慢你就離隊了"
+        },
+        {
+          "post_id": "224268062",
+          "quote_zh": "大家收到股息又開始手癢了。"
+        },
+        {
+          "post_id": "224275872",
+          "quote_zh": "一個月漲47.56%？這些都可以拉黑了，不解釋"
+        }
+      ],
+      "crosslinks": [
+        "be-overconfidence-bias",
+        "be-extrapolation-from-recent-data",
+        "be-investor-overreaction"
+      ],
+      "hkex_specificity": "low — general behavioral discipline.",
+      "recurrence": 3,
+      "conviction": "repeated",
+      "evidence_strength": "moderate"
+    },
+    {
+      "card_title_en": "Talk-your-book discipline and incentive checks on commentary",
+      "framework": "be",
+      "reading_folder": "10_behavioral_finance",
+      "principle_summary": "Don't hype a position you don't actually hold — only positions, not rhetoric, benefit from a price move, so verify whether a commentator is positioned before weighting their bullishness. He treats agency / other-people's-money incentive asymmetry (bonus on a win, no penalty on a loss) as a reason managers gamble recklessly, distinct from how to bet one's own capital.",
+      "subprinciples": [
+        "Only positions benefit from a move; check the commentator's exposure",
+        "His only Alibaba exposure was OTM puts, so a rally didn't benefit him",
+        "Other-people's-money incentives are asymmetric and reckless",
+        "Own-capital discipline must differ from agent risk-taking"
+      ],
+      "citation_seeds": [
+        {
+          "post_id": "223631520",
+          "quote_zh": "我現在最接近的也只是6月和7月105元的sell put，現在阿里上漲對我一點好處也沒有，我瞎吹它干什麼？"
+        },
+        {
+          "post_id": "224024456",
+          "quote_zh": "用別人的錢到一把大小，贏了有獎金，輸了沒懲罰，沒有什麼人會拒絕；用自己的錢賭大小，開什麼玩笑！"
+        }
+      ],
+      "crosslinks": [
+        "be-overconfidence-bias",
+        "cc-standard-vi-conflicts-of-interest",
+        "cc-standard-i-c-misrepresentation"
+      ],
+      "hkex_specificity": "low — general behavioral/conflict discipline.",
+      "recurrence": 2,
+      "conviction": "stated-once",
+      "evidence_strength": "moderate"
+    },
+    {
+      "card_title_en": "Skepticism toward corporate denials, manipulation, and engineered rallies",
+      "framework": "be",
+      "reading_folder": "10_behavioral_finance",
+      "principle_summary": "Treat 'all operations normal' denials of negative rumors skeptically — companies have issued exactly such reassurances shortly before blowups (华融 cited). Be alert to engineered/promotional rallies where 'mysterious capital' pumps fundamentals/GMV to harvest the stock; the falsification test is whether traffic/GMV collapses next month.",
+      "subprinciples": [
+        "A strong denial is not evidence of safety (华融 precedent)",
+        "Suspicious parabolic moves + inflated volume/GMV can be a harvest setup",
+        "Falsify a pump by watching whether GMV drops the following month",
+        "Stay half-believing, half-doubting on rumors"
+      ],
+      "citation_seeds": [
+        {
+          "post_id": "224245810",
+          "quote_zh": "我看了傳聞，將信將疑。想想當年$中国华融(02799)$ 也強調公司一切經營正常"
+        },
+        {
+          "post_id": "223154208",
+          "quote_zh": "會不會有神秘資金到處買流量免費輸送給新东方，甚至動員各方人馬直接去直播間採購，做大GMV，然後在股市上收割？"
+        }
+      ],
+      "crosslinks": [
+        "mt-market-manipulation-bluffing",
+        "cc-standard-ii-b-market-manipulation",
+        "fra-quality-of-financial-statements"
+      ],
+      "hkex_specificity": "medium — HK-listed examples (华融 02799); the skepticism is general.",
+      "recurrence": 2,
+      "conviction": "stated-once",
+      "evidence_strength": "moderate"
+    },
+    {
+      "card_title_en": "AGM activism: owner mindset and pressing management on payout policy",
+      "framework": "be",
+      "reading_folder": "10_behavioral_finance",
+      "principle_summary": "He attends AGMs and treats directors as his own employees rather than seeing himself as a passive small shareholder; sparse retail AGM attendance is an information and influence edge. Sustained shareholder pressure can move a company toward peer payout (~30%), especially when low capex frees cash, and he gathers concrete operational detail directly from the board.",
+      "subprinciples": [
+        "Engage as an owner, not a passive minority holder",
+        "Press management directly on dividend policy",
+        "Low retail AGM attendance is an information/influence edge",
+        "Higher-payout case depends on continued low capex"
+      ],
+      "citation_seeds": [
+        {
+          "post_id": "222942928",
+          "quote_zh": "我參加股東大會從來沒把自己當小股東，倒是把坐在我對面的几位董事都當成我自己的員工了。"
+        },
+        {
+          "post_id": "222942928",
+          "quote_zh": "會上我表達了對過去股息政策的不滿。公司回應今年年報披露的股息政策已經有所改變，將會慢慢向同業看齊，今年會盡力將派息比率提升至或接近30%。"
+        }
+      ],
+      "crosslinks": [
+        "be-limits-of-arbitrage",
+        "eq-payout-policy-and-growth",
+        "cc-standard-iii-a-b-loyalty-prudence-and-fair-dealing"
+      ],
+      "hkex_specificity": "high — HK small-cap AGM dynamics and HK names (北控/联邦制药).",
+      "recurrence": 2,
+      "conviction": "core-philosophy",
+      "evidence_strength": "strong"
+    },
+    {
+      "card_title_en": "Insider buying as a confidence/alignment signal",
+      "framework": "eq",
+      "reading_folder": "05_equity",
+      "principle_summary": "He weighs management share purchases as an alignment signal, especially when credible — all three senior managers putting in their own cash, or a GM buying roughly a year's salary worth — and monitors the absence of major-shareholder selling as supportive. Magnitude relative to the insider's income, not the act alone, is what makes it meaningful; it is one data point, not a standalone thesis.",
+      "subprinciples": [
+        "'Real cash from their own pockets' makes the signal credible",
+        "Magnitude relative to income (e.g. ~a year's salary) matters",
+        "Absence of major-shareholder selling is supportive",
+        "One data point alongside dividend-policy commitment, not a full thesis"
+      ],
+      "citation_seeds": [
+        {
+          "post_id": "222523338",
+          "quote_zh": "三大管理層人員都出手了！拿自己的口袋中拿出真金白銀"
+        },
+        {
+          "post_id": "222942928",
+          "quote_zh": "總經理最近自己也買了$北京控股(00392)$ 差不多一年的工資"
+        },
+        {
+          "post_id": "226671423",
+          "quote_zh": "現在沒有看到大股東減持"
+        }
+      ],
+      "crosslinks": [
+        "eq-quality-and-low-vol-factor-scoring",
+        "be-sentiment-vs-fundamentals",
+        "mt-insider-trading-policy"
+      ],
+      "hkex_specificity": "medium — HK names (北控 00392); the signal logic is general.",
+      "recurrence": 3,
+      "conviction": "stated-once",
+      "evidence_strength": "strong"
+    },
+    {
+      "card_title_en": "Read major-shareholder selling through the cheapest-execution lens",
+      "framework": "eq",
+      "reading_folder": "05_equity",
+      "principle_summary": "He interprets large-shareholder selling by the execution route: dribbling on-market sales matched to the company's daily buyback signal an optics/signaling motive, whereas a genuine intent to dump size would use a block placement (even at a discount). So slow on-market selling implies the seller isn't really trying to exit large.",
+      "subprinciples": [
+        "Genuine large exit uses a block placement, not slow on-market sales",
+        "Selling matched to daily buyback signals optics, not real dumping",
+        "The seller may be responding to its own holders' discount complaints",
+        "Execution choice reveals intent"
+      ],
+      "citation_seeds": [
+        {
+          "post_id": "224106662",
+          "quote_zh": "我認為并不是真的打算大量賣出，否則直接用配售的方式完成更直接方便"
+        },
+        {
+          "post_id": "224106662",
+          "quote_zh": "預計南非大股東每日沽出金額應該和公司每日回購金額相若"
+        }
+      ],
+      "crosslinks": [
+        "mt-block-trader-upstairs-depth",
+        "mt-market-impact-price-concession",
+        "mt-order-flow-information-content"
+      ],
+      "hkex_specificity": "medium — Tencent/Naspers block-placement context; the read-through is general.",
+      "recurrence": 1,
+      "conviction": "stated-once",
+      "evidence_strength": "moderate"
+    },
+    {
+      "card_title_en": "Small-cap minority liquidity trap; curate the shared book for liquidity",
+      "framework": "eq",
+      "reading_folder": "05_equity",
+      "principle_summary": "Avoid accumulating a large minority stake in an illiquid small-cap: the controlling shareholder can take it private at a steep discount, while the small holder's only edge is the ability to walk away — which you forfeit once the position is too big to exit (his own ~3% stake took three years to exit). He targets high-liquidity, positive-cash-flow 'junk' value names for a shareable book and deliberately keeps illiquid holdings private.",
+      "subprinciples": [
+        "A controlling holder can privatize at a steep discount; the small holder's edge is exit-ability",
+        "A too-large illiquid stake forfeits that exit edge (3-year exit example)",
+        "Screen the shared book for liquidity + positive cash flow (dividend/buyback, some growth)",
+        "Trim small-caps for liquidity even when income is acceptable"
+      ],
+      "citation_seeds": [
+        {
+          "post_id": "224150431",
+          "quote_zh": "大股東的優勢在於它可以大折價私有化，小股東的優勢在於我們可以拍拍屁股就走人。真心勸喻這種傻事少做"
+        },
+        {
+          "post_id": "223069694",
+          "quote_zh": "以較高流動性噁心垃圾為目標，盡可能有點股息收/回購，正現金流入，大方向還能有點增長。"
+        },
+        {
+          "post_id": "222912801",
+          "quote_zh": "流動性原因，不想持有太多小票。"
+        }
+      ],
+      "crosslinks": [
+        "mt-empirical-determinants-illiquidity",
+        "mt-liquidity-premium-asset-pricing",
+        "pm-portfolio-constraints"
+      ],
+      "hkex_specificity": "high — HK small-cap privatization-at-discount dynamics (David Webb cited).",
+      "recurrence": 3,
+      "conviction": "core-philosophy",
+      "evidence_strength": "strong"
+    },
+    {
+      "card_title_en": "Diversification over single-name concentration; sector position ceilings",
+      "framework": "pm",
+      "reading_folder": "09_portfolio_management_and_asset_pricing",
+      "principle_summary": "He prefers diversification across positions to concentrating into the single 'best' name — herding into a consensus favorite leaves you fully exposed when it breaks (vindicated when Tencent fell and Alibaba rose). He caps any single industry by an explicit position ceiling, adding to other names in the sector (e.g. adding 728) to keep the leader within its allotted weight. The 'cash' bucket can span cash, arbitrage positions, and A-shares.",
+      "subprinciples": [
+        "Don't herd everything into the consensus 'best' name",
+        "Cap each industry by an explicit weight ceiling",
+        "Spread within a sector to control the leader's weight",
+        "Defensive reserve = cash + arbitrage positions + A-shares"
+      ],
+      "citation_seeds": [
+        {
+          "post_id": "224598323",
+          "quote_zh": "上個月還有很多人勸我sell put阿里不如都押700，反正就是阿里巴巴十萬個不好，騰訊地位不可動搖"
+        },
+        {
+          "post_id": "224598323",
+          "quote_zh": "加了728，控制行業上限倉位。"
+        },
+        {
+          "post_id": "366413082",
+          "quote_zh": "現金+套利交易倉位+ A股"
+        }
+      ],
+      "crosslinks": [
+        "pm-diversification-and-correlation",
+        "pm-portfolio-constraints",
+        "pm-systematic-vs-idiosyncratic-risk"
+      ],
+      "hkex_specificity": "medium — HK telecom sector-cap example; the construction logic is general.",
+      "recurrence": 3,
+      "conviction": "stated-once",
+      "evidence_strength": "strong"
+    },
+    {
+      "card_title_en": "Insurer analysis: avoid opaque asset sides; sum-of-parts; ownership taxonomy",
+      "framework": "eq",
+      "reading_folder": "05_equity",
+      "principle_summary": "He avoids insurers with opaque, unquantifiable asset-side exposure (property debt and trusts under continual rollover) — not knowing the magnitude of the risk is itself a reason to skip (his reason for omitting Ping An). He values insurers by sum-of-parts (P&C and life arms separately, with floors), takes the sector view that bancassurance has no future while life depends on long-term policies, and distinguishes joint-stock from SOE insurers and holding-company discounts.",
+      "subprinciples": [
+        "Skip insurers with unknowable property-debt/trust asset exposure",
+        "Value by sum-of-parts: P&C and life separately, with floors",
+        "银保 has no future; life value depends on 长期保单",
+        "Distinguish joint-stock vs SOE; a controlling-holdco structure draws a discount"
+      ],
+      "citation_seeds": [
+        {
+          "post_id": "222402238",
+          "quote_zh": "我真的不知道他資產端到底投資了多少地產債和信托，還在不斷展期呢！"
+        },
+        {
+          "post_id": "222402238",
+          "quote_zh": "太保的財產險至少值600億元，它的壽險不可能不值兩千億元"
+        },
+        {
+          "post_id": "222402238",
+          "quote_zh": "銀保沒將來，壽險的希望只能靠長期保單"
+        }
+      ],
+      "crosslinks": [
+        "eq-sum-of-parts-valuation",
+        "eq-intrinsic-value",
+        "fra-equity-risk-from-accounting"
+      ],
+      "hkex_specificity": "high — HK-listed Chinese insurers (太保/平安/人保/中人寿).",
+      "recurrence": 3,
+      "conviction": "repeated",
+      "evidence_strength": "strong"
+    },
+    {
+      "card_title_en": "Oil-producer valuation: oil-price-to-earnings scenario sensitivity",
+      "framework": "eq",
+      "reading_folder": "05_equity",
+      "principle_summary": "He anchors an oil producer in a transparent, oil-price-driven earnings model: for CNOOC, ~70bn at $60 oil, with each +$1/bbl adding ~25-26bn (before windfall tax/production growth), and scenario maps at $40/$50/$60/$90. Track realized prices (oil/bbl, gas/mcf) as the concrete profit driver. For a no-growth producer, depreciation alone funds maintenance capex; reserves last ~10 years without capex.",
+      "subprinciples": [
+        "Anchor valuation in transparent oil-price-to-earnings sensitivity",
+        "Each +$1/bbl ≈ +25-26bn HKD profit for CNOOC",
+        "Track realized oil/gas prices, not just headline profit",
+        "Depreciation funds maintenance capex for a no-growth producer"
+      ],
+      "citation_seeds": [
+        {
+          "post_id": "222825600",
+          "quote_zh": "盈利擺在那裏。883利潤相當透明。即便實現油價低至60美元，盈利也有700億港元。未考慮暴利稅，未計算增產的影響，每1美元油價的上升，增厚約25-26億港幣利潤。"
+        },
+        {
+          "post_id": "224658843",
+          "quote_zh": "一季度平均實現油價爲 97.47 美元/桶;平均實現氣價爲 8.35 美元/千立方英尺"
+        },
+        {
+          "post_id": "222825600",
+          "quote_zh": "如果中海油不要求產量增長，每年折舊的費用完全是足夠新的資本支出。"
+        }
+      ],
+      "crosslinks": [
+        "eq-cyclicality-and-cycle-adjustment",
+        "eq-intrinsic-value",
+        "ec-commodity-price-forecasting"
+      ],
+      "hkex_specificity": "high — HK-listed CNOOC (00883/883) earnings model in HKD.",
+      "recurrence": 4,
+      "conviction": "repeated",
+      "evidence_strength": "strong"
+    },
+    {
+      "card_title_en": "SOE windfall-tax vs payout, and minority preference for dividends over growth capex",
+      "framework": "eq",
+      "reading_folder": "05_equity",
+      "principle_summary": "When the state is the controlling shareholder, a cash-needy government can simply raise the payout ratio rather than impose a windfall tax, since the dominant shareholder captures most of the dividend — a counter to windfall-tax fears. For high-payout state coal/power names, the bull case is the listed co sustaining super-high payout while the parent absorbs heavy new-energy capex; minority holders prefer dividends over the company itself building new energy. Catalyst for a catalyst-light SOE H-share is a payout-raising corporate action (e.g. A-share relisting).",
+      "subprinciples": [
+        "State-as-controlling-shareholder → higher payout, not windfall tax",
+        "Check whether new-energy capex sits at the parent (payout-supportive) or listed co (dilutive)",
+        "Minority holders prefer cash dividends to on-balance-sheet growth capex",
+        "Payout-ratio lever (A-relisting) is the realistic value catalyst for a dull SOE"
+      ],
+      "citation_seeds": [
+        {
+          "post_id": "222825600",
+          "quote_zh": "政府缺錢只要加大派息力度就可以了，大股東持股比例不低。"
+        },
+        {
+          "post_id": "224585063",
+          "quote_zh": "市場擔心的是$中国神华(01088)$ 將來會不會在上市公司層面直接上馬新能源項目。現在一直都是上市公司超高派息，然後再由母公司大額投資上馬新能源項目。"
+        },
+        {
+          "post_id": "224581367",
+          "quote_zh": "神華的小股東們更喜歡派息"
+        }
+      ],
+      "crosslinks": [
+        "eq-payout-policy-and-growth",
+        "eq-intrinsic-value",
+        "ec-fiscal-policy-and-budget-deficits"
+      ],
+      "hkex_specificity": "high — HK-listed SOEs (神华 01088, CNOOC, 东风 00489); China SOE payout dynamics.",
+      "recurrence": 4,
+      "conviction": "repeated",
+      "evidence_strength": "strong"
+    },
+    {
+      "card_title_en": "Telecom sector framework: defensive vs growth, carriers vs cloud, upstream over downstream",
+      "framework": "eq",
+      "reading_folder": "05_equity",
+      "principle_summary": "China Mobile is the best defensive play; China Telecom is the best combination of growth and dividend, with depreciation/amortization policy the main earnings-flexibility lever. Treat carriers as toll-collectors on data traffic, not cloud technology providers — genuine cloud value accrues to Alibaba/Tencent. Within the chain, prefer the upstream (carriers) over downstream (中国通信服务). Re-rating requires real buybacks, not rhetoric.",
+      "subprinciples": [
+        "Mobile = best defensive; Telecom = best growth+dividend combination",
+        "D&A policy is the operators' main earnings-flexibility lever",
+        "Carriers collect 'tolls'; cloud tech value accrues to Alibaba/Tencent",
+        "Buy upstream over downstream; re-rate via buybacks, not appeals to new valuation methods"
+      ],
+      "citation_seeds": [
+        {
+          "post_id": "223159123",
+          "quote_zh": "依旧认为移动是现在市场上最好的defensive play，电信是最佳的增长与股息的结合。"
+        },
+        {
+          "post_id": "223643275",
+          "quote_zh": "電訊商就是賺流量錢的，阿里是技術提供方"
+        },
+        {
+          "post_id": "366413082",
+          "quote_zh": "換成中國移動和中國電信了，想想還是買上家比下家好"
+        }
+      ],
+      "crosslinks": [
+        "eq-industry-and-sector-factor-models",
+        "eq-payout-policy-and-growth",
+        "fra-depreciation-and-amortization"
+      ],
+      "hkex_specificity": "high — HK-listed telecoms (移动/电信/中通服) sector framework.",
+      "recurrence": 4,
+      "conviction": "core-philosophy",
+      "evidence_strength": "strong"
+    },
+    {
+      "card_title_en": "Cloud sector thesis: ease-of-adoption moat, hidden-asset optionality, cross-market analog",
+      "framework": "eq",
+      "reading_folder": "05_equity",
+      "principle_summary": "Domestic enterprise cloud has large growth runway (WFH accelerates adoption), and the moat is low, simple cost-of-adoption rather than scale (he attributes Google's failure to application difficulty). Value the option-like hidden assets inside a stock — Telecom's Tianyi Cloud at ≥RMB200bn vs an unchanged ~RMB200bn market cap is a 'free call option'. Use a 'China lags the US by an order of magnitude' analog (cloud, auto 4S) as a runway/under-pricing signal.",
+      "subprinciples": [
+        "Cloud moat = low/simple adoption cost, not raw scale",
+        "WFH is a tailwind; domestic paid-cloud penetration is still small",
+        "Value hidden assets as a free call option (Tianyi Cloud)",
+        "Cross-market China-vs-US size gap signals runway (cloud, AutoZone/4S analog)"
+      ],
+      "citation_seeds": [
+        {
+          "post_id": "223631520",
+          "quote_zh": "阿里云的優勢并非規模，而是應用成本低而且簡易。谷歌一直上不去就是應用太難了"
+        },
+        {
+          "post_id": "223159123",
+          "quote_zh": "电信对自己天翼云的估值不低于2000亿元，但是短期内不会分拆。这部分估值在2000亿市值的电信里应该是完全没有体现的，是我们电信股东的free call option"
+        },
+        {
+          "post_id": "223631520",
+          "quote_zh": "這有點像當年我看汽車4S店，美國那時都已經出現兩千億市值的4S店企業了，國內最大的規模才一百多億元市值"
+        }
+      ],
+      "crosslinks": [
+        "eq-intrinsic-value",
+        "eq-sum-of-parts-valuation",
+        "eq-comparable-company-analysis"
+      ],
+      "hkex_specificity": "medium — HK/US-listed Chinese cloud names; the valuation lenses are general.",
+      "recurrence": 3,
+      "conviction": "repeated",
+      "evidence_strength": "strong"
+    },
+    {
+      "card_title_en": "Moats from regulatory difficulty, product-fit, and customer-acquisition economics",
+      "framework": "eq",
+      "reading_folder": "05_equity",
+      "principle_summary": "He inverts apparent negatives into competitive positives and reads the real competitive threat correctly: high regulatory difficulty in real-time UGC is itself a moat (no new capital will enter to compete). Products designed around customers' real needs ('贴地') signal durable prospects. The most dangerous competitor is a deep-pocketed platform using loss-leader pricing only to acquire traffic it monetizes elsewhere — sustainable cross-subsidy that can drive a specialist out (egg-shop / Douyin-into-Meituan parable).",
+      "subprinciples": [
+        "High regulatory burden in UGC is a barrier to entry, hence a moat",
+        "Product fit to real customer needs signals durable development",
+        "The gravest threat is a loss-leader traffic play with deep pockets",
+        "A specialist can be driven out by indefinitely subsidized cross-entry"
+      ],
+      "citation_seeds": [
+        {
+          "post_id": "222517599",
+          "quote_zh": "由用戶產生即時內容這個行業，監管難度極高，反過來想，已經沒有資本願意介入與之進行同類型的競爭"
+        },
+        {
+          "post_id": "379185257",
+          "quote_zh": "你以為他要搶你的雞蛋生意，但是超市只是要你的客流量，它總是可以在其他地方彌補損失。這種競爭是最麻煩的。"
+        },
+        {
+          "post_id": "223423407",
+          "quote_zh": "理想是針對客戶實際需要去設計產品，比較貼地。不考慮估值的情況下，在同業中我是比較看好他的發展。"
+        }
+      ],
+      "crosslinks": [
+        "eq-industry-and-sector-factor-models",
+        "eq-quality-and-low-vol-factor-scoring",
+        "eq-intrinsic-value"
+      ],
+      "hkex_specificity": "medium — HK/China internet examples; the moat frameworks are general.",
+      "recurrence": 3,
+      "conviction": "stated-once",
+      "evidence_strength": "strong"
+    },
+    {
+      "card_title_en": "Decline signals: revenue/volume decline, side-bets, youth disengagement, ESG buzzwords",
+      "framework": "eq",
+      "reading_folder": "05_equity",
+      "principle_summary": "He avoids buying companies with declining revenue (especially declining sales volume) as likely competitive losers; reads diversification into unrelated ventures ('不务正业') as the core business failing; treats youth disengagement as a leading indicator of ad-revenue erosion regardless of currently stable financials ('得年轻人得天下'); and decodes vague ESG/'green transformation' rhetoric as masking a real underlying problem.",
+      "subprinciples": [
+        "Declining revenue/volume marks a competitive loser — try to avoid",
+        "Unrelated diversification signals the core business is failing",
+        "Youth disengagement leads ad-revenue decline despite stable financials",
+        "Vague ESG/green-transformation language masks a real cause"
+      ],
+      "citation_seeds": [
+        {
+          "post_id": "223566493",
+          "quote_zh": "我只說盡量避免買營收下滑的股票，尤其是銷售量也是下滑的企業，背後往往代表着那間企業是行業競爭下的輸家。"
+        },
+        {
+          "post_id": "223264474",
+          "quote_zh": "一家公司開始不務正業，往往是因為主業真的不行了"
+        },
+        {
+          "post_id": "223264474",
+          "quote_zh": "廣告行業，得年輕人得天下"
+        }
+      ],
+      "crosslinks": [
+        "eq-quality-and-low-vol-factor-scoring",
+        "fra-earnings-quality-and-sustainability",
+        "fra-reporting-quality-framework"
+      ],
+      "hkex_specificity": "low — uses Meta/Facebook/TVB; the screens are general.",
+      "recurrence": 3,
+      "conviction": "stated-once",
+      "evidence_strength": "strong"
+    },
+    {
+      "card_title_en": "Margin and cost-structure analysis: cost-plus, spread vs margin, pass-through, procurement",
+      "framework": "fra",
+      "reading_folder": "03_financial_reporting_analysis",
+      "principle_summary": "For a cost-plus manufacturer, falling raw-material costs compress gross profit (and trigger inventory write-downs), lowering gross margin rather than helping it. Distinguish gross-profit-spread widening from gross-margin widening when input costs rise. Watch 'revenue up, profit not up' (增收不增利) when cost inflation cannot be passed to customers (geography matters). For centralized procurement (集采), the margin hit can be muted if selling expenses fall in step — assess net margin, not headline price cuts.",
+      "subprinciples": [
+        "Cost-plus: falling input costs compress gross profit + trigger write-downs",
+        "Spread can widen while margin percentage does not",
+        "增收不增利: revenue recovers but un-passed input costs squeeze earnings",
+        "集采 price cuts can be muted by falling selling expenses — assess net margin"
+      ],
+      "citation_seeds": [
+        {
+          "post_id": "222958791",
+          "quote_zh": "作為成本加成定價方式的制造廠，如果原料成本下跌只會令毛利下降，疊加庫存降價，毛利率也會是降的。"
+        },
+        {
+          "post_id": "223197838",
+          "quote_zh": "毛利差還是擴大了，但是毛利率並沒有擴大。"
+        },
+        {
+          "post_id": "223197838",
+          "quote_zh": "胰島素藥集採雖然降價達50%，不過由於銷售支出也會同步下降，暫時看對毛利率和利潤都影響不大"
+        }
+      ],
+      "crosslinks": [
+        "fra-earnings-quality-and-sustainability",
+        "fra-financial-analysis-techniques",
+        "fra-inventory-cost-methods"
+      ],
+      "hkex_specificity": "medium — HK-listed manufacturers (鲁泰/互太/联邦制药); the analysis is general.",
+      "recurrence": 4,
+      "conviction": "repeated",
+      "evidence_strength": "strong"
+    },
+    {
+      "card_title_en": "Balance-sheet quality: distributable cash, repatriation tax, receivables, leverage",
+      "framework": "fra",
+      "reading_folder": "03_financial_reporting_analysis",
+      "principle_summary": "Reported cash overstates distributable cash: PRC subsidiaries paying up to an overseas/HK parent incur 10% withholding (100bn transferred yields 90bn, directly cutting profit), so cash-rich firms may not buy back/pay out the full balance. Heavy debt explains a small dividend — read low payout against the balance sheet. Check receivables/counterparty quality (bank-acceptance-bill receivables are low-risk; a fully provisioned bad debtor de-risks the line), and beware partners running high leverage. A first-ever special dividend with strong cash flow signals improved capital-return capacity.",
+      "subprinciples": [
+        "Reported cash ≠ distributable cash (10% PRC intra-group repatriation tax)",
+        "Heavy debt constrains payout — read low dividends against leverage",
+        "Scrutinize receivable composition and provisioning; bank bills are low-risk",
+        "Worry about receivables when partners run high leverage; a first special dividend signals improved capacity"
+      ],
+      "citation_seeds": [
+        {
+          "post_id": "222760389",
+          "quote_zh": "賬上的錢在子公司。按照國稅法，向海外母公司派息，要交10%稅，如果子公司轉100億元往香港公司，只有90億元到賬，增加10億元稅項支出，直接影響利潤。"
+        },
+        {
+          "post_id": "223197838",
+          "quote_zh": "恒大的應收已經撥備，公司現在的應收都是銀行票據，風險較低，公司會加大風險管理。"
+        },
+        {
+          "post_id": "223197838",
+          "quote_zh": "公司今年是上市以來首次派特別股息，現在公司的現金流很好，和以前不一樣。"
+        }
+      ],
+      "crosslinks": [
+        "fra-balance-sheet-foundations",
+        "fra-cash-flow-statement-mechanics",
+        "fra-credit-risk-from-accounting"
+      ],
+      "hkex_specificity": "high — PRC-to-HK repatriation tax limiting HK-listed firms' buybacks/dividends.",
+      "recurrence": 3,
+      "conviction": "stated-once",
+      "evidence_strength": "strong"
+    },
+    {
+      "card_title_en": "Buybacks: scale relative to size, and read-through screens",
+      "framework": "eq",
+      "reading_folder": "05_equity",
+      "principle_summary": "A mega-cap with a large buyback authorization should repurchase at a scale commensurate with its size (~1bn/day for a company of Tencent's size); under-buying is itself a tell. Read a supplier/OEM through its end-brand — weak brand results (Nike/Adidas) flow through to the OEM (Yue Yuen). Cyclical valuation: net-cash-greater-than-market-cap is not a thesis (many stocks have that); price the through-cycle PE/PB and dividend yield instead.",
+      "subprinciples": [
+        "Buyback should scale with company size (~1bn/day for Tencent)",
+        "Read an OEM/supplier through its end-brand's results",
+        "Cash > market cap is not, by itself, a valuation thesis",
+        "Price cyclicals on through-cycle PE/PB/yield"
+      ],
+      "citation_seeds": [
+        {
+          "post_id": "224004465",
+          "quote_zh": "這種體量，一天應該至少回購十億元"
+        },
+        {
+          "post_id": "224021564",
+          "quote_zh": "事實上Nike一季度業績並不好，不然裕元股價也不會造成這個鳥樣！"
+        },
+        {
+          "post_id": "224650864",
+          "quote_zh": "但是現在我也能夠找到很多現金比市值高的股票，這邏輯站不住"
+        }
+      ],
+      "crosslinks": [
+        "eq-share-count-and-per-share-effects",
+        "eq-cyclicality-and-cycle-adjustment",
+        "eq-pe-and-relative-valuation"
+      ],
+      "hkex_specificity": "medium — HK names (Tencent/裕元); the screens are general.",
+      "recurrence": 3,
+      "conviction": "stated-once",
+      "evidence_strength": "strong"
+    },
+    {
+      "card_title_en": "Conservative, downside-anchored earnings underwriting under policy uncertainty",
+      "framework": "eq",
+      "reading_folder": "05_equity",
+      "principle_summary": "He underwrites on a probability-weighted, downside-anchored basis: set a satisfactory base-case EPS rather than chasing optimistic targets, and treat 50%+ growth off a non-small prior-year base as greedy. He bases the buy decision on confidence in restored shareholder returns (payout ratio), not just the operational-recovery story, and refuses precise full-year calls when policy (集采) drives genuine uncertainty — giving a floor EPS instead of a point forecast.",
+      "subprinciples": [
+        "Set a satisfactory base-case EPS; discount high prior-year bases",
+        "50%+ growth off a non-trivial base is greedy",
+        "Gate the buy on restored-payout confidence, not just operational recovery",
+        "Give a floor EPS, not a point forecast, when policy uncertainty applies"
+      ],
+      "citation_seeds": [
+        {
+          "post_id": "223197838",
+          "quote_zh": "去年上半年基數并不小，希望增長50%以上有點貪心了。如果今年上半年每股盈利能夠有$0.45人民幣，我已經非常滿意了。"
+        },
+        {
+          "post_id": "222958791",
+          "quote_zh": "魯泰的看點是產能利用率的提升，不過由於我對它是否能夠恢復過去的派息比率不具信心，所以沒有介入。"
+        },
+        {
+          "post_id": "223200257",
+          "quote_zh": "6Apa和胰島素集采都有不確定性，所以全年業績我也不好判斷，0.8元應該會有"
+        }
+      ],
+      "crosslinks": [
+        "eq-intrinsic-value",
+        "eq-dcf-mechanics",
+        "fra-earnings-quality-and-sustainability"
+      ],
+      "hkex_specificity": "medium — HK-listed pharma (联邦制药); the underwriting discipline is general.",
+      "recurrence": 3,
+      "conviction": "repeated",
+      "evidence_strength": "strong"
+    },
+    {
+      "card_title_en": "Deflation worse than inflation; real vs nominal returns",
+      "framework": "ec",
+      "reading_folder": "02_economics",
+      "principle_summary": "For an equity investor, deflation is far more dangerous than inflation — mild inflation solves many problems. Compounding must be measured in real (purchasing-power) terms: a true return is getting back more goods than you lent, not nominal money that buys fewer goods. He set realistic long-horizon expectations (even 10x-in-10-years is hard; ~20x-in-20 is good), revised down with experience. China stayed low-inflation despite global inflation due to factory overcapacity plus weak domestic demand.",
+      "subprinciples": [
+        "Deflation is far worse than (mild) inflation for equities",
+        "Compounding is real purchasing-power growth, not nominal money",
+        "Calibrate long-run return expectations realistically (~20x/20yr is good)",
+        "China's low inflation: supply glut + weak internal demand"
+      ],
+      "citation_seeds": [
+        {
+          "post_id": "222869825",
+          "quote_zh": "對股票投資者而言，通縮遠遠比通脹可怕，溫和的通脹可以解決很多麻煩事。"
+        },
+        {
+          "post_id": "224276051",
+          "quote_zh": "複利是我借給你100擔大米，一年後你還我120擔大米，而不是我借你足夠買100擔大米的錢，一年后你還給我的錢只夠買80擔大米。"
+        },
+        {
+          "post_id": "225309192",
+          "quote_zh": "我認為主要原因是工廠供應過剩+內需不振"
+        }
+      ],
+      "crosslinks": [
+        "ec-monetary-policy-and-inflation",
+        "ec-aggregate-supply-demand-mechanics",
+        "pa-arithmetic-vs-geometric-excess-return"
+      ],
+      "hkex_specificity": "low — general macro/return framing with a China-specific note.",
+      "recurrence": 4,
+      "conviction": "core-philosophy",
+      "evidence_strength": "strong"
+    },
+    {
+      "card_title_en": "Rate-tightening regime: non-yielding assets sold first",
+      "framework": "ec",
+      "reading_folder": "02_economics",
+      "principle_summary": "When central banks raise rates and tighten liquidity, assets that generate no yield are sold off first (Bitcoin a prime example) — but even income-producing assets suffer when rates spike (mortgage-rate-sensitive REITs), so the rule is about the relative ordering of which sells first, not immunity. For globalized US firms with large overseas revenue, watch PPI (producer prices) more than headline domestic inflation, since input costs drive margins.",
+      "subprinciples": [
+        "Tightening sells non-yielding assets first (Bitcoin)",
+        "Even yielding assets fall when rates spike — it's about ordering",
+        "Watch PPI over headline CPI for globalized firms",
+        "Input-cost dynamics drive margins for high-overseas-revenue firms"
+      ],
+      "citation_seeds": [
+        {
+          "post_id": "222524028",
+          "quote_zh": "加息收緊市場資金之時，一般都是不產生收益的資產優先被拋棄……比特幣不例外"
+        },
+        {
+          "post_id": "223481538",
+          "quote_zh": "美国企業全球化程度高，海外收入占比大，我更關心ppi變化"
+        }
+      ],
+      "crosslinks": [
+        "ec-monetary-policy-and-inflation",
+        "ec-monetary-fiscal-policy-mechanics-l1",
+        "rm-real-rate-policy-rate-notes"
+      ],
+      "hkex_specificity": "low — general macro framing.",
+      "recurrence": 2,
+      "conviction": "stated-once",
+      "evidence_strength": "moderate"
+    },
+    {
+      "card_title_en": "Oil macro: supply inelasticity, OPEC restraint, and refined-oil price controls",
+      "framework": "ec",
+      "reading_folder": "02_economics",
+      "principle_summary": "Oil supply is extremely inelastic, so the price won't fall unless it first stays elevated (high prices ration demand and induce the conditions for a fall); OPEC/OPEC+ supply restraint is a structural reason to expect supportive prices. China's refined-oil pricing mechanism caps refiners at high crude (>$80 cuts processing margin, >$130 fiscal caps), so very high crude hurts downstream refiners — ~$85 crude is most favorable for Sinopec-type names.",
+      "subprinciples": [
+        "Supply is extremely inelastic — price won't fall unless it stays high first",
+        "OPEC/OPEC+ supply restraint supports prices",
+        "China refined-oil price band caps refiner upside at high crude",
+        "~$85 crude is most favorable for downstream refiners"
+      ],
+      "citation_seeds": [
+        {
+          "post_id": "225154031",
+          "quote_zh": "如果想油價跌，那現在油價一定不能跌"
+        },
+        {
+          "post_id": "224658994",
+          "quote_zh": "一直拒絕擴產的opec，一直支持俄羅斯的opec+秘書長"
+        },
+        {
+          "post_id": "222544728",
+          "quote_zh": "当国际市场原油价格低于每桶 40 美元(含)时， 按原油价格每桶 40 美元、正常加工利润率计算成品油价格"
+        }
+      ],
+      "crosslinks": [
+        "ec-commodity-price-forecasting",
+        "ec-aggregate-supply-demand-mechanics",
+        "eq-cyclicality-and-cycle-adjustment"
+      ],
+      "hkex_specificity": "medium — China refined-oil price-control policy; oil macro is general.",
+      "recurrence": 3,
+      "conviction": "stated-once",
+      "evidence_strength": "strong"
+    },
+    {
+      "card_title_en": "EV-penetration ceiling and treating unenacted policy as non-information",
+      "framework": "ec",
+      "reading_folder": "02_economics",
+      "principle_summary": "Cap structural-shift expectations with resource/infrastructure constraints: in most countries EVs are unlikely to exceed ~30% of the existing vehicle stock, making EV substitution a slow replacement of a static base. Long-term, gasoline demand declines but petroleum/petrochemical demand may not. Discount announced-but-not-enacted policy (EU 2035 ban) until it actually passes — but mark your sector thesis to evidence (he admits his anti-EV view 'seems wrong').",
+      "subprinciples": [
+        "EVs unlikely to exceed ~30% of existing vehicle stock (resource/infra limits)",
+        "Fuel demand declines long-term; petrochemical demand may not",
+        "Treat unenacted policy as non-information until it passes",
+        "Update the sector thesis against contradicting price action / adoption data"
+      ],
+      "citation_seeds": [
+        {
+          "post_id": "222763326",
+          "quote_zh": "站在資源和社會配套設施的角度，絕大多數國家，新能源汽車不太可能佔存量市場超過30%。"
+        },
+        {
+          "post_id": "222763326",
+          "quote_zh": "通過了再說，三大成員國都反對"
+        },
+        {
+          "post_id": "224025817",
+          "quote_zh": "做汽油車摩打的$德昌电机控股(00179)$ ，一直都不相信電動車能夠占領汽車主要市場，不過從股價走勢和電動車發展上看，他的觀點似乎是錯的。"
+        }
+      ],
+      "crosslinks": [
+        "ec-commodity-price-forecasting",
+        "be-belief-perseverance-biases",
+        "eq-cyclicality-and-cycle-adjustment"
+      ],
+      "hkex_specificity": "low — general macro/policy framing with HK-listed 德昌电机 example.",
+      "recurrence": 3,
+      "conviction": "stated-once",
+      "evidence_strength": "moderate"
+    },
+    {
+      "card_title_en": "Bull-market preconditions and the policy-regime contrast",
+      "framework": "ec",
+      "reading_folder": "02_economics",
+      "principle_summary": "A sustained bull market becomes likely when deposit/loan rates are low, corporate returns are high, and the market lacks other attractive channels — these push capital toward equities. But don't expect the past's extreme parabolic mania: today's policy aims to move money out of the banking system to revive the economy, the opposite of fighting past hot-money excess. Behaviorally, the wealthier strive harder to grow wealth while the poor rarely act, a reason capital concentration persists.",
+      "subprinciples": [
+        "Bull preconditions: low rates + high corporate ROI + lack of alternatives",
+        "Don't expect a past-style parabolic mania — policy regime differs",
+        "Today's policy pushes money out of banks to reactivate the economy",
+        "Wealth-growth drive vs inaction sustains capital concentration"
+      ],
+      "citation_seeds": [
+        {
+          "post_id": "350177302",
+          "quote_zh": "大牛市還會有的，比當年條件優勝的地方有更低的存貸利率，更高的企業回報率，以及市場缺乏其他好的投資渠道。"
+        },
+        {
+          "post_id": "350177302",
+          "quote_zh": "但想重演當年那種極端的瘋牛也比較難了，當年我們還在為各種熱錢而頭痛，而現在卻在想盡辦法令資金離開銀行體系，去盤活經濟。"
+        }
+      ],
+      "crosslinks": [
+        "ec-monetary-fiscal-policy-mechanics-l1",
+        "ec-business-cycles-and-output-gaps",
+        "pm-efficient-markets-and-anomalies"
+      ],
+      "hkex_specificity": "low — general China/HK macro framing.",
+      "recurrence": 1,
+      "conviction": "stated-once",
+      "evidence_strength": "moderate"
+    },
+    {
+      "card_title_en": "China credit/banking: mortgage-bank quality and no securitized-subprime contagion",
+      "framework": "ec",
+      "reading_folder": "02_economics",
+      "principle_summary": "Banks with a high share of individual mortgages were historically the highest-quality lenders — rising home prices plus floating-up mortgage rates made retail mortgages an 'inexhaustible treasure' with below-peer bad-debt rates (a past advantage that depended on continued home-price appreciation, now ending). A China property/mortgage downturn won't become a US-style subprime systemic crisis because Chinese mortgages weren't securitized, limiting contagion.",
+      "subprinciples": [
+        "Mortgage-heavy banks were historically the highest-quality lenders",
+        "The advantage depended on rising home prices + floating-up rates (now ending)",
+        "No US-style subprime contagion — Chinese mortgages weren't securitized",
+        "The limiting factor is the absence of securitization, not the absence of a property problem"
+      ],
+      "citation_seeds": [
+        {
+          "post_id": "225317506",
+          "quote_zh": "那些個人房貸比率高的銀行，壞賬率都顯著地要比同業要低，這就像一個挖不完的寶藏"
+        },
+        {
+          "post_id": "225307654",
+          "quote_zh": "問題不會有兩房那麼大的，我們又沒有證券化"
+        }
+      ],
+      "crosslinks": [
+        "fra-credit-risk-from-accounting",
+        "fi-securitization-fundamentals",
+        "fi-mbs-prepayment-models"
+      ],
+      "hkex_specificity": "medium — China bank/property-credit context; comparison to US is general.",
+      "recurrence": 1,
+      "conviction": "stated-once",
+      "evidence_strength": "moderate"
+    },
+    {
+      "card_title_en": "Contrarian entry on clustered bad news; relative-strength bottoming and HK seasonality",
+      "framework": "be",
+      "reading_folder": "10_behavioral_finance",
+      "principle_summary": "A sector-wide sentiment trough from clustered bad news (profit warning + lockdown + accident) can be the entry opportunity for a cyclical name ('share hardship' rather than avoid). He reads HK 'poor-May, dismal-June' (五穷六绝) seasonality against the dividend calendar — many ex-div names only pay cash in July, so don't over-fear it — and uses index relative-strength (HSI vs Dow decoupling) as a bottoming tell.",
+      "subprinciples": [
+        "Clustered bad-news troughs can be cyclical entry points",
+        "Don't over-fear 五穷六绝 — many ex-div names pay in July",
+        "Use HSI-vs-Dow decoupling as a probabilistic bottoming tell",
+        "These are conditional, probabilistic reads, not predictions"
+      ],
+      "citation_seeds": [
+        {
+          "post_id": "222990878",
+          "quote_zh": "一季度盈警+上海信封+大爆炸，是一個很好的機會與之共患難"
+        },
+        {
+          "post_id": "222636788",
+          "quote_zh": "五六月除淨的港股，很多都是七月份才派股息，不應太悲觀"
+        },
+        {
+          "post_id": "222636788",
+          "quote_zh": "如果今天$恒生指数(HKHSI)$ 再不跟$道琼斯指数(.DJI)$，大概可以判断港股已經跌不下去了，五窮六絕到此結束"
+        }
+      ],
+      "crosslinks": [
+        "be-investor-overreaction",
+        "be-sentiment-vs-fundamentals",
+        "be-extrapolation-from-recent-data"
+      ],
+      "hkex_specificity": "high — 五穷六绝 HK seasonality, HSI/Dow, HK ex-div pay-date timing.",
+      "recurrence": 2,
+      "conviction": "stated-once",
+      "evidence_strength": "moderate"
+    },
+    {
+      "card_title_en": "Utilities/staples as crash-year safe harbor — conditional on valuation and input costs",
+      "framework": "eq",
+      "reading_folder": "05_equity",
+      "principle_summary": "In HK crash years defensive capital traditionally parks in utility stocks (electricity/gas) as a safe harbor, but the function is conditional on reasonable valuation — once valuations get persistently high the trade stops working (seemed to fail from last year). Consumer-staple/beverage alternatives are gated on input-cost trends: cheaper cans/boxes help, but persistently high plastic-bottle/food-material costs erode the margin cushion. Regulated gas distribution is capped by the unresolved 顺价 pass-through under 保民生 policy.",
+      "subprinciples": [
+        "Utilities are a crash-year safe harbor only at reasonable valuations",
+        "The safe-harbor effect can stop working when valuations rise",
+        "Staple defensives are gated on input-cost trends",
+        "Gas-utility margins capped by 顺价 pass-through under 保民生"
+      ],
+      "citation_seeds": [
+        {
+          "post_id": "224268062",
+          "quote_zh": "以前香港每逢股災年，資金都會停靠在$港灯-SS(02638)$ $中电控股(00002)$ $香港中华煤气(00003)$ 這些公用股上，不過估值日高，去年開始好像失效了。"
+        },
+        {
+          "post_id": "224268062",
+          "quote_zh": "現在鋁罐紙盒價格有所回落，不過膠樽、食品原料價格依然高企，不然統一康師傅等飲料股也是不錯的避風塘。"
+        },
+        {
+          "post_id": "228478086",
+          "quote_zh": "降了點倉位。保民生，天然氣順價問題年內難以解決。"
+        }
+      ],
+      "crosslinks": [
+        "eq-quality-and-low-vol-factor-scoring",
+        "eq-cyclicality-and-cycle-adjustment",
+        "eq-industry-and-sector-factor-models"
+      ],
+      "hkex_specificity": "high — HK utility safe-harbor names (港灯/中电/煤气), HK gas 顺价 policy.",
+      "recurrence": 2,
+      "conviction": "stated-once",
+      "evidence_strength": "moderate"
+    },
+    {
+      "card_title_en": "Governance and ownership-structure quality as a screening attribute",
+      "framework": "eq",
+      "reading_folder": "05_equity",
+      "principle_summary": "He favors strong corporate governance — Taiwanese-capital firms are comparatively well-regulated, an attribute that makes them interesting (but '僅此而已', not a full thesis on its own). A holding-company structure draws a market discount that partly explains cheap headline multiples (e.g. PICC's low P/E via the controlling holdco), and an AH dual-listing tends to drag down the corresponding A-share valuation versus non-dual-listed A-share peers in the same industry.",
+      "subprinciples": [
+        "Strong governance (e.g. Taiwanese-capital firms) is one attribute, not a thesis",
+        "Holding-company structures draw a market discount",
+        "A controlling-holdco discount can explain a low headline multiple",
+        "Within an industry, having an H-share listing drags the A-share valuation down"
+      ],
+      "citation_seeds": [
+        {
+          "post_id": "222507550",
+          "quote_zh": "台資企業比較規范，僅此而已。我最近對裕元系也比較感興趣，也是因為台資"
+        },
+        {
+          "post_id": "222523338",
+          "quote_zh": "人保主要還是因為市場給了控股公司折價"
+        },
+        {
+          "post_id": "222495276",
+          "quote_zh": "同一個行業，沒有H股上市的A股，普遍比AH股同時上市的A股，估值要高很多"
+        }
+      ],
+      "crosslinks": [
+        "eq-quality-and-low-vol-factor-scoring",
+        "eq-sum-of-parts-valuation",
+        "eq-cross-sectional-multiples-distribution"
+      ],
+      "hkex_specificity": "high — AH dual-listing discount, HK-listed PICC/裕元 governance.",
+      "recurrence": 3,
+      "conviction": "stated-once",
+      "evidence_strength": "moderate"
+    },
+    {
+      "card_title_en": "Index-inclusion / Stock-Connect flow events: tradable but unpredictable",
+      "framework": "be",
+      "reading_folder": "10_behavioral_finance",
+      "principle_summary": "Index rebalancing/inclusion events (MSCI inclusion, Hang Seng / HSCEI / HSTECH tiers, Stock-Connect互联互通) tend to give constituents a speculative run first — a recurring pattern, not a guarantee. But which names get bid up is largely unknowable, so he disclaims any ability to front-run the rotation and treats the theme as likely irrelevant to his positioning.",
+      "subprinciples": [
+        "Index/Connect inclusion gives constituents a speculative run first",
+        "The pattern recurs (MSCI inclusion precedent) but isn't guaranteed",
+        "Which names get bid is unpredictable — don't front-run",
+        "Largest HK ETF is the Tracker Fund (盈富基金)"
+      ],
+      "citation_seeds": [
+        {
+          "post_id": "223635250",
+          "quote_zh": "類似上次中國開放MSCI入華，這次也一樣，各種指數成份股先炒一波"
+        },
+        {
+          "post_id": "223901086",
+          "quote_zh": "名單自己查，我也不知道炒什麼，大概率又是關我屁事"
+        }
+      ],
+      "crosslinks": [
+        "be-noise-trader-equilibrium",
+        "fa-etf-creation-redemption-arbitrage-band",
+        "mt-index-portfolio-markets-design"
+      ],
+      "hkex_specificity": "high — HK index tiers (HSI/HSCEI/HSTECH), Stock-Connect inclusion, 盈富基金.",
+      "recurrence": 2,
+      "conviction": "stated-once",
+      "evidence_strength": "moderate"
+    },
+    {
+      "card_title_en": "Regulatory-risk discipline and platform-risk acceptance in the China/HK environment",
+      "framework": "rm",
+      "reading_folder": "11_risk_management",
+      "principle_summary": "He treats state/regulatory prohibition as overriding any trade thesis — when the state warns or forbids something, don't do it. He also accepts platform/censorship risk as inevitable given his posting frequency, treating account access as expendable (keep the ability to open a new account) rather than self-censoring his analysis.",
+      "subprinciples": [
+        "A state warning/prohibition overrides any trade thesis",
+        "Heed regulatory signals as a hard constraint on positioning",
+        "Accept platform/account closure as inevitable; keep it expendable",
+        "Don't self-censor analysis to protect an account"
+      ],
+      "citation_seeds": [
+        {
+          "post_id": "371440678",
+          "quote_zh": "國家的話要聽，國家不讓你干的別干！出警示了"
+        },
+        {
+          "post_id": "224024456",
+          "quote_zh": "用別人的錢到一把大小，贏了有獎金，輸了沒懲罰，沒有什麼人會拒絕；用自己的錢賭大小，開什麼玩笑！"
+        },
+        {
+          "post_id": "222959518",
+          "quote_zh": "正所謂言多必失，以我的發言密度，出事只是遲早的事情。不是嗎？"
+        }
+      ],
+      "crosslinks": [
+        "rm-risk-type-taxonomy",
+        "rm-operational-risk-basics",
+        "cc-standard-i-a-b-knowledge-of-law-and-independence"
+      ],
+      "hkex_specificity": "high — China/HK regulatory-warning and platform-censorship environment.",
+      "recurrence": 2,
+      "conviction": "stated-once",
+      "evidence_strength": "moderate"
+    },
+    {
+      "card_title_en": "Sell on deteriorating leverage and admit the error",
+      "framework": "rm",
+      "reading_folder": "11_risk_management",
+      "principle_summary": "When a thesis breaks for a balance-sheet (leverage) reason rather than price, he treats the worsened debt ratio as a sell signal and admits the mistake rather than holding on (exited a name he had liked after re-examining its debt ratio). He also frames financial literacy / correct money-management concepts as no less valuable over a lifetime than professional expertise — many high earners stay poor due to flawed money attitudes, not low income.",
+      "subprinciples": [
+        "A deteriorating debt ratio is a sell signal — admit the error and exit",
+        "Don't rationalize holding when the thesis breaks on leverage",
+        "Correct money-management concepts rival professional expertise in lifetime value",
+        "High income does not prevent late-life poverty if money attitudes are flawed"
+      ],
+      "citation_seeds": [
+        {
+          "post_id": "225138116",
+          "quote_zh": "我看錯公司了，基於負債率的原因，我認錯賣出了"
+        },
+        {
+          "post_id": "226755198",
+          "quote_zh": "對於一個人的一生而言，學習正確的理財觀念，其價值不亞于專業的行業知識。很多收入豐厚的專業人士，到了中晚年依然一貧如洗，主要都是理財觀念出了問題。"
+        }
+      ],
+      "crosslinks": [
+        "rm-risk-objectives-and-tolerance",
+        "fra-credit-risk-from-accounting",
+        "be-regret-aversion-status-quo-endowment"
+      ],
+      "hkex_specificity": "low — general risk/financial-literacy discipline.",
+      "recurrence": 2,
+      "conviction": "stated-once",
+      "evidence_strength": "moderate"
+    },
+    {
+      "card_title_en": "Cool-off discipline and avoiding wealth-destroyer vehicles",
+      "framework": "be",
+      "reading_folder": "10_behavioral_finance",
+      "principle_summary": "Treat money decisions slowly and defensively: whenever money is involved, cool off for three days and discuss with family before deciding ('財不進急門'), and avoid known wealth-destroyers (P2P, small banks, MLM, London-gold, crypto, fraud schemes). Pair this with treating policy-driven speculative sector bets (brokers/shippers when the top needs money and the public needs a wealth effect) as explicitly speculative and sized small (capped ~1.5%).",
+      "subprinciples": [
+        "Cool off three days and consult family before any money decision",
+        "Avoid wealth-destroyer categories (P2P, MLM, London-gold, crypto, fraud)",
+        "Label policy-driven sector bets as speculation and size them small",
+        "Cap speculative policy bets (e.g. ~1.5% combined)"
+      ],
+      "citation_seeds": [
+        {
+          "post_id": "226755198",
+          "quote_zh": "P2P，小銀行，傳銷陷阱，倫敦金，虛擬貨幣，以及各種詐騙案，反正一提到錢，先冷靜三天和家人在商量再決定也不遲。古人說的好，財不進急門。"
+        },
+        {
+          "post_id": "229516340",
+          "quote_zh": "今天投機了點$中远海控(SH601919)$ 和$华泰证券(SH601688)$ ，共1.5%倉位。"
+        },
+        {
+          "post_id": "229516340",
+          "quote_zh": "兩隻都有視而不見的利好因素，上面的人缺錢，下面啲人缺少財富效應"
+        }
+      ],
+      "crosslinks": [
+        "be-present-focused-preferences-taxonomy",
+        "be-self-control-mental-accounting",
+        "rm-risk-objectives-and-tolerance"
+      ],
+      "hkex_specificity": "low — general behavioral discipline with China/HK speculative-bet examples.",
+      "recurrence": 2,
+      "conviction": "stated-once",
+      "evidence_strength": "moderate"
+    },
+    {
+      "card_title_en": "Broker/listing-venue operational mechanics: relisting transfers and share-class consolidation",
+      "framework": "mt",
+      "reading_folder": "14_microstructure_and_trading",
+      "principle_summary": "Know your broker's mechanics around corporate events: on a relisting/exchange migration (e.g. HK to Singapore) IB transfers shares automatically while other brokers require you to act (sell/rebuy) or risk being caught at delisting. Consolidate dual-listed holdings into your preferred share class (e.g. shift HK holdings into the A-shares) rather than holding both. Also note a public model portfolio is capped (max 30 names) and does not reflect the full real book.",
+      "subprinciples": [
+        "IB auto-transfers shares on a relisting; other brokers need manual action",
+        "Confirm broker behavior before a delisting to avoid being caught",
+        "Consolidate dual-listed exposure into the preferred venue (HK→A)",
+        "A capped public model portfolio (≤30 names) understates the real book"
+      ],
+      "citation_seeds": [
+        {
+          "post_id": "366413082",
+          "quote_zh": "IB自動轉，其他公司要自己操作"
+        },
+        {
+          "post_id": "366413082",
+          "quote_zh": "美的和海信轉到A股。"
+        },
+        {
+          "post_id": "362973339",
+          "quote_zh": "中海化學還持有，只是組合只能放30只，必須拿走兩只。"
+        }
+      ],
+      "crosslinks": [
+        "mt-institutional-setting-market-types",
+        "mt-execution-systems-quote-vs-order-driven",
+        "fa-etf-creation-redemption-mechanism"
+      ],
+      "hkex_specificity": "high — HK-to-Singapore relisting, IB vs other HK brokers, HK/A dual-listing.",
+      "recurrence": 2,
+      "conviction": "stated-once",
+      "evidence_strength": "moderate"
+    },
+    {
+      "card_title_en": "Sell-put as passive accumulation at strike-minus-premium; price-conditioned covered-call follow-on",
+      "framework": "deriv",
+      "reading_folder": "07_derivatives_and_volatility",
+      "principle_summary": "He frames selling a put as committing to buy the underlying at a net price of strike-minus-premium — a way to passively add to a position at an effectively lower entry ('被動加倉'). After a put gets him long, he writes a covered call only when the price is suitable, and at near-full-invested levels he pauses new entries and writes long-dated (one-year) covered calls against existing equity/US positions to harvest premium on the book.",
+      "subprinciples": [
+        "Sell-put = commit to buy at strike minus premium (passive accumulation)",
+        "Covered-call follow-on is price-conditioned, not automatic",
+        "Near full-invested: pause entries, write long-dated covered calls",
+        "Long-dated covered calls cap upside — a deliberate trade-off"
+      ],
+      "citation_seeds": [
+        {
+          "post_id": "366413082",
+          "quote_zh": "sell put 530明天到期，被動加倉"
+        },
+        {
+          "post_id": "366413082",
+          "quote_zh": "看將來的價格決定，如果價格合適可能會sell covered call"
+        },
+        {
+          "post_id": "366414200",
+          "quote_zh": "有些套利和sell put停了，還沒有買入股票，現在91%倉位。另外長城pdd京東以及所有持有的美股都已經賣出一年後的covered cal。"
+        }
+      ],
+      "crosslinks": [
+        "deriv-option-payoff-anatomy",
+        "pm-rebalancing-mechanics",
+        "deriv-put-call-parity"
+      ],
+      "hkex_specificity": "medium — mixed HK/US/A-share book; the accumulation framing is general.",
+      "recurrence": 2,
+      "conviction": "repeated",
+      "evidence_strength": "strong"
+    },
+    {
+      "card_title_en": "Deep-value / downside-limited names and prefer hedged cyclicals",
+      "framework": "eq",
+      "reading_folder": "05_equity",
+      "principle_summary": "He prefers beaten-down stocks with stable operating revenue where valuation has already fallen so far that further downside is limited — such names can outperform the index even while widely ridiculed. Among cyclicals, prefer those with internal hedges (e.g. Shenhua's thermal-power offset) over pure-plays whose cheapness you cannot pin down (he avoids COSCO because he 'can't see where it's cheap'). Earnings power is judged by segments staying profitable through a supply-demand imbalance.",
+      "subprinciples": [
+        "Stable revenue + already-fallen valuation = limited further downside",
+        "Such names can outperform the index despite ridicule",
+        "Prefer cyclicals with structural internal hedges over pure-plays",
+        "Avoid cyclicals whose value you cannot articulate, even if optically cheap"
+      ],
+      "citation_seeds": [
+        {
+          "post_id": "225138288",
+          "quote_zh": "主要因為他的業務收入比較穩定，而且過去跌了那麼多，現在估值上已經很難再跌下去了"
+        },
+        {
+          "post_id": "223091847",
+          "quote_zh": "神華至少有火電對冲，中遠一直看不懂哪便宜。"
+        },
+        {
+          "post_id": "379186770",
+          "quote_zh": "抗生素供求失衡，下半年盈利還有一億多元，不用虧損，比中預期好"
+        }
+      ],
+      "crosslinks": [
+        "eq-value-and-momentum-factor-scoring",
+        "eq-cyclicality-and-cycle-adjustment",
+        "eq-intrinsic-value"
+      ],
+      "hkex_specificity": "medium — HK-listed cyclicals (神华/中远/联邦制药); the screen is general.",
+      "recurrence": 3,
+      "conviction": "stated-once",
+      "evidence_strength": "strong"
+    },
+    {
+      "card_title_en": "Holding-company / NAV-discount situations: trap vs narrowing",
+      "framework": "eq",
+      "reading_folder": "05_equity",
+      "principle_summary": "He holds a structural skepticism that a persistent holding-company / NAV discount (a listed parent trading far below the value of its stake) is easy arbitrage — he has 'eaten this loss too many times' and treats it as a potential value trap that bleeds you over time. Yet he also notes the discount can narrow over time and reward holders (Naspers/Prosus up ~50% while Tencent fell, sharply narrowing the gap) — so the discount is a double-edged, path-dependent situation, not a free lunch.",
+      "subprinciples": [
+        "A persistent NAV discount can be a value trap that bleeds you",
+        "He has been burned by holdco discounts before",
+        "The discount can also narrow and reward holders (Naspers/Prosus)",
+        "Outcome is path-dependent, not a guaranteed arbitrage"
+      ],
+      "citation_seeds": [
+        {
+          "post_id": "223764605",
+          "quote_zh": "這種虧，我吃太多了"
+        },
+        {
+          "post_id": "224763227",
+          "quote_zh": "兩者折價大幅收窄，對小股東有交代了"
+        }
+      ],
+      "crosslinks": [
+        "eq-sum-of-parts-valuation",
+        "fa-etf-vs-cef-premium-discount",
+        "be-limits-of-arbitrage"
+      ],
+      "hkex_specificity": "medium — Tencent/Naspers-Prosus holdco discount; the dynamic is general.",
+      "recurrence": 2,
+      "conviction": "stated-once",
+      "evidence_strength": "moderate"
+    },
+    {
+      "card_title_en": "Profit-vs-growth trade-off and counterparty/receivables risk from leveraged partners",
+      "framework": "eq",
+      "reading_folder": "05_equity",
+      "principle_summary": "Near-term margin and long-term franchise are a trade-off: a company can manufacture profit by cutting businesses and headcount, but pays for it with long-term potential (Tencent's 2022 cost-cutting). Separately, be wary of companies whose customers/partners are high-leverage operators, because counterparty failure creates accounts-receivable risk for the company you own.",
+      "subprinciples": [
+        "Squeezed-out margins are paid for with long-term potential",
+        "Cutting businesses/headcount manufactures near-term profit at a cost",
+        "Beware partners running high-leverage games (receivables risk)",
+        "Counterparty failure becomes your receivables problem"
+      ],
+      "citation_seeds": [
+        {
+          "post_id": "225156832",
+          "quote_zh": "你要前景還是要利潤？騰訊想要利潤，砍一些業務、裁一些人，擠一擠就能夠出來，來但是這一定是用長期前景（潛力）去做交換的"
+        },
+        {
+          "post_id": "225506290",
+          "quote_zh": "和玩高槓桿游戲的河南人合作，我將來又要擔心應收賬風險了"
+        }
+      ],
+      "crosslinks": [
+        "eq-earnings-quality-and-sustainability",
+        "fra-credit-risk-from-accounting",
+        "eq-quality-and-low-vol-factor-scoring"
+      ],
+      "hkex_specificity": "low — HK/China examples; the trade-off and receivables logic are general.",
+      "recurrence": 2,
+      "conviction": "stated-once",
+      "evidence_strength": "moderate"
+    },
+    {
+      "card_title_en": "Avoid option-selling into earnings volatility; auto-dealer profit model",
+      "framework": "deriv",
+      "reading_folder": "07_derivatives_and_volatility",
+      "principle_summary": "Avoid selling options right before a scheduled earnings release because volatility spikes around results — prefer to wait out the event. (Bundled industry-economics insight: auto dealers/4S stores make little on the car sale itself; real profit comes from insurance-commission rebates and after-sales servicing, varying widely by brand, with domestic brands treating dealers poorly — look past car-maker hype to where the margin actually sits.)",
+      "subprinciples": [
+        "Don't sell options into a scheduled earnings print (elevated IV)",
+        "Wait out the event before re-engaging",
+        "4S dealers profit from insurance rebates + servicing, not the car sale",
+        "Brand differences are large; look past car-maker hype"
+      ],
+      "citation_seeds": [
+        {
+          "post_id": "224796566",
+          "quote_zh": "但是下月初就公布業績，會比較波動"
+        },
+        {
+          "post_id": "223481187",
+          "quote_zh": "回复@岗仁波齐: 經銷商不賺錢，主要是賺保費回贈和保養，不同品牌差距大。國產品牌對4S店如狗"
+        }
+      ],
+      "crosslinks": [
+        "deriv-implied-volatility",
+        "deriv-vega-and-theta",
+        "eq-industry-and-sector-factor-models"
+      ],
+      "hkex_specificity": "low — general option-timing and industry-economics insight.",
+      "recurrence": 2,
+      "conviction": "stated-once",
+      "evidence_strength": "moderate"
+    },
+    {
+      "card_title_en": "IR calls as due diligence and shareholder base as marketing asset",
+      "framework": "eq",
+      "reading_folder": "05_equity",
+      "principle_summary": "Calling a company's investor-relations team directly is a legitimate due-diligence channel: gauge guidance, professionalism and confidence, and treat the quality of IR responsiveness as itself a soft signal about the company. Relatedly, a shareholder base of middle-class-and-above retail investors who identify as minority owners is a high-value marketing audience — some companies advertise to them via the listing announcements themselves.",
+      "subprinciples": [
+        "IR calls are a legitimate due-diligence channel",
+        "IR confidence/knowledge is a soft signal alongside hard guidance",
+        "A middle-class+ owner-identifying shareholder base is a marketing asset",
+        "Some companies exploit investor relationships via exchange filings"
+      ],
+      "citation_seeds": [
+        {
+          "post_id": "223159123",
+          "quote_zh": "电信的投资者关系工作人员非常专业，对公司的各个数据和公告了如指掌（让我惊讶），同时也挺热忱，听上去对公司也蛮有信心。"
+        },
+        {
+          "post_id": "223372206",
+          "quote_zh": "股民都是中產階層以上，公司小股東代入感更強，真是好的營銷對象"
+        }
+      ],
+      "crosslinks": [
+        "cc-standard-v-investment-analysis-diligence",
+        "cc-material-info-and-dissemination-delay",
+        "be-sentiment-vs-fundamentals"
+      ],
+      "hkex_specificity": "medium — HK-listed Telecom IR example; the DD channel is general.",
+      "recurrence": 2,
+      "conviction": "stated-once",
+      "evidence_strength": "moderate"
+    },
+    {
+      "card_title_en": "Float-adjusted turnover as a microstructure red flag",
+      "framework": "mt",
+      "reading_folder": "14_microstructure_and_trading",
+      "principle_summary": "He uses single-day turnover excluding major-shareholder holdings as a float-rotation signal: when free-float turnover reaches ~100% in a single day it is a meaningful, underappreciated warning about ownership churn that most observers miss. (Thin candidate — stated once, implication left open.)",
+      "subprinciples": [
+        "Compute turnover on free float, excluding major shareholders",
+        "~100% single-day free-float turnover is a red flag",
+        "Most observers miss this signal",
+        "The implication is flagged but left open"
+      ],
+      "citation_seeds": [
+        {
+          "post_id": "222825879",
+          "quote_zh": "好像沒有人理解剔除主要股東持股，單日換手率100%是什麼意思"
+        }
+      ],
+      "crosslinks": [
+        "mt-order-imbalance-signal",
+        "mt-volume-critique-time-clock",
+        "mt-order-flow-information-content"
+      ],
+      "hkex_specificity": "medium — HK free-float turnover context; the metric is general.",
+      "recurrence": 1,
+      "conviction": "stated-once",
+      "evidence_strength": "thin"
+    }
+  ],
+  "philosophy_summary": "狗不叫 (财主) is a Hong Kong value-and-income investor whose edge is the disciplined fusion of fundamental conviction with a covered/cash-secured option-selling overlay, executed inside an intimate command of HKEX mechanics and the HK/China tax code. His core stance is owner-not-trader: he buys cash-generative, high-dividend HK blue chips (oil majors, telecoms, insurers, select internet names), holds through drawdowns judged on a total-return (dividends-included) basis, and judges the 'bull market' by per-share equity and dividend growth rather than price. Around that core he runs a non-directional premium program — selling puts only at strikes where he genuinely wants the shares (and has the full cash to take delivery) and selling modest covered calls for 'pocket-money' volatility income. The whole apparatus is governed by one hard bottom line: no leverage, ever. He sizes puts to deliverable cash (often to incoming dividends, keeping the program self-financing), bounds every single-name worst case to a small fraction of the book, refuses fat premiums on names with 'no floor', and avoids exotic structures (accumulators) whose maximum loss he cannot state. He anchors strikes to fundamental price floors, rolls down for net credit while accounting for HK stamp duty and commissions, and times expiries around ex-dividend dates. His second, rarer edge is mechanical and fiscal: he knows that HK options need a non-Connect broker, that red-chips escape dividend tax via physical-certificate conversion while H-shares cannot, that special vs ordinary dividends adjust strikes differently, and that HK option liquidity lives in only a few mega-caps. Behaviorally he prizes holding mentality at bottoms, the discipline of inaction after deep research, diversification over consensus concentration, owner-style AGM activism, and skepticism toward corporate denials, engineered rallies, and unenacted policy. He is candid about path-dependence and his own errors, marking sector theses (EVs, holdco discounts) to evidence. Honesty about attribution — option income is only ~1.9% of the book — keeps the overlay in its proper, modest place.",
+  "themes": [
+    {
+      "theme": "Covered/cash-secured option-selling system",
+      "description": "The mechanics and rules of his core program: sell puts at strikes you'd own at, sell modest covered calls, the wheel (assignment then sell-call), non-directional premium harvesting, near-the-money strike selection, per-name price bands, and rolling down for net credit.",
+      "candidate_titles": [
+        "Never-lose-the-base-position: covered option-selling around your fair value",
+        "Sell puts only on companies you would happily own at the strike (cash-secured, bounded downside)",
+        "Selling premium harvests volatility/time-value, not direction (non-directional, probability-respecting)",
+        "Keep sold-put strikes near the money; deep-OTM puts earn too little",
+        "Per-name sell-put price bands that govern when to keep writing",
+        "Rolling sold puts down to a lower strike for net credit",
+        "Roll deep-OTM near-dated legs forward to free capital (delta-vs-theta)",
+        "The wheel: take assignment then reverse into covered calls",
+        "Covered calls are pocket-money on volatility, not a core return engine",
+        "Sell-put underlying selection: choose for bounded downside and rich premium, not conviction",
+        "Premium is the buyer's insurance cost and your edge — but a fat premium prices real risk",
+        "Fundamental-floor-anchored strike selection (oil-major case)",
+        "Sell-put as passive accumulation at strike-minus-premium; price-conditioned covered-call follow-on",
+        "Avoid option-selling into earnings volatility; auto-dealer profit model"
+      ]
+    },
+    {
+      "theme": "Risk discipline and the no-leverage bottom line",
+      "description": "The hard constraints that keep him from blowing up: no leverage to take delivery, size to cash, never naked, never short, avoid unbounded-loss structures, refuse no-floor names, heed regulatory/state prohibitions, and admit errors.",
+      "candidate_titles": [
+        "No leverage to take delivery: size sell-puts only to cash on hand, never oversell",
+        "Ordinary investors should not touch derivatives — and never short, never go naked",
+        "Avoid accumulators and complex multi-leg products with unbounded loss",
+        "Refuse fat premiums on no-floor names: high IV is a warning, not free money",
+        "Regulatory-risk discipline and platform-risk acceptance in the China/HK environment",
+        "Sell on deteriorating leverage and admit the error"
+      ]
+    },
+    {
+      "theme": "HKEX mechanics: options, lots, fees, stamp duty, dividends",
+      "description": "Deep HK market-plumbing knowledge: option lot sizes and ~0.3% costs, stamp-duty on exercise vs expiry, special vs ordinary dividend strike adjustment, ex-date and assignment timing, HK option liquidity concentration, and broker/relisting operations.",
+      "candidate_titles": [
+        "Option exercise mechanics: who controls exercise, OTM vs ITM, early exercise",
+        "Option strike adjustment: special dividends adjust, ordinary dividends do not",
+        "Dividend-aware option timing: ex-date, assignment timing, and who collects the dividend",
+        "No dividend arbitrage via short/borrow: the borrower pays the dividend to the lender",
+        "HK option liquidity is concentrated in a few mega-caps; pick market by liquidity not frequency",
+        "HK option costs: ~0.3% exercise cost; lot size and stamp-duty mechanics",
+        "Stock Connect (港股通) cannot trade HK options",
+        "Broker/listing-venue operational mechanics: relisting transfers and share-class consolidation",
+        "Float-adjusted turnover as a microstructure red flag"
+      ]
+    },
+    {
+      "theme": "HK/China dividend-tax engineering",
+      "description": "Tax-aware selection and routing: red-chip vs H-share withholding, the physical-certificate (实物股票) route, after-tax peer selection, and fund 派息/分红 tax incidence across channels.",
+      "candidate_titles": [
+        "HK dividend tax: red-chip vs H-share withholding mechanics",
+        "实物股票 route: convert red-chips to physical certificates to escape dividend tax",
+        "After-tax dividend yield drives peer selection (移动 vs 电信)",
+        "Fund 分红 vs corporate 派息: dividend tax incidence and channel consistency"
+      ]
+    },
+    {
+      "theme": "Sector frameworks: oil, telecom, insurance, internet, banks, utilities",
+      "description": "His durable sector views and valuation lenses: oil-price-to-earnings sensitivity, telecom defensive-vs-growth and carriers-vs-cloud, insurer sum-of-parts and asset-side opacity, internet moats, SOE payout logic, mortgage-bank quality, and conditional utility safe harbors.",
+      "candidate_titles": [
+        "Insurer analysis: avoid opaque asset sides; sum-of-parts; ownership taxonomy",
+        "Oil-producer valuation: oil-price-to-earnings scenario sensitivity",
+        "SOE windfall-tax vs payout, and minority preference for dividends over growth capex",
+        "Telecom sector framework: defensive vs growth, carriers vs cloud, upstream over downstream",
+        "Cloud sector thesis: ease-of-adoption moat, hidden-asset optionality, cross-market analog",
+        "Moats from regulatory difficulty, product-fit, and customer-acquisition economics",
+        "Decline signals: revenue/volume decline, side-bets, youth disengagement, ESG buzzwords",
+        "Deep-value / downside-limited names and prefer hedged cyclicals",
+        "Holding-company / NAV-discount situations: trap vs narrowing",
+        "Profit-vs-growth trade-off and counterparty/receivables risk from leveraged partners",
+        "Utilities/staples as crash-year safe harbor — conditional on valuation and input costs",
+        "Governance and ownership-structure quality as a screening attribute",
+        "Buybacks: scale relative to size, and read-through screens"
+      ]
+    },
+    {
+      "theme": "Fundamental analysis: margins, balance sheet, underwriting",
+      "description": "How he reads the numbers: cost-plus and spread-vs-margin nuance, pass-through and procurement effects, distributable-cash and repatriation tax, receivables and leverage, and conservative downside-anchored earnings underwriting.",
+      "candidate_titles": [
+        "Margin and cost-structure analysis: cost-plus, spread vs margin, pass-through, procurement",
+        "Balance-sheet quality: distributable cash, repatriation tax, receivables, leverage",
+        "Conservative, downside-anchored earnings underwriting under policy uncertainty"
+      ]
+    },
+    {
+      "theme": "Macro and regime views",
+      "description": "His macro lenses: deflation vs inflation and real returns, rate-tightening asset ordering, oil supply inelasticity and refined-oil controls, EV penetration ceilings and unenacted policy, bull-market preconditions, and China credit/banking contagion.",
+      "candidate_titles": [
+        "Deflation worse than inflation; real vs nominal returns",
+        "Rate-tightening regime: non-yielding assets sold first",
+        "Oil macro: supply inelasticity, OPEC restraint, and refined-oil price controls",
+        "EV-penetration ceiling and treating unenacted policy as non-information",
+        "Bull-market preconditions and the policy-regime contrast",
+        "China credit/banking: mortgage-bank quality and no securitized-subprime contagion"
+      ]
+    },
+    {
+      "theme": "Behavioral discipline and portfolio construction",
+      "description": "His temperament edge: holding mentality at bottoms, total-return accounting, inaction after research, engagement without overtrading, talk-your-book/incentive checks, skepticism toward denials and pumps, AGM owner-activism, insider-buying signals, small-cap liquidity traps, diversification, and self-financing overlays.",
+      "candidate_titles": [
+        "Holding mentality at bottoms is the most important factor — balanced portfolio as backstop",
+        "Total-return (dividend-inclusive) accounting through drawdowns",
+        "Business-value bull market: equity and dividend growth, not price",
+        "The discipline of inaction: research deeply, then often do nothing",
+        "Engagement without overtrading; resist post-dividend itchy hands and extreme-return chasing",
+        "Talk-your-book discipline and incentive checks on commentary",
+        "Skepticism toward corporate denials, manipulation, and engineered rallies",
+        "AGM activism: owner mindset and pressing management on payout policy",
+        "Insider buying as a confidence/alignment signal",
+        "Read major-shareholder selling through the cheapest-execution lens",
+        "Small-cap minority liquidity trap; curate the shared book for liquidity",
+        "Diversification over single-name concentration; sector position ceilings",
+        "Honest attribution and sizing of the option-income sleeve",
+        "Self-financing option overlay: size sell-puts to dividend inflow",
+        "Contrarian entry on clustered bad news; relative-strength bottoming and HK seasonality",
+        "Index-inclusion / Stock-Connect flow events: tradable but unpredictable",
+        "Cool-off discipline and avoiding wealth-destroyer vehicles",
+        "IR calls as due diligence and shareholder base as marketing asset"
+      ]
+    }
+  ]
+}
