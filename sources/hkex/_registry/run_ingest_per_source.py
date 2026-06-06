@@ -103,6 +103,15 @@ def main() -> int:
         if not pdf.is_file():
             raise SystemExit(f"source PDF missing for {sid}: {pdf} (render/snapshot it first)")
 
+        # A dry run must NEVER mutate the filesystem: reaching the rmtree below under
+        # `--dry-run --force` would clobber a reusable per-source manifest the command was
+        # only meant to describe. Gate ALL mutation (rmtree/mkdir/ingest) behind this check.
+        if args.dry_run:
+            cfgnote = " --config <per-source>" if row.get("config") else ""
+            print(f"dry-run: would (re)ingest {sid}: kb ingest {row['canonical_path']} "
+                  f"--source-id {sid} --out {row['out_dir']}{cfgnote}  [clobber {row['out_dir']}]")
+            continue
+
         if out_dir.exists():
             import shutil
             shutil.rmtree(out_dir)
@@ -118,9 +127,8 @@ def main() -> int:
             cmd = [str(kb), "ingest", str(row["canonical_path"]), "--source-id", sid,
                    "--out", str(row["out_dir"]), *extra]
             print("run:", " ".join(cmd))
-            if not args.dry_run:
-                subprocess.run(cmd, cwd=ROOT, env=env, check=True)
-                did.append(sid)
+            subprocess.run(cmd, cwd=ROOT, env=env, check=True)
+            did.append(sid)
     print(json.dumps({"ingested": did, "kb": str(kb)}, ensure_ascii=False))
     return 0
 

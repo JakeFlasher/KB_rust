@@ -87,6 +87,17 @@ def sha256_file(path: Path) -> str:
     return h.hexdigest()
 
 
+def _rel(p: Path) -> str:
+    """Repo-relative path string for PORTABLE provenance (matches render_corpus_pdf.py): a
+    committed `.pdf.provenance.json` must not carry a machine-local checkout path, or a rebuild
+    from a different checkout dirties tracked provenance despite identical inputs/PDF bytes. Falls
+    back to the raw path if the target is outside the repo (a system font, or a tempdir in tests)."""
+    try:
+        return str(p.relative_to(ROOT))
+    except ValueError:
+        return str(p)
+
+
 def render_text_pdf(text: str, out_pdf: Path) -> None:
     from fpdf import FPDF
     from fpdf.enums import WrapMode, XPos, YPos
@@ -138,12 +149,12 @@ def snapshot(html_path: Path, out_pdf: Path) -> dict:
         "producer": PRODUCER,
         "page_format": PAGE_FORMAT,
         "font_size_pt": FONT_SIZE_PT,
-        "html_path": str(html_path),
+        "html_path": _rel(html_path),
         "html_sha256": sha256_file(html_path),
         "font_ttc_path": str(FONT_TTC),
         "font_otf_cache": str(FONT_CACHE.relative_to(ROOT)),
         "font_otf_sha256": sha256_file(FONT_CACHE),
-        "output_pdf": str(out_pdf),
+        "output_pdf": _rel(out_pdf),
         "output_pdf_sha256": sha256_file(out_pdf),
     }
     (out_pdf.with_suffix(out_pdf.suffix + ".provenance.json")).write_text(
