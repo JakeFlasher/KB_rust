@@ -1,0 +1,59 @@
+{
+  "schema_version": "hkex.grounding_sources_spec.v1",
+  "note": "Free Tier-1 grounding sources to acquire for AC-6 (plan §4.1), with URLs resolved/verified 2026-06-07 (the report's original paths were stale: HKEX URLs are volatile, the IFEC site moved, and ird dta_cdta.htm returns navigation chrome only). Each is downloaded to a dated, SHA-pinned local PDF (HTML snapshotted via html_to_pdf.py); the *.pdf are gitignored, the acquisition manifest (grounding_sources.json) + provenance are committed. A source that returns 404 / navigation-chrome / no usable content is recorded in known_unresolved and deferred, NEVER fabricated.",
+  "sources": [
+    {
+      "source_id": "ird_stamp_duty_hk_stock_rates",
+      "reading_id": "14_microstructure_and_trading",
+      "type": "pdf",
+      "url": "https://www.ird.gov.hk/eng/pdf/sd_stock_rates.pdf",
+      "grounds": "HK stock-transfer stamp duty: 0.1%/side + HK$5 fixed; stamping mechanics + historical rates."
+    },
+    {
+      "source_id": "bennett_trading_volatility_2014",
+      "reading_id": "07_derivatives_and_volatility",
+      "type": "pdf",
+      "url": "https://www.trading-volatility.com/Trading-Volatility.pdf",
+      "grounds": "Skew / term-structure; the dividend <-> option-pricing bridge (free author-sanctioned PDF)."
+    },
+    {
+      "source_id": "hkex_stock_options_info_sheet",
+      "reading_id": "07_derivatives_and_volatility",
+      "type": "pdf",
+      "url": "https://www.hkex.com.hk/-/media/HKEX-Market/Products/Listed-Derivatives/Single-Stock/Stock-Options/Publications/Stock-Options-Information-Sheet/HKEX_Stock_Options_EN.pdf",
+      "grounds": "The HK stock-options instrument: SEOCH clearing, American-style, multiplier / board lot."
+    },
+    {
+      "source_id": "hkex_contract_adjustments_chap08",
+      "reading_id": "07_derivatives_and_volatility",
+      "type": "pdf",
+      "url": "https://www.hkex.com.hk/-/media/HKEX-Market/Products/Listed-Derivatives/Single-Stock/Stock-Options/Trading-Information/Contract-Adjustments/chap08.pdf",
+      "grounds": "OTP Ch.8 Special Events: the 2%-of-closing-price special-dividend threshold + strike x multiplier capital-adjustment ratio (no adjustment for ordinary cash dividends)."
+    },
+    {
+      "source_id": "seoch_operational_procedures_chap08",
+      "reading_id": "07_derivatives_and_volatility",
+      "type": "pdf",
+      "url": "https://www.hkex.com.hk/-/media/HKEX-Market/Services/Rules-and-Forms-and-Fees/Rules/SEOCH/Operational-Procedures/CHAP08.pdf",
+      "grounds": "SEOCH Operational Procedures Ch.8: settlement and delivery of exercised options (exercise day = trade day T)."
+    },
+    {
+      "source_id": "hkex_stock_options_corner_guide",
+      "reading_id": "07_derivatives_and_volatility",
+      "type": "pdf",
+      "url": "https://www.hkex.com.hk/-/media/HKEX-Market/Products/Listed-Derivatives/Single-Stock/Stock-Options/Publications/Introductory-Guide-to-the-Stock-Options-Corner/SO_Corner_Guide.pdf",
+      "grounds": "Introductory guide to the Stock Options Corner (covered-call / cash-secured-put mechanics framing)."
+    },
+    {
+      "source_id": "ifec_physical_share_certificates",
+      "reading_id": "14_microstructure_and_trading",
+      "type": "html",
+      "url": "https://www.ifec.org.hk/web/en/blog/2024/07/physical-share-certificates.page",
+      "grounds": "CCASS vs paper certificates; withdraw-cert -> re-register workflow; the dividend-to-HKSCC-Nominees trap; the HK$3.5/board-lot withdrawal fee."
+    }
+  ],
+  "known_unresolved": [
+    {"intended": "IRD dividend-withholding / DTA dividend treatment (H-share 10% PRC WHT vs red-chip exemption), reading 02", "reason": "ird.gov.hk/eng/tax/dta_cdta.htm returns navigation chrome only; the Mainland-HK DTA dividend-WHT detail has no clean single-page URL. Reading-02 practitioner cards are Xueqiu-only.", "deferred_to": "future round / user-provided URL"},
+    {"intended": "HKEX Stock Connect Information Book + FAQ (options not tradable via Connect), reading 14", "reason": "not surfaced in the bounded URL resolution this round", "deferred_to": "future round / user-provided URL"}
+  ]
+}

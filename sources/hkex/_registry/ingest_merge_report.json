@@ -1,6 +1,6 @@
 {
   "byte_identical_proof": "re-running merge_hkex_manifests.py reproduces the merged-manifest SHAs above (atomic_write reports 'unchanged'); out/hkex/{chunks,sources}_manifest.json are gitignored and regenerated from the committed per-source plan + the rendered PDF.",
-  "chunk_count": 6970,
+  "chunk_count": 7348,
   "libpdfium": {
     "parser_name": "pdfium-render",
     "parser_version": "0.9.1",
@@ -8,11 +8,20 @@
     "pin_disposition": "KB_SKIP_PDFIUM_HASH_CHECK=1 (documented deviation; same as the cfa corpus)",
     "sha256": "816f5e74f78cd759faaf11d6c02df8cca27351311748631828f292e9d26cd591"
   },
-  "merged_chunks_manifest_sha256": "dc6f902e2e7957d77cdea2295f58393f40278cad31447b62f643ebc3e49668b3",
-  "merged_sources_manifest_sha256": "62876cfc11e2290451049ef38e5cf5d722e663ed476db99ab87dcb0e68cea91c",
+  "merged_chunks_manifest_sha256": "2a52930778200c8b4ffd61ead936092db4605c1a1280a3f5fb231f052c3d9ae8",
+  "merged_sources_manifest_sha256": "7e8a2917b593b5a87abd15268da0eb8a1c5c183017eb584ce880fb13cf9ee2e1",
   "schema_version": "hkex.ingest_merge_report.v1",
-  "source_count": 1,
+  "source_count": 8,
   "sources": [
+    {
+      "chunk_count": 324,
+      "page_count": 317,
+      "parser_name": "pdfium-render",
+      "parser_version": "0.9.1",
+      "source_id": "bennett_trading_volatility_2014",
+      "source_path": "sources/hkex/pdfs/bennett_trading_volatility_2014.pdf",
+      "source_sha256": "0973976867d6b506b55e9f4f2c0c7671f91383677cceac6d529cc0e12a2156c4"
+    },
     {
       "chunk_count": 6970,
       "page_count": 6970,
@@ -21,6 +30,60 @@
       "source_id": "goubujiao_xueqiu_corpus",
       "source_path": "sources/hkex/pdfs/goubujiao_corpus.pdf",
       "source_sha256": "452e853d8ae0e8a9ba11b5198b4a05c931fa6bf45674eb0d8137f5645ee7b53f"
+    },
+    {
+      "chunk_count": 5,
+      "page_count": 4,
+      "parser_name": "pdfium-render",
+      "parser_version": "0.9.1",
+      "source_id": "hkex_contract_adjustments_chap08",
+      "source_path": "sources/hkex/pdfs/hkex_contract_adjustments_chap08.pdf",
+      "source_sha256": "3249727eebb03f57513e56e0e391bd5ce5b1f63114e06a8b09f1a9127d83236a"
+    },
+    {
+      "chunk_count": 23,
+      "page_count": 21,
+      "parser_name": "pdfium-render",
+      "parser_version": "0.9.1",
+      "source_id": "hkex_stock_options_corner_guide",
+      "source_path": "sources/hkex/pdfs/hkex_stock_options_corner_guide.pdf",
+      "source_sha256": "ec4bf54ab1ccac80e602ae061a375acd5e7cc3c6bb4230b48bf26f1283eaab67"
+    },
+    {
+      "chunk_count": 9,
+      "page_count": 4,
+      "parser_name": "pdfium-render",
+      "parser_version": "0.9.1",
+      "source_id": "hkex_stock_options_info_sheet",
+      "source_path": "sources/hkex/pdfs/hkex_stock_options_info_sheet.pdf",
+      "source_sha256": "34237246fc71ad2571a97d8606ec7ea8d18569d83ad0d6ed4ba4bb81d55801b5"
+    },
+    {
+      "chunk_count": 2,
+      "page_count": 2,
+      "parser_name": "pdfium-render",
+      "parser_version": "0.9.1",
+      "source_id": "ifec_physical_share_certificates",
+      "source_path": "sources/hkex/pdfs/ifec_physical_share_certificates.pdf",
+      "source_sha256": "fc6daefd3e1843f2779f587e2b33fc097cd3f63d7cf172e044144e93515ea076"
+    },
+    {
+      "chunk_count": 2,
+      "page_count": 2,
+      "parser_name": "pdfium-render",
+      "parser_version": "0.9.1",
+      "source_id": "ird_stamp_duty_hk_stock_rates",
+      "source_path": "sources/hkex/pdfs/ird_stamp_duty_hk_stock_rates.pdf",
+      "source_sha256": "0262489a033010c72e7d78f4b5951d5416cce37989a631b081e71f755c584210"
+    },
+    {
+      "chunk_count": 13,
+      "page_count": 7,
+      "parser_name": "pdfium-render",
+      "parser_version": "0.9.1",
+      "source_id": "seoch_operational_procedures_chap08",
+      "source_path": "sources/hkex/pdfs/seoch_operational_procedures_chap08.pdf",
+      "source_sha256": "f7c22348699861c43ce80ef9a9c99f93a97eca6bf78e179ef363abd15a399fd2"
     }
   ]
 }

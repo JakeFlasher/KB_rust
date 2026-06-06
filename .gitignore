@@ -108,3 +108,7 @@ crates/cacg-cli/cards/
 # Noto CJK `.ttc` for the deterministic renderer (recorded by SHA in the renderer
 # provenance; rebuilt from /usr/share/fonts on a clean checkout).
 /sources/hkex/_registry/_fonts/
+# Raw downloaded HTML of the free HTML grounding sources (IRD/IFEC). Local-only snapshots
+# of public pages — like the *.pdf snapshots they render into; the committed acquisition
+# manifest (grounding_sources.json) + the .pdf.provenance.json pin them by SHA.
+/sources/hkex/pdfs/*.source.html

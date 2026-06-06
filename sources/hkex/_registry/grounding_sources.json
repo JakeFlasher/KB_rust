@@ -1,0 +1,92 @@
+{
+  "note": "Dated, SHA-pinned snapshots of the free Tier-1 grounding sources. The *.pdf are gitignored; this manifest + the per-HTML .pdf.provenance.json are committed. A clean rebuild re-downloads from `url`; a changed SHA means the upstream source moved/changed (volatile HKEX URLs may need re-resolution). Unresolved sources are in omission_ledger.",
+  "omission_ledger": [],
+  "schema_version": "hkex.grounding_sources.v1",
+  "source_count": 7,
+  "sources": [
+    {
+      "acquisition_date": "2026-06-07",
+      "grounds": "Skew / term-structure; the dividend <-> option-pricing bridge (free author-sanctioned PDF).",
+      "html_snapshot_provenance": null,
+      "page_count": 317,
+      "raw_download_sha256": "0973976867d6b506b55e9f4f2c0c7671f91383677cceac6d529cc0e12a2156c4",
+      "reading_id": "07_derivatives_and_volatility",
+      "snapshot_pdf_sha256": "0973976867d6b506b55e9f4f2c0c7671f91383677cceac6d529cc0e12a2156c4",
+      "source_id": "bennett_trading_volatility_2014",
+      "type": "pdf",
+      "url": "https://www.trading-volatility.com/Trading-Volatility.pdf"
+    },
+    {
+      "acquisition_date": "2026-06-07",
+      "grounds": "OTP Ch.8 Special Events: the 2%-of-closing-price special-dividend threshold + strike x multiplier capital-adjustment ratio (no adjustment for ordinary cash dividends).",
+      "html_snapshot_provenance": null,
+      "page_count": 4,
+      "raw_download_sha256": "3249727eebb03f57513e56e0e391bd5ce5b1f63114e06a8b09f1a9127d83236a",
+      "reading_id": "07_derivatives_and_volatility",
+      "snapshot_pdf_sha256": "3249727eebb03f57513e56e0e391bd5ce5b1f63114e06a8b09f1a9127d83236a",
+      "source_id": "hkex_contract_adjustments_chap08",
+      "type": "pdf",
+      "url": "https://www.hkex.com.hk/-/media/HKEX-Market/Products/Listed-Derivatives/Single-Stock/Stock-Options/Trading-Information/Contract-Adjustments/chap08.pdf"
+    },
+    {
+      "acquisition_date": "2026-06-07",
+      "grounds": "Introductory guide to the Stock Options Corner (covered-call / cash-secured-put mechanics framing).",
+      "html_snapshot_provenance": null,
+      "page_count": 21,
+      "raw_download_sha256": "ec4bf54ab1ccac80e602ae061a375acd5e7cc3c6bb4230b48bf26f1283eaab67",
+      "reading_id": "07_derivatives_and_volatility",
+      "snapshot_pdf_sha256": "ec4bf54ab1ccac80e602ae061a375acd5e7cc3c6bb4230b48bf26f1283eaab67",
+      "source_id": "hkex_stock_options_corner_guide",
+      "type": "pdf",
+      "url": "https://www.hkex.com.hk/-/media/HKEX-Market/Products/Listed-Derivatives/Single-Stock/Stock-Options/Publications/Introductory-Guide-to-the-Stock-Options-Corner/SO_Corner_Guide.pdf"
+    },
+    {
+      "acquisition_date": "2026-06-07",
+      "grounds": "The HK stock-options instrument: SEOCH clearing, American-style, multiplier / board lot.",
+      "html_snapshot_provenance": null,
+      "page_count": 4,
+      "raw_download_sha256": "34237246fc71ad2571a97d8606ec7ea8d18569d83ad0d6ed4ba4bb81d55801b5",
+      "reading_id": "07_derivatives_and_volatility",
+      "snapshot_pdf_sha256": "34237246fc71ad2571a97d8606ec7ea8d18569d83ad0d6ed4ba4bb81d55801b5",
+      "source_id": "hkex_stock_options_info_sheet",
+      "type": "pdf",
+      "url": "https://www.hkex.com.hk/-/media/HKEX-Market/Products/Listed-Derivatives/Single-Stock/Stock-Options/Publications/Stock-Options-Information-Sheet/HKEX_Stock_Options_EN.pdf"
+    },
+    {
+      "acquisition_date": "2026-06-07",
+      "grounds": "CCASS vs paper certificates; withdraw-cert -> re-register workflow; the dividend-to-HKSCC-Nominees trap; the HK$3.5/board-lot withdrawal fee.",
+      "html_snapshot_provenance": "sources/hkex/pdfs/ifec_physical_share_certificates.pdf.provenance.json",
+      "page_count": 2,
+      "raw_download_sha256": "460cbcd5509e5d2c18fb0f4aaac4a7d602f2e6cad7d342b2df03f0dd1cd093ae",
+      "reading_id": "14_microstructure_and_trading",
+      "snapshot_pdf_sha256": "fc6daefd3e1843f2779f587e2b33fc097cd3f63d7cf172e044144e93515ea076",
+      "source_id": "ifec_physical_share_certificates",
+      "type": "html",
+      "url": "https://www.ifec.org.hk/web/en/blog/2024/07/physical-share-certificates.page"
+    },
+    {
+      "acquisition_date": "2026-06-07",
+      "grounds": "HK stock transfer stamp duty: 0.1%/side + HK$5 fixed; stamping mechanics.",
+      "html_snapshot_provenance": null,
+      "page_count": 2,
+      "raw_download_sha256": "0262489a033010c72e7d78f4b5951d5416cce37989a631b081e71f755c584210",
+      "reading_id": "14_microstructure_and_trading",
+      "snapshot_pdf_sha256": "0262489a033010c72e7d78f4b5951d5416cce37989a631b081e71f755c584210",
+      "source_id": "ird_stamp_duty_hk_stock_rates",
+      "type": "pdf",
+      "url": "https://www.ird.gov.hk/eng/pdf/sd_stock_rates.pdf"
+    },
+    {
+      "acquisition_date": "2026-06-07",
+      "grounds": "SEOCH Operational Procedures Ch.8: settlement and delivery of exercised options (exercise day = trade day T).",
+      "html_snapshot_provenance": null,
+      "page_count": 7,
+      "raw_download_sha256": "f7c22348699861c43ce80ef9a9c99f93a97eca6bf78e179ef363abd15a399fd2",
+      "reading_id": "07_derivatives_and_volatility",
+      "snapshot_pdf_sha256": "f7c22348699861c43ce80ef9a9c99f93a97eca6bf78e179ef363abd15a399fd2",
+      "source_id": "seoch_operational_procedures_chap08",
+      "type": "pdf",
+      "url": "https://www.hkex.com.hk/-/media/HKEX-Market/Services/Rules-and-Forms-and-Fees/Rules/SEOCH/Operational-Procedures/CHAP08.pdf"
+    }
+  ]
+}

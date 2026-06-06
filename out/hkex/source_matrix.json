@@ -4,11 +4,11 @@
     "02_economics": ["goubujiao_xueqiu_corpus"],
     "03_financial_reporting_analysis": ["goubujiao_xueqiu_corpus"],
     "05_equity": ["goubujiao_xueqiu_corpus"],
-    "07_derivatives_and_volatility": ["goubujiao_xueqiu_corpus"],
+    "07_derivatives_and_volatility": ["bennett_trading_volatility_2014", "goubujiao_xueqiu_corpus", "hkex_contract_adjustments_chap08", "hkex_stock_options_corner_guide", "hkex_stock_options_info_sheet", "seoch_operational_procedures_chap08"],
     "09_portfolio_management_and_asset_pricing": ["goubujiao_xueqiu_corpus"],
     "10_behavioral_finance": ["goubujiao_xueqiu_corpus"],
     "11_risk_management": ["goubujiao_xueqiu_corpus"],
-    "14_microstructure_and_trading": ["goubujiao_xueqiu_corpus"],
+    "14_microstructure_and_trading": ["goubujiao_xueqiu_corpus", "ifec_physical_share_certificates", "ird_stamp_duty_hk_stock_rates"],
     "15_performance_and_attribution": ["goubujiao_xueqiu_corpus"]
   }
 }

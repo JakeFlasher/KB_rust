@@ -1,10 +1,65 @@
 [
   {
+    "source_id": "bennett_trading_volatility_2014",
+    "source_type": "grounding_pdf",
+    "canonical_path": "sources/hkex/pdfs/bennett_trading_volatility_2014.pdf",
+    "out_dir": "out/hkex/ingest_per_source/bennett_trading_volatility_2014",
+    "note": "Free Tier-1 grounding source (07_derivatives_and_volatility); acquired 2026-06-07 from https://www.trading-volatility.com/Trading-Volatility.pdf."
+  },
+  {
     "source_id": "goubujiao_xueqiu_corpus",
     "source_type": "xueqiu_pdf",
     "canonical_path": "sources/hkex/pdfs/goubujiao_corpus.pdf",
     "out_dir": "out/hkex/ingest_per_source/goubujiao_xueqiu_corpus",
-    "config": {"chunking": {"target_tokens": 100000, "overlap_tokens": 0, "max_pages_per_chunk": 1}},
+    "config": {
+      "chunking": {
+        "target_tokens": 100000,
+        "overlap_tokens": 0,
+        "max_pages_per_chunk": 1
+      }
+    },
     "note": "The complete Xueqiu corpus, rendered by render_corpus_pdf.py (gitignored). CJK chunk config => one utterance per single-page chunk. Grounding sources (HKEX/IRD/IFEC/Bennett) are appended at AC-6 using this same plan + the default chunk config; HTML sources are first snapshotted to PDF via html_to_pdf.py."
+  },
+  {
+    "source_id": "hkex_contract_adjustments_chap08",
+    "source_type": "grounding_pdf",
+    "canonical_path": "sources/hkex/pdfs/hkex_contract_adjustments_chap08.pdf",
+    "out_dir": "out/hkex/ingest_per_source/hkex_contract_adjustments_chap08",
+    "note": "Free Tier-1 grounding source (07_derivatives_and_volatility); acquired 2026-06-07 from https://www.hkex.com.hk/-/media/HKEX-Market/Products/Listed-Derivatives/Single-Stock/Stock-Options/Trading-Information/Contract-Adjustments/chap08.pdf."
+  },
+  {
+    "source_id": "hkex_stock_options_corner_guide",
+    "source_type": "grounding_pdf",
+    "canonical_path": "sources/hkex/pdfs/hkex_stock_options_corner_guide.pdf",
+    "out_dir": "out/hkex/ingest_per_source/hkex_stock_options_corner_guide",
+    "note": "Free Tier-1 grounding source (07_derivatives_and_volatility); acquired 2026-06-07 from https://www.hkex.com.hk/-/media/HKEX-Market/Products/Listed-Derivatives/Single-Stock/Stock-Options/Publications/Introductory-Guide-to-the-Stock-Options-Corner/SO_Corner_Guide.pdf."
+  },
+  {
+    "source_id": "hkex_stock_options_info_sheet",
+    "source_type": "grounding_pdf",
+    "canonical_path": "sources/hkex/pdfs/hkex_stock_options_info_sheet.pdf",
+    "out_dir": "out/hkex/ingest_per_source/hkex_stock_options_info_sheet",
+    "note": "Free Tier-1 grounding source (07_derivatives_and_volatility); acquired 2026-06-07 from https://www.hkex.com.hk/-/media/HKEX-Market/Products/Listed-Derivatives/Single-Stock/Stock-Options/Publications/Stock-Options-Information-Sheet/HKEX_Stock_Options_EN.pdf."
+  },
+  {
+    "source_id": "ifec_physical_share_certificates",
+    "source_type": "grounding_pdf",
+    "canonical_path": "sources/hkex/pdfs/ifec_physical_share_certificates.pdf",
+    "out_dir": "out/hkex/ingest_per_source/ifec_physical_share_certificates",
+    "note": "Free Tier-1 grounding source (14_microstructure_and_trading); acquired 2026-06-07 from https://www.ifec.org.hk/web/en/blog/2024/07/physical-share-certificates.page."
+  },
+  {
+    "source_id": "ird_stamp_duty_hk_stock_rates",
+    "source_type": "grounding_pdf",
+    "canonical_path": "sources/hkex/pdfs/ird_stamp_duty_hk_stock_rates.pdf",
+    "out_dir": "out/hkex/ingest_per_source/ird_stamp_duty_hk_stock_rates",
+    "note": "Free Tier-1 grounding source (14_microstructure_and_trading); acquired 2026-06-07 from https://www.ird.gov.hk/eng/pdf/sd_stock_rates.pdf."
+  },
+  {
+    "source_id": "seoch_operational_procedures_chap08",
+    "source_type": "grounding_pdf",
+    "canonical_path": "sources/hkex/pdfs/seoch_operational_procedures_chap08.pdf",
+    "out_dir": "out/hkex/ingest_per_source/seoch_operational_procedures_chap08",
+    "note": "Free Tier-1 grounding source (07_derivatives_and_volatility); acquired 2026-06-07 from https://www.hkex.com.hk/-/media/HKEX-Market/Services/Rules-and-Forms-and-Fees/Rules/SEOCH/Operational-Procedures/CHAP08.pdf."
   }
 ]

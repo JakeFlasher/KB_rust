@@ -1,0 +1,18 @@
+{
+  "extraction": "html.parser convert_charrefs; block-separated; script/style dropped; intra-line ws collapsed",
+  "font_otf_cache": "sources/hkex/_registry/_fonts/NotoSansCJK-Regular-face0.otf",
+  "font_otf_sha256": "7a52d49bb50cff9574c85ebddf45822d9ea70cbfbb455bf8ebb1010859dbeb42",
+  "font_size_pt": 10,
+  "font_ttc_path": "/usr/share/fonts/noto-cjk/NotoSansCJK-Regular.ttc",
+  "fpdf2_version": "2.8.7",
+  "frozen_creation_date": "1970-01-01T00:00:00Z",
+  "generator": "sources/hkex/_registry/html_to_pdf.py",
+  "html_path": "/home/jakeshea/knowledge_base_framework_discovery/sources/hkex/pdfs/ifec_physical_share_certificates.source.html",
+  "html_sha256": "460cbcd5509e5d2c18fb0f4aaac4a7d602f2e6cad7d342b2df03f0dd1cd093ae",
+  "output_pdf": "/home/jakeshea/knowledge_base_framework_discovery/sources/hkex/pdfs/ifec_physical_share_certificates.pdf",
+  "output_pdf_sha256": "fc6daefd3e1843f2779f587e2b33fc097cd3f63d7cf172e044144e93515ea076",
+  "page_format": "A4",
+  "producer": "hkex-html-snapshot",
+  "renderer": "fpdf2",
+  "schema_version": "hkex.html_snapshot_provenance.v1"
+}
