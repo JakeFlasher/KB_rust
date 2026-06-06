@@ -1,0 +1,12 @@
+{
+  "schema_version": "hkex.seed_overrides.v1",
+  "note": "Reviewer-authorized seed disambiguations consulted by the resolver BEFORE its heuristic (cf. BL-20260531-bind-foreign-quotes / BL-20260603-reviewed-override). Each override matches a (post_id, quote_zh) seed from card_inventory.json and either pins the intended comment_id (so post_id+comment_id reduces to exactly one au=1 author chunk) or supplies a longer unique author-origin quote. The upstream inventory is never edited and a multi-match is never silently best-fit; an un-overridden, un-lengthenable multi-match fails closed.",
+  "overrides": [
+    {
+      "post_id": "223426897",
+      "quote_zh": "不偏離行權價",
+      "set_comment_id": "246199680",
+      "reason": "Codex Round-2 review: the 6-char principle 不偏離行權價 recurs across two au=1 author replies under post 223426897 — c246184156/p2488:2487 (the phrase inside a longer sentence, '...盡可能不弄丟；不偏離行權價...') and c246199680/p2491:2490 (the author's standalone statement of the principle, '回复@酱骨架: 不偏離行權價'). The candidate intends the standalone statement; pinning comment_id 246199680 reduces post_id+comment_id to exactly one author-origin chunk (p2491:2490), honoring AC-3 exactly-one containment without loosening the matcher."
+    }
+  ]
+}

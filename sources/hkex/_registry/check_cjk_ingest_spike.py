@@ -47,6 +47,7 @@ INGEST_DIR = ROOT / "out/hkex/ingest_per_source/goubujiao_xueqiu_corpus"
 REPORT = ROOT / "sources/hkex/_registry/cjk_ingest_spike_report.json"
 INVENTORY = ROOT / "_research/xueqiu_goubujiao/card_inventory.json"
 VERIFICATIONS = ROOT / "_research/xueqiu_goubujiao/verifications.json"
+SEED_OVERRIDES = ROOT / "sources/hkex/_registry/seed_overrides.json"
 SOURCE_ID = "goubujiao_xueqiu_corpus"
 
 _MARKER = re.compile(r"@@HKEX p=(\d+) k=(\w+) pid=(\d+) cid=(\S+) au=([01])@@")
@@ -140,32 +141,30 @@ def resolve_seed(nidx: list[dict], all_nauthors: list[str], pid: str, cid: str |
     pidmatch = [e for e in authw if e["pid"] == pid and (cid is None or e["cid"] == cid)]
     pid_corrected = not pidmatch
     pool = pidmatch if pidmatch else authw
-    final_q, lengthened, recurrence = quote, False, False
+    final_q, lengthened = quote, False
     if len(pool) > 1:
-        # A multi-match must resolve to a UNIQUE author span or be a genuine verbatim
-        # duplicate; otherwise fail closed (the seed quote is ambiguous and must be
-        # lengthened at authoring time). Try lengthening within EACH pool member, not
-        # just pool[0], so the unique span is found wherever it exists.
+        # AC-3 requires EXACTLY ONE author-origin chunk. Try lengthening within EACH pool
+        # member to a unique author span; if none exists, FAIL CLOSED with actionable
+        # candidate detail. We never silently best-fit / pick the earliest — the fix is a
+        # reviewed seed override (pin the intended comment_id, or supply a longer unique
+        # quote). Recurrence HONESTY (counting distinct author utterances) belongs to the
+        # AC-8 authored-card linter, not this exactly-one binding gate.
         lpick = next(((e, c) for e in pool
                       for c in [lengthen_to_unique(e["nauthor"], nq, all_nauthors)] if c), None)
         if lpick:
             chosen, final_q, lengthened = lpick[0], lpick[1], True
         else:
-            # Genuine author-recurrence: the verbatim quote AND its extensions appear in
-            # several distinct au=1 author utterances (a principle the author restates), so
-            # no unique span exists. This is NOT a commenter requote (every match is the
-            # author's own words). Per plan G4, bind to the EARLIEST (original) author
-            # utterance and record every alternative; flag it (`recurrence`) so AC-7
-            # authoring can confirm the intended context or pick a longer quote. The bound
-            # quote is author-origin and verbatim, so this is a valid (recorded) bind.
-            chosen, recurrence = min(pool, key=lambda e: e["chunk"]["start_page"]), True
+            return {"status": "ambiguous_multi_match", "quote": quote, "seed_pid": pid,
+                    "candidates": [{"chunk_id": e["chunk"]["chunk_id"], "pid": e["pid"],
+                                    "cid": e["cid"], "page": e["chunk"]["start_page"],
+                                    "snippet": e["nauthor"][:36]} for e in pool]}
     else:
         chosen = pool[0]
     c = chosen["chunk"]
     return {"status": "bound", "quote": quote, "final_quote": final_q, "seed_pid": pid,
             "bound_chunk_id": c["chunk_id"], "bound_pid": chosen["pid"], "bound_kind": chosen["kind"],
             "bound_cid": chosen["cid"], "page": c["start_page"], "chunk_hash": c["chunk_hash"],
-            "pid_corrected": pid_corrected, "lengthened": lengthened, "recurrence": recurrence,
+            "pid_corrected": pid_corrected, "lengthened": lengthened,
             "self_repost": is_self_repost(repost_user_before(chosen["nauthor"], nq)),
             "alternatives": sorted(e["chunk"]["chunk_id"] for e in pool if e is not chosen) or None,
             "repost_users": repost_users or None}
@@ -179,13 +178,24 @@ def load_seeds() -> list[dict]:
         for v in ver:
             vv = v.get("verification")
             verdict_by_title[v.get("card_title_en")] = (vv.get("verdict") if isinstance(vv, dict) else vv)
+    # Reviewer-authorized overrides, consulted BEFORE the resolver heuristic. Keyed by the
+    # ORIGINAL (post_id, quote_zh) so an upstream-inventory edit is never required.
+    ov = json.loads(SEED_OVERRIDES.read_text(encoding="utf-8")).get("overrides", []) \
+        if SEED_OVERRIDES.is_file() else []
+    ov_by_key = {(str(o["post_id"]), o["quote_zh"]): o for o in ov}
     seeds = []
     for c in inv:
         for s in c.get("citation_seeds", []):
-            seeds.append({"post_id": str(s["post_id"]), "cid": s.get("comment_id"),
-                          "quote": s["quote_zh"], "reading_folder": c.get("reading_folder"),
+            pid, q = str(s["post_id"]), s["quote_zh"]
+            o = ov_by_key.get((pid, q))
+            seeds.append({"post_id": pid, "cid": (o.get("set_comment_id") if o else None) or s.get("comment_id"),
+                          "quote": (o.get("replace_quote") if o else None) or q,
+                          "orig_quote": q, "reading_folder": c.get("reading_folder"),
                           "title": c.get("card_title_en"),
-                          "verdict": verdict_by_title.get(c.get("card_title_en"))})
+                          "verdict": verdict_by_title.get(c.get("card_title_en")),
+                          "override": {"set_comment_id": o.get("set_comment_id"),
+                                       "replace_quote": o.get("replace_quote"),
+                                       "reason": o.get("reason")} if o else None})
     return seeds
 
 
@@ -251,7 +261,7 @@ def edge_fixtures(nidx: list[dict], all_nauthors: list[str]) -> dict:
 def synth_verify(kb: Path, env: dict, chunks_manifest: Path, binds: list[dict]) -> list[dict]:
     def clean(b: dict) -> bool:
         r = b["res"]
-        return r["status"] == "bound" and not (r["pid_corrected"] or r["lengthened"] or r["recurrence"])
+        return r["status"] == "bound" and not (r["pid_corrected"] or r["lengthened"])
 
     # Prefer DISTINCT reading_folders (exercises multiple source_matrix authorizations),
     # then fill to 3 with any clean bind so the gate keys on bind correctness, not folder
@@ -354,10 +364,9 @@ def main() -> int:
     # every rejection must be principled: a non-author //@ repost, no author-origin span.
     unprincipled = [b for b in rejected if not b["res"].get("repost_users")]
     flags = {
-        "bound_clean": sum(1 for b in bound if not (b["res"]["pid_corrected"] or b["res"]["lengthened"] or b["res"]["recurrence"])),
+        "bound_clean": sum(1 for b in bound if not (b["res"]["pid_corrected"] or b["res"]["lengthened"])),
         "pid_corrected": sum(1 for b in bound if b["res"]["pid_corrected"]),
         "lengthened": sum(1 for b in bound if b["res"]["lengthened"]),
-        "recurrence": sum(1 for b in bound if b["res"]["recurrence"]),
     }
 
     edges = edge_fixtures(nidx, all_nauthors)
@@ -398,8 +407,12 @@ def main() -> int:
         "pid_corrected_binds": [{"seed_pid": b["seed"]["post_id"], "bound_pid": b["res"]["bound_pid"],
                                  "bound_kind": b["res"]["bound_kind"], "quote": b["seed"]["quote"][:30]}
                                 for b in bound if b["res"]["pid_corrected"]],
-        "recurrence_binds": [{"pid": b["seed"]["post_id"], "alternatives": b["res"]["alternatives"],
-                              "quote": b["seed"]["quote"][:30]} for b in bound if b["res"]["recurrence"]],
+        "overrides_applied": [{"post_id": b["seed"]["post_id"], "orig_quote": b["seed"]["orig_quote"][:30],
+                               "set_comment_id": b["seed"]["override"].get("set_comment_id"),
+                               "replace_quote": b["seed"]["override"].get("replace_quote"),
+                               "bound_chunk_id": b["res"].get("bound_chunk_id"),
+                               "reason": b["seed"]["override"].get("reason")}
+                              for b in binds if b["seed"].get("override")],
         "edge_fixtures": edges,
         "synthetic_verify": synth,
         "note": ("attribution_rejected entries are commenter-original quotes the author "
@@ -410,7 +423,7 @@ def main() -> int:
     REPORT.write_text(json.dumps(report, ensure_ascii=False, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     printable = {k: v for k, v in report.items()
                  if k not in ("edge_fixtures", "synthetic_verify", "attribution_rejected",
-                              "lengthened_binds", "pid_corrected_binds", "recurrence_binds")}
+                              "lengthened_binds", "pid_corrected_binds", "overrides_applied")}
     print(json.dumps(printable, ensure_ascii=False, indent=2, sort_keys=True))
     if not ok:
         for b in zero:
