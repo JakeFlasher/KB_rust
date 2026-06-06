@@ -95,11 +95,20 @@ def main() -> int:
         existing = manifest_source_id(out_dir)
         if existing is not None and existing != sid:
             raise SystemExit(f"clobber refused: {out_dir} holds source_id {existing!r}, not {sid!r}")
-        if complete(out_dir) and not args.force:
+        # A reusable complete ingest = BOTH manifests present AND the sources_manifest actually
+        # records THIS source_id. `complete()` only checks file PRESENCE, so a dir whose
+        # sources_manifest.json is malformed/empty yields existing=None — that is corrupt output,
+        # not a trustworthy reuse, so require existing == sid before skipping.
+        if complete(out_dir) and existing == sid and not args.force:
             print(f"skip complete: {sid}")
             continue
-        if out_dir.exists() and not complete(out_dir) and any(out_dir.iterdir()) and not args.force:
-            raise SystemExit(f"partial output for {sid}: {out_dir}; inspect or --force")
+        # Anything else non-empty — a partial ingest, OR a "complete"-looking dir whose
+        # sources_manifest is malformed/empty (existing is None) — is not reusable: fail closed
+        # unless --force regenerates it (the same-source clobber check above already rejected a
+        # DIFFERENT valid source_id, so here existing is None).
+        if out_dir.exists() and any(out_dir.iterdir()) and not args.force:
+            raise SystemExit(f"unreusable output for {sid}: {out_dir} "
+                             f"(manifest source_id={existing!r}, expected {sid!r}); inspect or --force")
         if not pdf.is_file():
             raise SystemExit(f"source PDF missing for {sid}: {pdf} (render/snapshot it first)")
 

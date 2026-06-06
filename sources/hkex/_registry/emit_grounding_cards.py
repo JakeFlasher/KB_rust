@@ -41,6 +41,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(ROOT / "sources/hkex/_registry"))
 from cacg_normalize import normalize_text  # noqa: E402  # pyright: ignore[reportMissingImports]
+from deck_paths import guard_card_target  # noqa: E402  # pyright: ignore[reportMissingImports]
 
 SPEC = ROOT / "sources/hkex/_registry/grounding_cards.json"
 CHUNKS = ROOT / "out/hkex/chunks_manifest.json"
@@ -159,7 +160,11 @@ def emit() -> int:
                     raise ValueError(f"probe bound to source {b['source_id']} != spec {sp['source_id']}")
                 cits.append(b)
             text = render_card(card, cits, grounding)
-            out = CARDS_DIR / card["reading_id"] / f"{card['id']}.md"
+            # Fail closed BEFORE staging any write: a typo'd / traversal reading_id (e.g.
+            # "../cfa/07_derivatives_and_volatility") must never let an hkex helper write under
+            # cards/cfa. guard_card_target resolves the path and raises unless it is genuinely
+            # under cards/hkex (caught below -> recorded as an error -> no cards written).
+            out = guard_card_target(CARDS_DIR / card["reading_id"] / f"{card['id']}.md")
             rendered.append((out, text))
             report["cards"].append({"id": card["id"], "reading_id": card["reading_id"],
                                     "path": str(out.relative_to(ROOT)),
@@ -213,12 +218,24 @@ def self_test() -> int:
         failures.append("missing quote not rejected")
     except ValueError:
         pass
+    # path-isolation guard: a traversal reading_id must NOT resolve to a write under cards/cfa
+    try:
+        guard_card_target(CARDS_DIR / "../cfa/07_derivatives_and_volatility" / "x.md")
+        failures.append("traversal reading_id (../cfa) not rejected by guard_card_target")
+    except ValueError:
+        pass
+    # ...and a genuine hkex card target is accepted
+    try:
+        guard_card_target(CARDS_DIR / "07_derivatives_and_volatility" / "x.md")
+    except ValueError as e:
+        failures.append(f"valid hkex card target rejected: {e}")
     if failures:
         print("SELF-TEST FAILED:")
         for f in failures:
             print("  -", f)
         return 1
-    print("SELF-TEST PASSED (emit_grounding_cards: unique/whitespace/apostrophe bind; ambiguous + missing rejected)")
+    print("SELF-TEST PASSED (emit_grounding_cards: unique/whitespace/apostrophe bind; ambiguous + "
+          "missing rejected; traversal reading_id blocked by the hkex path guard)")
     return 0
 
 
