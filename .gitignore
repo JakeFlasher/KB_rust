@@ -83,3 +83,17 @@ perf-reports/
 # real card on disk. Treat as a runtime artifact until QS-2 swaps
 # the test to a still-unimplemented verb.
 crates/cacg-cli/cards/
+
+# hkex deck — private Xueqiu corpus (DEC-1 / AC-11: excerpts-only). One public
+# author's scraped posts are NOT redistributed wholesale: the complete corpus
+# (the ingest source), the author-attributed distillation index, and the raw
+# per-batch dumps are LOCAL-ONLY. Only card-level verbatim quote EXCERPTS (inside
+# card citations) and the research reports/JSON are committed. The rendered corpus
+# PDF (`sources/hkex/pdfs/*.pdf`) is already covered by the global `*.pdf` rule.
+/_research/xueqiu_goubujiao/corpus_complete.md
+/_research/xueqiu_goubujiao/corpus_full.md
+/_research/xueqiu_goubujiao/batches/
+# Derived, regenerable, machine-local CJK font face extracted from the system
+# Noto CJK `.ttc` for the deterministic renderer (recorded by SHA in the renderer
+# provenance; rebuilt from /usr/share/fonts on a clean checkout).
+/sources/hkex/_registry/_fonts/

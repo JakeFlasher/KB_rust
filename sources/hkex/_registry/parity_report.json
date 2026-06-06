@@ -1,0 +1,30 @@
+{
+  "author_utterances_total": 863,
+  "chunk_count": 6970,
+  "comment_au_violations": 0,
+  "comment_pages_checked": 200,
+  "control_chars": [],
+  "failed": 0,
+  "flagged_nonrenderable_glyph": 0,
+  "gated_author_quotes": 836,
+  "ingest_runtime_secs": 0.6,
+  "misses": [],
+  "negative_control_found": false,
+  "pdf_page_count": 6970,
+  "pdf_sha256": "452e853d8ae0e8a9ba11b5198b4a05c931fa6bf45674eb0d8137f5645ee7b53f",
+  "provenance_sha_match": true,
+  "schema_version": "hkex.parity_report.v2",
+  "skipped_too_short": 27,
+  "strata_coverage_over_gated": {
+    "edge": 36,
+    "long": 94,
+    "numeral": 368,
+    "percent": 54,
+    "short": 742,
+    "simp": 119,
+    "ticker": 145,
+    "trad": 455
+  },
+  "structural_errors": [],
+  "verdict": "PASS"
+}
