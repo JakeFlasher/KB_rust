@@ -12,6 +12,7 @@ citations:
     page_range: [1, 2]
     quote: "make sure that they are registered in your name, so that the share registrar can send you dividends"
     edge_type: "supports"
+card_hash: "6dc82f2872ae79b7f8cbf915bcde12c1ca0a97eb458f9a7d8735d3ba31b67d77"
 ---
 
 ## What the source says

@@ -12,6 +12,7 @@ citations:
     page_range: [1, 1]
     quote: "shares held in electronic form are deposited into the CCASS and registered under the name of CCASS nominee (i.e. HKSCC Nominees Limited)"
     edge_type: "defines"
+card_hash: "f2e47b261028e49c5424dd2ddbe324cd54f9b05989bb04e1febc6333ab9df68e"
 ---
 
 ## What the source says

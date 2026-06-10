@@ -12,6 +12,7 @@ citations:
     page_range: [1, 2]
     quote: "the Exchange will not perform any capital adjustment on option positions unless the value of the payment is 2 per cent or more of the share's closing price on the day of the announcement"
     edge_type: "supports"
+card_hash: "427ba142f99f2e4f038f06dc0371b439f08c089d5bd5b67a60267891d9137238"
 ---
 
 ## What the rule says

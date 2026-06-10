@@ -12,6 +12,7 @@ citations:
     page_range: [1, 1]
     quote: "Contract Note for sale or purchase of any Hong Kong stock 0.1% of the amount of the consideration or of its value on every sold note and every bought note"
     edge_type: "supports"
+card_hash: "e0542f4aba313460ec6468438d7424cac1186352cc2a1d38c9e54bb896a6daf4"
 ---
 
 ## What the rule says

@@ -12,6 +12,7 @@ citations:
     page_range: [1, 1]
     quote: "it may not be possible for a SEOCH Participant to settle its delivery obligations on T+2 by acquiring the underlying securities in the underlying cash market on T+1"
     edge_type: "supports"
+card_hash: "3931b32061f8ffc608c73d0ad507e77522c2deb6d7f6c4e8213051abe9ece75f"
 ---
 
 ## What the rule says

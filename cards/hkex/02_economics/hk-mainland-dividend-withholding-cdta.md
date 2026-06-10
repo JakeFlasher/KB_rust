@@ -24,6 +24,7 @@ citations:
     page_range: [3, 4]
     quote: "Qualifying Companies Refer to Article 10 of the relevant Comprehensive Double Taxation Agreement / Arrangement to see whether the company is qualified for the special rate"
     edge_type: "defines"
+card_hash: "5d88ee27aff9207a28bd9182db8c5802003d490104caf914e6a38201572abfbb"
 ---
 
 ## What the rule says

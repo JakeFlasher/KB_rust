@@ -12,6 +12,7 @@ citations:
     page_range: [14, 15]
     quote: "Investors owning the underlying stock of the derived stock option may use shares of the underlying stock to replace cash for the margin of writing the call"
     edge_type: "supports"
+card_hash: "f8a2ba833276828b6b35635f3586ea8be84625d167f90796c51014a6c526451e"
 ---
 
 ## What the rule says

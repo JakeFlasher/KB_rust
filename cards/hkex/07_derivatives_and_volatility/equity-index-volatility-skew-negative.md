@@ -12,6 +12,7 @@ citations:
     page_range: [79, 80]
     quote: "the inverse of the negative skew seen in the equity market"
     edge_type: "supports"
+card_hash: "cf3449d4b2b13032a3484c2f016e153790fca83a7f0835ddd704402855a0e2a2"
 ---
 
 ## What the source says

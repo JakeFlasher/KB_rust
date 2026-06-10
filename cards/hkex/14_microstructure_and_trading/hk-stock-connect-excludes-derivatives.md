@@ -12,6 +12,7 @@ citations:
     page_range: [9, 10]
     quote: "only A shares and ETFs are included in Shanghai and Shenzhen Connect. Other product types such as B shares, bonds, and other securities are not included"
     edge_type: "supports"
+card_hash: "c8927c69577af69d6566ef2c3bb9cbb55361ffcbad9f595de63e7325cc934f3a"
 ---
 
 ## What the rule says

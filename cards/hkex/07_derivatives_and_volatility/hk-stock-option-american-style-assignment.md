@@ -12,6 +12,7 @@ citations:
     page_range: [2, 2]
     quote: "Options can be exercised at any time up to 6:45 pm on any business day up to and including the last trading day"
     edge_type: "defines"
+card_hash: "7b6422705778dd210203df70b916862a69d8456949f2bcca9f998302e6c70400"
 ---
 
 ## What the rule says
