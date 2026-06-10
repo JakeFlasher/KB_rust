@@ -1,0 +1,58 @@
+{
+  "schema_version": "hkex.faithfulness_config.v1",
+  "deck": "hkex",
+  "expert": "狗不叫 (Xueqiu uid 2424206371)",
+  "practitioner_source_id": "goubujiao_xueqiu_corpus",
+  "verifications_path": "_research/xueqiu_goubujiao/verifications_refresh.json",
+  "mandatory_tags": ["xueqiu-2022h1"],
+  "dated_levels": {
+    "tag": "dated-levels",
+    "required_section": "## Dated State"
+  },
+  "risk_spine": {
+    "reading_ids": [
+      "07_derivatives_and_volatility",
+      "09_portfolio_management_and_asset_pricing",
+      "11_risk_management",
+      "15_performance_and_attribution",
+      "17_cross_cutting"
+    ],
+    "trigger_terms": [
+      "sell call", "sell put", "option", "overlay", "derivative", "期權", "期权"
+    ],
+    "required_any": [
+      "不弄丟底倉",
+      "不弄丢底仓",
+      "100%的正股",
+      "全額接貨",
+      "全额接货",
+      "會死人",
+      "会死人",
+      "不用杠杆",
+      "不用槓桿",
+      "no leverage",
+      "never leveraged",
+      "fully collateralized",
+      "full collateral",
+      "ordinary investors should not touch",
+      "opposes ordinary investors"
+    ]
+  },
+  "naming_bans": [
+    "covered-call strategy",
+    "covered call strategy"
+  ],
+  "excluded_titles": [
+    "Cloud sector thesis: ease-of-adoption moat, hidden-asset optionality, cross-market analog",
+    "IR calls as due diligence and shareholder base as marketing asset",
+    "Talk-your-book discipline and incentive checks on commentary",
+    "Engagement without overtrading; resist post-dividend itchy hands and extreme-return chasing",
+    "No dividend arbitrage via short/borrow: the borrower pays the dividend to the lender",
+    "Premium is the buyer's insurance cost and your edge — but a fat premium prices real risk",
+    "Avoid option-selling into earnings volatility; auto-dealer profit model",
+    "Sell on deteriorating leverage and admit the error",
+    "Profit-vs-growth trade-off and counterparty/receivables risk from leveraged partners",
+    "Float-adjusted turnover as a microstructure red flag"
+  ],
+  "xueqiu_only_flag": "Xueqiu-only"
+}
