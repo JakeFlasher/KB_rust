@@ -1,0 +1,66 @@
+{
+  "allow_incomplete": true,
+  "author_name": "狗不叫",
+  "author_uid": 2424206371,
+  "capture_attestation": {
+    "comments_capped": [
+      {
+        "cap_page": 4,
+        "fetched_unique": 78,
+        "post_id": "223631520",
+        "reply_count": 80,
+        "shortfall": 2
+      }
+    ],
+    "complete": false,
+    "incomplete_posts": [
+      "224235708",
+      "224290937",
+      "224293981",
+      "224294502",
+      "224331340",
+      "225309192",
+      "223631520"
+    ],
+    "run_status": "incomplete",
+    "status_counts": {
+      "capped": 1,
+      "complete": 259,
+      "incomplete": 6,
+      "population_unknown": 0
+    },
+    "timeline_fetched_unique": 266,
+    "timeline_population": 277,
+    "timeline_shortfall": 11,
+    "total_posts": 266
+  },
+  "capture_dir": "/home/jakeshea/xueqiu_anti_crawler_goubujiao/output/2424206371",
+  "generator": "sources/hkex/_registry/build_corpus_from_capture.py",
+  "input": {
+    "meta_json_sha256": "6f54e2d6cd6343c7bcc1e15b0b82cd8852c0a2f3ebe4be4712552b88b6f9886e",
+    "posts_json_bytes": 6654222,
+    "posts_json_sha256": "838ec1a3f0c6c37ee892b5c9dcd9cf3d555169a00d68530bbc43336aa8854fea"
+  },
+  "output": {
+    "bytes": 1204995,
+    "path": "_research/xueqiu_goubujiao/corpus_complete.md",
+    "sha256": "317c97f913f2c6fd7babca38ae5e960f5d0e52502a6af4b9b526ae15fb8f35a3"
+  },
+  "render_rules": {
+    "context_rule": "parenthetical only for orphan parents with non-empty reply_to_text; truncated at 70 chars + ellipsis",
+    "duplicates": "a comment captured under several posts renders under each (no dedup)",
+    "parent_rule": "reply_to_id nests only when the parent comment is in the same post's set",
+    "post_order": "ascending (created_at, id)",
+    "sibling_order": "ascending (created_at_iso, id)",
+    "timezone": "UTC+8 (Beijing), minute precision"
+  },
+  "schema_version": "hkex.corpus_builder.v1",
+  "stats": {
+    "author_reply_rows": 631,
+    "comment_rows": 7180,
+    "context_parentheticals": 295,
+    "context_truncations": 3,
+    "posts": 266
+  },
+  "target_uid": "2424206371"
+}

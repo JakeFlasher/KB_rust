@@ -1,7 +1,7 @@
 {
   "c2_amendment": "Locked decision C2 specified Chromium headless print-to-pdf; amended to fpdf2 (the repo's proven byte-deterministic PDF generator) because AC-2's hard requirement is byte-determinism + verbatim CJK containment, which fpdf2 delivers out of the box with single-line absolute placement. Codex (gpt-5.5:high) reviewed and returned PASS on the deviation (no CJK fidelity reason for Chromium). Glyphs absent from Noto CJK (emoji/symbols) are a recorded non-citable class.",
   "corpus_path": "_research/xueqiu_goubujiao/corpus_complete.md",
-  "corpus_sha256": "aafd5cb3ba6b02b88b67c72be7161dd4781a83c8fe5ddc78552f2bf8e8c1c772",
+  "corpus_sha256": "317c97f913f2c6fd7babca38ae5e960f5d0e52502a6af4b9b526ae15fb8f35a3",
   "font_face_index": 0,
   "font_otf_cache": "sources/hkex/_registry/_fonts/NotoSansCJK-Regular-face0.otf",
   "font_otf_sha256": "7a52d49bb50cff9574c85ebddf45822d9ea70cbfbb455bf8ebb1010859dbeb42",
@@ -17,8 +17,8 @@
   "marker_format": "@@HKEX p=<page> k=<kind> pid=<post_id> cid=<comment_id|NA> au=<0|1>@@",
   "nonrenderable_note": "emoji and a few symbols absent from the Noto CJK face are dropped on render; the parity checker gates only font-renderable citable spans and the AC-3 resolver fails closed on any quote containing a non-renderable char.",
   "output_pdf": "sources/hkex/pdfs/goubujiao_corpus.pdf",
-  "output_pdf_sha256": "452e853d8ae0e8a9ba11b5198b4a05c931fa6bf45674eb0d8137f5645ee7b53f",
-  "page_count": 6970,
+  "output_pdf_sha256": "39beef16c84ee5405008e9da3424719fd0b7e7d3dcea881cb7f7124be1daf2a5",
+  "page_count": 7446,
   "page_format_mm": [
     2000,
     300
@@ -27,10 +27,10 @@
   "renderer": "fpdf2",
   "schema_version": "hkex.renderer_provenance.v1",
   "utterance_counts": {
-    "areply": 597,
-    "author_total": 863,
-    "comment": 6107,
+    "areply": 631,
+    "author_total": 897,
+    "comment": 6549,
     "post": 266,
-    "total": 6970
+    "total": 7446
   }
 }

@@ -8,6 +8,7 @@ registry. They read but never write `cards/cfa/**`, `out/cfa/**`, or `sources/cf
 
 | File | Purpose | Self-check |
 |------|---------|-----------|
+| `build_corpus_from_capture.py` | The FIRST provenance hop: deterministically rebuild `corpus_complete.md` from the crawler's `output/<uid>/` capture (`posts.json` + `meta.json`), carrying the crawl's completeness attestation into `corpus_provenance.json`. Refuses an attested-incomplete capture unless `--allow-incomplete`. | `--self-test` / `--check` |
 | `deck_paths.py` | Scaffold guard: a card may only be written under `cards/hkex/`; writes into any `cfa` path are rejected. | `python3 deck_paths.py` |
 | `cfa_isolation_guard.py` | Capture + re-check a fingerprint (count, per-card `card_hash`, git tree ids, untracked-file scan) proving the `cfa` deck is byte-untouched. | `--capture` / `--check` |
 | `cacg_normalize.py` | Faithful port of the kernel `normalize_text`; used to propose/parity-check matches (the authority is `kb verify`). | `python3 cacg_normalize.py` (21 kernel vectors) |
@@ -45,13 +46,25 @@ Per **DEC-1 / AC-11** the Xueqiu corpus is excerpts-only: these are gitignored a
 - `sources/hkex/_registry/_fonts/NotoSansCJK-Regular-face0.otf` — face 0 extracted
   deterministically from the system `/usr/share/fonts/noto-cjk/NotoSansCJK-Regular.ttc`.
 
-Rebuild + verify from a checkout that has the local corpus + the system Noto CJK font.
+Rebuild + verify from a checkout plus the crawler capture directory (`output/<uid>/` with
+`posts.json` + `meta.json`) and the system Noto CJK font — the corpus markdown itself is now
+regenerated from the capture by `build_corpus_from_capture.py`, so no hand-built artifact remains.
 Network is required for the AC-6 acquisition step (the grounding `*.pdf` are gitignored and
 re-downloaded from the pinned URLs); the `--require-count` is the full **11-source** plan
 (corpus + 10 grounding):
 
 ```bash
 cargo build --workspace                                                  # produces target/debug/kb
+
+# FIRST provenance hop — rebuild the corpus from the crawler capture (the exchange contract is
+# documented in the builder's docstring). The capture's meta.json completeness accounting is
+# copied into corpus_provenance.json; an attested-incomplete capture requires --allow-incomplete.
+python3 sources/hkex/_registry/build_corpus_from_capture.py --self-test
+python3 sources/hkex/_registry/build_corpus_from_capture.py --write \
+    --capture-dir ~/xueqiu_anti_crawler_goubujiao/output/2424206371 --allow-incomplete
+python3 sources/hkex/_registry/build_corpus_from_capture.py --check \
+    --capture-dir ~/xueqiu_anti_crawler_goubujiao/output/2424206371   # rebuild == corpus == provenance
+
 python3 sources/hkex/_registry/render_corpus_pdf.py --write              # corpus PDF + provenance
 python3 sources/hkex/_registry/render_corpus_pdf.py --check-determinism  # 3 subprocs -> identical SHA == provenance
 python3 sources/hkex/_registry/check_corpus_parity.py --check            # corpus->PDF parity PASS

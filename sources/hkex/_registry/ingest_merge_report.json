@@ -1,6 +1,6 @@
 {
   "byte_identical_proof": "re-running merge_hkex_manifests.py reproduces the merged-manifest SHAs above (atomic_write reports 'unchanged'); out/hkex/{chunks,sources}_manifest.json are gitignored and regenerated from the committed per-source plan + the rendered PDF.",
-  "chunk_count": 7376,
+  "chunk_count": 7852,
   "libpdfium": {
     "parser_name": "pdfium-render",
     "parser_version": "0.9.1",
@@ -8,8 +8,8 @@
     "pin_disposition": "KB_SKIP_PDFIUM_HASH_CHECK=1 (documented deviation; same as the cfa corpus)",
     "sha256": "816f5e74f78cd759faaf11d6c02df8cca27351311748631828f292e9d26cd591"
   },
-  "merged_chunks_manifest_sha256": "4c56e873c69400813d5f7f8c24adb191fc6287e4af842c38384fde926bbc6a54",
-  "merged_sources_manifest_sha256": "158f4f6b1c16175f9d92a3528511b8835dbde3294f199cb444002d6c6e6c2ac5",
+  "merged_chunks_manifest_sha256": "5c5ffc1aa1d2e1cfeecb295a6b9a1fbfc66dfca767e0ec62f4af464d23478f1c",
+  "merged_sources_manifest_sha256": "264c2c2ad0a83fa368c31fdccb6f84148249a1f14afa212f2929ce7f0c1be0f4",
   "schema_version": "hkex.ingest_merge_report.v1",
   "source_count": 11,
   "sources": [
@@ -23,13 +23,13 @@
       "source_sha256": "0973976867d6b506b55e9f4f2c0c7671f91383677cceac6d529cc0e12a2156c4"
     },
     {
-      "chunk_count": 6970,
-      "page_count": 6970,
+      "chunk_count": 7446,
+      "page_count": 7446,
       "parser_name": "pdfium-render",
       "parser_version": "0.9.1",
       "source_id": "goubujiao_xueqiu_corpus",
       "source_path": "sources/hkex/pdfs/goubujiao_corpus.pdf",
-      "source_sha256": "452e853d8ae0e8a9ba11b5198b4a05c931fa6bf45674eb0d8137f5645ee7b53f"
+      "source_sha256": "39beef16c84ee5405008e9da3424719fd0b7e7d3dcea881cb7f7124be1daf2a5"
     },
     {
       "chunk_count": 5,
