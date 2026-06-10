@@ -25,7 +25,12 @@ description = "Content-Addressable Card Graph: hash-pinned knowledge cards over 
 [workspace.dependencies]
 # Core serde + json + validation
 serde = { version = "1.0.228", features = ["derive"] }
-serde_json = "1.0.149"
+# float_roundtrip is load-bearing: journal/history checksums are recomputed
+# from re-parsed JSONL, so float parsing must be exact (matching Python's
+# correctly-rounded strtod) or a 17-significant-digit latency_ms written by
+# the appender re-parses to a neighboring f64 and validate_jsonl reports a
+# false tamper (CACG-JNL-001 refuses every subsequent lint/verify).
+serde_json = { version = "1.0.149", features = ["float_roundtrip"] }
 garde = { version = "0.22.1", features = ["derive"] }
 thiserror = "2.0.18"
 anyhow = "1.0.102"

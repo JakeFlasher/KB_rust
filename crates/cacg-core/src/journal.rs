@@ -705,6 +705,60 @@ mod tests {
         assert!(matches!(r, Err(JournalError::NonFile(_))));
     }
 
+    /// Regression: a written event whose `latency_ms` needs 17
+    /// significant digits (e.g. `18.736072999999998`, which upstream
+    /// 6-decimal rounding produces because `18.736073` is not exactly
+    /// representable) must re-validate clean. Without serde_json's
+    /// `float_roundtrip` feature the JSONL re-parse lands on a
+    /// neighboring f64, the recomputed `event_checksum` mismatches the
+    /// one computed from the exact in-memory value at append time, and
+    /// `validate_jsonl` reports a false tamper — after which every
+    /// subsequent append fails closed with `InvalidExisting`
+    /// (observed live as CACG-JNL-001 on out/hkex/lint_journal.jsonl).
+    #[test]
+    fn seventeen_digit_latency_revalidates_and_allows_next_append() {
+        let tmp = tempfile::TempDir::new().unwrap();
+        let path = tmp.path().join("lint_journal.jsonl");
+        let entry = JournalEntry {
+            command: "verify".to_string(),
+            card_path: "cards/demo/x.md".to_string(),
+            card_hash_before: Some("a".repeat(64)),
+            card_hash_after: Some("a".repeat(64)),
+            diagnostics: Vec::new(),
+            verification: BTreeMap::from([
+                ("layer1".to_string(), true),
+                ("layer2".to_string(), true),
+                ("fuzzy".to_string(), false),
+            ]),
+            latency_ms: 18.736_072_999_999_998,
+        };
+        let seq0 = append_entry(
+            &path,
+            &entry,
+            "00000000-0000-0000-0000-000000000000",
+            "1970-01-01T00:00:00Z",
+        )
+        .expect("first append must succeed");
+        assert_eq!(seq0, 0);
+        // The written line must round-trip: re-validation reports no
+        // bad lines, and a second append (which re-validates when the
+        // in-process cache is cold; here it is warm, so also validate
+        // explicitly) extends the chain.
+        let bad = validate_jsonl(&path).expect("validate must not error");
+        assert!(
+            bad.is_empty(),
+            "17-significant-digit latency_ms produced a false tamper on lines {bad:?}"
+        );
+        let seq1 = append_entry(
+            &path,
+            &entry,
+            "00000000-0000-0000-0000-000000000000",
+            "1970-01-01T00:00:00Z",
+        )
+        .expect("second append must succeed against the existing journal");
+        assert_eq!(seq1, 1);
+    }
+
     /// AC-T11 single-syscall regression guard (Codex R20 gap 2). Mirrors
     /// Python `legacy_python_oracle/tests/test_phase4_journal_flock.py::test_append_uses_single_os_write_syscall`:
     /// a future refactor that splits `line + '\n'` into two writes would
