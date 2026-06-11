@@ -58,7 +58,7 @@ fn main() -> ExitCode {
         Cmd::Verify(args) => dispatch_verify(args),
         Cmd::History(_) => unimplemented_subcommand("history"),
         Cmd::Retract(_) => unimplemented_subcommand("retract"),
-        Cmd::RetractSource(_) => unimplemented_subcommand("retract-source"),
+        Cmd::RetractSource(args) => dispatch_retract::dispatch_retract_source(&args),
         Cmd::RetractChunk(args) => dispatch_retract_chunk(&args),
         Cmd::ScaffoldMatrix(_) => unimplemented_subcommand("scaffold-matrix"),
         Cmd::ScaffoldRoleMap(_) => unimplemented_subcommand("scaffold-role-map"),

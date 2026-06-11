@@ -77,7 +77,8 @@ pub enum Cmd {
     Index(IndexArgs),
     /// Retract a card via tombstone history event (unimplemented).
     Retract(RetractArgs),
-    /// Retract a source: add source_id to retracted_sources (unimplemented).
+    /// Retract an entire source: append it to `retracted_source_ids`,
+    /// drop all its chunks, and cascade to citing cards.
     #[command(name = "retract-source")]
     RetractSource(RetractSourceArgs),
     /// Retract a single chunk: add chunk_id to retracted_chunks.
@@ -147,6 +148,14 @@ pub struct IngestArgs {
     /// utterance/speaker identities).
     #[arg(long, value_enum, default_value_t = IngestFormat::Pdf)]
     pub format: IngestFormat,
+    /// Fail-closed incremental re-ingest (utterances format only):
+    /// every previously-published chunk must re-derive byte-identical
+    /// from the new stream (a mid-stream edit/insert/delete hard-fails
+    /// — no silent re-anchor); genuinely new utterances append, prior
+    /// retractions carry over, and the manifests + locator are
+    /// atomically replaced.
+    #[arg(long)]
+    pub append: bool,
 }
 
 /// Input format accepted by `kb ingest --format`.

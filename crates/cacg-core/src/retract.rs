@@ -177,7 +177,7 @@ pub fn retract_chunk(
                 &cards_manifest_path,
                 &new_manifest.retracted_source_ids,
                 &new_manifest.retracted_chunk_ids,
-                chunk_id,
+                &format!("retract-chunk {chunk_id}"),
             )?;
             if !chunks_was_updated && !cascade_changed {
                 return Err(RetractError::AlreadyRetractedNoOp(chunk_id.to_owned()));
@@ -189,6 +189,115 @@ pub fn retract_chunk(
         chunk_id: chunk_id.to_owned(),
         chunks_remaining: new_manifest.chunks.len(),
         retracted_chunk_ids_total: new_manifest.retracted_chunk_ids.len(),
+    })
+}
+
+/// Report emitted by a successful [`retract_source`] run.
+#[derive(Debug, Clone)]
+pub struct RetractSourceReport {
+    /// The `source_id` that was retracted.
+    pub source_id: String,
+    /// Number of active chunks removed by this retraction.
+    pub chunks_removed: usize,
+    /// Number of chunks remaining in the active `chunks` list.
+    pub chunks_remaining: usize,
+    /// Total size of `retracted_source_ids` after the retraction.
+    pub retracted_source_ids_total: usize,
+}
+
+/// Retract an entire source: append `source_id` to
+/// `chunks_manifest.retracted_source_ids`, remove EVERY chunk of that
+/// source from the active `chunks` list (preserving the schema's
+/// source/chunk disjointness invariant), atomically rewrite the
+/// manifest, and — when `cards_dir` is supplied AND a sibling
+/// `cards_manifest.json` exists — cascade into
+/// `cards_manifest.dependency_retracted_cards` for every card citing
+/// the source.
+///
+/// This is the takedown primitive for an entire ingested corpus
+/// (e.g. a scraped human author requesting removal): one verb stales
+/// every chunk and flags every dependent card, fail-closed and
+/// atomically, without touching the cards themselves.
+///
+/// # Errors
+///
+/// [`RetractError`] — same surface as [`retract_chunk`], with
+/// `UnknownChunk` carrying the unknown SOURCE id (the dispatcher
+/// words the message accordingly).
+pub fn retract_source(
+    source_id: &str,
+    out_dir: &Path,
+    cards_dir: Option<&Path>,
+) -> Result<RetractSourceReport, RetractError> {
+    let chunks_manifest_path = out_dir.join("chunks_manifest.json");
+    let cards_manifest_path = out_dir.join("cards_manifest.json");
+    if !chunks_manifest_path.is_file() {
+        return Err(RetractError::ChunksManifestMissing(out_dir.to_path_buf()));
+    }
+    let prior_bytes = fs::read(&chunks_manifest_path)?;
+    let prior: ChunksManifest = serde_json::from_slice(&prior_bytes)
+        .map_err(|e| RetractError::ManifestInvalid(e.to_string()))?;
+    prior
+        .validate_structurally()
+        .map_err(|d| RetractError::ManifestInvalid(d.message))?;
+
+    let already_retracted = prior.retracted_source_ids.iter().any(|s| s == source_id);
+
+    let mut chunks_was_updated = false;
+    let mut chunks_removed = 0usize;
+    let new_manifest: ChunksManifest = if already_retracted {
+        if cards_dir.is_none() || !cards_manifest_path.is_file() {
+            return Err(RetractError::AlreadyRetracted(source_id.to_owned()));
+        }
+        prior.clone()
+    } else {
+        let active = prior.chunks.iter().any(|c| c.source_id == source_id);
+        if !active {
+            return Err(RetractError::UnknownChunk(source_id.to_owned()));
+        }
+        let new_chunks: Vec<_> = prior
+            .chunks
+            .iter()
+            .filter(|c| c.source_id != source_id)
+            .cloned()
+            .collect();
+        chunks_removed = prior.chunks.len() - new_chunks.len();
+        let mut new_retracted: Vec<String> = prior.retracted_source_ids.clone();
+        new_retracted.push(source_id.to_owned());
+        new_retracted.sort();
+        new_retracted.dedup();
+        let nm = ChunksManifest {
+            schema_version: SchemaVersion::V0,
+            chunks: new_chunks,
+            retracted_source_ids: new_retracted,
+            retracted_chunk_ids: prior.retracted_chunk_ids.clone(),
+        };
+        atomic_chunks_manifest_update(&chunks_manifest_path, &nm)?;
+        chunks_was_updated = true;
+        nm
+    };
+
+    if let Some(cards_dir) = cards_dir {
+        if cards_manifest_path.is_file() {
+            let cascade_changed = update_cards_manifest_cascade(
+                cards_dir,
+                out_dir,
+                &cards_manifest_path,
+                &new_manifest.retracted_source_ids,
+                &new_manifest.retracted_chunk_ids,
+                &format!("retract-source {source_id}"),
+            )?;
+            if !chunks_was_updated && !cascade_changed {
+                return Err(RetractError::AlreadyRetractedNoOp(source_id.to_owned()));
+            }
+        }
+    }
+
+    Ok(RetractSourceReport {
+        source_id: source_id.to_owned(),
+        chunks_removed,
+        chunks_remaining: new_manifest.chunks.len(),
+        retracted_source_ids_total: new_manifest.retracted_source_ids.len(),
     })
 }
 
@@ -280,7 +389,7 @@ fn update_cards_manifest_cascade(
     cards_manifest_path: &Path,
     retracted_source_ids: &[String],
     retracted_chunk_ids: &[String],
-    cli_chunk_id: &str,
+    cli_retry_hint: &str,
 ) -> Result<bool, RetractError> {
     let cascade = compute_cascade(cards_dir, retracted_source_ids, retracted_chunk_ids);
     let prior_bytes = fs::read(cards_manifest_path)?;
@@ -350,7 +459,7 @@ fn update_cards_manifest_cascade(
         Err(e) => Err(RetractError::CascadePublish(format!(
             "CACG-RET-003: chunks_manifest update succeeded but \
              cards_manifest dependency-cascade update failed; \
-             re-run `kb retract-chunk {cli_chunk_id}` with \
+             re-run `kb {cli_retry_hint}` with \
              --cards-dir to retry. Underlying: {}",
             python_publish_error_repr(&e)
         ))),

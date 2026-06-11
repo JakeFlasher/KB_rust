@@ -55,9 +55,12 @@ const UNIMPLEMENTED_VERBS: &[&str] = &[
     //     `dispatch_retract_chunk` (kb_retract_chunk.rs covers
     //     the manifest-mutation contract end-to-end including
     //     byte-equality with Python kb retract-chunk).
+    //   - retract-source: `cacg_core::retract::retract_source` +
+    //     `dispatch_retract_source` (kb_retract_source.rs covers the
+    //     whole-source takedown contract end-to-end, including the
+    //     verify-rejects-retracted-source lifecycle).
     "history",
     "retract",
-    "retract-source",
     "scaffold-matrix",
     "scaffold-role-map",
     "migrate-summaries",

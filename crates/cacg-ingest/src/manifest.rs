@@ -230,6 +230,131 @@ pub fn build_manifests_with_parser(
     Ok(IngestOutput { sources, chunks })
 }
 
+/// Errors rejecting a fail-closed `--append` re-ingest.
+#[derive(Debug, Error)]
+pub enum AppendError {
+    /// The out dir has no prior manifests to append to.
+    #[error("append requires prior manifests in the out dir; run a plain ingest first")]
+    NoPrior,
+    /// The prior manifests hold chunks of a different source.
+    #[error("append target holds source {found:?}, not {expected:?}; append is single-source")]
+    SourceMismatch {
+        /// The source id found in the prior manifest.
+        found: String,
+        /// The source id being ingested.
+        expected: String,
+    },
+    /// The source was retracted; appending to it is forbidden.
+    #[error("source {0:?} is retracted; refusing to append")]
+    SourceRetracted(String),
+    /// A previously-published chunk did not re-derive byte-identical
+    /// from the new stream — the new stream is NOT an append (an
+    /// utterance was edited, removed, or inserted mid-stream).
+    /// NO silent re-anchor: the operator must re-scrape to a NEW
+    /// source_id or resolve the upstream edit explicitly.
+    #[error(
+        "{count} previously-published chunk(s) did not re-derive byte-identical \
+             (first: {first}); the stream is not an append — no silent re-anchor"
+    )]
+    PriorChunkChanged {
+        /// How many prior chunks failed to re-derive.
+        count: usize,
+        /// The first offending chunk id.
+        first: String,
+    },
+    /// The new stream adds nothing beyond the prior state.
+    #[error("the stream adds no new chunks beyond the {0} already published; nothing to append")]
+    NothingToAppend(usize),
+    /// Prior manifest bytes failed to parse/validate.
+    #[error("prior manifest invalid: {0}")]
+    PriorInvalid(String),
+}
+
+/// Validate that `new_output` is a true APPEND over `prior`: every
+/// previously-published active chunk re-derives byte-identical
+/// (same `chunk_id`, same `chunk_hash`) from the new stream, and at
+/// least one new chunk exists. On success, returns the merged
+/// manifest pair: the new chunks with the prior retractions carried
+/// over (retracted chunk ids stay retracted — their re-derived
+/// chunks are dropped from the active list).
+///
+/// # Errors
+///
+/// Any [`AppendError`]; nothing is mutated on failure.
+pub fn validate_append(
+    prior: &ChunksManifest,
+    new_output: &IngestOutput,
+    source_id: &str,
+) -> Result<(IngestOutput, usize), AppendError> {
+    if let Some(other) = prior
+        .chunks
+        .iter()
+        .map(|c| c.source_id.as_str())
+        .find(|s| *s != source_id)
+    {
+        return Err(AppendError::SourceMismatch {
+            found: other.to_owned(),
+            expected: source_id.to_owned(),
+        });
+    }
+    if prior.retracted_source_ids.iter().any(|s| s == source_id) {
+        return Err(AppendError::SourceRetracted(source_id.to_owned()));
+    }
+
+    let new_by_id: std::collections::HashMap<&str, &str> = new_output
+        .chunks
+        .chunks
+        .iter()
+        .map(|c| (c.chunk_id.as_str(), c.chunk_hash.as_str()))
+        .collect();
+    let mut changed: Vec<&str> = Vec::new();
+    for c in &prior.chunks {
+        match new_by_id.get(c.chunk_id.as_str()) {
+            Some(h) if *h == c.chunk_hash => {}
+            _ => changed.push(&c.chunk_id),
+        }
+    }
+    if !changed.is_empty() {
+        return Err(AppendError::PriorChunkChanged {
+            count: changed.len(),
+            first: changed[0].to_owned(),
+        });
+    }
+
+    let retracted: std::collections::HashSet<&str> = prior
+        .retracted_chunk_ids
+        .iter()
+        .map(String::as_str)
+        .collect();
+    let prior_active: std::collections::HashSet<&str> =
+        prior.chunks.iter().map(|c| c.chunk_id.as_str()).collect();
+    let merged_chunks: Vec<_> = new_output
+        .chunks
+        .chunks
+        .iter()
+        .filter(|c| !retracted.contains(c.chunk_id.as_str()))
+        .cloned()
+        .collect();
+    let appended = merged_chunks
+        .iter()
+        .filter(|c| !prior_active.contains(c.chunk_id.as_str()))
+        .count();
+    if appended == 0 {
+        return Err(AppendError::NothingToAppend(prior.chunks.len()));
+    }
+
+    let merged = IngestOutput {
+        sources: new_output.sources.clone(),
+        chunks: ChunksManifest {
+            schema_version: SchemaVersion::V0,
+            chunks: merged_chunks,
+            retracted_source_ids: prior.retracted_source_ids.clone(),
+            retracted_chunk_ids: prior.retracted_chunk_ids.clone(),
+        },
+    };
+    Ok((merged, appended))
+}
+
 /// Sidecar paths for one canonical manifest file: `.tmp` + `.bak`,
 /// both in the same directory so POSIX `rename` is atomic.
 fn sidecars(canonical: &Path) -> (PathBuf, PathBuf) {
@@ -319,6 +444,27 @@ pub fn publish_manifests_with_locator(
     output: &IngestOutput,
     locator_bytes: Option<&[u8]>,
 ) -> Result<(), ManifestError> {
+    publish_manifests_impl(out_dir, output, locator_bytes, false)
+}
+
+/// Replace-capable publish used by the fail-closed `--append` path
+/// AFTER the byte-identical re-derivation proof has passed: the prior
+/// canonicals are atomically replaced (with `.bak` rollback on
+/// failure) instead of refused. Never use without that proof.
+pub fn publish_manifests_replacing(
+    out_dir: &Path,
+    output: &IngestOutput,
+    locator_bytes: Option<&[u8]>,
+) -> Result<(), ManifestError> {
+    publish_manifests_impl(out_dir, output, locator_bytes, true)
+}
+
+fn publish_manifests_impl(
+    out_dir: &Path,
+    output: &IngestOutput,
+    locator_bytes: Option<&[u8]>,
+    replace_prior: bool,
+) -> Result<(), ManifestError> {
     let fs = DefaultFs;
     // Ensure out_dir exists (mkdir -p semantics; idempotent).
     std::fs::create_dir_all(out_dir)
@@ -328,11 +474,12 @@ pub fn publish_manifests_with_locator(
     let chunks_path = out_dir.join("chunks_manifest.json");
     let locator_path = out_dir.join("locator_map.json");
 
-    // Merge with prior manifests is not yet implemented; refuse to
-    // clobber existing ones rather than silently destroy data.
-    if sources_path.exists()
-        || chunks_path.exists()
-        || (locator_bytes.is_some() && locator_path.exists())
+    // Outside the proven append path, refuse to clobber existing
+    // manifests rather than silently destroy data.
+    if !replace_prior
+        && (sources_path.exists()
+            || chunks_path.exists()
+            || (locator_bytes.is_some() && locator_path.exists()))
     {
         return Err(ManifestError::PriorManifestsPresent {
             out_dir: out_dir.to_path_buf(),

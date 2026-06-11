@@ -24,9 +24,12 @@ pub(crate) fn dispatch_ingest(args: &IngestArgs) -> ExitCode {
     use cacg_ingest::extract_pages;
     use cacg_ingest::manifest::{
         build_manifests_with_config, build_manifests_with_parser, publish_manifests,
-        publish_manifests_with_locator, ManifestError,
+        publish_manifests_replacing, publish_manifests_with_locator, validate_append,
+        ManifestError,
     };
-    use cacg_ingest::utterances::{build_locator_map, parse_utterances, UTTERANCES_PARSER_NAME};
+    use cacg_ingest::utterances::{
+        build_locator_map, parse_utterances, verify_locator_seal, UTTERANCES_PARSER_NAME,
+    };
     use cacg_ingest::IngestError;
 
     use crate::dispatch_show::py_repr;
@@ -37,6 +40,11 @@ pub(crate) fn dispatch_ingest(args: &IngestArgs) -> ExitCode {
             args.pdf.display()
         );
         return ExitCode::FAILURE;
+    }
+
+    if args.append && args.format != IngestFormat::Utterances {
+        eprintln!("CACG-CLI-003: --append requires --format utterances");
+        return ExitCode::from(2);
     }
 
     if args.out.exists() && !args.out.is_dir() {
@@ -125,6 +133,63 @@ pub(crate) fn dispatch_ingest(args: &IngestArgs) -> ExitCode {
                 return ExitCode::FAILURE;
             }
         };
+        // Fail-closed append: the prior locator seal must verify, every
+        // previously-published chunk must re-derive byte-identical from
+        // the new stream, prior retractions carry over, and only then is
+        // the replace-capable publish authorized.
+        let output = if args.append {
+            let chunks_path = args.out.join("chunks_manifest.json");
+            let locator_path = args.out.join("locator_map.json");
+            if !chunks_path.is_file() || !locator_path.is_file() {
+                eprintln!(
+                    "CACG-INGEST-003: --append requires prior manifests + locator in {}",
+                    args.out.display()
+                );
+                return ExitCode::FAILURE;
+            }
+            let prior_locator = match std::fs::read(&locator_path) {
+                Ok(b) => b,
+                Err(e) => {
+                    eprintln!("CACG-INGEST-001: {}", e);
+                    return ExitCode::FAILURE;
+                }
+            };
+            match verify_locator_seal(&prior_locator) {
+                Ok(true) => {}
+                Ok(false) => {
+                    eprintln!(
+                        "CACG-HASH-003: prior locator_map.json seal does not verify;                          refusing to append over a tampered sidecar"
+                    );
+                    return ExitCode::FAILURE;
+                }
+                Err(e) => {
+                    eprintln!("CACG-INGEST-001: prior locator unreadable: {}", e);
+                    return ExitCode::FAILURE;
+                }
+            }
+            let prior: cacg_core::schema::ChunksManifest = match std::fs::read(&chunks_path)
+                .map_err(|e| e.to_string())
+                .and_then(|b| serde_json::from_slice(&b).map_err(|e| e.to_string()))
+            {
+                Ok(m) => m,
+                Err(e) => {
+                    eprintln!("CACG-MAN-001: chunks_manifest.json is invalid: {}", e);
+                    return ExitCode::FAILURE;
+                }
+            };
+            match validate_append(&prior, &output, &source_id) {
+                Ok((merged, appended)) => {
+                    println!("appended chunks:  {}", appended);
+                    merged
+                }
+                Err(e) => {
+                    eprintln!("CACG-INGEST-003: append rejected: {}", e);
+                    return ExitCode::FAILURE;
+                }
+            }
+        } else {
+            output
+        };
         let locator = match build_locator_map(
             &source_id,
             &pdf_bytes,
@@ -195,9 +260,10 @@ pub(crate) fn dispatch_ingest(args: &IngestArgs) -> ExitCode {
         return ExitCode::FAILURE;
     }
 
-    let publish_result = match locator_bytes {
-        Some(ref bytes) => publish_manifests_with_locator(&args.out, &output, Some(bytes)),
-        None => publish_manifests(&args.out, &output),
+    let publish_result = match (locator_bytes.as_ref(), args.append) {
+        (Some(bytes), false) => publish_manifests_with_locator(&args.out, &output, Some(bytes)),
+        (Some(bytes), true) => publish_manifests_replacing(&args.out, &output, Some(bytes)),
+        (None, _) => publish_manifests(&args.out, &output),
     };
     if let Err(err) = publish_result {
         match err {

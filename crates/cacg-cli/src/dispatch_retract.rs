@@ -1,8 +1,8 @@
-//! `kb retract-chunk` dispatch module.
+//! `kb retract-chunk` / `kb retract-source` dispatch module.
 
 use std::process::ExitCode;
 
-use cacg_cli::RetractChunkArgs;
+use cacg_cli::{RetractChunkArgs, RetractSourceArgs};
 
 use crate::dispatch_show::py_repr;
 
@@ -99,6 +99,81 @@ pub(crate) fn dispatch_retract_chunk(args: &RetractChunkArgs) -> ExitCode {
                     // Python `_cmd_retract_chunk`'s bare-Exception arm
                     // (`cli.py:1236-1238`).
                     eprintln!("CACG-IDX-004: retract-chunk publish failed: {inner}");
+                }
+            }
+            ExitCode::FAILURE
+        }
+    }
+}
+
+/// `kb retract-source <source_id>` dispatcher. Whole-source takedown:
+/// appends `source_id` to `chunks_manifest.retracted_source_ids`,
+/// removes every chunk of that source from the active list, and —
+/// with `--cards-dir` — cascades into
+/// `cards_manifest.dependency_retracted_cards` for every card citing
+/// the source. Same atomic-update + fail-closed surface as
+/// `retract-chunk`.
+pub(crate) fn dispatch_retract_source(args: &RetractSourceArgs) -> ExitCode {
+    use cacg_core::retract::{py_list_of_str_repr, retract_source, RetractError};
+
+    let result = retract_source(&args.source_id, &args.out, args.cards_dir.as_deref());
+    match result {
+        Ok(report) => {
+            println!("retracted source_id:           {}", report.source_id);
+            println!("chunks removed:                {}", report.chunks_removed);
+            println!("active chunks remaining:       {}", report.chunks_remaining);
+            println!(
+                "retracted_source_ids total:    {}",
+                report.retracted_source_ids_total
+            );
+            ExitCode::SUCCESS
+        }
+        Err(err) => {
+            match err {
+                RetractError::ChunksManifestMissing(path) => {
+                    eprintln!(
+                        "CACG-CLI-001: chunks_manifest.json not found in {}; \
+                         run `kb ingest` before retracting a source",
+                        path.display()
+                    );
+                }
+                RetractError::AlreadyRetracted(source_id) => {
+                    eprintln!(
+                        "CACG-CLI-001: source {} is already retracted; \
+                         retraction is append-only and not idempotent",
+                        py_repr(&source_id)
+                    );
+                }
+                RetractError::AlreadyRetractedNoOp(source_id) => {
+                    eprintln!(
+                        "CACG-CLI-001: source {} is already retracted and the \
+                         dependency cascade is already up-to-date",
+                        py_repr(&source_id)
+                    );
+                }
+                RetractError::UnknownChunk(source_id) => {
+                    eprintln!(
+                        "CACG-CLI-001: source {} has no active chunks in \
+                         chunks_manifest.chunks; refusing to retract an \
+                         unknown source",
+                        py_repr(&source_id)
+                    );
+                }
+                RetractError::ManifestInvalid(inner) => {
+                    eprintln!("CACG-MAN-001: chunks_manifest.json is invalid: {inner}");
+                }
+                RetractError::PreexistingSidecars(paths) => {
+                    eprintln!(
+                        "CACG-MAN-002: refusing to clobber existing \
+                         chunks_manifest sidecar(s): {}; remove them and re-run",
+                        py_list_of_str_repr(&paths)
+                    );
+                }
+                RetractError::CascadePublish(msg) => {
+                    eprintln!("CACG-CLI-001: {msg}");
+                }
+                RetractError::Io(inner) => {
+                    eprintln!("CACG-IDX-004: retract-source publish failed: {inner}");
                 }
             }
             ExitCode::FAILURE

@@ -13,14 +13,14 @@ installation required.
 The shipped `kb` binary natively implements the core authoring and verification
 flow:
 
-- `ingest`, `new`, `lint`, `verify`, `index`
-- `retract-chunk`
+- `ingest` (PDF and `--format utterances`), `new`, `lint`, `verify`, `index`
+- `retract-chunk`, `retract-source`
 - `search`, `show`
 
 The parser still reserves the full historical subcommand surface. These verbs
 are recognized but intentionally fail with `CACG-CLI-NOT-IMPLEMENTED-*` until a
-Rust implementation exists: `history`, `retract`, `retract-source`,
-`scaffold-matrix`, `scaffold-role-map`, and `migrate-summaries`.
+Rust implementation exists: `history`, `retract`, `scaffold-matrix`,
+`scaffold-role-map`, and `migrate-summaries`.
 
 ## Quick Start
 
