@@ -103,6 +103,7 @@ crates/cacg-cli/cards/
 # PDF (`sources/hkex/pdfs/*.pdf`) is already covered by the global `*.pdf` rule.
 /_research/xueqiu_goubujiao/corpus_complete.md
 /_research/xueqiu_goubujiao/corpus_full.md
+/_research/xueqiu_goubujiao/corpus_utterances.jsonl
 /_research/xueqiu_goubujiao/batches/
 # Derived, regenerable, machine-local CJK font face extracted from the system
 # Noto CJK `.ttc` for the deterministic renderer (recorded by SHA in the renderer

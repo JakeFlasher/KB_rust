@@ -17,11 +17,16 @@ use cacg_cli::IngestArgs;
 /// `unimplemented_subcommand("ingest")`.
 #[cfg(feature = "ingest")]
 pub(crate) fn dispatch_ingest(args: &IngestArgs) -> ExitCode {
+    use cacg_cli::IngestFormat;
     use cacg_core::atomic_publish::PublishError;
     use cacg_core::determinism::DeterminismContext;
     use cacg_ingest::config::load_config;
     use cacg_ingest::extract_pages;
-    use cacg_ingest::manifest::{build_manifests_with_config, publish_manifests, ManifestError};
+    use cacg_ingest::manifest::{
+        build_manifests_with_config, build_manifests_with_parser, publish_manifests,
+        publish_manifests_with_locator, ManifestError,
+    };
+    use cacg_ingest::utterances::{build_locator_map, parse_utterances, UTTERANCES_PARSER_NAME};
     use cacg_ingest::IngestError;
 
     use crate::dispatch_show::py_repr;
@@ -78,56 +83,108 @@ pub(crate) fn dispatch_ingest(args: &IngestArgs) -> ExitCode {
         }
     };
 
-    let pages_owned = match extract_pages(&pdf_bytes) {
-        Ok(pages) => pages,
-        Err(IngestError::Corrupt { detail }) => {
-            eprintln!("CACG-INGEST-001: {}", detail);
-            return ExitCode::FAILURE;
-        }
-        Err(e) => {
-            // Other IngestError variants (Empty, PublishFailed) are
-            // not produced by extract_pages; fold defensively under
-            // CACG-INGEST-001 if they ever surface here.
-            eprintln!("CACG-INGEST-001: {}", e);
-            return ExitCode::FAILURE;
-        }
-    };
-
-    let pages: Vec<(u32, &str)> = pages_owned
-        .iter()
-        .enumerate()
-        .map(|(idx, text)| {
-            let page_num = u32::try_from(idx + 1).expect("page index fits in u32");
-            (page_num, text.as_str())
-        })
-        .collect();
-
     // source_path stored verbatim in SourceRecord matches Python's
     // `str(p)` for the input Path -- callers control relative vs
     // absolute; the parity oracle uses a relative path.
     let source_path = args.pdf.display().to_string();
     let det = DeterminismContext::from_env();
 
-    let output = match build_manifests_with_config(
-        &source_id,
-        &source_path,
-        &pdf_bytes,
-        &pages,
-        &det,
-        &chunk_config,
-    ) {
-        Ok(o) => o,
-        Err(ManifestError::NoPages) => {
-            eprintln!(
-                "CACG-INGEST-002: no chunks produced (empty PDF text?) for {}",
-                args.pdf.display()
-            );
-            return ExitCode::FAILURE;
-        }
-        Err(e) => {
-            eprintln!("CACG-INGEST-001: {}", e);
-            return ExitCode::FAILURE;
-        }
+    // The utterances backend: parse + validate the JSONL stream
+    // (fail-closed), map one utterance per logical page into the SAME
+    // chunker/manifest path the PDF route uses (no pdfium anywhere),
+    // and publish a sealed locator sidecar in the same atomic group.
+    let (output, locator_bytes) = if args.format == IngestFormat::Utterances {
+        let stream = match parse_utterances(&pdf_bytes) {
+            Ok(s) => s,
+            Err(e) => {
+                eprintln!("CACG-INGEST-001: utterances stream rejected: {}", e);
+                return ExitCode::FAILURE;
+            }
+        };
+        let pages: Vec<(u32, &str)> = stream
+            .utterances
+            .iter()
+            .map(|u| {
+                let page_num = u32::try_from(u.ordinal).expect("validated to fit in u32");
+                (page_num, u.text.as_str())
+            })
+            .collect();
+        let output = match build_manifests_with_parser(
+            &source_id,
+            &source_path,
+            &pdf_bytes,
+            &pages,
+            &det,
+            &chunk_config,
+            UTTERANCES_PARSER_NAME,
+            cacg_ingest::cacg_ingest_version(),
+        ) {
+            Ok(o) => o,
+            Err(e) => {
+                eprintln!("CACG-INGEST-001: {}", e);
+                return ExitCode::FAILURE;
+            }
+        };
+        let locator = match build_locator_map(
+            &source_id,
+            &pdf_bytes,
+            &stream.utterances,
+            &output.chunks.chunks,
+        ) {
+            Ok(b) => b,
+            Err(e) => {
+                eprintln!("CACG-INGEST-003: locator sidecar build failed: {}", e);
+                return ExitCode::FAILURE;
+            }
+        };
+        (output, Some(locator))
+    } else {
+        let pages_owned = match extract_pages(&pdf_bytes) {
+            Ok(pages) => pages,
+            Err(IngestError::Corrupt { detail }) => {
+                eprintln!("CACG-INGEST-001: {}", detail);
+                return ExitCode::FAILURE;
+            }
+            Err(e) => {
+                // Other IngestError variants (Empty, PublishFailed) are
+                // not produced by extract_pages; fold defensively under
+                // CACG-INGEST-001 if they ever surface here.
+                eprintln!("CACG-INGEST-001: {}", e);
+                return ExitCode::FAILURE;
+            }
+        };
+
+        let pages: Vec<(u32, &str)> = pages_owned
+            .iter()
+            .enumerate()
+            .map(|(idx, text)| {
+                let page_num = u32::try_from(idx + 1).expect("page index fits in u32");
+                (page_num, text.as_str())
+            })
+            .collect();
+
+        let output = match build_manifests_with_config(
+            &source_id,
+            &source_path,
+            &pdf_bytes,
+            &pages,
+            &det,
+            &chunk_config,
+        ) {
+            Ok(o) => o,
+            Err(ManifestError::NoPages) => {
+                eprintln!(
+                    "CACG-INGEST-002: no chunks produced (empty PDF text?) for {}",
+                    args.pdf.display()
+                );
+                return ExitCode::FAILURE;
+            }
+            Err(e) => {
+                eprintln!("CACG-INGEST-001: {}", e);
+                return ExitCode::FAILURE;
+            }
+        };
+        (output, None)
     };
 
     if output.chunks.chunks.is_empty() {
@@ -138,7 +195,11 @@ pub(crate) fn dispatch_ingest(args: &IngestArgs) -> ExitCode {
         return ExitCode::FAILURE;
     }
 
-    if let Err(err) = publish_manifests(&args.out, &output) {
+    let publish_result = match locator_bytes {
+        Some(ref bytes) => publish_manifests_with_locator(&args.out, &output, Some(bytes)),
+        None => publish_manifests(&args.out, &output),
+    };
+    if let Err(err) = publish_result {
         match err {
             ManifestError::Publish(PublishError::PreexistingSidecars { paths, .. }) => {
                 eprintln!(

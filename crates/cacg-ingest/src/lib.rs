@@ -30,6 +30,7 @@ pub mod config;
 pub mod manifest;
 #[cfg(feature = "ingest")]
 mod pdf;
+pub mod utterances;
 
 /// Error type for the PDF ingest path. Diagnostic strings here are
 /// kept byte-equal with `cacg_core::diagnostic::codes::INGEST_*` and

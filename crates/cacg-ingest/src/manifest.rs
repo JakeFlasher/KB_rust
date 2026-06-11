@@ -158,6 +158,39 @@ pub fn build_manifests_with_config(
     determinism: &DeterminismContext,
     chunk_config: &ChunkConfig,
 ) -> Result<IngestOutput, ManifestError> {
+    build_manifests_with_parser(
+        source_id,
+        source_path,
+        pdf_bytes,
+        page_texts,
+        determinism,
+        chunk_config,
+        PARSER_NAME,
+        PARSER_VERSION,
+    )
+}
+
+/// Build the manifest pair with a caller-supplied parser identity.
+///
+/// The PDF path records the `pdfium-render` identity via
+/// [`build_manifests_with_config`]; the utterances path records its
+/// own honest identity (`cacg-utterances` + crate version). Everything
+/// else — source hashing, chunking, manifest shape — is shared.
+///
+/// # Errors
+///
+/// Identical to [`build_manifests`].
+#[allow(clippy::too_many_arguments)]
+pub fn build_manifests_with_parser(
+    source_id: &str,
+    source_path: &str,
+    source_bytes: &[u8],
+    page_texts: &[(u32, &str)],
+    determinism: &DeterminismContext,
+    chunk_config: &ChunkConfig,
+    parser_name: &str,
+    parser_version: &str,
+) -> Result<IngestOutput, ManifestError> {
     if source_id.is_empty() {
         return Err(ManifestError::EmptySourceId);
     }
@@ -175,9 +208,9 @@ pub fn build_manifests_with_config(
         schema_version: SchemaVersion::V0,
         source_id: source_id.to_owned(),
         source_path: source_path.to_owned(),
-        source_sha256: source_sha256(pdf_bytes),
-        parser_name: PARSER_NAME.to_owned(),
-        parser_version: PARSER_VERSION.to_owned(),
+        source_sha256: source_sha256(source_bytes),
+        parser_name: parser_name.to_owned(),
+        parser_version: parser_version.to_owned(),
         page_count,
         extracted_at: determinism.now_iso(),
     };
@@ -267,6 +300,25 @@ pub fn render_manifests(output: &IngestOutput) -> Result<(Vec<u8>, Vec<u8>), Man
 /// - [`ManifestError::Publish`] forwarding any
 ///   [`cacg_core::atomic_publish::PublishError`].
 pub fn publish_manifests(out_dir: &Path, output: &IngestOutput) -> Result<(), ManifestError> {
+    publish_manifests_with_locator(out_dir, output, None)
+}
+
+/// Like [`publish_manifests`], with an optional third atomic member:
+/// the sealed `locator_map.json` sidecar the utterances backend emits
+/// (chunk_id → utterance identities). All members publish in ONE
+/// atomic group — a failure rolls every file back, so the locator can
+/// never exist without its manifests or vice versa.
+///
+/// # Errors
+///
+/// Identical to [`publish_manifests`]; a pre-existing
+/// `locator_map.json` also raises
+/// [`ManifestError::PriorManifestsPresent`].
+pub fn publish_manifests_with_locator(
+    out_dir: &Path,
+    output: &IngestOutput,
+    locator_bytes: Option<&[u8]>,
+) -> Result<(), ManifestError> {
     let fs = DefaultFs;
     // Ensure out_dir exists (mkdir -p semantics; idempotent).
     std::fs::create_dir_all(out_dir)
@@ -274,10 +326,14 @@ pub fn publish_manifests(out_dir: &Path, output: &IngestOutput) -> Result<(), Ma
 
     let sources_path = out_dir.join("sources_manifest.json");
     let chunks_path = out_dir.join("chunks_manifest.json");
+    let locator_path = out_dir.join("locator_map.json");
 
     // Merge with prior manifests is not yet implemented; refuse to
     // clobber existing ones rather than silently destroy data.
-    if sources_path.exists() || chunks_path.exists() {
+    if sources_path.exists()
+        || chunks_path.exists()
+        || (locator_bytes.is_some() && locator_path.exists())
+    {
         return Err(ManifestError::PriorManifestsPresent {
             out_dir: out_dir.to_path_buf(),
         });
@@ -288,7 +344,7 @@ pub fn publish_manifests(out_dir: &Path, output: &IngestOutput) -> Result<(), Ma
     let (sources_tmp, sources_bak) = sidecars(&sources_path);
     let (chunks_tmp, chunks_bak) = sidecars(&chunks_path);
 
-    let members = vec![
+    let mut members = vec![
         PublishMember {
             canonical_path: sources_path,
             tmp_path: sources_tmp,
@@ -302,6 +358,15 @@ pub fn publish_manifests(out_dir: &Path, output: &IngestOutput) -> Result<(), Ma
             bytes: chunks_bytes,
         },
     ];
+    if let Some(bytes) = locator_bytes {
+        let (locator_tmp, locator_bak) = sidecars(&locator_path);
+        members.push(PublishMember {
+            canonical_path: locator_path,
+            tmp_path: locator_tmp,
+            bak_path: locator_bak,
+            bytes: bytes.to_vec(),
+        });
+    }
 
     atomic_publish(&members, &fs, cc::MAN_002, cc::MAN_003)?;
     Ok(())

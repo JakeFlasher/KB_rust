@@ -123,15 +123,15 @@ pub struct IndexArgs {
     pub out: PathBuf,
 }
 
-/// `kb ingest <pdf> [--config PATH] [--out OUT] [--source-id ID]`.
+/// `kb ingest <source> [--format pdf|utterances] [--config PATH] [--out OUT] [--source-id ID]`.
 #[derive(Args, Debug)]
 pub struct IngestArgs {
-    /// Path to PDF source.
+    /// Path to the source: a PDF (default), or a `cacg.utterances.v1`
+    /// JSONL conversation stream with `--format utterances`.
     pub pdf: PathBuf,
     /// Optional ingest config (YAML). Loads `chunking.target_tokens`
-    /// / `chunking.overlap_tokens` / `chunking.max_pages_per_chunk`.
-    /// Not yet implemented in the Rust `kb ingest` dispatcher;
-    /// passing `--config` currently exits with `CACG-CLI-004`.
+    /// / `chunking.overlap_tokens` / `chunking.max_pages_per_chunk`;
+    /// a malformed config exits with `CACG-CLI-004`.
     #[arg(long)]
     pub config: Option<PathBuf>,
     /// Output directory.
@@ -140,6 +140,22 @@ pub struct IngestArgs {
     /// Source identifier override.
     #[arg(long = "source-id")]
     pub source_id: Option<String>,
+    /// Input format: `pdf` (pdfium per-page extraction) or
+    /// `utterances` (a versioned JSONL conversation stream; one
+    /// utterance per logical page, published together with a sealed
+    /// `locator_map.json` sidecar mapping every chunk to its
+    /// utterance/speaker identities).
+    #[arg(long, value_enum, default_value_t = IngestFormat::Pdf)]
+    pub format: IngestFormat,
+}
+
+/// Input format accepted by `kb ingest --format`.
+#[derive(Debug, Clone, Copy, PartialEq, Eq, clap::ValueEnum)]
+pub enum IngestFormat {
+    /// PDF bytes extracted per-page via pdfium.
+    Pdf,
+    /// `cacg.utterances.v1` JSONL conversation stream.
+    Utterances,
 }
 
 /// `kb new <reading_id> <slug> [--cards-dir DIR] [--force] [--title T]`.
