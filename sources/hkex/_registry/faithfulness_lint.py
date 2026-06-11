@@ -41,6 +41,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(ROOT / "sources/hkex/_registry"))
 from check_cjk_ingest_spike import build_index, resolve_seed  # noqa: E402  # pyright: ignore[reportMissingImports]
+from emit_practitioner_cards import load_overrides  # noqa: E402  # pyright: ignore[reportMissingImports]
 
 CONFIG = ROOT / "sources/hkex/_registry/faithfulness_config.json"
 SPEC = ROOT / "sources/hkex/_registry/practitioner_cards.json"
@@ -136,15 +137,26 @@ def lint_cards(cards: list[dict], specs_by_id: dict, candidates_by_title: dict,
                 err(cid, "G4", f"spec recurrence {claimed} > re-judged distinct count {allowed}")
 
         # G2 attribution: corpus citations must re-resolve to the pinned chunk
-        for c in card["citations"]:
-            if c["source_id"] != corpus_sid:
-                continue
+        # under the SAME (post_id, comment_id) pin the emitter bound with —
+        # the spec carries the pins; the same author utterance legitimately
+        # renders under several posts, so an unpinned re-resolution would
+        # false-positive on every cross-post duplicate.
+        spec_xueqiu = [s for s in (spec.get("citations") or []) if s.get("kind") == "xueqiu"]
+        corpus_cits = [c for c in card["citations"] if c["source_id"] == corpus_sid]
+        if len(spec_xueqiu) != len(corpus_cits):
+            err(cid, "G2", f"spec has {len(spec_xueqiu)} xueqiu citations but the card "
+                           f"carries {len(corpus_cits)} corpus citations")
+        overrides = load_overrides()
+        for c, sp in zip(corpus_cits, spec_xueqiu):
             if nidx is None or all_nauthors is None:
                 err(cid, "G2", "corpus chunks unavailable for attribution re-resolution")
                 break
-            r = resolve_seed(nidx, all_nauthors, pid="0", cid=None, quote=c["quote"])
-            # pid "0" never matches, so the resolver falls to the author-word pool with a
-            # pid correction — what matters here is author-origin + uniqueness + identity.
+            # Reviewed seed overrides pin the intended comment_id exactly as
+            # the emitter applied them (keyed by the ORIGINAL spec quote).
+            o = overrides.get((str(sp.get("post_id")), sp.get("quote_zh")))
+            pin_cid = (o.get("set_comment_id") if o else None) or sp.get("comment_id")
+            r = resolve_seed(nidx, all_nauthors, pid=str(sp.get("post_id")),
+                             cid=str(pin_cid) if pin_cid else None, quote=c["quote"])
             if r["status"] != "bound":
                 err(cid, "G2", f"quote no longer author-origin-resolvable "
                                f"(status={r['status']}): {c['quote'][:40]!r}")
@@ -266,7 +278,9 @@ def _self_test() -> int:
         "body": "## Thesis\n\nHe sells with the base intact.\n\n## Why\n\nsell call program — 不弄丟底倉.",
     }
     good_spec = {"c1": {"id": "c1", "candidate_title": "Good candidate", "recurrence": 2,
-                        "operational": False}}
+                        "operational": False,
+                        "citations": [{"kind": "xueqiu", "post_id": "11", "comment_id": None,
+                                       "quote_zh": "原則是不弄丟底倉"}]}}
     errs = lint_cards([good_card], good_spec, cand, cfg, nidx, nauth)
     if errs:
         failures.append(f"clean card raised: {errs}")

@@ -1,0 +1,7 @@
+{
+  "errors": [],
+  "practitioner_cards_checked": 32,
+  "schema_version": "hkex.faithfulness_lint.v1",
+  "spec_entries": 32,
+  "verdict": "PASS"
+}

@@ -1,0 +1,1162 @@
+{
+  "cards": [
+    {
+      "candidate_title": "Deflation worse than inflation; real vs nominal returns",
+      "citations": [
+        {
+          "bound_cid": "NA",
+          "bound_pid": "222869825",
+          "chunk_id": "goubujiao_xueqiu_corpus:p1016:1015",
+          "kind": "xueqiu",
+          "lengthened": false,
+          "pid_corrected": false,
+          "quote": "對股票投資者而言，通縮遠遠比通脹可怕，溫和的通脹可以解決很多麻煩事。"
+        },
+        {
+          "bound_cid": "NA",
+          "bound_pid": "224276051",
+          "chunk_id": "goubujiao_xueqiu_corpus:p4434:4433",
+          "kind": "xueqiu",
+          "lengthened": false,
+          "pid_corrected": false,
+          "quote": "複利是我借給你100擔大米，一年後你還我120擔大米，而不是我借你足夠買100擔大米的錢，一年后你還給我的錢只夠買80擔大米。"
+        },
+        {
+          "bound_cid": "NA",
+          "bound_pid": "225309192",
+          "chunk_id": "goubujiao_xueqiu_corpus:p6253:6252",
+          "kind": "xueqiu",
+          "lengthened": false,
+          "pid_corrected": false,
+          "quote": "我認為主要原因是工廠供應過剩+內需不振"
+        }
+      ],
+      "id": "gbj-deflation-worse-than-inflation",
+      "path": "cards/hkex/02_economics/gbj-deflation-worse-than-inflation.md",
+      "reading_id": "02_economics"
+    },
+    {
+      "candidate_title": "Balance-sheet quality: distributable cash, repatriation tax, receivables, leverage",
+      "citations": [
+        {
+          "bound_cid": "NA",
+          "bound_pid": "222760389",
+          "chunk_id": "goubujiao_xueqiu_corpus:p818:0817",
+          "kind": "xueqiu",
+          "lengthened": false,
+          "pid_corrected": false,
+          "quote": "賬上的錢在子公司。按照國稅法，向海外母公司派息，要交10%稅，如果子公司轉100億元往香港公司，只有90億元到賬，增加10億元稅項支出，直接影響利潤。"
+        },
+        {
+          "bound_cid": "NA",
+          "bound_pid": "223197838",
+          "chunk_id": "goubujiao_xueqiu_corpus:p2319:2318",
+          "kind": "xueqiu",
+          "lengthened": false,
+          "pid_corrected": false,
+          "quote": "恒大的應收已經撥備，公司現在的應收都是銀行票據，風險較低，公司會加大風險管理。"
+        },
+        {
+          "bound_cid": "NA",
+          "bound_pid": "223197838",
+          "chunk_id": "goubujiao_xueqiu_corpus:p2319:2318",
+          "kind": "xueqiu",
+          "lengthened": false,
+          "pid_corrected": false,
+          "quote": "公司今年是上市以來首次派特別股息，現在公司的現金流很好，和以前不一樣。"
+        }
+      ],
+      "id": "gbj-balance-sheet-distributable-cash",
+      "path": "cards/hkex/03_financial_reporting_analysis/gbj-balance-sheet-distributable-cash.md",
+      "reading_id": "03_financial_reporting_analysis"
+    },
+    {
+      "candidate_title": "Fund 分红 vs corporate 派息: dividend tax incidence and channel consistency",
+      "citations": [
+        {
+          "bound_cid": "NA",
+          "bound_pid": "224009519",
+          "chunk_id": "goubujiao_xueqiu_corpus:p3841:3840",
+          "kind": "xueqiu",
+          "lengthened": false,
+          "pid_corrected": false,
+          "quote": "派息是企業盈利所得分配，分紅分的是本來就屬於你的錢，ETF分紅與否，價值是沒有分別的。"
+        },
+        {
+          "bound_cid": "NA",
+          "bound_pid": "224010830",
+          "chunk_id": "goubujiao_xueqiu_corpus:p3848:3847",
+          "kind": "xueqiu",
+          "lengthened": false,
+          "pid_corrected": false,
+          "quote": "都是一樣的東西，只是操盤手不一樣。這個邏輯上說不過去吧？"
+        },
+        {
+          "bound_cid": "NA",
+          "bound_pid": "224335900",
+          "chunk_id": "goubujiao_xueqiu_corpus:p4913:4912",
+          "kind": "xueqiu",
+          "lengthened": false,
+          "pid_corrected": false,
+          "quote": "内地个人投资者通过基金互认从香港基金分配取得的收益，由该香港基金在内地的代理人按照20%的税率代扣代缴个人所得税。"
+        }
+      ],
+      "id": "gbj-fund-fenhong-vs-corporate-paixi",
+      "path": "cards/hkex/03_financial_reporting_analysis/gbj-fund-fenhong-vs-corporate-paixi.md",
+      "reading_id": "03_financial_reporting_analysis"
+    },
+    {
+      "candidate_title": "Margin and cost-structure analysis: cost-plus, spread vs margin, pass-through, procurement",
+      "citations": [
+        {
+          "bound_cid": "NA",
+          "bound_pid": "222958791",
+          "chunk_id": "goubujiao_xueqiu_corpus:p1234:1233",
+          "kind": "xueqiu",
+          "lengthened": false,
+          "pid_corrected": false,
+          "quote": "作為成本加成定價方式的制造廠，如果原料成本下跌只會令毛利下降，疊加庫存降價，毛利率也會是降的。"
+        },
+        {
+          "bound_cid": "245860922",
+          "bound_pid": "223197838",
+          "chunk_id": "goubujiao_xueqiu_corpus:p2340:2339",
+          "kind": "xueqiu",
+          "lengthened": false,
+          "pid_corrected": false,
+          "quote": "毛利差還是擴大了，但是毛利率並沒有擴大。"
+        },
+        {
+          "bound_cid": "NA",
+          "bound_pid": "223197838",
+          "chunk_id": "goubujiao_xueqiu_corpus:p2319:2318",
+          "kind": "xueqiu",
+          "lengthened": false,
+          "pid_corrected": false,
+          "quote": "胰島素藥集採雖然降價達50%，不過由於銷售支出也會同步下降，暫時看對毛利率和利潤都影響不大"
+        }
+      ],
+      "id": "gbj-margin-cost-structure-analysis",
+      "path": "cards/hkex/03_financial_reporting_analysis/gbj-margin-cost-structure-analysis.md",
+      "reading_id": "03_financial_reporting_analysis"
+    },
+    {
+      "candidate_title": "Business-value bull market: equity and dividend growth, not price",
+      "citations": [
+        {
+          "bound_cid": "NA",
+          "bound_pid": "223625646",
+          "chunk_id": "goubujiao_xueqiu_corpus:p2957:2956",
+          "kind": "xueqiu",
+          "lengthened": false,
+          "pid_corrected": false,
+          "quote": "權益資產一直都處於牛市階段，我的持股組合每年的股東權益和派息都持續增長，怎麼可能不是呢？股價，就別提了"
+        },
+        {
+          "bound_cid": "NA",
+          "bound_pid": "223607560",
+          "chunk_id": "goubujiao_xueqiu_corpus:p2796:2795",
+          "kind": "xueqiu",
+          "lengthened": false,
+          "pid_corrected": false,
+          "quote": "股票是一個平均贏的游戲，前提是必須盡可能壓縮交易費用，以及避免輸家的行業。"
+        }
+      ],
+      "id": "gbj-business-value-bull-market",
+      "path": "cards/hkex/05_equity/gbj-business-value-bull-market.md",
+      "reading_id": "05_equity"
+    },
+    {
+      "candidate_title": "Decline signals: revenue/volume decline, side-bets, youth disengagement, ESG buzzwords",
+      "citations": [
+        {
+          "bound_cid": "NA",
+          "bound_pid": "223566493",
+          "chunk_id": "goubujiao_xueqiu_corpus:p2779:2778",
+          "kind": "xueqiu",
+          "lengthened": false,
+          "pid_corrected": false,
+          "quote": "我只說盡量避免買營收下滑的股票，尤其是銷售量也是下滑的企業，背後往往代表着那間企業是行業競爭下的輸家。"
+        },
+        {
+          "bound_cid": "NA",
+          "bound_pid": "223264474",
+          "chunk_id": "goubujiao_xueqiu_corpus:p2409:2408",
+          "kind": "xueqiu",
+          "lengthened": false,
+          "pid_corrected": false,
+          "quote": "一家公司開始不務正業，往往是因為主業真的不行了"
+        },
+        {
+          "bound_cid": "245956973",
+          "bound_pid": "223264474",
+          "chunk_id": "goubujiao_xueqiu_corpus:p2429:2428",
+          "kind": "xueqiu",
+          "lengthened": false,
+          "pid_corrected": false,
+          "quote": "廣告行業，得年輕人得天下"
+        }
+      ],
+      "id": "gbj-decline-signals",
+      "path": "cards/hkex/05_equity/gbj-decline-signals.md",
+      "reading_id": "05_equity"
+    },
+    {
+      "candidate_title": "Conservative, downside-anchored earnings underwriting under policy uncertainty",
+      "citations": [
+        {
+          "bound_cid": "245862119",
+          "bound_pid": "223197838",
+          "chunk_id": "goubujiao_xueqiu_corpus:p2342:2341",
+          "kind": "xueqiu",
+          "lengthened": false,
+          "pid_corrected": false,
+          "quote": "去年上半年基數并不小，希望增長50%以上有點貪心了。如果今年上半年每股盈利能夠有$0.45人民幣，我已經非常滿意了。"
+        },
+        {
+          "bound_cid": "245869858",
+          "bound_pid": "223200257",
+          "chunk_id": "goubujiao_xueqiu_corpus:p2372:2371",
+          "kind": "xueqiu",
+          "lengthened": false,
+          "pid_corrected": false,
+          "quote": "6Apa和胰島素集采都有不確定性，所以全年業績我也不好判斷，0.8元應該會有"
+        },
+        {
+          "bound_cid": "245498462",
+          "bound_pid": "222958791",
+          "chunk_id": "goubujiao_xueqiu_corpus:p1239:1238",
+          "kind": "xueqiu",
+          "lengthened": false,
+          "pid_corrected": false,
+          "quote": "魯泰的看點是產能利用率的提升，不過由於我對它是否能夠恢復過去的派息比率不具信心，所以沒有介入。"
+        }
+      ],
+      "id": "gbj-downside-anchored-underwriting",
+      "path": "cards/hkex/05_equity/gbj-downside-anchored-underwriting.md",
+      "reading_id": "05_equity"
+    },
+    {
+      "candidate_title": "Small-cap minority liquidity trap; curate the shared book for liquidity",
+      "citations": [
+        {
+          "bound_cid": "NA",
+          "bound_pid": "224150431",
+          "chunk_id": "goubujiao_xueqiu_corpus:p4207:4206",
+          "kind": "xueqiu",
+          "lengthened": false,
+          "pid_corrected": false,
+          "quote": "大股東的優勢在於它可以大折價私有化，小股東的優勢在於我們可以拍拍屁股就走人。真心勸喻這種傻事少做"
+        },
+        {
+          "bound_cid": "NA",
+          "bound_pid": "223069694",
+          "chunk_id": "goubujiao_xueqiu_corpus:p1722:1721",
+          "kind": "xueqiu",
+          "lengthened": false,
+          "pid_corrected": false,
+          "quote": "以較高流動性噁心垃圾為目標，盡可能有點股息收/回購，正現金流入，大方向還能有點增長。"
+        },
+        {
+          "bound_cid": "245437396",
+          "bound_pid": "222912801",
+          "chunk_id": "goubujiao_xueqiu_corpus:p1059:1058",
+          "kind": "xueqiu",
+          "lengthened": false,
+          "pid_corrected": false,
+          "quote": "流動性原因，不想持有太多小票。"
+        }
+      ],
+      "id": "gbj-small-cap-liquidity-trap",
+      "path": "cards/hkex/05_equity/gbj-small-cap-liquidity-trap.md",
+      "reading_id": "05_equity"
+    },
+    {
+      "candidate_title": "SOE windfall-tax vs payout, and minority preference for dividends over growth capex",
+      "citations": [
+        {
+          "bound_cid": "245324318",
+          "bound_pid": "222825600",
+          "chunk_id": "goubujiao_xueqiu_corpus:p931:0930",
+          "kind": "xueqiu",
+          "lengthened": false,
+          "pid_corrected": false,
+          "quote": "政府缺錢只要加大派息力度就可以了，大股東持股比例不低。"
+        },
+        {
+          "bound_cid": "NA",
+          "bound_pid": "224585063",
+          "chunk_id": "goubujiao_xueqiu_corpus:p5218:5217",
+          "kind": "xueqiu",
+          "lengthened": false,
+          "pid_corrected": false,
+          "quote": "市場擔心的是$中国神华(01088)$ 將來會不會在上市公司層面直接上馬新能源項目。現在一直都是上市公司超高派息，然後再由母公司大額投資上馬新能源項目。"
+        },
+        {
+          "bound_cid": "247888697",
+          "bound_pid": "224581367",
+          "chunk_id": "goubujiao_xueqiu_corpus:p5176:5175",
+          "kind": "xueqiu",
+          "lengthened": false,
+          "pid_corrected": false,
+          "quote": "神華的小股東們更喜歡派息"
+        }
+      ],
+      "id": "gbj-soe-windfall-vs-payout",
+      "path": "cards/hkex/05_equity/gbj-soe-windfall-vs-payout.md",
+      "reading_id": "05_equity"
+    },
+    {
+      "candidate_title": "Never-lose-the-base-position: covered option-selling around your fair value",
+      "citations": [
+        {
+          "bound_cid": "244799468",
+          "bound_pid": "222436722",
+          "chunk_id": "goubujiao_xueqiu_corpus:p461:0460",
+          "kind": "xueqiu",
+          "lengthened": false,
+          "pid_corrected": false,
+          "quote": "我sell call sell put的原則是不弄丟底倉，至少在我認為的合理價以下不弄丟。"
+        },
+        {
+          "bound_cid": "244813218",
+          "bound_pid": "222375639",
+          "chunk_id": "goubujiao_xueqiu_corpus:p249:0248",
+          "kind": "xueqiu",
+          "lengthened": false,
+          "pid_corrected": false,
+          "quote": "我是打算400元之前盡量不弄丟底倉，所以才會這麼做。"
+        },
+        {
+          "bound_cid": null,
+          "bound_pid": null,
+          "chunk_id": "hkex_stock_options_corner_guide:p014:0014",
+          "kind": "grounding",
+          "lengthened": false,
+          "pid_corrected": false,
+          "quote": "Investors owning the underlying stock of the derived stock option may use shares of the underlying stock to replace cash for the margin of writing the call"
+        }
+      ],
+      "id": "gbj-base-position-protected-selling",
+      "path": "cards/hkex/07_derivatives_and_volatility/gbj-base-position-protected-selling.md",
+      "reading_id": "07_derivatives_and_volatility"
+    },
+    {
+      "candidate_title": "Covered calls are pocket-money on volatility, not a core return engine",
+      "citations": [
+        {
+          "bound_cid": "NA",
+          "bound_pid": "222987869",
+          "chunk_id": "goubujiao_xueqiu_corpus:p1458:1457",
+          "kind": "xueqiu",
+          "lengthened": false,
+          "pid_corrected": false,
+          "quote": "我只是sell call賺點波動的零用錢，沒想到把家用都蝕精光。"
+        },
+        {
+          "bound_cid": "NA",
+          "bound_pid": "223121311",
+          "chunk_id": "goubujiao_xueqiu_corpus:p2202:2201",
+          "kind": "xueqiu",
+          "lengthened": false,
+          "pid_corrected": false,
+          "quote": "擔心弄丟籌碼就別sell call，擔心接貨就別sell put！你有看到我sell call保險和電信么？"
+        },
+        {
+          "bound_cid": "NA",
+          "bound_pid": "223857399",
+          "chunk_id": "goubujiao_xueqiu_corpus:p3572:3571",
+          "kind": "xueqiu",
+          "lengthened": false,
+          "pid_corrected": false,
+          "quote": "sell call 了1/4$中国海洋石油(00883)$ ，七月份，10.5元，收0.47元期權金。"
+        },
+        {
+          "bound_cid": null,
+          "bound_pid": null,
+          "chunk_id": "hkex_stock_options_info_sheet:p002:0002",
+          "kind": "grounding",
+          "lengthened": false,
+          "pid_corrected": false,
+          "quote": "Options can be exercised at any time up to 6:45 pm on any business day up to and including the last trading day"
+        }
+      ],
+      "id": "gbj-calls-against-base-are-pocket-money",
+      "path": "cards/hkex/07_derivatives_and_volatility/gbj-calls-against-base-are-pocket-money.md",
+      "reading_id": "07_derivatives_and_volatility"
+    },
+    {
+      "candidate_title": "Selling premium harvests volatility/time-value, not direction (non-directional, probability-respecting)",
+      "citations": [
+        {
+          "bound_cid": "246370315",
+          "bound_pid": "223114673",
+          "chunk_id": "goubujiao_xueqiu_corpus:p1906:1905",
+          "kind": "xueqiu",
+          "lengthened": false,
+          "pid_corrected": false,
+          "quote": "sell put最希望股價不死不話"
+        },
+        {
+          "bound_cid": "NA",
+          "bound_pid": "223866640",
+          "chunk_id": "goubujiao_xueqiu_corpus:p3589:3588",
+          "kind": "xueqiu",
+          "lengthened": false,
+          "pid_corrected": false,
+          "quote": "和我之前sell call12元和sell put 10元一樣，不預判股價。"
+        },
+        {
+          "bound_cid": "NA",
+          "bound_pid": "224024693",
+          "chunk_id": "goubujiao_xueqiu_corpus:p3964:3963",
+          "kind": "xueqiu",
+          "lengthened": false,
+          "pid_corrected": false,
+          "quote": "我sell 了$中国海洋石油(00883)$ 七月份10元的put，收0.48；又sell了$中国海洋石油(00883)$ 七月份的call，收0.47元。你說不死不活，我是不是應該很開心"
+        },
+        {
+          "bound_cid": null,
+          "bound_pid": null,
+          "chunk_id": "hkex_stock_options_corner_guide:p014:0014",
+          "kind": "grounding",
+          "lengthened": false,
+          "pid_corrected": false,
+          "quote": "Investors owning the underlying stock of the derived stock option may use shares of the underlying stock to replace cash for the margin of writing the call"
+        }
+      ],
+      "id": "gbj-premium-is-volatility-not-direction",
+      "path": "cards/hkex/07_derivatives_and_volatility/gbj-premium-is-volatility-not-direction.md",
+      "reading_id": "07_derivatives_and_volatility"
+    },
+    {
+      "candidate_title": "Roll deep-OTM near-dated legs forward to free capital (delta-vs-theta)",
+      "citations": [
+        {
+          "bound_cid": "NA",
+          "bound_pid": "223426897",
+          "chunk_id": "goubujiao_xueqiu_corpus:p2584:2583",
+          "kind": "xueqiu",
+          "lengthened": false,
+          "pid_corrected": false,
+          "quote": "平倉了六月份$阿里巴巴-SW(09988)$ 100元的sell put，新開了七月份105元的sell put，收取期權金6.89元"
+        },
+        {
+          "bound_cid": "246213534",
+          "bound_pid": "223426897",
+          "chunk_id": "goubujiao_xueqiu_corpus:p2594:2593",
+          "kind": "xueqiu",
+          "lengthened": false,
+          "pid_corrected": false,
+          "quote": "我平的近期已經嚴重價外了，留著占資金"
+        },
+        {
+          "bound_cid": "248218446",
+          "bound_pid": "224796566",
+          "chunk_id": "goubujiao_xueqiu_corpus:p5525:5524",
+          "kind": "xueqiu",
+          "lengthened": false,
+          "pid_corrected": false,
+          "quote": "如果我平掉105元或者112.5元的期權，還是可以調一點的，畢竟那里賺了點錢"
+        }
+      ],
+      "id": "gbj-roll-deep-otm-forward-delta-theta",
+      "path": "cards/hkex/07_derivatives_and_volatility/gbj-roll-deep-otm-forward-delta-theta.md",
+      "reading_id": "07_derivatives_and_volatility"
+    },
+    {
+      "candidate_title": "Rolling sold puts down to a lower strike for net credit",
+      "citations": [
+        {
+          "bound_cid": "249013851",
+          "bound_pid": "223819429",
+          "chunk_id": "goubujiao_xueqiu_corpus:p3475:3474",
+          "kind": "xueqiu",
+          "lengthened": false,
+          "pid_corrected": false,
+          "quote": "平倉360元的sell put，虧9元每股，新開340元七月份sell put，收回11元。就這張期權而言，相當於騰訊七月份升回$340，能夠淨賺$2。"
+        },
+        {
+          "bound_cid": "249026833",
+          "bound_pid": "223819429",
+          "chunk_id": "goubujiao_xueqiu_corpus:p3480:3479",
+          "kind": "xueqiu",
+          "lengthened": false,
+          "pid_corrected": false,
+          "quote": "如果騰訊一直不回升，我按照$340接貨，無論交易佣金和印花稅都要比按照$360接貨少支付一些。"
+        },
+        {
+          "bound_cid": "249028864",
+          "bound_pid": "225297451",
+          "chunk_id": "goubujiao_xueqiu_corpus:p6208:6207",
+          "kind": "xueqiu",
+          "lengthened": false,
+          "pid_corrected": false,
+          "quote": "如果騰訊反彈至$350，你會後悔的"
+        },
+        {
+          "bound_cid": null,
+          "bound_pid": null,
+          "chunk_id": "hkex_stock_options_info_sheet:p002:0002",
+          "kind": "grounding",
+          "lengthened": false,
+          "pid_corrected": false,
+          "quote": "Options can be exercised at any time up to 6:45 pm on any business day up to and including the last trading day"
+        }
+      ],
+      "id": "gbj-roll-puts-down-for-credit",
+      "path": "cards/hkex/07_derivatives_and_volatility/gbj-roll-puts-down-for-credit.md",
+      "reading_id": "07_derivatives_and_volatility"
+    },
+    {
+      "candidate_title": "Sell puts only on companies you would happily own at the strike (cash-secured, bounded downside)",
+      "citations": [
+        {
+          "bound_cid": "247917105",
+          "bound_pid": "223114673",
+          "chunk_id": "goubujiao_xueqiu_corpus:p2129:2128",
+          "kind": "xueqiu",
+          "lengthened": false,
+          "pid_corrected": false,
+          "quote": "我只sell put我願意以那個價錢接貨的公司"
+        },
+        {
+          "bound_cid": "247180488",
+          "bound_pid": "223114673",
+          "chunk_id": "goubujiao_xueqiu_corpus:p2098:2097",
+          "kind": "xueqiu",
+          "lengthened": false,
+          "pid_corrected": false,
+          "quote": "我現在sell put，就算騰訊一夜之間價值為零，我虧損也就3%的事情。"
+        },
+        {
+          "bound_cid": "247049685",
+          "bound_pid": "224025593",
+          "chunk_id": "goubujiao_xueqiu_corpus:p3994:3993",
+          "kind": "xueqiu",
+          "lengthened": false,
+          "pid_corrected": false,
+          "quote": "前提是你對該股的價值有基本判斷"
+        },
+        {
+          "bound_cid": null,
+          "bound_pid": null,
+          "chunk_id": "hkex_stock_options_info_sheet:p002:0002",
+          "kind": "grounding",
+          "lengthened": false,
+          "pid_corrected": false,
+          "quote": "Options can be exercised at any time up to 6:45 pm on any business day up to and including the last trading day"
+        }
+      ],
+      "id": "gbj-sell-put-only-names-you-would-own",
+      "path": "cards/hkex/07_derivatives_and_volatility/gbj-sell-put-only-names-you-would-own.md",
+      "reading_id": "07_derivatives_and_volatility"
+    },
+    {
+      "candidate_title": "Option strike adjustment: special dividends adjust, ordinary dividends do not",
+      "citations": [
+        {
+          "bound_cid": "NA",
+          "bound_pid": "222375639",
+          "chunk_id": "goubujiao_xueqiu_corpus:p001:0000",
+          "kind": "xueqiu",
+          "lengthened": false,
+          "pid_corrected": false,
+          "quote": "由於是特別股息，行使價被調整為11.31元，每一張期權代表股數被調整為1105股，這比較有趣。派特別股息錢每張合約價值12.5X1000股，現在是11.31X1105股，合約價值是差不多的。但是這產生了一些碎股，真麻煩。"
+        },
+        {
+          "bound_cid": "247047700",
+          "bound_pid": "223114673",
+          "chunk_id": "goubujiao_xueqiu_corpus:p2048:2047",
+          "kind": "xueqiu",
+          "lengthened": false,
+          "pid_corrected": false,
+          "quote": "中國神華不是特別股息，如果除淨日之前行權人沒有行使期權，除淨后也是按照原來的價格行權，也就是$26。"
+        },
+        {
+          "bound_cid": "NA",
+          "bound_pid": "224217701",
+          "chunk_id": "goubujiao_xueqiu_corpus:p4261:4260",
+          "kind": "xueqiu",
+          "lengthened": false,
+          "pid_corrected": false,
+          "quote": "我比較擔心萬一他大額派股息，但是又不屬於特別股息，不調整行權價，sell put可能會有麻煩"
+        },
+        {
+          "bound_cid": null,
+          "bound_pid": null,
+          "chunk_id": "hkex_contract_adjustments_chap08:p001:0001",
+          "kind": "grounding",
+          "lengthened": false,
+          "pid_corrected": false,
+          "quote": "the Exchange will not perform any capital adjustment on option positions unless the value of the payment is 2 per cent or more of the share's closing price on the day of the announcement"
+        }
+      ],
+      "id": "gbj-special-dividend-strike-adjustment",
+      "path": "cards/hkex/07_derivatives_and_volatility/gbj-special-dividend-strike-adjustment.md",
+      "reading_id": "07_derivatives_and_volatility"
+    },
+    {
+      "candidate_title": "Keep sold-put strikes near the money; deep-OTM puts earn too little",
+      "citations": [
+        {
+          "bound_cid": "246199966",
+          "bound_pid": "223114673",
+          "chunk_id": "goubujiao_xueqiu_corpus:p1880:1879",
+          "kind": "xueqiu",
+          "lengthened": false,
+          "pid_corrected": false,
+          "quote": "偏離行權價太遠，吃不了波幅的錢"
+        },
+        {
+          "bound_cid": "248256350",
+          "bound_pid": "224796566",
+          "chunk_id": "goubujiao_xueqiu_corpus:p5517:5516",
+          "kind": "xueqiu",
+          "lengthened": false,
+          "pid_corrected": false,
+          "quote": "你這樣賺不到多少期權金的"
+        },
+        {
+          "bound_cid": "246199680",
+          "bound_pid": "223426897",
+          "chunk_id": "goubujiao_xueqiu_corpus:p2590:2589",
+          "kind": "xueqiu",
+          "lengthened": false,
+          "pid_corrected": false,
+          "quote": "不偏離行權價"
+        }
+      ],
+      "id": "gbj-strikes-near-the-money",
+      "path": "cards/hkex/07_derivatives_and_volatility/gbj-strikes-near-the-money.md",
+      "reading_id": "07_derivatives_and_volatility"
+    },
+    {
+      "candidate_title": "Diversification over single-name concentration; sector position ceilings",
+      "citations": [
+        {
+          "bound_cid": "NA",
+          "bound_pid": "224598323",
+          "chunk_id": "goubujiao_xueqiu_corpus:p5275:5274",
+          "kind": "xueqiu",
+          "lengthened": false,
+          "pid_corrected": false,
+          "quote": "上個月還有很多人勸我sell put阿里不如都押700，反正就是阿里巴巴十萬個不好，騰訊地位不可動搖"
+        },
+        {
+          "bound_cid": "247917450",
+          "bound_pid": "224598323",
+          "chunk_id": "goubujiao_xueqiu_corpus:p5280:5279",
+          "kind": "xueqiu",
+          "lengthened": false,
+          "pid_corrected": false,
+          "quote": "加了728，控制行業上限倉位。"
+        },
+        {
+          "bound_cid": "398436995",
+          "bound_pid": "366413082",
+          "chunk_id": "goubujiao_xueqiu_corpus:p7086:7085",
+          "kind": "xueqiu",
+          "lengthened": false,
+          "pid_corrected": false,
+          "quote": "現金+套利交易倉位+ A股"
+        }
+      ],
+      "id": "gbj-diversification-sector-ceilings",
+      "path": "cards/hkex/09_portfolio_management_and_asset_pricing/gbj-diversification-sector-ceilings.md",
+      "reading_id": "09_portfolio_management_and_asset_pricing"
+    },
+    {
+      "candidate_title": "Self-financing option overlay: size sell-puts to dividend inflow",
+      "citations": [
+        {
+          "bound_cid": "245791853",
+          "bound_pid": "223114673",
+          "chunk_id": "goubujiao_xueqiu_corpus:p1821:1820",
+          "kind": "xueqiu",
+          "lengthened": false,
+          "pid_corrected": false,
+          "quote": "中海油七月中股息到賬，所以我才選擇sell put七月到期的"
+        },
+        {
+          "bound_cid": "247049368",
+          "bound_pid": "224024550",
+          "chunk_id": "goubujiao_xueqiu_corpus:p3893:3892",
+          "kind": "xueqiu",
+          "lengthened": false,
+          "pid_corrected": false,
+          "quote": "是啊！至少知道會有股息馬上到賬，這是原則。"
+        },
+        {
+          "bound_cid": "NA",
+          "bound_pid": "224025593",
+          "chunk_id": "goubujiao_xueqiu_corpus:p3992:3991",
+          "kind": "xueqiu",
+          "lengthened": false,
+          "pid_corrected": false,
+          "quote": "這個sell put有點吸引，但沒錢"
+        }
+      ],
+      "id": "gbj-self-financing-overlay",
+      "path": "cards/hkex/09_portfolio_management_and_asset_pricing/gbj-self-financing-overlay.md",
+      "reading_id": "09_portfolio_management_and_asset_pricing"
+    },
+    {
+      "candidate_title": "Contrarian entry on clustered bad news; relative-strength bottoming and HK seasonality",
+      "citations": [
+        {
+          "bound_cid": "NA",
+          "bound_pid": "222990878",
+          "chunk_id": "goubujiao_xueqiu_corpus:p1492:1491",
+          "kind": "xueqiu",
+          "lengthened": false,
+          "pid_corrected": false,
+          "quote": "一季度盈警+上海信封+大爆炸，是一個很好的機會與之共患難"
+        },
+        {
+          "bound_cid": "NA",
+          "bound_pid": "222636788",
+          "chunk_id": "goubujiao_xueqiu_corpus:p769:0768",
+          "kind": "xueqiu",
+          "lengthened": false,
+          "pid_corrected": false,
+          "quote": "五六月除淨的港股，很多都是七月份才派股息，不應太悲觀"
+        },
+        {
+          "bound_cid": "NA",
+          "bound_pid": "222636788",
+          "chunk_id": "goubujiao_xueqiu_corpus:p769:0768",
+          "kind": "xueqiu",
+          "lengthened": false,
+          "pid_corrected": false,
+          "quote": "如果今天$恒生指数(HKHSI)$ 再不跟$道琼斯指数(.DJI)$，大概可以判断港股已經跌不下去了，五窮六絕到此結束"
+        }
+      ],
+      "id": "gbj-contrarian-on-clustered-bad-news",
+      "path": "cards/hkex/10_behavioral_finance/gbj-contrarian-on-clustered-bad-news.md",
+      "reading_id": "10_behavioral_finance"
+    },
+    {
+      "candidate_title": "The discipline of inaction: research deeply, then often do nothing",
+      "citations": [
+        {
+          "bound_cid": "NA",
+          "bound_pid": "224442723",
+          "chunk_id": "goubujiao_xueqiu_corpus:p5006:5005",
+          "kind": "xueqiu",
+          "lengthened": false,
+          "pid_corrected": false,
+          "quote": "在投資中最難做到的是什麼？我認為應該是當你研究完一只股票，甚至是一整個行業，最後卻什麼也不做。如果有人研究完一整個行業，卻能夠做到放手，應該有能力成為大師級投資者。"
+        },
+        {
+          "bound_cid": "247692416",
+          "bound_pid": "224442723",
+          "chunk_id": "goubujiao_xueqiu_corpus:p5010:5009",
+          "kind": "xueqiu",
+          "lengthened": false,
+          "pid_corrected": false,
+          "quote": "那符合標準要頂得很嚴才可以"
+        },
+        {
+          "bound_cid": "399181470",
+          "bound_pid": "379185257",
+          "chunk_id": "goubujiao_xueqiu_corpus:p7266:7265",
+          "kind": "xueqiu",
+          "lengthened": false,
+          "pid_corrected": false,
+          "quote": "我看過了，不感興趣"
+        }
+      ],
+      "id": "gbj-discipline-of-inaction",
+      "path": "cards/hkex/10_behavioral_finance/gbj-discipline-of-inaction.md",
+      "reading_id": "10_behavioral_finance"
+    },
+    {
+      "candidate_title": "Holding mentality at bottoms is the most important factor — balanced portfolio as backstop",
+      "citations": [
+        {
+          "bound_cid": "NA",
+          "bound_pid": "222402238",
+          "chunk_id": "goubujiao_xueqiu_corpus:p351:0350",
+          "kind": "xueqiu",
+          "lengthened": false,
+          "pid_corrected": false,
+          "quote": "这么多年，我一直觉得持股心态最重要……尤其是底部，很容易跌着跌着信心都跌没了。结果是该加仓的时候跑了去减仓"
+        },
+        {
+          "bound_cid": "NA",
+          "bound_pid": "222402238",
+          "chunk_id": "goubujiao_xueqiu_corpus:p351:0350",
+          "kind": "xueqiu",
+          "lengthened": false,
+          "pid_corrected": false,
+          "quote": "所以均衡的组合也很重要"
+        }
+      ],
+      "id": "gbj-holding-mentality-at-bottoms",
+      "path": "cards/hkex/10_behavioral_finance/gbj-holding-mentality-at-bottoms.md",
+      "reading_id": "10_behavioral_finance"
+    },
+    {
+      "candidate_title": "Skepticism toward corporate denials, manipulation, and engineered rallies",
+      "citations": [
+        {
+          "bound_cid": "NA",
+          "bound_pid": "224245810",
+          "chunk_id": "goubujiao_xueqiu_corpus:p4368:4367",
+          "kind": "xueqiu",
+          "lengthened": false,
+          "pid_corrected": false,
+          "quote": "我看了傳聞，將信將疑。想想當年$中国华融(02799)$ 也強調公司一切經營正常"
+        },
+        {
+          "bound_cid": "NA",
+          "bound_pid": "223154208",
+          "chunk_id": "goubujiao_xueqiu_corpus:p2273:2272",
+          "kind": "xueqiu",
+          "lengthened": false,
+          "pid_corrected": false,
+          "quote": "會不會有神秘資金到處買流量免費輸送給新东方，甚至動員各方人馬直接去直播間採購，做大GMV，然後在股市上收割？"
+        }
+      ],
+      "id": "gbj-skeptic-of-denials",
+      "path": "cards/hkex/10_behavioral_finance/gbj-skeptic-of-denials.md",
+      "reading_id": "10_behavioral_finance"
+    },
+    {
+      "candidate_title": "No leverage to take delivery: size sell-puts only to cash on hand, never oversell",
+      "citations": [
+        {
+          "bound_cid": "247433103",
+          "bound_pid": "223114673",
+          "chunk_id": "goubujiao_xueqiu_corpus:p2116:2115",
+          "kind": "xueqiu",
+          "lengthened": false,
+          "pid_corrected": false,
+          "quote": "用融資是找死"
+        },
+        {
+          "bound_cid": "247180488",
+          "bound_pid": "223114673",
+          "chunk_id": "goubujiao_xueqiu_corpus:p2098:2097",
+          "kind": "xueqiu",
+          "lengthened": false,
+          "pid_corrected": false,
+          "quote": "我sell put有多少錢就接多少的貨，絕不多賣。"
+        },
+        {
+          "bound_cid": "248219219",
+          "bound_pid": "224796566",
+          "chunk_id": "goubujiao_xueqiu_corpus:p5510:5509",
+          "kind": "xueqiu",
+          "lengthened": false,
+          "pid_corrected": false,
+          "quote": "大鵝已經很多了，我也沒有錢接貨了"
+        }
+      ],
+      "id": "gbj-no-leverage-bottom-line",
+      "path": "cards/hkex/11_risk_management/gbj-no-leverage-bottom-line.md",
+      "reading_id": "11_risk_management"
+    },
+    {
+      "candidate_title": "Ordinary investors should not touch derivatives — and never short, never go naked",
+      "citations": [
+        {
+          "bound_cid": "NA",
+          "bound_pid": "223114673",
+          "chunk_id": "goubujiao_xueqiu_corpus:p1789:1788",
+          "kind": "xueqiu",
+          "lengthened": false,
+          "pid_corrected": false,
+          "quote": "本人一向反對普通投資者觸碰任何的衍生工具，即便是sell call和sell put。"
+        },
+        {
+          "bound_cid": "NA",
+          "bound_pid": "223114673",
+          "chunk_id": "goubujiao_xueqiu_corpus:p1789:1788",
+          "kind": "xueqiu",
+          "lengthened": false,
+          "pid_corrected": false,
+          "quote": "高危遊戲，手中沒有100%的正股，千萬不要sell call；同理，沒有準備好全額接貨的錢，不要sell put。會死人㗎！"
+        },
+        {
+          "bound_cid": "NA",
+          "bound_pid": "227101293",
+          "chunk_id": "goubujiao_xueqiu_corpus:p6579:6578",
+          "kind": "xueqiu",
+          "lengthened": false,
+          "pid_corrected": false,
+          "quote": "如果多手做空0.5%倉位，已經爆倉，想想也蠻可怕的。對於一般人，不做空保平安！"
+        }
+      ],
+      "id": "gbj-ordinary-investors-avoid-derivatives",
+      "path": "cards/hkex/11_risk_management/gbj-ordinary-investors-avoid-derivatives.md",
+      "reading_id": "11_risk_management"
+    },
+    {
+      "candidate_title": "Refuse fat premiums on no-floor names: high IV is a warning, not free money",
+      "citations": [
+        {
+          "bound_cid": "247154739",
+          "bound_pid": "223114673",
+          "chunk_id": "goubujiao_xueqiu_corpus:p2066:2065",
+          "kind": "xueqiu",
+          "lengthened": false,
+          "pid_corrected": false,
+          "quote": "阿里健康那些，我怎麼敢碰啊？都沒底"
+        },
+        {
+          "bound_cid": "247157237",
+          "bound_pid": "224083814",
+          "chunk_id": "goubujiao_xueqiu_corpus:p4041:4040",
+          "kind": "xueqiu",
+          "lengthened": false,
+          "pid_corrected": false,
+          "quote": "不敢買呀！"
+        }
+      ],
+      "id": "gbj-refuse-fat-premium-no-floor",
+      "path": "cards/hkex/11_risk_management/gbj-refuse-fat-premium-no-floor.md",
+      "reading_id": "11_risk_management"
+    },
+    {
+      "candidate_title": "Stock Connect (港股通) cannot trade HK options",
+      "citations": [
+        {
+          "bound_cid": "245245932",
+          "bound_pid": "222375639",
+          "chunk_id": "goubujiao_xueqiu_corpus:p320:0319",
+          "kind": "xueqiu",
+          "lengthened": false,
+          "pid_corrected": false,
+          "quote": "沒法"
+        },
+        {
+          "bound_cid": "248103841",
+          "bound_pid": "222375639",
+          "chunk_id": "goubujiao_xueqiu_corpus:p349:0348",
+          "kind": "xueqiu",
+          "lengthened": false,
+          "pid_corrected": false,
+          "quote": "你把股票轉到期權戶口就可以了"
+        },
+        {
+          "bound_cid": "247127787",
+          "bound_pid": "223990393",
+          "chunk_id": "goubujiao_xueqiu_corpus:p3761:3760",
+          "kind": "xueqiu",
+          "lengthened": false,
+          "pid_corrected": false,
+          "quote": "這兩年的觀察和統計"
+        },
+        {
+          "bound_cid": null,
+          "bound_pid": null,
+          "chunk_id": "hkex_stock_connect_explained:p009:0006",
+          "kind": "grounding",
+          "lengthened": false,
+          "pid_corrected": false,
+          "quote": "only A shares and ETFs are included in Shanghai and Shenzhen Connect. Other product types such as B shares, bonds, and other securities are not included"
+        }
+      ],
+      "id": "gbj-connect-cannot-trade-options",
+      "path": "cards/hkex/14_microstructure_and_trading/gbj-connect-cannot-trade-options.md",
+      "reading_id": "14_microstructure_and_trading"
+    },
+    {
+      "candidate_title": "HK option costs: ~0.3% exercise cost; lot size and stamp-duty mechanics",
+      "citations": [
+        {
+          "bound_cid": "244839614",
+          "bound_pid": "222375639",
+          "chunk_id": "goubujiao_xueqiu_corpus:p255:0254",
+          "kind": "xueqiu",
+          "lengthened": false,
+          "pid_corrected": false,
+          "quote": "每次一定看淸楚股數！"
+        },
+        {
+          "bound_cid": "247010174",
+          "bound_pid": "223990393",
+          "chunk_id": "goubujiao_xueqiu_corpus:p3747:3746",
+          "kind": "xueqiu",
+          "lengthened": false,
+          "pid_corrected": false,
+          "quote": "一張1000股哦，別弄錯"
+        },
+        {
+          "bound_cid": "245756661",
+          "bound_pid": "223114673",
+          "chunk_id": "goubujiao_xueqiu_corpus:p1859:1858",
+          "kind": "xueqiu",
+          "lengthened": false,
+          "pid_corrected": false,
+          "quote": "行權一樣要交印花稅，但是沒有行權就省下了"
+        },
+        {
+          "bound_cid": null,
+          "bound_pid": null,
+          "chunk_id": "ird_stamp_duty_hk_stock_rates:p001:0000",
+          "kind": "grounding",
+          "lengthened": false,
+          "pid_corrected": false,
+          "quote": "Contract Note for sale or purchase of any Hong Kong stock 0.1% of the amount of the consideration or of its value on every sold note and every bought note"
+        }
+      ],
+      "id": "gbj-hk-option-costs-and-lot-mechanics",
+      "path": "cards/hkex/14_microstructure_and_trading/gbj-hk-option-costs-and-lot-mechanics.md",
+      "reading_id": "14_microstructure_and_trading"
+    },
+    {
+      "candidate_title": "HK option liquidity is concentrated in a few mega-caps; pick market by liquidity not frequency",
+      "citations": [
+        {
+          "bound_cid": "247212904",
+          "bound_pid": "224093303",
+          "chunk_id": "goubujiao_xueqiu_corpus:p4108:4107",
+          "kind": "xueqiu",
+          "lengthened": false,
+          "pid_corrected": false,
+          "quote": "阿里騰訊中海油還可以，其他的真的不怎麼樣"
+        },
+        {
+          "bound_cid": "251251375",
+          "bound_pid": "222517599",
+          "chunk_id": "goubujiao_xueqiu_corpus:p655:0654",
+          "kind": "xueqiu",
+          "lengthened": false,
+          "pid_corrected": false,
+          "quote": "港股期權我基本上掛中間價一定會成交，美股期權卻經常出現掛中間價沒有成交的情況。我估計是因為行使價太多以及到期日太多的原故，價差的損失也是我的一個考慮"
+        },
+        {
+          "bound_cid": "246998840",
+          "bound_pid": "223990393",
+          "chunk_id": "goubujiao_xueqiu_corpus:p3737:3736",
+          "kind": "xueqiu",
+          "lengthened": false,
+          "pid_corrected": false,
+          "quote": "多久一次並不是問題，問題在於流動性。"
+        }
+      ],
+      "id": "gbj-hk-option-liquidity-megacaps",
+      "path": "cards/hkex/14_microstructure_and_trading/gbj-hk-option-liquidity-megacaps.md",
+      "reading_id": "14_microstructure_and_trading"
+    },
+    {
+      "candidate_title": "实物股票 route: convert red-chips to physical certificates to escape dividend tax",
+      "citations": [
+        {
+          "bound_cid": "248111703",
+          "bound_pid": "222999679",
+          "chunk_id": "goubujiao_xueqiu_corpus:p1548:1547",
+          "kind": "xueqiu",
+          "lengthened": false,
+          "pid_corrected": false,
+          "quote": "762、883、941如果在香港證券行持有就要+10%，但是提取實物，就可以豁免"
+        },
+        {
+          "bound_cid": "245571951",
+          "bound_pid": "222999679",
+          "chunk_id": "goubujiao_xueqiu_corpus:p1508:1507",
+          "kind": "xueqiu",
+          "lengthened": false,
+          "pid_corrected": false,
+          "quote": "所有股票都可以辦理，但是只有紅籌股才可以逃稅"
+        },
+        {
+          "bound_cid": "246170286",
+          "bound_pid": "222999679",
+          "chunk_id": "goubujiao_xueqiu_corpus:p1514:1513",
+          "kind": "xueqiu",
+          "lengthened": false,
+          "pid_corrected": false,
+          "quote": "可以，但是依然要10%稅，所以轉成石鼓變得沒有意義"
+        },
+        {
+          "bound_cid": null,
+          "bound_pid": null,
+          "chunk_id": "ifec_physical_share_certificates:p001:0001",
+          "kind": "grounding",
+          "lengthened": false,
+          "pid_corrected": false,
+          "quote": "make sure that they are registered in your name, so that the share registrar can send you dividends"
+        }
+      ],
+      "id": "gbj-physical-cert-route-redchip-dividends",
+      "path": "cards/hkex/14_microstructure_and_trading/gbj-physical-cert-route-redchip-dividends.md",
+      "reading_id": "14_microstructure_and_trading"
+    },
+    {
+      "candidate_title": "HK dividend tax: red-chip vs H-share withholding mechanics",
+      "citations": [
+        {
+          "bound_cid": "248111703",
+          "bound_pid": "222375639",
+          "chunk_id": "goubujiao_xueqiu_corpus:p314:0313",
+          "kind": "xueqiu",
+          "lengthened": false,
+          "pid_corrected": false,
+          "quote": "有一些不用交，有一些要交10%，比如392、934，完全不用交，762、883、941如果在香港證券行持有就要+10%，但是提取實物，就可以豁免"
+        },
+        {
+          "bound_cid": "246172648",
+          "bound_pid": "222375639",
+          "chunk_id": "goubujiao_xueqiu_corpus:p340:0339",
+          "kind": "xueqiu",
+          "lengthened": false,
+          "pid_corrected": false,
+          "quote": "因為是紅籌股，母公司在香港注冊，按例個人投資者不用交稅。"
+        },
+        {
+          "bound_cid": null,
+          "bound_pid": null,
+          "chunk_id": "ifec_physical_share_certificates:p001:0001",
+          "kind": "grounding",
+          "lengthened": false,
+          "pid_corrected": false,
+          "quote": "make sure that they are registered in your name, so that the share registrar can send you dividends"
+        }
+      ],
+      "id": "gbj-redchip-vs-hshare-withholding",
+      "path": "cards/hkex/14_microstructure_and_trading/gbj-redchip-vs-hshare-withholding.md",
+      "reading_id": "14_microstructure_and_trading"
+    },
+    {
+      "candidate_title": "Honest attribution and sizing of the option-income sleeve",
+      "citations": [
+        {
+          "bound_cid": "246481199",
+          "bound_pid": "223114673",
+          "chunk_id": "goubujiao_xueqiu_corpus:p1914:1913",
+          "kind": "xueqiu",
+          "lengthened": false,
+          "pid_corrected": false,
+          "quote": "三月上旬sell put至今，三個多月，只計算占用10%的資金，sell put sell call帶來的賬面收益19%，約為股票組合創收1.9%。"
+        },
+        {
+          "bound_cid": "NA",
+          "bound_pid": "223625482",
+          "chunk_id": "goubujiao_xueqiu_corpus:p2946:2945",
+          "kind": "xueqiu",
+          "lengthened": false,
+          "pid_corrected": false,
+          "quote": "這可能與sell put主力對象$阿里巴巴-SW(09988)$ $腾讯控股(00700)$ $中国太保(02601)$ 這幾個月走勢溫和向上有關，實驗繼續…"
+        },
+        {
+          "bound_cid": "246483907",
+          "bound_pid": "223625482",
+          "chunk_id": "goubujiao_xueqiu_corpus:p2948:2947",
+          "kind": "xueqiu",
+          "lengthened": false,
+          "pid_corrected": false,
+          "quote": "所以還要實驗，如果是700，sell put和持有實股就就差很遠了。"
+        }
+      ],
+      "id": "gbj-honest-overlay-attribution",
+      "path": "cards/hkex/15_performance_and_attribution/gbj-honest-overlay-attribution.md",
+      "reading_id": "15_performance_and_attribution"
+    }
+  ],
+  "errors": [],
+  "schema_version": "hkex.emit_practitioner_cards.v1"
+}
