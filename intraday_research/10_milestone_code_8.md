@@ -1382,5 +1382,812 @@ async fn run(
 }
 ```
 
+*Thinking...*
 
- 
+> Looking at the documents the user has provided, they're describing a Rust-based HK intraday trading framework organized across multiple milestones, with M1 covering the core data layer and M2 focusing on the factor engine.
+> 
+> The user's prompt appears to have two conflicting task statements—the first references an M9 document that isn't actually attached, while the second asks me to evaluate whether the framework is complete and either build the next milestone or conduct a code review. Since only M1 through M8 are provided, I need to assess the current state of the framework and determine what comes next.
+> 
+> Looking at the blueprint against what's been built, I can see that most of the core crates and binaries are implemented through M8, but there's one critical gap: hkq-recon, the reconciliation binary, has never been built. The milestone docs consistently flag this as blocked on an independent official-close data source—a dependency that's been outstanding since M1. This is the only blueprint binary still missing, which means the framework is technically incomplete until that's resolved. The independent official-close source needs to be something other than Tiger to avoid circularity. EastMoney could work since it supports HK securities through its push2 API, and the codebase already has the pattern for parsing EastMoney data. Yahoo is research-gated and can't be used in production binaries. HKEX has an official daily quotes endpoint but it's undocumented. The cleanest approach fits the existing pattern: extend EastMoney with an `official_closes` capability using a config URL template.
+> 
+> For Milestone 9, I need to define the scope carefully around the `hkq-recon` binary and how to wire in the EastMoney implementation. The challenge is that M1-M8 crates are frozen, so modifications follow a surgical append pattern rather than direct edits. Adding a new config field to EastMoneyCfg with `#[serde(default)]` would keep backward compatibility with existing configs, but I need to check whether modifying a frozen struct counts as a breaking change under the established precedent.
+> 
+> The `hkq-recon` binary itself would load the config and calendar, fetch official closes from the independent provider for a given date, run the existing `reconcile_closes` logic, and quarantine any breached partitions while reporting missing entries. There's also the question of whether the recon process should trigger the `HaltReason::ReconBreach` variant that's been defined since M3 but never actually produced by anything — though since recon runs as a separate nightly process, the mechanics of how it would halt the main system need clarification.
+> 
+> The cleanest approach mirrors the CUSUM pattern: recon writes a latched breach marker to `_state/recon.json` when it detects a breach, and `hkq-live`'s startup gate checks that file before proceeding. This gives `ReconBreach` its producer and keeps the halt logic consistent across different monitoring systems. The question then becomes where to house the recon gate logic — it belongs in `hkq-validate` (which already owns state conventions and monitoring) rather than splitting it between `hkq-data` (which has the recon math) and `hkq-risk` (which owns the kill switch). The `hkq-recon` binary itself would live in its own crate and depend on `hkq-data` for the reconciliation logic, while `hkq-live` reads the latch state through `hkq-validate`. Settling on hkq-validate::recon_gate as the home for the latch — it mirrors the cusum precedent and keeps monitoring and reconstruction artifacts together. Now I'm designing the official-close provider: a new trait in hkq-data that outputs [code, close_official], with an EastMoney implementation that pulls from a configurable URL template, maps HK secids to EastMoney's scheme, and parses the f12 (code) and f2 (close price) fields into a simple versioned parser.
+> 
+> For the secid mapping, I'm adding two defaulted config fields to EastMoneyCfg — `hk_close_url_template` and `hk_secid_prefix` — which keeps old configs working while enabling the new capability. This is a surgical patch in the established style. I'm considering whether EastMoney is independent enough for production or if we should eventually swap in HKEX's official EOD data behind the same trait, but for now the provider-agnostic design lets us defer that choice.
+> 
+> On the nightly wiring side, the blueprint keeps `hkq-recon` as a separate binary, so I'll leave hkq-nightly untouched except for a one-line patch to update the stale "recon skipped" log message to point at the separate recon binary. For the reconciliation universe, I need to decide whether to compare against all codes in the partition or just the official universe codes.
+> 
+> On artifacts and state, I'm moving away from per-date report files toward a minimal state file at `_state/recon.json` that tracks breach status, the breach date if latched, and the last clean date — operators can un-latch by editing the file directly, same pattern as CUSUM. For the live gate, I'll add a call to `recon_gate::startup_gate` in hkq-live's main.rs alongside the existing cusum gate check.
+> 
+> Now I'm reconsidering whether hkq-recon should be PATH A (build it) or PATH B (defer it). The user's criterion flags missing critical modules, and hkq-recon has been a standing gap since M1. Earlier milestones deferred it as a "data acquisition" problem — no independent source configured — but looking closer, the codebase already has an EastMoney client with quote templates, so the acquisition mechanism exists in-pattern. What was actually missing was the capability trait, the binary itself, and the latch/gate logic — those are code facts, not data facts. The source question (HKEX OMD-C vs. EastMoney) was the blocker, but the M1 precedent shows how to wire an undocumented endpoint behind config with recon as a tripwire.
+> 
+> So I'm weighing two options: build hkq-recon with official closes (closes the oldest gap, completes the blueprint's binary list, produces HaltReason::ReconBreach, and implements the §5 data integrity mandate that quarantines bad partitions), or pivot to benchmark ingestion plus the Hansen SPA test (completes §4, needs HSI and sector ETF series ingestion). The recon path feels foundational since the entire learning stack consumes lake partitions and a silent bad close corrupts everything downstream.
+> 
+> Looking at precedence: build what unblocks the most with inputs that already exist and minimal vendor surface. Recon wins—it needs just one quote endpoint for ~500 codes' closes, whereas SPA requires new persistent benchmark datasets. I'm also considering whether to close the Fills venue-tag gap (add a venue column to fills_frame for κ calibration), but that expands scope into schema versioning, and M9 discipline calls for one coherent theme per milestone.
+> 
+> So Milestone 9 is **The Tripwire**: `hkq-recon` plus independent official-close capability with a recon latch gate. Now I'm designing the code in detail—adding a new workspace member, defining an OfficialCloseProvider trait in the data layer that fetches closing-auction closes from EastMoney (which are live quotes after market close but can't serve historical dates), and validating that the requested date matches today.
+> 
+> The provider will error if asked for historical closes, since EastMoney only has same-day data. The recon binary defaults to today and runs in the evening cron chain after nightly, so the operator needs to know it'll fail if run after midnight HKT. I'm also adding config fields to the EastMoney client for the batch quote URL template and HK market prefix.
+> 
+> Adding config fields... Implementing the trait method to fetch official closes from EastMoney, which validates that the date is today (since the live-quote endpoint only serves same-day data), then batches the stock codes into chunks of around 80 to keep URLs manageable, builds the secid format, parses the response, and returns a DataFrame with the official closing prices.
+> 
+> Now I'm thinking through the reconciliation logic — when official data comes back, some codes might be missing if they're halted, and the recon process needs to distinguish between codes we're missing versus codes the official source is missing. The clean state requires no price breaches and no missing codes from our side, but I'm weighing whether missing data should quarantine the partition or just trigger a loud warning for operator investigation, since the philosophy elsewhere favors degradation over blocking. So missing_official is just a warning since vendors drop suspended names anyway. For breaches—price contradictions—I'm quarantining the data and latching the gate to halt trading until an operator manually resets. missing_ours is a non-zero exit with loud logging but no latch, since it's an ingestion gap that degrades panels rather than corrupts prices.
+> 
+> Now I'm building the recon latch module in Rust. Defining a state struct that tracks whether a breach occurred, when it happened, and the most recent clean reconciliation date for the audit trail.
+> 
+> Defining the core functions: loading and saving state atomically, latching a breach into the state file, recording clean reconciliations (which never un-latch), and a startup gate that halts trading if a breach is latched. Mirroring the cusum pattern with tests for persistence, non-un-latching, halt behavior, and loud errors on corrupt files.
+> 
+> Then wiring the new recon binary crate with its dependencies and main entry point that runs at 18:30 nightly, comparing official closes against stored daily bars and quarantining plus latching any price deltas exceeding one tick. A quarantined partition creates a silent gap in the data that panels would bridge across, which is why the latch halts trading until the operator re-ingests and clears it. I'm adding a recon gate check in the live engine startup that reads the latch state and either logs a halt condition or clears the gate, with error handling for corrupt state files.
+> 
+> Now I'm deciding how to handle corrupt latch files — unlike cusum which warns and continues on missing data, a corrupt recon latch could hide a breach, so the safer approach is to halt on any unreadable state and force operator attention.
+> 
+> I'm implementing this by having startup_gate itself call the kill switch with ReconBreach when load fails, then return the error to hkq-live which logs it (already halted). For hkq-nightly, I'm replacing the recon warning with a single-line pointer to the independent hkq-recon tool. I'm also adding the EastMoney close URL template and secid prefix to the config, then building out unit tests for the parser with a helper function to format secids from prefix and code.
+> 
+> For the async official_closes tests, I need to handle the date guard and unsupported paths without making actual HTTP calls — the date check happens before any network request, and I can construct an EastMoneyCfg directly in the test using toml parsing to fill in all the required fields with serde defaults. Since hkq-data already has tokio as a workspace dependency, I can use #[tokio::test] for async tests. I'll add a test module to eastmoney.rs covering the unsupported paths and parser logic, then move on to testing the recon_gate roundtrip and latch persistence.
+> 
+> For the binary itself, I'll keep main.rs thin and push testable logic into libraries — consistent with how other binaries in the project are structured. The real value is in testing reconcile_closes, which wasn't unit-tested in the earlier milestone. I'll add an integration-style test to hkq-data/src/recon.rs that writes a small daily_bars partition to a temp lake with matching, breaching, and missing records, then verifies the report fields account for tick-aware price differences correctly.
+> 
+> On the schema side, I need to ensure the official DataFrame has the right columns — code as u32 and close_official as f64. The provider returns those plus a date column, which is harmless. I'll add a constant for "close_official" to model::cols and use it in both the eastmoney provider and recon to keep things consistent, even though recon.rs is already using the literal. For the official_closes logic, I'm thinking through how to handle the response items that carry the code as a string (f12 field) — I'll parse those via StockCode and collect the code-price pairs, letting recon handle any extras defensively.
+> 
+> Building a HashSet of requested codes to filter the parsed rows prevents false alarms from codes outside our universe. If parsing yields zero rows, I'll return a SchemaDrift error like the southbound provider does. I'm also including the DATE column for provenance consistency with other providers. For chunking the HK secids, I'm setting a chunk size around 80 to respect URL length limits while staying well within what the push2 endpoint can handle, then iterating through chunks, formatting each secid with the prefix, fetching the data, parsing it by schema version, and filtering to only the requested codes.
+> 
+> Handling suspended stocks (which return "-" for price) naturally skips them since the parser can't convert that to a float. I'm keeping error propagation tight — any transport error fails the whole call since recon is a tripwire and partial data weakens the check. For the main recon binary, I'm importing the necessary modules from hkq-core and hkq-data, and since hkq-validate depends on hkq-data, having hkq-recon depend on both avoids any circular dependency. I'll follow the established pattern of duplicating the universe loader helper across binaries like hkq-nightly and hkq-live already do.
+> 
+> The flow checks if the date is a trading day, ensures the daily bars partition exists, loads the EastMoney config and A/H mapping, fetches official closes, then reconciles them against the lake data. If breaches are found, the partition gets quarantined and a detailed error is raised; otherwise the clean status is recorded.
+> 
+> I'm verifying the lake.root() method exists and thinking through the recon_gate functions — latch_breach loads the state, sets breached=true on first occurrence without overwriting, while record_clean updates the last_clean_date to the maximum of existing or current date. For the worst breach detail, I'm using max_by_key on the breaches iterator with abs_diff as the key, since Decimal is Copy and Ord.
+> 
+> Now I'm building the recon_gate module with the ReconState struct and helper functions to load and save state from a JSON file in the lake's _state directory.
+> 
+> Writing module functions... Checking whether hkq-validate already has the Lake dependency it needs, and confirming the error variants are already available so no changes to error.rs are required. I'll skip adding a recon-gate-status job to main.rs to keep it unchanged. Now I need to update the workspace Cargo.toml to include the new hkq-recon crate as a member. For the Eastmoney config changes, I'll need to insert the new fields into the EastMoneyCfg struct and update the default implementation — I'll present this as a precise block insertion after the existing fields rather than reprinting the whole file. I'll use fully qualified `std::collections::HashSet` to avoid needing a new import, keeping the patch append-only. I'm adding a `CLOSE_OFFICIAL` constant to the model's cols module with documentation, then referencing it in eastmoney.rs while recon.rs keeps its literal string. Now I'm writing the test module for recon.rs that validates tick-aware breach detection and missing data sets. I'm verifying the tick logic for the breach detection: at 70.10 the tick size is 0.050, so a difference of 0.10 exceeds that threshold and correctly flags as a breach, while 60.05 differs by exactly one tick which doesn't breach. The reconciliation report correctly counts three checked entries, identifies the one breach, marks 1299 as missing from our data, and returns false for clean since there's a breach and missing entries. Now I'm looking at a test for the Eastmoney parser...
+> 
+> Writing parser test... Writing test assertions...
+> 
+> I'm verifying that the guard conditions work correctly—the template-missing case returns Unsupported for today's date, and the historical date case also returns Unsupported even with the template present. I should also add an empty codes guard that returns a Config error before checking other conditions, and I need to make sure the date parameter stays explicit in the signature for clarity and future extensibility. Now I'm ready to apply the same guard pattern to the hkq-live patch right after the CUSUM gate match. Writing Cargo.toml... Setting up the main async entry point...
+> 
+> I'm loading the EastMoney configuration and A/H stock mapping, then fetching official closing prices for the universe codes. After reconciling the closes against our lake data, I'm building a summary report that captures the reconciliation results—how many records checked, any price breaches found, and which stocks are missing from either source. If there are breaches, I'm quarantining the daily bars partition for that date. Checking the borrow semantics — worst is an Option reference into report, and I'm using it after the quarantine call without any mutations, so that's fine. The abs_diff field is Copy, so keying by value works. Quarantine happens before the latch write, and both operations are idempotent enough that the order is safe. The DayKind check correctly skips only Closed days, leaving HalfDay valid for recon. The DataFrame height() method is available without extra imports, and the JSON serialization handles the Decimal-to-string conversion properly. Now I need to add the hkq-recon member to the workspace TOML and set up the strategy config block for the eastmoney source with the HK close URL template.
+> 
+> For the milestone narrative, I'm working from ten attached documents (the proposal, report, and milestones 1–8), and there's no 11th document despite the first prompt block mentioning one — so M8 is the current frontier. The PATH A/B instruction is the operative one. I need to frame this in the style of the previous milestone docs: dense opening on why this is next, scope and deferred items, engineering decisions in prose, file tree, code, and honest gaps. I should note upfront that all documents are attached and I don't have a web fetch tool, only search (which isn't needed here). PATH A reveals that the blueprint's bin list includes hkq-recon, which doesn't exist yet.
+> 
+> The recon binary is the only remaining blueprint component — every other crate and binary exists. The lake's integrity check (the quarantine mandate from §5) has been stubbed since M1 with a nightly warning, and the typed ReconBreach reason in the kill switch (from M3) has no producer. The other named remainders are either blocked by external constraints (SPA benchmarks need new datasets, §3.7 needs a CPCV consumer, venue-tag schema v2 is a data-layer decision) or are governance-by-design. Recon's data acquisition is just one config-templated quote endpoint — the same pattern as the M1 EastMoney setup. The key engineering decision is independence over officialdom: the tripwire needs a source outside Tiger, so EastMoney sits behind a config template with a schema-versioned parser, while HKEX OMD-C EOD remains the canonical production substitute behind the same new trait — applying the M1 precedent to closes. A live-quote endpoint can only certify the session just ended; the provider returns a typed Unsupported for historical dates rather than fabricating history, and an EOD-file provider would handle the archive.
+> 
+> Breach semantics mirror CUSUM — a persistent JSON latch with first-breach-wins and operator-only reset — because a quarantined partition leaves a gap that rolling spans would silently bridge; the halt is what makes quarantine safe. Unlike CUSUM's cold-start-friendly skip, recon treats a corrupt state file as breached; a clean state must be provable (missing file on cold start is clean by default, only corruption halts). Price contradictions trigger quarantine and latch, while ingest holes page without quarantine since there's nothing to quarantine — data is absent, not wrong — and never latch; missing_official is just informational. The implementation is additive: hkq-live gains one fully-qualified gate call, the nightly stale gap warning becomes a pointer to the new binary, and recon.rs stays byte-identical. The chunked fetch bound is transport bookkeeping (following the M6 VENUE_POLL precedent), not a strategy constant. The honest gap is that the official source is a same-day quote endpoint, so historical backfill recon is impossible until an EOD-file provider like HKEX OMD-C daily quotes lands behind OfficialCloseProv.
+> 
+> Recon covers DailyBars closes only — bars_1m, flows, and auction partitions have manifests as tripwires but no cross-vendor check; extending recon to flows versus the HKEX Connect page is a named follow-up. Adjusted close is reconciled implicitly only when adjust-mode is raw; once kline_adjust is verified, the official source has no adjusted series, so corporate-action recon needs an actions dataset. The recon latch reset is deliberately manual with no auto-unlatch job by design. I'm defining a chunked fetch constant as a module-level value with a comment explaining it's transport bookkeeping, not a strategy constant, and checking that my DataError variants match the expected types. Now I'm wondering whether the trait implementation needs to normalize duplicates.
+> 
+> I'll add a defensive deduplication step using a HashSet to track seen codes and skip repeats — it's cheap insurance. The dataframe construction checks for empty results and returns a SchemaDrift error if nothing was parsed, then builds the output with CODE, CLOSE_OFFICIAL, and DATE columns. I'm verifying the EastMoneyClient::new signature takes the config and AhMap, and for the guard test I'm only exercising the Unsupported paths without HTTP calls. For the recon gate test, I'm setting up a temporary directory path with a timestamp.
+> 
+> Writing test cases... Updating lib.rs to export the recon_gate module and ReconState type, then verifying the Cargo.toml dependencies are already in place. For hkq-nightly, I'm replacing the old warning about the missing close source with an info message directing users to run the separate hkq-recon binary after the nightly job completes, since reconciliation now happens independently and can halt the system if breaches occur.
+> 
+> Now I'm thinking through the OfficialCloseProvider trait signature — it takes a slice of stock codes and outputs records with code, official close price, and date, with clear documentation about the independence requirement. Mentally walking through the eastmoney implementation: the client struct holds an Arc to Inner which contains the config and HTTP client, async_trait is imported, Hong Kong timezone is available, date comparisons work with NaiveDate, and the code formatting with the prefix works correctly since StockCode implements Display. The config template is safely borrowed via let-else on the Option, and the recon module will call official_closes with the codes slice.
+> 
+> For hkq-recon's argument parsing, I'm mirroring hkq-nightly's approach — config path first, optional date second, no force flag — and copying over the tracing subscriber initialization. The summary println before bail is useful for cron visibility. I'm skipping an asof-style inspection tool for the validate binary since jq on the JSON output is sufficient.
+> 
+> For the answer format, I have ten attached documents covering the report through M8, with M9 being the tripwire milestone that completes the missing pieces. I'll lay out PATH A with the specific gaps, define M9's scope and deferred items, explain the engineering decisions, show the file tree and workspace config, then provide the surgical patches for the model columns, provider trait implementation, and remaining code changes.
+> 
+> Adding the EastMoney config fields... Implementing the trait method... Adding the constant definition for close_official in the model, then wrapping up with honest gaps and a hand-off to the next milestone — noting that adjustment handling is already consistent (raw close stored as-is), corporate action verification remains future work, and sandbox lakes naturally skip reconciliation. I'm committing to PATH A since it's nearly complete, with PATH B (hkq-recon) deferred.
+> 
+> For the opening, I'll acknowledge that all ten documents are in hand so no fetching is needed, and flag that the eleventh document isn't attached — meaning M8 is the verified frontier. Then I'll tighten the "why next" section: the workspace has three of four binaries, and hkq-recon is the critical gap — it's been named since M1, the spec mandates nightly reconciliation with quarantine on breach, the risk system has carried the typed halt reason since M3 with no producer, and every learning loop trains on unverified lake prices. M7/M8 filed it as "data acquisitions, not code," but that's only half-true — the vendor endpoint is already wired, and the rest (trait, parser, binary, quarantine logic, safety latch) is pure code work.
+> 
+> The quarantine safety argument is key: a silently-bridged hole in partitions (shifts and rolling windows skip the missing date) means quarantine without a halt is worse than no quarantine at all — the latch and startup gate are what make the §5 mandate actually implementable. I need to be precise about the claim: manifests exist as row/schema tripwires, but no price cross-check happens. I'll note that verifying Bars1m is out of scope. Now I'll write the full section, keeping the code APIs consistent with what's established, double-checking the error types and dependencies, and anchoring the patches exactly — hkq-live goes after the CUSUM startup-gate match block, and the nightly swap replaces the two-line comment block. Test count is five total across the three modules.
+> 
+> Checking the glob import pattern in the test modules — `use super::*;` brings in both the items defined in the parent module and everything it imported, so StockCode, DataError, and other types are available. For the async test, chrono::Utc comes through the parent's imports as well.
+> 
+> The test constructs an AhMap (BTreeMap) from the stock code and price pair, and pred_opt works on NaiveDate as expected. The main binary parses the config path and optional date argument cleanly, with the partition existence check happening before any official close fetch, and the summary printed after any breach bailout.
+> 
+> Now I'm laying out the final response: preamble covering attachments and the missing 11th document, then declaring PATH A with the concrete list of gaps, followed by Milestone 9's rationale and scope. The engineering decisions section flows into the full tree structure, workspace configuration, and all the patches needed across model, provider, eastmoney (two blocks), recon test, nightly swap, and live insert. Then hkq-validate gets its lib.rs and recon_gate.rs in full, hkq-recon crate complete, config addition, and finally the honest gaps leading into Milestone 10.
+
+All ten documents are attached in full, so I worked directly from them — no fetching needed (I have a search tool only, and it isn't required here). One manifest note before anything else: the task list references an eleventh document (`11_milestone_code_9.md`), but it is not among the attachments. The verified frontier is therefore M8 — the judgment — and this assessment builds on exactly that state.
+
+# Assessment — PATH A
+
+The framework is *almost* complete, but not complete, and the gap is not cosmetic. The blueprint's workspace topology ends with four binaries: `hkq-nightly / hkq-live / hkq-backtest / hkq-recon`. Three exist. The fourth has been a named gap in every single hand-off since M1 — the nightly binary still logs `"recon skipped: independent official-close source not configured (M1 gap)"` every night — and three structural facts hang off it: report §5 mandates nightly reconciliation with "|Δ| > 1 tick ⇒ quarantine the partition and page the operator," and that mandate is unimplemented at the binary level; `hkq-risk` has carried a typed `HaltReason::ReconBreach` since M3 with **no producer** (the blueprint's kill-switch topology promised one); and every learning loop the system now runs — ICIR weights, the AlphaMap, κ calibration, the DSR itself — trains on lake partitions whose *prices* no independent source has ever confirmed (the `_manifest.json` tripwire catches schema drift, not wrong closes).
+
+M7/M8 filed recon under "data acquisitions, not code." Examined against the M1 pattern, that judgment is only half-true: the acquisition is one config-templated quote endpoint on a vendor already wired with the rate-limited substrate and schema-versioned-parser discipline (EastMoney), while everything else — the capability trait, the parser, the binary, the quarantine wiring, and the latch that makes quarantine *safe* — is code. So: **PATH A.**
+
+# Milestone 9 — The Tripwire (`hkq-recon` + independent official closes + the recon latch)
+
+**Why this must be next.** Beyond completing the blueprint's binary list, there is a soundness argument specific to this codebase: `Lake::quarantine` has existed and been tested since M1, but quarantining a `DailyBars` partition leaves a *hole* that the factor panels silently bridge — `shift(1).over(code)` and every rolling window simply span the missing date, so `r_on` quietly becomes a two-day return and every derived moment inherits the lie. Quarantine without a trading halt is therefore worse than no quarantine at all. The missing piece is the same latch discipline CUSUM established in M5: breach ⇒ persistent latched state ⇒ `hkq-live` startup gate halts before any order intent ⇒ only an operator edit resumes trading. That closes the §5 mandate, gives `ReconBreach` its producer, and retires the oldest standing gap in the project.
+
+**In scope:** a new `OfficialCloseProvider` capability trait in `hkq-data`; an EastMoney implementation behind a config URL template with a schema-versioned parser (independent of Tiger — a tripwire needs a *different* vendor, and HKEX OMD-C EOD remains the canonical production substitute behind the same trait, per §5); the `recon_gate` module in `hkq-validate` (persistent latch, first-breach-wins, operator-only reset — the CUSUM pattern verbatim); the `hkq-recon` binary (fetch → `reconcile_closes` → quarantine + latch + non-zero exit on breach); the `hkq-live` startup gate as the kill switch's **third** producer; a unit test for M1's never-tested `reconcile_closes`; and retirement of the nightly gap log. **Deferred:** historical-date recon (a live-quote endpoint certifies only the session just ended; an EOD-file provider slots behind the same trait), recon of `Bars1m`/`Flows` against second sources, the SPA benchmark family, venue-tagged Fills, and §3.7 — all unchanged owners.
+
+Engineering decisions beyond the blueprint sketch, briefly. Independence beats officialdom for a tripwire: EastMoney ≠ Tiger is the property that matters (different vendor, transport, failure modes), so it ships now behind config, with the report's canonical HKEX source as a named substitution point — the M1 precedent applied to closes. Same-day honesty: a quote endpoint after the CAS *is* the official close for today but cannot serve history, so the provider refuses historical dates with a typed `Unsupported` instead of fabricating them. Breach versus hole are different failures: price contradictions quarantine + latch; ingest holes (`missing_ours`) page via non-zero exit but neither quarantine (nothing is *wrong*, something is *absent*) nor latch; `missing_official` is informational (vendors drop suspended names). Unlike CUSUM's cold-start-friendly skip, an *unreadable* recon latch halts — a corrupt file could be hiding a breach, and a clean state must be provable; a *missing* file is the documented clean cold start. `cols::CLOSE_OFFICIAL` is added for producers while `recon.rs`'s already-documented literal stays byte-identical. The fetch chunk bound is transport bookkeeping, not a strategy constant (the M6 `VENUE_POLL` precedent). And no engine surgery anywhere: `hkq-live` gains one fully-qualified gate call, `hkq-nightly` swaps one stale log line, everything else is additive.
+
+```text
+hkq/
+├── Cargo.toml                        (updated: member)
+└── crates/
+    ├── hkq-data/src/{model,provider,eastmoney,recon}.rs   (surgical appends)
+    ├── hkq-validate/src/{lib,recon_gate}.rs               (lib updated; recon_gate NEW)
+    ├── hkq-nightly/src/main.rs                            (one-block swap)
+    ├── hkq-live/src/main.rs                               (one insert block)
+    └── hkq-recon/
+        ├── Cargo.toml                                     (NEW)
+        └── src/main.rs                                    (NEW — the blueprint's fourth binary)
+```
+
+## Workspace
+
+```toml
+# Cargo.toml
+[workspace]
+resolver = "2"
+members = [
+  "crates/hkq-core", "crates/hkq-data", "crates/hkq-factors",
+  "crates/hkq-signal", "crates/hkq-risk", "crates/hkq-exec",
+  "crates/hkq-engine", "crates/hkq-validate", "crates/hkq-nightly",
+  "crates/hkq-live", "crates/hkq-backtest", "crates/hkq-recon",
+]
+
+[workspace.package]
+edition = "2021"
+rust-version = "1.83"
+
+[workspace.dependencies]
+tokio        = { version = "1.38", features = ["full", "test-util"] }
+tokio-stream = "0.1"
+reqwest      = { version = "0.12", default-features = false, features = ["json", "gzip", "rustls-tls"] }
+serde        = { version = "1", features = ["derive"] }
+serde_json   = "1"
+# Feature set unchanged since M2 — M9 adds no new expression surface.
+polars       = { version = "0.46", features = [
+  "lazy", "parquet", "dtype-date", "dtype-datetime",
+  "ewma", "rank", "log", "abs", "rolling_window", "clip", "sign",
+  "is_in", "round_series", "pct_change", "cum_agg", "partition_by",
+  "semi_anti_join", "temporal", "dynamic_group_by",
+] }
+rust_decimal        = { version = "1.35", features = ["serde-str"] }
+rust_decimal_macros = "1.35"
+chrono       = { version = "0.4", features = ["serde"] }
+chrono-tz    = "0.9"
+nalgebra     = "0.33"
+thiserror    = "1"
+anyhow       = "1"
+async-trait  = "0.1"
+futures      = "0.3"
+governor     = "0.6"
+tracing      = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter", "json"] }
+rsa          = { version = "0.9", features = ["sha1"] }
+sha1         = { version = "0.10", features = ["oid"] }
+base64       = "0.22"
+toml         = "0.8"
+```
+
+## Surgical patches to frozen crates
+
+In the M5/M6 style: anchored append/replace blocks; everything else in M1–M8 stays byte-identical.
+
+```rust
+// (append inside crates/hkq-data/src/model.rs `pub mod cols`)
+    /// M9: official closing-auction print from the INDEPENDENT recon source.
+    /// Matches the schema documented on `recon::reconcile_closes` (whose literal
+    /// stays byte-identical; this constant is for producers).
+    pub const CLOSE_OFFICIAL: &str = "close_official";
+```
+
+```rust
+// (append inside crates/hkq-data/src/provider.rs)
+#[async_trait]
+pub trait OfficialCloseProvider: Send + Sync {
+    /// Official closes for date `d`, from a source INDEPENDENT of the one that
+    /// wrote DailyBars (reconciling a vendor against itself is circular — the
+    /// M1 gap this trait closes). Output schema: [code: u32,
+    /// close_official: f64, date: str]. Providers that can only certify the
+    /// just-ended session (live-quote endpoints) MUST refuse other dates with
+    /// `DataError::Unsupported` rather than fabricate history.
+    async fn official_closes(&self, codes: &[StockCode], d: NaiveDate)
+        -> Result<DataFrame, DataError>;
+}
+```
+
+```rust
+// (insert inside crates/hkq-data/src/eastmoney.rs `pub struct EastMoneyCfg`,
+//  directly after `a50_window_enforced`)
+    /// M9: batch HK close-quote URL for the recon tripwire; `{secids}`
+    /// substituted. Must request float formatting (fltt=2) and fields f12
+    /// (code) + f2 (last price — equal to the official closing-auction print
+    /// once the session, incl. CAS, has ended). None ⇒ this client provides no
+    /// official closes and hkq-recon errors loudly.
+    #[serde(default)]
+    pub hk_close_url_template: Option<String>,
+    /// EastMoney market prefix for HKEX secids ("116" ⇒ "116.00700"). VERIFY.
+    #[serde(default = "default_hk_secid_prefix")]
+    pub hk_secid_prefix: String,
+```
+
+```rust
+// (append to crates/hkq-data/src/eastmoney.rs)
+fn default_hk_secid_prefix() -> String { "116".into() }
+
+/// URL-length bound for the close ulist (push2 handles ~100 secids comfortably).
+/// Transport bookkeeping, not a strategy constant (the M6 VENUE_POLL precedent).
+const CLOSE_CHUNK: usize = 80;
+
+/// push2 ulist close parser, schema v1: { data: { diff: [ { f12, f2 } ] } }.
+/// Requires fltt=2 so prices arrive as floats; suspended names serve "-" and
+/// drop out here (recon reports them as missing_official — informational).
+fn parse_ulist_close_v1(v: &Value) -> Result<Vec<(String, f64)>, DataError> {
+    let diff = v.pointer("/data/diff").and_then(Value::as_array)
+        .ok_or(DataError::SchemaDrift("eastmoney close ulist: /data/diff missing"))?;
+    let mut out = Vec::with_capacity(diff.len());
+    for item in diff {
+        let (Some(code), Some(px)) = (
+            item.get("f12").and_then(Value::as_str).map(str::to_string),
+            item.get("f2").and_then(Value::as_f64),
+        ) else { continue };
+        out.push((code, px));
+    }
+    Ok(out)
+}
+
+#[async_trait]
+impl OfficialCloseProvider for EastMoneyClient {
+    async fn official_closes(&self, codes: &[StockCode], d: NaiveDate)
+        -> Result<DataFrame, DataError>
+    {
+        let inner = &self.inner;
+        let Some(tpl) = inner.cfg.hk_close_url_template.as_deref() else {
+            return Err(DataError::Unsupported(
+                "eastmoney: hk_close_url_template not configured (no recon source)"));
+        };
+        if codes.is_empty() {
+            return Err(DataError::Config("official_closes: empty code list".into()));
+        }
+        // A live-quote endpoint certifies ONLY the session that just ended.
+        // Refusing history is honesty, not a limitation to paper over —
+        // historical recon needs an EOD-file provider behind this same trait
+        // (HKEX OMD-C daily quotes, report §5).
+        let today = Utc::now().with_timezone(&Hong_Kong).date_naive();
+        if d != today {
+            return Err(DataError::Unsupported(
+                "eastmoney official closes are same-day only (run hkq-recon T+0 evening)"));
+        }
+        let requested: std::collections::HashSet<u32> = codes.iter().map(|c| c.0).collect();
+        let mut seen: std::collections::HashSet<u32> = std::collections::HashSet::new();
+        let (mut out_codes, mut out_px) =
+            (Vec::with_capacity(codes.len()), Vec::with_capacity(codes.len()));
+        for chunk in codes.chunks(CLOSE_CHUNK) {
+            let secids: Vec<String> = chunk.iter()
+                .map(|c| format!("{}.{c}", inner.cfg.hk_secid_prefix))
+                .collect();
+            let url = tpl.replace("{secids}", &secids.join(","));
+            let v: Value = inner.http.get_json(&url, &[]).await?;
+            let rows = match inner.cfg.schema_version {
+                1 => parse_ulist_close_v1(&v)?,
+                _ => return Err(DataError::SchemaDrift(
+                    "eastmoney close ulist: unknown schema_version")),
+            };
+            for (em_code, px) in rows {
+                let Some(sc) = StockCode::parse(&em_code) else { continue };
+                if px.is_finite() && px > 0.0 && requested.contains(&sc.0) && seen.insert(sc.0) {
+                    out_codes.push(sc.0);
+                    out_px.push(px);
+                }
+            }
+        }
+        if out_codes.is_empty() {
+            return Err(DataError::SchemaDrift("eastmoney close ulist: zero rows parsed"));
+        }
+        let n = out_codes.len();
+        Ok(df!(
+            cols::CODE => out_codes,
+            cols::CLOSE_OFFICIAL => out_px,
+            cols::DATE => vec![d.to_string(); n],
+        )?)
+    }
+}
+
+#[cfg(test)]
+mod close_tests {
+    use super::*;
+
+    #[test]
+    fn close_parser_v1_shapes_and_drift() {
+        let v = serde_json::json!({ "data": { "diff": [
+            { "f12": "00700", "f2": 321.4 },
+            { "f12": "00005", "f2": "-" },   // suspended ⇒ skipped
+            { "f2": 1.0 },                    // no code ⇒ skipped
+        ]}});
+        let rows = parse_ulist_close_v1(&v).unwrap();
+        assert_eq!(rows, vec![("00700".to_string(), 321.4)]);
+        assert!(parse_ulist_close_v1(&serde_json::json!({})).is_err()); // SchemaDrift
+    }
+
+    #[tokio::test]
+    async fn official_closes_guards_fire_before_any_http() {
+        let cfg: EastMoneyCfg = toml::from_str(r#"
+            quote_url_template = "http://invalid.test/{secids}"
+            a50_url_template = "http://invalid.test/{secid}"
+            a50_secid = "1.000001"
+            southbound_url_template = "http://invalid.test/{date}"
+            southbound_unit = "CNY"
+        "#).unwrap();
+        let map: AhMap = [(StockCode(700), "1.600941".to_string())].into_iter().collect();
+        let today = Utc::now().with_timezone(&Hong_Kong).date_naive();
+
+        // No template ⇒ Unsupported (capability absent), zero HTTP.
+        let em = EastMoneyClient::new(cfg.clone(), map.clone());
+        assert!(matches!(
+            em.official_closes(&[StockCode(700)], today).await.unwrap_err(),
+            DataError::Unsupported(_)
+        ));
+
+        // Template set but historical date ⇒ Unsupported (same-day only), zero HTTP.
+        let mut cfg2 = cfg;
+        cfg2.hk_close_url_template = Some("http://invalid.test/{secids}".into());
+        let em = EastMoneyClient::new(cfg2, map);
+        let yesterday = today.pred_opt().unwrap();
+        assert!(matches!(
+            em.official_closes(&[StockCode(700)], yesterday).await.unwrap_err(),
+            DataError::Unsupported(_)
+        ));
+    }
+}
+```
+
+M1 shipped `reconcile_closes` described as tested, but no test was printed; its consumer milestone adds the missing one:
+
+```rust
+// (append to crates/hkq-data/src/recon.rs)
+#[cfg(test)]
+mod tests {
+    use super::*;
+    use polars::df;
+
+    #[test]
+    fn tick_aware_breaches_and_missing_sets() {
+        let root = std::env::temp_dir().join(format!(
+            "hkq_recon_test_{}", std::time::SystemTime::now()
+                .duration_since(std::time::UNIX_EPOCH).unwrap().as_nanos()));
+        let lake = Lake::new(&root);
+        let date = chrono::NaiveDate::from_ymd_opt(2026, 7, 3).unwrap();
+        let mut ours = df!(
+            "code" => vec![700u32, 5u32, 941u32],
+            "close" => vec![321.40f64, 60.00, 70.00],
+            "date" => vec![date.to_string(); 3],
+        ).unwrap();
+        lake.write_partition(Dataset::DailyBars, date, &mut ours, "test", 1).unwrap();
+
+        // 700 exact; 5 off by EXACTLY one tick (0.05 band at 60) ⇒ not a breach
+        // (§5: |Δ| > 1 tick); 941 off by two ticks ⇒ breach; 1299 ⇒ missing_ours.
+        let official = df!(
+            "code" => vec![700u32, 5u32, 941u32, 1299u32],
+            "close_official" => vec![321.40f64, 60.05, 70.10, 50.0],
+        ).unwrap();
+        let rep = reconcile_closes(&lake, &official, date).unwrap();
+        assert_eq!(rep.checked, 3);
+        assert_eq!(rep.breaches.len(), 1);
+        assert_eq!(rep.breaches[0].code, 941);
+        assert_eq!(rep.missing_ours, vec![1299]);
+        assert!(rep.missing_official.is_empty());
+        assert!(!rep.clean());
+        std::fs::remove_dir_all(root).ok();
+    }
+}
+```
+
+In `crates/hkq-nightly/src/main.rs`, the M1 gap line finally retires — replace
+
+```rust
+    // Close reconciliation still needs an INDEPENDENT official-close source
+    // (HKEX daily quotes / OMD-C EOD, report §5) — unchanged M1 gap, logged loudly.
+    tracing::warn!("recon skipped: independent official-close source not configured (M1 gap)");
+```
+
+with
+
+```rust
+    // M9: close reconciliation is its own binary — run `hkq-recon` after this
+    // job (T 18:30). A breach quarantines the partition and LATCHES; hkq-live
+    // halts at next startup until the operator re-ingests and clears the latch.
+    tracing::info!("nightly done; run hkq-recon next (close tripwire, M9)");
+```
+
+And in `crates/hkq-live/src/main.rs`, insert directly after the CUSUM startup-gate `match` block (before the `// Tiger client first (M6)` comment) — fully qualified, so no import lines change:
+
+```rust
+    // …and producer 3 is the nightly recon latch (M9): a close-reconciliation
+    // breach recorded by hkq-recon (quarantined partition) halts the day before
+    // any order intent — HaltReason::ReconBreach, typed since M3, now produced.
+    match hkq_validate::recon_gate::startup_gate(&lake, &ks) {
+        Ok(s) if s.breached => tracing::error!(date = ?s.breach_date, detail = ?s.detail,
+            "RECON breach LATCHED — engine will observe HALT and stand down"),
+        Ok(s) => tracing::info!(last_clean = ?s.last_clean_date, "recon gate clear"),
+        Err(e) => tracing::error!(error = %e,
+            "recon latch unreadable — HALTED (a clean state must be provable)"),
+    }
+```
+
+## `hkq-validate` — the recon latch
+
+```rust
+// crates/hkq-validate/src/lib.rs
+#![forbid(unsafe_code)]
+//! The §4 protocol as a crate, not a notebook: purged splits, NW t-stats, DSR
+//! against an honest trials registry, the CUSUM kill producer, the quarterly
+//! estimation jobs, the promotion protocol (as-of reconstruction + κ) — and,
+//! as of M9, the recon latch: the kill switch's THIRD producer, fed by the
+//! hkq-recon tripwire so a quarantined partition halts trading at startup.
+//!
+//! Design invariants:
+//! - Every statistic is a pure function of frames/slices; the ONLY I/O is the
+//!   lake (read), the `_state` directory (fit artifacts, CUSUM + recon state),
+//!   and the hash-chained trials registry (append).
+//! - Monitoring and reconstruction consume the SAME persisted artifacts the
+//!   learning loops train on: no recomputed morning factors, no fabricated
+//!   ICs, no imputed fills — the M3/M4 honesty rule, everywhere.
+//! - Degradation is typed: missing history ⇒ `Insufficient` (callers continue,
+//!   loudly); schema drift ⇒ polars errors (nobody continues).
+//! - Breaches LATCH (CUSUM and recon alike). Un-halting is an operator edit of
+//!   the state file, never code. That is what "pre-registered kill" means.
+//! - Scalar promotions (θ, v*, κ) are OPERATOR config edits. Jobs report and
+//!   registry-log; they never mutate strategy.toml or production `_state`.
+
+pub mod asof;
+pub mod cfg;
+pub mod cusum;
+pub mod dsr;
+pub mod error;
+pub mod fits;
+pub mod ic;
+pub mod kappa;
+pub mod pnl;
+pub mod recon_gate;
+pub mod registry;
+pub mod splits;
+pub mod stats;
+
+pub use asof::{materialize_asof_state, AsofReport};
+pub use cfg::{load_validate, ValidateCfg};
+pub use cusum::{startup_gate, CusumOutcome, CusumParams, CusumState};
+pub use dsr::{deflated_sharpe, expected_max_sharpe};
+pub use error::ValidateError;
+pub use kappa::{fit_kappa, kappa_panel, KappaFit};
+pub use recon_gate::ReconState;
+pub use registry::TrialsRegistry;
+pub use splits::{purged_walk_forward, Split};
+```
+
+```rust
+// crates/hkq-validate/src/recon_gate.rs
+//! The recon latch (M9): persistent breach state written by the hkq-recon
+//! binary and observed by hkq-live's startup gate — the kill switch's THIRD
+//! producer (operator console, CUSUM, and now recon), giving
+//! `HaltReason::ReconBreach` the producer it has lacked since M3.
+//!
+//! Why a latch and not just a log: quarantining a DailyBars partition leaves a
+//! HOLE the factor panels silently bridge — per-code `shift(1)` and rolling
+//! windows simply span the missing date, so r_on becomes a two-day return and
+//! every derived moment inherits the lie. Trading must not resume until the
+//! operator re-ingests (`hkq-nightly --force <date>`) and clears
+//! `_state/recon.json` by hand. Un-latching is an operator edit, never code —
+//! the CUSUM precedent, verbatim.
+//!
+//! One deliberate asymmetry vs the CUSUM gate: a MISSING state file is the
+//! documented clean cold start, but an UNREADABLE one halts — a corrupt latch
+//! could be hiding a breach, and a clean state must be provable.
+use crate::error::ValidateError;
+use hkq_data::lake::Lake;
+use hkq_risk::{HaltReason, KillSwitch};
+use serde::{Deserialize, Serialize};
+use std::path::{Path, PathBuf};
+
+#[derive(Debug, Clone, Default, Serialize, Deserialize)]
+pub struct ReconState {
+    pub breached: bool,
+    pub breach_date: Option<String>,
+    pub detail: Option<String>,
+    /// Most recent date that reconciled clean — audit trail only; a clean run
+    /// NEVER un-latches an earlier breach.
+    pub last_clean_date: Option<String>,
+}
+
+pub fn state_path(lake_root: &Path) -> PathBuf {
+    lake_root.join("_state").join("recon.json")
+}
+
+/// Missing file ⇒ fresh state (cold start: nothing has ever reconciled).
+/// CORRUPT file ⇒ hard error — silently resetting could erase a latched breach.
+pub fn load_state(path: &Path) -> Result<ReconState, ValidateError> {
+    match std::fs::read(path) {
+        Ok(bytes) => serde_json::from_slice(&bytes).map_err(|e| {
+            ValidateError::State(format!("corrupt recon state {}: {e}", path.display()))
+        }),
+        Err(e) if e.kind() == std::io::ErrorKind::NotFound => Ok(ReconState::default()),
+        Err(e) => Err(e.into()),
+    }
+}
+
+pub fn save_state(path: &Path, st: &ReconState) -> Result<(), ValidateError> {
+    let dir = path.parent().ok_or(ValidateError::Contract("recon state path has no parent"))?;
+    std::fs::create_dir_all(dir)?;
+    let tmp = dir.join(".recon.tmp");
+    std::fs::write(&tmp, serde_json::to_vec_pretty(st)?)?;
+    std::fs::rename(&tmp, path)?;
+    Ok(())
+}
+
+/// Latch a breach. First reason wins; an existing latch is never overwritten
+/// or downgraded (the KillSwitch semantics, mirrored on disk).
+pub fn latch_breach(
+    lake_root: &Path, date: chrono::NaiveDate, detail: &str,
+) -> Result<ReconState, ValidateError> {
+    let path = state_path(lake_root);
+    let mut st = load_state(&path)?;
+    if !st.breached {
+        st.breached = true;
+        st.breach_date = Some(date.to_string());
+        st.detail = Some(detail.to_string());
+        tracing::error!(%date, detail, "RECON BREACH — latched");
+    } else {
+        tracing::error!(%date, prior = ?st.breach_date,
+            "recon breach while already latched (first reason kept)");
+    }
+    save_state(&path, &st)?;
+    Ok(st)
+}
+
+/// Record a clean reconciliation for `date`. NEVER un-latches; never moves
+/// `last_clean_date` backwards (ISO dates compare lexicographically).
+pub fn record_clean(
+    lake_root: &Path, date: chrono::NaiveDate,
+) -> Result<ReconState, ValidateError> {
+    let path = state_path(lake_root);
+    let mut st = load_state(&path)?;
+    let d = date.to_string();
+    if st.last_clean_date.as_deref().map_or(true, |prev| d.as_str() > prev) {
+        st.last_clean_date = Some(d);
+    }
+    save_state(&path, &st)?;
+    Ok(st)
+}
+
+/// hkq-live's startup gate. A latched breach halts before any order intent; an
+/// unreadable latch ALSO halts (conservative: clean must be provable), and the
+/// error propagates so the operator sees why.
+pub fn startup_gate(lake: &Lake, ks: &KillSwitch) -> Result<ReconState, ValidateError> {
+    match load_state(&state_path(lake.root())) {
+        Ok(st) => {
+            if st.breached {
+                ks.halt(HaltReason::ReconBreach);
+            }
+            Ok(st)
+        }
+        Err(e) => {
+            ks.halt(HaltReason::ReconBreach);
+            Err(e)
+        }
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    fn tmp() -> PathBuf {
+        std::env::temp_dir().join(format!(
+            "hkq_recon_gate_{}", std::time::SystemTime::now()
+                .duration_since(std::time::UNIX_EPOCH).unwrap().as_nanos()))
+    }
+
+    #[test]
+    fn latch_is_first_wins_and_clean_never_unlatches() {
+        let root = tmp();
+        let d1 = chrono::NaiveDate::from_ymd_opt(2026, 7, 2).unwrap();
+        let d2 = chrono::NaiveDate::from_ymd_opt(2026, 7, 3).unwrap();
+        assert!(!load_state(&state_path(&root)).unwrap().breached); // missing ⇒ fresh
+        let st = latch_breach(&root, d1, "2 breaches, worst 941").unwrap();
+        assert!(st.breached);
+        let st = latch_breach(&root, d2, "later breach").unwrap();
+        assert_eq!(st.breach_date.as_deref(), Some("2026-07-02")); // first wins
+        let st = record_clean(&root, d2).unwrap();
+        assert!(st.breached); // clean NEVER un-latches
+        assert_eq!(st.last_clean_date.as_deref(), Some("2026-07-03"));
+        // Backdated clean run cannot move the watermark backwards.
+        let st = record_clean(&root, d1).unwrap();
+        assert_eq!(st.last_clean_date.as_deref(), Some("2026-07-03"));
+        std::fs::remove_dir_all(root).ok();
+    }
+
+    #[test]
+    fn startup_gate_halts_on_latch_and_on_corruption() {
+        let root = tmp();
+        let lake = Lake::new(&root);
+        let (ks, _rx) = KillSwitch::new();
+        assert!(!startup_gate(&lake, &ks).unwrap().breached);
+        assert!(!ks.current().halted()); // clean cold start: no halt
+
+        latch_breach(&root, chrono::NaiveDate::from_ymd_opt(2026, 7, 3).unwrap(), "x").unwrap();
+        let (ks2, _rx2) = KillSwitch::new();
+        let st = startup_gate(&lake, &ks2).unwrap();
+        assert!(st.breached && ks2.current().halted());
+
+        // Corrupt latch: unreadable ⇒ HALT (a clean state must be provable).
+        std::fs::write(state_path(&root), b"{ not json").unwrap();
+        let (ks3, _rx3) = KillSwitch::new();
+        assert!(startup_gate(&lake, &ks3).is_err());
+        assert!(ks3.current().halted());
+        std::fs::remove_dir_all(root).ok();
+    }
+}
+```
+
+## `hkq-recon` — the blueprint's fourth binary
+
+```toml
+# crates/hkq-recon/Cargo.toml
+[package]
+name = "hkq-recon"
+version = "0.1.0"
+edition.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+hkq-core = { path = "../hkq-core" }
+hkq-data = { path = "../hkq-data" }
+hkq-validate = { path = "../hkq-validate" }
+tokio.workspace = true
+anyhow.workspace = true
+chrono.workspace = true
+chrono-tz.workspace = true
+serde_json.workspace = true
+tracing.workspace = true
+tracing-subscriber.workspace = true
+```
+
+```rust
+// crates/hkq-recon/src/main.rs
+//! The tripwire (blueprint bin: hkq-recon; report §5): nightly reconciliation
+//! of our stored DailyBars closes against an INDEPENDENT official-close source.
+//! Tick-aware, in Decimal, via hkq-data's M1 recon math:
+//!   |Δ| > 1 tick ⇒ QUARANTINE the partition, LATCH `_state/recon.json`
+//!   (hkq-live halts at next startup with HaltReason::ReconBreach), exit
+//!   non-zero so cron pages the operator.
+//!
+//! Failure taxonomy, deliberate: price CONTRADICTIONS quarantine + latch;
+//! ingest HOLES (official priced a universe name our lake lacks) page via
+//! non-zero exit but neither quarantine (nothing is wrong — something is
+//! absent) nor latch; names WE store that the official source skipped are
+//! informational (vendors drop suspended names).
+//!
+//! Run order: T 18:00 hkq-nightly → T 18:30 hkq-recon. The EastMoney source is
+//! a live-quote endpoint: after the CAS it serves the just-ended session's
+//! official close, and it REFUSES historical dates — historical recon needs an
+//! EOD-file provider behind the same trait (HKEX OMD-C in production, §5).
+//!
+//! Recovery after a breach: investigate, re-ingest with
+//! `hkq-nightly <cfg> <date> --force`, re-run `hkq-recon`, then clear the
+//! latch by hand. Un-latching is an operator edit, never code.
+//!
+//! Usage: hkq-recon <strategy.toml> [YYYY-MM-DD]
+use anyhow::Context;
+use chrono::{NaiveDate, Utc};
+use chrono_tz::Asia::Hong_Kong;
+use hkq_core::{calendar::FileCalendar, config::StrategyCfg, ids::StockCode,
+               session::{DayKind, TradingCalendar}};
+use hkq_data::{cfg::load_sources, eastmoney::{load_ah_map, EastMoneyClient},
+               lake::{Dataset, Lake}, provider::OfficialCloseProvider,
+               recon::reconcile_closes};
+use hkq_validate::recon_gate;
+
+fn load_universe_codes(path: &std::path::Path) -> anyhow::Result<Vec<StockCode>> {
+    let raw = std::fs::read_to_string(path)
+        .with_context(|| format!("universe codes file {}", path.display()))?;
+    let codes: Vec<StockCode> = raw.lines().map(str::trim)
+        .filter(|l| !l.is_empty() && !l.starts_with('#'))
+        .filter_map(StockCode::parse)
+        .collect();
+    anyhow::ensure!(!codes.is_empty(), "empty universe file {}", path.display());
+    Ok(codes)
+}
+
+#[tokio::main]
+async fn main() -> anyhow::Result<()> {
+    tracing_subscriber::fmt()
+        .with_env_filter(tracing_subscriber::EnvFilter::from_default_env()
+            .add_directive("info".parse()?))
+        .init();
+
+    let mut args = std::env::args().skip(1);
+    let cfg_path = args.next().unwrap_or_else(|| "config/strategy.toml".into());
+    let date: Option<NaiveDate> = args.next()
+        .map(|s| s.parse())
+        .transpose()
+        .context("date must be YYYY-MM-DD")?;
+
+    let cfg = StrategyCfg::load(&cfg_path)?;
+    let sources = load_sources(&cfg_path)?;
+    let calendar = FileCalendar::load(&cfg.ops.calendar_path)?;
+    let date = date.unwrap_or_else(|| Utc::now().with_timezone(&Hong_Kong).date_naive());
+
+    if calendar.day_kind(date) == DayKind::Closed {
+        tracing::info!(%date, "market closed; nothing to reconcile");
+        return Ok(());
+    }
+
+    let lake = Lake::new(&cfg.ops.lake_root);
+    anyhow::ensure!(
+        lake.exists(Dataset::DailyBars, date),
+        "no daily_bars partition for {date} — run hkq-nightly first"
+    );
+
+    let codes = load_universe_codes(&cfg.ops.universe_codes_path)?;
+    let em_cfg = sources.eastmoney
+        .context("[sources.eastmoney] (with hk_close_url_template) is required by hkq-recon")?;
+    // AH map is irrelevant to recon; the dummy singleton is the hkq-nightly
+    // precedent for constructing the client without one.
+    let ah_map = match &cfg.ops.ah_map_path {
+        Some(p) => load_ah_map(p)?,
+        None => [(StockCode(0), String::new())].into_iter().collect(),
+    };
+    let em = EastMoneyClient::new(em_cfg, ah_map);
+
+    let official = em.official_closes(&codes, date).await
+        .context("official close fetch failed (independent recon source)")?;
+    tracing::info!(rows = official.height(), %date, "official closes fetched");
+
+    let report = reconcile_closes(&lake, &official, date)?;
+    let worst = report.breaches.iter().max_by_key(|b| b.abs_diff);
+    let summary = serde_json::json!({
+        "date": date.to_string(),
+        "checked": report.checked,
+        "breaches": report.breaches.len(),
+        "worst_breach": worst.map(|b| serde_json::json!({
+            "code": b.code, "ours": b.ours, "official": b.official,
+            "abs_diff": b.abs_diff.to_string(), "tick": b.tick.to_string(),
+        })),
+        "missing_ours": report.missing_ours.len(),
+        "missing_official": report.missing_official.len(),
+        "clean": report.clean(),
+    });
+    println!("{}", serde_json::to_string_pretty(&summary)?);
+
+    if !report.breaches.is_empty() {
+        let q = lake.quarantine(Dataset::DailyBars, date)?;
+        let w = worst.expect("non-empty breaches have a maximum");
+        let detail = format!(
+            "{} close breach(es); worst code {} |Δ|={} (tick {}); daily_bars quarantined to {}",
+            report.breaches.len(), w.code, w.abs_diff, w.tick, q.display()
+        );
+        recon_gate::latch_breach(lake.root(), date, &detail)?;
+        anyhow::bail!("RECON BREACH — {detail}");
+    }
+
+    recon_gate::record_clean(lake.root(), date)?;
+
+    if !report.missing_ours.is_empty() {
+        // Ingest hole, not a price contradiction: nothing to quarantine, no
+        // latch — but cron must page, and the operator must re-ingest.
+        anyhow::bail!(
+            "recon: {} universe name(s) priced officially but absent from our lake \
+             (e.g. {:?}) — ingest hole; re-run `hkq-nightly {} --force`",
+            report.missing_ours.len(),
+            &report.missing_ours[..report.missing_ours.len().min(5)],
+            date
+        );
+    }
+    if !report.missing_official.is_empty() {
+        tracing::warn!(n = report.missing_official.len(),
+            "names we store that the official source did not price (suspensions?) — informational");
+    }
+    tracing::info!(checked = report.checked, %date, "recon CLEAN — tripwire recorded");
+    Ok(())
+}
+```
+
+Config addition (two lines in the existing `[sources.eastmoney]` table; both VERIFY items are data, not code):
+
+```toml
+[sources.eastmoney]
+# … M1 fields unchanged …
+hk_close_url_template = "https://push2.eastmoney.com/api/qt/ulist.np/get?fltt=2&fields=f2,f12&secids={secids}"
+# hk_secid_prefix = "116"   # EastMoney HKEX market prefix ⇒ "116.00700" — VERIFY
+```
+
+## Honest gaps and hand-off to Milestone 10
+
+Six items, each now a named fact. First, the official source is a same-day quote endpoint: it certifies the session that just ended and refuses history by type, so *retroactive* recon over the recorded backlog waits on an EOD-file provider (HKEX OMD-C daily quotes, the report's canonical source) behind the same `OfficialCloseProvider` trait — a substitution, not a redesign. Second, the tripwire covers `DailyBars` closes only: `Bars1m`, `Flows`, and `Auction` partitions keep the manifest tripwire but no cross-vendor price check; extending recon to southbound flows against HKEX's official Connect statistics is the natural next arm, same pattern. Third, corporate-action verification remains open — today's comparison is raw-close vs raw-close (apples to apples, since `adj_close == close` until `kline_adjust` is verified), but once an adjusted history exists the official quote source has nothing to reconcile it against; that needs a corporate-actions dataset, a data acquisition with a data-layer owner. Fourth, the recon latch reset is deliberately manual — no auto-unlatch job will ever exist, per the CUSUM precedent that un-halting is an operator edit. Fifth, the previously named remainders are unchanged with unchanged owners: the Hansen SPA benchmark family (HSI open→close and sector-ETF series that nothing ingests), venue-tagged Fills (schema v2) to unstarve κ calibration, and the §3.7 ML layer with CPCV and the self-hosted walk-forward. Sixth, one operational note the runbook should carry: after any quarantine, PreMarket's warmup panels will span the hole silently — which is precisely why the latch halts trading until re-ingest; the latch *is* the safety property, not the log line. With this milestone the blueprint's topology is complete — every crate and all four binaries exist — and the machine that already had facts, opinions, decisions, a clock, a memory, a reflex, a hand, a mirror, and judgment now has the last thing §5 demanded of it: a tripwire under its own facts, wired to the same switch that stops everything else.
